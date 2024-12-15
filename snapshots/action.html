@@ -1,0 +1,1002 @@
+
+
+  
+    
+<style>.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}</style>
+
+
+
+
+<p></p>
+
+<p></p><h2 class="dcc-api-title" data-text="Description" id="description" tabindex="-1">Description</h2>
+<div class="dcc-reference"><p>Use the <code translate="no" dir="ltr">chrome.action</code> API to control the extension's icon in the Google Chrome toolbar.</p></div>
+The action icons are displayed in the browser toolbar next to the <a href="https://en.wiktionary.org/wiki/omnibox">omnibox</a>. After installation, these appear in the extensions menu (the puzzle piece icon).
+Users can pin your extension icon to the toolbar.<p></p>
+
+<p></p>
+
+<p></p><h2 id="availability" data-text="Availability" tabindex="-1">Availability</h2>
+<div class="dcc-reference"><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 88+
+      </span><span class="dcc-tag-pill--purple dcc-tag-pill" title="Minimum manifest version">MV3+
+      </span></div>
+    </div></div><p></p>
+
+<p></p><h2 id="manifest" data-text="Manifest" tabindex="-1">Manifest</h2>
+<div class="dcc-reference">
+  <p>The following keys must be declared <a href="/docs/extensions/mv3/manifest">in the manifest</a> to use this API.</p><code translate="no" dir="ltr">"action"</code><br></div><p></p>
+
+<p>To use the <code translate="no" dir="ltr">chrome.action</code> API, specify a <code translate="no" dir="ltr">"manifest_version"</code> of <code translate="no" dir="ltr">3</code> and include
+the <code translate="no" dir="ltr">"action"</code> key in your <a href="/docs/extensions/reference/manifest">manifest file</a>.</p>
+<aside class="note"><strong>Note:</strong><span> Every extension has an icon in the Chrome toolbar, even if the <code translate="no" dir="ltr">"action"</code> key isn't added to the manifest.</span></aside><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JSON"><code translate="no" dir="ltr"><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"name"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Action Extension"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">...</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"action"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nt">"default_icon"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w">              </span><span class="devsite-syntax-c1">// optional</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"16"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"images/icon16.png"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w">   </span><span class="devsite-syntax-c1">// optional</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"24"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"images/icon24.png"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w">   </span><span class="devsite-syntax-c1">// optional</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"32"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"images/icon32.png"</span><span class="devsite-syntax-w">    </span><span class="devsite-syntax-c1">// optional</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nt">"default_title"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Click Me"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w">   </span><span class="devsite-syntax-c1">// optional, shown in tooltip</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nt">"default_popup"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"popup.html"</span><span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// optional</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">...</span>
+<span class="devsite-syntax-p">}</span>
+</code></pre></devsite-code>
+<p>The <code translate="no" dir="ltr">"action"</code> key (along with its children) is optional. When it isn't included, your extension is still shown in the toolbar to provide access to the extension's menu. For this reason, we recommend that you always include at least the <code translate="no" dir="ltr">"action"</code> and <code translate="no" dir="ltr">"default_icon"</code> keys.</p>
+
+<h2 id="concepts_and_usage" data-text="Concepts and usage" tabindex="-1">Concepts and usage</h2>
+
+<h3 id="parts_of_the_ui" data-text="Parts of the UI" tabindex="-1">Parts of the UI</h3>
+
+<h4 id="icon" data-text="Icon" tabindex="-1">Icon</h4>
+
+<p>The icon is the main image on the toolbar for your extension, and is set by the <code translate="no" dir="ltr">"default_icon"</code> key in
+your manifest's <code translate="no" dir="ltr">"action"</code> key. Icons must be 16 device-independent pixels (DIPs) wide and tall.</p>
+
+<p>The <code translate="no" dir="ltr">"default_icon"</code> key is a dictionary of sizes to image paths. Chrome uses these icons
+to choose which image scale to use. If an exact match is not found, Chrome selects the closest
+available and scales it to fit the image, which might affect image quality.</p>
+
+<p>Because devices with less-common scale factors like 1.5x or 1.2x are becoming more
+common, we encourage you to provide multiple sizes for your icons. This also
+futureproofs your extension against potential icon display size changes. However,
+if only providing a single size, the <code translate="no" dir="ltr">"default_icon"</code> key can also be set to a
+string with the path to a single icon instead of a dictionary.</p>
+
+<p>You can also call <code translate="no" dir="ltr">action.setIcon()</code> to set your extension's icon programmatically
+by specifying a different image path or providing a dynamically-generated icon using the <a href="https://developer.mozilla.org/docs/Web/API/HTMLCanvasElement">HTML canvas
+element</a>, or, if setting from an extension service worker, the <a href="https://developer.mozilla.org/docs/Web/API/OffscreenCanvas">offscreen
+canvas</a> API.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">canvas</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">OffscreenCanvas</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-mf">16</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">16</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">context</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">canvas</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getContext</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'2d'</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-nx">context</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">clearRect</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-mf">0</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">0</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">16</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">16</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-nx">context</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">fillStyle</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'#00FF00'</span><span class="devsite-syntax-p">;</span><span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Green</span>
+<span class="devsite-syntax-nx">context</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">fillRect</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-mf">0</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">0</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">16</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">16</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">imageData</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">context</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getImageData</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-mf">0</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">0</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">16</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">16</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setIcon</span><span class="devsite-syntax-p">({</span><span class="devsite-syntax-nx">imageData</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">imageData</span><span class="devsite-syntax-p">},</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-cm">/* ... */</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">});</span>
+</code></pre></devsite-code>
+<aside class="note"><b>Note:</b> The <code translate="no" dir="ltr">action.setIcon()</code> API is intended to set a static image. Don't use animated images for your icons.</aside>
+
+<p>For packed extensions (installed from a .crx file), images can be in most formats that the Blink
+rendering engine can display, including PNG, JPEG, BMP, ICO, and others. SVG isn't supported.
+Unpacked extensions must use PNG images.</p>
+
+<h4 id="tooltip_title" data-text="Tooltip (title)" tabindex="-1">Tooltip (title)</h4>
+
+<p>The tooltip, or title, appears when the user holds their mouse pointer over the extension's icon in the
+toolbar. It's also included in the accessible text spoken by screen readers when the button gets
+focus.</p>
+
+<p>The default tooltip is set using the <code translate="no" dir="ltr">"default_title"</code> field of the <code translate="no" dir="ltr">"action"</code> key in <code translate="no" dir="ltr">manifest.json</code>.
+You can also set it programmatically by calling <code translate="no" dir="ltr">action.setTitle()</code>.</p>
+
+<h4 id="badge" data-text="Badge" tabindex="-1">Badge</h4>
+
+<p>Actions can optionally display a "badge" — a bit of text layered over the icon. This lets you
+update the action to display a small amount of information about the state of the extension,
+such as a counter. The badge has a text component and a background color. Because space is limited,
+we recommend that badge text use four or fewer characters.</p>
+
+<p>To create a badge, set it programmatically by calling <code translate="no" dir="ltr">action.setBadgeBackgroundColor()</code> and
+<code translate="no" dir="ltr">action.setBadgeText()</code>. There isn't a default badge setting in the manifest. Badge color values
+can be either an array of four integers between 0 and 255 that make up the RGBA color of the
+badge or a string with a <a href="https://developer.mozilla.org/docs/Web/CSS/color">CSS color</a> value.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setBadgeBackgroundColor</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-nx">color</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-mf">0</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">255</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">0</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">0</span><span class="devsite-syntax-p">]},</span><span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Green</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-cm">/* ... */</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-p">);</span>
+
+<span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setBadgeBackgroundColor</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-nx">color</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'#00FF00'</span><span class="devsite-syntax-p">},</span><span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Also green</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-cm">/* ... */</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-p">);</span>
+
+<span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setBadgeBackgroundColor</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-nx">color</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'green'</span><span class="devsite-syntax-p">},</span><span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Also, also green</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-cm">/* ... */</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code>
+<h4 id="popup" data-text="Popup" tabindex="-1">Popup</h4>
+
+<p>An action's popup is shown when the user clicks on the extension's action button in the
+toolbar. The popup can contain any HTML contents you like, and will be automatically sized to fit
+its contents. The popup's size must be between 25x25 and 800x600 pixels.</p>
+
+<p>The popup is initially set by the <code translate="no" dir="ltr">"default_popup"</code> property in the <code translate="no" dir="ltr">"action"</code> key in the
+<code translate="no" dir="ltr">manifest.json</code> file. If present, this property should point to a relative path within the extension
+directory. It can also be updated dynamically to point to a different relative path using the
+<code translate="no" dir="ltr">action.setPopup()</code> method.</p>
+
+<aside class="note"><b>Note:</b> The <code translate="no" dir="ltr">action.onClicked</code> event won't be sent if the extension action has specified a popup to
+show on click of the current tab.</aside>
+
+<h2 id="use_cases" data-text="Use cases" tabindex="-1">Use cases</h2>
+
+<h3 id="per-tab_state" data-text="Per-tab state" tabindex="-1">Per-tab state</h3>
+
+<p>Extension actions can have different states for each tab. To set a value for an individual
+tab, use the <code translate="no" dir="ltr">tabId</code> property in the <code translate="no" dir="ltr">action</code> API's setting methods. For example, to
+set the badge text for a specific tab, do something like the following:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">getTabId</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-cm">/* ... */</span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">getTabBadge</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-cm">/* ... */</span><span class="devsite-syntax-p">}</span>
+
+<span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setBadgeText</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">text</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">getTabBadge</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">tabId</span><span class="devsite-syntax-p">),</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">tabId</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">getTabId</span><span class="devsite-syntax-p">(),</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">...</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code>
+<p>If the <code translate="no" dir="ltr">tabId</code> property is left out, the setting is treated as a global setting. Tab-specific
+settings take priority over global settings.</p>
+
+<h3 id="enabled_state" data-text="Enabled state" tabindex="-1">Enabled state</h3>
+
+<p>By default, toolbar actions are enabled (clickable) on every tab. You can change this default
+by setting the <code translate="no" dir="ltr">default_state</code> property in the <code translate="no" dir="ltr">action</code> key of the manifest. If
+<code translate="no" dir="ltr">default_state</code> is set to <code translate="no" dir="ltr">"disabled"</code>, the action is disabled by default and must be enabled
+programmatically to be clickable. If <code translate="no" dir="ltr">default_state</code> is set to <code translate="no" dir="ltr">"enabled"</code> (the default),
+the action is enabled and clickable by default.</p>
+
+<p>You can control the state programmatically using the <code translate="no" dir="ltr">action.enable()</code> and <code translate="no" dir="ltr">action.disable()</code>
+methods. This only affects whether the popup (if any) or <code translate="no" dir="ltr">action.onClicked</code> event is sent
+to your extension; it doesn't affect the action's presence in the toolbar.</p>
+
+<h2 id="examples" data-text="Examples" tabindex="-1">Examples</h2>
+
+<p>The following examples show some common ways that actions are used in extensions. To try this API,
+install the <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/action">Action API example</a> from the <a href="https://github.com/GoogleChrome/chrome-extensions-samples">chrome-extension-samples</a>
+repository.</p>
+
+<h3 id="show_a_popup" data-text="Show a popup" tabindex="-1">Show a popup</h3>
+
+<p>It's common for an extension to display a popup when the user clicks the extension's action. To
+implement this in your own extension, declare the popup in your <code translate="no" dir="ltr">manifest.json</code> and specify the
+content that Chrome should display in the popup.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JSON"><code translate="no" dir="ltr"><span class="devsite-syntax-c1">// manifest.json</span>
+<span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"name"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Action popup demo"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"version"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"1.0"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"manifest_version"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">3</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"action"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nt">"default_title"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Click to view a popup"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nt">"default_popup"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"popup.html"</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-p">}</span>
+</code></pre></devsite-code><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="HTML"><code translate="no" dir="ltr">&lt;!-- popup.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    html {
+      min-height: 5em;
+      min-width: 10em;
+      background: salmon;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Hello, world!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></devsite-code>
+<h3 id="inject_a_content_script_on_click" data-text="Inject a content script on click" tabindex="-1">Inject a content script on click</h3>
+
+<p>A common pattern for extensions is to expose their primary feature using the extension's
+action. The following example demonstrates this pattern. When the user clicks the action, the extension
+injects a content script into the current page. The content script then displays an alert to verify
+that everything worked as expected.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JSON"><code translate="no" dir="ltr"><span class="devsite-syntax-c1">// manifest.json</span>
+<span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"name"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Action script injection demo"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"version"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"1.0"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"manifest_version"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">3</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"action"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nt">"default_title"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Click to show an alert"</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"permissions"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-s2">"activeTab"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"scripting"</span><span class="devsite-syntax-p">],</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"background"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nt">"service_worker"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"background.js"</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-p">}</span>
+</code></pre></devsite-code><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-c1">// background.js</span>
+<span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onClicked</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">((</span><span class="devsite-syntax-nx">tab</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">scripting</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">executeScript</span><span class="devsite-syntax-p">({</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">target</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-nx">tabId</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">tab</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">id</span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">files</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-s1">'content.js'</span><span class="devsite-syntax-p">]</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">});</span>
+<span class="devsite-syntax-p">});</span>
+</code></pre></devsite-code><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-c1">// content.js</span>
+<span class="devsite-syntax-nx">alert</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'Hello, world!'</span><span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code>
+<h3 id="emulate_actions_with_declarativecontent" data-text="Emulate actions with declarativeContent" tabindex="-1">Emulate actions with declarativeContent</h3>
+
+<p>This example shows how an extension's background logic can (a) disable an action by default and (b)
+use <a href="/docs/extensions/reference/api/declarativeContent">declarativeContent</a> to enable the action on specific sites.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-c1">// service-worker.js</span>
+
+<span class="devsite-syntax-c1">// Wrap in an onInstalled callback to avoid unnecessary work</span>
+<span class="devsite-syntax-c1">// every time the service worker is run</span>
+<span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">runtime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onInstalled</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Page actions are disabled by default and enabled on select tabs</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">disable</span><span class="devsite-syntax-p">();</span>
+
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Clear all rules to ensure only our expected rules are set</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">declarativeContent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onPageChanged</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">removeRules</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kc">undefined</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-c1">// Declare a rule to enable the action on example.com pages</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-kd">let</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">exampleRule</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">conditions</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">declarativeContent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">PageStateMatcher</span><span class="devsite-syntax-p">({</span>
+<span class="devsite-syntax-w">          </span><span class="devsite-syntax-nx">pageUrl</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-nx">hostSuffix</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'.example.com'</span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">})</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">],</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">actions</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">declarativeContent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ShowAction</span><span class="devsite-syntax-p">()],</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">};</span>
+
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-c1">// Finally, apply our new array of rules</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-kd">let</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">rules</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-nx">exampleRule</span><span class="devsite-syntax-p">];</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">declarativeContent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onPageChanged</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addRules</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">rules</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">});</span>
+<span class="devsite-syntax-p">});</span>
+</code></pre></devsite-code>
+<p></p><div class="dcc-reference"><h2 id="type" data-text="Types" tabindex="-1">Types</h2>
+  <div><div>
+    <div class="notranslate">
+      <h3 id="type-OpenPopupOptions" data-text="OpenPopupOptions" tabindex="-1">OpenPopupOptions</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 99+
+      </span></div>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-OpenPopupOptions-windowId">windowId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The ID of the window to open the action popup in. Defaults to the currently-active window if unspecified.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-TabDetails" data-text="TabDetails" tabindex="-1">TabDetails</h3>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_1" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-TabDetails-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The ID of the tab to query state for. If no tab is specified, the non-tab-specific state is returned.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-UserSettings" data-text="UserSettings" tabindex="-1">UserSettings</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 91+
+      </span></div>
+    </div><p>The collection of user-specified settings relating to an extension's action.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_2" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-UserSettings-isOnToolbar">isOnToolbar</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
+    </div><p>Whether the extension's action icon is visible on browser windows' top-level toolbar (i.e., whether the extension has been 'pinned' by the user).</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-UserSettingsChange" data-text="UserSettingsChange" tabindex="-1">UserSettingsChange</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 130+
+      </span></div>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_3" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-UserSettingsChange-isOnToolbar">isOnToolbar</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>Whether the extension's action icon is visible on browser windows' top-level toolbar (i.e., whether the extension has been 'pinned' by the user).</p>
+</li></ul>
+    </div></div><h2 id="method" data-text="Methods" tabindex="-1">Methods</h2>
+  <div><div>
+    <div class="notranslate">
+      <h3 id="method-disable" data-text="disable()" tabindex="-1">disable()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">disable</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">tabId?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">number</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Disables the action for a tab.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-disable-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The ID of the tab for which you want to modify the action.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-disable-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-enable" data-text="enable()" tabindex="-1">enable()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">enable</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">tabId?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">number</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Enables the action for a tab. By default, actions are enabled.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_1" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-enable-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The ID of the tab for which you want to modify the action.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-enable-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_1" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-getBadgeBackgroundColor" data-text="getBadgeBackgroundColor()" tabindex="-1">getBadgeBackgroundColor()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getBadgeBackgroundColor</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-TabDetails"><span class="devsite-syntax-kt">TabDetails</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Gets the background color of the action.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_2" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getBadgeBackgroundColor-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-TabDetails">TabDetails</a></p></div>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-getBadgeBackgroundColor-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="https://developer.chrome.com/docs/extensions/reference/browserAction/#type-ColorArray"><span class="devsite-syntax-kt">ColorArray</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getBadgeBackgroundColor-callback-result">result</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/browserAction/#type-ColorArray">ColorArray</a></p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_2" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="https://developer.chrome.com/docs/extensions/reference/browserAction/#type-ColorArray">browserAction.ColorArray</a>&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-getBadgeText" data-text="getBadgeText()" tabindex="-1">getBadgeText()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getBadgeText</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-TabDetails"><span class="devsite-syntax-kt">TabDetails</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Gets the badge text of the action. If no tab is specified, the non-tab-specific badge text is returned. If <a href="https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#setExtensionActionOptions">displayActionCountAsBadgeText</a> is enabled, a placeholder text will be returned unless the <a href="https://developer.chrome.com/docs/extensions/develop/concepts/declare-permissions#declarativeNetRequestFeedback">declarativeNetRequestFeedback</a> permission is present or tab-specific badge text was provided.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_3" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getBadgeText-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-TabDetails">TabDetails</a></p></div>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-getBadgeText-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getBadgeText-callback-result">result</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_3" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;string&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-getBadgeTextColor" data-text="getBadgeTextColor()" tabindex="-1">getBadgeTextColor()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 110+
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getBadgeTextColor</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-TabDetails"><span class="devsite-syntax-kt">TabDetails</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Gets the text color of the action.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_4" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getBadgeTextColor-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-TabDetails">TabDetails</a></p></div>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-getBadgeTextColor-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="https://developer.chrome.com/docs/extensions/reference/browserAction/#type-ColorArray"><span class="devsite-syntax-kt">ColorArray</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getBadgeTextColor-callback-result">result</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/browserAction/#type-ColorArray">ColorArray</a></p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_4" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="https://developer.chrome.com/docs/extensions/reference/browserAction/#type-ColorArray">browserAction.ColorArray</a>&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-getPopup" data-text="getPopup()" tabindex="-1">getPopup()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getPopup</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-TabDetails"><span class="devsite-syntax-kt">TabDetails</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Gets the html document set as the popup for this action.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_5" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getPopup-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-TabDetails">TabDetails</a></p></div>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-getPopup-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getPopup-callback-result">result</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_5" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;string&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-getTitle" data-text="getTitle()" tabindex="-1">getTitle()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getTitle</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-TabDetails"><span class="devsite-syntax-kt">TabDetails</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Gets the title of the action.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_6" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getTitle-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-TabDetails">TabDetails</a></p></div>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-getTitle-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getTitle-callback-result">result</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_6" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;string&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-getUserSettings" data-text="getUserSettings()" tabindex="-1">getUserSettings()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 91+
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getUserSettings</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Returns the user-specified settings relating to an extension's action.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_7" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-getUserSettings-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">userSettings</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-UserSettings"><span class="devsite-syntax-kt">UserSettings</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getUserSettings-callback-userSettings">userSettings</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-UserSettings">UserSettings</a></p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_7" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-UserSettings">UserSettings</a>&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-isEnabled" data-text="isEnabled()" tabindex="-1">isEnabled()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 110+
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">isEnabled</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">tabId?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">number</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Indicates whether the extension action is enabled for a tab (or globally if no <code translate="no" dir="ltr">tabId</code> is provided). Actions enabled using only <a href="https://developer.chrome.com/docs/extensions/reference/declarativeContent/"><code translate="no" dir="ltr">declarativeContent</code></a> always return false.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_8" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-isEnabled-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The ID of the tab for which you want check enabled status.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-isEnabled-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">isEnabled</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">boolean</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-isEnabled-callback-isEnabled">isEnabled</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
+    </div><p>True if the extension action is enabled.</p>
+</li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_8" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;boolean&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-openPopup" data-text="openPopup()" tabindex="-1">openPopup()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 127+
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">openPopup</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">options?</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-OpenPopupOptions"><span class="devsite-syntax-kt">OpenPopupOptions</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Opens the extension's popup. Between Chrome 118 and Chrome 126, this is only available to policy installed extensions.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_9" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-openPopup-options">options</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-OpenPopupOptions">OpenPopupOptions</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>Specifies options for opening the popup.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-openPopup-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_9" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-setBadgeBackgroundColor" data-text="setBadgeBackgroundColor()" tabindex="-1">setBadgeBackgroundColor()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setBadgeBackgroundColor</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Sets the background color for the badge.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_10" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-setBadgeBackgroundColor-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-setBadgeBackgroundColor-details-color">color</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--uniondcc-code-sections__enum">string&nbsp;|&nbsp;<a href="https://developer.chrome.com/docs/extensions/reference/browserAction/#type-ColorArray">ColorArray</a></p></div>
+    </div><p>An array of four integers in the range [0,255] that make up the RGBA color of the badge. For example, opaque red is <code translate="no" dir="ltr">[255, 0, 0, 255]</code>. Can also be a string with a CSS value, with opaque red being <code translate="no" dir="ltr">#FF0000</code> or <code translate="no" dir="ltr">#F00</code>.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-setBadgeBackgroundColor-details-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>Limits the change to when a particular tab is selected. Automatically resets when the tab is closed.</p>
+</li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-setBadgeBackgroundColor-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_10" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-setBadgeText" data-text="setBadgeText()" tabindex="-1">setBadgeText()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setBadgeText</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Sets the badge text for the action. The badge is displayed on top of the icon.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_11" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-setBadgeText-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-setBadgeText-details-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>Limits the change to when a particular tab is selected. Automatically resets when the tab is closed.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-setBadgeText-details-text">text</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>Any number of characters can be passed, but only about four can fit in the space. If an empty string (<code translate="no" dir="ltr">''</code>) is passed, the badge text is cleared. If <code translate="no" dir="ltr">tabId</code> is specified and <code translate="no" dir="ltr">text</code> is null, the text for the specified tab is cleared and defaults to the global badge text.</p>
+</li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-setBadgeText-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_11" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-setBadgeTextColor" data-text="setBadgeTextColor()" tabindex="-1">setBadgeTextColor()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 110+
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setBadgeTextColor</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Sets the text color for the badge.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_12" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-setBadgeTextColor-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-setBadgeTextColor-details-color">color</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--uniondcc-code-sections__enum">string&nbsp;|&nbsp;<a href="https://developer.chrome.com/docs/extensions/reference/browserAction/#type-ColorArray">ColorArray</a></p></div>
+    </div><p>An array of four integers in the range [0,255] that make up the RGBA color of the badge. For example, opaque red is <code translate="no" dir="ltr">[255, 0, 0, 255]</code>. Can also be a string with a CSS value, with opaque red being <code translate="no" dir="ltr">#FF0000</code> or <code translate="no" dir="ltr">#F00</code>. Not setting this value will cause a color to be automatically chosen that will contrast with the badge's background color so the text will be visible. Colors with alpha values equivalent to 0 will not be set and will return an error.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-setBadgeTextColor-details-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>Limits the change to when a particular tab is selected. Automatically resets when the tab is closed.</p>
+</li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-setBadgeTextColor-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_12" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-setIcon" data-text="setIcon()" tabindex="-1">setIcon()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setIcon</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Sets the icon for the action. The icon can be specified either as the path to an image file or as the pixel data from a canvas element, or as dictionary of either one of those. Either the <strong>path</strong> or the <strong>imageData</strong> property must be specified.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_13" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-setIcon-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-setIcon-details-imageData">imageData</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--uniondcc-code-sections__enum">ImageData&nbsp;|&nbsp;object&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>Either an ImageData object or a dictionary {size -&gt; ImageData} representing icon to be set. If the icon is specified as a dictionary, the actual image to be used is chosen depending on screen's pixel density. If the number of image pixels that fit into one screen space unit equals <code translate="no" dir="ltr">scale</code>, then image with size <code translate="no" dir="ltr">scale</code> * n will be selected, where n is the size of the icon in the UI. At least one image must be specified. Note that 'details.imageData = foo' is equivalent to 'details.imageData = {'16': foo}'</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-setIcon-details-path">path</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--uniondcc-code-sections__enum">string&nbsp;|&nbsp;object&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>Either a relative image path or a dictionary {size -&gt; relative image path} pointing to icon to be set. If the icon is specified as a dictionary, the actual image to be used is chosen depending on screen's pixel density. If the number of image pixels that fit into one screen space unit equals <code translate="no" dir="ltr">scale</code>, then image with size <code translate="no" dir="ltr">scale</code> * n will be selected, where n is the size of the icon in the UI. At least one image must be specified. Note that 'details.path = foo' is equivalent to 'details.path = {'16': foo}'</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-setIcon-details-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>Limits the change to when a particular tab is selected. Automatically resets when the tab is closed.</p>
+</li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-setIcon-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_13" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 96+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-setPopup" data-text="setPopup()" tabindex="-1">setPopup()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setPopup</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Sets the HTML document to be opened as a popup when the user clicks on the action's icon.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_14" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-setPopup-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-setPopup-details-popup">popup</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>The relative path to the HTML file to show in a popup. If set to the empty string (<code translate="no" dir="ltr">''</code>), no popup is shown.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-setPopup-details-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>Limits the change to when a particular tab is selected. Automatically resets when the tab is closed.</p>
+</li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-setPopup-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_14" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-setTitle" data-text="setTitle()" tabindex="-1">setTitle()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setTitle</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Sets the title of the action. This shows up in the tooltip.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_15" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-setTitle-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-setTitle-details-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>Limits the change to when a particular tab is selected. Automatically resets when the tab is closed.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-setTitle-details-title">title</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>The string the action should display when moused over.</p>
+</li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-setTitle-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_15" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div></div><h2 id="event" data-text="Events" tabindex="-1">Events</h2>
+  <div><div>
+    <div class="notranslate">
+      <h3 id="event-onClicked" data-text="onClicked" tabindex="-1">onClicked</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onClicked</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Fired when an action icon is clicked. This event will not fire if the action has a popup.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_16" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onClicked-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">tab</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="https://developer.chrome.com/docs/extensions/reference/tabs/#type-Tab"><span class="devsite-syntax-kt">tabs.Tab</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onClicked-callback-tab">tab</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/tabs/#type-Tab">tabs.Tab</a></p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="event-onUserSettingsChanged" data-text="onUserSettingsChanged" tabindex="-1">onUserSettingsChanged</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 130+
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onUserSettingsChanged</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Fired when user-specified settings relating to an extension's action change.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_17" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onUserSettingsChanged-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">change</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-UserSettingsChange"><span class="devsite-syntax-kt">UserSettingsChange</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onUserSettingsChanged-callback-change">change</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-UserSettingsChange">UserSettingsChange</a></p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div></div></div>
+<p></p>
+  
+
+  

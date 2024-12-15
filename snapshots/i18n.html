@@ -1,0 +1,713 @@
+
+
+  
+    
+<style>.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}</style>
+
+
+
+
+<p></p>
+
+<p></p><h2 class="dcc-api-title" data-text="Description" id="description" tabindex="-1">Description</h2>
+<div class="dcc-reference"><p>Use the <code translate="no" dir="ltr">chrome.i18n</code> infrastructure to implement internationalization across your whole app or extension.</p></div><p></p>
+
+<p></p>
+
+<p></p>
+
+<h2 id="manifest" data-text="Manifest" tabindex="-1">Manifest</h2>
+
+<p></p>
+
+<p>If an extension has a <code translate="no" dir="ltr">/_locales</code> directory, the <a href="/docs/extensions/reference/manifest">manifest</a> must define <code translate="no" dir="ltr">"default_locale"</code>.</p>
+
+<h2 id="concepts_and_usage" data-text="Concepts and usage" tabindex="-1">Concepts and usage</h2>
+
+<p>You need to put all of its user-visible strings into a file named <a href="/docs/extensions/how-to/ui/localization-message-formats"><code translate="no" dir="ltr">messages.json</code></a>. Each time
+you add a new locale, you add a messages file under a directory named <code translate="no" dir="ltr">/_locales/_localeCode_</code>, where
+<em>localeCode</em> is a code such as <code translate="no" dir="ltr">en</code> for English.</p>
+
+<p>Here's the file hierarchy for an internationalized extension that supports English (<code translate="no" dir="ltr">en</code>), Spanish
+(<code translate="no" dir="ltr">es</code>), and Korean (<code translate="no" dir="ltr">ko</code>):</p>
+
+<p><img src="/static/docs/extensions/mv2/reference/i18n/images/i18n-hierarchy.gif" alt="In the extension directory: manifest.json, *.html, *.js, /_locales directory. In the /_locales directory: en, es, and ko directories, each with a messages.json file."></p>
+
+<h3 id="support_multiple_languages" data-text="Support multiple languages" tabindex="-1">Support multiple languages</h3>
+
+<p>Say you have an extension with the files shown in the following figure:</p>
+
+<p><img src="/static/docs/extensions/mv2/reference/i18n/images/i18n-before.gif" alt="A manifest.json file and a file with JavaScript. The .json file has 'Hello World'. The JavaScript file has title = 'Hello World'."></p>
+
+<p>To internationalize this extension, you name each user-visible string and put it into a messages
+file. The extension's manifest, CSS files, and JavaScript code use each string's name to get its
+localized version.</p>
+
+<p>Here's what the extension looks like when it's internationalized (note that it still has only
+English strings):</p>
+
+<p><img src="/static/docs/extensions/mv2/reference/i18n/images/i18n-after-1.gif" alt="In the manifest.json file, 'Hello World' has been changed to '__MSG_extName__', and a new default_locale' item has the value 'en'. In the JavaScript file, 'Hello World' has been changed to chrome.i18n.getMessage('extName'). A new file named /_locales/en/messages.json defines 'extName'." .=""></p>
+
+<p>Some notes about internationalizing:</p>
+
+<ul>
+<li>You can use any of the <a href="#locales">supported locales</a>. If you use an unsupported locale, Google Chrome
+ignores it.</li>
+<li><p>In <code translate="no" dir="ltr">manifest.json</code> and CSS files, refer to a string named <em>messagename</em> like this:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JSON"><code translate="no" dir="ltr"><span class="devsite-syntax-err">__MSG_message</span><span class="devsite-syntax-kc">na</span><span class="devsite-syntax-err">me__</span>
+</code></pre></devsite-code></li>
+<li><p>In your extension or app's JavaScript code, refer to a string named <em>messagename</em> like this:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">i18n</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getMessage</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"messagename"</span><span class="devsite-syntax-p">)</span>
+</code></pre></devsite-code></li>
+<li><p>In each call to <code translate="no" dir="ltr">getMessage()</code>, you can supply up to 9 strings to be included in the message. See
+<a href="#getmessage">Examples: getMessage</a> for details.</p></li>
+<li><p>Some messages, such as <code translate="no" dir="ltr">@@bidi_dir</code> and <code translate="no" dir="ltr">@@ui_locale</code>, are provided by the internationalization
+system. See the <a href="#overview-predefined">Predefined messages</a> section for a full list of predefined message names.</p></li>
+<li><p>In <code translate="no" dir="ltr">messages.json</code>, each user-visible string has a name, a "message" item, and an optional
+"description" item. The name is a key such as "extName" or "search_string" that identifies the
+string. The "message" specifies the value of the string in this locale. The optional "description"
+provides help to translators, who might not be able to see how the string is used in your
+extension. For example:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JSON"><code translate="no" dir="ltr"><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"search_string"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nt">"message"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"hello%20world"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nt">"description"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"The string we search for. Put %20 between words that go together."</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">...</span>
+<span class="devsite-syntax-p">}</span>
+</code></pre></devsite-code></li>
+</ul>
+
+<p>For more information, see <a href="/docs/extensions/how-to/ui/localization-message-formats">Formats: Locale-Specific Messages</a>.</p>
+
+<p>Once an extension is internationalized, translating it is straightforward. You copy <code translate="no" dir="ltr">messages.json</code>,
+translate it, and put the copy into a new directory under <code translate="no" dir="ltr">/_locales</code>. For example, to support
+Spanish, just put a translated copy of <code translate="no" dir="ltr">messages.json</code> under <code translate="no" dir="ltr">/_locales/es</code>. The following figure
+shows the previous extension with a new Spanish translation.</p>
+
+<p><img src="/static/docs/extensions/mv2/reference/i18n/images/i18n-after-2.gif" alt="This looks the same as the previous figure, but with a new file at /_locales/es/messages.json that contains a Spanish translation of the messages."></p>
+
+<h3 id="overview-predefined" data-text="Predefined messages" tabindex="-1">Predefined messages</h3>
+
+<p>The internationalization system provides a few predefined messages to help you localize. These
+include <code translate="no" dir="ltr">@@ui_locale</code>, so you can detect the current UI locale, and a few <code translate="no" dir="ltr">@@bidi_...</code> messages that
+let you detect the text direction. The latter messages have similar names to constants in the
+<a href="https://code.google.com/apis/gadgets/docs/i18n.html#BIDI">gadgets BIDI (bi-directional) API</a>.</p>
+
+<p>The special message <code translate="no" dir="ltr">@@extension_id</code> can be used in the CSS and JavaScript files, whether or not the
+extension or app is localized. This message doesn't work in manifest files.</p>
+
+<p>The following table describes each predefined message.</p>
+
+<table><tbody><tr><th>Message name</th><th>Description</th></tr><tr><td><code translate="no" dir="ltr">@@extension_id</code></td><td>The extension or app ID; you might use this string to construct URLs for resources inside the extension. Even unlocalized extensions can use this message.<br><b>Note:</b> You can't use this message in a manifest file.</td></tr><tr><td><code translate="no" dir="ltr">@@ui_locale</code></td><td>The current locale; you might use this string to construct locale-specific URLs.</td></tr><tr><td><code translate="no" dir="ltr">@@bidi_dir</code></td><td>The text direction for the current locale, either "ltr" for left-to-right languages such as English or "rtl" for right-to-left languages such as Arabic.</td></tr><tr><td><code translate="no" dir="ltr">@@bidi_reversed_dir</code></td><td>If the <code translate="no" dir="ltr">@@bidi_dir</code> is "ltr", then this is "rtl"; otherwise, it's "ltr".</td></tr><tr><td><code translate="no" dir="ltr">@@bidi_start_edge</code></td><td>If the <code translate="no" dir="ltr">@@bidi_dir</code> is "ltr", then this is "left"; otherwise, it's "right".</td></tr><tr><td><code translate="no" dir="ltr">@@bidi_end_edge</code></td><td>If the <code translate="no" dir="ltr">@@bidi_dir</code> is "ltr", then this is "right"; otherwise, it's "left".</td></tr></tbody></table>
+
+<p>Here's an example of using <code translate="no" dir="ltr">@@extension_id</code> in a CSS file to construct a URL:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="CSS"><code translate="no" dir="ltr"><span class="devsite-syntax-nt">body</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">background-image</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-nb">url</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'chrome-extension://__MSG_@@extension_id__/background.png'</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-p">}</span>
+</code></pre></devsite-code>
+<p>If the extension ID is abcdefghijklmnopqrstuvwxyzabcdef, then the bold line in the previous code
+snippet becomes:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="CSS"><code translate="no" dir="ltr"><span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">background-image</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-nd">url</span><span class="devsite-syntax-o">(</span><span class="devsite-syntax-s1">'chrome-extension://abcdefghijklmnopqrstuvwxyzabcdef/background.png'</span><span class="devsite-syntax-o">);</span>
+</code></pre></devsite-code>
+<p>Here's an example of using <code translate="no" dir="ltr">@@bidi_*</code> messages in a CSS file:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="CSS"><code translate="no" dir="ltr"><span class="devsite-syntax-nt">body</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">direction</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">__MSG_</span><span class="devsite-syntax-o">@@</span><span class="devsite-syntax-n">bidi_dir__</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-p">}</span>
+
+<span class="devsite-syntax-nt">div</span><span class="devsite-syntax-p">#</span><span class="devsite-syntax-nn">header</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">margin-bottom</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">1.05</span><span class="devsite-syntax-kt">em</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">overflow</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">hidden</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">padding-bottom</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">1.5</span><span class="devsite-syntax-kt">em</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">padding-__MSG_@@</span><span class="devsite-syntax-n">bidi_start_edge__</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">0</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">padding-__MSG_@@</span><span class="devsite-syntax-n">bidi_end_edge__</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">1.5</span><span class="devsite-syntax-kt">em</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">position</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">relative</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-p">}</span>
+</code></pre></devsite-code>
+<p>For left-to-right languages such as English, the bold lines become:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="CSS"><code translate="no" dir="ltr"><span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">dir</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">ltr</span><span class="devsite-syntax-o">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">padding-left</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">0</span><span class="devsite-syntax-o">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">padding-right</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nt">1</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nc">5em</span><span class="devsite-syntax-o">;</span>
+</code></pre></devsite-code>
+<h3 id="locales" data-text="Locales" tabindex="-1">Locales</h3>
+
+<p>You can choose from many locales, including some (such as <code translate="no" dir="ltr">en</code>) that let a single translation support multiple variations of a language (such as <code translate="no" dir="ltr">en_GB</code> and <code translate="no" dir="ltr">en_US</code>).</p>
+
+<p>You can localize your extension to any locale that is supported by the Chrome Web Store. If your locale is not listed here, choose the closest alternative. For example, if the default locale of your extension is <code translate="no" dir="ltr">"de_CH"</code>, choose <code translate="no" dir="ltr">"de"</code> in the Chrome Web Store.</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Locale code</th>
+<th style="text-align: left">Language (region)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">ar</td>
+<td style="text-align: left">Arabic</td>
+</tr>
+<tr>
+<td style="text-align: left">am</td>
+<td style="text-align: left">Amharic</td>
+</tr>
+<tr>
+<td style="text-align: left">bg</td>
+<td style="text-align: left">Bulgarian</td>
+</tr>
+<tr>
+<td style="text-align: left">bn</td>
+<td style="text-align: left">Bengali</td>
+</tr>
+<tr>
+<td style="text-align: left">ca</td>
+<td style="text-align: left">Catalan</td>
+</tr>
+<tr>
+<td style="text-align: left">cs</td>
+<td style="text-align: left">Czech</td>
+</tr>
+<tr>
+<td style="text-align: left">da</td>
+<td style="text-align: left">Danish</td>
+</tr>
+<tr>
+<td style="text-align: left">de</td>
+<td style="text-align: left">German</td>
+</tr>
+<tr>
+<td style="text-align: left">el</td>
+<td style="text-align: left">Greek</td>
+</tr>
+<tr>
+<td style="text-align: left">en</td>
+<td style="text-align: left">English</td>
+</tr>
+<tr>
+<td style="text-align: left">en_AU</td>
+<td style="text-align: left">English (Australia)</td>
+</tr>
+<tr>
+<td style="text-align: left">en_GB</td>
+<td style="text-align: left">English (Great Britain)</td>
+</tr>
+<tr>
+<td style="text-align: left">en_US</td>
+<td style="text-align: left">English (USA)</td>
+</tr>
+<tr>
+<td style="text-align: left">es</td>
+<td style="text-align: left">Spanish</td>
+</tr>
+<tr>
+<td style="text-align: left">es_419</td>
+<td style="text-align: left">Spanish (Latin America and Caribbean)</td>
+</tr>
+<tr>
+<td style="text-align: left">et</td>
+<td style="text-align: left">Estonian</td>
+</tr>
+<tr>
+<td style="text-align: left">fa</td>
+<td style="text-align: left">Persian</td>
+</tr>
+<tr>
+<td style="text-align: left">fi</td>
+<td style="text-align: left">Finnish</td>
+</tr>
+<tr>
+<td style="text-align: left">fil</td>
+<td style="text-align: left">Filipino</td>
+</tr>
+<tr>
+<td style="text-align: left">fr</td>
+<td style="text-align: left">French</td>
+</tr>
+<tr>
+<td style="text-align: left">gu</td>
+<td style="text-align: left">Gujarati</td>
+</tr>
+<tr>
+<td style="text-align: left">he</td>
+<td style="text-align: left">Hebrew</td>
+</tr>
+<tr>
+<td style="text-align: left">hi</td>
+<td style="text-align: left">Hindi</td>
+</tr>
+<tr>
+<td style="text-align: left">hr</td>
+<td style="text-align: left">Croatian</td>
+</tr>
+<tr>
+<td style="text-align: left">hu</td>
+<td style="text-align: left">Hungarian</td>
+</tr>
+<tr>
+<td style="text-align: left">id</td>
+<td style="text-align: left">Indonesian</td>
+</tr>
+<tr>
+<td style="text-align: left">it</td>
+<td style="text-align: left">Italian</td>
+</tr>
+<tr>
+<td style="text-align: left">ja</td>
+<td style="text-align: left">Japanese</td>
+</tr>
+<tr>
+<td style="text-align: left">kn</td>
+<td style="text-align: left">Kannada</td>
+</tr>
+<tr>
+<td style="text-align: left">ko</td>
+<td style="text-align: left">Korean</td>
+</tr>
+<tr>
+<td style="text-align: left">lt</td>
+<td style="text-align: left">Lithuanian</td>
+</tr>
+<tr>
+<td style="text-align: left">lv</td>
+<td style="text-align: left">Latvian</td>
+</tr>
+<tr>
+<td style="text-align: left">ml</td>
+<td style="text-align: left">Malayalam</td>
+</tr>
+<tr>
+<td style="text-align: left">mr</td>
+<td style="text-align: left">Marathi</td>
+</tr>
+<tr>
+<td style="text-align: left">ms</td>
+<td style="text-align: left">Malay</td>
+</tr>
+<tr>
+<td style="text-align: left">nl</td>
+<td style="text-align: left">Dutch</td>
+</tr>
+<tr>
+<td style="text-align: left">no</td>
+<td style="text-align: left">Norwegian</td>
+</tr>
+<tr>
+<td style="text-align: left">pl</td>
+<td style="text-align: left">Polish</td>
+</tr>
+<tr>
+<td style="text-align: left">pt_BR</td>
+<td style="text-align: left">Portuguese (Brazil)</td>
+</tr>
+<tr>
+<td style="text-align: left">pt_PT</td>
+<td style="text-align: left">Portuguese (Portugal)</td>
+</tr>
+<tr>
+<td style="text-align: left">ro</td>
+<td style="text-align: left">Romanian</td>
+</tr>
+<tr>
+<td style="text-align: left">ru</td>
+<td style="text-align: left">Russian</td>
+</tr>
+<tr>
+<td style="text-align: left">sk</td>
+<td style="text-align: left">Slovak</td>
+</tr>
+<tr>
+<td style="text-align: left">sl</td>
+<td style="text-align: left">Slovenian</td>
+</tr>
+<tr>
+<td style="text-align: left">sr</td>
+<td style="text-align: left">Serbian</td>
+</tr>
+<tr>
+<td style="text-align: left">sv</td>
+<td style="text-align: left">Swedish</td>
+</tr>
+<tr>
+<td style="text-align: left">sw</td>
+<td style="text-align: left">Swahili</td>
+</tr>
+<tr>
+<td style="text-align: left">ta</td>
+<td style="text-align: left">Tamil</td>
+</tr>
+<tr>
+<td style="text-align: left">te</td>
+<td style="text-align: left">Telugu</td>
+</tr>
+<tr>
+<td style="text-align: left">th</td>
+<td style="text-align: left">Thai</td>
+</tr>
+<tr>
+<td style="text-align: left">tr</td>
+<td style="text-align: left">Turkish</td>
+</tr>
+<tr>
+<td style="text-align: left">uk</td>
+<td style="text-align: left">Ukrainian</td>
+</tr>
+<tr>
+<td style="text-align: left">vi</td>
+<td style="text-align: left">Vietnamese</td>
+</tr>
+<tr>
+<td style="text-align: left">zh_CN</td>
+<td style="text-align: left">Chinese (China)</td>
+</tr>
+<tr>
+<td style="text-align: left">zh_TW</td>
+<td style="text-align: left">Chinese (Taiwan)</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="search_for_messages" data-text="Search for messages" tabindex="-1">Search for messages</h3>
+
+<p>You don't have to define every string for every supported locale. As long as the default locale's
+<code translate="no" dir="ltr">messages.json</code> file has a value for every string, your extension or app will run no matter how
+sparse a translation is. Here's how the extension system searches for a message:</p>
+
+<ol>
+<li>Search the messages file (if any) for the user's preferred locale. For example, when Google
+Chrome's locale is set to British English (<code translate="no" dir="ltr">en_GB</code>), the system first looks for the message in
+<code translate="no" dir="ltr">/_locales/en_GB/messages.json</code>. If that file exists and the message is there, the system looks
+no further.</li>
+<li>If the user's preferred locale has a region (that is, the locale has an underscore: _), search
+the locale without that region. For example, if the <code translate="no" dir="ltr">en_GB</code> messages file doesn't exist or
+doesn't contain the message, the system looks in the <code translate="no" dir="ltr">en</code> messages file. If that file exists and
+the message is there, the system looks no further.</li>
+<li>Search the messages file for the default locale. For example, if the extension's
+"default_locale" is set to "es", and neither <code translate="no" dir="ltr">/_locales/en_GB/messages.json</code> nor
+<code translate="no" dir="ltr">/_locales/en/messages.json</code> contains the message, the extension uses the message from
+<code translate="no" dir="ltr">/_locales/es/messages.json</code>.</li>
+</ol>
+
+<p>In the following figure, the message named "colores" is in all three locales that the extension
+supports, but "extName" is in only two of the locales. Wherever a user running Google Chrome in US
+English sees the label "Colors", a user of British English sees "Colours". Both US English and
+British English users see the extension name "Hello World". Because the default language is Spanish,
+users running Google Chrome in any non-English language see the label "Colores" and the extension
+name "Hola mundo".</p>
+
+<p><img src="/static/docs/extensions/mv2/reference/i18n/images/i18n-strings.gif" alt="Four files: manifest.json and three messages.json files (for es, en, and en_GB). The es and en files show entries for messages named 'extName' and 'colores'; the en_GB file has just one entry (for 'colores')."></p>
+
+<h3 id="how-to-set-browsers-locale" data-text="Set your browser's locale" tabindex="-1">Set your browser's locale</h3>
+
+<p>To test translations, you might want to set your browser's locale. This section tells you how to set
+the locale in <a href="#windows">Windows</a>, <a href="#mac_os">Mac OS</a>, <a href="#linux">Linux</a>, and <a href="#chromeos">ChromeOS</a>.</p>
+
+<h4 id="windows" data-text="Windows" tabindex="-1">Windows</h4>
+
+<p>You can change the locale using either a locale-specific shortcut or the Google Chrome UI. The
+shortcut approach is quicker, once you've set it up, and it lets you use several languages at once.</p>
+
+<h5 id="use_a_locale-specific_shortcut" data-text="Use a locale-specific shortcut" tabindex="-1">Use a locale-specific shortcut</h5>
+
+<p>To create and use a shortcut that launches Google Chrome with a particular locale:</p>
+
+<ol>
+<li>Make a copy of the Google Chrome shortcut that's already on your desktop.</li>
+<li>Rename the new shortcut to match the new locale.</li>
+<li><p>Change the shortcut's properties so that the Target field specifies the <code translate="no" dir="ltr">--lang</code> and
+<code translate="no" dir="ltr">--user-data-dir</code> flags. The target should look something like this:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="Text only"><code translate="no" dir="ltr">path_to_chrome.exe --lang=locale --user-data-dir=c:\locale_profile_dir
+</code></pre></devsite-code></li>
+<li><p>Launch Google Chrome by double-clicking the shortcut.</p></li>
+</ol>
+
+<p>For example, to create a shortcut that launches Google Chrome in Spanish (<code translate="no" dir="ltr">es</code>), you might create a
+shortcut named <code translate="no" dir="ltr">chrome-es</code> that has the following target:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="Text only"><code translate="no" dir="ltr">path_to_chrome.exe --lang=es --user-data-dir=c:\chrome-profile-es
+</code></pre></devsite-code>
+<p>You can create as many shortcuts as you like, making it straightforward to test in multiple languages. For
+example:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="Text only"><code translate="no" dir="ltr">path_to_chrome.exe --lang=en --user-data-dir=c:\chrome-profile-en
+path_to_chrome.exe --lang=en_GB --user-data-dir=c:\chrome-profile-en_GB
+path_to_chrome.exe --lang=ko --user-data-dir=c:\chrome-profile-ko
+</code></pre></devsite-code>
+<aside class="note"><b>Note:</b> Specifying <code translate="no" dir="ltr">--user-data-dir</code> is optional but handy. Having one data directory per locale
+lets you run the browser in several languages at the same time. A disadvantage is that because the
+locales' data isn't shared, you have to install your extension multiple times—once per locale,
+which can be challenging when you don't speak the language. For more information, see <a href="https://www.chromium.org/developers/creating-and-using-profiles">Creating and Using Profiles</a>.</aside>
+
+<h5 id="use_the_ui" data-text="Use the UI" tabindex="-1">Use the UI</h5>
+
+<p>Here's how to change the locale using the UI on Google Chrome for Windows:</p>
+
+<ol>
+<li>App icon &gt; <strong>Options</strong></li>
+<li>Choose the <strong>Under the Hood</strong> tab</li>
+<li>Scroll to <strong>Web Content</strong></li>
+<li>Click <strong>Change font and language settings</strong></li>
+<li>Choose the <strong>Languages</strong> tab</li>
+<li>Use the drop down to set the <strong>Google Chrome language</strong></li>
+<li>Restart Chrome</li>
+</ol>
+
+<h4 id="mac_os" data-text="Mac OS" tabindex="-1">Mac OS</h4>
+
+<p>To change the locale on Mac, you use the system preferences.</p>
+
+<ol>
+<li>From the Apple menu, choose <strong>System Preferences</strong></li>
+<li>Under the <strong>Personal</strong> section, choose <strong>International</strong></li>
+<li>Choose your language and location</li>
+<li>Restart Chrome</li>
+</ol>
+
+<h4 id="linux" data-text="Linux" tabindex="-1">Linux</h4>
+
+<p>To change the locale on Linux, first quit Google Chrome. Then, all in one line, set the LANGUAGE
+environment variable and launch Google Chrome. For example:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="Text only"><code translate="no" dir="ltr">LANGUAGE=es ./chrome
+</code></pre></devsite-code>
+<h4 id="chromeos" data-text="ChromeOS" tabindex="-1">ChromeOS</h4>
+
+<p>To change the locale on ChromeOS:</p>
+
+<ol>
+<li>From the system tray, choose <strong>Settings</strong>.</li>
+<li>Under the <strong>Languages and input</strong> section, choose the <strong>Language</strong> drop-down.</li>
+<li>If your language is not listed, click <strong>Add languages</strong> and add it.</li>
+<li>Once added, click the 3-dot <strong>More actions</strong> menu item next to your language and choose
+<strong>Display ChromeOS in this language</strong>.</li>
+<li>Click the <strong>Restart</strong> button that appears next to the set language to restart ChromeOS.</li>
+</ol>
+
+<h2 id="examples" data-text="Examples" tabindex="-1">Examples</h2>
+
+<p>You can find examples of internationalization in the <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/_archive/mv2/api/i18n/">examples/api/i18n</a> directory. For a
+complete example, see <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/_archive/mv2/extensions/news/">examples/extensions/news</a>. For other examples and for help in viewing the
+source code, see <a href="/docs/extensions/samples">Samples</a>.</p>
+
+<h3 id="getmessage" data-text="getMessage()" tabindex="-1">getMessage()</h3>
+
+<p>The following code gets a localized message from the browser and displays it as a string. It
+replaces two placeholders within the message with the strings "string1" and "string2".</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">getMessage</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">var</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">message</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">i18n</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getMessage</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"click_here"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-s2">"string1"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"string2"</span><span class="devsite-syntax-p">]);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nb">document</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getElementById</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"languageSpan"</span><span class="devsite-syntax-p">).</span><span class="devsite-syntax-nx">innerHTML</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">message</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-p">}</span>
+</code></pre></devsite-code>
+<p>Here's how you'd supply and use a single string:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// In JavaScript code</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">status</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">innerText</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">i18n</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getMessage</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"error"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">errorDetails</span><span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JSON"><code translate="no" dir="ltr"><span class="devsite-syntax-nt">"error"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"message"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Error: $details$"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"description"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Generic error template. Expects error parameter to be passed in."</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"placeholders"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nt">"details"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"content"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"$1"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nt">"example"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Failed to fetch RSS feed."</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-p">}</span>
+</code></pre></devsite-code>
+<p>For more information about placeholders, see the <a href="/docs/extensions/how-to/ui/localization-message-formats#placeholders">Locale-Specific Messages</a> page. For details on
+calling <code translate="no" dir="ltr">getMessage()</code>, see the <a href="#method-getMessage">API reference</a>.</p>
+
+<h3 id="getacceptlanguages" data-text="getAcceptLanguages()" tabindex="-1">getAcceptLanguages()</h3>
+
+<p>The following code gets accept-languages from the browser and displays them as a string by
+separating each accept-language with ','.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">getAcceptLanguages</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">i18n</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getAcceptLanguages</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">languageList</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-kd">var</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">languages</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">languageList</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">join</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">","</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nb">document</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getElementById</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"languageSpan"</span><span class="devsite-syntax-p">).</span><span class="devsite-syntax-nx">innerHTML</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">languages</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">})</span>
+<span class="devsite-syntax-p">}</span>
+</code></pre></devsite-code>
+<p>For details on calling <code translate="no" dir="ltr">getAcceptLanguages()</code>, see the <a href="#method-getAcceptLanguages">API reference</a>.</p>
+
+<h3 id="detectlanguage" data-text="detectLanguage()" tabindex="-1">detectLanguage()</h3>
+
+<p>The following code detects up to 3 languages from the given string and displays the result as
+strings separated by new lines.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">detectLanguage</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">inputText</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">i18n</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">detectLanguage</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">inputText</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-kd">var</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">outputLang</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Detected Language: "</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-kd">var</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">outputPercent</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"Language Percentage: "</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">for</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">i</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">0</span><span class="devsite-syntax-p">;</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">i</span><span class="devsite-syntax-w"> &lt; </span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">languages</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">length</span><span class="devsite-syntax-p">;</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">i</span><span class="devsite-syntax-o">++</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">outputLang</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">languages</span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-nx">i</span><span class="devsite-syntax-p">].</span><span class="devsite-syntax-nx">language</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">" "</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">outputPercent</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+=</span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">languages</span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-nx">i</span><span class="devsite-syntax-p">].</span><span class="devsite-syntax-nx">percentage</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">" "</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nb">document</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getElementById</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"languageSpan"</span><span class="devsite-syntax-p">).</span><span class="devsite-syntax-nx">innerHTML</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">outputLang</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"\n"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">outputPercent</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"\nReliable: "</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">isReliable</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">});</span>
+<span class="devsite-syntax-p">}</span>
+</code></pre></devsite-code>
+<p>For more details on calling <code translate="no" dir="ltr">detectLanguage(inputText)</code>, see the <a href="#method-detectLanguage">API reference</a>.</p>
+
+<p></p><div class="dcc-reference"><h2 id="type" data-text="Types" tabindex="-1">Types</h2>
+  <div><div>
+    <div class="notranslate">
+      <h3 id="type-LanguageCode" data-text="LanguageCode" tabindex="-1">LanguageCode</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 47+
+      </span></div>
+    </div><p>An ISO language code such as <code translate="no" dir="ltr">en</code> or <code translate="no" dir="ltr">fr</code>. For a complete list of languages supported by this method, see <a href="https://src.chromium.org/viewvc/chrome/trunk/src/third_party/cld/languages/internal/languages.cc">kLanguageInfoTable</a>. For an unknown language, <code translate="no" dir="ltr">und</code> will be returned, which means that [percentage] of the text is unknown to CLD</p>
+</div><div class="dcc-code-sections">
+      <h4 class="dcc-type--label dcc-code-sections__mode" id="type_1" data-text="Type" tabindex="-1">Type</h4>
+      <div class="dcc-code-sections__overline dcc-code-sections__label"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div></div><h2 id="method" data-text="Methods" tabindex="-1">Methods</h2>
+  <div><div>
+    <div class="notranslate">
+      <h3 id="method-detectLanguage" data-text="detectLanguage()" tabindex="-1">detectLanguage()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 47+
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">i18n</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">detectLanguage</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">text</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Detects the language of the provided text using CLD.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-detectLanguage-text">text</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>User input string to be translated.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-detectLanguage-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-detectLanguage-callback-result">result</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><p>LanguageDetectionResult object that holds detected langugae reliability and array of DetectedLanguage</p>
+<div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-detectLanguage-callback-result-isReliable">isReliable</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
+    </div><p>CLD detected language reliability</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-detectLanguage-callback-result-languages">languages</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array">object[]</p></div>
+    </div><p>array of detectedLanguage</p>
+<div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-detectLanguage-callback-result-languages-languages-language">language</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-detectLanguage-callback-result-languages-languages-percentage">percentage</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The percentage of the detected language</p>
+</li></ul>
+    </div></li></ul>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;object&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 99+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-getAcceptLanguages" data-text="getAcceptLanguages()" tabindex="-1">getAcceptLanguages()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">i18n</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getAcceptLanguages</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Gets the accept-languages of the browser. This is different from the locale used by the browser; to get the locale, use <a href="#method-getUILanguage"><code translate="no" dir="ltr">i18n.getUILanguage</code></a>.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_1" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-getAcceptLanguages-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">languages</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">[])&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getAcceptLanguages-callback-languages">languages</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array">string[]</p></div>
+    </div><p>Array of LanguageCode</p>
+</li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_1" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-LanguageCode">LanguageCode</a>[]&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 99+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-getMessage" data-text="getMessage()" tabindex="-1">getMessage()</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">i18n</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getMessage</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">messageName</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">substitutions?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">any</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">options?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Gets the localized string for the specified message. If the message is missing, this method returns an empty string (''). If the format of the <code translate="no" dir="ltr">getMessage()</code> call is wrong — for example, <em>messageName</em> is not a string or the <em>substitutions</em> array has more than 9 elements — this method returns <code translate="no" dir="ltr">undefined</code>.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_2" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getMessage-messageName">messageName</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>The name of the message, as specified in the <a href="https://developer.chrome.com/extensions/how-to/ui/localization-message-formats"><code translate="no" dir="ltr">messages.json</code></a> file.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getMessage-substitutions">substitutions</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--any">any&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>Up to 9 substitution strings, if the message requires any.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getMessage-options">options</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 79+
+      </span></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getMessage-options-escapeLt">escapeLt</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>Escape <code translate="no" dir="ltr">&lt;</code> in translation to <code translate="no" dir="ltr">&amp;lt;</code>. This applies only to the message itself, not to the placeholders. Developers might want to use this if the translation is used in an HTML context. Closure Templates used with Closure Compiler generate this automatically.</p>
+</li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_2" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+            </div><p>Message localized for current locale.</p>
+</li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-getUILanguage" data-text="getUILanguage()" tabindex="-1">getUILanguage()</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">i18n</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getUILanguage</span><span class="devsite-syntax-p">()</span></pre></devsite-code>
+      </span><p>Gets the browser UI language of the browser. This is different from <a href="#method-getAcceptLanguages"><code translate="no" dir="ltr">i18n.getAcceptLanguages</code></a> which returns the preferred user languages.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_3" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+            </div><p>The browser UI language code such as en-US or fr-FR.</p>
+</li>
+        </ul>
+      </div></div></div>
+<p></p>
+  
+
+  

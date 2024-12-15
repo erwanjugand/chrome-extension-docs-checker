@@ -1,0 +1,715 @@
+
+
+  
+    
+<style>.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}</style>
+
+
+
+
+<p></p>
+
+<p></p><h2 class="dcc-api-title" data-text="Description" id="description" tabindex="-1">Description</h2>
+<div class="dcc-reference"><p>Use the <code translate="no" dir="ltr">chrome.windows</code> API to interact with browser windows. You can use this API to create, modify, and rearrange windows in the browser.</p></div><p></p>
+
+<p></p>
+
+<h2 id="permissions" data-text="Permissions" tabindex="-1">Permissions</h2>
+
+<p>When requested, a <a href="#type-Window"><code translate="no" dir="ltr">windows.Window</code></a> contains an array of <a href="/docs/extensions/reference/api/tabs#type-Tab"><code translate="no" dir="ltr">tabs.Tab</code></a> objects. You must
+declare the <code translate="no" dir="ltr">"tabs"</code> permission in your <a href="/docs/extensions/reference/api/tabs#manifest">manifest</a> if you need access to the <a href="/docs/extensions/reference/api/tabs#property-Tab-url"><code translate="no" dir="ltr">url</code></a>,
+<a href="/docs/extensions/reference/api/tabs#property-Tab-pendingUrl"><code translate="no" dir="ltr">pendingUrl</code></a>, <a href="/docs/extensions/reference/api/tabs#property-Tab-title"><code translate="no" dir="ltr">title</code></a>, or <a href="/docs/extensions/reference/api/tabs#property-Tab-favIconUrl"><code translate="no" dir="ltr">favIconUrl</code></a> properties of <a href="/docs/extensions/reference/api/tabs#type-Tab"><code translate="no" dir="ltr">tabs.Tab</code></a>. For example:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JSON"><code translate="no" dir="ltr"><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"name"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"My extension"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">...</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"permissions"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-s2">"tabs"</span><span class="devsite-syntax-p">],</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">...</span>
+<span class="devsite-syntax-p">}</span>
+</code></pre></devsite-code>
+<p></p>
+
+<p></p>
+
+<h2 id="concepts_and_usage" data-text="Concepts and usage" tabindex="-1">Concepts and usage</h2>
+
+<h3 id="the_current_window" data-text="The current window" tabindex="-1">The current window</h3>
+
+<p>Many functions in the extension system take an optional <code translate="no" dir="ltr">windowId</code> argument, which defaults to the
+current window.</p>
+
+<p>The <em>current window</em> is the window that contains the code that is currently executing. It's
+important to realize that this can be different from the topmost or focused window.</p>
+
+<p>For example, say an extension creates a few tabs or windows from a single HTML file, and that the
+HTML file contains a call to <a href="/docs/extensions/reference/api/tabs#method-query"><code translate="no" dir="ltr">tabs.query()</code></a>. The current window is the window that contains the
+page that made the call, no matter what the topmost window is.</p>
+
+<p>In the case of <a href="/docs/extensions/develop/concepts/service-workers">service workers</a>, the value of the current window falls back to the last active
+window. Under some circumstances, there may be no current window for background pages.</p>
+
+<h2 id="examples" data-text="Examples" tabindex="-1">Examples</h2>
+
+<p>To try this API, install the <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/windows">windows API example</a> from the <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples">chrome-extension-samples</a>
+repository.</p>
+
+<figure>
+  <img src="/static/docs/extensions/reference/api/windows/images/windows.png" alt="Two windows, each with one tab" class="screenshot" width="561">
+  <figcaption>Two windows, each with one tab.</figcaption>
+</figure>
+
+<p></p><div class="dcc-reference"><h2 id="type" data-text="Types" tabindex="-1">Types</h2>
+  <div><div>
+    <div class="notranslate">
+      <h3 id="type-CreateType" data-text="CreateType" tabindex="-1">CreateType</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 44+
+      </span></div>
+    </div><p>Specifies what type of browser window to create. 'panel' is deprecated and is available only to existing allowlisted extensions on Chrome OS.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
+      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"normal"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Specifies the window as a standard window.</span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"popup"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Specifies the window as a popup window.</span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"panel"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Specifies the window as a panel.</span></p></span><p></p>
+    </div>
+  </div><div>
+    <div class="notranslate">
+      <h3 id="type-QueryOptions" data-text="QueryOptions" tabindex="-1">QueryOptions</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 88+
+      </span></div>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-QueryOptions-populate">populate</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>If true, the <a href="#type-Window"><code translate="no" dir="ltr">windows.Window</code></a> object has a <code translate="no" dir="ltr">tabs</code> property that contains a list of the <a href="https://developer.chrome.com/docs/extensions/reference/api/tabs/#type-Tab"><code translate="no" dir="ltr">tabs.Tab</code></a> objects. The <code translate="no" dir="ltr">Tab</code> objects only contain the <code translate="no" dir="ltr">url</code>, <code translate="no" dir="ltr">pendingUrl</code>, <code translate="no" dir="ltr">title</code>, and <code translate="no" dir="ltr">favIconUrl</code> properties if the extension's manifest file includes the <code translate="no" dir="ltr">"tabs"</code> permission.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-QueryOptions-windowTypes">windowTypes</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-WindowType">WindowType</a>[]&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>If set, the <a href="#type-Window"><code translate="no" dir="ltr">windows.Window</code></a> returned is filtered based on its type. If unset, the default filter is set to <code translate="no" dir="ltr">['normal', 'popup']</code>.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-Window" data-text="Window" tabindex="-1">Window</h3>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_1" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Window-alwaysOnTop">alwaysOnTop</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
+    </div><p>Whether the window is set to be always on top.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Window-focused">focused</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
+    </div><p>Whether the window is currently the focused window.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Window-height">height</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The height of the window, including the frame, in pixels. In some circumstances a window may not be assigned a <code translate="no" dir="ltr">height</code> property; for example, when querying closed windows from the <a href="https://developer.chrome.com/docs/extensions/reference/api/sessions/"><code translate="no" dir="ltr">sessions</code></a> API.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Window-id">id</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The ID of the window. Window IDs are unique within a browser session. In some circumstances a window may not be assigned an <code translate="no" dir="ltr">ID</code> property; for example, when querying windows using the <a href="https://developer.chrome.com/docs/extensions/reference/api/sessions/"><code translate="no" dir="ltr">sessions</code></a> API, in which case a session ID may be present.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Window-incognito">incognito</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
+    </div><p>Whether the window is incognito.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Window-left">left</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The offset of the window from the left edge of the screen in pixels. In some circumstances a window may not be assigned a <code translate="no" dir="ltr">left</code> property; for example, when querying closed windows from the <a href="https://developer.chrome.com/docs/extensions/reference/api/sessions/"><code translate="no" dir="ltr">sessions</code></a> API.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Window-sessionId">sessionId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The session ID used to uniquely identify a window, obtained from the <a href="https://developer.chrome.com/docs/extensions/reference/api/sessions/"><code translate="no" dir="ltr">sessions</code></a> API.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Window-state">state</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-WindowState">WindowState</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The state of this browser window.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Window-tabs">tabs</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="https://developer.chrome.com/docs/extensions/reference/api/tabs/#type-Tab">Tab</a>[]&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>Array of <a href="https://developer.chrome.com/docs/extensions/reference/api/tabs/#type-Tab"><code translate="no" dir="ltr">tabs.Tab</code></a> objects representing the current tabs in the window.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Window-top">top</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The offset of the window from the top edge of the screen in pixels. In some circumstances a window may not be assigned a <code translate="no" dir="ltr">top</code> property; for example, when querying closed windows from the <a href="https://developer.chrome.com/docs/extensions/reference/api/sessions/"><code translate="no" dir="ltr">sessions</code></a> API.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Window-type">type</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-WindowType">WindowType</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The type of browser window this is.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Window-width">width</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The width of the window, including the frame, in pixels. In some circumstances a window may not be assigned a <code translate="no" dir="ltr">width</code> property; for example, when querying closed windows from the <a href="https://developer.chrome.com/docs/extensions/reference/api/sessions/"><code translate="no" dir="ltr">sessions</code></a> API.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-WindowState" data-text="WindowState" tabindex="-1">WindowState</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 44+
+      </span></div>
+    </div><p>The state of this browser window. In some circumstances a window may not be assigned a <code translate="no" dir="ltr">state</code> property; for example, when querying closed windows from the <a href="https://developer.chrome.com/docs/extensions/reference/api/sessions/"><code translate="no" dir="ltr">sessions</code></a> API.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum_1" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
+      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"normal"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Normal window state (not minimized, maximized, or fullscreen).</span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"minimized"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Minimized window state.</span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"maximized"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Maximized window state.</span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"fullscreen"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Fullscreen window state.</span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"locked-fullscreen"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Locked fullscreen window state. This fullscreen state cannot be exited by user action and is available only to allowlisted extensions on Chrome OS.</span></p></span><p></p>
+    </div>
+  </div><div>
+    <div class="notranslate">
+      <h3 id="type-WindowType" data-text="WindowType" tabindex="-1">WindowType</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 44+
+      </span></div>
+    </div><p>The type of browser window this is. In some circumstances a window may not be assigned a <code translate="no" dir="ltr">type</code> property; for example, when querying closed windows from the <a href="https://developer.chrome.com/docs/extensions/reference/api/sessions/"><code translate="no" dir="ltr">sessions</code></a> API.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum_2" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
+      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"normal"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">A normal browser window.</span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"popup"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">A browser popup.</span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"panel"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"><em>Deprecated in this API.</em> A Chrome App panel-style window. Extensions can only see their own panel windows.</span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"app"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"><em>Deprecated in this API.</em> A Chrome App window. Extensions can only see their app own windows.</span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"devtools"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">A Developer Tools window.</span></p></span><p></p>
+    </div>
+  </div></div><h2 id="property" data-text="Properties" tabindex="-1">Properties</h2>
+  <div><div>
+    <div class="notranslate">
+      <h3 id="property-WINDOW_ID_CURRENT" data-text="WINDOW_ID_CURRENT" tabindex="-1">WINDOW_ID_CURRENT</h3>
+    </div><p>The windowId value that represents the <a href="https://developer.chrome.com/docs/extensions/reference/windows/#the_current_window">current window</a>.</p>
+</div><div class="dcc-code-sections">
+      <h4 class="dcc-type--label dcc-code-sections__mode" id="value" data-text="Value" tabindex="-1">Value</h4>
+      <div class="dcc-code-sections__overline dcc-code-sections__label"><p class="dcc-code-sections__icon dcc-code-sections__icon--number"><span class="dcc-code-sections__value">-2</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></div>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="property-WINDOW_ID_NONE" data-text="WINDOW_ID_NONE" tabindex="-1">WINDOW_ID_NONE</h3>
+    </div><p>The windowId value that represents the absence of a Chrome browser window.</p>
+</div><div class="dcc-code-sections">
+      <h4 class="dcc-type--label dcc-code-sections__mode" id="value_1" data-text="Value" tabindex="-1">Value</h4>
+      <div class="dcc-code-sections__overline dcc-code-sections__label"><p class="dcc-code-sections__icon dcc-code-sections__icon--number"><span class="dcc-code-sections__value">-1</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></div>
+    </div></div><h2 id="method" data-text="Methods" tabindex="-1">Methods</h2>
+  <div><div>
+    <div class="notranslate">
+      <h3 id="method-create" data-text="create()" tabindex="-1">create()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">windows</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">createData?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Creates (opens) a new browser window with any optional sizing, position, or default URL provided.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-create-createData">createData</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-create-createData-focused">focused</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>If <code translate="no" dir="ltr">true</code>, opens an active window. If <code translate="no" dir="ltr">false</code>, opens an inactive window.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-create-createData-height">height</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The height in pixels of the new window, including the frame. If not specified, defaults to a natural height.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-create-createData-incognito">incognito</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>Whether the new window should be an incognito window.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-create-createData-left">left</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The number of pixels to position the new window from the left edge of the screen. If not specified, the new window is offset naturally from the last focused window. This value is ignored for panels.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-create-createData-setSelfAsOpener">setSelfAsOpener</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 64+
+      </span></div>
+    </div><p>If <code translate="no" dir="ltr">true</code>, the newly-created window's 'window.opener' is set to the caller and is in the same <a href="https://www.w3.org/TR/html51/browsers.html#unit-of-related-browsing-contexts">unit of related browsing contexts</a> as the caller.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-create-createData-state">state</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-WindowState">WindowState</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 44+
+      </span></div>
+    </div><p>The initial state of the window. The <code translate="no" dir="ltr">minimized</code>, <code translate="no" dir="ltr">maximized</code>, and <code translate="no" dir="ltr">fullscreen</code> states cannot be combined with <code translate="no" dir="ltr">left</code>, <code translate="no" dir="ltr">top</code>, <code translate="no" dir="ltr">width</code>, or <code translate="no" dir="ltr">height</code>.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-create-createData-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The ID of the tab to add to the new window.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-create-createData-top">top</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The number of pixels to position the new window from the top edge of the screen. If not specified, the new window is offset naturally from the last focused window. This value is ignored for panels.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-create-createData-type">type</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-CreateType">CreateType</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>Specifies what type of browser window to create.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-create-createData-url">url</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--uniondcc-code-sections__enum">string&nbsp;|&nbsp;string[]&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>A URL or array of URLs to open as tabs in the window. Fully-qualified URLs must include a scheme, e.g., 'http://www.google.com', not 'www.google.com'. Non-fully-qualified URLs are considered relative within the extension. Defaults to the New Tab Page.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-create-createData-width">width</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The width in pixels of the new window, including the frame. If not specified, defaults to a natural width.</p>
+</li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-create-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">window?</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-Window"><span class="devsite-syntax-kt">Window</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-create-callback-window">window</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-Window">Window</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>Contains details about the created window.</p>
+</li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-Window">Window</a>&nbsp;|&nbsp;undefined&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 88+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-get" data-text="get()" tabindex="-1">get()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">windows</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">get</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">windowId</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">number</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">queryOptions?</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-QueryOptions"><span class="devsite-syntax-kt">QueryOptions</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Gets details about a window.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_1" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-get-windowId">windowId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-get-queryOptions">queryOptions</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-QueryOptions">QueryOptions</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 88+
+      </span></div>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-get-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">window</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-Window"><span class="devsite-syntax-kt">Window</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-get-callback-window">window</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-Window">Window</a></p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_1" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-Window">Window</a>&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 88+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-getAll" data-text="getAll()" tabindex="-1">getAll()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">windows</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getAll</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">queryOptions?</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-QueryOptions"><span class="devsite-syntax-kt">QueryOptions</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Gets all windows.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_2" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getAll-queryOptions">queryOptions</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-QueryOptions">QueryOptions</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 88+
+      </span></div>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-getAll-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">windows</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-Window"><span class="devsite-syntax-kt">Window</span></a><span class="devsite-syntax-p">[])&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getAll-callback-windows">windows</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-Window">Window</a>[]</p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_2" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-Window">Window</a>[]&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 88+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-getCurrent" data-text="getCurrent()" tabindex="-1">getCurrent()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">windows</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getCurrent</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">queryOptions?</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-QueryOptions"><span class="devsite-syntax-kt">QueryOptions</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Gets the <a href="https://developer.chrome.com/docs/extensions/reference/windows/#current-window">current window</a>.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_3" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getCurrent-queryOptions">queryOptions</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-QueryOptions">QueryOptions</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 88+
+      </span></div>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-getCurrent-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">window</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-Window"><span class="devsite-syntax-kt">Window</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getCurrent-callback-window">window</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-Window">Window</a></p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_3" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-Window">Window</a>&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 88+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-getLastFocused" data-text="getLastFocused()" tabindex="-1">getLastFocused()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">windows</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getLastFocused</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">queryOptions?</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-QueryOptions"><span class="devsite-syntax-kt">QueryOptions</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Gets the window that was most recently focused — typically the window 'on top'.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_4" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getLastFocused-queryOptions">queryOptions</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-QueryOptions">QueryOptions</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 88+
+      </span></div>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-getLastFocused-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">window</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-Window"><span class="devsite-syntax-kt">Window</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getLastFocused-callback-window">window</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-Window">Window</a></p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_4" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-Window">Window</a>&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 88+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-remove" data-text="remove()" tabindex="-1">remove()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">windows</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">remove</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">windowId</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">number</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Removes (closes) a window and all the tabs inside it.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_5" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-remove-windowId">windowId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-remove-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_5" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 88+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-update" data-text="update()" tabindex="-1">update()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">windows</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">update</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">windowId</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">number</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">updateInfo</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Updates the properties of a window. Specify only the properties that to be changed; unspecified properties are unchanged.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_6" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-update-windowId">windowId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-update-updateInfo">updateInfo</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-update-updateInfo-drawAttention">drawAttention</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>If <code translate="no" dir="ltr">true</code>, causes the window to be displayed in a manner that draws the user's attention to the window, without changing the focused window. The effect lasts until the user changes focus to the window. This option has no effect if the window already has focus. Set to <code translate="no" dir="ltr">false</code> to cancel a previous <code translate="no" dir="ltr">drawAttention</code> request.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-update-updateInfo-focused">focused</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>If <code translate="no" dir="ltr">true</code>, brings the window to the front; cannot be combined with the state 'minimized'. If <code translate="no" dir="ltr">false</code>, brings the next window in the z-order to the front; cannot be combined with the state 'fullscreen' or 'maximized'.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-update-updateInfo-height">height</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The height to resize the window to in pixels. This value is ignored for panels.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-update-updateInfo-left">left</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The offset from the left edge of the screen to move the window to in pixels. This value is ignored for panels.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-update-updateInfo-state">state</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-WindowState">WindowState</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The new state of the window. The 'minimized', 'maximized', and 'fullscreen' states cannot be combined with 'left', 'top', 'width', or 'height'.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-update-updateInfo-top">top</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The offset from the top edge of the screen to move the window to in pixels. This value is ignored for panels.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-update-updateInfo-width">width</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The width to resize the window to in pixels. This value is ignored for panels.</p>
+</li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-update-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">window</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-Window"><span class="devsite-syntax-kt">Window</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-update-callback-window">window</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-Window">Window</a></p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_6" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-Window">Window</a>&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 88+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div></div><h2 id="event" data-text="Events" tabindex="-1">Events</h2>
+  <div><div>
+    <div class="notranslate">
+      <h3 id="event-onBoundsChanged" data-text="onBoundsChanged" tabindex="-1">onBoundsChanged</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 86+
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">windows</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onBoundsChanged</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Fired when a window has been resized; this event is only dispatched when the new bounds are committed, and not for in-progress changes.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_7" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onBoundsChanged-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">window</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-Window"><span class="devsite-syntax-kt">Window</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onBoundsChanged-callback-window">window</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-Window">Window</a></p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="event-onCreated" data-text="onCreated" tabindex="-1">onCreated</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">windows</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onCreated</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">filters?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Fired when a window is created.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_8" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onCreated-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 46+
+      </span></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">window</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-Window"><span class="devsite-syntax-kt">Window</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onCreated-callback-window">window</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-Window">Window</a></p></div>
+    </div><p>Details of the created window.</p>
+</li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onCreated-filters">filters</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCreated-filters-windowTypes">windowTypes</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-WindowType">WindowType</a>[]</p></div>
+    </div><p>Conditions that the window's type being created must satisfy. By default it satisfies <code translate="no" dir="ltr">['normal', 'popup']</code>.</p>
+</li></ul>
+    </div></li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="event-onFocusChanged" data-text="onFocusChanged" tabindex="-1">onFocusChanged</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">windows</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onFocusChanged</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">filters?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Fired when the currently focused window changes. Returns <code translate="no" dir="ltr">chrome.windows.WINDOW_ID_NONE</code> if all Chrome windows have lost focus. <strong>Note:</strong> On some Linux window managers, <code translate="no" dir="ltr">WINDOW_ID_NONE</code> is always sent immediately preceding a switch from one Chrome window to another.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_9" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onFocusChanged-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 46+
+      </span></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">windowId</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">number</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onFocusChanged-callback-windowId">windowId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>ID of the newly-focused window.</p>
+</li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onFocusChanged-filters">filters</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onFocusChanged-filters-windowTypes">windowTypes</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-WindowType">WindowType</a>[]</p></div>
+    </div><p>Conditions that the window's type being removed must satisfy. By default it satisfies <code translate="no" dir="ltr">['normal', 'popup']</code>.</p>
+</li></ul>
+    </div></li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="event-onRemoved" data-text="onRemoved" tabindex="-1">onRemoved</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">windows</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onRemoved</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">filters?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Fired when a window is removed (closed).</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_10" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onRemoved-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 46+
+      </span></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">windowId</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">number</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onRemoved-callback-windowId">windowId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>ID of the removed window.</p>
+</li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onRemoved-filters">filters</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onRemoved-filters-windowTypes">windowTypes</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-WindowType">WindowType</a>[]</p></div>
+    </div><p>Conditions that the window's type being removed must satisfy. By default it satisfies <code translate="no" dir="ltr">['normal', 'popup']</code>.</p>
+</li></ul>
+    </div></li></ul>
+    </div></div></div>
+<p></p>
+  
+
+  

@@ -1,0 +1,399 @@
+
+
+  
+    
+<style>.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}</style>
+
+
+
+
+<p></p>
+
+<p></p><h2 class="dcc-api-title" data-text="Description" id="description" tabindex="-1">Description</h2>
+<div class="dcc-reference"><p>The <code translate="no" dir="ltr">chrome.webAuthenticationProxy</code> API lets remote desktop software running on a remote host intercept Web Authentication API (WebAuthn) requests in order to handle them on a local client.</p></div><p></p>
+
+<p></p><h2 id="permissions" data-text="Permissions" tabindex="-1">Permissions</h2>
+<div class="dcc-reference"><code translate="no" dir="ltr">webAuthenticationProxy</code><br></div><p></p>
+
+<p></p><h2 id="availability" data-text="Availability" tabindex="-1">Availability</h2>
+<div class="dcc-reference"><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 115+
+      </span><span class="dcc-tag-pill--purple dcc-tag-pill" title="Minimum manifest version">MV3+
+      </span></div>
+    </div></div><p></p>
+
+<p></p>
+
+<p></p><div class="dcc-reference"><h2 id="type" data-text="Types" tabindex="-1">Types</h2>
+  <div><div>
+    <div class="notranslate">
+      <h3 id="type-CreateRequest" data-text="CreateRequest" tabindex="-1">CreateRequest</h3>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-CreateRequest-requestDetailsJson">requestDetailsJson</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>The <code translate="no" dir="ltr">PublicKeyCredentialCreationOptions</code> passed to <code translate="no" dir="ltr">navigator.credentials.create()</code>, serialized as a JSON string. The serialization format is compatible with <a href="https://w3c.github.io/webauthn/#sctn-parseCreationOptionsFromJSON"><code translate="no" dir="ltr">PublicKeyCredential.parseCreationOptionsFromJSON()</code></a>.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-CreateRequest-requestId">requestId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>An opaque identifier for the request.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-CreateResponseDetails" data-text="CreateResponseDetails" tabindex="-1">CreateResponseDetails</h3>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_1" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-CreateResponseDetails-error">error</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-DOMExceptionDetails">DOMExceptionDetails</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The <code translate="no" dir="ltr">DOMException</code> yielded by the remote request, if any.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-CreateResponseDetails-requestId">requestId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The <code translate="no" dir="ltr">requestId</code> of the <code translate="no" dir="ltr">CreateRequest</code>.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-CreateResponseDetails-responseJson">responseJson</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The <code translate="no" dir="ltr">PublicKeyCredential</code>, yielded by the remote request, if any, serialized as a JSON string by calling href="https://w3c.github.io/webauthn/#dom-publickeycredential-tojson"&gt; <code translate="no" dir="ltr">PublicKeyCredential.toJSON()</code>.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-DOMExceptionDetails" data-text="DOMExceptionDetails" tabindex="-1">DOMExceptionDetails</h3>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_2" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DOMExceptionDetails-message">message</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DOMExceptionDetails-name">name</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div></li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-GetRequest" data-text="GetRequest" tabindex="-1">GetRequest</h3>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_3" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-GetRequest-requestDetailsJson">requestDetailsJson</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>The <code translate="no" dir="ltr">PublicKeyCredentialRequestOptions</code> passed to <code translate="no" dir="ltr">navigator.credentials.get()</code>, serialized as a JSON string. The serialization format is compatible with <a href="https://w3c.github.io/webauthn/#sctn-parseRequestOptionsFromJSON"><code translate="no" dir="ltr">PublicKeyCredential.parseRequestOptionsFromJSON()</code></a>.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-GetRequest-requestId">requestId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>An opaque identifier for the request.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-GetResponseDetails" data-text="GetResponseDetails" tabindex="-1">GetResponseDetails</h3>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_4" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-GetResponseDetails-error">error</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-DOMExceptionDetails">DOMExceptionDetails</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The <code translate="no" dir="ltr">DOMException</code> yielded by the remote request, if any.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-GetResponseDetails-requestId">requestId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The <code translate="no" dir="ltr">requestId</code> of the <code translate="no" dir="ltr">CreateRequest</code>.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-GetResponseDetails-responseJson">responseJson</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The <code translate="no" dir="ltr">PublicKeyCredential</code>, yielded by the remote request, if any, serialized as a JSON string by calling href="https://w3c.github.io/webauthn/#dom-publickeycredential-tojson"&gt; <code translate="no" dir="ltr">PublicKeyCredential.toJSON()</code>.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-IsUvpaaRequest" data-text="IsUvpaaRequest" tabindex="-1">IsUvpaaRequest</h3>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_5" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-IsUvpaaRequest-requestId">requestId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>An opaque identifier for the request.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-IsUvpaaResponseDetails" data-text="IsUvpaaResponseDetails" tabindex="-1">IsUvpaaResponseDetails</h3>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_6" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-IsUvpaaResponseDetails-isUvpaa">isUvpaa</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-IsUvpaaResponseDetails-requestId">requestId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div></li></ul>
+    </div></div><h2 id="method" data-text="Methods" tabindex="-1">Methods</h2>
+  <div><div>
+    <div class="notranslate">
+      <h3 id="method-attach" data-text="attach()" tabindex="-1">attach()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">webAuthenticationProxy</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">attach</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Makes this extension the active Web Authentication API request proxy.</p>
+<p>Remote desktop extensions typically call this method after detecting attachment of a remote session to this host. Once this method returns without error, regular processing of WebAuthn requests is suspended, and events from this extension API are raised.</p>
+<p>This method fails with an error if a different extension is already attached.</p>
+<p>The attached extension must call <code translate="no" dir="ltr">detach()</code> once the remote desktop session has ended in order to resume regular WebAuthn request processing. Extensions automatically become detached if they are unloaded.</p>
+<p>Refer to the <code translate="no" dir="ltr">onRemoteSessionStateChange</code> event for signaling a change of remote session attachment from a native application to to the (possibly suspended) extension.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-attach-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">error?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-attach-callback-error">error</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;string&nbsp;|&nbsp;undefined&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-completeCreateRequest" data-text="completeCreateRequest()" tabindex="-1">completeCreateRequest()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">webAuthenticationProxy</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">completeCreateRequest</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-CreateResponseDetails"><span class="devsite-syntax-kt">CreateResponseDetails</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Reports the result of a <code translate="no" dir="ltr">navigator.credentials.create()</code> call. The extension must call this for every <code translate="no" dir="ltr">onCreateRequest</code> event it has received, unless the request was canceled (in which case, an <code translate="no" dir="ltr">onRequestCanceled</code> event is fired).</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_1" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-completeCreateRequest-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-CreateResponseDetails">CreateResponseDetails</a></p></div>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-completeCreateRequest-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_1" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-completeGetRequest" data-text="completeGetRequest()" tabindex="-1">completeGetRequest()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">webAuthenticationProxy</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">completeGetRequest</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-GetResponseDetails"><span class="devsite-syntax-kt">GetResponseDetails</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Reports the result of a <code translate="no" dir="ltr">navigator.credentials.get()</code> call. The extension must call this for every <code translate="no" dir="ltr">onGetRequest</code> event it has received, unless the request was canceled (in which case, an <code translate="no" dir="ltr">onRequestCanceled</code> event is fired).</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_2" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-completeGetRequest-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-GetResponseDetails">GetResponseDetails</a></p></div>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-completeGetRequest-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_2" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-completeIsUvpaaRequest" data-text="completeIsUvpaaRequest()" tabindex="-1">completeIsUvpaaRequest()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">webAuthenticationProxy</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">completeIsUvpaaRequest</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-IsUvpaaResponseDetails"><span class="devsite-syntax-kt">IsUvpaaResponseDetails</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Reports the result of a <code translate="no" dir="ltr">PublicKeyCredential.isUserVerifyingPlatformAuthenticator()</code> call. The extension must call this for every <code translate="no" dir="ltr">onIsUvpaaRequest</code> event it has received.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_3" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-completeIsUvpaaRequest-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-IsUvpaaResponseDetails">IsUvpaaResponseDetails</a></p></div>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-completeIsUvpaaRequest-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_3" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-detach" data-text="detach()" tabindex="-1">detach()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">webAuthenticationProxy</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">detach</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Removes this extension from being the active Web Authentication API request proxy.</p>
+<p>This method is typically called when the extension detects that a remote desktop session was terminated. Once this method returns, the extension ceases to be the active Web Authentication API request proxy.</p>
+<p>Refer to the <code translate="no" dir="ltr">onRemoteSessionStateChange</code> event for signaling a change of remote session attachment from a native application to to the (possibly suspended) extension.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_4" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-detach-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">error?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-detach-callback-error">error</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_4" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;string&nbsp;|&nbsp;undefined&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div></div><h2 id="event" data-text="Events" tabindex="-1">Events</h2>
+  <div><div>
+    <div class="notranslate">
+      <h3 id="event-onCreateRequest" data-text="onCreateRequest" tabindex="-1">onCreateRequest</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">webAuthenticationProxy</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onCreateRequest</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Fires when a WebAuthn <code translate="no" dir="ltr">navigator.credentials.create()</code> call occurs. The extension must supply a response by calling <code translate="no" dir="ltr">completeCreateRequest()</code> with the <code translate="no" dir="ltr">requestId</code> from <code translate="no" dir="ltr">requestInfo</code>.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_5" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onCreateRequest-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">requestInfo</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-CreateRequest"><span class="devsite-syntax-kt">CreateRequest</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onCreateRequest-callback-requestInfo">requestInfo</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-CreateRequest">CreateRequest</a></p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="event-onGetRequest" data-text="onGetRequest" tabindex="-1">onGetRequest</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">webAuthenticationProxy</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onGetRequest</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Fires when a WebAuthn navigator.credentials.get() call occurs. The extension must supply a response by calling <code translate="no" dir="ltr">completeGetRequest()</code> with the <code translate="no" dir="ltr">requestId</code> from <code translate="no" dir="ltr">requestInfo</code></p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_6" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onGetRequest-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">requestInfo</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-GetRequest"><span class="devsite-syntax-kt">GetRequest</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onGetRequest-callback-requestInfo">requestInfo</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-GetRequest">GetRequest</a></p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="event-onIsUvpaaRequest" data-text="onIsUvpaaRequest" tabindex="-1">onIsUvpaaRequest</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">webAuthenticationProxy</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onIsUvpaaRequest</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Fires when a <code translate="no" dir="ltr">PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()</code> call occurs. The extension must supply a response by calling <code translate="no" dir="ltr">completeIsUvpaaRequest()</code> with the <code translate="no" dir="ltr">requestId</code> from <code translate="no" dir="ltr">requestInfo</code></p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_7" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onIsUvpaaRequest-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">requestInfo</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-IsUvpaaRequest"><span class="devsite-syntax-kt">IsUvpaaRequest</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onIsUvpaaRequest-callback-requestInfo">requestInfo</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-IsUvpaaRequest">IsUvpaaRequest</a></p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="event-onRemoteSessionStateChange" data-text="onRemoteSessionStateChange" tabindex="-1">onRemoteSessionStateChange</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">webAuthenticationProxy</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onRemoteSessionStateChange</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>A native application associated with this extension can cause this event to be fired by writing to a file with a name equal to the extension's ID in a directory named <code translate="no" dir="ltr">WebAuthenticationProxyRemoteSessionStateChange</code> inside the <a href="https://chromium.googlesource.com/chromium/src/+/main/docs/user_data_dir.md#default-location">default user data directory</a></p>
+<p>The contents of the file should be empty. I.e., it is not necessary to change the contents of the file in order to trigger this event.</p>
+<p>The native host application may use this event mechanism to signal a possible remote session state change (i.e. from detached to attached, or vice versa) while the extension service worker is possibly suspended. In the handler for this event, the extension can call the <code translate="no" dir="ltr">attach()</code> or <code translate="no" dir="ltr">detach()</code> API methods accordingly.</p>
+<p>The event listener must be registered synchronously at load time.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_8" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onRemoteSessionStateChange-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="event-onRequestCanceled" data-text="onRequestCanceled" tabindex="-1">onRequestCanceled</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">webAuthenticationProxy</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onRequestCanceled</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Fires when a <code translate="no" dir="ltr">onCreateRequest</code> or <code translate="no" dir="ltr">onGetRequest</code> event is canceled (because the WebAuthn request was aborted by the caller, or because it timed out). When receiving this event, the extension should cancel processing of the corresponding request on the client side. Extensions cannot complete a request once it has been canceled.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_9" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onRequestCanceled-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">requestId</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">number</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onRequestCanceled-callback-requestId">requestId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div></div></div>
+<p></p>
+  
+
+  

@@ -1,0 +1,664 @@
+
+
+  
+    
+<style>.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}</style>
+
+
+
+
+<p></p>
+
+<p></p><h2 class="dcc-api-title" data-text="Description" id="description" tabindex="-1">Description</h2>
+<div class="dcc-reference"><p>Use the <code translate="no" dir="ltr">chrome.storage</code> API to store, retrieve, and track changes to user data.</p></div><p></p>
+
+<p></p><h2 id="permissions" data-text="Permissions" tabindex="-1">Permissions</h2>
+<div class="dcc-reference"><code translate="no" dir="ltr">storage</code><br></div><p></p>
+
+<p>To use the storage API, declare the <code translate="no" dir="ltr">"storage"</code> permission in the extension
+<a href="/docs/extensions/reference/manifest">manifest</a>. For example:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JSON"><code translate="no" dir="ltr"><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"name"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"My extension"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">...</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"permissions"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s2">"storage"</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">],</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">...</span>
+<span class="devsite-syntax-p">}</span>
+</code></pre></devsite-code>
+<p></p>
+
+<p></p>
+
+<h2 id="usage" data-text="Concepts and usage" tabindex="-1">Concepts and usage</h2>
+
+<p>The Storage API provides an extension-specific way to persist user data and state. It's similar to the web platform's storage APIs (<a href="https://developer.mozilla.org/docs/Web/API/Window/indexeddb">IndexedDB</a>, and <a href="https://developer.mozilla.org/docs/Web/API/Storage">Storage</a>), but was designed to meet the storage needs of extensions. The following are a few key features:</p>
+
+<ul>
+<li>All extension contexts, including the extension service worker and content scripts have access to the Storage API.</li>
+<li>The JSON serializable values are stored as object properties.</li>
+<li>The Storage API is asynchronous with bulk read and write operations.</li>
+<li>Even if the user clears the cache and browsing history, the data persists.</li>
+<li>Stored settings persist even when using <a href="/docs/extensions/reference/manifest/incognito">split incognito</a>.</li>
+<li>Includes an exclusive read-only <a href="#property-managed">managed storage area</a> for enterprise policies.</li>
+</ul>
+
+<h3 id="can_extensions_use_web_storage_apis" data-text="Can extensions use web storage APIs?" tabindex="-1">Can extensions use web storage APIs?</h3>
+
+<p>While extensions can use the <a href="https://developer.mozilla.org/docs/Web/API/Storage"><code translate="no" dir="ltr">Storage</code></a> interface (accessible from <code translate="no" dir="ltr">window.localStorage</code>) in some contexts (popup and other HTML pages), we don't recommend it for the following reasons:</p>
+
+<ul>
+<li>Extension service workers can't use the Web Storage API.</li>
+<li>Content scripts share storage with the host page.</li>
+<li>Data saved using the Web Storage API is lost when the user clears their browsing history.</li>
+</ul>
+
+<p>To move data from web storage APIs to extension storage APIs from a service worker:</p>
+
+<ol>
+<li>Prepare an offscreen document html page and script file. The script file should contain a conversion routine and an <a href="/docs/extensions/reference/api/runtime#event-onMessage"><code translate="no" dir="ltr">onMessage</code></a> handler.</li>
+<li>In the extension service worker, check <code translate="no" dir="ltr">chrome.storage</code> for your data.</li>
+<li>If your data isn't found, call <a href="/docs/extensions/reference/api/offscreen#method-createDocument"><code translate="no" dir="ltr">createDocument()</code></a>.</li>
+<li>After the returned Promise resolves, call <a href="/docs/extensions/reference/api/runtime#method-sendMessage"><code translate="no" dir="ltr">sendMessage()</code></a> to start the conversion routine.</li>
+<li>Inside the offscreen document's <code translate="no" dir="ltr">onMessage</code> handler, call the conversion routine.</li>
+</ol>
+
+<p>There are also some nuances to how web storage APIs work in extensions. Learn more in the
+<a href="/docs/extensions/develop/concepts/storage-and-cookies">Storage and Cookies</a> article.</p>
+
+<h3 id="storage_areas" data-text="Storage areas" tabindex="-1">Storage areas</h3>
+
+<p>The Storage API is divided into the following storage areas:</p>
+
+<dl>
+<dt><a href="#property-local"><code translate="no" dir="ltr">storage.local</code></a></dt>
+<dd>Data is stored locally and cleared when the extension is removed. The storage limit is 10 MB (5&nbsp;MB in Chrome 113 and earlier), but can be increased by requesting the <code translate="no" dir="ltr">"unlimitedStorage"</code> permission. We recommend using <code translate="no" dir="ltr">storage.local</code> to store larger amounts of data.</dd>
+<dt><a href="#property-managed"><code translate="no" dir="ltr">storage.managed</code></a></dt>
+<dd>Managed storage is read-only storage for policy installed extensions and managed by system administrators using a developer-defined schema and enterprise policies. Policies are analogous to options but are configured by a system administrator instead of the user, allowing the extension to be preconfigured for all users of an organization. For information on policies, see <a href="https://www.chromium.org/administrators/">Documentation for Administrators</a>. To learn more about the <code translate="no" dir="ltr">managed</code> storage area, see <a href="/docs/extensions/reference/api/storage">Manifest for storage areas</a>.</dd>
+<dt><a href="#property-session"><code translate="no" dir="ltr">storage.session</code></a></dt>
+<dd>Holds data in memory for the duration of a browser session. By default, it's not exposed to content scripts, but this behavior can be changed by setting <a href="#method-StorageArea-setAccessLevel"><code translate="no" dir="ltr">chrome.storage.session.setAccessLevel()</code></a>. The storage limit is 10 MB (1&nbsp;MB in Chrome 111 and earlier). The<code translate="no" dir="ltr">storage.session</code> interface is one of several <a href="/docs/extensions/mv3/service_workers/service-worker-lifecycle#persist-data">we recommend for service workers</a>.</dd>
+<dt><a href="#property-sync"><code translate="no" dir="ltr">storage.sync</code></a></dt>
+<dd>If syncing is enabled, the data is synced to any Chrome browser that the user is logged into. If disabled, it behaves like <code translate="no" dir="ltr">storage.local</code>. Chrome stores the data locally when the browser is offline and resumes syncing when it's back online. The quota limitation is approximately 100 KB, 8 KB per item. We recommend using <code translate="no" dir="ltr">storage.sync</code> to preserve user settings across synced browsers. If you're working with sensitive user data, instead use <code translate="no" dir="ltr">storage.session</code>.</dd>
+</dl>
+
+<h3 id="storage-and-throttling-limits" data-text="Storage and throttling limits" tabindex="-1">Storage and throttling limits</h3>
+
+<p>The Storage API has the following usage limitations:</p>
+
+<ul>
+<li>Storing data often comes with performance costs, and the API includes storage quotas. We recommend being careful about what data you store so that you don't lose the ability to store data.</li>
+<li>Storage can take time to complete. Make sure to structure your code to account for that time.</li>
+</ul>
+
+<p>For details on storage area limitations and what happens when they're exceeded, see the quota information for <a href="#property-sync"><code translate="no" dir="ltr">sync</code></a>, <a href="#property-local"><code translate="no" dir="ltr">local</code></a>, and <a href="#property-session"><code translate="no" dir="ltr">session</code></a>.</p>
+
+<h2 id="use-cases" data-text="Use cases" tabindex="-1">Use cases</h2>
+
+<p>The following sections demonstrate common use cases for the Storage API.</p>
+
+<h3 id="synchronous_response_to_storage_updates" data-text="Synchronous response to storage updates" tabindex="-1">Synchronous response to storage updates</h3>
+
+<p>To track changes made to storage, add a listener to its <code translate="no" dir="ltr">onChanged</code> event. When anything changes in storage, that event fires. The sample code listens for these changes:</p>
+
+<p><span class="dcc-label">background.js:</span></p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">storage</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onChanged</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">((</span><span class="devsite-syntax-nx">changes</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">namespace</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">for</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kd">let</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-nx">key</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">oldValue</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">newValue</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}]</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">of</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">Object</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">entries</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">changes</span><span class="devsite-syntax-p">))</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-sb">`Storage key "</span><span class="devsite-syntax-si">${</span><span class="devsite-syntax-nx">key</span><span class="devsite-syntax-si">}</span><span class="devsite-syntax-sb">" in namespace "</span><span class="devsite-syntax-si">${</span><span class="devsite-syntax-nx">namespace</span><span class="devsite-syntax-si">}</span><span class="devsite-syntax-sb">" changed.`</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-sb">`Old value was "</span><span class="devsite-syntax-si">${</span><span class="devsite-syntax-nx">oldValue</span><span class="devsite-syntax-si">}</span><span class="devsite-syntax-sb">", new value is "</span><span class="devsite-syntax-si">${</span><span class="devsite-syntax-nx">newValue</span><span class="devsite-syntax-si">}</span><span class="devsite-syntax-sb">".`</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-p">});</span>
+</code></pre></devsite-code>
+<p>We can take this idea even further. In this example, we have an <a href="/docs/extensions/develop/ui/options-page">options page</a> that
+allows the user to toggle a "debug mode" (implementation not shown here). The options page immediately saves the new settings to <code translate="no" dir="ltr">storage.sync</code>, and the service worker uses <code translate="no" dir="ltr">storage.onChanged</code> to apply the setting as soon as possible.</p>
+
+<p><span class="dcc-label">options.html:</span></p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="HTML"><code translate="no" dir="ltr">&lt;!-- type="module" allows you to use top level await --&gt;
+&lt;script defer src="options.js" type="module"&gt;&lt;/script&gt;
+&lt;form id="optionsForm"&gt;
+  &lt;label for="debug"&gt;
+    &lt;input type="checkbox" name="debug" id="debug"&gt;
+    Enable debug mode
+  &lt;/label&gt;
+&lt;/form&gt;
+</code></pre></devsite-code>
+<p><span class="dcc-label">options.js:</span></p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-c1">// In-page cache of the user's options</span>
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">options</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{};</span>
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">optionsForm</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">document</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getElementById</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"optionsForm"</span><span class="devsite-syntax-p">);</span>
+
+<span class="devsite-syntax-c1">// Immediately persist options changes</span>
+<span class="devsite-syntax-nx">optionsForm</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">debug</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addEventListener</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"change"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">event</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">options</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">debug</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">event</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">target</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">checked</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">storage</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">sync</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">set</span><span class="devsite-syntax-p">({</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">options</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">});</span>
+<span class="devsite-syntax-p">});</span>
+
+<span class="devsite-syntax-c1">// Initialize the form with the user's option settings</span>
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">data</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">storage</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">sync</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">get</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"options"</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-nb">Object</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">assign</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">options</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">data</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">options</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-nx">optionsForm</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">debug</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">checked</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">Boolean</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">options</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">debug</span><span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code>
+<p><span class="dcc-label">background.js:</span></p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">setDebugMode</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-cm">/* ... */</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span>
+
+<span class="devsite-syntax-c1">// Watch for changes to the user's options &amp; apply them</span>
+<span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">storage</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onChanged</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">((</span><span class="devsite-syntax-nx">changes</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">area</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">if</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">area</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">===</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'sync'</span><span class="devsite-syntax-w"> &amp;&amp; </span><span class="devsite-syntax-nx">changes</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">options</span><span class="devsite-syntax-o">?</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">newValue</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">debugMode</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">Boolean</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">changes</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">options</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">newValue</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">debug</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'enable debug mode?'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">debugMode</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">setDebugMode</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">debugMode</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-p">});</span>
+</code></pre></devsite-code>
+<h3 id="asynchronous-preload-from-storage" data-text="Asynchronous preload from storage" tabindex="-1">Asynchronous preload from storage</h3>
+
+<p>Because service workers don't run all the time, Manifest V3 extensions sometimes need to
+asynchronously load data from storage before they execute their event handlers. To do this, the
+following snippet uses an async <code translate="no" dir="ltr">action.onClicked</code> event handler that waits for the <code translate="no" dir="ltr">storageCache</code>
+global to be populated before executing its logic.</p>
+
+<p><span class="dcc-label">background.js:</span></p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-c1">// Where we will expose all the data we retrieve from storage.sync.</span>
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">storageCache</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">count</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">0</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">};</span>
+<span class="devsite-syntax-c1">// Asynchronously retrieve data from storage.sync, then cache it.</span>
+<span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">initStorageCache</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">storage</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">sync</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">get</span><span class="devsite-syntax-p">().</span><span class="devsite-syntax-nx">then</span><span class="devsite-syntax-p">((</span><span class="devsite-syntax-nx">items</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Copy the data retrieved from storage into storageCache.</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nb">Object</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">assign</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">storageCache</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">items</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-p">});</span>
+
+<span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onClicked</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-k">async</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">tab</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">try</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">initStorageCache</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">catch</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">e</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-c1">// Handle error that occurred during storage initialization.</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
+
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Normal action handler logic.</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">storageCache</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">count</span><span class="devsite-syntax-o">++</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">storageCache</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">lastTabId</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">tab</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">id</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">storage</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">sync</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">set</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">storageCache</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-p">});</span>
+</code></pre></devsite-code>
+<h2 id="examples" data-text="Examples" tabindex="-1">Examples</h2>
+
+<p>The following samples demonstrate the <code translate="no" dir="ltr">local</code>, <code translate="no" dir="ltr">sync</code>, and
+<code translate="no" dir="ltr">session</code> storage areas:</p>
+<div class="ds-selector-tabs" data-ds-scope="code-sample">
+<section><h3 id="local" data-text="Local" tabindex="-1">Local</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">storage</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">local</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">set</span><span class="devsite-syntax-p">({</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">key</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">value</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}).</span><span class="devsite-syntax-nx">then</span><span class="devsite-syntax-p">(()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"Value is set"</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-p">});</span>
+
+<span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">storage</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">local</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">get</span><span class="devsite-syntax-p">([</span><span class="devsite-syntax-s2">"key"</span><span class="devsite-syntax-p">]).</span><span class="devsite-syntax-nx">then</span><span class="devsite-syntax-p">((</span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"Value is "</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">key</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-p">});</span>
+</code></pre></devsite-code></section>
+<section><h3 id="sync" data-text="Sync" tabindex="-1">Sync</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">storage</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">sync</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">set</span><span class="devsite-syntax-p">({</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">key</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">value</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}).</span><span class="devsite-syntax-nx">then</span><span class="devsite-syntax-p">(()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"Value is set"</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-p">});</span>
+
+<span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">storage</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">sync</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">get</span><span class="devsite-syntax-p">([</span><span class="devsite-syntax-s2">"key"</span><span class="devsite-syntax-p">]).</span><span class="devsite-syntax-nx">then</span><span class="devsite-syntax-p">((</span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"Value is "</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">key</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-p">});</span>
+</code></pre></devsite-code></section>
+<section><h3 id="session" data-text="Session" tabindex="-1">Session</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">storage</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">session</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">set</span><span class="devsite-syntax-p">({</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">key</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">value</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}).</span><span class="devsite-syntax-nx">then</span><span class="devsite-syntax-p">(()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"Value was set"</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-p">});</span>
+
+<span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">storage</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">session</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">get</span><span class="devsite-syntax-p">([</span><span class="devsite-syntax-s2">"key"</span><span class="devsite-syntax-p">]).</span><span class="devsite-syntax-nx">then</span><span class="devsite-syntax-p">((</span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"Value is "</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">key</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-p">});</span>
+</code></pre></devsite-code></section>
+</div>
+<p>To see other demos of the Storage API, explore any of the following samples:</p>
+
+<ul>
+<li><a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/17956f44b6f04d28407a4b7eee428611affd4fab/api/contextMenus/global_context_search">Global search extension</a>.</li>
+<li><a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/17956f44b6f04d28407a4b7eee428611affd4fab/examples/water_alarm_notification">Water alarm extension</a>.</li>
+</ul>
+
+<p></p><div class="dcc-reference"><h2 id="type" data-text="Types" tabindex="-1">Types</h2>
+  <div><div>
+    <div class="notranslate">
+      <h3 id="type-AccessLevel" data-text="AccessLevel" tabindex="-1">AccessLevel</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 102+
+      </span></div>
+    </div><p>The storage area's access level.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
+      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"TRUSTED_CONTEXTS"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Specifies contexts originating from the extension itself.</span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"TRUSTED_AND_UNTRUSTED_CONTEXTS"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Specifies contexts originating from outside the extension.</span></p></span><p></p>
+    </div>
+  </div><div>
+    <div class="notranslate">
+      <h3 id="type-StorageArea" data-text="StorageArea" tabindex="-1">StorageArea</h3>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="event-StorageArea-onChanged">onChanged</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Event&lt;functionvoidvoid&gt;</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 73+
+      </span></div>
+    </div><p>Fired when one or more items change.</p>
+<p>
+          The <code translate="no" dir="ltr">onChanged.addListener</code> function looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">)&nbsp;=&gt;&nbsp;{...}</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-StorageArea-onChanged-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">changes</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-StorageArea-onChanged-callback-changes">changes</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-StorageArea-clear">clear</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--">void</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><p>Removes all items from storage.</p>
+<p>
+          The <code translate="no" dir="ltr">clear</code> function looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">)&nbsp;=&gt;&nbsp;{...}</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-StorageArea-clear-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div><div class="dcc-code-sections"><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-code-sections__label" id="method-StorageArea-clear">returns</div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 88+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-StorageArea-get">get</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--">void</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><p>Gets one or more items from storage.</p>
+<p>
+          The <code translate="no" dir="ltr">get</code> function looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">keys?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span>&nbsp;<span class="devsite-syntax-o">|</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">[]</span>&nbsp;<span class="devsite-syntax-o">|</span>&nbsp;<span class="devsite-syntax-nx">object</span><span class="devsite-syntax-p">,</span>&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">)&nbsp;=&gt;&nbsp;{...}</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-StorageArea-get-keys">keys</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--uniondcc-code-sections__enum">string&nbsp;|&nbsp;string[]&nbsp;|&nbsp;object&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>A single key to get, list of keys to get, or a dictionary specifying default values (see description of the object). An empty list or object will return an empty result object. Pass in <code translate="no" dir="ltr">null</code> to get the entire contents of storage.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-StorageArea-get-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">items</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-StorageArea-get-callback-items">items</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><p>Object with items in their key-value mappings.</p>
+</li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-code-sections__label" id="method-StorageArea-get">returns</div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;object&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 88+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-StorageArea-getBytesInUse">getBytesInUse</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--">void</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><p>Gets the amount of space (in bytes) being used by one or more items.</p>
+<p>
+          The <code translate="no" dir="ltr">getBytesInUse</code> function looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">keys?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span>&nbsp;<span class="devsite-syntax-o">|</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">[],</span>&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">)&nbsp;=&gt;&nbsp;{...}</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-StorageArea-getBytesInUse-keys">keys</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--uniondcc-code-sections__enum">string&nbsp;|&nbsp;string[]&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>A single key or list of keys to get the total usage for. An empty list will return 0. Pass in <code translate="no" dir="ltr">null</code> to get the total usage of all of storage.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-StorageArea-getBytesInUse-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">bytesInUse</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">number</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-StorageArea-getBytesInUse-callback-bytesInUse">bytesInUse</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>Amount of space being used in storage, in bytes.</p>
+</li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-code-sections__label" id="method-StorageArea-getBytesInUse">returns</div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;number&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 88+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-StorageArea-getKeys">getKeys</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--">void</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 130+
+      </span></div>
+    </div><p>Gets all keys from storage.</p>
+<p>
+          The <code translate="no" dir="ltr">getKeys</code> function looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">)&nbsp;=&gt;&nbsp;{...}</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-StorageArea-getKeys-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">keys</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">[])&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-StorageArea-getKeys-callback-keys">keys</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array">string[]</p></div>
+    </div><p>Array with keys read from storage.</p>
+</li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-code-sections__label" id="method-StorageArea-getKeys">returns</div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;string[]&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-StorageArea-remove">remove</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--">void</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><p>Removes one or more items from storage.</p>
+<p>
+          The <code translate="no" dir="ltr">remove</code> function looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">keys</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span>&nbsp;<span class="devsite-syntax-o">|</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">[],</span>&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">)&nbsp;=&gt;&nbsp;{...}</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-StorageArea-remove-keys">keys</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--uniondcc-code-sections__enum">string&nbsp;|&nbsp;string[]</p></div>
+    </div><p>A single key or a list of keys for items to remove.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-StorageArea-remove-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div><div class="dcc-code-sections"><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-code-sections__label" id="method-StorageArea-remove">returns</div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 88+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-StorageArea-set">set</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--">void</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><p>Sets multiple items.</p>
+<p>
+          The <code translate="no" dir="ltr">set</code> function looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">items</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span>&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">)&nbsp;=&gt;&nbsp;{...}</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-StorageArea-set-items">items</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><p>An object which gives each key/value pair to update storage with. Any other key/value pairs in storage will not be affected.</p>
+<p>Primitive values such as numbers will serialize as expected. Values with a <code translate="no" dir="ltr">typeof</code> <code translate="no" dir="ltr">"object"</code> and <code translate="no" dir="ltr">"function"</code> will typically serialize to <code translate="no" dir="ltr">{}</code>, with the exception of <code translate="no" dir="ltr">Array</code> (serializes as expected), <code translate="no" dir="ltr">Date</code>, and <code translate="no" dir="ltr">Regex</code> (serialize using their <code translate="no" dir="ltr">String</code> representation).</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-StorageArea-set-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div><div class="dcc-code-sections"><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-code-sections__label" id="method-StorageArea-set">returns</div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 88+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-StorageArea-setAccessLevel">setAccessLevel</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--">void</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 102+
+      </span></div>
+    </div><p>Sets the desired access level for the storage area. The default will be only trusted contexts.</p>
+<p>
+          The <code translate="no" dir="ltr">setAccessLevel</code> function looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">accessOptions</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span>&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">)&nbsp;=&gt;&nbsp;{...}</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-StorageArea-setAccessLevel-accessOptions">accessOptions</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-StorageArea-setAccessLevel-accessOptions-accessLevel">accessLevel</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-AccessLevel">AccessLevel</a></p></div>
+    </div><p>The access level of the storage area.</p>
+</li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-StorageArea-setAccessLevel-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div><div class="dcc-code-sections"><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-code-sections__label" id="method-StorageArea-setAccessLevel">returns</div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
+            </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div></li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-StorageChange" data-text="StorageChange" tabindex="-1">StorageChange</h3>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_1" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-StorageChange-newValue">newValue</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--any">any&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The new value of the item, if there is a new value.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-StorageChange-oldValue">oldValue</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--any">any&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The old value of the item, if there was an old value.</p>
+</li></ul>
+    </div></div><h2 id="property" data-text="Properties" tabindex="-1">Properties</h2>
+  <div><div>
+    <div class="notranslate">
+      <h3 id="property-local" data-text="local" tabindex="-1">local</h3>
+    </div><p>Items in the <code translate="no" dir="ltr">local</code> storage area are local to each machine.</p>
+</div><div class="dcc-code-sections">
+      <h4 class="dcc-type--label dcc-code-sections__mode" id="type_1" data-text="Type" tabindex="-1">Type</h4>
+      <div class="dcc-code-sections__overline dcc-code-sections__label"><p class="dcc-code-sections__icon dcc-code-sections__icon--intersection"><a href="#type-StorageArea">StorageArea</a>&nbsp;&amp;&nbsp;object</p></div>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_2" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-local-local-QUOTA_BYTES">QUOTA_BYTES</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number"><span class="dcc-code-sections__value">10485760</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></div>
+    </div><p>The maximum amount (in bytes) of data that can be stored in local storage, as measured by the JSON stringification of every value plus every key's length. This value will be ignored if the extension has the <code translate="no" dir="ltr">unlimitedStorage</code> permission. Updates that would cause this limit to be exceeded fail immediately and set <a href="https://developer.chrome.com/docs/extensions/reference/runtime/#property-lastError"><code translate="no" dir="ltr">runtime.lastError</code></a> when using a callback, or a rejected Promise if using async/await.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="property-managed" data-text="managed" tabindex="-1">managed</h3>
+    </div><p>Items in the <code translate="no" dir="ltr">managed</code> storage area are set by an enterprise policy configured by the domain administrator, and are read-only for the extension; trying to modify this namespace results in an error. For information on configuring a policy, see <a href="https://developer.chrome.com/docs/extensions/reference/manifest/storage">Manifest for storage areas</a>.</p>
+</div><div class="dcc-code-sections">
+      <h4 class="dcc-type--label dcc-code-sections__mode" id="type_2" data-text="Type" tabindex="-1">Type</h4>
+      <div class="dcc-code-sections__overline dcc-code-sections__label"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-StorageArea">StorageArea</a></p></div>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="property-session" data-text="session" tabindex="-1">session</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 102+
+      </span><span class="dcc-tag-pill--purple dcc-tag-pill" title="Minimum manifest version">MV3+
+      </span></div>
+    </div><p>Items in the <code translate="no" dir="ltr">session</code> storage area are stored in-memory and will not be persisted to disk.</p>
+</div><div class="dcc-code-sections">
+      <h4 class="dcc-type--label dcc-code-sections__mode" id="type_3" data-text="Type" tabindex="-1">Type</h4>
+      <div class="dcc-code-sections__overline dcc-code-sections__label"><p class="dcc-code-sections__icon dcc-code-sections__icon--intersection"><a href="#type-StorageArea">StorageArea</a>&nbsp;&amp;&nbsp;object</p></div>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_3" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-session-session-QUOTA_BYTES">QUOTA_BYTES</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number"><span class="dcc-code-sections__value">10485760</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></div>
+    </div><p>The maximum amount (in bytes) of data that can be stored in memory, as measured by estimating the dynamically allocated memory usage of every value and key. Updates that would cause this limit to be exceeded fail immediately and set <a href="https://developer.chrome.com/docs/extensions/reference/runtime/#property-lastError"><code translate="no" dir="ltr">runtime.lastError</code></a> when using a callback, or when a Promise is rejected.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="property-sync" data-text="sync" tabindex="-1">sync</h3>
+    </div><p>Items in the <code translate="no" dir="ltr">sync</code> storage area are synced using Chrome Sync.</p>
+</div><div class="dcc-code-sections">
+      <h4 class="dcc-type--label dcc-code-sections__mode" id="type_4" data-text="Type" tabindex="-1">Type</h4>
+      <div class="dcc-code-sections__overline dcc-code-sections__label"><p class="dcc-code-sections__icon dcc-code-sections__icon--intersection"><a href="#type-StorageArea">StorageArea</a>&nbsp;&amp;&nbsp;object</p></div>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_4" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-sync-sync-MAX_ITEMS">MAX_ITEMS</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number"><span class="dcc-code-sections__value">512</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></div>
+    </div><p>The maximum number of items that can be stored in sync storage. Updates that would cause this limit to be exceeded will fail immediately and set <a href="https://developer.chrome.com/docs/extensions/reference/runtime/#property-lastError"><code translate="no" dir="ltr">runtime.lastError</code></a> when using a callback, or when a Promise is rejected.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-sync-sync-MAX_SUSTAINED_WRITE_OPERATIONS_PER_MINUTE">MAX_SUSTAINED_WRITE_OPERATIONS_PER_MINUTE</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number"><span class="dcc-code-sections__value">1000000</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--red dcc-tag-pill">
+        Deprecated</span></div>
+    </div><p class="dcc-code-sections__deprecated">The storage.sync API no longer has a sustained write operation quota.</p><p></p></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-sync-sync-MAX_WRITE_OPERATIONS_PER_HOUR">MAX_WRITE_OPERATIONS_PER_HOUR</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number"><span class="dcc-code-sections__value">1800</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></div>
+    </div><p>The maximum number of <code translate="no" dir="ltr">set</code>, <code translate="no" dir="ltr">remove</code>, or <code translate="no" dir="ltr">clear</code> operations that can be performed each hour. This is 1 every 2 seconds, a lower ceiling than the short term higher writes-per-minute limit.</p>
+<p>Updates that would cause this limit to be exceeded fail immediately and set <a href="https://developer.chrome.com/docs/extensions/reference/runtime/#property-lastError"><code translate="no" dir="ltr">runtime.lastError</code></a> when using a callback, or when a Promise is rejected.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-sync-sync-MAX_WRITE_OPERATIONS_PER_MINUTE">MAX_WRITE_OPERATIONS_PER_MINUTE</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number"><span class="dcc-code-sections__value">120</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></div>
+    </div><p>The maximum number of <code translate="no" dir="ltr">set</code>, <code translate="no" dir="ltr">remove</code>, or <code translate="no" dir="ltr">clear</code> operations that can be performed each minute. This is 2 per second, providing higher throughput than writes-per-hour over a shorter period of time.</p>
+<p>Updates that would cause this limit to be exceeded fail immediately and set <a href="https://developer.chrome.com/docs/extensions/reference/runtime/#property-lastError"><code translate="no" dir="ltr">runtime.lastError</code></a> when using a callback, or when a Promise is rejected.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-sync-sync-QUOTA_BYTES">QUOTA_BYTES</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number"><span class="dcc-code-sections__value">102400</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></div>
+    </div><p>The maximum total amount (in bytes) of data that can be stored in sync storage, as measured by the JSON stringification of every value plus every key's length. Updates that would cause this limit to be exceeded fail immediately and set <a href="https://developer.chrome.com/docs/extensions/reference/runtime/#property-lastError"><code translate="no" dir="ltr">runtime.lastError</code></a> when using a callback, or when a Promise is rejected.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-sync-sync-QUOTA_BYTES_PER_ITEM">QUOTA_BYTES_PER_ITEM</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number"><span class="dcc-code-sections__value">8192</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></div>
+    </div><p>The maximum size (in bytes) of each individual item in sync storage, as measured by the JSON stringification of its value plus its key length. Updates containing items larger than this limit will fail immediately and set <a href="https://developer.chrome.com/docs/extensions/reference/runtime/#property-lastError"><code translate="no" dir="ltr">runtime.lastError</code></a> when using a callback, or when a Promise is rejected.</p>
+</li></ul>
+    </div></div><h2 id="event" data-text="Events" tabindex="-1">Events</h2>
+  <div><div>
+    <div class="notranslate">
+      <h3 id="event-onChanged" data-text="onChanged" tabindex="-1">onChanged</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">storage</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onChanged</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Fired when one or more items change.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onChanged-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">changes</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span>&nbsp;<span class="devsite-syntax-nx">areaName</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onChanged-callback-changes">changes</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onChanged-callback-areaName">areaName</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div></div></div>
+<p></p>
+  
+
+  

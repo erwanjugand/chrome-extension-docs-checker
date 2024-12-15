@@ -1,0 +1,889 @@
+
+
+  
+    
+<style>.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}</style>
+
+
+
+
+<p></p>
+
+<p></p><h2 class="dcc-api-title" data-text="Description" id="description" tabindex="-1">Description</h2>
+<div class="dcc-reference"><p>Use the <code translate="no" dir="ltr">system.display</code> API to query display metadata.</p></div><p></p>
+
+<p></p><h2 id="permissions" data-text="Permissions" tabindex="-1">Permissions</h2>
+<div class="dcc-reference"><code translate="no" dir="ltr">system.display</code><br></div><p></p>
+
+<p></p>
+
+<p></p>
+
+<p></p><div class="dcc-reference"><h2 id="type" data-text="Types" tabindex="-1">Types</h2>
+  <div><div>
+    <div class="notranslate">
+      <h3 id="type-ActiveState" data-text="ActiveState" tabindex="-1">ActiveState</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 117+
+      </span></div>
+    </div><p>An enum to tell if the display is detected and used by the system. The display is considered 'inactive', if it is not detected by the system (maybe disconnected, or considered disconnected due to sleep mode, etc). This state is used to keep existing display when the all displays are disconnected, for example.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
+      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"active"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"inactive"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><p></p>
+    </div>
+  </div><div>
+    <div class="notranslate">
+      <h3 id="type-Bounds" data-text="Bounds" tabindex="-1">Bounds</h3>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Bounds-height">height</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The height of the display in pixels.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Bounds-left">left</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The x-coordinate of the upper-left corner.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Bounds-top">top</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The y-coordinate of the upper-left corner.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Bounds-width">width</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The width of the display in pixels.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-DisplayLayout" data-text="DisplayLayout" tabindex="-1">DisplayLayout</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 53+
+      </span></div>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_1" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayLayout-id">id</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>The unique identifier of the display.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayLayout-offset">offset</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The offset of the display along the connected edge. 0 indicates that the topmost or leftmost corners are aligned.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayLayout-parentId">parentId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>The unique identifier of the parent display. Empty if this is the root.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayLayout-position">position</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-LayoutPosition">LayoutPosition</a></p></div>
+    </div><p>The layout position of this display relative to the parent. This will be ignored for the root.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-DisplayMode" data-text="DisplayMode" tabindex="-1">DisplayMode</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 52+
+      </span></div>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_2" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayMode-deviceScaleFactor">deviceScaleFactor</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The display mode device scale factor.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayMode-height">height</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The display mode height in device independent (user visible) pixels.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayMode-heightInNativePixels">heightInNativePixels</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The display mode height in native pixels.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayMode-isInterlaced">isInterlaced</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 74+
+      </span></div>
+    </div><p>True if this mode is interlaced, false if not provided.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayMode-isNative">isNative</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
+    </div><p>True if the mode is the display's native mode.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayMode-isSelected">isSelected</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
+    </div><p>True if the display mode is currently selected.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayMode-refreshRate">refreshRate</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 67+
+      </span></div>
+    </div><p>The display mode refresh rate in hertz.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayMode-uiScale">uiScale</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--red dcc-tag-pill">
+        Deprecated&nbsp;since&nbsp;Chrome 70</span></div>
+    </div><p class="dcc-code-sections__deprecated">Use <code translate="no" dir="ltr">displayZoomFactor</code></p><p></p><p>The display mode UI scale factor.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayMode-width">width</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The display mode width in device independent (user visible) pixels.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayMode-widthInNativePixels">widthInNativePixels</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The display mode width in native pixels.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-DisplayProperties" data-text="DisplayProperties" tabindex="-1">DisplayProperties</h3>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_3" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayProperties-boundsOriginX">boundsOriginX</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>If set, updates the display's logical bounds origin along the x-axis. Applied together with <a href="#property-DisplayProperties-boundsOriginY"><code translate="no" dir="ltr">boundsOriginY</code></a>. Defaults to the current value if not set and <a href="#property-DisplayProperties-boundsOriginY"><code translate="no" dir="ltr">boundsOriginY</code></a> is set. Note that when updating the display origin, some constraints will be applied, so the final bounds origin may be different than the one set. The final bounds can be retrieved using <a href="#method-getInfo"><code translate="no" dir="ltr">getInfo</code></a>. The bounds origin cannot be changed on the primary display.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayProperties-boundsOriginY">boundsOriginY</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>If set, updates the display's logical bounds origin along the y-axis. See documentation for <a href="#property-DisplayProperties-boundsOriginX"><code translate="no" dir="ltr">boundsOriginX</code></a> parameter.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayProperties-displayMode">displayMode</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-DisplayMode">DisplayMode</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 52+
+      </span></div>
+    </div><p>If set, updates the display mode to the mode matching this value. If other parameters are invalid, this will not be applied. If the display mode is invalid, it will not be applied and an error will be set, but other properties will still be applied.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayProperties-displayZoomFactor">displayZoomFactor</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 65+
+      </span></div>
+    </div><p>If set, updates the zoom associated with the display. This zoom performs re-layout and repaint thus resulting in a better quality zoom than just performing a pixel by pixel stretch enlargement.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayProperties-isPrimary">isPrimary</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>If set to true, makes the display primary. No-op if set to false. Note: If set, the display is considered primary for all other properties (i.e. <a href="#property-DisplayProperties-isUnified"><code translate="no" dir="ltr">isUnified</code></a> may be set and bounds origin may not).</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayProperties-isUnified">isUnified</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 59+
+      </span></div>
+    </div><p>ChromeOS only. If set to true, changes the display mode to unified desktop (see <a href="#method-enableUnifiedDesktop"><code translate="no" dir="ltr">enableUnifiedDesktop</code></a> for details). If set to false, unified desktop mode will be disabled. This is only valid for the primary display. If provided, mirroringSourceId must not be provided and other properties will be ignored. This is has no effect if not provided.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayProperties-mirroringSourceId">mirroringSourceId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--red dcc-tag-pill">
+        Deprecated&nbsp;since&nbsp;Chrome 68</span></div>
+    </div><p class="dcc-code-sections__deprecated">Use <a href="#method-setMirrorMode"><code translate="no" dir="ltr">setMirrorMode</code></a>.</p><p></p><p>ChromeOS only. If set and not empty, enables mirroring for this display only. Otherwise disables mirroring for all displays. This value should indicate the id of the source display to mirror, which must not be the same as the id passed to setDisplayProperties. If set, no other property may be set.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayProperties-overscan">overscan</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-Insets">Insets</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>If set, sets the display's overscan insets to the provided values. Note that overscan values may not be negative or larger than a half of the screen's size. Overscan cannot be changed on the internal monitor.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayProperties-rotation">rotation</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>If set, updates the display's rotation. Legal values are [0, 90, 180, 270]. The rotation is set clockwise, relative to the display's vertical position.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-DisplayUnitInfo" data-text="DisplayUnitInfo" tabindex="-1">DisplayUnitInfo</h3>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_4" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayUnitInfo-activeState">activeState</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-ActiveState">ActiveState</a></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 117+
+      </span></div>
+    </div><p>Active if the display is detected and used by the system.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayUnitInfo-availableDisplayZoomFactors">availableDisplayZoomFactors</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array">number[]</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 67+
+      </span></div>
+    </div><p>A list of zoom factor values that can be set for the display.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayUnitInfo-bounds">bounds</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-Bounds">Bounds</a></p></div>
+    </div><p>The display's logical bounds.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayUnitInfo-displayZoomFactor">displayZoomFactor</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 65+
+      </span></div>
+    </div><p>The ratio between the display's current and default zoom. For example, value 1 is equivalent to 100% zoom, and value 1.5 is equivalent to 150% zoom.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayUnitInfo-dpiX">dpiX</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The number of pixels per inch along the x-axis.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayUnitInfo-dpiY">dpiY</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The number of pixels per inch along the y-axis.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayUnitInfo-edid">edid</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-Edid">Edid</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 67+
+      </span></div>
+    </div><p>NOTE: This is only available to ChromeOS Kiosk apps and Web UI.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayUnitInfo-hasTouchSupport">hasTouchSupport</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 57+
+      </span></div>
+    </div><p>True if this display has a touch input device associated with it.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayUnitInfo-id">id</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>The unique identifier of the display.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayUnitInfo-isEnabled">isEnabled</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
+    </div><p>True if this display is enabled.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayUnitInfo-isPrimary">isPrimary</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
+    </div><p>True if this is the primary display.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayUnitInfo-isUnified">isUnified</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 59+
+      </span></div>
+    </div><p>True for all displays when in unified desktop mode. See documentation for <a href="#method-enableUnifiedDesktop"><code translate="no" dir="ltr">enableUnifiedDesktop</code></a>.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayUnitInfo-mirroringDestinationIds">mirroringDestinationIds</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array">string[]</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 64+
+      </span></div>
+    </div><p>ChromeOS only. Identifiers of the displays to which the source display is being mirrored. Empty if no displays are being mirrored. This will be set to the same value for all displays. This must not include <code translate="no" dir="ltr">mirroringSourceId</code>.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayUnitInfo-mirroringSourceId">mirroringSourceId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>ChromeOS only. Identifier of the display that is being mirrored if mirroring is enabled, otherwise empty. This will be set for all displays (including the display being mirrored).</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayUnitInfo-modes">modes</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-DisplayMode">DisplayMode</a>[]</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 52+
+      </span></div>
+    </div><p>The list of available display modes. The current mode will have isSelected=true. Only available on ChromeOS. Will be set to an empty array on other platforms.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayUnitInfo-name">name</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>The user-friendly name (e.g. "HP LCD monitor").</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayUnitInfo-overscan">overscan</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-Insets">Insets</a></p></div>
+    </div><p>The display's insets within its screen's bounds. Currently exposed only on ChromeOS. Will be set to empty insets on other platforms.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayUnitInfo-rotation">rotation</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The display's clockwise rotation in degrees relative to the vertical position. Currently exposed only on ChromeOS. Will be set to 0 on other platforms. A value of -1 will be interpreted as auto-rotate when the device is in a physical tablet state.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-DisplayUnitInfo-workArea">workArea</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-Bounds">Bounds</a></p></div>
+    </div><p>The usable work area of the display within the display bounds. The work area excludes areas of the display reserved for OS, for example taskbar and launcher.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-Edid" data-text="Edid" tabindex="-1">Edid</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 67+
+      </span></div>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_5" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Edid-manufacturerId">manufacturerId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>3 character manufacturer code. See Sec. 3.4.1 page 21. Required in v1.4.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Edid-productId">productId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>2 byte manufacturer-assigned code, Sec. 3.4.2 page 21. Required in v1.4.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Edid-yearOfManufacture">yearOfManufacture</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>Year of manufacturer, Sec. 3.4.4 page 22. Required in v1.4.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-GetInfoFlags" data-text="GetInfoFlags" tabindex="-1">GetInfoFlags</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 59+
+      </span></div>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_6" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-GetInfoFlags-singleUnified">singleUnified</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>If set to true, only a single <a href="#type-DisplayUnitInfo"><code translate="no" dir="ltr">DisplayUnitInfo</code></a> will be returned by <a href="#method-getInfo"><code translate="no" dir="ltr">getInfo</code></a> when in unified desktop mode (see <a href="#method-enableUnifiedDesktop"><code translate="no" dir="ltr">enableUnifiedDesktop</code></a>). Defaults to false.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-Insets" data-text="Insets" tabindex="-1">Insets</h3>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_7" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Insets-bottom">bottom</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The y-axis distance from the bottom bound.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Insets-left">left</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The x-axis distance from the left bound.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Insets-right">right</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The x-axis distance from the right bound.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Insets-top">top</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The y-axis distance from the top bound.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-LayoutPosition" data-text="LayoutPosition" tabindex="-1">LayoutPosition</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 53+
+      </span></div>
+    </div><p>Layout position, i.e. edge of parent that the display is attached to.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum_1" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
+      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"top"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"right"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"bottom"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"left"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><p></p>
+    </div>
+  </div><div>
+    <div class="notranslate">
+      <h3 id="type-MirrorMode" data-text="MirrorMode" tabindex="-1">MirrorMode</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 65+
+      </span></div>
+    </div><p>Mirror mode, i.e. different ways of how a display is mirrored to other displays.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum_2" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
+      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"off"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Specifies the default mode (extended or unified desktop).</span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"normal"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Specifies that the default source display will be mirrored to all other displays.</span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"mixed"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Specifies that the specified source display will be mirrored to the provided destination displays. All other connected displays will be extended.</span></p></span><p></p>
+    </div>
+  </div><div>
+    <div class="notranslate">
+      <h3 id="type-MirrorModeInfo" data-text="MirrorModeInfo" tabindex="-1">MirrorModeInfo</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 65+
+      </span></div>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_8" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-MirrorModeInfo-mirroringDestinationIds">mirroringDestinationIds</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array">string[]&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The ids of the mirroring destination displays. This is only valid for 'mixed'.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-MirrorModeInfo-mirroringSourceId">mirroringSourceId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The id of the mirroring source display. This is only valid for 'mixed'.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-MirrorModeInfo-mode">mode</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-MirrorMode">MirrorMode</a></p></div>
+    </div><p>The mirror mode that should be set.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-Point" data-text="Point" tabindex="-1">Point</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 57+
+      </span></div>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_9" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Point-x">x</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The x-coordinate of the point.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-Point-y">y</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The y-coordinate of the point.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-TouchCalibrationPair" data-text="TouchCalibrationPair" tabindex="-1">TouchCalibrationPair</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 57+
+      </span></div>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_10" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-TouchCalibrationPair-displayPoint">displayPoint</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-Point">Point</a></p></div>
+    </div><p>The coordinates of the display point.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-TouchCalibrationPair-touchPoint">touchPoint</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-Point">Point</a></p></div>
+    </div><p>The coordinates of the touch point corresponding to the display point.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="type-TouchCalibrationPairQuad" data-text="TouchCalibrationPairQuad" tabindex="-1">TouchCalibrationPairQuad</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 57+
+      </span></div>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_11" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-TouchCalibrationPairQuad-pair1">pair1</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-TouchCalibrationPair">TouchCalibrationPair</a></p></div>
+    </div><p>First pair of touch and display point required for touch calibration.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-TouchCalibrationPairQuad-pair2">pair2</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-TouchCalibrationPair">TouchCalibrationPair</a></p></div>
+    </div><p>Second pair of touch and display point required for touch calibration.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-TouchCalibrationPairQuad-pair3">pair3</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-TouchCalibrationPair">TouchCalibrationPair</a></p></div>
+    </div><p>Third pair of touch and display point required for touch calibration.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-TouchCalibrationPairQuad-pair4">pair4</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-TouchCalibrationPair">TouchCalibrationPair</a></p></div>
+    </div><p>Fourth pair of touch and display point required for touch calibration.</p>
+</li></ul>
+    </div></div><h2 id="method" data-text="Methods" tabindex="-1">Methods</h2>
+  <div><div>
+    <div class="notranslate">
+      <h3 id="method-clearTouchCalibration" data-text="clearTouchCalibration()" tabindex="-1">clearTouchCalibration()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 57+
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">system</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">display</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">clearTouchCalibration</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">id</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Resets the touch calibration for the display and brings it back to its default state by clearing any touch calibration data associated with the display.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-clearTouchCalibration-id">id</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>The display's unique identifier.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="method-completeCustomTouchCalibration" data-text="completeCustomTouchCalibration()" tabindex="-1">completeCustomTouchCalibration()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 57+
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">system</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">display</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">completeCustomTouchCalibration</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">pairs</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-TouchCalibrationPairQuad"><span class="devsite-syntax-kt">TouchCalibrationPairQuad</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">bounds</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-Bounds"><span class="devsite-syntax-kt">Bounds</span></a><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Sets the touch calibration pairs for a display. These <code translate="no" dir="ltr">pairs</code> would be used to calibrate the touch screen for display with <code translate="no" dir="ltr">id</code> called in startCustomTouchCalibration(). Always call <code translate="no" dir="ltr">startCustomTouchCalibration</code> before calling this method. If another touch calibration is already in progress this will throw an error.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_1" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-completeCustomTouchCalibration-pairs">pairs</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-TouchCalibrationPairQuad">TouchCalibrationPairQuad</a></p></div>
+    </div><p>The pairs of point used to calibrate the display.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-completeCustomTouchCalibration-bounds">bounds</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-Bounds">Bounds</a></p></div>
+    </div><p>Bounds of the display when the touch calibration was performed. <code translate="no" dir="ltr">bounds.left</code> and <code translate="no" dir="ltr">bounds.top</code> values are ignored.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="method-enableUnifiedDesktop" data-text="enableUnifiedDesktop()" tabindex="-1">enableUnifiedDesktop()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 46+
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">system</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">display</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">enableUnifiedDesktop</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">enabled</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">boolean</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Enables/disables the unified desktop feature. If enabled while mirroring is active, the desktop mode will not change until mirroring is turned off. Otherwise, the desktop mode will switch to unified immediately. NOTE: This is only available to ChromeOS Kiosk apps and Web UI.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_2" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-enableUnifiedDesktop-enabled">enabled</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
+    </div><p>True if unified desktop should be enabled.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="method-getDisplayLayout" data-text="getDisplayLayout()" tabindex="-1">getDisplayLayout()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 53+
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">system</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">display</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getDisplayLayout</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Requests the layout info for all displays. NOTE: This is only available to ChromeOS Kiosk apps and Web UI.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_3" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-getDisplayLayout-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">layouts</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-DisplayLayout"><span class="devsite-syntax-kt">DisplayLayout</span></a><span class="devsite-syntax-p">[])&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getDisplayLayout-callback-layouts">layouts</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-DisplayLayout">DisplayLayout</a>[]</p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-DisplayLayout">DisplayLayout</a>[]&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 91+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-getInfo" data-text="getInfo()" tabindex="-1">getInfo()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">system</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">display</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getInfo</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">flags?</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-GetInfoFlags"><span class="devsite-syntax-kt">GetInfoFlags</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Requests the information for all attached display devices.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_4" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getInfo-flags">flags</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-GetInfoFlags">GetInfoFlags</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 59+
+      </span></div>
+    </div><p>Options affecting how the information is returned.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-getInfo-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">displayInfo</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-DisplayUnitInfo"><span class="devsite-syntax-kt">DisplayUnitInfo</span></a><span class="devsite-syntax-p">[])&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getInfo-callback-displayInfo">displayInfo</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-DisplayUnitInfo">DisplayUnitInfo</a>[]</p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_1" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-DisplayUnitInfo">DisplayUnitInfo</a>[]&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 91+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-overscanCalibrationAdjust" data-text="overscanCalibrationAdjust()" tabindex="-1">overscanCalibrationAdjust()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 53+
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">system</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">display</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">overscanCalibrationAdjust</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">id</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">delta</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-Insets"><span class="devsite-syntax-kt">Insets</span></a><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Adjusts the current overscan insets for a display. Typically this should either move the display along an axis (e.g. left+right have the same value) or scale it along an axis (e.g. top+bottom have opposite values). Each Adjust call is cumulative with previous calls since Start.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_5" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-overscanCalibrationAdjust-id">id</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>The display's unique identifier.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-overscanCalibrationAdjust-delta">delta</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-Insets">Insets</a></p></div>
+    </div><p>The amount to change the overscan insets.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="method-overscanCalibrationComplete" data-text="overscanCalibrationComplete()" tabindex="-1">overscanCalibrationComplete()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 53+
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">system</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">display</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">overscanCalibrationComplete</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">id</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Complete overscan adjustments for a display by saving the current values and hiding the overlay.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_6" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-overscanCalibrationComplete-id">id</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>The display's unique identifier.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="method-overscanCalibrationReset" data-text="overscanCalibrationReset()" tabindex="-1">overscanCalibrationReset()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 53+
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">system</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">display</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">overscanCalibrationReset</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">id</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Resets the overscan insets for a display to the last saved value (i.e before Start was called).</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_7" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-overscanCalibrationReset-id">id</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>The display's unique identifier.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="method-overscanCalibrationStart" data-text="overscanCalibrationStart()" tabindex="-1">overscanCalibrationStart()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 53+
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">system</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">display</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">overscanCalibrationStart</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">id</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Starts overscan calibration for a display. This will show an overlay on the screen indicating the current overscan insets. If overscan calibration for display <code translate="no" dir="ltr">id</code> is in progress this will reset calibration.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_8" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-overscanCalibrationStart-id">id</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>The display's unique identifier.</p>
+</li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="method-setDisplayLayout" data-text="setDisplayLayout()" tabindex="-1">setDisplayLayout()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 53+
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">system</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">display</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setDisplayLayout</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">layouts</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-DisplayLayout"><span class="devsite-syntax-kt">DisplayLayout</span></a><span class="devsite-syntax-p">[],</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Set the layout for all displays. Any display not included will use the default layout. If a layout would overlap or be otherwise invalid it will be adjusted to a valid layout. After layout is resolved, an onDisplayChanged event will be triggered. NOTE: This is only available to ChromeOS Kiosk apps and Web UI.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_9" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-setDisplayLayout-layouts">layouts</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-DisplayLayout">DisplayLayout</a>[]</p></div>
+    </div><p>The layout information, required for all displays except the primary display.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-setDisplayLayout-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_2" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 91+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-setDisplayProperties" data-text="setDisplayProperties()" tabindex="-1">setDisplayProperties()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">system</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">display</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setDisplayProperties</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">id</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">info</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-DisplayProperties"><span class="devsite-syntax-kt">DisplayProperties</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Updates the properties for the display specified by <code translate="no" dir="ltr">id</code>, according to the information provided in <code translate="no" dir="ltr">info</code>. On failure, <a href="https://developer.chrome.com/docs/extensions/reference/api/runtime/#property-lastError"><code translate="no" dir="ltr">runtime.lastError</code></a> will be set. NOTE: This is only available to ChromeOS Kiosk apps and Web UI.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_10" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-setDisplayProperties-id">id</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>The display's unique identifier.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-setDisplayProperties-info">info</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-DisplayProperties">DisplayProperties</a></p></div>
+    </div><p>The information about display properties that should be changed. A property will be changed only if a new value for it is specified in <code translate="no" dir="ltr">info</code>.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-setDisplayProperties-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_3" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 91+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-setMirrorMode" data-text="setMirrorMode()" tabindex="-1">setMirrorMode()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 65+
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">system</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">display</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setMirrorMode</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">info</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-MirrorModeInfo"><span class="devsite-syntax-kt">MirrorModeInfo</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Sets the display mode to the specified mirror mode. Each call resets the state from previous calls. Calling setDisplayProperties() will fail for the mirroring destination displays. NOTE: This is only available to ChromeOS Kiosk apps and Web UI.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_11" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-setMirrorMode-info">info</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-MirrorModeInfo">MirrorModeInfo</a></p></div>
+    </div><p>The information of the mirror mode that should be applied to the display mode.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-setMirrorMode-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_4" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 91+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-showNativeTouchCalibration" data-text="showNativeTouchCalibration()" tabindex="-1">showNativeTouchCalibration()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 57+
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">system</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">display</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">showNativeTouchCalibration</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">id</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Displays the native touch calibration UX for the display with <code translate="no" dir="ltr">id</code> as display id. This will show an overlay on the screen with required instructions on how to proceed. The callback will be invoked in case of successful calibration only. If the calibration fails, this will throw an error.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_12" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-showNativeTouchCalibration-id">id</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>The display's unique identifier.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-showNativeTouchCalibration-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">success</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">boolean</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-showNativeTouchCalibration-callback-success">success</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_5" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;boolean&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 91+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-startCustomTouchCalibration" data-text="startCustomTouchCalibration()" tabindex="-1">startCustomTouchCalibration()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 57+
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">system</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">display</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">startCustomTouchCalibration</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">id</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Starts custom touch calibration for a display. This should be called when using a custom UX for collecting calibration data. If another touch calibration is already in progress this will throw an error.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_13" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-startCustomTouchCalibration-id">id</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>The display's unique identifier.</p>
+</li></ul>
+    </div></div><h2 id="event" data-text="Events" tabindex="-1">Events</h2>
+  <div><div>
+    <div class="notranslate">
+      <h3 id="event-onDisplayChanged" data-text="onDisplayChanged" tabindex="-1">onDisplayChanged</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">system</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">display</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onDisplayChanged</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Fired when anything changes to the display configuration.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_14" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onDisplayChanged-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p></li></ul>
+    </div></div></div>
+<p></p>
+  
+
+  

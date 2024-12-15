@@ -1,0 +1,1164 @@
+
+
+  
+    
+<style>.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}</style>
+
+
+
+
+<p></p>
+
+<p></p><h2 class="dcc-api-title" data-text="Description" id="description" tabindex="-1">Description</h2>
+<div class="dcc-reference"><p>Use the <code translate="no" dir="ltr">chrome.webNavigation</code> API to receive notifications about the status of navigation requests in-flight.</p></div><p></p>
+
+<p></p><h2 id="permissions" data-text="Permissions" tabindex="-1">Permissions</h2>
+<div class="dcc-reference"><code translate="no" dir="ltr">webNavigation</code><br></div><p></p>
+
+<p></p>
+
+<p></p>
+
+<p>All <code translate="no" dir="ltr">chrome.webNavigation</code> methods and events require you to declare the <code translate="no" dir="ltr">"webNavigation"</code> permission
+in the <a href="/docs/extensions/reference/manifest">extension manifest</a>. For example:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JSON"><code translate="no" dir="ltr"><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"name"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"My extension"</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">...</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"permissions"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s2">"webNavigation"</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">],</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">...</span>
+<span class="devsite-syntax-p">}</span>
+</code></pre></devsite-code>
+<h2 id="concepts_and_usage" data-text="Concepts and usage" tabindex="-1">Concepts and usage</h2>
+
+<h3 id="event_order" data-text="Event order" tabindex="-1">Event order</h3>
+
+<p>For a navigation that is successfully completed, events are fired in the following order:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="Text only"><code translate="no" dir="ltr">onBeforeNavigate -&gt; onCommitted -&gt; [onDOMContentLoaded] -&gt; onCompleted
+</code></pre></devsite-code>
+<p>Any error that occurs during the process results in an <code translate="no" dir="ltr">onErrorOccurred</code> event. For a specific
+navigation, there are no further events fired after <code translate="no" dir="ltr">onErrorOccurred</code>.</p>
+
+<p>If a navigating frame contains subframes, its <code translate="no" dir="ltr">onCommitted</code> is fired before any of its children's
+<code translate="no" dir="ltr">onBeforeNavigate</code>; while <code translate="no" dir="ltr">onCompleted</code> is fired after all of its children's <code translate="no" dir="ltr">onCompleted</code>.</p>
+
+<p>If the reference fragment of a frame is changed, a <code translate="no" dir="ltr">onReferenceFragmentUpdated</code> event is fired. This
+event can fire any time after <code translate="no" dir="ltr">onDOMContentLoaded</code>, even after <code translate="no" dir="ltr">onCompleted</code>.</p>
+
+<p>If the history API is used to modify the state of a frame (e.g. using <code translate="no" dir="ltr">history.pushState()</code>, a
+<code translate="no" dir="ltr">onHistoryStateUpdated</code> event is fired. This event can fire any time after <code translate="no" dir="ltr">onDOMContentLoaded</code>.</p>
+
+<p>If a navigation restored a page from the <a href="https://web.dev/bfcache/">Back Forward Cache</a>, the <code translate="no" dir="ltr">onDOMContentLoaded</code> event
+won't fire. The event is not fired because the content has already completed load when the page
+was first visited.</p>
+
+<p>If a navigation was triggered using <a href="https://support.google.com/chrome/answer/177873">Chrome Instant</a> or <a href="https://support.google.com/chrome/answer/1385029">Instant Pages</a>, a completely loaded
+page is swapped into the current tab. In that case, an <code translate="no" dir="ltr">onTabReplaced</code> event is fired.</p>
+
+<h3 id="relation_to_webrequest_events" data-text="Relation to webRequest events" tabindex="-1">Relation to webRequest events</h3>
+
+<p>There is no defined ordering between events of the <a href="/docs/extensions/reference/api/webRequest">webRequest API</a> and the events of the
+webNavigation API. It is possible that webRequest events are still received for frames that already
+started a new navigation, or that a navigation only proceeds after the network resources are already
+fully loaded.</p>
+
+<p>In general, the webNavigation events are closely related to the navigation state that is displayed
+in the UI, while the webRequest events correspond to the state of the network stack which is
+generally opaque to the user.</p>
+
+<h3 id="tab_ids" data-text="Tab IDs" tabindex="-1">Tab IDs</h3>
+
+<p>Not all navigating tabs correspond to actual tabs in Chrome's UI, for example, a tab that is being
+pre-rendered. Such tabs are not accessible using the <a href="/docs/extensions/reference/api/tabs">tabs API</a> nor can you request information
+about them by calling <code translate="no" dir="ltr">webNavigation.getFrame()</code> or <code translate="no" dir="ltr">webNavigation.getAllFrames()</code>. Once such a tab
+is swapped in, an <code translate="no" dir="ltr">onTabReplaced</code> event is fired and they become accessible through these APIs.</p>
+
+<h3 id="timestamps" data-text="Timestamps" tabindex="-1">Timestamps</h3>
+
+<p>It's important to note that some technical oddities in the OS's handling of distinct Chrome
+processes can cause the clock to be skewed between the browser itself and extension processes. That
+means that the <code translate="no" dir="ltr">timeStamp</code> property of the <code translate="no" dir="ltr">WebNavigation</code> event <code translate="no" dir="ltr">timeStamp</code> property is only guaranteed
+to be <em>internally</em> consistent. Comparing one event to another event will give you the correct offset
+between them, but comparing them to the current time inside the extension (using <code translate="no" dir="ltr">(new Date()).getTime()</code>,
+for instance) might give unexpected results.</p>
+
+<h3 id="frame_ids" data-text="Frame IDs" tabindex="-1">Frame IDs</h3>
+
+<p>Frames within a tab can be identified by a frame ID. The frame ID of the main frame is always 0, the
+ID of child frames is a positive number. Once a document is constructed in a frame, its frame ID
+remains constant during the lifetime of the document. As of Chrome 49, this ID is also constant for
+the lifetime of the frame (across multiple navigations).</p>
+
+<p>Due to the multi-process nature of Chrome, a tab might use different processes to render the source
+and destination of a web page. Therefore, if a navigation takes place in a new process, you might
+receive events both from the new and the old page until the new navigation is committed (i.e. the
+<code translate="no" dir="ltr">onCommitted</code> event is sent for the new main frame). In other words, it is possible to have more
+than one pending sequence of webNavigation events with the same <code translate="no" dir="ltr">frameId</code>. The sequences can be
+distinguished by the <code translate="no" dir="ltr">processId</code> key.</p>
+
+<p>Also note that during a provisional load the process might be switched several times. This happens
+when the load is redirected to a different site. In this case, you will receive repeated
+<code translate="no" dir="ltr">onBeforeNavigate</code> and <code translate="no" dir="ltr">onErrorOccurred</code> events, until you receive the final <code translate="no" dir="ltr">onCommitted</code> event.</p>
+
+<p>Another concept that is problematic with extensions is the lifecycle of the
+frame. A frame hosts a document (which is associated with a committed URL).
+The document can change (say by navigating) but the <em>frameId</em> won't, and so it
+is difficult to associate that something happened in a specific document with
+just <em>frameIds</em>. We are introducing a concept of a <a href="/docs/extensions/reference/webNavigation#method-getFrame:%7E:text=retrieve%20information%20about.-,documentId,-string%C2%A0optional">documentId</a>
+which is a unique identifier per document. If a frame is navigated and opens a
+new document the identifier will change. This field is useful for determining
+when pages change their lifecycle state (between prerender/active/cached)
+because it remains the same.</p>
+
+<h3 id="transition_types_and_qualifiers" data-text="Transition types and qualifiers" tabindex="-1">Transition types and qualifiers</h3>
+
+<p>The <code translate="no" dir="ltr">webNavigation</code> <code translate="no" dir="ltr">onCommitted</code> event has a <code translate="no" dir="ltr">transitionType</code> and a <code translate="no" dir="ltr">transitionQualifiers</code>
+property. The <em>transition type</em> is the same as used in the <a href="/docs/extensions/reference/api/history#transition_types">history API</a> describing how the
+browser navigated to this particular URL. In addition, several <em>transition qualifiers</em> can be
+returned that further define the navigation.</p>
+
+<p>The following transition qualifiers exist:</p>
+
+<table><tbody><tr><th>Transition qualifier</th><th>Description</th></tr><tr><td>"client_redirect"</td><td>One or more redirects caused by JavaScript or meta refresh tags on the page happened during the navigation.</td></tr><tr><td>"server_redirect"</td><td>One or more redirects caused by HTTP headers sent from the server happened during the navigation.</td></tr><tr><td>"forward_back"</td><td>The user used the Forward or Back button to initiate the navigation.</td></tr><tr><td>"from_address_bar"</td><td>The user initiated the navigation from the address bar (aka Omnibox).</td></tr></tbody></table>
+
+<h2 id="examples" data-text="Examples" tabindex="-1">Examples</h2>
+
+<p>To try this API, install the <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/webNavigation">webNavigation API example</a> from the <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples">chrome-extension-samples</a>
+repository.</p>
+
+<p></p><div class="dcc-reference"><h2 id="type" data-text="Types" tabindex="-1">Types</h2>
+  <div><div>
+    <div class="notranslate">
+      <h3 id="type-TransitionQualifier" data-text="TransitionQualifier" tabindex="-1">TransitionQualifier</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 44+
+      </span></div>
+    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
+      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"client_redirect"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"server_redirect"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"forward_back"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"from_address_bar"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><p></p>
+    </div>
+  </div><div>
+    <div class="notranslate">
+      <h3 id="type-TransitionType" data-text="TransitionType" tabindex="-1">TransitionType</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 44+
+      </span></div>
+    </div><p>Cause of the navigation. The same transition types as defined in the history API are used. These are the same transition types as defined in the <a href="https://developer.chrome.com/docs/extensions/reference/history/#transition_types">history API</a> except with <code translate="no" dir="ltr">"start_page"</code> in place of <code translate="no" dir="ltr">"auto_toplevel"</code> (for backwards compatibility).</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum_1" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
+      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"link"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"typed"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"auto_bookmark"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"auto_subframe"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"manual_subframe"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"generated"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"start_page"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"form_submit"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"reload"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"keyword"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"keyword_generated"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><p></p>
+    </div>
+  </div></div><h2 id="method" data-text="Methods" tabindex="-1">Methods</h2>
+  <div><div>
+    <div class="notranslate">
+      <h3 id="method-getAllFrames" data-text="getAllFrames()" tabindex="-1">getAllFrames()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">webNavigation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getAllFrames</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Retrieves information about all frames of a given tab.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getAllFrames-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><p>Information about the tab to retrieve all frames from.</p>
+<div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getAllFrames-details-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the tab.</p>
+</li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-getAllFrames-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">details?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">[])&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getAllFrames-callback-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array">object[]&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>A list of frames in the given tab, null if the specified tab ID is invalid.</p>
+<div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getAllFrames-callback-details-details-documentId">documentId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>A UUID of the document loaded.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getAllFrames-callback-details-details-documentLifecycle">documentLifecycle</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle">DocumentLifecycle</a></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>The lifecycle the document is in.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getAllFrames-callback-details-details-errorOccurred">errorOccurred</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
+    </div><p>True if the last navigation in this frame was interrupted by an error, i.e. the onErrorOccurred event fired.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getAllFrames-callback-details-details-frameId">frameId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the frame. 0 indicates that this is the main frame; a positive value indicates the ID of a subframe.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getAllFrames-callback-details-details-frameType">frameType</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType">FrameType</a></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>The type of frame the navigation occurred in.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getAllFrames-callback-details-details-parentDocumentId">parentDocumentId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>A UUID of the parent document owning this frame. This is not set if there is no parent.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getAllFrames-callback-details-details-parentFrameId">parentFrameId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the parent frame, or <code translate="no" dir="ltr">-1</code> if this is the main frame.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getAllFrames-callback-details-details-processId">processId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the process that runs the renderer for this frame.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getAllFrames-callback-details-details-url">url</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>The URL currently associated with this frame.</p>
+</li></ul>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;object[]&nbsp;|&nbsp;undefined&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 93+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div><div>
+    <div class="notranslate">
+      <h3 id="method-getFrame" data-text="getFrame()" tabindex="-1">getFrame()</h3>
+    </div><div class="">
+      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+        Promise
+      </span></div>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">webNavigation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getFrame</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Retrieves information about the given frame. A frame refers to an &lt;iframe&gt; or a &lt;frame&gt; of a web page and is identified by a tab ID and a frame ID.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_1" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getFrame-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><p>Information about the frame to retrieve information about.</p>
+<div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getFrame-details-documentId">documentId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>The UUID of the document. If the frameId and/or tabId are provided they will be validated to match the document found by provided document ID.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getFrame-details-frameId">frameId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The ID of the frame in the given tab.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getFrame-details-processId">processId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--red dcc-tag-pill">
+        Deprecated&nbsp;since&nbsp;Chrome 49</span></div>
+    </div><p class="dcc-code-sections__deprecated">Frames are now uniquely identified by their tab ID and frame ID; the process ID is no longer needed and therefore ignored.</p><p></p><p>The ID of the process that runs the renderer for this tab.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getFrame-details-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>The ID of the tab in which the frame is.</p>
+</li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-getFrame-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">details?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-getFrame-callback-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><p>Information about the requested frame, null if the specified frame ID and/or tab ID are invalid.</p>
+<div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getFrame-callback-details-documentId">documentId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>A UUID of the document loaded.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getFrame-callback-details-documentLifecycle">documentLifecycle</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle">DocumentLifecycle</a></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>The lifecycle the document is in.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getFrame-callback-details-errorOccurred">errorOccurred</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
+    </div><p>True if the last navigation in this frame was interrupted by an error, i.e. the onErrorOccurred event fired.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getFrame-callback-details-frameType">frameType</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType">FrameType</a></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>The type of frame the navigation occurred in.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getFrame-callback-details-parentDocumentId">parentDocumentId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>A UUID of the parent document owning this frame. This is not set if there is no parent.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getFrame-callback-details-parentFrameId">parentFrameId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the parent frame, or <code translate="no" dir="ltr">-1</code> if this is the main frame.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-getFrame-callback-details-url">url</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>The URL currently associated with this frame, if the frame identified by the frameId existed at one point in the given tab. The fact that an URL is associated with a given frameId does not imply that the corresponding frame still exists.</p>
+</li></ul>
+    </div></li></ul>
+    </div></li></ul>
+    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_1" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
+          <li class="stack">
+            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;object&nbsp;|&nbsp;undefined&gt;</p></div>
+            </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 93+
+      </span></div>
+    </div>
+              <p>
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              </p>
+            </li>
+        </ul>
+      </div></div><h2 id="event" data-text="Events" tabindex="-1">Events</h2>
+  <div><div>
+    <div class="notranslate">
+      <h3 id="event-onBeforeNavigate" data-text="onBeforeNavigate" tabindex="-1">onBeforeNavigate</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">webNavigation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onBeforeNavigate</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">filters?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Fired when a navigation is about to occur.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_2" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onBeforeNavigate-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onBeforeNavigate-callback-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onBeforeNavigate-callback-details-documentLifecycle">documentLifecycle</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle">extensionTypes.DocumentLifecycle</a></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>The lifecycle the document is in.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onBeforeNavigate-callback-details-frameId">frameId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>0 indicates the navigation happens in the tab content window; a positive value indicates navigation in a subframe. Frame IDs are unique for a given tab and process.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onBeforeNavigate-callback-details-frameType">frameType</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType">extensionTypes.FrameType</a></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>The type of frame the navigation occurred in.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onBeforeNavigate-callback-details-parentDocumentId">parentDocumentId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>A UUID of the parent document owning this frame. This is not set if there is no parent.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onBeforeNavigate-callback-details-parentFrameId">parentFrameId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the parent frame, or <code translate="no" dir="ltr">-1</code> if this is the main frame.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onBeforeNavigate-callback-details-processId">processId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--red dcc-tag-pill">
+        Deprecated&nbsp;since&nbsp;Chrome 50</span></div>
+    </div><p class="dcc-code-sections__deprecated">The processId is no longer set for this event, since the process which will render the resulting document is not known until onCommit.</p><p></p><p>The value of -1.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onBeforeNavigate-callback-details-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the tab in which the navigation is about to occur.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onBeforeNavigate-callback-details-timeStamp">timeStamp</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The time when the browser was about to start the navigation, in milliseconds since the epoch.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onBeforeNavigate-callback-details-url">url</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onBeforeNavigate-filters">filters</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onBeforeNavigate-filters-url">url</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="https://developer.chrome.com/docs/extensions/reference/events/#type-UrlFilter">events.UrlFilter</a>[]</p></div>
+    </div><p>Conditions that the URL being navigated to must satisfy. The 'schemes' and 'ports' fields of UrlFilter are ignored for this event.</p>
+</li></ul>
+    </div></li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="event-onCommitted" data-text="onCommitted" tabindex="-1">onCommitted</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">webNavigation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onCommitted</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">filters?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Fired when a navigation is committed. The document (and the resources it refers to, such as images and subframes) might still be downloading, but at least part of the document has been received from the server and the browser has decided to switch to the new document.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_3" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onCommitted-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onCommitted-callback-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCommitted-callback-details-documentId">documentId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>A UUID of the document loaded.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCommitted-callback-details-documentLifecycle">documentLifecycle</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle">extensionTypes.DocumentLifecycle</a></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>The lifecycle the document is in.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCommitted-callback-details-frameId">frameId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>0 indicates the navigation happens in the tab content window; a positive value indicates navigation in a subframe. Frame IDs are unique within a tab.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCommitted-callback-details-frameType">frameType</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType">extensionTypes.FrameType</a></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>The type of frame the navigation occurred in.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCommitted-callback-details-parentDocumentId">parentDocumentId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>A UUID of the parent document owning this frame. This is not set if there is no parent.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCommitted-callback-details-parentFrameId">parentFrameId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 74+
+      </span></div>
+    </div><p>The ID of the parent frame, or <code translate="no" dir="ltr">-1</code> if this is the main frame.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCommitted-callback-details-processId">processId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the process that runs the renderer for this frame.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCommitted-callback-details-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the tab in which the navigation occurs.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCommitted-callback-details-timeStamp">timeStamp</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The time when the navigation was committed, in milliseconds since the epoch.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCommitted-callback-details-transitionQualifiers">transitionQualifiers</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-TransitionQualifier">TransitionQualifier</a>[]</p></div>
+    </div><p>A list of transition qualifiers.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCommitted-callback-details-transitionType">transitionType</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-TransitionType">TransitionType</a></p></div>
+    </div><p>Cause of the navigation.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCommitted-callback-details-url">url</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onCommitted-filters">filters</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCommitted-filters-url">url</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="https://developer.chrome.com/docs/extensions/reference/events/#type-UrlFilter">events.UrlFilter</a>[]</p></div>
+    </div><p>Conditions that the URL being navigated to must satisfy. The 'schemes' and 'ports' fields of UrlFilter are ignored for this event.</p>
+</li></ul>
+    </div></li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="event-onCompleted" data-text="onCompleted" tabindex="-1">onCompleted</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">webNavigation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onCompleted</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">filters?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Fired when a document, including the resources it refers to, is completely loaded and initialized.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_4" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onCompleted-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onCompleted-callback-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCompleted-callback-details-documentId">documentId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>A UUID of the document loaded.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCompleted-callback-details-documentLifecycle">documentLifecycle</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle">extensionTypes.DocumentLifecycle</a></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>The lifecycle the document is in.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCompleted-callback-details-frameId">frameId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>0 indicates the navigation happens in the tab content window; a positive value indicates navigation in a subframe. Frame IDs are unique within a tab.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCompleted-callback-details-frameType">frameType</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType">extensionTypes.FrameType</a></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>The type of frame the navigation occurred in.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCompleted-callback-details-parentDocumentId">parentDocumentId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>A UUID of the parent document owning this frame. This is not set if there is no parent.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCompleted-callback-details-parentFrameId">parentFrameId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 74+
+      </span></div>
+    </div><p>The ID of the parent frame, or <code translate="no" dir="ltr">-1</code> if this is the main frame.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCompleted-callback-details-processId">processId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the process that runs the renderer for this frame.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCompleted-callback-details-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the tab in which the navigation occurs.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCompleted-callback-details-timeStamp">timeStamp</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The time when the document finished loading, in milliseconds since the epoch.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCompleted-callback-details-url">url</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onCompleted-filters">filters</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCompleted-filters-url">url</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="https://developer.chrome.com/docs/extensions/reference/events/#type-UrlFilter">events.UrlFilter</a>[]</p></div>
+    </div><p>Conditions that the URL being navigated to must satisfy. The 'schemes' and 'ports' fields of UrlFilter are ignored for this event.</p>
+</li></ul>
+    </div></li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="event-onCreatedNavigationTarget" data-text="onCreatedNavigationTarget" tabindex="-1">onCreatedNavigationTarget</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">webNavigation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onCreatedNavigationTarget</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">filters?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Fired when a new window, or a new tab in an existing window, is created to host a navigation.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_5" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onCreatedNavigationTarget-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onCreatedNavigationTarget-callback-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCreatedNavigationTarget-callback-details-sourceFrameId">sourceFrameId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the frame with sourceTabId in which the navigation is triggered. 0 indicates the main frame.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCreatedNavigationTarget-callback-details-sourceProcessId">sourceProcessId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the process that runs the renderer for the source frame.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCreatedNavigationTarget-callback-details-sourceTabId">sourceTabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the tab in which the navigation is triggered.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCreatedNavigationTarget-callback-details-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the tab in which the url is opened</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCreatedNavigationTarget-callback-details-timeStamp">timeStamp</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The time when the browser was about to create a new view, in milliseconds since the epoch.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCreatedNavigationTarget-callback-details-url">url</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>The URL to be opened in the new window.</p>
+</li></ul>
+    </div></li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onCreatedNavigationTarget-filters">filters</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onCreatedNavigationTarget-filters-url">url</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="https://developer.chrome.com/docs/extensions/reference/events/#type-UrlFilter">events.UrlFilter</a>[]</p></div>
+    </div><p>Conditions that the URL being navigated to must satisfy. The 'schemes' and 'ports' fields of UrlFilter are ignored for this event.</p>
+</li></ul>
+    </div></li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="event-onDOMContentLoaded" data-text="onDOMContentLoaded" tabindex="-1">onDOMContentLoaded</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">webNavigation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onDOMContentLoaded</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">filters?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Fired when the page's DOM is fully constructed, but the referenced resources may not finish loading.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_6" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onDOMContentLoaded-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onDOMContentLoaded-callback-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onDOMContentLoaded-callback-details-documentId">documentId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>A UUID of the document loaded.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onDOMContentLoaded-callback-details-documentLifecycle">documentLifecycle</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle">extensionTypes.DocumentLifecycle</a></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>The lifecycle the document is in.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onDOMContentLoaded-callback-details-frameId">frameId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>0 indicates the navigation happens in the tab content window; a positive value indicates navigation in a subframe. Frame IDs are unique within a tab.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onDOMContentLoaded-callback-details-frameType">frameType</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType">extensionTypes.FrameType</a></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>The type of frame the navigation occurred in.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onDOMContentLoaded-callback-details-parentDocumentId">parentDocumentId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>A UUID of the parent document owning this frame. This is not set if there is no parent.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onDOMContentLoaded-callback-details-parentFrameId">parentFrameId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 74+
+      </span></div>
+    </div><p>The ID of the parent frame, or <code translate="no" dir="ltr">-1</code> if this is the main frame.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onDOMContentLoaded-callback-details-processId">processId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the process that runs the renderer for this frame.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onDOMContentLoaded-callback-details-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the tab in which the navigation occurs.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onDOMContentLoaded-callback-details-timeStamp">timeStamp</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The time when the page's DOM was fully constructed, in milliseconds since the epoch.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onDOMContentLoaded-callback-details-url">url</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onDOMContentLoaded-filters">filters</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onDOMContentLoaded-filters-url">url</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="https://developer.chrome.com/docs/extensions/reference/events/#type-UrlFilter">events.UrlFilter</a>[]</p></div>
+    </div><p>Conditions that the URL being navigated to must satisfy. The 'schemes' and 'ports' fields of UrlFilter are ignored for this event.</p>
+</li></ul>
+    </div></li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="event-onErrorOccurred" data-text="onErrorOccurred" tabindex="-1">onErrorOccurred</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">webNavigation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onErrorOccurred</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">filters?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Fired when an error occurs and the navigation is aborted. This can happen if either a network error occurred, or the user aborted the navigation.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_7" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onErrorOccurred-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onErrorOccurred-callback-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onErrorOccurred-callback-details-documentId">documentId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>A UUID of the document loaded.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onErrorOccurred-callback-details-documentLifecycle">documentLifecycle</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle">extensionTypes.DocumentLifecycle</a></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>The lifecycle the document is in.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onErrorOccurred-callback-details-error">error</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><p>The error description.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onErrorOccurred-callback-details-frameId">frameId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>0 indicates the navigation happens in the tab content window; a positive value indicates navigation in a subframe. Frame IDs are unique within a tab.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onErrorOccurred-callback-details-frameType">frameType</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType">extensionTypes.FrameType</a></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>The type of frame the navigation occurred in.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onErrorOccurred-callback-details-parentDocumentId">parentDocumentId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>A UUID of the parent document owning this frame. This is not set if there is no parent.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onErrorOccurred-callback-details-parentFrameId">parentFrameId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 74+
+      </span></div>
+    </div><p>The ID of the parent frame, or <code translate="no" dir="ltr">-1</code> if this is the main frame.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onErrorOccurred-callback-details-processId">processId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--red dcc-tag-pill">
+        Deprecated&nbsp;since&nbsp;Chrome 50</span></div>
+    </div><p class="dcc-code-sections__deprecated">The processId is no longer set for this event.</p><p></p><p>The value of -1.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onErrorOccurred-callback-details-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the tab in which the navigation occurs.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onErrorOccurred-callback-details-timeStamp">timeStamp</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The time when the error occurred, in milliseconds since the epoch.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onErrorOccurred-callback-details-url">url</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onErrorOccurred-filters">filters</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onErrorOccurred-filters-url">url</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="https://developer.chrome.com/docs/extensions/reference/events/#type-UrlFilter">events.UrlFilter</a>[]</p></div>
+    </div><p>Conditions that the URL being navigated to must satisfy. The 'schemes' and 'ports' fields of UrlFilter are ignored for this event.</p>
+</li></ul>
+    </div></li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="event-onHistoryStateUpdated" data-text="onHistoryStateUpdated" tabindex="-1">onHistoryStateUpdated</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">webNavigation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onHistoryStateUpdated</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">filters?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Fired when the frame's history was updated to a new URL. All future events for that frame will use the updated URL.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_8" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onHistoryStateUpdated-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onHistoryStateUpdated-callback-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onHistoryStateUpdated-callback-details-documentId">documentId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>A UUID of the document loaded.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onHistoryStateUpdated-callback-details-documentLifecycle">documentLifecycle</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle">extensionTypes.DocumentLifecycle</a></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>The lifecycle the document is in.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onHistoryStateUpdated-callback-details-frameId">frameId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>0 indicates the navigation happens in the tab content window; a positive value indicates navigation in a subframe. Frame IDs are unique within a tab.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onHistoryStateUpdated-callback-details-frameType">frameType</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType">extensionTypes.FrameType</a></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>The type of frame the navigation occurred in.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onHistoryStateUpdated-callback-details-parentDocumentId">parentDocumentId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>A UUID of the parent document owning this frame. This is not set if there is no parent.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onHistoryStateUpdated-callback-details-parentFrameId">parentFrameId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 74+
+      </span></div>
+    </div><p>The ID of the parent frame, or <code translate="no" dir="ltr">-1</code> if this is the main frame.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onHistoryStateUpdated-callback-details-processId">processId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the process that runs the renderer for this frame.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onHistoryStateUpdated-callback-details-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the tab in which the navigation occurs.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onHistoryStateUpdated-callback-details-timeStamp">timeStamp</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The time when the navigation was committed, in milliseconds since the epoch.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onHistoryStateUpdated-callback-details-transitionQualifiers">transitionQualifiers</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-TransitionQualifier">TransitionQualifier</a>[]</p></div>
+    </div><p>A list of transition qualifiers.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onHistoryStateUpdated-callback-details-transitionType">transitionType</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-TransitionType">TransitionType</a></p></div>
+    </div><p>Cause of the navigation.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onHistoryStateUpdated-callback-details-url">url</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onHistoryStateUpdated-filters">filters</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onHistoryStateUpdated-filters-url">url</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="https://developer.chrome.com/docs/extensions/reference/events/#type-UrlFilter">events.UrlFilter</a>[]</p></div>
+    </div><p>Conditions that the URL being navigated to must satisfy. The 'schemes' and 'ports' fields of UrlFilter are ignored for this event.</p>
+</li></ul>
+    </div></li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="event-onReferenceFragmentUpdated" data-text="onReferenceFragmentUpdated" tabindex="-1">onReferenceFragmentUpdated</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">webNavigation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onReferenceFragmentUpdated</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">filters?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Fired when the reference fragment of a frame was updated. All future events for that frame will use the updated URL.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_9" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onReferenceFragmentUpdated-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onReferenceFragmentUpdated-callback-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onReferenceFragmentUpdated-callback-details-documentId">documentId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>A UUID of the document loaded.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onReferenceFragmentUpdated-callback-details-documentLifecycle">documentLifecycle</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle">extensionTypes.DocumentLifecycle</a></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>The lifecycle the document is in.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onReferenceFragmentUpdated-callback-details-frameId">frameId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>0 indicates the navigation happens in the tab content window; a positive value indicates navigation in a subframe. Frame IDs are unique within a tab.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onReferenceFragmentUpdated-callback-details-frameType">frameType</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType">extensionTypes.FrameType</a></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>The type of frame the navigation occurred in.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onReferenceFragmentUpdated-callback-details-parentDocumentId">parentDocumentId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 106+
+      </span></div>
+    </div><p>A UUID of the parent document owning this frame. This is not set if there is no parent.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onReferenceFragmentUpdated-callback-details-parentFrameId">parentFrameId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><div class="pad-top-200">
+      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 74+
+      </span></div>
+    </div><p>The ID of the parent frame, or <code translate="no" dir="ltr">-1</code> if this is the main frame.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onReferenceFragmentUpdated-callback-details-processId">processId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the process that runs the renderer for this frame.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onReferenceFragmentUpdated-callback-details-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the tab in which the navigation occurs.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onReferenceFragmentUpdated-callback-details-timeStamp">timeStamp</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The time when the navigation was committed, in milliseconds since the epoch.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onReferenceFragmentUpdated-callback-details-transitionQualifiers">transitionQualifiers</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-TransitionQualifier">TransitionQualifier</a>[]</p></div>
+    </div><p>A list of transition qualifiers.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onReferenceFragmentUpdated-callback-details-transitionType">transitionType</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-TransitionType">TransitionType</a></p></div>
+    </div><p>Cause of the navigation.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onReferenceFragmentUpdated-callback-details-url">url</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
+    </div></li></ul>
+    </div></li></ul>
+    </div></li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onReferenceFragmentUpdated-filters">filters</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onReferenceFragmentUpdated-filters-url">url</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="https://developer.chrome.com/docs/extensions/reference/events/#type-UrlFilter">events.UrlFilter</a>[]</p></div>
+    </div><p>Conditions that the URL being navigated to must satisfy. The 'schemes' and 'ports' fields of UrlFilter are ignored for this event.</p>
+</li></ul>
+    </div></li></ul>
+    </div><div>
+    <div class="notranslate">
+      <h3 id="event-onTabReplaced" data-text="onTabReplaced" tabindex="-1">onTabReplaced</h3>
+    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
+        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">webNavigation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onTabReplaced</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
+      </span><p>Fired when the contents of the tab is replaced by a different (usually previously pre-rendered) tab.</p>
+</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_10" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="method-onTabReplaced-callback">callback</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
+    </div><p>
+          The <code translate="no" dir="ltr">callback</code> parameter looks like:
+          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
+        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="type-onTabReplaced-callback-details">details</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
+    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onTabReplaced-callback-details-replacedTabId">replacedTabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the tab that was replaced.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onTabReplaced-callback-details-tabId">tabId</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The ID of the tab that replaced the old tab.</p>
+</li><li class="stack">
+    <div>
+      <div class="dcc-code-sections__label" id="property-onTabReplaced-callback-details-timeStamp">timeStamp</div>
+      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
+    </div><p>The time when the replacement happened, in milliseconds since the epoch.</p>
+</li></ul>
+    </div></li></ul>
+    </div></li></ul>
+    </div></div></div>
+<p></p>
+  
+
+  

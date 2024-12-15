@@ -1,0 +1,26 @@
+{
+  "name": "chrome-extension-docs-checker",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "scrap": "node dist/scrap.js",
+    "check:prettier": "prettier --check .",
+    "check:eslint": "eslint .",
+    "check:ts": "tsc --noEmit",
+    "check:all": "pnpm check:prettier && pnpm check:eslint && pnpm check:ts",
+    "fix:prettier": "prettier --loglevel warn --write .",
+    "fix:eslint": "pnpm check:eslint --fix",
+    "fix:all": "pnpm fix:prettier && pnpm fix:eslint"
+  },
+  "devDependencies": {
+    "@types/node": "22",
+    "cheerio": "1.0.0",
+    "eslint": "9.17.0",
+    "eslint-config-prettier": "9.1.0",
+    "path": "0.12.7",
+    "prettier": "3.4.2",
+    "typescript": "5.7.2",
+    "typescript-eslint": "8.18.0"
+  }
+}
