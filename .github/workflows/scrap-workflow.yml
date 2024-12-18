@@ -41,7 +41,35 @@ jobs:
       - name: Scrap
         run: pnpm scrap
 
+      - name: Generate commit message
+        id: generate_commit_message
+        run: |
+          MODIFIED_FILES=$(git diff --name-only | grep '^snapshots/')
+          FILE_COUNT=$(echo "$MODIFIED_FILES" | wc -l)
+
+          if [ "$FILE_COUNT" -eq 1 ]; then
+            FILENAME=$(basename "$MODIFIED_FILES" .html)
+            API_PATH=$(echo "$FILENAME" | sed 's/\./\//g')
+            COMMIT_MESSAGE="chore(scrap): update ${API_PATH} snapshot"
+          else
+            COMMIT_MESSAGE="chore(scrap): update ${FILE_COUNT} snapshots"
+          fi
+
+          DESCRIPTION=""
+          while IFS= read -r FILE; do
+            FILENAME=$(basename "$FILE" .html)
+            API_PATH=$(echo "$FILENAME" | sed 's/\./\//g')
+            DESCRIPTION="${DESCRIPTION}https://developer.chrome.com/docs/extensions/reference/api/${API_PATH}  "
+          done <<< "$MODIFIED_FILES"
+
+
+          echo "commit_message=$COMMIT_MESSAGE" >> $GITHUB_ENV
+          echo "commit_description=$DESCRIPTION" >> $GITHUB_ENV
+
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: 'chore(scrap): update snapshot'
+          commit_message: |
+            ${{ env.commit_message }}
+
+            ${{ env.commit_description }}

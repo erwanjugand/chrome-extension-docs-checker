@@ -83,7 +83,7 @@ const init = async () => {
   console.log(`${apiLinks.length} APIs found.`)
 
   for (const apiUrl of apiLinks) {
-    await extractHtml(apiUrl)
+    extractHtml(apiUrl)
   }
 }
 
