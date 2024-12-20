@@ -41,7 +41,12 @@ jobs:
       - name: Scrap
         run: pnpm scrap
 
+      - name: Check for changes
+        id: git_diff
+        run: git diff --exit-code || echo "::set-output name=changed::true"
+
       - name: Generate commit message
+        if: ${{ steps.git_diff.outputs.changed == 'true' }}
         id: generate_commit_message
         run: |
           MODIFIED_FILES=$(git diff --name-only | grep '^snapshots/')
@@ -67,6 +72,7 @@ jobs:
           echo "commit_description=$DESCRIPTION" >> $GITHUB_ENV
 
       - name: Commit changes
+        if: ${{ steps.git_diff.outputs.changed == 'true' }}
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: |
