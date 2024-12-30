@@ -2,479 +2,479 @@
 
   
     
-<style>.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}</style>
+.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}
 
 
 
 
-<p></p>
 
-<p></p><h2 class="dcc-api-title" data-text="Description" id="description" tabindex="-1">Description</h2>
-<div class="dcc-reference"><p>Use the <code translate="no" dir="ltr">chrome.tts</code> API to play synthesized text-to-speech (TTS). See also the related <a href="https://developer.chrome.com/docs/extensions/reference/ttsEngine/"><code translate="no" dir="ltr">ttsEngine</code></a> API, which allows an extension to implement a speech engine.</p></div><p></p>
 
-<p>Chrome provides this capability on Windows (using SAPI 5), Mac OS X, and ChromeOS, using
+Description
+Use the chrome.tts API to play synthesized text-to-speech (TTS). See also the related ttsEngine API, which allows an extension to implement a speech engine.
+
+Chrome provides this capability on Windows (using SAPI 5), Mac OS X, and ChromeOS, using
 speech synthesis capabilities provided by the operating system. On all platforms, the user can
-install extensions that register themselves as alternative speech engines.</p>
+install extensions that register themselves as alternative speech engines.
 
-<p></p><h2 id="permissions" data-text="Permissions" tabindex="-1">Permissions</h2>
-<div class="dcc-reference"><code translate="no" dir="ltr">tts</code><br></div><p></p>
+Permissions
+tts
 
-<p></p>
 
-<p></p>
 
-<h2 id="concepts_and_usage" data-text="Concepts and usage" tabindex="-1">Concepts and usage</h2>
 
-<h3 id="generate_speech" data-text="Generate speech" tabindex="-1">Generate speech</h3>
 
-<p>Call <code translate="no" dir="ltr">speak()</code> from your extension to speak. For example:</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">tts</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">speak</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'Hello, world.'</span><span class="devsite-syntax-p">);</span>
-</code></pre></devsite-code>
-<p>To stop speaking immediately, just call <code translate="no" dir="ltr">stop()</code>:</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">tts</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">stop</span><span class="devsite-syntax-p">();</span>
-</code></pre></devsite-code>
-<p>You can provide options that control various properties of the speech, such as its rate, pitch, and
-more. For example:</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">tts</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">speak</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'Hello, world.'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-s1">'rate'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">2.0</span><span class="devsite-syntax-p">});</span>
-</code></pre></devsite-code>
-<p>It's also a good idea to specify the language so that a synthesizer supporting that language (and
-regional dialect, if applicable) is chosen.</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">tts</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">speak</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'Hello, world.'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-s1">'lang'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'en-US'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'rate'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">2.0</span><span class="devsite-syntax-p">});</span>
-</code></pre></devsite-code>
-<p>By default, each call to <code translate="no" dir="ltr">speak()</code> interrupts any ongoing speech and speaks immediately. To
-determine if a call would be interrupting anything, you can call <code translate="no" dir="ltr">isSpeaking()</code>. In addition, you
-can use the <code translate="no" dir="ltr">enqueue</code> option to cause this utterance to be added to a queue of utterances that will
-be spoken when the current utterance has finished.</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">tts</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">speak</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'Speak this first.'</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">tts</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">speak</span><span class="devsite-syntax-p">(</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s1">'Speak this next, when the first sentence is done.'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-s1">'enqueue'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">true</span><span class="devsite-syntax-p">});</span>
-</code></pre></devsite-code>
-<p>A complete description of all options can be found under <a href="#method-speak"><code translate="no" dir="ltr">tts.speak()</code></a>. Not all speech
-engines will support all options.</p>
+Concepts and usage
 
-<p>To catch errors and make sure you're calling <code translate="no" dir="ltr">speak()</code> correctly, pass a callback function that
-takes no arguments. Inside the callback, check <a href="/docs/extensions/reference/api/runtime#property-lastError"><code translate="no" dir="ltr">runtime.lastError</code></a> to see if there were any
-errors.</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">tts</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">speak</span><span class="devsite-syntax-p">(</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">utterance</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">options</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">if</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">runtime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">lastError</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'Error: '</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">runtime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">lastError</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">message</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-p">);</span>
-</code></pre></devsite-code>
-<p>The callback returns right away, before the engine has started generating speech. The purpose of the
+Generate speech
+
+Call speak() from your extension to speak. For example:
+chrome.tts.speak('Hello, world.');
+
+To stop speaking immediately, just call stop():
+chrome.tts.stop();
+
+You can provide options that control various properties of the speech, such as its rate, pitch, and
+more. For example:
+chrome.tts.speak('Hello, world.', {'rate': 2.0});
+
+It's also a good idea to specify the language so that a synthesizer supporting that language (and
+regional dialect, if applicable) is chosen.
+chrome.tts.speak('Hello, world.', {'lang': 'en-US', 'rate': 2.0});
+
+By default, each call to speak() interrupts any ongoing speech and speaks immediately. To
+determine if a call would be interrupting anything, you can call isSpeaking(). In addition, you
+can use the enqueue option to cause this utterance to be added to a queue of utterances that will
+be spoken when the current utterance has finished.
+chrome.tts.speak('Speak this first.');
+chrome.tts.speak(
+    'Speak this next, when the first sentence is done.', {'enqueue': true});
+
+A complete description of all options can be found under tts.speak(). Not all speech
+engines will support all options.
+
+To catch errors and make sure you're calling speak() correctly, pass a callback function that
+takes no arguments. Inside the callback, check runtime.lastError to see if there were any
+errors.
+chrome.tts.speak(
+  utterance,
+  options,
+  function() {
+    if (chrome.runtime.lastError) {
+      console.log('Error: ' + chrome.runtime.lastError.message);
+    }
+  }
+);
+
+The callback returns right away, before the engine has started generating speech. The purpose of the
 callback is to alert you to syntax errors in your use of the TTS API, not to catch all possible
 errors that might occur in the process of synthesizing and outputting speech. To catch these errors
-too, you need to use an event listener, described in the next section.</p>
+too, you need to use an event listener, described in the next section.
 
-<h3 id="listen_to_events" data-text="Listen to events" tabindex="-1">Listen to events</h3>
+Listen to events
 
-<p>To get more real-time information about the status of synthesized speech, pass an event listener in
-the options to <code translate="no" dir="ltr">speak()</code>, like this:</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">tts</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">speak</span><span class="devsite-syntax-p">(</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">utterance</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">onEvent</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">event</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'Event '</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">event</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">' at position '</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">event</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">charIndex</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-k">if</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">event</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">==</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'error'</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'Error: '</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">event</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">errorMessage</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">},</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">callback</span>
-<span class="devsite-syntax-p">);</span>
-</code></pre></devsite-code>
-<p>Each event includes an event type, the character index of the current speech relative to the
-utterance, and for error events, an optional error message. The event types are:</p>
+To get more real-time information about the status of synthesized speech, pass an event listener in
+the options to speak(), like this:
+chrome.tts.speak(
+  utterance,
+  {
+    onEvent: function(event) {
+      console.log('Event ' + event.type + ' at position ' + event.charIndex);
+      if (event.type == 'error') {
+        console.log('Error: ' + event.errorMessage);
+      }
+    }
+  },
+  callback
+);
 
-<ul>
-<li><code translate="no" dir="ltr">'start'</code>: The engine has started speaking the utterance.</li>
-<li><code translate="no" dir="ltr">'word'</code>: A word boundary was reached. Use <code translate="no" dir="ltr">event.charIndex</code> to determine the current speech
-position.</li>
-<li><code translate="no" dir="ltr">'sentence'</code>: A sentence boundary was reached. Use <code translate="no" dir="ltr">event.charIndex</code> to determine the current
-speech position.</li>
-<li><code translate="no" dir="ltr">'marker'</code>: An SSML marker was reached. Use <code translate="no" dir="ltr">event.charIndex</code> to determine the current speech
-position.</li>
-<li><code translate="no" dir="ltr">'end'</code>: The engine has finished speaking the utterance.</li>
-<li><code translate="no" dir="ltr">'interrupted'</code>: This utterance was interrupted by another call to <code translate="no" dir="ltr">speak()</code> or <code translate="no" dir="ltr">stop()</code> and did
-not finish.</li>
-<li><code translate="no" dir="ltr">'cancelled'</code>: This utterance was queued, but then cancelled by another call to <code translate="no" dir="ltr">speak()</code> or
-<code translate="no" dir="ltr">stop()</code> and never began to speak at all.</li>
-<li><code translate="no" dir="ltr">'error'</code>: An engine-specific error occurred and this utterance cannot be spoken. Check
-<code translate="no" dir="ltr">event.errorMessage</code> for details.</li>
-</ul>
+Each event includes an event type, the character index of the current speech relative to the
+utterance, and for error events, an optional error message. The event types are:
 
-<p>Four of the event types—<code translate="no" dir="ltr">'end'</code>, <code translate="no" dir="ltr">'interrupted'</code>, <code translate="no" dir="ltr">'cancelled'</code>, and <code translate="no" dir="ltr">'error'</code>—are <em>final</em>. After
+
+'start': The engine has started speaking the utterance.
+'word': A word boundary was reached. Use event.charIndex to determine the current speech
+position.
+'sentence': A sentence boundary was reached. Use event.charIndex to determine the current
+speech position.
+'marker': An SSML marker was reached. Use event.charIndex to determine the current speech
+position.
+'end': The engine has finished speaking the utterance.
+'interrupted': This utterance was interrupted by another call to speak() or stop() and did
+not finish.
+'cancelled': This utterance was queued, but then cancelled by another call to speak() or
+stop() and never began to speak at all.
+'error': An engine-specific error occurred and this utterance cannot be spoken. Check
+event.errorMessage for details.
+
+
+Four of the event types—'end', 'interrupted', 'cancelled', and 'error'—are final. After
 one of those events is received, this utterance will no longer speak and no new events from this
-utterance will be received.</p>
+utterance will be received.
 
-<p>Some voices may not support all event types, and some voices may not send any events at all. If you
+Some voices may not support all event types, and some voices may not send any events at all. If you
 don't want to use a voice unless it sends certain events, pass the events you require in the
-<code translate="no" dir="ltr">requiredEventTypes</code> member of the options object, or use <code translate="no" dir="ltr">getVoices()</code> to choose a voice that meets
-your requirements. Both are described in what follows.</p>
+requiredEventTypes member of the options object, or use getVoices() to choose a voice that meets
+your requirements. Both are described in what follows.
 
-<h3 id="ssml_markup" data-text="SSML markup" tabindex="-1">SSML markup</h3>
+SSML markup
 
-<p>Utterances used in this API may include markup using the <a href="https://www.w3.org/TR/speech-synthesis">Speech Synthesis Markup Language
-(SSML)</a>. If you use SSML, the first argument to <code translate="no" dir="ltr">speak()</code> should be a complete SSML document with
-an XML header and a top-level <code translate="no" dir="ltr">&lt;speak&gt;</code> tag, not a document fragment.</p>
+Utterances used in this API may include markup using the Speech Synthesis Markup Language
+(SSML). If you use SSML, the first argument to speak() should be a complete SSML document with
+an XML header and a top-level <speak> tag, not a document fragment.
 
-<p>For example:</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">tts</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">speak</span><span class="devsite-syntax-p">(</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'&lt;?xml version="1.0"?&gt;'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'&lt;speak&gt;'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'  The &lt;emphasis&gt;second&lt;/emphasis&gt; '</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'  word of this sentence was emphasized.'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'&lt;/speak&gt;'</span>
-<span class="devsite-syntax-p">);</span>
-</code></pre></devsite-code>
-<p>Not all speech engines will support all SSML tags, and some may not support SSML at all, but all
-engines are required to ignore any SSML they don't support and to still speak the underlying text.</p>
+For example:
+chrome.tts.speak(
+  '<?xml version="1.0"?>' +
+  '<speak>' +
+  '  The <emphasis>second</emphasis> ' +
+  '  word of this sentence was emphasized.' +
+  '</speak>'
+);
 
-<h3 id="choose_a_voice" data-text="Choose a voice" tabindex="-1">Choose a voice</h3>
+Not all speech engines will support all SSML tags, and some may not support SSML at all, but all
+engines are required to ignore any SSML they don't support and to still speak the underlying text.
 
-<p>By default, Chrome chooses the most appropriate voice for each utterance you want to speak, based on
+Choose a voice
+
+By default, Chrome chooses the most appropriate voice for each utterance you want to speak, based on
 the language. On most Windows, Mac OS X, and ChromeOS systems, speech synthesis provided by the
 operating system should be able to speak any text in at least one language. Some users may have a
 variety of voices available, though, from their operating system and from speech engines implemented
 by other Chrome extensions. In those cases, you can implement custom code to choose the appropriate
-voice, or to present the user with a list of choices.</p>
+voice, or to present the user with a list of choices.
 
-<p>To get a list of all voices, call <code translate="no" dir="ltr">getVoices()</code> and pass it a function that receives an array of
-<code translate="no" dir="ltr">TtsVoice</code> objects as its argument:</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">tts</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getVoices</span><span class="devsite-syntax-p">(</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">voices</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">for</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kd">var</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">i</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">0</span><span class="devsite-syntax-p">;</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">i</span><span class="devsite-syntax-w"> &lt; </span><span class="devsite-syntax-nx">voices</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">length</span><span class="devsite-syntax-p">;</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">i</span><span class="devsite-syntax-o">++</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'Voice '</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">i</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">':'</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'  name: '</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">voices</span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-nx">i</span><span class="devsite-syntax-p">].</span><span class="devsite-syntax-nx">voiceName</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'  lang: '</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">voices</span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-nx">i</span><span class="devsite-syntax-p">].</span><span class="devsite-syntax-nx">lang</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'  extension id: '</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">voices</span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-nx">i</span><span class="devsite-syntax-p">].</span><span class="devsite-syntax-nx">extensionId</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'  event types: '</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">voices</span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-nx">i</span><span class="devsite-syntax-p">].</span><span class="devsite-syntax-nx">eventTypes</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-p">);</span>
-</code></pre></devsite-code>
-<p></p><div class="dcc-reference"><h2 id="type" data-text="Types" tabindex="-1">Types</h2>
-  <div><div>
-    <div class="notranslate">
-      <h3 id="type-EventType" data-text="EventType" tabindex="-1">EventType</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 54+
-      </span></div>
-    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
-      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"start"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"end"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"word"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"sentence"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"marker"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"interrupted"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"cancelled"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"error"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"pause"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"resume"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><p></p>
-    </div>
-  </div><div>
-    <div class="notranslate">
-      <h3 id="type-TtsEvent" data-text="TtsEvent" tabindex="-1">TtsEvent</h3>
-    </div><p>An event from the TTS engine to communicate the status of an utterance.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-TtsEvent-charIndex">charIndex</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The index of the current character in the utterance. For word events, the event fires at the end of one word and before the beginning of the next. The <code translate="no" dir="ltr">charIndex</code> represents a point in the text at the beginning of the next word to be spoken.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-TtsEvent-errorMessage">errorMessage</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The error description, if the event type is <code translate="no" dir="ltr">error</code>.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-TtsEvent-length">length</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 74+
-      </span></div>
-    </div><p>The length of the next part of the utterance. For example, in a <code translate="no" dir="ltr">word</code> event, this is the length of the word which will be spoken next. It will be set to -1 if not set by the speech engine.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-TtsEvent-type">type</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-EventType">EventType</a></p></div>
-    </div><p>The type can be <code translate="no" dir="ltr">start</code> as soon as speech has started, <code translate="no" dir="ltr">word</code> when a word boundary is reached, <code translate="no" dir="ltr">sentence</code> when a sentence boundary is reached, <code translate="no" dir="ltr">marker</code> when an SSML mark element is reached, <code translate="no" dir="ltr">end</code> when the end of the utterance is reached, <code translate="no" dir="ltr">interrupted</code> when the utterance is stopped or interrupted before reaching the end, <code translate="no" dir="ltr">cancelled</code> when it's removed from the queue before ever being synthesized, or <code translate="no" dir="ltr">error</code> when any other error occurs. When pausing speech, a <code translate="no" dir="ltr">pause</code> event is fired if a particular utterance is paused in the middle, and <code translate="no" dir="ltr">resume</code> if an utterance resumes speech. Note that pause and resume events may not fire if speech is paused in-between utterances.</p>
-</li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="type-TtsOptions" data-text="TtsOptions" tabindex="-1">TtsOptions</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 77+
-      </span></div>
-    </div><p>The speech options for the TTS engine.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_1" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-TtsOptions-desiredEventTypes">desiredEventTypes</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array">string[]&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The TTS event types that you are interested in listening to. If missing, all event types may be sent.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-TtsOptions-enqueue">enqueue</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>If true, enqueues this utterance if TTS is already in progress. If false (the default), interrupts any current speech and flushes the speech queue before speaking this new utterance.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-TtsOptions-extensionId">extensionId</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The extension ID of the speech engine to use, if known.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-TtsOptions-gender">gender</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-VoiceGender">VoiceGender</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--red dcc-tag-pill">
-        Deprecated&nbsp;since&nbsp;Chrome 77</span></div>
-    </div><p class="dcc-code-sections__deprecated">Gender is deprecated and will be ignored.</p><p></p><p>Gender of voice for synthesized speech.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-TtsOptions-lang">lang</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The language to be used for synthesis, in the form <em>language</em>-<em>region</em>. Examples: 'en', 'en-US', 'en-GB', 'zh-CN'.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-TtsOptions-pitch">pitch</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Speaking pitch between 0 and 2 inclusive, with 0 being lowest and 2 being highest. 1.0 corresponds to a voice's default pitch.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-TtsOptions-rate">rate</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Speaking rate relative to the default rate for this voice. 1.0 is the default rate, normally around 180 to 220 words per minute. 2.0 is twice as fast, and 0.5 is half as fast. Values below 0.1 or above 10.0 are strictly disallowed, but many voices will constrain the minimum and maximum rates further—for example a particular voice may not actually speak faster than 3 times normal even if you specify a value larger than 3.0.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-TtsOptions-requiredEventTypes">requiredEventTypes</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array">string[]&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The TTS event types the voice must support.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-TtsOptions-voiceName">voiceName</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The name of the voice to use for synthesis. If empty, uses any available voice.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-TtsOptions-volume">volume</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Speaking volume between 0 and 1 inclusive, with 0 being lowest and 1 being highest, with a default of 1.0.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-TtsOptions-onEvent">onEvent</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--">void&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>This function is called with events that occur in the process of speaking the utterance.</p>
-<p>
-          The <code translate="no" dir="ltr">onEvent</code> function looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">event</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-TtsEvent"><span class="devsite-syntax-kt">TtsEvent</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;&nbsp;{...}</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-TtsOptions-onEvent-event">event</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-TtsEvent">TtsEvent</a></p></div>
-    </div><p>The update event from the text-to-speech engine indicating the status of this utterance.</p>
-</li></ul>
-    </div></li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="type-TtsVoice" data-text="TtsVoice" tabindex="-1">TtsVoice</h3>
-    </div><p>A description of a voice available for speech synthesis.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_2" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-TtsVoice-eventTypes">eventTypes</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-EventType">EventType</a>[]&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>All of the callback event types that this voice is capable of sending.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-TtsVoice-extensionId">extensionId</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The ID of the extension providing this voice.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-TtsVoice-gender">gender</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-VoiceGender">VoiceGender</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--red dcc-tag-pill">
-        Deprecated&nbsp;since&nbsp;Chrome 70</span></div>
-    </div><p class="dcc-code-sections__deprecated">Gender is deprecated and will be ignored.</p><p></p><p>This voice's gender.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-TtsVoice-lang">lang</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The language that this voice supports, in the form <em>language</em>-<em>region</em>. Examples: 'en', 'en-US', 'en-GB', 'zh-CN'.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-TtsVoice-remote">remote</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>If true, the synthesis engine is a remote network resource. It may be higher latency and may incur bandwidth costs.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-TtsVoice-voiceName">voiceName</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The name of the voice.</p>
-</li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="type-VoiceGender" data-text="VoiceGender" tabindex="-1">VoiceGender</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 54+
-      </span><span class="dcc-tag-pill--red dcc-tag-pill">
-        Deprecated&nbsp;since&nbsp;Chrome 70</span></div>
-    </div><p class="dcc-code-sections__deprecated">Gender is deprecated and is ignored.</p><p></p></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum_1" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
-      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"male"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"female"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><p></p>
-    </div>
-  </div></div><h2 id="method" data-text="Methods" tabindex="-1">Methods</h2>
-  <div><div>
-    <div class="notranslate">
-      <h3 id="method-getVoices" data-text="getVoices()" tabindex="-1">getVoices()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+To get a list of all voices, call getVoices() and pass it a function that receives an array of
+TtsVoice objects as its argument:
+chrome.tts.getVoices(
+  function(voices) {
+    for (var i = 0; i < voices.length; i++) {
+      console.log('Voice ' + i + ':');
+      console.log('  name: ' + voices[i].voiceName);
+      console.log('  lang: ' + voices[i].lang);
+      console.log('  extension id: ' + voices[i].extensionId);
+      console.log('  event types: ' + voices[i].eventTypes);
+    }
+  }
+);
+
+Types
+  
+    
+      EventType
+    
+      Chrome 54+
+      
+    Enum
+      "start"  "end"  "word"  "sentence"  "marker"  "interrupted"  "cancelled"  "error"  "pause"  "resume"  
+    
+  
+    
+      TtsEvent
+    An event from the TTS engine to communicate the status of an utterance.
+Properties
+    
+      charIndex
+      number optional
+    The index of the current character in the utterance. For word events, the event fires at the end of one word and before the beginning of the next. The charIndex represents a point in the text at the beginning of the next word to be spoken.
+
+    
+      errorMessage
+      string optional
+    The error description, if the event type is error.
+
+    
+      length
+      number optional
+    
+      Chrome 74+
+      
+    The length of the next part of the utterance. For example, in a word event, this is the length of the word which will be spoken next. It will be set to -1 if not set by the speech engine.
+
+    
+      type
+      EventType
+    The type can be start as soon as speech has started, word when a word boundary is reached, sentence when a sentence boundary is reached, marker when an SSML mark element is reached, end when the end of the utterance is reached, interrupted when the utterance is stopped or interrupted before reaching the end, cancelled when it's removed from the queue before ever being synthesized, or error when any other error occurs. When pausing speech, a pause event is fired if a particular utterance is paused in the middle, and resume if an utterance resumes speech. Note that pause and resume events may not fire if speech is paused in-between utterances.
+
+    
+    
+      TtsOptions
+    
+      Chrome 77+
+      
+    The speech options for the TTS engine.
+Properties
+    
+      desiredEventTypes
+      string[] optional
+    The TTS event types that you are interested in listening to. If missing, all event types may be sent.
+
+    
+      enqueue
+      boolean optional
+    If true, enqueues this utterance if TTS is already in progress. If false (the default), interrupts any current speech and flushes the speech queue before speaking this new utterance.
+
+    
+      extensionId
+      string optional
+    The extension ID of the speech engine to use, if known.
+
+    
+      gender
+      VoiceGender optional
+    
+      
+        Deprecated since Chrome 77
+    Gender is deprecated and will be ignored.Gender of voice for synthesized speech.
+
+    
+      lang
+      string optional
+    The language to be used for synthesis, in the form language-region. Examples: 'en', 'en-US', 'en-GB', 'zh-CN'.
+
+    
+      pitch
+      number optional
+    Speaking pitch between 0 and 2 inclusive, with 0 being lowest and 2 being highest. 1.0 corresponds to a voice's default pitch.
+
+    
+      rate
+      number optional
+    Speaking rate relative to the default rate for this voice. 1.0 is the default rate, normally around 180 to 220 words per minute. 2.0 is twice as fast, and 0.5 is half as fast. Values below 0.1 or above 10.0 are strictly disallowed, but many voices will constrain the minimum and maximum rates further—for example a particular voice may not actually speak faster than 3 times normal even if you specify a value larger than 3.0.
+
+    
+      requiredEventTypes
+      string[] optional
+    The TTS event types the voice must support.
+
+    
+      voiceName
+      string optional
+    The name of the voice to use for synthesis. If empty, uses any available voice.
+
+    
+      volume
+      number optional
+    Speaking volume between 0 and 1 inclusive, with 0 being lowest and 1 being highest, with a default of 1.0.
+
+    
+      onEvent
+      void optional
+    This function is called with events that occur in the process of speaking the utterance.
+
+          The onEvent function looks like:
+          (event: TtsEvent) => {...}
+        
+    
+      event
+      TtsEvent
+    The update event from the text-to-speech engine indicating the status of this utterance.
+
+    
+    
+    
+      TtsVoice
+    A description of a voice available for speech synthesis.
+Properties
+    
+      eventTypes
+      EventType[] optional
+    All of the callback event types that this voice is capable of sending.
+
+    
+      extensionId
+      string optional
+    The ID of the extension providing this voice.
+
+    
+      gender
+      VoiceGender optional
+    
+      
+        Deprecated since Chrome 70
+    Gender is deprecated and will be ignored.This voice's gender.
+
+    
+      lang
+      string optional
+    The language that this voice supports, in the form language-region. Examples: 'en', 'en-US', 'en-GB', 'zh-CN'.
+
+    
+      remote
+      boolean optional
+    If true, the synthesis engine is a remote network resource. It may be higher latency and may incur bandwidth costs.
+
+    
+      voiceName
+      string optional
+    The name of the voice.
+
+    
+    
+      VoiceGender
+    
+      Chrome 54+
+      
+        Deprecated since Chrome 70
+    Gender is deprecated and is ignored.Enum
+      "male"  "female"  
+    
+  Methods
+  
+    
+      getVoices()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">tts</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getVoices</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Gets an array of all available voices.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-getVoices-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">voices</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-TtsVoice"><span class="devsite-syntax-kt">TtsVoice</span></a><span class="devsite-syntax-p">[])&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-getVoices-callback-voices">voices</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-TtsVoice">TtsVoice</a>[]</p></div>
-    </div><p>Array of <a href="#type-TtsVoice"><code translate="no" dir="ltr">tts.TtsVoice</code></a> objects representing the available voices for speech synthesis.</p>
-</li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-TtsVoice">TtsVoice</a>[]&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 101+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.tts.getVoices(  callback?: function,)
+      Gets an array of all available voices.
+Parameters
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (voices: TtsVoice[]) => void
+        
+    
+      voices
+      TtsVoice[]
+    Array of tts.TtsVoice objects representing the available voices for speech synthesis.
+
+    
+    Returns
+          
+            Promise<TtsVoice[]>
+            
+      Chrome 101+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-isSpeaking" data-text="isSpeaking()" tabindex="-1">isSpeaking()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      isSpeaking()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">tts</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">isSpeaking</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Checks whether the engine is currently speaking. On Mac OS X, the result is true whenever the system speech engine is speaking, even if the speech wasn't initiated by Chrome.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_1" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-isSpeaking-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">speaking</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">boolean</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-isSpeaking-callback-speaking">speaking</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
-    </div><p>True if speaking, false otherwise.</p>
-</li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_1" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;boolean&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 101+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.tts.isSpeaking(  callback?: function,)
+      Checks whether the engine is currently speaking. On Mac OS X, the result is true whenever the system speech engine is speaking, even if the speech wasn't initiated by Chrome.
+Parameters
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (speaking: boolean) => void
+        
+    
+      speaking
+      boolean
+    True if speaking, false otherwise.
+
+    
+    Returns
+          
+            Promise<boolean>
+            
+      Chrome 101+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-pause" data-text="pause()" tabindex="-1">pause()</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">tts</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">pause</span><span class="devsite-syntax-p">()</span></pre></devsite-code>
-      </span><p>Pauses speech synthesis, potentially in the middle of an utterance. A call to resume or stop will un-pause speech.</p>
-</div><div>
-    <div class="notranslate">
-      <h3 id="method-resume" data-text="resume()" tabindex="-1">resume()</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">tts</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">resume</span><span class="devsite-syntax-p">()</span></pre></devsite-code>
-      </span><p>If speech was paused, resumes speaking where it left off.</p>
-</div><div>
-    <div class="notranslate">
-      <h3 id="method-speak" data-text="speak()" tabindex="-1">speak()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      pause()
+    
+        chrome.tts.pause()
+      Pauses speech synthesis, potentially in the middle of an utterance. A call to resume or stop will un-pause speech.
+
+    
+      resume()
+    
+        chrome.tts.resume()
+      If speech was paused, resumes speaking where it left off.
+
+    
+      speak()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">tts</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">speak</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">utterance</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">options?</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-TtsOptions"><span class="devsite-syntax-kt">TtsOptions</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Speaks text using a text-to-speech engine.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_2" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-speak-utterance">utterance</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>The text to speak, either plain text or a complete, well-formed SSML document. Speech engines that do not support SSML will strip away the tags and speak the text. The maximum length of the text is 32,768 characters.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-speak-options">options</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-TtsOptions">TtsOptions</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The speech options.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-speak-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_2" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 101+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.tts.speak(  utterance: string,  options?: TtsOptions,  callback?: function,)
+      Speaks text using a text-to-speech engine.
+Parameters
+    
+      utterance
+      string
+    The text to speak, either plain text or a complete, well-formed SSML document. Speech engines that do not support SSML will strip away the tags and speak the text. The maximum length of the text is 32,768 characters.
+
+    
+      options
+      TtsOptions optional
+    The speech options.
+
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 101+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-stop" data-text="stop()" tabindex="-1">stop()</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">tts</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">stop</span><span class="devsite-syntax-p">()</span></pre></devsite-code>
-      </span><p>Stops any current speech and flushes the queue of any pending utterances. In addition, if speech was paused, it will now be un-paused for the next call to speak.</p>
-</div></div><h2 id="event" data-text="Events" tabindex="-1">Events</h2>
-  <div><div>
-    <div class="notranslate">
-      <h3 id="event-onVoicesChanged" data-text="onVoicesChanged" tabindex="-1">onVoicesChanged</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 124+
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">tts</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onVoicesChanged</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Called when the list of <a href="#type-TtsVoice"><code translate="no" dir="ltr">tts.TtsVoice</code></a> that would be returned by getVoices has changed.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_3" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-onVoicesChanged-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p></li></ul>
-    </div></div></div>
-<p></p>
+              
+            
+        
+      
+    
+      stop()
+    
+        chrome.tts.stop()
+      Stops any current speech and flushes the queue of any pending utterances. In addition, if speech was paused, it will now be un-paused for the next call to speak.
+Events
+  
+    
+      onVoicesChanged
+    
+      Chrome 124+
+      
+    
+        chrome.tts.onVoicesChanged.addListener(  callback: function,)
+      Called when the list of tts.TtsVoice that would be returned by getVoices has changed.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          () => void
+        
+    
+
   
 
   

@@ -2,151 +2,151 @@
 
   
     
-<style>.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}</style>
+.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}
 
 
 
 
-<p></p><aside class="note"><b>Important:</b>
-This API works <strong>only on ChromeOS</strong>.
-</aside><p></p>
+Important:
+This API works only on ChromeOS.
 
-<p></p><h2 class="dcc-api-title" data-text="Description" id="description" tabindex="-1">Description</h2>
-<div class="dcc-reference"><p>Use the <code translate="no" dir="ltr">chrome.printing</code> API to send print jobs to printers installed on Chromebook.</p></div><p></p>
 
-<p></p><h2 id="permissions" data-text="Permissions" tabindex="-1">Permissions</h2>
-<div class="dcc-reference"><code translate="no" dir="ltr">printing</code><br></div><p></p>
+Description
+Use the chrome.printing API to send print jobs to printers installed on Chromebook.
 
-<p></p><h2 id="availability" data-text="Availability" tabindex="-1">Availability</h2>
-<div class="dcc-reference"><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 81+
-      </span><span class="dcc-tag-pill--pink dcc-tag-pill">
+Permissions
+printing
+
+Availability
+
+      Chrome 81+
+      
         ChromeOS only
-      </span></div>
-    </div></div><p></p>
+      
+    
 
-<p></p>
 
-<p>All <code translate="no" dir="ltr">chrome.printing</code> methods and events require you to declare the <code translate="no" dir="ltr">"printing"</code> permission in the <a href="/docs/extensions/mv3/manifest">extension manifest</a>. For example:</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JSON"><code translate="no" dir="ltr"><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"name"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"My extension"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">...</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"permissions"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s2">"printing"</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">],</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">...</span>
-<span class="devsite-syntax-p">}</span>
-</code></pre></devsite-code>
-<h2 id="examples" data-text="Examples" tabindex="-1">Examples</h2>
 
-<p>The examples below demonstrate using each of the methods in the printing namespace. This code is copied from or based on the <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/printing">api-samples/printing</a> in the extensions-samples Github repo.</p>
+All chrome.printing methods and events require you to declare the "printing" permission in the extension manifest. For example:
+{
+  "name": "My extension",
+  ...
+  "permissions": [
+    "printing"
+  ],
+  ...
+}
 
-<h3 id="canceljob" data-text="cancelJob()" tabindex="-1">cancelJob()</h3>
+Examples
 
-<p>This example uses the <code translate="no" dir="ltr">onJobStatusChanged</code> handler to hide a 'cancel' button when the <code translate="no" dir="ltr">jobStatus</code> is neither <code translate="no" dir="ltr">PENDING</code> or <code translate="no" dir="ltr">IN_PROGRESS</code>. Note that on some networks or when a Chromebook is connected directly to the printer, these states may pass too quickly for the cancel button to be visible long enough to be called. This is greatly simplified printing example.</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">printing</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onJobStatusChanged</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">((</span><span class="devsite-syntax-nx">jobId</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">status</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">cancelButton</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">document</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getElementById</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"cancelButton"</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">cancelButton</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addEventListener</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'click'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">printing</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">cancelJob</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">jobId</span><span class="devsite-syntax-p">).</span><span class="devsite-syntax-nx">then</span><span class="devsite-syntax-p">((</span><span class="devsite-syntax-nx">response</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-k">if</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">response</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">!==</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">undefined</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">response</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">status</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-k">if</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">runtime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">lastError</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">!==</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">undefined</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">runtime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">lastError</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">message</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">});</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">});</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">if</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">status</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">!==</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"PENDING"</span><span class="devsite-syntax-w"> &amp;&amp; </span><span class="devsite-syntax-nx">status</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">!==</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"IN_PROGRESS"</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">cancelButton</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">style</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">visibility</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'hidden'</span><span class="devsite-syntax-p">;</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">else</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">cancelButton</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">style</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">visibility</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'visible'</span><span class="devsite-syntax-p">;</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-p">}</span>
-</code></pre></devsite-code>
-<h3 id="getprinters_and_getprinterinfo" data-text="getPrinters() and getPrinterInfo()" tabindex="-1">getPrinters() and getPrinterInfo()</h3>
+The examples below demonstrate using each of the methods in the printing namespace. This code is copied from or based on the api-samples/printing in the extensions-samples Github repo.
 
-<p>A single example is used for these functions because getting printer information requires a printer ID, which is retrieved by calling <code translate="no" dir="ltr">getPrinters()</code>. This example logs the name and description of the default printer to the console. This is a simplified version of the printing example.</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="GDScript"><code translate="no" dir="ltr"><span class="devsite-syntax-err">​​</span><span class="devsite-syntax-k">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">printers</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">chrome</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">printing</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">getPrinters</span><span class="devsite-syntax-p">();</span>
-<span class="devsite-syntax-k">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">defaultPrinter</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">printers</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">find</span><span class="devsite-syntax-p">((</span><span class="devsite-syntax-n">printer</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">printerInfo</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">chrome</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">printing</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">getPrinterInfo</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">printer</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">id</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">return</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">printerInfo</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">isDefault</span><span class="devsite-syntax-p">;</span>
-<span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-n">console</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-err">`</span><span class="devsite-syntax-n">Default</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">printer</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">$</span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-n">defaultPrinter</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">name</span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-o">.</span>\<span class="devsite-syntax-n">n</span>\<span class="devsite-syntax-n">t</span><span class="devsite-syntax-o">$</span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-n">defaultPrinter</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">description</span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-err">`</span><span class="devsite-syntax-p">);</span>
-</code></pre></devsite-code>
-<h3 id="submitjob" data-text="submitJob()" tabindex="-1">submitJob()</h3>
+cancelJob()
 
-<p>The <code translate="no" dir="ltr">submitJob()</code> method requires three things.</p>
+This example uses the onJobStatusChanged handler to hide a 'cancel' button when the jobStatus is neither PENDING or IN_PROGRESS. Note that on some networks or when a Chromebook is connected directly to the printer, these states may pass too quickly for the cancel button to be visible long enough to be called. This is greatly simplified printing example.
+chrome.printing.onJobStatusChanged.addListener((jobId, status) => {
+  const cancelButton = document.getElementById("cancelButton");
+  cancelButton.addEventListener('click', () => {
+    chrome.printing.cancelJob(jobId).then((response) => {
+      if (response !== undefined) {
+        console.log(response.status);
+      }
+      if (chrome.runtime.lastError !== undefined) {
+        console.log(chrome.runtime.lastError.message);
+      }
+    });
+  });
+  if (status !== "PENDING" && status !== "IN_PROGRESS") {
+    cancelButton.style.visibility = 'hidden';
+  } else {
+    cancelButton.style.visibility = 'visible';
+  }
+}
 
-<ul>
-<li>A <code translate="no" dir="ltr">ticket</code> structure specifying which capabilities of the printer are to be used. If the user needs to select from available capabilities, you can retrieve them for a specific printer using <code translate="no" dir="ltr">getPrinterInfo()</code>.</li>
-<li>A <code translate="no" dir="ltr">SubmitJobRequest</code> structure, which specifies the printer to use, and the file or date to print. This structure contains a reference to the <code translate="no" dir="ltr">ticket</code> structure.</li>
-<li>A blob of the file or data to print.</li>
-</ul>
+getPrinters() and getPrinterInfo()
 
-<p>Calling <code translate="no" dir="ltr">submitJob()</code> triggers a dialog box asking the user to confirm printing. Use the <a href="https://chromeenterprise.google/policies/#PrintingAPIExtensionsAllowlist%22"><code translate="no" dir="ltr">PrintingAPIExtensionsAllowlist</code></a> to bypass confirmation.</p>
+A single example is used for these functions because getting printer information requires a printer ID, which is retrieved by calling getPrinters(). This example logs the name and description of the default printer to the console. This is a simplified version of the printing example.
+​​const printers = await chrome.printing.getPrinters();
+const defaultPrinter = printers.find((printer) => {
+  const printerInfo = await chrome.printing.getPrinterInfo(printer.id);
+  return printerInfo.isDefault;
+}
+console.log(`Default printer: ${defaultPrinter.name}.\n\t${defaultPrinter.description}`);
 
-<p>This is a simplified version of the printing example. Notice that the <code translate="no" dir="ltr">ticket</code> is attached to the <code translate="no" dir="ltr">SubmitJobRequest</code> structure (line 8) and that the data to print is converted to a blob (line 10). Getting the ID of the printer (line 1) is more complicated <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/printing">in the sample</a> than is shown here.</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="GDScript"><code translate="no" dir="ltr"><span class="devsite-syntax-k">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">defaultPrinter</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">getDefaultPrinter</span><span class="devsite-syntax-p">();</span>
-<span class="devsite-syntax-k">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ticket</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">getPrinterTicket</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">defaultPrinter</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-k">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">arrayBuffer</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">getPrintData</span><span class="devsite-syntax-p">();</span>
-<span class="devsite-syntax-k">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">submitJobRequest</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-n">job</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">printerId</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">defaultPrinter</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">title</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'test job'</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">ticket</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ticket</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">contentType</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'application/pdf'</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">document</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">Blob</span><span class="devsite-syntax-p">([</span><span class="devsite-syntax-n">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">Uint8Array</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">arrayBuffer</span><span class="devsite-syntax-p">)],</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-n">type</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'application/pdf'</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">});</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-p">};</span>
+submitJob()
 
-<span class="devsite-syntax-n">chrome</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">printing</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">submitJob</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">submitJobRequest</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">response</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">if</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">response</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">!==</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">undefined</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">console</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">response</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">status</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">if</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">chrome</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">runtime</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">lastError</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">!==</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">undefined</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">console</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">chrome</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">runtime</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">lastError</span><span class="devsite-syntax-o">.</span><span class="devsite-syntax-n">message</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-p">});</span>
-</code></pre></devsite-code>
-<h3 id="roll-printing" data-text="Roll printing" tabindex="-1">Roll printing</h3>
+The submitJob() method requires three things.
 
-<p>This example shows how to build a printer ticket for continuous (or roll) printing, which is often used with receipt printing. The <code translate="no" dir="ltr">submitJobRequest</code> object for roll printing is the same as that shown for the <a href="#submitjob"><code translate="no" dir="ltr">submitJob()</code></a> example.</p>
 
-<p>If you need to change the default value for paper cutting, use the <code translate="no" dir="ltr">vendor_ticket_item</code> key. (The default varies from printer to printer.) To change the value, provide an array with one member: an object whose <code translate="no" dir="ltr">id</code> is <code translate="no" dir="ltr">'finishings'</code>. The value can either be <code translate="no" dir="ltr">'trim'</code> for printers that cut the roll at the end of printing or <code translate="no" dir="ltr">'none'</code> for printers that require the print job to be torn off.</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="GDScript"><code translate="no" dir="ltr"><span class="devsite-syntax-k">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ticket</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-n">version</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'1.0'</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nb">print</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">vendor_ticket_item</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[{</span><span class="devsite-syntax-n">id</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'finishings'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">value</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'trim'</span><span class="devsite-syntax-p">}],</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">color</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-n">type</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'STANDARD_MONOCHROME'</span><span class="devsite-syntax-p">},</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">duplex</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-n">type</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'NO_DUPLEX'</span><span class="devsite-syntax-p">},</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">page_orientation</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-n">type</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'PORTRAIT'</span><span class="devsite-syntax-p">},</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">copies</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-n">copies</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">1</span><span class="devsite-syntax-p">},</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">dpi</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-n">horizontal_dpi</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">300</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">vertical_dpi</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">300</span><span class="devsite-syntax-p">},</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">media_size</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-n">width_microns</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">72320</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-n">height_microns</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">100000</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">},</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">collate</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-n">collate</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-bp">false</span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-p">};</span>
-</code></pre></devsite-code>
-<p>Some printers do not support the <code translate="no" dir="ltr">"finishings"</code> option. To determine if your printer does, call <a href="#method-getPrinterInfo"><code translate="no" dir="ltr">getPrinterInfo()</code></a> and look for a <code translate="no" dir="ltr">"display_name"</code> of <code translate="no" dir="ltr">"finishings/11"</code>.</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="Carbon"><code translate="no" dir="ltr"><span class="devsite-syntax-s">"vendor_capability"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s">"display_name"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"finishings/11"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s">"id"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"finishings/11"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s">"type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"TYPED_VALUE"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s">"typed_value_cap"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-s">"value_type"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"BOOLEAN"</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">},</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-o">...</span>
-<span class="devsite-syntax-p">]</span>
-</code></pre></devsite-code><aside class="note"><strong>Note:</strong><span> starting with Chrome 124, the <code translate="no" dir="ltr">vendor_ticket_item</code> allows all items from the printer's <code translate="no" dir="ltr">vendor_capabilities</code>. For example, any value return by <a href="#method-getPrinterInfo"><code translate="no" dir="ltr">getPrinterInfo()</code></a> is valid. Before, only the <code translate="no" dir="ltr">finishings</code> key was supported.</span></aside>
-<p>The values in a ticket's <code translate="no" dir="ltr">media_size</code> key are specific to each printer. To select an appropriate size call <a href="#method-getPrinterInfo"><code translate="no" dir="ltr">getPrinterInfo()</code></a>. The returned <a href="#type-GetPrinterInfoResponse"><code translate="no" dir="ltr">GetPrinterResponse</code></a> contains an array of supported media sizes at <code translate="no" dir="ltr">"media_size"."option"</code>. Choose an option whose <code translate="no" dir="ltr">"is_continuous_feed"</code> value is true. Use its height and width values for the ticket.</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="scdoc"><code translate="no" dir="ltr">"media_size": {
+A ticket structure specifying which capabilities of the printer are to be used. If the user needs to select from available capabilities, you can retrieve them for a specific printer using getPrinterInfo().
+A SubmitJobRequest structure, which specifies the printer to use, and the file or date to print. This structure contains a reference to the ticket structure.
+A blob of the file or data to print.
+
+
+Calling submitJob() triggers a dialog box asking the user to confirm printing. Use the PrintingAPIExtensionsAllowlist to bypass confirmation.
+
+This is a simplified version of the printing example. Notice that the ticket is attached to the SubmitJobRequest structure (line 8) and that the data to print is converted to a blob (line 10). Getting the ID of the printer (line 1) is more complicated in the sample than is shown here.
+const defaultPrinter = getDefaultPrinter();
+const ticket = getPrinterTicket(defaultPrinter);
+const arrayBuffer = getPrintData();
+const submitJobRequest = {
+  job: {
+    printerId: defaultPrinter,
+    title: 'test job',
+    ticket: ticket,
+    contentType: 'application/pdf',
+    document: new Blob([new Uint8Array(arrayBuffer)], {
+      type: 'application/pdf'
+    });
+  }
+};
+
+chrome.printing.submitJob(submitJobRequest, (response) => {
+  if (response !== undefined) {
+    console.log(response.status);
+  }
+  if (chrome.runtime.lastError !== undefined) {
+    console.log(chrome.runtime.lastError.message);
+  }
+});
+
+Roll printing
+
+This example shows how to build a printer ticket for continuous (or roll) printing, which is often used with receipt printing. The submitJobRequest object for roll printing is the same as that shown for the submitJob() example.
+
+If you need to change the default value for paper cutting, use the vendor_ticket_item key. (The default varies from printer to printer.) To change the value, provide an array with one member: an object whose id is 'finishings'. The value can either be 'trim' for printers that cut the roll at the end of printing or 'none' for printers that require the print job to be torn off.
+const ticket = {
+  version: '1.0',
+  print: {
+    vendor_ticket_item: [{id: 'finishings', value: 'trim'}],
+    color: {type: 'STANDARD_MONOCHROME'},
+    duplex: {type: 'NO_DUPLEX'},
+    page_orientation: {type: 'PORTRAIT'},
+    copies: {copies: 1},
+    dpi: {horizontal_dpi: 300, vertical_dpi: 300},
+    media_size: {
+      width_microns: 72320,
+      height_microns: 100000
+    },
+    collate: {collate: false}
+  }
+};
+
+Some printers do not support the "finishings" option. To determine if your printer does, call getPrinterInfo() and look for a "display_name" of "finishings/11".
+"vendor_capability": [
+  {
+    "display_name": "finishings/11",
+    "id": "finishings/11",
+    "type": "TYPED_VALUE",
+    "typed_value_cap": {
+      "value_type": "BOOLEAN"
+    }
+  },
+  ...
+]
+Note: starting with Chrome 124, the vendor_ticket_item allows all items from the printer's vendor_capabilities. For example, any value return by getPrinterInfo() is valid. Before, only the finishings key was supported.
+The values in a ticket's media_size key are specific to each printer. To select an appropriate size call getPrinterInfo(). The returned GetPrinterResponse contains an array of supported media sizes at "media_size"."option". Choose an option whose "is_continuous_feed" value is true. Use its height and width values for the ticket.
+"media_size": {
   "option": [
   {
     "custom_display_name": "",
@@ -158,311 +158,311 @@ This API works <strong>only on ChromeOS</strong>.
   ...
   ]
 }
-</code></pre></devsite-code>
-<p></p><div class="dcc-reference"><h2 id="type" data-text="Types" tabindex="-1">Types</h2>
-  <div><div>
-    <div class="notranslate">
-      <h3 id="type-GetPrinterInfoResponse" data-text="GetPrinterInfoResponse" tabindex="-1">GetPrinterInfoResponse</h3>
-    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-GetPrinterInfoResponse-capabilities">capabilities</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Printer capabilities in <a href="https://developers.google.com/cloud-print/docs/cdd#cdd">CDD format</a>. The property may be missing.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-GetPrinterInfoResponse-status">status</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-PrinterStatus">PrinterStatus</a></p></div>
-    </div><p>The status of the printer.</p>
-</li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="type-JobStatus" data-text="JobStatus" tabindex="-1">JobStatus</h3>
-    </div><p>Status of the print job.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
-      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"PENDING"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Print job is received on Chrome side but was not processed yet.</span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"IN_PROGRESS"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Print job is sent for printing.</span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"FAILED"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Print job was interrupted due to some error.</span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"CANCELED"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Print job was canceled by the user or via API.</span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"PRINTED"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Print job was printed without any errors.</span></p></span><p></p>
-    </div>
-  </div><div>
-    <div class="notranslate">
-      <h3 id="type-Printer" data-text="Printer" tabindex="-1">Printer</h3>
-    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_1" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-Printer-description">description</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>The human-readable description of the printer.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-Printer-id">id</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>The printer's identifier; guaranteed to be unique among printers on the device.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-Printer-isDefault">isDefault</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
-    </div><p>The flag which shows whether the printer fits <a href="https://chromium.org/administrators/policy-list-3#DefaultPrinterSelection">DefaultPrinterSelection</a> rules. Note that several printers could be flagged.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-Printer-name">name</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>The name of the printer.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-Printer-recentlyUsedRank">recentlyUsedRank</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The value showing how recent the printer was used for printing from Chrome. The lower the value is the more recent the printer was used. The minimum value is 0. Missing value indicates that the printer wasn't used recently. This value is guaranteed to be unique amongst printers.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-Printer-source">source</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-PrinterSource">PrinterSource</a></p></div>
-    </div><p>The source of the printer (user or policy configured).</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-Printer-uri">uri</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>The printer URI. This can be used by extensions to choose the printer for the user.</p>
-</li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="type-PrinterSource" data-text="PrinterSource" tabindex="-1">PrinterSource</h3>
-    </div><p>The source of the printer.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum_1" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
-      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"USER"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Printer was added by user.</span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"POLICY"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Printer was added via policy.</span></p></span><p></p>
-    </div>
-  </div><div>
-    <div class="notranslate">
-      <h3 id="type-PrinterStatus" data-text="PrinterStatus" tabindex="-1">PrinterStatus</h3>
-    </div><p>The status of the printer.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum_2" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
-      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"DOOR_OPEN"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">The door of the printer is open. Printer still accepts print jobs.</span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"TRAY_MISSING"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">The tray of the printer is missing. Printer still accepts print jobs.</span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"OUT_OF_INK"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">The printer is out of ink. Printer still accepts print jobs.</span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"OUT_OF_PAPER"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">The printer is out of paper. Printer still accepts print jobs.</span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"OUTPUT_FULL"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">The output area of the printer (e.g. tray) is full. Printer still accepts print jobs.</span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"PAPER_JAM"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">The printer has a paper jam. Printer still accepts print jobs.</span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"GENERIC_ISSUE"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Some generic issue. Printer still accepts print jobs.</span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"STOPPED"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">The printer is stopped and doesn't print but still accepts print jobs.</span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"UNREACHABLE"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">The printer is unreachable and doesn't accept print jobs.</span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"EXPIRED_CERTIFICATE"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">The SSL certificate is expired. Printer accepts jobs but they fail.</span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"AVAILABLE"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">The printer is available.</span></p></span><p></p>
-    </div>
-  </div><div>
-    <div class="notranslate">
-      <h3 id="type-SubmitJobRequest" data-text="SubmitJobRequest" tabindex="-1">SubmitJobRequest</h3>
-    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_2" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-SubmitJobRequest-job">job</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="https://developer.chrome.com/docs/extensions/reference/printerProvider/#type-PrintJob">PrintJob</a></p></div>
-    </div><p>The print job to be submitted. The only supported content type is "application/pdf", and the <a href="https://developers.google.com/cloud-print/docs/cdd#cjt">Cloud Job Ticket</a> shouldn't include <code translate="no" dir="ltr">FitToPageTicketItem</code>, <code translate="no" dir="ltr">PageRangeTicketItem</code>, <code translate="no" dir="ltr">ReverseOrderTicketItem</code> and <code translate="no" dir="ltr">VendorTicketItem</code> fields since they are irrelevant for native printing. All other fields must be present.</p>
-</li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="type-SubmitJobResponse" data-text="SubmitJobResponse" tabindex="-1">SubmitJobResponse</h3>
-    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_3" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-SubmitJobResponse-jobId">jobId</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The id of created print job. This is a unique identifier among all print jobs on the device. If status is not OK, jobId will be null.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-SubmitJobResponse-status">status</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-SubmitJobStatus">SubmitJobStatus</a></p></div>
-    </div><p>The status of the request.</p>
-</li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="type-SubmitJobStatus" data-text="SubmitJobStatus" tabindex="-1">SubmitJobStatus</h3>
-    </div><p>The status of <a href="#method-submitJob"><code translate="no" dir="ltr">submitJob</code></a> request.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum_3" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
-      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"OK"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Sent print job request is accepted.</span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"USER_REJECTED"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial">Sent print job request is rejected by the user.</span></p></span><p></p>
-    </div>
-  </div></div><h2 id="property" data-text="Properties" tabindex="-1">Properties</h2>
-  <div><div>
-    <div class="notranslate">
-      <h3 id="property-MAX_GET_PRINTER_INFO_CALLS_PER_MINUTE" data-text="MAX_GET_PRINTER_INFO_CALLS_PER_MINUTE" tabindex="-1">MAX_GET_PRINTER_INFO_CALLS_PER_MINUTE</h3>
-    </div><p>The maximum number of times that <a href="#method-getPrinterInfo"><code translate="no" dir="ltr">getPrinterInfo</code></a> can be called per minute.</p>
-</div><div class="dcc-code-sections">
-      <h4 class="dcc-type--label dcc-code-sections__mode" id="value" data-text="Value" tabindex="-1">Value</h4>
-      <div class="dcc-code-sections__overline dcc-code-sections__label"><p class="dcc-code-sections__icon dcc-code-sections__icon--number"><span class="dcc-code-sections__value">20</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></div>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="property-MAX_SUBMIT_JOB_CALLS_PER_MINUTE" data-text="MAX_SUBMIT_JOB_CALLS_PER_MINUTE" tabindex="-1">MAX_SUBMIT_JOB_CALLS_PER_MINUTE</h3>
-    </div><p>The maximum number of times that <a href="#method-submitJob"><code translate="no" dir="ltr">submitJob</code></a> can be called per minute.</p>
-</div><div class="dcc-code-sections">
-      <h4 class="dcc-type--label dcc-code-sections__mode" id="value_1" data-text="Value" tabindex="-1">Value</h4>
-      <div class="dcc-code-sections__overline dcc-code-sections__label"><p class="dcc-code-sections__icon dcc-code-sections__icon--number"><span class="dcc-code-sections__value">40</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></div>
-    </div></div><h2 id="method" data-text="Methods" tabindex="-1">Methods</h2>
-  <div><div>
-    <div class="notranslate">
-      <h3 id="method-cancelJob" data-text="cancelJob()" tabindex="-1">cancelJob()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+
+Types
+  
+    
+      GetPrinterInfoResponse
+    Properties
+    
+      capabilities
+      object optional
+    Printer capabilities in CDD format. The property may be missing.
+
+    
+      status
+      PrinterStatus
+    The status of the printer.
+
+    
+    
+      JobStatus
+    Status of the print job.
+Enum
+      "PENDING"  Print job is received on Chrome side but was not processed yet."IN_PROGRESS"  Print job is sent for printing."FAILED"  Print job was interrupted due to some error."CANCELED"  Print job was canceled by the user or via API."PRINTED"  Print job was printed without any errors.
+    
+  
+    
+      Printer
+    Properties
+    
+      description
+      string
+    The human-readable description of the printer.
+
+    
+      id
+      string
+    The printer's identifier; guaranteed to be unique among printers on the device.
+
+    
+      isDefault
+      boolean
+    The flag which shows whether the printer fits DefaultPrinterSelection rules. Note that several printers could be flagged.
+
+    
+      name
+      string
+    The name of the printer.
+
+    
+      recentlyUsedRank
+      number optional
+    The value showing how recent the printer was used for printing from Chrome. The lower the value is the more recent the printer was used. The minimum value is 0. Missing value indicates that the printer wasn't used recently. This value is guaranteed to be unique amongst printers.
+
+    
+      source
+      PrinterSource
+    The source of the printer (user or policy configured).
+
+    
+      uri
+      string
+    The printer URI. This can be used by extensions to choose the printer for the user.
+
+    
+    
+      PrinterSource
+    The source of the printer.
+Enum
+      "USER"  Printer was added by user."POLICY"  Printer was added via policy.
+    
+  
+    
+      PrinterStatus
+    The status of the printer.
+Enum
+      "DOOR_OPEN"  The door of the printer is open. Printer still accepts print jobs."TRAY_MISSING"  The tray of the printer is missing. Printer still accepts print jobs."OUT_OF_INK"  The printer is out of ink. Printer still accepts print jobs."OUT_OF_PAPER"  The printer is out of paper. Printer still accepts print jobs."OUTPUT_FULL"  The output area of the printer (e.g. tray) is full. Printer still accepts print jobs."PAPER_JAM"  The printer has a paper jam. Printer still accepts print jobs."GENERIC_ISSUE"  Some generic issue. Printer still accepts print jobs."STOPPED"  The printer is stopped and doesn't print but still accepts print jobs."UNREACHABLE"  The printer is unreachable and doesn't accept print jobs."EXPIRED_CERTIFICATE"  The SSL certificate is expired. Printer accepts jobs but they fail."AVAILABLE"  The printer is available.
+    
+  
+    
+      SubmitJobRequest
+    Properties
+    
+      job
+      PrintJob
+    The print job to be submitted. The only supported content type is "application/pdf", and the Cloud Job Ticket shouldn't include FitToPageTicketItem, PageRangeTicketItem, ReverseOrderTicketItem and VendorTicketItem fields since they are irrelevant for native printing. All other fields must be present.
+
+    
+    
+      SubmitJobResponse
+    Properties
+    
+      jobId
+      string optional
+    The id of created print job. This is a unique identifier among all print jobs on the device. If status is not OK, jobId will be null.
+
+    
+      status
+      SubmitJobStatus
+    The status of the request.
+
+    
+    
+      SubmitJobStatus
+    The status of submitJob request.
+Enum
+      "OK"  Sent print job request is accepted."USER_REJECTED"  Sent print job request is rejected by the user.
+    
+  Properties
+  
+    
+      MAX_GET_PRINTER_INFO_CALLS_PER_MINUTE
+    The maximum number of times that getPrinterInfo can be called per minute.
+
+      Value
+      20  
+    
+    
+      MAX_SUBMIT_JOB_CALLS_PER_MINUTE
+    The maximum number of times that submitJob can be called per minute.
+
+      Value
+      40  
+    Methods
+  
+    
+      cancelJob()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">printing</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">cancelJob</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">jobId</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Cancels previously submitted job.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-cancelJob-jobId">jobId</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>The id of the print job to cancel. This should be the same id received in a <a href="#type-SubmitJobResponse"><code translate="no" dir="ltr">SubmitJobResponse</code></a>.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-cancelJob-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 100+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.printing.cancelJob(  jobId: string,  callback?: function,)
+      Cancels previously submitted job.
+Parameters
+    
+      jobId
+      string
+    The id of the print job to cancel. This should be the same id received in a SubmitJobResponse.
+
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 100+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-getPrinterInfo" data-text="getPrinterInfo()" tabindex="-1">getPrinterInfo()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      getPrinterInfo()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">printing</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getPrinterInfo</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">printerId</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Returns the status and capabilities of the printer in <a href="https://developers.google.com/cloud-print/docs/cdd#cdd">CDD format</a>. This call will fail with a runtime error if no printers with given id are installed.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_1" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-getPrinterInfo-printerId">printerId</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-getPrinterInfo-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">response</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-GetPrinterInfoResponse"><span class="devsite-syntax-kt">GetPrinterInfoResponse</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-getPrinterInfo-callback-response">response</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-GetPrinterInfoResponse">GetPrinterInfoResponse</a></p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_1" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-GetPrinterInfoResponse">GetPrinterInfoResponse</a>&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 100+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.printing.getPrinterInfo(  printerId: string,  callback?: function,)
+      Returns the status and capabilities of the printer in CDD format. This call will fail with a runtime error if no printers with given id are installed.
+Parameters
+    
+      printerId
+      string
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (response: GetPrinterInfoResponse) => void
+        
+    
+      response
+      GetPrinterInfoResponse
+    
+    
+    Returns
+          
+            Promise<GetPrinterInfoResponse>
+            
+      Chrome 100+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-getPrinters" data-text="getPrinters()" tabindex="-1">getPrinters()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      getPrinters()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">printing</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getPrinters</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Returns the list of available printers on the device. This includes manually added, enterprise and discovered printers.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_2" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-getPrinters-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">printers</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-Printer"><span class="devsite-syntax-kt">Printer</span></a><span class="devsite-syntax-p">[])&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-getPrinters-callback-printers">printers</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-Printer">Printer</a>[]</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_2" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-Printer">Printer</a>[]&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 100+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.printing.getPrinters(  callback?: function,)
+      Returns the list of available printers on the device. This includes manually added, enterprise and discovered printers.
+Parameters
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (printers: Printer[]) => void
+        
+    
+      printers
+      Printer[]
+    
+    
+    Returns
+          
+            Promise<Printer[]>
+            
+      Chrome 100+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-submitJob" data-text="submitJob()" tabindex="-1">submitJob()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      submitJob()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">printing</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">submitJob</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">request</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-SubmitJobRequest"><span class="devsite-syntax-kt">SubmitJobRequest</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Submits the job for printing. If the extension is not listed in the <a href="https://chromeenterprise.google/policies/#PrintingAPIExtensionsAllowlist"><code translate="no" dir="ltr">PrintingAPIExtensionsAllowlist</code></a> policy, the user is prompted to accept the print job.
-Before Chrome 120, this function did not return a promise.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_3" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-submitJob-request">request</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-SubmitJobRequest">SubmitJobRequest</a></p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-submitJob-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">response</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-SubmitJobResponse"><span class="devsite-syntax-kt">SubmitJobResponse</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-submitJob-callback-response">response</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-SubmitJobResponse">SubmitJobResponse</a></p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_3" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-SubmitJobResponse">SubmitJobResponse</a>&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 100+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.printing.submitJob(  request: SubmitJobRequest,  callback?: function,)
+      Submits the job for printing. If the extension is not listed in the PrintingAPIExtensionsAllowlist policy, the user is prompted to accept the print job.
+Before Chrome 120, this function did not return a promise.
+Parameters
+    
+      request
+      SubmitJobRequest
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (response: SubmitJobResponse) => void
+        
+    
+      response
+      SubmitJobResponse
+    
+    
+    Returns
+          
+            Promise<SubmitJobResponse>
+            
+      Chrome 100+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div></div><h2 id="event" data-text="Events" tabindex="-1">Events</h2>
-  <div><div>
-    <div class="notranslate">
-      <h3 id="event-onJobStatusChanged" data-text="onJobStatusChanged" tabindex="-1">onJobStatusChanged</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">printing</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onJobStatusChanged</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Event fired when the status of the job is changed. This is only fired for the jobs created by this extension.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_4" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-onJobStatusChanged-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">jobId</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span>&nbsp;<span class="devsite-syntax-nx">status</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-JobStatus"><span class="devsite-syntax-kt">JobStatus</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onJobStatusChanged-callback-jobId">jobId</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onJobStatusChanged-callback-status">status</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-JobStatus">JobStatus</a></p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div></div></div>
-<p></p>
+              
+            
+        
+      Events
+  
+    
+      onJobStatusChanged
+    
+        chrome.printing.onJobStatusChanged.addListener(  callback: function,)
+      Event fired when the status of the job is changed. This is only fired for the jobs created by this extension.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (jobId: string, status: JobStatus) => void
+        
+    
+      jobId
+      string
+    
+    
+      status
+      JobStatus
+    
+    
+    
+
   
 
   

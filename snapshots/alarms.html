@@ -2,371 +2,371 @@
 
   
     
-<style>.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}</style>
+.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}
 
 
 
 
-<p></p>
 
-<aside class="note"><strong>Chrome 120:</strong> Starting in Chrome 120, the minimum alarm interval has been reduced from 1 minute to 30 seconds. For an alarm to trigger in 30 seconds, set <code translate="no" dir="ltr">periodInMinutes: 0.5</code>.
-<br>
-<strong>Chrome 117:</strong> Starting in Chrome 117, the number of active alarms is limited to 500. Once this limit is reached, <code translate="no" dir="ltr">chrome.alarms.create()</code> will fail. When using a callback, <a href="/docs/extensions/reference/api/runtime#property-lastError"><code translate="no" dir="ltr">chrome.runtime.lastError</code></a> will be set. When using promises, the promise will be rejected.</aside>
 
-<p></p><h2 class="dcc-api-title" data-text="Description" id="description" tabindex="-1">Description</h2>
-<div class="dcc-reference"><p>Use the <code translate="no" dir="ltr">chrome.alarms</code> API to schedule code to run periodically or at a specified time in the future.</p></div><p></p>
+Chrome 120: Starting in Chrome 120, the minimum alarm interval has been reduced from 1 minute to 30 seconds. For an alarm to trigger in 30 seconds, set periodInMinutes: 0.5.
 
-<p></p><h2 id="permissions" data-text="Permissions" tabindex="-1">Permissions</h2>
-<div class="dcc-reference"><code translate="no" dir="ltr">alarms</code><br></div><p></p>
+Chrome 117: Starting in Chrome 117, the number of active alarms is limited to 500. Once this limit is reached, chrome.alarms.create() will fail. When using a callback, chrome.runtime.lastError will be set. When using promises, the promise will be rejected.
 
-<p></p>
+Description
+Use the chrome.alarms API to schedule code to run periodically or at a specified time in the future.
 
-<p></p>
+Permissions
+alarms
 
-<p>To use the <code translate="no" dir="ltr">chrome.alarms</code> API, declare the <code translate="no" dir="ltr">"alarms"</code> permission in the <a href="/docs/extensions/reference/manifest">manifest</a>:</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JSON"><code translate="no" dir="ltr"><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"name"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"My extension"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">...</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"permissions"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s2">"alarms"</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">],</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">...</span>
-<span class="devsite-syntax-p">}</span>
-</code></pre></devsite-code>
-<h2 id="concepts_and_usage" data-text="Concepts and usage" tabindex="-1">Concepts and usage</h2>
 
-<p>To ensure reliable behavior, it is helpful to understand how the API behaves.</p>
 
-<h3 id="device_sleep" data-text="Device sleep" tabindex="-1">Device sleep</h3>
 
-<p>Alarms continue to run while a device is sleeping. However, an alarm will not
+
+To use the chrome.alarms API, declare the "alarms" permission in the manifest:
+{
+  "name": "My extension",
+  ...
+  "permissions": [
+    "alarms"
+  ],
+  ...
+}
+
+Concepts and usage
+
+To ensure reliable behavior, it is helpful to understand how the API behaves.
+
+Device sleep
+
+Alarms continue to run while a device is sleeping. However, an alarm will not
 wake up a device. When the device wakes up, any missed alarms will fire.
 Repeating alarms will fire at most once and then be rescheduled using the
 specified period starting from when the device wakes, not taking into account
-any time that has already elapsed since the alarm was originally set to run.</p>
+any time that has already elapsed since the alarm was originally set to run.
 
-<h3 id="persistence" data-text="Persistence" tabindex="-1">Persistence</h3>
+Persistence
 
-<p>Alarms generally persist until an extension is updated. However, this is not guaranteed, and alarms
+Alarms generally persist until an extension is updated. However, this is not guaranteed, and alarms
 may be cleared when the browser is restarted. Consequently, consider setting a value in storage
-when an alarm is created, and then ensure it exists each time your service worker starts up. For example:</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">STORAGE_KEY</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"user-preference-alarm-enabled"</span><span class="devsite-syntax-p">;</span>
+when an alarm is created, and then ensure it exists each time your service worker starts up. For example:
+const STORAGE_KEY = "user-preference-alarm-enabled";
 
-<span class="devsite-syntax-k">async</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">checkAlarmState</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">alarmEnabled</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">storage</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">get</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">STORAGE_KEY</span><span class="devsite-syntax-p">);</span>
+async function checkAlarmState() {
+  const { alarmEnabled } = await chrome.storage.get(STORAGE_KEY);
 
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">if</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">alarmEnabled</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">alarm</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">alarms</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">get</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"my-alarm"</span><span class="devsite-syntax-p">);</span>
+  if (alarmEnabled) {
+    const alarm = await chrome.alarms.get("my-alarm");
 
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">if</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-o">!</span><span class="devsite-syntax-nx">alarm</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">alarms</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">periodInMinutes</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">1</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">});</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-p">}</span>
+    if (!alarm) {
+      await chrome.alarms.create({ periodInMinutes: 1 });
+    }
+  }
+}
 
-<span class="devsite-syntax-nx">checkAlarmState</span><span class="devsite-syntax-p">();</span>
-</code></pre></devsite-code>
-<h2 id="examples" data-text="Examples" tabindex="-1">Examples</h2>
+checkAlarmState();
 
-<p>The following examples show how to use and respond to an alarm. To try this API,
-install the <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/alarms">Alarm API example</a> from the <a href="https://github.com/GoogleChrome/chrome-extensions-samples">chrome-extension-samples</a>
-repository.</p>
+Examples
 
-<h3 id="set-alarm" data-text="Set an alarm" tabindex="-1">Set an alarm</h3>
+The following examples show how to use and respond to an alarm. To try this API,
+install the Alarm API example from the chrome-extension-samples
+repository.
 
-<p>The following example sets an alarm in the service worker when the extension is installed:</p>
+Set an alarm
 
-<p><span class="dcc-label">service-worker.js:</span></p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">runtime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onInstalled</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-k">async</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">({</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">reason</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">})</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">if</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">reason</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">!==</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'install'</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">return</span><span class="devsite-syntax-p">;</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
+The following example sets an alarm in the service worker when the extension is installed:
 
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Create an alarm so we have something to look at in the demo</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">await</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">alarms</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'demo-default-alarm'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">delayInMinutes</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">1</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">periodInMinutes</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">1</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">});</span>
-<span class="devsite-syntax-p">});</span>
-</code></pre></devsite-code>
-<h3 id="respond-alarm" data-text="Respond to an alarm" tabindex="-1">Respond to an alarm</h3>
+service-worker.js:
+chrome.runtime.onInstalled.addListener(async ({ reason }) => {
+  if (reason !== 'install') {
+    return;
+  }
 
-<p>The following example sets the <a href="/docs/extensions/reference/api/action#icon">action toolbar icon</a> based on the name of the alarm that went off.</p>
+  // Create an alarm so we have something to look at in the demo
+  await chrome.alarms.create('demo-default-alarm', {
+    delayInMinutes: 1,
+    periodInMinutes: 1
+  });
+});
 
-<p><span class="dcc-label">service-worker.js:</span></p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">alarms</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onAlarm</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">((</span><span class="devsite-syntax-nx">alarm</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">action</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setIcon</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">path</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">getIconPath</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">alarm</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">name</span><span class="devsite-syntax-p">),</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">});</span>
-<span class="devsite-syntax-p">});</span>
-</code></pre></devsite-code>
-<p></p><div class="dcc-reference"><h2 id="type" data-text="Types" tabindex="-1">Types</h2>
-  <div><div>
-    <div class="notranslate">
-      <h3 id="type-Alarm" data-text="Alarm" tabindex="-1">Alarm</h3>
-    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-Alarm-name">name</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>Name of this alarm.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-Alarm-periodInMinutes">periodInMinutes</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>If not null, the alarm is a repeating alarm and will fire again in <code translate="no" dir="ltr">periodInMinutes</code> minutes.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-Alarm-scheduledTime">scheduledTime</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><p>Time at which this alarm was scheduled to fire, in milliseconds past the epoch (e.g. <code translate="no" dir="ltr">Date.now() + n</code>). For performance reasons, the alarm may have been delayed an arbitrary amount beyond this.</p>
-</li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="type-AlarmCreateInfo" data-text="AlarmCreateInfo" tabindex="-1">AlarmCreateInfo</h3>
-    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_1" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-AlarmCreateInfo-delayInMinutes">delayInMinutes</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Length of time in minutes after which the <code translate="no" dir="ltr">onAlarm</code> event should fire.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-AlarmCreateInfo-periodInMinutes">periodInMinutes</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>If set, the onAlarm event should fire every <code translate="no" dir="ltr">periodInMinutes</code> minutes after the initial event specified by <code translate="no" dir="ltr">when</code> or <code translate="no" dir="ltr">delayInMinutes</code>. If not set, the alarm will only fire once.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-AlarmCreateInfo-when">when</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Time at which the alarm should fire, in milliseconds past the epoch (e.g. <code translate="no" dir="ltr">Date.now() + n</code>).</p>
-</li></ul>
-    </div></div><h2 id="method" data-text="Methods" tabindex="-1">Methods</h2>
-  <div><div>
-    <div class="notranslate">
-      <h3 id="method-clear" data-text="clear()" tabindex="-1">clear()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+Respond to an alarm
+
+The following example sets the action toolbar icon based on the name of the alarm that went off.
+
+service-worker.js:
+chrome.alarms.onAlarm.addListener((alarm) => {
+  chrome.action.setIcon({
+    path: getIconPath(alarm.name),
+  });
+});
+
+Types
+  
+    
+      Alarm
+    Properties
+    
+      name
+      string
+    Name of this alarm.
+
+    
+      periodInMinutes
+      number optional
+    If not null, the alarm is a repeating alarm and will fire again in periodInMinutes minutes.
+
+    
+      scheduledTime
+      number
+    Time at which this alarm was scheduled to fire, in milliseconds past the epoch (e.g. Date.now() + n). For performance reasons, the alarm may have been delayed an arbitrary amount beyond this.
+
+    
+    
+      AlarmCreateInfo
+    Properties
+    
+      delayInMinutes
+      number optional
+    Length of time in minutes after which the onAlarm event should fire.
+
+    
+      periodInMinutes
+      number optional
+    If set, the onAlarm event should fire every periodInMinutes minutes after the initial event specified by when or delayInMinutes. If not set, the alarm will only fire once.
+
+    
+      when
+      number optional
+    Time at which the alarm should fire, in milliseconds past the epoch (e.g. Date.now() + n).
+
+    Methods
+  
+    
+      clear()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">alarms</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">clear</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">name?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Clears the alarm with the given name.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-clear-name">name</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The name of the alarm to clear. Defaults to the empty string.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-clear-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">wasCleared</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">boolean</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-clear-callback-wasCleared">wasCleared</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;boolean&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 91+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.alarms.clear(  name?: string,  callback?: function,)
+      Clears the alarm with the given name.
+Parameters
+    
+      name
+      string optional
+    The name of the alarm to clear. Defaults to the empty string.
+
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (wasCleared: boolean) => void
+        
+    
+      wasCleared
+      boolean
+    
+    
+    Returns
+          
+            Promise<boolean>
+            
+      Chrome 91+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-clearAll" data-text="clearAll()" tabindex="-1">clearAll()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      clearAll()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">alarms</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">clearAll</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Clears all alarms.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_1" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-clearAll-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">wasCleared</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">boolean</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-clearAll-callback-wasCleared">wasCleared</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_1" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;boolean&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 91+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.alarms.clearAll(  callback?: function,)
+      Clears all alarms.
+Parameters
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (wasCleared: boolean) => void
+        
+    
+      wasCleared
+      boolean
+    
+    
+    Returns
+          
+            Promise<boolean>
+            
+      Chrome 91+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-create" data-text="create()" tabindex="-1">create()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      create()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">alarms</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">name?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">alarmInfo</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-AlarmCreateInfo"><span class="devsite-syntax-kt">AlarmCreateInfo</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Creates an alarm. Near the time(s) specified by <code translate="no" dir="ltr">alarmInfo</code>, the <code translate="no" dir="ltr">onAlarm</code> event is fired. If there is another alarm with the same name (or no name if none is specified), it will be cancelled and replaced by this alarm.</p>
-<p>In order to reduce the load on the user's machine, Chrome limits alarms to at most once every 30 seconds but may delay them an arbitrary amount more. That is, setting <code translate="no" dir="ltr">delayInMinutes</code> or <code translate="no" dir="ltr">periodInMinutes</code> to less than <code translate="no" dir="ltr">0.5</code> will not be honored and will cause a warning. <code translate="no" dir="ltr">when</code> can be set to less than 30 seconds after "now" without warning but won't actually cause the alarm to fire for at least 30 seconds.</p>
-<p>To help you debug your app or extension, when you've loaded it unpacked, there's no limit to how often the alarm can fire.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_2" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-create-name">name</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Optional name to identify this alarm. Defaults to the empty string.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-create-alarmInfo">alarmInfo</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-AlarmCreateInfo">AlarmCreateInfo</a></p></div>
-    </div><p>Describes when the alarm should fire. The initial time must be specified by either <code translate="no" dir="ltr">when</code> or <code translate="no" dir="ltr">delayInMinutes</code> (but not both). If <code translate="no" dir="ltr">periodInMinutes</code> is set, the alarm will repeat every <code translate="no" dir="ltr">periodInMinutes</code> minutes after the initial event. If neither <code translate="no" dir="ltr">when</code> or <code translate="no" dir="ltr">delayInMinutes</code> is set for a repeating alarm, <code translate="no" dir="ltr">periodInMinutes</code> is used as the default for <code translate="no" dir="ltr">delayInMinutes</code>.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-create-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 111+
-      </span></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_2" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 111+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.alarms.create(  name?: string,  alarmInfo: AlarmCreateInfo,  callback?: function,)
+      Creates an alarm. Near the time(s) specified by alarmInfo, the onAlarm event is fired. If there is another alarm with the same name (or no name if none is specified), it will be cancelled and replaced by this alarm.
+In order to reduce the load on the user's machine, Chrome limits alarms to at most once every 30 seconds but may delay them an arbitrary amount more. That is, setting delayInMinutes or periodInMinutes to less than 0.5 will not be honored and will cause a warning. when can be set to less than 30 seconds after "now" without warning but won't actually cause the alarm to fire for at least 30 seconds.
+To help you debug your app or extension, when you've loaded it unpacked, there's no limit to how often the alarm can fire.
+Parameters
+    
+      name
+      string optional
+    Optional name to identify this alarm. Defaults to the empty string.
+
+    
+      alarmInfo
+      AlarmCreateInfo
+    Describes when the alarm should fire. The initial time must be specified by either when or delayInMinutes (but not both). If periodInMinutes is set, the alarm will repeat every periodInMinutes minutes after the initial event. If neither when or delayInMinutes is set for a repeating alarm, periodInMinutes is used as the default for delayInMinutes.
+
+    
+      callback
+      function optional
+    
+      Chrome 111+
+      
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 111+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-get" data-text="get()" tabindex="-1">get()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      get()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">alarms</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">get</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">name?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Retrieves details about the specified alarm.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_3" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-get-name">name</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The name of the alarm to get. Defaults to the empty string.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-get-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">alarm?</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-Alarm"><span class="devsite-syntax-kt">Alarm</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-get-callback-alarm">alarm</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-Alarm">Alarm</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_3" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-Alarm">Alarm</a>&nbsp;|&nbsp;undefined&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 91+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.alarms.get(  name?: string,  callback?: function,)
+      Retrieves details about the specified alarm.
+Parameters
+    
+      name
+      string optional
+    The name of the alarm to get. Defaults to the empty string.
+
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (alarm?: Alarm) => void
+        
+    
+      alarm
+      Alarm optional
+    
+    
+    Returns
+          
+            Promise<Alarm | undefined>
+            
+      Chrome 91+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-getAll" data-text="getAll()" tabindex="-1">getAll()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      getAll()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">alarms</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getAll</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Gets an array of all the alarms.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_4" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-getAll-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">alarms</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-Alarm"><span class="devsite-syntax-kt">Alarm</span></a><span class="devsite-syntax-p">[])&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-getAll-callback-alarms">alarms</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-Alarm">Alarm</a>[]</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_4" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-Alarm">Alarm</a>[]&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 91+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.alarms.getAll(  callback?: function,)
+      Gets an array of all the alarms.
+Parameters
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (alarms: Alarm[]) => void
+        
+    
+      alarms
+      Alarm[]
+    
+    
+    Returns
+          
+            Promise<Alarm[]>
+            
+      Chrome 91+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div></div><h2 id="event" data-text="Events" tabindex="-1">Events</h2>
-  <div><div>
-    <div class="notranslate">
-      <h3 id="event-onAlarm" data-text="onAlarm" tabindex="-1">onAlarm</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">alarms</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onAlarm</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Fired when an alarm has elapsed. Useful for event pages.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_5" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-onAlarm-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">alarm</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-Alarm"><span class="devsite-syntax-kt">Alarm</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onAlarm-callback-alarm">alarm</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-Alarm">Alarm</a></p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div></div></div>
-<p></p>
+              
+            
+        
+      Events
+  
+    
+      onAlarm
+    
+        chrome.alarms.onAlarm.addListener(  callback: function,)
+      Fired when an alarm has elapsed. Useful for event pages.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (alarm: Alarm) => void
+        
+    
+      alarm
+      Alarm
+    
+    
+    
+
   
 
   

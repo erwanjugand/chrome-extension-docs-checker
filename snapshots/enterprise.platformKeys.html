@@ -2,502 +2,502 @@
 
   
     
-<style>.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}</style>
+.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}
 
 
 
 
-<aside>This API is only for <a href="https://support.google.com/chrome/a/answer/1375694">extensions installed by a policy</a>.</aside>
+This API is only for extensions installed by a policy.
 
-<p></p><aside class="note"><b>Important:</b>
-This API works <strong>only on ChromeOS</strong>.
-</aside><p></p>
+Important:
+This API works only on ChromeOS.
 
-<p></p><h2 class="dcc-api-title" data-text="Description" id="description" tabindex="-1">Description</h2>
-<div class="dcc-reference"><p>Use the <code translate="no" dir="ltr">chrome.enterprise.platformKeys</code> API to generate keys and install certificates for these keys. The certificates will be managed by the platform and can be used for TLS authentication, network access or by other extension through chrome.platformKeys.</p></div><p></p>
 
-<p></p><h2 id="permissions" data-text="Permissions" tabindex="-1">Permissions</h2>
-<div class="dcc-reference"><code translate="no" dir="ltr">enterprise.platformKeys</code><br></div><p></p>
+Description
+Use the chrome.enterprise.platformKeys API to generate keys and install certificates for these keys. The certificates will be managed by the platform and can be used for TLS authentication, network access or by other extension through chrome.platformKeys.
 
-<p></p><h2 id="availability" data-text="Availability" tabindex="-1">Availability</h2>
-<div class="dcc-reference"><div class="">
-      <div><span class="dcc-tag-pill--pink dcc-tag-pill">
+Permissions
+enterprise.platformKeys
+
+Availability
+
+      
         ChromeOS only
-      </span>
-      <a href="https://support.google.com/chrome/a/answer/9296680">
-        <span class="dcc-tag-pill--purple dcc-tag-pill" title="Only available to policy installed extensions">
+      
+      
+        
           Requires policy
-        </span>
-      </a></div>
-    </div></div><p></p>
+        
+      
+    
 
-<p></p>
 
-<h2 id="concepts_and_usage" data-text="Concepts and usage" tabindex="-1">Concepts and usage</h2>
 
-<p>Typical usage of this API to enroll a client certificate follows these steps:</p>
+Concepts and usage
 
-<ul>
-<li><p>Get all available tokens using <a href="#method-getTokens"><code translate="no" dir="ltr">enterprise.platformKeys.getTokens()</code></a>.</p></li>
-<li><p>Find the Token with <code translate="no" dir="ltr">id</code> equal to <code translate="no" dir="ltr">"user"</code>. Use this Token subsequently.</p></li>
-<li><p>Generate a key pair using the <code translate="no" dir="ltr">generateKey()</code> Token method (defined in SubtleCrypto). This will return handle to the key.</p></li>
-<li><p>Export the public key using the <code translate="no" dir="ltr">exportKey()</code> Token method (defined in SubtleCrypto).</p></li>
-<li><p>Create the signature of the certification request's data using the <code translate="no" dir="ltr">sign()</code> Token method (defined in SubtleCrypto).</p></li>
-<li><p>Complete the certification request and send it to the certification authority.</p></li>
-<li><p>If a certificate is received, import it using [<code translate="no" dir="ltr">enterprise.platformKeys.importCertificate()</code>`[3]</p></li>
-</ul>
+Typical usage of this API to enroll a client certificate follows these steps:
 
-<p>Here's an example that shows the major API interaction except the building and sending of the certification request:</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">getUserToken</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">enterprise</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">platformKeys</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getTokens</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">tokens</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">for</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kd">var</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">i</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">0</span><span class="devsite-syntax-p">;</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">i</span><span class="devsite-syntax-w"> &lt; </span><span class="devsite-syntax-nx">tokens</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">length</span><span class="devsite-syntax-p">;</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">i</span><span class="devsite-syntax-o">++</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-k">if</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">tokens</span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-nx">i</span><span class="devsite-syntax-p">].</span><span class="devsite-syntax-nx">id</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">==</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"user"</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">tokens</span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-nx">i</span><span class="devsite-syntax-p">]);</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-k">return</span><span class="devsite-syntax-p">;</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kc">undefined</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">});</span>
-<span class="devsite-syntax-p">}</span>
 
-<span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">generateAndSign</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">userToken</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">var</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">data</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">Uint8Array</span><span class="devsite-syntax-p">([</span><span class="devsite-syntax-mf">0</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">5</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">1</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">2</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">3</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">4</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">5</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">6</span><span class="devsite-syntax-p">]);</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">var</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">algorithm</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">name</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"RSASSA-PKCS1-v1_5"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-c1">// RsaHashedKeyGenParams</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">modulusLength</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">2048</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">publicExponent</span><span class="devsite-syntax-o">:</span>
-<span class="devsite-syntax-w">        </span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">Uint8Array</span><span class="devsite-syntax-p">([</span><span class="devsite-syntax-mh">0x01</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mh">0x00</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mh">0x01</span><span class="devsite-syntax-p">]),</span><span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Equivalent to 65537</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">hash</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">name</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"SHA-256"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">};</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">var</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">cachedKeyPair</span><span class="devsite-syntax-p">;</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">userToken</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">subtleCrypto</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">generateKey</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">algorithm</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">false</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-s2">"sign"</span><span class="devsite-syntax-p">])</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">then</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">keyPair</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">            </span><span class="devsite-syntax-nx">cachedKeyPair</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">keyPair</span><span class="devsite-syntax-p">;</span>
-<span class="devsite-syntax-w">            </span><span class="devsite-syntax-k">return</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">userToken</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">subtleCrypto</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">exportKey</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"spki"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">keyPair</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">publicKey</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-p">},</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bind</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">))</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">then</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">publicKeySpki</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">            </span><span class="devsite-syntax-c1">// Build the Certification Request using the public key.</span>
-<span class="devsite-syntax-w">            </span><span class="devsite-syntax-k">return</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">userToken</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">subtleCrypto</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">sign</span><span class="devsite-syntax-p">(</span>
-<span class="devsite-syntax-w">                </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-nx">name</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"RSASSA-PKCS1-v1_5"</span><span class="devsite-syntax-p">},</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">cachedKeyPair</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">privateKey</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">data</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-p">},</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bind</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">))</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">then</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">signature</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">              </span><span class="devsite-syntax-c1">// Complete the Certification Request with |signature|.</span>
-<span class="devsite-syntax-w">              </span><span class="devsite-syntax-c1">// Send out the request to the CA, calling back</span>
-<span class="devsite-syntax-w">              </span><span class="devsite-syntax-c1">// onClientCertificateReceived.</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-p">},</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bind</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">));</span>
-<span class="devsite-syntax-p">}</span>
+Get all available tokens using enterprise.platformKeys.getTokens().
+Find the Token with id equal to "user". Use this Token subsequently.
+Generate a key pair using the generateKey() Token method (defined in SubtleCrypto). This will return handle to the key.
+Export the public key using the exportKey() Token method (defined in SubtleCrypto).
+Create the signature of the certification request's data using the sign() Token method (defined in SubtleCrypto).
+Complete the certification request and send it to the certification authority.
+If a certificate is received, import it using [enterprise.platformKeys.importCertificate()`[3]
 
-<span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">onClientCertificateReceived</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">userToken</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">certificate</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">enterprise</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">platformKeys</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">importCertificate</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">userToken</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">id</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">certificate</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-p">}</span>
 
-<span class="devsite-syntax-nx">getUserToken</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">generateAndSign</span><span class="devsite-syntax-p">);</span>
-</code></pre></devsite-code>
-<p></p><div class="dcc-reference"><h2 id="type" data-text="Types" tabindex="-1">Types</h2>
-  <div><div>
-    <div class="notranslate">
-      <h3 id="type-Algorithm" data-text="Algorithm" tabindex="-1">Algorithm</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 110+
-      </span></div>
-    </div><p>Type of key to generate.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
-      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"RSA"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"ECDSA"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><p></p>
-    </div>
-  </div><div>
-    <div class="notranslate">
-      <h3 id="type-ChallengeKeyOptions" data-text="ChallengeKeyOptions" tabindex="-1">ChallengeKeyOptions</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 110+
-      </span></div>
-    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-ChallengeKeyOptions-challenge">challenge</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">ArrayBuffer</p></div>
-    </div><p>A challenge as emitted by the Verified Access Web API.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-ChallengeKeyOptions-registerKey">registerKey</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-RegisterKeyOptions">RegisterKeyOptions</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>If present, registers the challenged key with the specified <code translate="no" dir="ltr">scope</code>'s token. The key can then be associated with a certificate and used like any other signing key. Subsequent calls to this function will then generate a new Enterprise Key in the specified <code translate="no" dir="ltr">scope</code>.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-ChallengeKeyOptions-scope">scope</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-Scope">Scope</a></p></div>
-    </div><p>Which Enterprise Key to challenge.</p>
-</li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="type-RegisterKeyOptions" data-text="RegisterKeyOptions" tabindex="-1">RegisterKeyOptions</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 110+
-      </span></div>
-    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_1" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-RegisterKeyOptions-algorithm">algorithm</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-Algorithm">Algorithm</a></p></div>
-    </div><p>Which algorithm the registered key should use.</p>
-</li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="type-Scope" data-text="Scope" tabindex="-1">Scope</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 110+
-      </span></div>
-    </div><p>Whether to use the Enterprise User Key or the Enterprise Machine Key.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum_1" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
-      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"USER"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"MACHINE"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><p></p>
-    </div>
-  </div><div>
-    <div class="notranslate">
-      <h3 id="type-Token" data-text="Token" tabindex="-1">Token</h3>
-    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_2" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-Token-id">id</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>Uniquely identifies this <code translate="no" dir="ltr">Token</code>.</p>
-<p>Static IDs are <code translate="no" dir="ltr">"user"</code> and <code translate="no" dir="ltr">"system"</code>, referring to the platform's user-specific and the system-wide hardware token, respectively. Any other tokens (with other identifiers) might be returned by <a href="#method-getTokens"><code translate="no" dir="ltr">enterprise.platformKeys.getTokens</code></a>.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-Token-softwareBackedSubtleCrypto">softwareBackedSubtleCrypto</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">SubtleCrypto</p></div>
-    </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 97+
-      </span></div>
-    </div><p>Implements the WebCrypto's <a href="https://www.w3.org/TR/WebCryptoAPI/#subtlecrypto-interface">SubtleCrypto</a> interface. The cryptographic operations, including key generation, are software-backed. Protection of the keys, and thus implementation of the non-extractable property, is done in software, so the keys are less protected than hardware-backed keys.</p>
-<p>Only non-extractable keys can be generated. The supported key types are RSASSA-PKCS1-V1_5 and RSA-OAEP (on Chrome versions 134+) with <code translate="no" dir="ltr">modulusLength</code> up to 2048. Each RSASSA-PKCS1-V1_5 key can be used for signing data at most once, unless the extension is allowlisted through the <a href="https://chromeenterprise.google/policies/#KeyPermissions">KeyPermissions policy</a>, in which case the key can be used indefinitely. RSA-OAEP keys are supported since Chrome version 134 and can be used by extensions allowlisted through that same policy to unwrap other keys.</p>
-<p>Keys generated on a specific <code translate="no" dir="ltr">Token</code> cannot be used with any other Tokens, nor can they be used with <code translate="no" dir="ltr">window.crypto.subtle</code>. Equally, <code translate="no" dir="ltr">Key</code> objects created with <code translate="no" dir="ltr">window.crypto.subtle</code> cannot be used with this interface.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-Token-subtleCrypto">subtleCrypto</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">SubtleCrypto</p></div>
-    </div><p>Implements the WebCrypto's <a href="https://www.w3.org/TR/WebCryptoAPI/#subtlecrypto-interface">SubtleCrypto</a> interface. The cryptographic operations, including key generation, are hardware-backed.</p>
-<p>Only non-extractable keys can be generated. The supported key types are RSASSA-PKCS1-V1_5 and RSA-OAEP (on Chrome versions 134+) with <code translate="no" dir="ltr">modulusLength</code> up to 2048 and ECDSA with <code translate="no" dir="ltr">namedCurve</code> P-256. Each RSASSA-PKCS1-V1_5 and ECDSA key can be used for signing data at most once, unless the extension is allowlisted through the <a href="https://chromeenterprise.google/policies/#KeyPermissions">KeyPermissions policy</a>, in which case the key can be used indefinitely. RSA-OAEP keys are supported since Chrome version 134 and can be used by extensions allowlisted through that same policy to unwrap other keys.</p>
-<p>Keys generated on a specific <code translate="no" dir="ltr">Token</code> cannot be used with any other Tokens, nor can they be used with <code translate="no" dir="ltr">window.crypto.subtle</code>. Equally, <code translate="no" dir="ltr">Key</code> objects created with <code translate="no" dir="ltr">window.crypto.subtle</code> cannot be used with this interface.</p>
-</li></ul>
-    </div></div><h2 id="method" data-text="Methods" tabindex="-1">Methods</h2>
-  <div><div>
-    <div class="notranslate">
-      <h3 id="method-challengeKey" data-text="challengeKey()" tabindex="-1">challengeKey()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+Here's an example that shows the major API interaction except the building and sending of the certification request:
+function getUserToken(callback) {
+  chrome.enterprise.platformKeys.getTokens(function(tokens) {
+    for (var i = 0; i < tokens.length; i++) {
+      if (tokens[i].id == "user") {
+        callback(tokens[i]);
+        return;
+      }
+    }
+    callback(undefined);
+  });
+}
+
+function generateAndSign(userToken) {
+  var data = new Uint8Array([0, 5, 1, 2, 3, 4, 5, 6]);
+  var algorithm = {
+    name: "RSASSA-PKCS1-v1_5",
+    // RsaHashedKeyGenParams
+    modulusLength: 2048,
+    publicExponent:
+        new Uint8Array([0x01, 0x00, 0x01]),  // Equivalent to 65537
+    hash: {
+      name: "SHA-256",
+    }
+  };
+  var cachedKeyPair;
+  userToken.subtleCrypto.generateKey(algorithm, false, ["sign"])
+    .then(function(keyPair) {
+            cachedKeyPair = keyPair;
+            return userToken.subtleCrypto.exportKey("spki", keyPair.publicKey);
+          },
+          console.log.bind(console))
+    .then(function(publicKeySpki) {
+            // Build the Certification Request using the public key.
+            return userToken.subtleCrypto.sign(
+                {name : "RSASSA-PKCS1-v1_5"}, cachedKeyPair.privateKey, data);
+          },
+          console.log.bind(console))
+    .then(function(signature) {
+              // Complete the Certification Request with |signature|.
+              // Send out the request to the CA, calling back
+              // onClientCertificateReceived.
+          },
+          console.log.bind(console));
+}
+
+function onClientCertificateReceived(userToken, certificate) {
+  chrome.enterprise.platformKeys.importCertificate(userToken.id, certificate);
+}
+
+getUserToken(generateAndSign);
+
+Types
+  
+    
+      Algorithm
+    
+      Chrome 110+
+      
+    Type of key to generate.
+Enum
+      "RSA"  "ECDSA"  
+    
+  
+    
+      ChallengeKeyOptions
+    
+      Chrome 110+
+      
+    Properties
+    
+      challenge
+      ArrayBuffer
+    A challenge as emitted by the Verified Access Web API.
+
+    
+      registerKey
+      RegisterKeyOptions optional
+    If present, registers the challenged key with the specified scope's token. The key can then be associated with a certificate and used like any other signing key. Subsequent calls to this function will then generate a new Enterprise Key in the specified scope.
+
+    
+      scope
+      Scope
+    Which Enterprise Key to challenge.
+
+    
+    
+      RegisterKeyOptions
+    
+      Chrome 110+
+      
+    Properties
+    
+      algorithm
+      Algorithm
+    Which algorithm the registered key should use.
+
+    
+    
+      Scope
+    
+      Chrome 110+
+      
+    Whether to use the Enterprise User Key or the Enterprise Machine Key.
+Enum
+      "USER"  "MACHINE"  
+    
+  
+    
+      Token
+    Properties
+    
+      id
+      string
+    Uniquely identifies this Token.
+Static IDs are "user" and "system", referring to the platform's user-specific and the system-wide hardware token, respectively. Any other tokens (with other identifiers) might be returned by enterprise.platformKeys.getTokens.
+
+    
+      softwareBackedSubtleCrypto
+      SubtleCrypto
+    
+      Chrome 97+
+      
+    Implements the WebCrypto's SubtleCrypto interface. The cryptographic operations, including key generation, are software-backed. Protection of the keys, and thus implementation of the non-extractable property, is done in software, so the keys are less protected than hardware-backed keys.
+Only non-extractable keys can be generated. The supported key types are RSASSA-PKCS1-V1_5 and RSA-OAEP (on Chrome versions 134+) with modulusLength up to 2048. Each RSASSA-PKCS1-V1_5 key can be used for signing data at most once, unless the extension is allowlisted through the KeyPermissions policy, in which case the key can be used indefinitely. RSA-OAEP keys are supported since Chrome version 134 and can be used by extensions allowlisted through that same policy to unwrap other keys.
+Keys generated on a specific Token cannot be used with any other Tokens, nor can they be used with window.crypto.subtle. Equally, Key objects created with window.crypto.subtle cannot be used with this interface.
+
+    
+      subtleCrypto
+      SubtleCrypto
+    Implements the WebCrypto's SubtleCrypto interface. The cryptographic operations, including key generation, are hardware-backed.
+Only non-extractable keys can be generated. The supported key types are RSASSA-PKCS1-V1_5 and RSA-OAEP (on Chrome versions 134+) with modulusLength up to 2048 and ECDSA with namedCurve P-256. Each RSASSA-PKCS1-V1_5 and ECDSA key can be used for signing data at most once, unless the extension is allowlisted through the KeyPermissions policy, in which case the key can be used indefinitely. RSA-OAEP keys are supported since Chrome version 134 and can be used by extensions allowlisted through that same policy to unwrap other keys.
+Keys generated on a specific Token cannot be used with any other Tokens, nor can they be used with window.crypto.subtle. Equally, Key objects created with window.crypto.subtle cannot be used with this interface.
+
+    Methods
+  
+    
+      challengeKey()
+    
+      
         Promise
-      </span><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 110+
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">enterprise</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">platformKeys</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">challengeKey</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">options</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-ChallengeKeyOptions"><span class="devsite-syntax-kt">ChallengeKeyOptions</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Similar to <code translate="no" dir="ltr">challengeMachineKey</code> and <code translate="no" dir="ltr">challengeUserKey</code>, but allows specifying the algorithm of a registered key. Challenges a hardware-backed Enterprise Machine Key and emits the response as part of a remote attestation protocol. Only useful on ChromeOS and in conjunction with the Verified Access Web API which both issues challenges and verifies responses.</p>
-<p>A successful verification by the Verified Access Web API is a strong signal that the current device is a legitimate ChromeOS device, the current device is managed by the domain specified during verification, the current signed-in user is managed by the domain specified during verification, and the current device state complies with enterprise device policy. For example, a policy may specify that the device must not be in developer mode. Any device identity emitted by the verification is tightly bound to the hardware of the current device. If <code translate="no" dir="ltr">"user"</code> Scope is specified, the identity is also tightly bound to the current signed-in user.</p>
-<p>This function is highly restricted and will fail if the current device is not managed, the current user is not managed, or if this operation has not explicitly been enabled for the caller by enterprise device policy. The challenged key does not reside in the <code translate="no" dir="ltr">"system"</code> or <code translate="no" dir="ltr">"user"</code> token and is not accessible by any other API.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-challengeKey-options">options</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-ChallengeKeyOptions">ChallengeKeyOptions</a></p></div>
-    </div><p>Object containing the fields defined in <a href="#type-ChallengeKeyOptions"><code translate="no" dir="ltr">ChallengeKeyOptions</code></a>.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-challengeKey-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">response</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">ArrayBuffer</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-challengeKey-callback-response">response</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">ArrayBuffer</p></div>
-    </div><p>The challenge response.</p>
-</li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;ArrayBuffer&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 131+
-      </span></div>
-    </div>
-              <p>
+      Chrome 110+
+      
+    
+        chrome.enterprise.platformKeys.challengeKey(  options: ChallengeKeyOptions,  callback?: function,)
+      Similar to challengeMachineKey and challengeUserKey, but allows specifying the algorithm of a registered key. Challenges a hardware-backed Enterprise Machine Key and emits the response as part of a remote attestation protocol. Only useful on ChromeOS and in conjunction with the Verified Access Web API which both issues challenges and verifies responses.
+A successful verification by the Verified Access Web API is a strong signal that the current device is a legitimate ChromeOS device, the current device is managed by the domain specified during verification, the current signed-in user is managed by the domain specified during verification, and the current device state complies with enterprise device policy. For example, a policy may specify that the device must not be in developer mode. Any device identity emitted by the verification is tightly bound to the hardware of the current device. If "user" Scope is specified, the identity is also tightly bound to the current signed-in user.
+This function is highly restricted and will fail if the current device is not managed, the current user is not managed, or if this operation has not explicitly been enabled for the caller by enterprise device policy. The challenged key does not reside in the "system" or "user" token and is not accessible by any other API.
+Parameters
+    
+      options
+      ChallengeKeyOptions
+    Object containing the fields defined in ChallengeKeyOptions.
+
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (response: ArrayBuffer) => void
+        
+    
+      response
+      ArrayBuffer
+    The challenge response.
+
+    
+    Returns
+          
+            Promise<ArrayBuffer>
+            
+      Chrome 131+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-challengeMachineKey" data-text="challengeMachineKey()" tabindex="-1">challengeMachineKey()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      challengeMachineKey()
+    
+      
         Promise
-      </span><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 50+
-      </span><span class="dcc-tag-pill--red dcc-tag-pill">
-        Deprecated&nbsp;since&nbsp;Chrome 110</span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">enterprise</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">platformKeys</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">challengeMachineKey</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">challenge</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">ArrayBuffer</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">registerKey?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">boolean</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p class="dcc-code-sections__deprecated">Use <a href="#method-challengeKey"><code translate="no" dir="ltr">challengeKey</code></a> instead.</p><p></p><p>Challenges a hardware-backed Enterprise Machine Key and emits the response as part of a remote attestation protocol. Only useful on ChromeOS and in conjunction with the Verified Access Web API which both issues challenges and verifies responses. A successful verification by the Verified Access Web API is a strong signal of all of the following: * The current device is a legitimate ChromeOS device. * The current device is managed by the domain specified during verification. * The current signed-in user is managed by the domain specified during verification. * The current device state complies with enterprise device policy. For example, a policy may specify that the device must not be in developer mode. * Any device identity emitted by the verification is tightly bound to the hardware of the current device. This function is highly restricted and will fail if the current device is not managed, the current user is not managed, or if this operation has not explicitly been enabled for the caller by enterprise device policy. The Enterprise Machine Key does not reside in the <code translate="no" dir="ltr">"system"</code> token and is not accessible by any other API.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_1" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-challengeMachineKey-challenge">challenge</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">ArrayBuffer</p></div>
-    </div><p>A challenge as emitted by the Verified Access Web API.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-challengeMachineKey-registerKey">registerKey</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 59+
-      </span></div>
-    </div><p>If set, the current Enterprise Machine Key is registered with the <code translate="no" dir="ltr">"system"</code> token and relinquishes the Enterprise Machine Key role. The key can then be associated with a certificate and used like any other signing key. This key is 2048-bit RSA. Subsequent calls to this function will then generate a new Enterprise Machine Key.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-challengeMachineKey-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">response</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">ArrayBuffer</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-challengeMachineKey-callback-response">response</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">ArrayBuffer</p></div>
-    </div><p>The challenge response.</p>
-</li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_1" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;ArrayBuffer&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 131+
-      </span></div>
-    </div>
-              <p>
+      Chrome 50+
+      
+        Deprecated since Chrome 110
+    
+        chrome.enterprise.platformKeys.challengeMachineKey(  challenge: ArrayBuffer,  registerKey?: boolean,  callback?: function,)
+      Use challengeKey instead.Challenges a hardware-backed Enterprise Machine Key and emits the response as part of a remote attestation protocol. Only useful on ChromeOS and in conjunction with the Verified Access Web API which both issues challenges and verifies responses. A successful verification by the Verified Access Web API is a strong signal of all of the following: * The current device is a legitimate ChromeOS device. * The current device is managed by the domain specified during verification. * The current signed-in user is managed by the domain specified during verification. * The current device state complies with enterprise device policy. For example, a policy may specify that the device must not be in developer mode. * Any device identity emitted by the verification is tightly bound to the hardware of the current device. This function is highly restricted and will fail if the current device is not managed, the current user is not managed, or if this operation has not explicitly been enabled for the caller by enterprise device policy. The Enterprise Machine Key does not reside in the "system" token and is not accessible by any other API.
+Parameters
+    
+      challenge
+      ArrayBuffer
+    A challenge as emitted by the Verified Access Web API.
+
+    
+      registerKey
+      boolean optional
+    
+      Chrome 59+
+      
+    If set, the current Enterprise Machine Key is registered with the "system" token and relinquishes the Enterprise Machine Key role. The key can then be associated with a certificate and used like any other signing key. This key is 2048-bit RSA. Subsequent calls to this function will then generate a new Enterprise Machine Key.
+
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (response: ArrayBuffer) => void
+        
+    
+      response
+      ArrayBuffer
+    The challenge response.
+
+    
+    Returns
+          
+            Promise<ArrayBuffer>
+            
+      Chrome 131+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-challengeUserKey" data-text="challengeUserKey()" tabindex="-1">challengeUserKey()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      challengeUserKey()
+    
+      
         Promise
-      </span><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 50+
-      </span><span class="dcc-tag-pill--red dcc-tag-pill">
-        Deprecated&nbsp;since&nbsp;Chrome 110</span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">enterprise</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">platformKeys</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">challengeUserKey</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">challenge</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">ArrayBuffer</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">registerKey</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">boolean</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p class="dcc-code-sections__deprecated">Use <a href="#method-challengeKey"><code translate="no" dir="ltr">challengeKey</code></a> instead.</p><p></p><p>Challenges a hardware-backed Enterprise User Key and emits the response as part of a remote attestation protocol. Only useful on ChromeOS and in conjunction with the Verified Access Web API which both issues challenges and verifies responses. A successful verification by the Verified Access Web API is a strong signal of all of the following: * The current device is a legitimate ChromeOS device. * The current device is managed by the domain specified during verification. * The current signed-in user is managed by the domain specified during verification. * The current device state complies with enterprise user policy. For example, a policy may specify that the device must not be in developer mode. * The public key emitted by the verification is tightly bound to the hardware of the current device and to the current signed-in user. This function is highly restricted and will fail if the current device is not managed, the current user is not managed, or if this operation has not explicitly been enabled for the caller by enterprise user policy. The Enterprise User Key does not reside in the <code translate="no" dir="ltr">"user"</code> token and is not accessible by any other API.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_2" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-challengeUserKey-challenge">challenge</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">ArrayBuffer</p></div>
-    </div><p>A challenge as emitted by the Verified Access Web API.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-challengeUserKey-registerKey">registerKey</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
-    </div><p>If set, the current Enterprise User Key is registered with the <code translate="no" dir="ltr">"user"</code> token and relinquishes the Enterprise User Key role. The key can then be associated with a certificate and used like any other signing key. This key is 2048-bit RSA. Subsequent calls to this function will then generate a new Enterprise User Key.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-challengeUserKey-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">response</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">ArrayBuffer</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-challengeUserKey-callback-response">response</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">ArrayBuffer</p></div>
-    </div><p>The challenge response.</p>
-</li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_2" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;ArrayBuffer&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 131+
-      </span></div>
-    </div>
-              <p>
+      Chrome 50+
+      
+        Deprecated since Chrome 110
+    
+        chrome.enterprise.platformKeys.challengeUserKey(  challenge: ArrayBuffer,  registerKey: boolean,  callback?: function,)
+      Use challengeKey instead.Challenges a hardware-backed Enterprise User Key and emits the response as part of a remote attestation protocol. Only useful on ChromeOS and in conjunction with the Verified Access Web API which both issues challenges and verifies responses. A successful verification by the Verified Access Web API is a strong signal of all of the following: * The current device is a legitimate ChromeOS device. * The current device is managed by the domain specified during verification. * The current signed-in user is managed by the domain specified during verification. * The current device state complies with enterprise user policy. For example, a policy may specify that the device must not be in developer mode. * The public key emitted by the verification is tightly bound to the hardware of the current device and to the current signed-in user. This function is highly restricted and will fail if the current device is not managed, the current user is not managed, or if this operation has not explicitly been enabled for the caller by enterprise user policy. The Enterprise User Key does not reside in the "user" token and is not accessible by any other API.
+Parameters
+    
+      challenge
+      ArrayBuffer
+    A challenge as emitted by the Verified Access Web API.
+
+    
+      registerKey
+      boolean
+    If set, the current Enterprise User Key is registered with the "user" token and relinquishes the Enterprise User Key role. The key can then be associated with a certificate and used like any other signing key. This key is 2048-bit RSA. Subsequent calls to this function will then generate a new Enterprise User Key.
+
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (response: ArrayBuffer) => void
+        
+    
+      response
+      ArrayBuffer
+    The challenge response.
+
+    
+    Returns
+          
+            Promise<ArrayBuffer>
+            
+      Chrome 131+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-getCertificates" data-text="getCertificates()" tabindex="-1">getCertificates()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      getCertificates()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">enterprise</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">platformKeys</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getCertificates</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">tokenId</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Returns the list of all client certificates available from the given token. Can be used to check for the existence and expiration of client certificates that are usable for a certain authentication.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_3" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-getCertificates-tokenId">tokenId</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>The id of a Token returned by <code translate="no" dir="ltr">getTokens</code>.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-getCertificates-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">certificates</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">ArrayBuffer</span><span class="devsite-syntax-p">[])&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-getCertificates-callback-certificates">certificates</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array">ArrayBuffer[]</p></div>
-    </div><p>The list of certificates, each in DER encoding of a X.509 certificate.</p>
-</li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_3" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;ArrayBuffer[]&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 131+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.enterprise.platformKeys.getCertificates(  tokenId: string,  callback?: function,)
+      Returns the list of all client certificates available from the given token. Can be used to check for the existence and expiration of client certificates that are usable for a certain authentication.
+Parameters
+    
+      tokenId
+      string
+    The id of a Token returned by getTokens.
+
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (certificates: ArrayBuffer[]) => void
+        
+    
+      certificates
+      ArrayBuffer[]
+    The list of certificates, each in DER encoding of a X.509 certificate.
+
+    
+    Returns
+          
+            Promise<ArrayBuffer[]>
+            
+      Chrome 131+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-getTokens" data-text="getTokens()" tabindex="-1">getTokens()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      getTokens()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">enterprise</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">platformKeys</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getTokens</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Returns the available Tokens. In a regular user's session the list will always contain the user's token with <code translate="no" dir="ltr">id</code> <code translate="no" dir="ltr">"user"</code>. If a system-wide TPM token is available, the returned list will also contain the system-wide token with <code translate="no" dir="ltr">id</code> <code translate="no" dir="ltr">"system"</code>. The system-wide token will be the same for all sessions on this device (device in the sense of e.g. a Chromebook).</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_4" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-getTokens-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">tokens</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-Token"><span class="devsite-syntax-kt">Token</span></a><span class="devsite-syntax-p">[])&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-getTokens-callback-tokens">tokens</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-Token">Token</a>[]</p></div>
-    </div><p>The list of available tokens.</p>
-</li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_4" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-Token">Token</a>[]&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 131+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.enterprise.platformKeys.getTokens(  callback?: function,)
+      Returns the available Tokens. In a regular user's session the list will always contain the user's token with id "user". If a system-wide TPM token is available, the returned list will also contain the system-wide token with id "system". The system-wide token will be the same for all sessions on this device (device in the sense of e.g. a Chromebook).
+Parameters
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (tokens: Token[]) => void
+        
+    
+      tokens
+      Token[]
+    The list of available tokens.
+
+    
+    Returns
+          
+            Promise<Token[]>
+            
+      Chrome 131+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-importCertificate" data-text="importCertificate()" tabindex="-1">importCertificate()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      importCertificate()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">enterprise</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">platformKeys</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">importCertificate</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">tokenId</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">certificate</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">ArrayBuffer</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Imports <code translate="no" dir="ltr">certificate</code> to the given token if the certified key is already stored in this token. After a successful certification request, this function should be used to store the obtained certificate and to make it available to the operating system and browser for authentication.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_5" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-importCertificate-tokenId">tokenId</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>The id of a Token returned by <code translate="no" dir="ltr">getTokens</code>.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-importCertificate-certificate">certificate</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">ArrayBuffer</p></div>
-    </div><p>The DER encoding of a X.509 certificate.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-importCertificate-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_5" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 131+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.enterprise.platformKeys.importCertificate(  tokenId: string,  certificate: ArrayBuffer,  callback?: function,)
+      Imports certificate to the given token if the certified key is already stored in this token. After a successful certification request, this function should be used to store the obtained certificate and to make it available to the operating system and browser for authentication.
+Parameters
+    
+      tokenId
+      string
+    The id of a Token returned by getTokens.
+
+    
+      certificate
+      ArrayBuffer
+    The DER encoding of a X.509 certificate.
+
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 131+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-removeCertificate" data-text="removeCertificate()" tabindex="-1">removeCertificate()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      removeCertificate()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">enterprise</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">platformKeys</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">removeCertificate</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">tokenId</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">certificate</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">ArrayBuffer</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Removes <code translate="no" dir="ltr">certificate</code> from the given token if present. Should be used to remove obsolete certificates so that they are not considered during authentication and do not clutter the certificate choice. Should be used to free storage in the certificate store.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_6" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-removeCertificate-tokenId">tokenId</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>The id of a Token returned by <code translate="no" dir="ltr">getTokens</code>.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-removeCertificate-certificate">certificate</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">ArrayBuffer</p></div>
-    </div><p>The DER encoding of a X.509 certificate.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-removeCertificate-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_6" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 131+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.enterprise.platformKeys.removeCertificate(  tokenId: string,  certificate: ArrayBuffer,  callback?: function,)
+      Removes certificate from the given token if present. Should be used to remove obsolete certificates so that they are not considered during authentication and do not clutter the certificate choice. Should be used to free storage in the certificate store.
+Parameters
+    
+      tokenId
+      string
+    The id of a Token returned by getTokens.
+
+    
+      certificate
+      ArrayBuffer
+    The DER encoding of a X.509 certificate.
+
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 131+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div></div></div>
-<p></p>
+              
+            
+        
+      
+
   
 
   

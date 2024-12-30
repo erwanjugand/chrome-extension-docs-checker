@@ -2,866 +2,866 @@
 
   
     
-<style>.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}</style>
+.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}
 
 
 
 
-<p></p>
 
-<p></p><h2 class="dcc-api-title" data-text="Description" id="description" tabindex="-1">Description</h2>
-<div class="dcc-reference"><p>Use the <code translate="no" dir="ltr">chrome.bookmarks</code> API to create, organize, and otherwise manipulate bookmarks. Also see <a href="https://developer.chrome.com/docs/extensions/override">Override Pages</a>, which you can use to create a custom Bookmark Manager page.</p></div><p></p>
 
-<figure>
-  <img src="/static/docs/extensions/reference/api/images/bookmarks.png" alt="Clicking the star adds a bookmark" class="screenshot" width="">
-  <figcaption>Clicking the star adds a bookmark.</figcaption>
-</figure>
+Description
+Use the chrome.bookmarks API to create, organize, and otherwise manipulate bookmarks. Also see Override Pages, which you can use to create a custom Bookmark Manager page.
 
-<p></p><h2 id="permissions" data-text="Permissions" tabindex="-1">Permissions</h2>
-<div class="dcc-reference"><code translate="no" dir="ltr">bookmarks</code><br></div><p></p>
 
-<p></p>
+  
+  Clicking the star adds a bookmark.
 
-<p></p>
 
-<p>You must declare the "bookmarks" permission in the <a href="/docs/extensions/reference/manifest">extension manifest</a> to use the bookmarks API.
-For example:</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JSON"><code translate="no" dir="ltr"><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"name"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"My extension"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">...</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"permissions"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s2">"bookmarks"</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">],</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">...</span>
-<span class="devsite-syntax-p">}</span>
-</code></pre></devsite-code>
-<h2 id="concepts_and_usage" data-text="Concepts and usage" tabindex="-1">Concepts and usage</h2>
+Permissions
+bookmarks
 
-<h3 id="objects_and_properties" data-text="Objects and properties" tabindex="-1">Objects and properties</h3>
 
-<p>Bookmarks are organized in a tree, where each node in the tree is either a bookmark or a folder
-(sometimes called a <em>group</em>). Each node in the tree is represented by a
-<a href="#type-BookmarkTreeNode">bookmarks.BookmarkTreeNode</a> object.</p>
 
-<p><code translate="no" dir="ltr">BookmarkTreeNode</code> properties are used throughout the <code translate="no" dir="ltr">chrome.bookmarks</code> API. For example, when you
-call <a href="#method-create">bookmarks.create</a>, you pass in the new node's parent (<code translate="no" dir="ltr">parentId</code>), and, optionally, the
-node's <code translate="no" dir="ltr">index</code>, <code translate="no" dir="ltr">title</code>, and <code translate="no" dir="ltr">url</code> properties. See <a href="#type-BookmarkTreeNode">bookmarks.BookmarkTreeNode</a> for information
-about the properties a node can have.</p>
 
-<aside class="note"><b>Note:</b> You cannot use this API to add or remove entries in the root folder. You also cannot
-rename, move, or remove the special "Bookmarks Bar" and "Other Bookmarks" folders.</aside>
 
-<h3 id="overview-examples" data-text="Examples" tabindex="-1">Examples</h3>
+You must declare the "bookmarks" permission in the extension manifest to use the bookmarks API.
+For example:
+{
+  "name": "My extension",
+  ...
+  "permissions": [
+    "bookmarks"
+  ],
+  ...
+}
 
-<p>The following code creates a folder with the title "Extension bookmarks". The first argument to
-<code translate="no" dir="ltr">create()</code> specifies properties for the new folder. The second argument defines a function to be
-executed after the folder is created.</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bookmarks</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">(</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-s1">'parentId'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">bookmarkBar</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">id</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'title'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'Extension bookmarks'</span><span class="devsite-syntax-p">},</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">newFolder</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"added folder: "</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">newFolder</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">title</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">},</span>
-<span class="devsite-syntax-p">);</span>
-</code></pre></devsite-code>
-<p>The next snippet creates a bookmark pointing to the developer documentation for extensions. Since
+Concepts and usage
+
+Objects and properties
+
+Bookmarks are organized in a tree, where each node in the tree is either a bookmark or a folder
+(sometimes called a group). Each node in the tree is represented by a
+bookmarks.BookmarkTreeNode object.
+
+BookmarkTreeNode properties are used throughout the chrome.bookmarks API. For example, when you
+call bookmarks.create, you pass in the new node's parent (parentId), and, optionally, the
+node's index, title, and url properties. See bookmarks.BookmarkTreeNode for information
+about the properties a node can have.
+
+Note: You cannot use this API to add or remove entries in the root folder. You also cannot
+rename, move, or remove the special "Bookmarks Bar" and "Other Bookmarks" folders.
+
+Examples
+
+The following code creates a folder with the title "Extension bookmarks". The first argument to
+create() specifies properties for the new folder. The second argument defines a function to be
+executed after the folder is created.
+chrome.bookmarks.create(
+  {'parentId': bookmarkBar.id, 'title': 'Extension bookmarks'},
+  function(newFolder) {
+    console.log("added folder: " + newFolder.title);
+  },
+);
+
+The next snippet creates a bookmark pointing to the developer documentation for extensions. Since
 nothing bad will happen if creating the bookmark fails, this code doesn't bother to define a
-callback function.</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bookmarks</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">({</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'parentId'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">extensionsFolderId</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'title'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'Extensions doc'</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'url'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'https://developer.chrome.com/docs/extensions'</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-p">});</span>
-</code></pre></devsite-code>
-<p>To try this API, install the <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/bookmarks">Bookmarks API example</a> from the <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples">chrome-extension-samples</a>
-repository.</p>
+callback function.
+chrome.bookmarks.create({
+  'parentId': extensionsFolderId,
+  'title': 'Extensions doc',
+  'url': 'https://developer.chrome.com/docs/extensions',
+});
 
-<p></p><div class="dcc-reference"><h2 id="type" data-text="Types" tabindex="-1">Types</h2>
-  <div><div>
-    <div class="notranslate">
-      <h3 id="type-BookmarkTreeNode" data-text="BookmarkTreeNode" tabindex="-1">BookmarkTreeNode</h3>
-    </div><p>A node (either a bookmark or a folder) in the bookmark tree. Child nodes are ordered within their parent folder.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-BookmarkTreeNode-children">children</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-BookmarkTreeNode">BookmarkTreeNode</a>[]&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>An ordered list of children of this node.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-BookmarkTreeNode-dateAdded">dateAdded</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>When this node was created, in milliseconds since the epoch (<code translate="no" dir="ltr">new Date(dateAdded)</code>).</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-BookmarkTreeNode-dateGroupModified">dateGroupModified</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>When the contents of this folder last changed, in milliseconds since the epoch.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-BookmarkTreeNode-dateLastUsed">dateLastUsed</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 114+
-      </span></div>
-    </div><p>When this node was last opened, in milliseconds since the epoch. Not set for folders.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-BookmarkTreeNode-id">id</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>The unique identifier for the node. IDs are unique within the current profile, and they remain valid even after the browser is restarted.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-BookmarkTreeNode-index">index</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The 0-based position of this node within its parent folder.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-BookmarkTreeNode-parentId">parentId</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The <code translate="no" dir="ltr">id</code> of the parent folder. Omitted for the root node.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-BookmarkTreeNode-title">title</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>The text displayed for the node.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-BookmarkTreeNode-unmodifiable">unmodifiable</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string"><span class="dcc-code-sections__value">"managed"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Indicates the reason why this node is unmodifiable. The <code translate="no" dir="ltr">managed</code> value indicates that this node was configured by the system administrator or by the custodian of a supervised user. Omitted if the node can be modified by the user and the extension (default).</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-BookmarkTreeNode-url">url</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The URL navigated to when a user clicks the bookmark. Omitted for folders.</p>
-</li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="type-BookmarkTreeNodeUnmodifiable" data-text="BookmarkTreeNodeUnmodifiable" tabindex="-1">BookmarkTreeNodeUnmodifiable</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 44+
-      </span></div>
-    </div><p>Indicates the reason why this node is unmodifiable. The <code translate="no" dir="ltr">managed</code> value indicates that this node was configured by the system administrator. Omitted if the node can be modified by the user and the extension (default).</p>
-</div><div class="dcc-code-sections">
-      <h4 class="dcc-type--label dcc-code-sections__mode" id="value" data-text="Value" tabindex="-1">Value</h4>
-      <div class="dcc-code-sections__overline dcc-code-sections__label"><p class="dcc-code-sections__icon dcc-code-sections__icon--string"><span class="dcc-code-sections__value">"managed"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></div>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="type-CreateDetails" data-text="CreateDetails" tabindex="-1">CreateDetails</h3>
-    </div><p>Object passed to the create() function.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_1" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-CreateDetails-index">index</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-CreateDetails-parentId">parentId</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Defaults to the Other Bookmarks folder.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-CreateDetails-title">title</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-CreateDetails-url">url</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div></li></ul>
-    </div></div><h2 id="property" data-text="Properties" tabindex="-1">Properties</h2>
-  <div><div>
-    <div class="notranslate">
-      <h3 id="property-MAX_SUSTAINED_WRITE_OPERATIONS_PER_MINUTE" data-text="MAX_SUSTAINED_WRITE_OPERATIONS_PER_MINUTE" tabindex="-1">MAX_SUSTAINED_WRITE_OPERATIONS_PER_MINUTE</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--red dcc-tag-pill">
-        Deprecated</span></div>
-    </div><p class="dcc-code-sections__deprecated">Bookmark write operations are no longer limited by Chrome.</p><p></p></div><div class="dcc-code-sections">
-      <h4 class="dcc-type--label dcc-code-sections__mode" id="value_1" data-text="Value" tabindex="-1">Value</h4>
-      <div class="dcc-code-sections__overline dcc-code-sections__label"><p class="dcc-code-sections__icon dcc-code-sections__icon--number"><span class="dcc-code-sections__value">1000000</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></div>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="property-MAX_WRITE_OPERATIONS_PER_HOUR" data-text="MAX_WRITE_OPERATIONS_PER_HOUR" tabindex="-1">MAX_WRITE_OPERATIONS_PER_HOUR</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--red dcc-tag-pill">
-        Deprecated</span></div>
-    </div><p class="dcc-code-sections__deprecated">Bookmark write operations are no longer limited by Chrome.</p><p></p></div><div class="dcc-code-sections">
-      <h4 class="dcc-type--label dcc-code-sections__mode" id="value_2" data-text="Value" tabindex="-1">Value</h4>
-      <div class="dcc-code-sections__overline dcc-code-sections__label"><p class="dcc-code-sections__icon dcc-code-sections__icon--number"><span class="dcc-code-sections__value">1000000</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></div>
-    </div></div><h2 id="method" data-text="Methods" tabindex="-1">Methods</h2>
-  <div><div>
-    <div class="notranslate">
-      <h3 id="method-create" data-text="create()" tabindex="-1">create()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+To try this API, install the Bookmarks API example from the chrome-extension-samples
+repository.
+
+Types
+  
+    
+      BookmarkTreeNode
+    A node (either a bookmark or a folder) in the bookmark tree. Child nodes are ordered within their parent folder.
+Properties
+    
+      children
+      BookmarkTreeNode[] optional
+    An ordered list of children of this node.
+
+    
+      dateAdded
+      number optional
+    When this node was created, in milliseconds since the epoch (new Date(dateAdded)).
+
+    
+      dateGroupModified
+      number optional
+    When the contents of this folder last changed, in milliseconds since the epoch.
+
+    
+      dateLastUsed
+      number optional
+    
+      Chrome 114+
+      
+    When this node was last opened, in milliseconds since the epoch. Not set for folders.
+
+    
+      id
+      string
+    The unique identifier for the node. IDs are unique within the current profile, and they remain valid even after the browser is restarted.
+
+    
+      index
+      number optional
+    The 0-based position of this node within its parent folder.
+
+    
+      parentId
+      string optional
+    The id of the parent folder. Omitted for the root node.
+
+    
+      title
+      string
+    The text displayed for the node.
+
+    
+      unmodifiable
+      "managed"   optional
+    Indicates the reason why this node is unmodifiable. The managed value indicates that this node was configured by the system administrator or by the custodian of a supervised user. Omitted if the node can be modified by the user and the extension (default).
+
+    
+      url
+      string optional
+    The URL navigated to when a user clicks the bookmark. Omitted for folders.
+
+    
+    
+      BookmarkTreeNodeUnmodifiable
+    
+      Chrome 44+
+      
+    Indicates the reason why this node is unmodifiable. The managed value indicates that this node was configured by the system administrator. Omitted if the node can be modified by the user and the extension (default).
+
+      Value
+      "managed"  
+    
+    
+      CreateDetails
+    Object passed to the create() function.
+Properties
+    
+      index
+      number optional
+    
+    
+      parentId
+      string optional
+    Defaults to the Other Bookmarks folder.
+
+    
+      title
+      string optional
+    
+    
+      url
+      string optional
+    
+    Properties
+  
+    
+      MAX_SUSTAINED_WRITE_OPERATIONS_PER_MINUTE
+    
+      
+        Deprecated
+    Bookmark write operations are no longer limited by Chrome.
+      Value
+      1000000  
+    
+    
+      MAX_WRITE_OPERATIONS_PER_HOUR
+    
+      
+        Deprecated
+    Bookmark write operations are no longer limited by Chrome.
+      Value
+      1000000  
+    Methods
+  
+    
+      create()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bookmarks</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">create</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">bookmark</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-CreateDetails"><span class="devsite-syntax-kt">CreateDetails</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Creates a bookmark or folder under the specified parentId. If url is NULL or missing, it will be a folder.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-create-bookmark">bookmark</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-CreateDetails">CreateDetails</a></p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-create-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-BookmarkTreeNode"><span class="devsite-syntax-kt">BookmarkTreeNode</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-create-callback-result">result</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-BookmarkTreeNode">BookmarkTreeNode</a></p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-BookmarkTreeNode">BookmarkTreeNode</a>&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 90+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.bookmarks.create(  bookmark: CreateDetails,  callback?: function,)
+      Creates a bookmark or folder under the specified parentId. If url is NULL or missing, it will be a folder.
+Parameters
+    
+      bookmark
+      CreateDetails
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (result: BookmarkTreeNode) => void
+        
+    
+      result
+      BookmarkTreeNode
+    
+    
+    Returns
+          
+            Promise<BookmarkTreeNode>
+            
+      Chrome 90+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-get" data-text="get()" tabindex="-1">get()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      get()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bookmarks</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">get</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">idOrIdList</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span>&nbsp;<span class="devsite-syntax-o">|</span>&nbsp;<span class="devsite-syntax-p">[</span><span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,&nbsp;...</span><span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">[]],</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Retrieves the specified BookmarkTreeNode(s).</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_1" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-get-idOrIdList">idOrIdList</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--uniondcc-code-sections__enum">string&nbsp;|&nbsp;[string,&nbsp;...string[]]</p></div>
-    </div><p>A single string-valued id, or an array of string-valued ids</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-get-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">results</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-BookmarkTreeNode"><span class="devsite-syntax-kt">BookmarkTreeNode</span></a><span class="devsite-syntax-p">[])&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-get-callback-results">results</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-BookmarkTreeNode">BookmarkTreeNode</a>[]</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_1" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-BookmarkTreeNode">BookmarkTreeNode</a>[]&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 90+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.bookmarks.get(  idOrIdList: string | [string, ...string[]],  callback?: function,)
+      Retrieves the specified BookmarkTreeNode(s).
+Parameters
+    
+      idOrIdList
+      string | [string, ...string[]]
+    A single string-valued id, or an array of string-valued ids
+
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (results: BookmarkTreeNode[]) => void
+        
+    
+      results
+      BookmarkTreeNode[]
+    
+    
+    Returns
+          
+            Promise<BookmarkTreeNode[]>
+            
+      Chrome 90+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-getChildren" data-text="getChildren()" tabindex="-1">getChildren()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      getChildren()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bookmarks</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getChildren</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">id</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Retrieves the children of the specified BookmarkTreeNode id.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_2" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-getChildren-id">id</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-getChildren-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">results</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-BookmarkTreeNode"><span class="devsite-syntax-kt">BookmarkTreeNode</span></a><span class="devsite-syntax-p">[])&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-getChildren-callback-results">results</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-BookmarkTreeNode">BookmarkTreeNode</a>[]</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_2" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-BookmarkTreeNode">BookmarkTreeNode</a>[]&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 90+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.bookmarks.getChildren(  id: string,  callback?: function,)
+      Retrieves the children of the specified BookmarkTreeNode id.
+Parameters
+    
+      id
+      string
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (results: BookmarkTreeNode[]) => void
+        
+    
+      results
+      BookmarkTreeNode[]
+    
+    
+    Returns
+          
+            Promise<BookmarkTreeNode[]>
+            
+      Chrome 90+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-getRecent" data-text="getRecent()" tabindex="-1">getRecent()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      getRecent()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bookmarks</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getRecent</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">numberOfItems</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">number</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Retrieves the recently added bookmarks.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_3" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-getRecent-numberOfItems">numberOfItems</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><p>The maximum number of items to return.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-getRecent-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">results</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-BookmarkTreeNode"><span class="devsite-syntax-kt">BookmarkTreeNode</span></a><span class="devsite-syntax-p">[])&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-getRecent-callback-results">results</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-BookmarkTreeNode">BookmarkTreeNode</a>[]</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_3" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-BookmarkTreeNode">BookmarkTreeNode</a>[]&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 90+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.bookmarks.getRecent(  numberOfItems: number,  callback?: function,)
+      Retrieves the recently added bookmarks.
+Parameters
+    
+      numberOfItems
+      number
+    The maximum number of items to return.
+
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (results: BookmarkTreeNode[]) => void
+        
+    
+      results
+      BookmarkTreeNode[]
+    
+    
+    Returns
+          
+            Promise<BookmarkTreeNode[]>
+            
+      Chrome 90+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-getSubTree" data-text="getSubTree()" tabindex="-1">getSubTree()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      getSubTree()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bookmarks</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getSubTree</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">id</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Retrieves part of the Bookmarks hierarchy, starting at the specified node.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_4" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-getSubTree-id">id</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>The ID of the root of the subtree to retrieve.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-getSubTree-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">results</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-BookmarkTreeNode"><span class="devsite-syntax-kt">BookmarkTreeNode</span></a><span class="devsite-syntax-p">[])&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-getSubTree-callback-results">results</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-BookmarkTreeNode">BookmarkTreeNode</a>[]</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_4" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-BookmarkTreeNode">BookmarkTreeNode</a>[]&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 90+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.bookmarks.getSubTree(  id: string,  callback?: function,)
+      Retrieves part of the Bookmarks hierarchy, starting at the specified node.
+Parameters
+    
+      id
+      string
+    The ID of the root of the subtree to retrieve.
+
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (results: BookmarkTreeNode[]) => void
+        
+    
+      results
+      BookmarkTreeNode[]
+    
+    
+    Returns
+          
+            Promise<BookmarkTreeNode[]>
+            
+      Chrome 90+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-getTree" data-text="getTree()" tabindex="-1">getTree()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      getTree()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bookmarks</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getTree</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Retrieves the entire Bookmarks hierarchy.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_5" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-getTree-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">results</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-BookmarkTreeNode"><span class="devsite-syntax-kt">BookmarkTreeNode</span></a><span class="devsite-syntax-p">[])&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-getTree-callback-results">results</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-BookmarkTreeNode">BookmarkTreeNode</a>[]</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_5" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-BookmarkTreeNode">BookmarkTreeNode</a>[]&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 90+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.bookmarks.getTree(  callback?: function,)
+      Retrieves the entire Bookmarks hierarchy.
+Parameters
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (results: BookmarkTreeNode[]) => void
+        
+    
+      results
+      BookmarkTreeNode[]
+    
+    
+    Returns
+          
+            Promise<BookmarkTreeNode[]>
+            
+      Chrome 90+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-move" data-text="move()" tabindex="-1">move()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      move()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bookmarks</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">move</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">id</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">destination</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Moves the specified BookmarkTreeNode to the provided location.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_6" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-move-id">id</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-move-destination">destination</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
-    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-move-destination-index">index</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-move-destination-parentId">parentId</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div></li></ul>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-move-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-BookmarkTreeNode"><span class="devsite-syntax-kt">BookmarkTreeNode</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-move-callback-result">result</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-BookmarkTreeNode">BookmarkTreeNode</a></p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_6" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-BookmarkTreeNode">BookmarkTreeNode</a>&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 90+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.bookmarks.move(  id: string,  destination: object,  callback?: function,)
+      Moves the specified BookmarkTreeNode to the provided location.
+Parameters
+    
+      id
+      string
+    
+    
+      destination
+      object
+    
+    
+      index
+      number optional
+    
+    
+      parentId
+      string optional
+    
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (result: BookmarkTreeNode) => void
+        
+    
+      result
+      BookmarkTreeNode
+    
+    
+    Returns
+          
+            Promise<BookmarkTreeNode>
+            
+      Chrome 90+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-remove" data-text="remove()" tabindex="-1">remove()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      remove()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bookmarks</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">remove</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">id</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Removes a bookmark or an empty bookmark folder.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_7" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-remove-id">id</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-remove-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_7" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 90+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.bookmarks.remove(  id: string,  callback?: function,)
+      Removes a bookmark or an empty bookmark folder.
+Parameters
+    
+      id
+      string
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 90+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-removeTree" data-text="removeTree()" tabindex="-1">removeTree()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      removeTree()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bookmarks</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">removeTree</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">id</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Recursively removes a bookmark folder.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_8" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-removeTree-id">id</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-removeTree-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_8" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 90+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.bookmarks.removeTree(  id: string,  callback?: function,)
+      Recursively removes a bookmark folder.
+Parameters
+    
+      id
+      string
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 90+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-search" data-text="search()" tabindex="-1">search()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      search()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bookmarks</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">search</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">query</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span>&nbsp;<span class="devsite-syntax-o">|</span>&nbsp;<span class="devsite-syntax-nx">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Searches for BookmarkTreeNodes matching the given query. Queries specified with an object produce BookmarkTreeNodes matching all specified properties.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_9" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-search-query">query</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--uniondcc-code-sections__enum">string&nbsp;|&nbsp;object</p></div>
-    </div><p>Either a string of words and quoted phrases that are matched against bookmark URLs and titles, or an object. If an object, the properties <code translate="no" dir="ltr">query</code>, <code translate="no" dir="ltr">url</code>, and <code translate="no" dir="ltr">title</code> may be specified and bookmarks matching all specified properties will be produced.</p>
-<div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-search-query-query-query">query</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>A string of words and quoted phrases that are matched against bookmark URLs and titles.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-search-query-query-title">title</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The title of the bookmark; matches verbatim.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-search-query-query-url">url</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The URL of the bookmark; matches verbatim. Note that folders have no URL.</p>
-</li></ul>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-search-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">results</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-BookmarkTreeNode"><span class="devsite-syntax-kt">BookmarkTreeNode</span></a><span class="devsite-syntax-p">[])&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-search-callback-results">results</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-BookmarkTreeNode">BookmarkTreeNode</a>[]</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_9" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-BookmarkTreeNode">BookmarkTreeNode</a>[]&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 90+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.bookmarks.search(  query: string | object,  callback?: function,)
+      Searches for BookmarkTreeNodes matching the given query. Queries specified with an object produce BookmarkTreeNodes matching all specified properties.
+Parameters
+    
+      query
+      string | object
+    Either a string of words and quoted phrases that are matched against bookmark URLs and titles, or an object. If an object, the properties query, url, and title may be specified and bookmarks matching all specified properties will be produced.
+
+    
+      query
+      string optional
+    A string of words and quoted phrases that are matched against bookmark URLs and titles.
+
+    
+      title
+      string optional
+    The title of the bookmark; matches verbatim.
+
+    
+      url
+      string optional
+    The URL of the bookmark; matches verbatim. Note that folders have no URL.
+
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (results: BookmarkTreeNode[]) => void
+        
+    
+      results
+      BookmarkTreeNode[]
+    
+    
+    Returns
+          
+            Promise<BookmarkTreeNode[]>
+            
+      Chrome 90+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-update" data-text="update()" tabindex="-1">update()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      update()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bookmarks</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">update</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">id</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">changes</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Updates the properties of a bookmark or folder. Specify only the properties that you want to change; unspecified properties will be left unchanged. <strong>Note:</strong> Currently, only 'title' and 'url' are supported.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_10" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-update-id">id</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-update-changes">changes</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
-    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-update-changes-title">title</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-update-changes-url">url</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div></li></ul>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-update-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">result</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-BookmarkTreeNode"><span class="devsite-syntax-kt">BookmarkTreeNode</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-update-callback-result">result</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-BookmarkTreeNode">BookmarkTreeNode</a></p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_10" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;<a href="#type-BookmarkTreeNode">BookmarkTreeNode</a>&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 90+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.bookmarks.update(  id: string,  changes: object,  callback?: function,)
+      Updates the properties of a bookmark or folder. Specify only the properties that you want to change; unspecified properties will be left unchanged. Note: Currently, only 'title' and 'url' are supported.
+Parameters
+    
+      id
+      string
+    
+    
+      changes
+      object
+    
+    
+      title
+      string optional
+    
+    
+      url
+      string optional
+    
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (result: BookmarkTreeNode) => void
+        
+    
+      result
+      BookmarkTreeNode
+    
+    
+    Returns
+          
+            Promise<BookmarkTreeNode>
+            
+      Chrome 90+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div></div><h2 id="event" data-text="Events" tabindex="-1">Events</h2>
-  <div><div>
-    <div class="notranslate">
-      <h3 id="event-onChanged" data-text="onChanged" tabindex="-1">onChanged</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bookmarks</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onChanged</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Fired when a bookmark or folder changes. <strong>Note:</strong> Currently, only title and url changes trigger this.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_11" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-onChanged-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">id</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span>&nbsp;<span class="devsite-syntax-nx">changeInfo</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onChanged-callback-id">id</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onChanged-callback-changeInfo">changeInfo</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
-    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-onChanged-callback-changeInfo-title">title</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-onChanged-callback-changeInfo-url">url</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="event-onChildrenReordered" data-text="onChildrenReordered" tabindex="-1">onChildrenReordered</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bookmarks</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onChildrenReordered</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Fired when the children of a folder have changed their order due to the order being sorted in the UI. This is not called as a result of a move().</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_12" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-onChildrenReordered-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">id</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span>&nbsp;<span class="devsite-syntax-nx">reorderInfo</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onChildrenReordered-callback-id">id</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onChildrenReordered-callback-reorderInfo">reorderInfo</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
-    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-onChildrenReordered-callback-reorderInfo-childIds">childIds</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array">string[]</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="event-onCreated" data-text="onCreated" tabindex="-1">onCreated</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bookmarks</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onCreated</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Fired when a bookmark or folder is created.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_13" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-onCreated-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">id</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span>&nbsp;<span class="devsite-syntax-nx">bookmark</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-BookmarkTreeNode"><span class="devsite-syntax-kt">BookmarkTreeNode</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onCreated-callback-id">id</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onCreated-callback-bookmark">bookmark</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-BookmarkTreeNode">BookmarkTreeNode</a></p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="event-onImportBegan" data-text="onImportBegan" tabindex="-1">onImportBegan</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bookmarks</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onImportBegan</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Fired when a bookmark import session is begun. Expensive observers should ignore onCreated updates until onImportEnded is fired. Observers should still handle other notifications immediately.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_14" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-onImportBegan-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p></li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="event-onImportEnded" data-text="onImportEnded" tabindex="-1">onImportEnded</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bookmarks</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onImportEnded</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Fired when a bookmark import session is ended.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_15" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-onImportEnded-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p></li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="event-onMoved" data-text="onMoved" tabindex="-1">onMoved</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bookmarks</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onMoved</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Fired when a bookmark or folder is moved to a different parent folder.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_16" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-onMoved-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">id</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span>&nbsp;<span class="devsite-syntax-nx">moveInfo</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onMoved-callback-id">id</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onMoved-callback-moveInfo">moveInfo</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
-    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-onMoved-callback-moveInfo-index">index</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-onMoved-callback-moveInfo-oldIndex">oldIndex</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-onMoved-callback-moveInfo-oldParentId">oldParentId</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-onMoved-callback-moveInfo-parentId">parentId</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="event-onRemoved" data-text="onRemoved" tabindex="-1">onRemoved</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">bookmarks</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onRemoved</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Fired when a bookmark or folder is removed. When a folder is removed recursively, a single notification is fired for the folder, and none for its contents.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_17" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-onRemoved-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">id</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span>&nbsp;<span class="devsite-syntax-nx">removeInfo</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onRemoved-callback-id">id</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onRemoved-callback-removeInfo">removeInfo</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
-    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-onRemoved-callback-removeInfo-index">index</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-onRemoved-callback-removeInfo-node">node</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-BookmarkTreeNode">BookmarkTreeNode</a></p></div>
-    </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 48+
-      </span></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-onRemoved-callback-removeInfo-parentId">parentId</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div></li></ul>
-    </div></div></div>
-<p></p>
+              
+            
+        
+      Events
+  
+    
+      onChanged
+    
+        chrome.bookmarks.onChanged.addListener(  callback: function,)
+      Fired when a bookmark or folder changes. Note: Currently, only title and url changes trigger this.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (id: string, changeInfo: object) => void
+        
+    
+      id
+      string
+    
+    
+      changeInfo
+      object
+    
+    
+      title
+      string
+    
+    
+      url
+      string optional
+    
+    
+    
+    
+    
+      onChildrenReordered
+    
+        chrome.bookmarks.onChildrenReordered.addListener(  callback: function,)
+      Fired when the children of a folder have changed their order due to the order being sorted in the UI. This is not called as a result of a move().
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (id: string, reorderInfo: object) => void
+        
+    
+      id
+      string
+    
+    
+      reorderInfo
+      object
+    
+    
+      childIds
+      string[]
+    
+    
+    
+    
+    
+      onCreated
+    
+        chrome.bookmarks.onCreated.addListener(  callback: function,)
+      Fired when a bookmark or folder is created.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (id: string, bookmark: BookmarkTreeNode) => void
+        
+    
+      id
+      string
+    
+    
+      bookmark
+      BookmarkTreeNode
+    
+    
+    
+    
+      onImportBegan
+    
+        chrome.bookmarks.onImportBegan.addListener(  callback: function,)
+      Fired when a bookmark import session is begun. Expensive observers should ignore onCreated updates until onImportEnded is fired. Observers should still handle other notifications immediately.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          () => void
+        
+    
+    
+      onImportEnded
+    
+        chrome.bookmarks.onImportEnded.addListener(  callback: function,)
+      Fired when a bookmark import session is ended.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          () => void
+        
+    
+    
+      onMoved
+    
+        chrome.bookmarks.onMoved.addListener(  callback: function,)
+      Fired when a bookmark or folder is moved to a different parent folder.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (id: string, moveInfo: object) => void
+        
+    
+      id
+      string
+    
+    
+      moveInfo
+      object
+    
+    
+      index
+      number
+    
+    
+      oldIndex
+      number
+    
+    
+      oldParentId
+      string
+    
+    
+      parentId
+      string
+    
+    
+    
+    
+    
+      onRemoved
+    
+        chrome.bookmarks.onRemoved.addListener(  callback: function,)
+      Fired when a bookmark or folder is removed. When a folder is removed recursively, a single notification is fired for the folder, and none for its contents.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (id: string, removeInfo: object) => void
+        
+    
+      id
+      string
+    
+    
+      removeInfo
+      object
+    
+    
+      index
+      number
+    
+    
+      node
+      BookmarkTreeNode
+    
+      Chrome 48+
+      
+    
+    
+      parentId
+      string
+    
+    
+    
+    
+
   
 
   

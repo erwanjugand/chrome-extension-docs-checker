@@ -2,1380 +2,1380 @@
 
   
     
-<style>.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}</style>
+.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}
 
 
 
 
-<p></p><aside class="note"><b>Important:</b>
-This API works <strong>only on ChromeOS</strong>.
-</aside><p></p>
+Important:
+This API works only on ChromeOS.
 
-<p></p><h2 class="dcc-api-title" data-text="Description" id="description" tabindex="-1">Description</h2>
-<div class="dcc-reference"><p>Use the <code translate="no" dir="ltr">chrome.input.ime</code> API to implement a custom IME for Chrome OS. This allows your extension to handle keystrokes, set the composition, and manage the candidate window.</p></div><p></p>
 
-<p></p><h2 id="permissions" data-text="Permissions" tabindex="-1">Permissions</h2>
-<div class="dcc-reference"><code translate="no" dir="ltr">input</code><br></div><p></p>
+Description
+Use the chrome.input.ime API to implement a custom IME for Chrome OS. This allows your extension to handle keystrokes, set the composition, and manage the candidate window.
 
-<p>You must declare the "input" permission in the <a href="/docs/extensions/reference/manifest">extension manifest</a> to use the input.ime API. For
-example:</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JSON"><code translate="no" dir="ltr"><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"name"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"My extension"</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">...</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nt">"permissions"</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s2">"input"</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">],</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">...</span>
-<span class="devsite-syntax-p">}</span>
-</code></pre></devsite-code>
-<p></p><h2 id="availability" data-text="Availability" tabindex="-1">Availability</h2>
-<div class="dcc-reference"><div class="">
-      <div><span class="dcc-tag-pill--pink dcc-tag-pill">
+Permissions
+input
+
+You must declare the "input" permission in the extension manifest to use the input.ime API. For
+example:
+{
+  "name": "My extension",
+  ...
+  "permissions": [
+    "input"
+  ],
+  ...
+}
+
+Availability
+
+      
         ChromeOS only
-      </span></div>
-    </div></div><p></p>
+      
+    
 
-<p></p>
 
-<h2 id="examples" data-text="Examples" tabindex="-1">Examples</h2>
 
-<p>The following code creates an IME that converts typed letters to upper case.</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">var</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">context_id</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">-</span><span class="devsite-syntax-mf">1</span><span class="devsite-syntax-p">;</span>
+Examples
 
-<span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onFocus</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">context</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">context_id</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">context</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">contextID</span><span class="devsite-syntax-p">;</span>
-<span class="devsite-syntax-p">});</span>
+The following code creates an IME that converts typed letters to upper case.
+var context_id = -1;
 
-<span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onKeyEvent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">engineID</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">keyData</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">if</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">keyData</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">type</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">==</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"keydown"</span><span class="devsite-syntax-w"> &amp;&amp; </span><span class="devsite-syntax-nx">keyData</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">key</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">match</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-sr">/^[a-z]$/</span><span class="devsite-syntax-p">))</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">commitText</span><span class="devsite-syntax-p">({</span><span class="devsite-syntax-s2">"contextID"</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">context_id</span><span class="devsite-syntax-p">,</span>
-<span class="devsite-syntax-w">                                    </span><span class="devsite-syntax-s2">"text"</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">keyData</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">key</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">toUpperCase</span><span class="devsite-syntax-p">()});</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-k">return</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">true</span><span class="devsite-syntax-p">;</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">else</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-k">return</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">false</span><span class="devsite-syntax-p">;</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-p">);</span>
-</code></pre></devsite-code>
-<p></p><div class="dcc-reference"><h2 id="type" data-text="Types" tabindex="-1">Types</h2>
-  <div><div>
-    <div class="notranslate">
-      <h3 id="type-AssistiveWindowButton" data-text="AssistiveWindowButton" tabindex="-1">AssistiveWindowButton</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 85+
-      </span></div>
-    </div><p>ID of buttons in assistive window.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
-      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"undo"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"addToDictionary"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><p></p>
-    </div>
-  </div><div>
-    <div class="notranslate">
-      <h3 id="type-AssistiveWindowProperties" data-text="AssistiveWindowProperties" tabindex="-1">AssistiveWindowProperties</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 85+
-      </span></div>
-    </div><p>Properties of the assistive window.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-AssistiveWindowProperties-announceString">announceString</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Strings for ChromeVox to announce.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-AssistiveWindowProperties-type">type</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string"><span class="dcc-code-sections__value">"undo"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-AssistiveWindowProperties-visible">visible</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
-    </div><p>Sets true to show AssistiveWindow, sets false to hide.</p>
-</li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="type-AssistiveWindowType" data-text="AssistiveWindowType" tabindex="-1">AssistiveWindowType</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 85+
-      </span></div>
-    </div><p>Type of assistive window.</p>
-</div><div class="dcc-code-sections">
-      <h4 class="dcc-type--label dcc-code-sections__mode" id="value" data-text="Value" tabindex="-1">Value</h4>
-      <div class="dcc-code-sections__overline dcc-code-sections__label"><p class="dcc-code-sections__icon dcc-code-sections__icon--string"><span class="dcc-code-sections__value">"undo"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></div>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="type-AutoCapitalizeType" data-text="AutoCapitalizeType" tabindex="-1">AutoCapitalizeType</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 69+
-      </span></div>
-    </div><p>The auto-capitalize type of the text field.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum_1" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
-      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"characters"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"words"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"sentences"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><p></p>
-    </div>
-  </div><div>
-    <div class="notranslate">
-      <h3 id="type-InputContext" data-text="InputContext" tabindex="-1">InputContext</h3>
-    </div><p>Describes an input Context</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_1" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-InputContext-autoCapitalize">autoCapitalize</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-AutoCapitalizeType">AutoCapitalizeType</a></p></div>
-    </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 69+
-      </span></div>
-    </div><p>The auto-capitalize type of the text field.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-InputContext-autoComplete">autoComplete</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
-    </div><p>Whether the text field wants auto-complete.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-InputContext-autoCorrect">autoCorrect</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
-    </div><p>Whether the text field wants auto-correct.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-InputContext-contextID">contextID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><p>This is used to specify targets of text field operations. This ID becomes invalid as soon as onBlur is called.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-InputContext-shouldDoLearning">shouldDoLearning</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
-    </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 68+
-      </span></div>
-    </div><p>Whether text entered into the text field should be used to improve typing suggestions for the user.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-InputContext-spellCheck">spellCheck</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
-    </div><p>Whether the text field wants spell-check.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-InputContext-type">type</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-InputContextType">InputContextType</a></p></div>
-    </div><p>Type of value this text field edits, (Text, Number, URL, etc)</p>
-</li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="type-InputContextType" data-text="InputContextType" tabindex="-1">InputContextType</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 44+
-      </span></div>
-    </div><p>Type of value this text field edits, (Text, Number, URL, etc)</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum_2" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
-      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"text"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"search"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"tel"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"url"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"email"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"number"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"password"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"null"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><p></p>
-    </div>
-  </div><div>
-    <div class="notranslate">
-      <h3 id="type-KeyboardEvent" data-text="KeyboardEvent" tabindex="-1">KeyboardEvent</h3>
-    </div><p>See http://www.w3.org/TR/DOM-Level-3-Events/#events-KeyboardEvent</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_2" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-KeyboardEvent-altKey">altKey</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Whether or not the ALT key is pressed.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-KeyboardEvent-altgrKey">altgrKey</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 79+
-      </span></div>
-    </div><p>Whether or not the ALTGR key is pressed.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-KeyboardEvent-capsLock">capsLock</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Whether or not the CAPS_LOCK is enabled.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-KeyboardEvent-code">code</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>Value of the physical key being pressed. The value is not affected by current keyboard layout or modifier state.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-KeyboardEvent-ctrlKey">ctrlKey</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Whether or not the CTRL key is pressed.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-KeyboardEvent-extensionId">extensionId</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The extension ID of the sender of this keyevent.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-KeyboardEvent-key">key</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>Value of the key being pressed</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-KeyboardEvent-keyCode">keyCode</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The deprecated HTML keyCode, which is system- and implementation-dependent numerical code signifying the unmodified identifier associated with the key pressed.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-KeyboardEvent-requestId">requestId</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>(Deprecated) The ID of the request. Use the <code translate="no" dir="ltr">requestId</code> param from the <code translate="no" dir="ltr">onKeyEvent</code> event instead.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-KeyboardEvent-shiftKey">shiftKey</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Whether or not the SHIFT key is pressed.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-KeyboardEvent-type">type</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-KeyboardEventType">KeyboardEventType</a></p></div>
-    </div><p>One of keyup or keydown.</p>
-</li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="type-KeyboardEventType" data-text="KeyboardEventType" tabindex="-1">KeyboardEventType</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 44+
-      </span></div>
-    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum_3" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
-      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"keyup"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"keydown"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><p></p>
-    </div>
-  </div><div>
-    <div class="notranslate">
-      <h3 id="type-MenuItem" data-text="MenuItem" tabindex="-1">MenuItem</h3>
-    </div><p>A menu item used by an input method to interact with the user from the language menu.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_3" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-MenuItem-checked">checked</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Indicates this item should be drawn with a check.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-MenuItem-enabled">enabled</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Indicates this item is enabled.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-MenuItem-id">id</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>String that will be passed to callbacks referencing this MenuItem.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-MenuItem-label">label</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Text displayed in the menu for this item.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-MenuItem-style">style</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-MenuItemStyle">MenuItemStyle</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The type of menu item.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-MenuItem-visible">visible</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Indicates this item is visible.</p>
-</li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="type-MenuItemStyle" data-text="MenuItemStyle" tabindex="-1">MenuItemStyle</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 44+
-      </span></div>
-    </div><p>The type of menu item. Radio buttons between separators are considered grouped.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum_4" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
-      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"check"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"radio"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"separator"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><p></p>
-    </div>
-  </div><div>
-    <div class="notranslate">
-      <h3 id="type-MenuParameters" data-text="MenuParameters" tabindex="-1">MenuParameters</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 88+
-      </span></div>
-    </div></div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_4" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-MenuParameters-engineID">engineID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>ID of the engine to use.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-MenuParameters-items">items</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-MenuItem">MenuItem</a>[]</p></div>
-    </div><p>MenuItems to add or update. They will be added in the order they exist in the array.</p>
-</li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="type-MouseButton" data-text="MouseButton" tabindex="-1">MouseButton</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 44+
-      </span></div>
-    </div><p>Which mouse buttons was clicked.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum_5" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
-      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"left"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"middle"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"right"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><p></p>
-    </div>
-  </div><div>
-    <div class="notranslate">
-      <h3 id="type-ScreenType" data-text="ScreenType" tabindex="-1">ScreenType</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 44+
-      </span></div>
-    </div><p>The screen type under which the IME is activated.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum_6" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
-      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"normal"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"login"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"lock"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"secondary-login"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><p></p>
-    </div>
-  </div><div>
-    <div class="notranslate">
-      <h3 id="type-UnderlineStyle" data-text="UnderlineStyle" tabindex="-1">UnderlineStyle</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 44+
-      </span></div>
-    </div><p>The type of the underline to modify this segment.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum_7" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
-      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"underline"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"doubleUnderline"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"noUnderline"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><p></p>
-    </div>
-  </div><div>
-    <div class="notranslate">
-      <h3 id="type-WindowPosition" data-text="WindowPosition" tabindex="-1">WindowPosition</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 44+
-      </span></div>
-    </div><p>Where to display the candidate window. If set to 'cursor', the window follows the cursor. If set to 'composition', the window is locked to the beginning of the composition.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="enum_8" data-text="Enum" tabindex="-1">Enum</h4><div class="dcc-code-sections__overline dcc-code-sections__label">
-      <p><span style="white-space: nowrap;"></span></p><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"cursor"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p><span style="white-space: nowrap;"><p class="dcc-code-sections__icon dcc-code-sections__icon--stringdcc-code-sections__enum"><span class="dcc-code-sections__value">"composition"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></span><p></p>
-    </div>
-  </div></div><h2 id="method" data-text="Methods" tabindex="-1">Methods</h2>
-  <div><div>
-    <div class="notranslate">
-      <h3 id="method-clearComposition" data-text="clearComposition()" tabindex="-1">clearComposition()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+chrome.input.ime.onFocus.addListener(function(context) {
+  context_id = context.contextID;
+});
+
+chrome.input.ime.onKeyEvent.addListener(
+  function(engineID, keyData) {
+    if (keyData.type == "keydown" && keyData.key.match(/^[a-z]$/)) {
+      chrome.input.ime.commitText({"contextID": context_id,
+                                    "text": keyData.key.toUpperCase()});
+      return true;
+    } else {
+      return false;
+    }
+  }
+);
+
+Types
+  
+    
+      AssistiveWindowButton
+    
+      Chrome 85+
+      
+    ID of buttons in assistive window.
+Enum
+      "undo"  "addToDictionary"  
+    
+  
+    
+      AssistiveWindowProperties
+    
+      Chrome 85+
+      
+    Properties of the assistive window.
+Properties
+    
+      announceString
+      string optional
+    Strings for ChromeVox to announce.
+
+    
+      type
+      "undo"  
+    
+    
+      visible
+      boolean
+    Sets true to show AssistiveWindow, sets false to hide.
+
+    
+    
+      AssistiveWindowType
+    
+      Chrome 85+
+      
+    Type of assistive window.
+
+      Value
+      "undo"  
+    
+    
+      AutoCapitalizeType
+    
+      Chrome 69+
+      
+    The auto-capitalize type of the text field.
+Enum
+      "characters"  "words"  "sentences"  
+    
+  
+    
+      InputContext
+    Describes an input Context
+Properties
+    
+      autoCapitalize
+      AutoCapitalizeType
+    
+      Chrome 69+
+      
+    The auto-capitalize type of the text field.
+
+    
+      autoComplete
+      boolean
+    Whether the text field wants auto-complete.
+
+    
+      autoCorrect
+      boolean
+    Whether the text field wants auto-correct.
+
+    
+      contextID
+      number
+    This is used to specify targets of text field operations. This ID becomes invalid as soon as onBlur is called.
+
+    
+      shouldDoLearning
+      boolean
+    
+      Chrome 68+
+      
+    Whether text entered into the text field should be used to improve typing suggestions for the user.
+
+    
+      spellCheck
+      boolean
+    Whether the text field wants spell-check.
+
+    
+      type
+      InputContextType
+    Type of value this text field edits, (Text, Number, URL, etc)
+
+    
+    
+      InputContextType
+    
+      Chrome 44+
+      
+    Type of value this text field edits, (Text, Number, URL, etc)
+Enum
+      "text"  "search"  "tel"  "url"  "email"  "number"  "password"  "null"  
+    
+  
+    
+      KeyboardEvent
+    See http://www.w3.org/TR/DOM-Level-3-Events/#events-KeyboardEvent
+Properties
+    
+      altKey
+      boolean optional
+    Whether or not the ALT key is pressed.
+
+    
+      altgrKey
+      boolean optional
+    
+      Chrome 79+
+      
+    Whether or not the ALTGR key is pressed.
+
+    
+      capsLock
+      boolean optional
+    Whether or not the CAPS_LOCK is enabled.
+
+    
+      code
+      string
+    Value of the physical key being pressed. The value is not affected by current keyboard layout or modifier state.
+
+    
+      ctrlKey
+      boolean optional
+    Whether or not the CTRL key is pressed.
+
+    
+      extensionId
+      string optional
+    The extension ID of the sender of this keyevent.
+
+    
+      key
+      string
+    Value of the key being pressed
+
+    
+      keyCode
+      number optional
+    The deprecated HTML keyCode, which is system- and implementation-dependent numerical code signifying the unmodified identifier associated with the key pressed.
+
+    
+      requestId
+      string optional
+    (Deprecated) The ID of the request. Use the requestId param from the onKeyEvent event instead.
+
+    
+      shiftKey
+      boolean optional
+    Whether or not the SHIFT key is pressed.
+
+    
+      type
+      KeyboardEventType
+    One of keyup or keydown.
+
+    
+    
+      KeyboardEventType
+    
+      Chrome 44+
+      
+    Enum
+      "keyup"  "keydown"  
+    
+  
+    
+      MenuItem
+    A menu item used by an input method to interact with the user from the language menu.
+Properties
+    
+      checked
+      boolean optional
+    Indicates this item should be drawn with a check.
+
+    
+      enabled
+      boolean optional
+    Indicates this item is enabled.
+
+    
+      id
+      string
+    String that will be passed to callbacks referencing this MenuItem.
+
+    
+      label
+      string optional
+    Text displayed in the menu for this item.
+
+    
+      style
+      MenuItemStyle optional
+    The type of menu item.
+
+    
+      visible
+      boolean optional
+    Indicates this item is visible.
+
+    
+    
+      MenuItemStyle
+    
+      Chrome 44+
+      
+    The type of menu item. Radio buttons between separators are considered grouped.
+Enum
+      "check"  "radio"  "separator"  
+    
+  
+    
+      MenuParameters
+    
+      Chrome 88+
+      
+    Properties
+    
+      engineID
+      string
+    ID of the engine to use.
+
+    
+      items
+      MenuItem[]
+    MenuItems to add or update. They will be added in the order they exist in the array.
+
+    
+    
+      MouseButton
+    
+      Chrome 44+
+      
+    Which mouse buttons was clicked.
+Enum
+      "left"  "middle"  "right"  
+    
+  
+    
+      ScreenType
+    
+      Chrome 44+
+      
+    The screen type under which the IME is activated.
+Enum
+      "normal"  "login"  "lock"  "secondary-login"  
+    
+  
+    
+      UnderlineStyle
+    
+      Chrome 44+
+      
+    The type of the underline to modify this segment.
+Enum
+      "underline"  "doubleUnderline"  "noUnderline"  
+    
+  
+    
+      WindowPosition
+    
+      Chrome 44+
+      
+    Where to display the candidate window. If set to 'cursor', the window follows the cursor. If set to 'composition', the window is locked to the beginning of the composition.
+Enum
+      "cursor"  "composition"  
+    
+  Methods
+  
+    
+      clearComposition()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">clearComposition</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">parameters</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Clear the current composition. If this extension does not own the active IME, this fails.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-clearComposition-parameters">parameters</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
-    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-clearComposition-parameters-contextID">contextID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><p>ID of the context where the composition will be cleared</p>
-</li></ul>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-clearComposition-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">success</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">boolean</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-clearComposition-callback-success">success</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;boolean&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 111+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.input.ime.clearComposition(  parameters: object,  callback?: function,)
+      Clear the current composition. If this extension does not own the active IME, this fails.
+Parameters
+    
+      parameters
+      object
+    
+    
+      contextID
+      number
+    ID of the context where the composition will be cleared
+
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (success: boolean) => void
+        
+    
+      success
+      boolean
+    
+    
+    Returns
+          
+            Promise<boolean>
+            
+      Chrome 111+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-commitText" data-text="commitText()" tabindex="-1">commitText()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      commitText()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">commitText</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">parameters</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Commits the provided text to the current input.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_1" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-commitText-parameters">parameters</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
-    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-commitText-parameters-contextID">contextID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><p>ID of the context where the text will be committed</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-commitText-parameters-text">text</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>The text to commit</p>
-</li></ul>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-commitText-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">success</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">boolean</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-commitText-callback-success">success</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_1" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;boolean&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 111+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.input.ime.commitText(  parameters: object,  callback?: function,)
+      Commits the provided text to the current input.
+Parameters
+    
+      parameters
+      object
+    
+    
+      contextID
+      number
+    ID of the context where the text will be committed
+
+    
+      text
+      string
+    The text to commit
+
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (success: boolean) => void
+        
+    
+      success
+      boolean
+    
+    
+    Returns
+          
+            Promise<boolean>
+            
+      Chrome 111+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-deleteSurroundingText" data-text="deleteSurroundingText()" tabindex="-1">deleteSurroundingText()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      deleteSurroundingText()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">deleteSurroundingText</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">parameters</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Deletes the text around the caret.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_2" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-deleteSurroundingText-parameters">parameters</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
-    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-deleteSurroundingText-parameters-contextID">contextID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><p>ID of the context where the surrounding text will be deleted.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-deleteSurroundingText-parameters-engineID">engineID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>ID of the engine receiving the event.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-deleteSurroundingText-parameters-length">length</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><p>The number of characters to be deleted</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-deleteSurroundingText-parameters-offset">offset</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><p>The offset from the caret position where deletion will start. This value can be negative.</p>
-</li></ul>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-deleteSurroundingText-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_2" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 111+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.input.ime.deleteSurroundingText(  parameters: object,  callback?: function,)
+      Deletes the text around the caret.
+Parameters
+    
+      parameters
+      object
+    
+    
+      contextID
+      number
+    ID of the context where the surrounding text will be deleted.
+
+    
+      engineID
+      string
+    ID of the engine receiving the event.
+
+    
+      length
+      number
+    The number of characters to be deleted
+
+    
+      offset
+      number
+    The offset from the caret position where deletion will start. This value can be negative.
+
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 111+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-hideInputView" data-text="hideInputView()" tabindex="-1">hideInputView()</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">hideInputView</span><span class="devsite-syntax-p">()</span></pre></devsite-code>
-      </span><p>Hides the input view window, which is popped up automatically by system. If the input view window is already hidden, this function will do nothing.</p>
-</div><div>
-    <div class="notranslate">
-      <h3 id="method-keyEventHandled" data-text="keyEventHandled()" tabindex="-1">keyEventHandled()</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">keyEventHandled</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">requestId</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">response</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">boolean</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Indicates that the key event received by onKeyEvent is handled. This should only be called if the onKeyEvent listener is asynchronous.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_3" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-keyEventHandled-requestId">requestId</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>Request id of the event that was handled. This should come from keyEvent.requestId</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-keyEventHandled-response">response</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
-    </div><p>True if the keystroke was handled, false if not</p>
-</li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="method-sendKeyEvents" data-text="sendKeyEvents()" tabindex="-1">sendKeyEvents()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      hideInputView()
+    
+        chrome.input.ime.hideInputView()
+      Hides the input view window, which is popped up automatically by system. If the input view window is already hidden, this function will do nothing.
+
+    
+      keyEventHandled()
+    
+        chrome.input.ime.keyEventHandled(  requestId: string,  response: boolean,)
+      Indicates that the key event received by onKeyEvent is handled. This should only be called if the onKeyEvent listener is asynchronous.
+Parameters
+    
+      requestId
+      string
+    Request id of the event that was handled. This should come from keyEvent.requestId
+
+    
+      response
+      boolean
+    True if the keystroke was handled, false if not
+
+    
+    
+      sendKeyEvents()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">sendKeyEvents</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">parameters</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Sends the key events. This function is expected to be used by virtual keyboards. When key(s) on a virtual keyboard is pressed by a user, this function is used to propagate that event to the system.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_4" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-sendKeyEvents-parameters">parameters</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
-    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-sendKeyEvents-parameters-contextID">contextID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><p>ID of the context where the key events will be sent, or zero to send key events to non-input field.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-sendKeyEvents-parameters-keyData">keyData</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-KeyboardEvent">KeyboardEvent</a>[]</p></div>
-    </div><p>Data on the key event.</p>
-</li></ul>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-sendKeyEvents-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_3" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 111+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.input.ime.sendKeyEvents(  parameters: object,  callback?: function,)
+      Sends the key events. This function is expected to be used by virtual keyboards. When key(s) on a virtual keyboard is pressed by a user, this function is used to propagate that event to the system.
+Parameters
+    
+      parameters
+      object
+    
+    
+      contextID
+      number
+    ID of the context where the key events will be sent, or zero to send key events to non-input field.
+
+    
+      keyData
+      KeyboardEvent[]
+    Data on the key event.
+
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 111+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-setAssistiveWindowButtonHighlighted" data-text="setAssistiveWindowButtonHighlighted()" tabindex="-1">setAssistiveWindowButtonHighlighted()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      setAssistiveWindowButtonHighlighted()
+    
+      
         Promise
-      </span><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 86+
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setAssistiveWindowButtonHighlighted</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">parameters</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Highlights/Unhighlights a button in an assistive window.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_5" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-setAssistiveWindowButtonHighlighted-parameters">parameters</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
-    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setAssistiveWindowButtonHighlighted-parameters-announceString">announceString</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The text for the screenreader to announce.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setAssistiveWindowButtonHighlighted-parameters-buttonID">buttonID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-AssistiveWindowButton">AssistiveWindowButton</a></p></div>
-    </div><p>The ID of the button</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setAssistiveWindowButtonHighlighted-parameters-contextID">contextID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><p>ID of the context owning the assistive window.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setAssistiveWindowButtonHighlighted-parameters-highlighted">highlighted</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
-    </div><p>Whether the button should be highlighted.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setAssistiveWindowButtonHighlighted-parameters-windowType">windowType</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string"><span class="dcc-code-sections__value">"undo"</span> <br> <span class="dcc-type--xsmall" style="white-space: initial"></span></p></div>
-    </div><p>The window type the button belongs to.</p>
-</li></ul>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-setAssistiveWindowButtonHighlighted-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_4" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 111+
-      </span></div>
-    </div>
-              <p>
+      Chrome 86+
+      
+    
+        chrome.input.ime.setAssistiveWindowButtonHighlighted(  parameters: object,  callback?: function,)
+      Highlights/Unhighlights a button in an assistive window.
+Parameters
+    
+      parameters
+      object
+    
+    
+      announceString
+      string optional
+    The text for the screenreader to announce.
+
+    
+      buttonID
+      AssistiveWindowButton
+    The ID of the button
+
+    
+      contextID
+      number
+    ID of the context owning the assistive window.
+
+    
+      highlighted
+      boolean
+    Whether the button should be highlighted.
+
+    
+      windowType
+      "undo"  
+    The window type the button belongs to.
+
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 111+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-setAssistiveWindowProperties" data-text="setAssistiveWindowProperties()" tabindex="-1">setAssistiveWindowProperties()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      setAssistiveWindowProperties()
+    
+      
         Promise
-      </span><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 85+
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setAssistiveWindowProperties</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">parameters</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Shows/Hides an assistive window with the given properties.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_6" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-setAssistiveWindowProperties-parameters">parameters</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
-    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setAssistiveWindowProperties-parameters-contextID">contextID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><p>ID of the context owning the assistive window.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setAssistiveWindowProperties-parameters-properties">properties</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-AssistiveWindowProperties">AssistiveWindowProperties</a></p></div>
-    </div><p>Properties of the assistive window.</p>
-</li></ul>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-setAssistiveWindowProperties-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">success</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">boolean</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-setAssistiveWindowProperties-callback-success">success</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_5" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;boolean&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 111+
-      </span></div>
-    </div>
-              <p>
+      Chrome 85+
+      
+    
+        chrome.input.ime.setAssistiveWindowProperties(  parameters: object,  callback?: function,)
+      Shows/Hides an assistive window with the given properties.
+Parameters
+    
+      parameters
+      object
+    
+    
+      contextID
+      number
+    ID of the context owning the assistive window.
+
+    
+      properties
+      AssistiveWindowProperties
+    Properties of the assistive window.
+
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (success: boolean) => void
+        
+    
+      success
+      boolean
+    
+    
+    Returns
+          
+            Promise<boolean>
+            
+      Chrome 111+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-setCandidates" data-text="setCandidates()" tabindex="-1">setCandidates()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      setCandidates()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setCandidates</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">parameters</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Sets the current candidate list. This fails if this extension doesn't own the active IME</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_7" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-setCandidates-parameters">parameters</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
-    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCandidates-parameters-candidates">candidates</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array">object[]</p></div>
-    </div><p>List of candidates to show in the candidate window</p>
-<div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCandidates-parameters-candidates-candidates-annotation">annotation</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Additional text describing the candidate</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCandidates-parameters-candidates-candidates-candidate">candidate</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>The candidate</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCandidates-parameters-candidates-candidates-id">id</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><p>The candidate's id</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCandidates-parameters-candidates-candidates-label">label</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Short string displayed to next to the candidate, often the shortcut key or index</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCandidates-parameters-candidates-candidates-parentId">parentId</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The id to add these candidates under</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCandidates-parameters-candidates-candidates-usage">usage</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The usage or detail description of word.</p>
-<div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCandidates-parameters-candidates-candidates-usage-body">body</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>The body string of detail description.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCandidates-parameters-candidates-candidates-usage-title">title</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>The title string of details description.</p>
-</li></ul>
-    </div></li></ul>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCandidates-parameters-contextID">contextID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><p>ID of the context that owns the candidate window.</p>
-</li></ul>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-setCandidates-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">success</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">boolean</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-setCandidates-callback-success">success</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_6" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;boolean&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 111+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.input.ime.setCandidates(  parameters: object,  callback?: function,)
+      Sets the current candidate list. This fails if this extension doesn't own the active IME
+Parameters
+    
+      parameters
+      object
+    
+    
+      candidates
+      object[]
+    List of candidates to show in the candidate window
+
+    
+      annotation
+      string optional
+    Additional text describing the candidate
+
+    
+      candidate
+      string
+    The candidate
+
+    
+      id
+      number
+    The candidate's id
+
+    
+      label
+      string optional
+    Short string displayed to next to the candidate, often the shortcut key or index
+
+    
+      parentId
+      number optional
+    The id to add these candidates under
+
+    
+      usage
+      object optional
+    The usage or detail description of word.
+
+    
+      body
+      string
+    The body string of detail description.
+
+    
+      title
+      string
+    The title string of details description.
+
+    
+    
+    
+      contextID
+      number
+    ID of the context that owns the candidate window.
+
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (success: boolean) => void
+        
+    
+      success
+      boolean
+    
+    
+    Returns
+          
+            Promise<boolean>
+            
+      Chrome 111+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-setCandidateWindowProperties" data-text="setCandidateWindowProperties()" tabindex="-1">setCandidateWindowProperties()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      setCandidateWindowProperties()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setCandidateWindowProperties</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">parameters</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Sets the properties of the candidate window. This fails if the extension doesn't own the active IME</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_8" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-setCandidateWindowProperties-parameters">parameters</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
-    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCandidateWindowProperties-parameters-engineID">engineID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>ID of the engine to set properties on.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCandidateWindowProperties-parameters-properties">properties</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
-    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCandidateWindowProperties-parameters-properties-auxiliaryText">auxiliaryText</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Text that is shown at the bottom of the candidate window.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCandidateWindowProperties-parameters-properties-auxiliaryTextVisible">auxiliaryTextVisible</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>True to display the auxiliary text, false to hide it.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCandidateWindowProperties-parameters-properties-currentCandidateIndex">currentCandidateIndex</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 84+
-      </span></div>
-    </div><p>The index of the current chosen candidate out of total candidates.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCandidateWindowProperties-parameters-properties-cursorVisible">cursorVisible</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>True to show the cursor, false to hide it.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCandidateWindowProperties-parameters-properties-pageSize">pageSize</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>The number of candidates to display per page.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCandidateWindowProperties-parameters-properties-totalCandidates">totalCandidates</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 84+
-      </span></div>
-    </div><p>The total number of candidates for the candidate window.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCandidateWindowProperties-parameters-properties-vertical">vertical</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>True if the candidate window should be rendered vertical, false to make it horizontal.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCandidateWindowProperties-parameters-properties-visible">visible</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>True to show the Candidate window, false to hide it.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCandidateWindowProperties-parameters-properties-windowPosition">windowPosition</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-WindowPosition">WindowPosition</a>&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Where to display the candidate window.</p>
-</li></ul>
-    </div></li></ul>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-setCandidateWindowProperties-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">success</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">boolean</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-setCandidateWindowProperties-callback-success">success</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_7" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;boolean&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 111+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.input.ime.setCandidateWindowProperties(  parameters: object,  callback?: function,)
+      Sets the properties of the candidate window. This fails if the extension doesn't own the active IME
+Parameters
+    
+      parameters
+      object
+    
+    
+      engineID
+      string
+    ID of the engine to set properties on.
+
+    
+      properties
+      object
+    
+    
+      auxiliaryText
+      string optional
+    Text that is shown at the bottom of the candidate window.
+
+    
+      auxiliaryTextVisible
+      boolean optional
+    True to display the auxiliary text, false to hide it.
+
+    
+      currentCandidateIndex
+      number optional
+    
+      Chrome 84+
+      
+    The index of the current chosen candidate out of total candidates.
+
+    
+      cursorVisible
+      boolean optional
+    True to show the cursor, false to hide it.
+
+    
+      pageSize
+      number optional
+    The number of candidates to display per page.
+
+    
+      totalCandidates
+      number optional
+    
+      Chrome 84+
+      
+    The total number of candidates for the candidate window.
+
+    
+      vertical
+      boolean optional
+    True if the candidate window should be rendered vertical, false to make it horizontal.
+
+    
+      visible
+      boolean optional
+    True to show the Candidate window, false to hide it.
+
+    
+      windowPosition
+      WindowPosition optional
+    Where to display the candidate window.
+
+    
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (success: boolean) => void
+        
+    
+      success
+      boolean
+    
+    
+    Returns
+          
+            Promise<boolean>
+            
+      Chrome 111+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-setComposition" data-text="setComposition()" tabindex="-1">setComposition()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      setComposition()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setComposition</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">parameters</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Set the current composition. If this extension does not own the active IME, this fails.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_9" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-setComposition-parameters">parameters</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
-    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setComposition-parameters-contextID">contextID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><p>ID of the context where the composition text will be set</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setComposition-parameters-cursor">cursor</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><p>Position in the text of the cursor.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setComposition-parameters-segments">segments</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array">object[]&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>List of segments and their associated types.</p>
-<div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setComposition-parameters-segments-segments-end">end</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><p>Index of the character to end this segment after.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setComposition-parameters-segments-segments-start">start</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><p>Index of the character to start this segment at</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setComposition-parameters-segments-segments-style">style</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-UnderlineStyle">UnderlineStyle</a></p></div>
-    </div><p>The type of the underline to modify this segment.</p>
-</li></ul>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setComposition-parameters-selectionEnd">selectionEnd</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Position in the text that the selection ends at.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setComposition-parameters-selectionStart">selectionStart</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Position in the text that the selection starts at.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setComposition-parameters-text">text</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>Text to set</p>
-</li></ul>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-setComposition-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">success</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">boolean</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-setComposition-callback-success">success</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_8" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;boolean&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 111+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.input.ime.setComposition(  parameters: object,  callback?: function,)
+      Set the current composition. If this extension does not own the active IME, this fails.
+Parameters
+    
+      parameters
+      object
+    
+    
+      contextID
+      number
+    ID of the context where the composition text will be set
+
+    
+      cursor
+      number
+    Position in the text of the cursor.
+
+    
+      segments
+      object[] optional
+    List of segments and their associated types.
+
+    
+      end
+      number
+    Index of the character to end this segment after.
+
+    
+      start
+      number
+    Index of the character to start this segment at
+
+    
+      style
+      UnderlineStyle
+    The type of the underline to modify this segment.
+
+    
+    
+      selectionEnd
+      number optional
+    Position in the text that the selection ends at.
+
+    
+      selectionStart
+      number optional
+    Position in the text that the selection starts at.
+
+    
+      text
+      string
+    Text to set
+
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (success: boolean) => void
+        
+    
+      success
+      boolean
+    
+    
+    Returns
+          
+            Promise<boolean>
+            
+      Chrome 111+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-setCursorPosition" data-text="setCursorPosition()" tabindex="-1">setCursorPosition()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      setCursorPosition()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setCursorPosition</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">parameters</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Set the position of the cursor in the candidate window. This is a no-op if this extension does not own the active IME.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_10" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-setCursorPosition-parameters">parameters</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
-    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCursorPosition-parameters-candidateID">candidateID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><p>ID of the candidate to select.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-setCursorPosition-parameters-contextID">contextID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><p>ID of the context that owns the candidate window.</p>
-</li></ul>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-setCursorPosition-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">success</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">boolean</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-setCursorPosition-callback-success">success</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_9" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;boolean&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 111+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.input.ime.setCursorPosition(  parameters: object,  callback?: function,)
+      Set the position of the cursor in the candidate window. This is a no-op if this extension does not own the active IME.
+Parameters
+    
+      parameters
+      object
+    
+    
+      candidateID
+      number
+    ID of the candidate to select.
+
+    
+      contextID
+      number
+    ID of the context that owns the candidate window.
+
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (success: boolean) => void
+        
+    
+      success
+      boolean
+    
+    
+    Returns
+          
+            Promise<boolean>
+            
+      Chrome 111+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-setMenuItems" data-text="setMenuItems()" tabindex="-1">setMenuItems()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      setMenuItems()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">setMenuItems</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">parameters</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-MenuParameters"><span class="devsite-syntax-kt">MenuParameters</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Adds the provided menu items to the language menu when this IME is active.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_11" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-setMenuItems-parameters">parameters</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-MenuParameters">MenuParameters</a></p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-setMenuItems-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_10" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 111+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.input.ime.setMenuItems(  parameters: MenuParameters,  callback?: function,)
+      Adds the provided menu items to the language menu when this IME is active.
+Parameters
+    
+      parameters
+      MenuParameters
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 111+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div><div>
-    <div class="notranslate">
-      <h3 id="method-updateMenuItems" data-text="updateMenuItems()" tabindex="-1">updateMenuItems()</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--green dcc-tag-pill" title="Can return its result via Promise in Manifest V3 or later.">
+              
+            
+        
+      
+    
+      updateMenuItems()
+    
+      
         Promise
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">updateMenuItems</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">parameters</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-MenuParameters"><span class="devsite-syntax-kt">MenuParameters</span></a><span class="devsite-syntax-p">,</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Updates the state of the MenuItems specified</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_12" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-updateMenuItems-parameters">parameters</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-MenuParameters">MenuParameters</a></p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-updateMenuItems-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p></li></ul>
-    </div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="returns_11" data-text="Returns" tabindex="-1">Returns</h4><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">Promise&lt;void&gt;</p></div>
-            </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 111+
-      </span></div>
-    </div>
-              <p>
+      
+    
+        chrome.input.ime.updateMenuItems(  parameters: MenuParameters,  callback?: function,)
+      Updates the state of the MenuItems specified
+Parameters
+    
+      parameters
+      MenuParameters
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 111+
+      
+    
+              
                 Promises are supported in Manifest V3 and later, but callbacks are provided for
                 backward compatibility. You cannot use both on the same function call. The
                 promise resolves with the same type that is passed to the callback.
-              </p>
-            </li>
-        </ul>
-      </div></div><h2 id="event" data-text="Events" tabindex="-1">Events</h2>
-  <div><div>
-    <div class="notranslate">
-      <h3 id="event-onActivate" data-text="onActivate" tabindex="-1">onActivate</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onActivate</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>This event is sent when an IME is activated. It signals that the IME will be receiving onKeyPress events.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_13" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-onActivate-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">engineID</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span>&nbsp;<span class="devsite-syntax-nx">screen</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-ScreenType"><span class="devsite-syntax-kt">ScreenType</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onActivate-callback-engineID">engineID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onActivate-callback-screen">screen</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-ScreenType">ScreenType</a></p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="event-onAssistiveWindowButtonClicked" data-text="onAssistiveWindowButtonClicked" tabindex="-1">onAssistiveWindowButtonClicked</h3>
-    </div><div class="">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 85+
-      </span></div>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onAssistiveWindowButtonClicked</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>This event is sent when a button in an assistive window is clicked.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_14" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-onAssistiveWindowButtonClicked-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">details</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onAssistiveWindowButtonClicked-callback-details">details</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
-    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-onAssistiveWindowButtonClicked-callback-details-buttonID">buttonID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-AssistiveWindowButton">AssistiveWindowButton</a></p></div>
-    </div><p>The ID of the button clicked.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-onAssistiveWindowButtonClicked-callback-details-windowType">windowType</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-AssistiveWindowType">AssistiveWindowType</a></p></div>
-    </div><p>The type of the assistive window.</p>
-</li></ul>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="event-onBlur" data-text="onBlur" tabindex="-1">onBlur</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onBlur</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>This event is sent when focus leaves a text box. It is sent to all extensions that are listening to this event, and enabled by the user.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_15" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-onBlur-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">contextID</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">number</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onBlur-callback-contextID">contextID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="event-onCandidateClicked" data-text="onCandidateClicked" tabindex="-1">onCandidateClicked</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onCandidateClicked</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>This event is sent if this extension owns the active IME.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_16" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-onCandidateClicked-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">engineID</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span>&nbsp;<span class="devsite-syntax-nx">candidateID</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">number</span><span class="devsite-syntax-p">,</span>&nbsp;<span class="devsite-syntax-nx">button</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-MouseButton"><span class="devsite-syntax-kt">MouseButton</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onCandidateClicked-callback-engineID">engineID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onCandidateClicked-callback-candidateID">candidateID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onCandidateClicked-callback-button">button</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-MouseButton">MouseButton</a></p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="event-onDeactivated" data-text="onDeactivated" tabindex="-1">onDeactivated</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onDeactivated</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>This event is sent when an IME is deactivated. It signals that the IME will no longer be receiving onKeyPress events.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_17" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-onDeactivated-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">engineID</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onDeactivated-callback-engineID">engineID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="event-onFocus" data-text="onFocus" tabindex="-1">onFocus</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onFocus</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>This event is sent when focus enters a text box. It is sent to all extensions that are listening to this event, and enabled by the user.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_18" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-onFocus-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">context</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-InputContext"><span class="devsite-syntax-kt">InputContext</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onFocus-callback-context">context</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-InputContext">InputContext</a></p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="event-onInputContextUpdate" data-text="onInputContextUpdate" tabindex="-1">onInputContextUpdate</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onInputContextUpdate</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>This event is sent when the properties of the current InputContext change, such as the the type. It is sent to all extensions that are listening to this event, and enabled by the user.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_19" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-onInputContextUpdate-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">context</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-InputContext"><span class="devsite-syntax-kt">InputContext</span></a><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onInputContextUpdate-callback-context">context</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-InputContext">InputContext</a></p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="event-onKeyEvent" data-text="onKeyEvent" tabindex="-1">onKeyEvent</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onKeyEvent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Fired when a key event is sent from the operating system. The event will be sent to the extension if this extension owns the active IME. The listener function should return true if the event was handled false if it was not. If the event will be evaluated asynchronously, this function must return undefined and the IME must later call keyEventHandled() with the result.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_20" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-onKeyEvent-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">engineID</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span>&nbsp;<span class="devsite-syntax-nx">keyData</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-KeyboardEvent"><span class="devsite-syntax-kt">KeyboardEvent</span></a><span class="devsite-syntax-p">,</span>&nbsp;<span class="devsite-syntax-nx">requestId</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-kt">boolean</span>&nbsp;<span class="devsite-syntax-o">|</span>&nbsp;<span class="devsite-syntax-kc">undefined</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onKeyEvent-callback-engineID">engineID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onKeyEvent-callback-keyData">keyData</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object"><a href="#type-KeyboardEvent">KeyboardEvent</a></p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onKeyEvent-callback-requestId">requestId</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li></ul>
-    </div><div class="dcc-code-sections"><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-code-sections__label" id="method-onKeyEvent-callback">returns</div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--uniondcc-code-sections__enum">boolean&nbsp;|&nbsp;undefined</p></div>
-            </div></li>
-        </ul>
-      </div></li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="event-onMenuItemActivated" data-text="onMenuItemActivated" tabindex="-1">onMenuItemActivated</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onMenuItemActivated</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Called when the user selects a menu item</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_21" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-onMenuItemActivated-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">engineID</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span>&nbsp;<span class="devsite-syntax-nx">name</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onMenuItemActivated-callback-engineID">engineID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onMenuItemActivated-callback-name">name</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="event-onReset" data-text="onReset" tabindex="-1">onReset</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onReset</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>This event is sent when chrome terminates ongoing text input session.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_22" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-onReset-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">engineID</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onReset-callback-engineID">engineID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li></ul>
-    </div></li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="event-onSurroundingTextChanged" data-text="onSurroundingTextChanged" tabindex="-1">onSurroundingTextChanged</h3>
-    </div><span class="dcc-code-sections__callback dcc-type--xsmall">
-        <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">input</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ime</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onSurroundingTextChanged</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">(</span><br>&nbsp;&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">,<br>)</span></pre></devsite-code>
-      </span><p>Called when the editable string around caret is changed or when the caret position is moved. The text length is limited to 100 characters for each back and forth direction.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="parameters_23" data-text="Parameters" tabindex="-1">Parameters</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-onSurroundingTextChanged-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">engineID</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">,</span>&nbsp;<span class="devsite-syntax-nx">surroundingInfo</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">object</span><span class="devsite-syntax-p">)&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onSurroundingTextChanged-callback-engineID">engineID</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-onSurroundingTextChanged-callback-surroundingInfo">surroundingInfo</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">object</p></div>
-    </div><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-onSurroundingTextChanged-callback-surroundingInfo-anchor">anchor</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><p>The beginning position of the selection. This value indicates caret position if there is no selection.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-onSurroundingTextChanged-callback-surroundingInfo-focus">focus</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><p>The ending position of the selection. This value indicates caret position if there is no selection.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-onSurroundingTextChanged-callback-surroundingInfo-offset">offset</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number</p></div>
-    </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 46+
-      </span></div>
-    </div><p>The offset position of <code translate="no" dir="ltr">text</code>. Since <code translate="no" dir="ltr">text</code> only includes a subset of text around the cursor, offset indicates the absolute position of the first character of <code translate="no" dir="ltr">text</code>.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-onSurroundingTextChanged-callback-surroundingInfo-text">text</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string</p></div>
-    </div><p>The text around the cursor. This is only a subset of all text in the input field.</p>
-</li></ul>
-    </div></li></ul>
-    </div></li></ul>
-    </div></div></div>
-<p></p>
+              
+            
+        
+      Events
+  
+    
+      onActivate
+    
+        chrome.input.ime.onActivate.addListener(  callback: function,)
+      This event is sent when an IME is activated. It signals that the IME will be receiving onKeyPress events.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (engineID: string, screen: ScreenType) => void
+        
+    
+      engineID
+      string
+    
+    
+      screen
+      ScreenType
+    
+    
+    
+    
+      onAssistiveWindowButtonClicked
+    
+      Chrome 85+
+      
+    
+        chrome.input.ime.onAssistiveWindowButtonClicked.addListener(  callback: function,)
+      This event is sent when a button in an assistive window is clicked.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (details: object) => void
+        
+    
+      details
+      object
+    
+    
+      buttonID
+      AssistiveWindowButton
+    The ID of the button clicked.
+
+    
+      windowType
+      AssistiveWindowType
+    The type of the assistive window.
+
+    
+    
+    
+    
+      onBlur
+    
+        chrome.input.ime.onBlur.addListener(  callback: function,)
+      This event is sent when focus leaves a text box. It is sent to all extensions that are listening to this event, and enabled by the user.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (contextID: number) => void
+        
+    
+      contextID
+      number
+    
+    
+    
+    
+      onCandidateClicked
+    
+        chrome.input.ime.onCandidateClicked.addListener(  callback: function,)
+      This event is sent if this extension owns the active IME.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (engineID: string, candidateID: number, button: MouseButton) => void
+        
+    
+      engineID
+      string
+    
+    
+      candidateID
+      number
+    
+    
+      button
+      MouseButton
+    
+    
+    
+    
+      onDeactivated
+    
+        chrome.input.ime.onDeactivated.addListener(  callback: function,)
+      This event is sent when an IME is deactivated. It signals that the IME will no longer be receiving onKeyPress events.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (engineID: string) => void
+        
+    
+      engineID
+      string
+    
+    
+    
+    
+      onFocus
+    
+        chrome.input.ime.onFocus.addListener(  callback: function,)
+      This event is sent when focus enters a text box. It is sent to all extensions that are listening to this event, and enabled by the user.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (context: InputContext) => void
+        
+    
+      context
+      InputContext
+    
+    
+    
+    
+      onInputContextUpdate
+    
+        chrome.input.ime.onInputContextUpdate.addListener(  callback: function,)
+      This event is sent when the properties of the current InputContext change, such as the the type. It is sent to all extensions that are listening to this event, and enabled by the user.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (context: InputContext) => void
+        
+    
+      context
+      InputContext
+    
+    
+    
+    
+      onKeyEvent
+    
+        chrome.input.ime.onKeyEvent.addListener(  callback: function,)
+      Fired when a key event is sent from the operating system. The event will be sent to the extension if this extension owns the active IME. The listener function should return true if the event was handled false if it was not. If the event will be evaluated asynchronously, this function must return undefined and the IME must later call keyEventHandled() with the result.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (engineID: string, keyData: KeyboardEvent, requestId: string) => boolean | undefined
+        
+    
+      engineID
+      string
+    
+    
+      keyData
+      KeyboardEvent
+    
+    
+      requestId
+      string
+    
+    
+          
+            returnsboolean | undefined
+            
+        
+      
+    
+    
+      onMenuItemActivated
+    
+        chrome.input.ime.onMenuItemActivated.addListener(  callback: function,)
+      Called when the user selects a menu item
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (engineID: string, name: string) => void
+        
+    
+      engineID
+      string
+    
+    
+      name
+      string
+    
+    
+    
+    
+      onReset
+    
+        chrome.input.ime.onReset.addListener(  callback: function,)
+      This event is sent when chrome terminates ongoing text input session.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (engineID: string) => void
+        
+    
+      engineID
+      string
+    
+    
+    
+    
+      onSurroundingTextChanged
+    
+        chrome.input.ime.onSurroundingTextChanged.addListener(  callback: function,)
+      Called when the editable string around caret is changed or when the caret position is moved. The text length is limited to 100 characters for each back and forth direction.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (engineID: string, surroundingInfo: object) => void
+        
+    
+      engineID
+      string
+    
+    
+      surroundingInfo
+      object
+    
+    
+      anchor
+      number
+    The beginning position of the selection. This value indicates caret position if there is no selection.
+
+    
+      focus
+      number
+    The ending position of the selection. This value indicates caret position if there is no selection.
+
+    
+      offset
+      number
+    
+      Chrome 46+
+      
+    The offset position of text. Since text only includes a subset of text around the cursor, offset indicates the absolute position of the first character of text.
+
+    
+      text
+      string
+    The text around the cursor. This is only a subset of all text in the input field.
+
+    
+    
+    
+
   
 
   

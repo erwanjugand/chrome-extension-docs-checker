@@ -2,512 +2,512 @@
 
   
     
-<style>.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}</style>
+.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}
 
 
 
 
-<p></p>
 
-<p></p><h2 class="dcc-api-title" data-text="Description" id="description" tabindex="-1">Description</h2>
-<div class="dcc-reference"><p>The <code translate="no" dir="ltr">chrome.events</code> namespace contains common types used by APIs dispatching events to notify you when something interesting happens.</p></div><p></p>
 
-<p></p>
+Description
+The chrome.events namespace contains common types used by APIs dispatching events to notify you when something interesting happens.
 
-<p></p>
 
-<p></p>
 
-<h2 id="concepts_and_usage" data-text="Concepts and usage" tabindex="-1">Concepts and usage</h2>
 
-<p>An <code translate="no" dir="ltr">Event</code> is an object that lets you be notified when something interesting happens. Here's an
-example of using the <code translate="no" dir="ltr">chrome.alarms.onAlarm</code> event to be notified whenever an alarm has elapsed:</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">chrome</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">alarms</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onAlarm</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addListener</span><span class="devsite-syntax-p">((</span><span class="devsite-syntax-nx">alarm</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">appendToLog</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-sb">`alarms.onAlarm -- name: </span><span class="devsite-syntax-si">${</span><span class="devsite-syntax-nx">alarm</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">name</span><span class="devsite-syntax-si">}</span><span class="devsite-syntax-sb">, scheduledTime: </span><span class="devsite-syntax-si">${</span><span class="devsite-syntax-nx">alarm</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">scheduledTime</span><span class="devsite-syntax-si">}</span><span class="devsite-syntax-sb">`</span><span class="devsite-syntax-p">);</span>
-<span class="devsite-syntax-p">});</span>
-</code></pre></devsite-code>
-<p>As the example shows, you register for notification using <code translate="no" dir="ltr">addListener()</code>. The argument to
-<code translate="no" dir="ltr">addListener()</code> is always a function that you define to handle the event, but the parameters to the
-function depend on which event you're handling. Checking the documentation for <a href="/docs/extensions/reference/api/alarms#event-onAlarm"><code translate="no" dir="ltr">alarms.onAlarm</code></a>,
-you can see that the function has a single parameter: an <a href="/docs/extensions/reference/api/alarms#type-Alarm"><code translate="no" dir="ltr">alarms.Alarm</code></a> object that has details
-about the elapsed alarm.</p>
 
-<p>Example APIs using Events: <a href="/docs/extensions/reference/api/alarms">alarms</a>, <a href="/docs/extensions/reference/api/i18n">i18n</a>, <a href="/docs/extensions/reference/api/identity">identity</a>, <a href="/docs/extensions/reference/api/runtime">runtime</a>. Most <a href="/docs/extensions/reference/api">chrome
-APIs</a> do.</p>
 
-<h3 id="declarative_event_handlers" data-text="Declarative Event Handlers" tabindex="-1">Declarative Event Handlers</h3>
 
-<p>The declarative event handlers provide a means to define rules consisting of declarative conditions
+Concepts and usage
+
+An Event is an object that lets you be notified when something interesting happens. Here's an
+example of using the chrome.alarms.onAlarm event to be notified whenever an alarm has elapsed:
+chrome.alarms.onAlarm.addListener((alarm) => {
+  appendToLog(`alarms.onAlarm -- name: ${alarm.name}, scheduledTime: ${alarm.scheduledTime}`);
+});
+
+As the example shows, you register for notification using addListener(). The argument to
+addListener() is always a function that you define to handle the event, but the parameters to the
+function depend on which event you're handling. Checking the documentation for alarms.onAlarm,
+you can see that the function has a single parameter: an alarms.Alarm object that has details
+about the elapsed alarm.
+
+Example APIs using Events: alarms, i18n, identity, runtime. Most chrome
+APIs do.
+
+Declarative Event Handlers
+
+The declarative event handlers provide a means to define rules consisting of declarative conditions
 and actions. Conditions are evaluated in the browser rather than the JavaScript engine which reduces
-roundtrip latencies and allows for very high efficiency.</p>
+roundtrip latencies and allows for very high efficiency.
 
-<p>Declarative event handlers are used for example in the
-<a href="/docs/extensions/reference/api/declarativeContent">Declarative Content API</a>. This page describes the underlying concepts of all declarative event
-handlers.</p>
+Declarative event handlers are used for example in the
+Declarative Content API. This page describes the underlying concepts of all declarative event
+handlers.
 
-<h4 id="rules" data-text="Rules" tabindex="-1">Rules</h4>
+Rules
 
-<p>The simplest possible rule consists of one or more conditions and one or more actions:</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">rule</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">conditions</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-cm">/* my conditions */</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">],</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">actions</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-cm">/* my actions */</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">]</span>
-<span class="devsite-syntax-p">};</span>
-</code></pre></devsite-code>
-<p>If any of the conditions is fulfilled, all actions are executed.</p>
+The simplest possible rule consists of one or more conditions and one or more actions:
+const rule = {
+  conditions: [ /* my conditions */ ],
+  actions: [ /* my actions */ ]
+};
 
-<p>In addition to conditions and actions you may give each rule an identifier, which simplifies
+If any of the conditions is fulfilled, all actions are executed.
+
+In addition to conditions and actions you may give each rule an identifier, which simplifies
 unregistering previously registered rules, and a priority to define precedences among rules.
 Priorities are only considered if rules conflict each other or need to be executed in a specific
-order. Actions are executed in descending order of the priority of their rules.</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">rule</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">id</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"my rule"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// optional, will be generated if not set.</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">priority</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">100</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// optional, defaults to 100.</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">conditions</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-cm">/* my conditions */</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">],</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">actions</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-cm">/* my actions */</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">]</span>
-<span class="devsite-syntax-p">};</span>
-</code></pre></devsite-code>
-<h4 id="event_objects" data-text="Event objects" tabindex="-1">Event objects</h4>
+order. Actions are executed in descending order of the priority of their rules.
+const rule = {
+  id: "my rule",  // optional, will be generated if not set.
+  priority: 100,  // optional, defaults to 100.
+  conditions: [ /* my conditions */ ],
+  actions: [ /* my actions */ ]
+};
 
-<p>Event objects may support rules. These event objects don't call a callback function when
+Event objects
+
+Event objects may support rules. These event objects don't call a callback function when
 events happen but test whether any registered rule has at least one fulfilled condition and execute
 the actions associated with this rule. Event objects supporting the declarative API have three
-relevant methods: <a href="#method-Event-addRules"><code translate="no" dir="ltr">events.Event.addRules()</code></a>, <a href="#method-Event-removeRules"><code translate="no" dir="ltr">events.Event.removeRules()</code></a>, and
-<a href="#method-Event-getRules"><code translate="no" dir="ltr">events.Event.getRules()</code></a>.</p>
+relevant methods: events.Event.addRules(), events.Event.removeRules(), and
+events.Event.getRules().
 
-<h4 id="add_rules" data-text="Add rules" tabindex="-1">Add rules</h4>
+Add rules
 
-<p>To add rules call the <code translate="no" dir="ltr">addRules()</code> function of the event object. It takes an array of rule instances
-as its first parameter and a callback function that is called on completion.</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">rule_list</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-nx">rule1</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">rule2</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">...];</span>
-<span class="devsite-syntax-nx">addRules</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">rule_list</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">details</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{...});</span>
-</code></pre></devsite-code>
-<p>If the rules were inserted successfully, the <code translate="no" dir="ltr">details</code> parameter contains an array of inserted rules
-appearing in the same order as in the passed <code translate="no" dir="ltr">rule_list</code> where the optional parameters <code translate="no" dir="ltr">id</code> and
-<code translate="no" dir="ltr">priority</code> were filled with the generated values. If any rule is invalid, for example, because it contained
-an invalid condition or action, none of the rules are added and the <a href="/docs/extensions/reference/api/runtime#property-lastError">runtime.lastError</a> variable
-is set when the callback function is called. Each rule in <code translate="no" dir="ltr">rule_list</code> must contain a unique
-identifier that is not already used by another rule or an empty identifier.</p>
+To add rules call the addRules() function of the event object. It takes an array of rule instances
+as its first parameter and a callback function that is called on completion.
+const rule_list = [rule1, rule2, ...];
+addRules(rule_list, (details) => {...});
 
-<aside class="note"><b>Note:</b> Rules are persistent across browsing sessions. Therefore, you should install rules during
-extension installation time using the <a href="/docs/extensions/reference/api/runtime#event-onInstalled"><code translate="no" dir="ltr">runtime.onInstalled</code></a> event. Note that this event is
+If the rules were inserted successfully, the details parameter contains an array of inserted rules
+appearing in the same order as in the passed rule_list where the optional parameters id and
+priority were filled with the generated values. If any rule is invalid, for example, because it contained
+an invalid condition or action, none of the rules are added and the runtime.lastError variable
+is set when the callback function is called. Each rule in rule_list must contain a unique
+identifier that is not already used by another rule or an empty identifier.
+
+Note: Rules are persistent across browsing sessions. Therefore, you should install rules during
+extension installation time using the runtime.onInstalled event. Note that this event is
 also triggered when an extension is updated. Therefore, you should first clear previously installed
-rules and then register new rules.</aside>
+rules and then register new rules.
 
-<h4 id="remove_rules" data-text="Remove rules" tabindex="-1">Remove rules</h4>
+Remove rules
 
-<p>To remove rules call the <code translate="no" dir="ltr">removeRules()</code> function. It accepts an optional array of rule identifiers
-as its first parameter and a callback function as its second parameter.</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">rule_ids</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-s2">"id1"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"id2"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">...];</span>
-<span class="devsite-syntax-nx">removeRules</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">rule_ids</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{...});</span>
-</code></pre></devsite-code>
-<p>If <code translate="no" dir="ltr">rule_ids</code> is an array of identifiers, all rules having identifiers listed in the array are
-removed. If <code translate="no" dir="ltr">rule_ids</code> lists an identifier, that is unknown, this identifier is silently ignored. If
-<code translate="no" dir="ltr">rule_ids</code> is <code translate="no" dir="ltr">undefined</code>, all registered rules of this extension are removed. The <code translate="no" dir="ltr">callback()</code>
-function is called when the rules were removed.</p>
+To remove rules call the removeRules() function. It accepts an optional array of rule identifiers
+as its first parameter and a callback function as its second parameter.
+const rule_ids = ["id1", "id2", ...];
+removeRules(rule_ids, () => {...});
 
-<h4 id="retrieve_rules" data-text="Retrieve rules" tabindex="-1">Retrieve rules</h4>
+If rule_ids is an array of identifiers, all rules having identifiers listed in the array are
+removed. If rule_ids lists an identifier, that is unknown, this identifier is silently ignored. If
+rule_ids is undefined, all registered rules of this extension are removed. The callback()
+function is called when the rules were removed.
 
-<p>To retrieve a list of registered rules, call the <code translate="no" dir="ltr">getRules()</code> function. It accepts an
-optional array of rule identifiers with the same semantics as <code translate="no" dir="ltr">removeRules()</code> and a callback function.</p>
-<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">rule_ids</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-s2">"id1"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"id2"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">...];</span>
-<span class="devsite-syntax-nx">getRules</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">rule_ids</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">details</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{...});</span>
-</code></pre></devsite-code>
-<p>The <code translate="no" dir="ltr">details</code> parameter passed to the <code translate="no" dir="ltr">callback()</code> function refers to an array of rules including
-filled optional parameters.</p>
+Retrieve rules
 
-<h4 id="performance" data-text="Performance" tabindex="-1">Performance</h4>
+To retrieve a list of registered rules, call the getRules() function. It accepts an
+optional array of rule identifiers with the same semantics as removeRules() and a callback function.
+const rule_ids = ["id1", "id2", ...];
+getRules(rule_ids, (details) => {...});
 
-<p>To achieve maximum performance, you should keep the following guidelines in mind.</p>
+The details parameter passed to the callback() function refers to an array of rules including
+filled optional parameters.
 
-<p><strong>Register and unregister rules in bulk.</strong> After each registration or unregistration, Chrome needs to
-update internal data structures. This update is an expensive operation.</p>
+Performance
 
-<div class="dcc-compare">
-  <div class="compare-worse">Instead of</div>
-  <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JSON"><span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">nst</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">rule</span><span class="devsite-syntax-mi">1</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-err">...</span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-err">;</span>
-<span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">nst</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">rule</span><span class="devsite-syntax-mi">2</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-err">...</span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-err">;</span>
-<span class="devsite-syntax-err">chrome.declara</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">iveWebReques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">.o</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">Reques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">.addRules(</span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-err">rule</span><span class="devsite-syntax-mi">1</span><span class="devsite-syntax-p">]</span><span class="devsite-syntax-err">);</span>
-<span class="devsite-syntax-err">chrome.declara</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">iveWebReques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">.o</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">Reques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">.addRules(</span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-err">rule</span><span class="devsite-syntax-mi">2</span><span class="devsite-syntax-p">]</span><span class="devsite-syntax-err">);</span></pre></devsite-code>
-</div>
+To achieve maximum performance, you should keep the following guidelines in mind.
 
-<div class="dcc-compare">
-  <div class="compare-better">Prefer</div>
-  <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JSON"><span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">nst</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">rule</span><span class="devsite-syntax-mi">1</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-err">...</span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-err">;</span>
-<span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">nst</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">rule</span><span class="devsite-syntax-mi">2</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-err">...</span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-err">;</span>
-<span class="devsite-syntax-err">chrome.declara</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">iveWebReques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">.o</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">Reques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">.addRules(</span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-err">rule</span><span class="devsite-syntax-mi">1</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">rule</span><span class="devsite-syntax-mi">2</span><span class="devsite-syntax-p">]</span><span class="devsite-syntax-err">);</span></pre></devsite-code>
-</div>
+Register and unregister rules in bulk. After each registration or unregistration, Chrome needs to
+update internal data structures. This update is an expensive operation.
 
-<p><strong>Prefer substring matching over regular expressions in an <a href="#type-UrlFilter">events.UrlFilter</a>.</strong>
-Substring based matching is extremely fast.</p>
 
-<div class="dcc-compare">
-  <div class="compare-worse">Instead of</div>
-  <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JSON"><span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">nst</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">ma</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">ch</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">ne</span><span class="devsite-syntax-err">w</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">chrome.declara</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">iveWebReques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">.Reques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">Ma</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">cher(</span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">url</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-err">urlMa</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">ches</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"example.com/[^?]*foo"</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-p">}</span><span class="devsite-syntax-err">);</span></pre></devsite-code>
-</div>
+  Instead of
+  const rule1 = {...};
+const rule2 = {...};
+chrome.declarativeWebRequest.onRequest.addRules([rule1]);
+chrome.declarativeWebRequest.onRequest.addRules([rule2]);
 
-<div class="dcc-compare">
-  <div class="compare-better">Prefer</div>
-  <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JSON"><span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">nst</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">ma</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">ch</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">ne</span><span class="devsite-syntax-err">w</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">chrome.declara</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">iveWebReques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">.Reques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">Ma</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">cher(</span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">url</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-err">hos</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">Su</span><span class="devsite-syntax-kc">ff</span><span class="devsite-syntax-err">ix</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"example.com"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">pa</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">hCo</span><span class="devsite-syntax-kc">nta</span><span class="devsite-syntax-err">i</span><span class="devsite-syntax-kc">ns</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s2">"foo"</span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-p">}</span><span class="devsite-syntax-err">);</span></pre></devsite-code>
-</div>
 
-<p>If there are many rules that share the same actions, merge the rules into one.
+
+  Prefer
+  const rule1 = {...};
+const rule2 = {...};
+chrome.declarativeWebRequest.onRequest.addRules([rule1, rule2]);
+
+
+Prefer substring matching over regular expressions in an events.UrlFilter.
+Substring based matching is extremely fast.
+
+
+  Instead of
+  const match = new chrome.declarativeWebRequest.RequestMatcher({
+  url: {urlMatches: "example.com/[^?]*foo" }
+});
+
+
+
+  Prefer
+  const match = new chrome.declarativeWebRequest.RequestMatcher({
+  url: {hostSuffix: "example.com", pathContains: "foo"}
+});
+
+
+If there are many rules that share the same actions, merge the rules into one.
 Rules trigger their actions as soon as a single condition is fulfilled. This speeds up the
-matching and reduces memory consumption for duplicate action sets.</p>
+matching and reduces memory consumption for duplicate action sets.
 
-<div class="dcc-compare">
-  <div class="compare-worse">Instead of</div>
-  <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JSON"><span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">nst</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">di</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">io</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-mi">1</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">ne</span><span class="devsite-syntax-err">w</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">chrome.declara</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">iveWebReques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">.Reques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">Ma</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">cher(</span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">url</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">hos</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">Su</span><span class="devsite-syntax-kc">ff</span><span class="devsite-syntax-err">ix</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">'example.com'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-p">}</span><span class="devsite-syntax-err">);</span>
-<span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">nst</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">di</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">io</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-mi">2</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">ne</span><span class="devsite-syntax-err">w</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">chrome.declara</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">iveWebReques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">.Reques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">Ma</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">cher(</span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">url</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">hos</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">Su</span><span class="devsite-syntax-kc">ff</span><span class="devsite-syntax-err">ix</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">'</span><span class="devsite-syntax-kc">f</span><span class="devsite-syntax-err">oobar.com'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-p">}</span><span class="devsite-syntax-err">);</span>
-<span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">nst</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">rule</span><span class="devsite-syntax-mi">1</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">di</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">io</span><span class="devsite-syntax-kc">ns</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">di</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">io</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-mi">1</span><span class="devsite-syntax-p">],</span>
-<span class="devsite-syntax-w">                </span><span class="devsite-syntax-err">ac</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">io</span><span class="devsite-syntax-kc">ns</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-kc">ne</span><span class="devsite-syntax-err">w</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">chrome.declara</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">iveWebReques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">.Ca</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">celReques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">()</span><span class="devsite-syntax-p">]</span>
-<span class="devsite-syntax-w">              </span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-err">;</span>
-<span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">nst</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">rule</span><span class="devsite-syntax-mi">2</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">di</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">io</span><span class="devsite-syntax-kc">ns</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">di</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">io</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-mi">2</span><span class="devsite-syntax-p">],</span>
-<span class="devsite-syntax-w">                </span><span class="devsite-syntax-err">ac</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">io</span><span class="devsite-syntax-kc">ns</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-kc">ne</span><span class="devsite-syntax-err">w</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">chrome.declara</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">iveWebReques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">.Ca</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">celReques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">()</span><span class="devsite-syntax-p">]</span>
-<span class="devsite-syntax-w">              </span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-err">;</span>
-<span class="devsite-syntax-err">chrome.declara</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">iveWebReques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">.o</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">Reques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">.addRules(</span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-err">rule</span><span class="devsite-syntax-mi">1</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">rule</span><span class="devsite-syntax-mi">2</span><span class="devsite-syntax-p">]</span><span class="devsite-syntax-err">);</span></pre></devsite-code>
-</div>
 
-<div class="dcc-compare">
-  <div class="compare-better">Prefer</div>
-  <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JSON"><span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">nst</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">di</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">io</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-mi">1</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">ne</span><span class="devsite-syntax-err">w</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">chrome.declara</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">iveWebReques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">.Reques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">Ma</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">cher(</span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">url</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">hos</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">Su</span><span class="devsite-syntax-kc">ff</span><span class="devsite-syntax-err">ix</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">'example.com'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-p">}</span><span class="devsite-syntax-err">);</span>
-<span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">nst</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">di</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">io</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-mi">2</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">ne</span><span class="devsite-syntax-err">w</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">chrome.declara</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">iveWebReques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">.Reques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">Ma</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">cher(</span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">url</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">hos</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">Su</span><span class="devsite-syntax-kc">ff</span><span class="devsite-syntax-err">ix</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">'</span><span class="devsite-syntax-kc">f</span><span class="devsite-syntax-err">oobar.com'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-p">}</span><span class="devsite-syntax-err">);</span>
-<span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">nst</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">rule</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">di</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">io</span><span class="devsite-syntax-kc">ns</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">di</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">io</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-mi">1</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">co</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">di</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">io</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-mi">2</span><span class="devsite-syntax-p">],</span>
-<span class="devsite-syntax-w">              </span><span class="devsite-syntax-err">ac</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">io</span><span class="devsite-syntax-kc">ns</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-kc">ne</span><span class="devsite-syntax-err">w</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">chrome.declara</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">iveWebReques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">.Ca</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">celReques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">()</span><span class="devsite-syntax-p">]</span>
-<span class="devsite-syntax-w">             </span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-err">;</span>
-<span class="devsite-syntax-err">chrome.declara</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">iveWebReques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">.o</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">Reques</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">.addRules(</span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-err">rule</span><span class="devsite-syntax-p">]</span><span class="devsite-syntax-err">);</span></pre></devsite-code>
-</div>
+  Instead of
+  const condition1 = new chrome.declarativeWebRequest.RequestMatcher({
+  url: { hostSuffix: 'example.com' }
+});
+const condition2 = new chrome.declarativeWebRequest.RequestMatcher({
+  url: { hostSuffix: 'foobar.com' }
+});
+const rule1 = { conditions: [condition1],
+                actions: [new chrome.declarativeWebRequest.CancelRequest()]
+              };
+const rule2 = { conditions: [condition2],
+                actions: [new chrome.declarativeWebRequest.CancelRequest()]
+              };
+chrome.declarativeWebRequest.onRequest.addRules([rule1, rule2]);
 
-<h3 id="filtered" data-text="Filtered events" tabindex="-1">Filtered events</h3>
 
-<p>Filtered events are a mechanism that allows listeners to specify a subset of events that they are
+
+  Prefer
+  const condition1 = new chrome.declarativeWebRequest.RequestMatcher({
+  url: { hostSuffix: 'example.com' }
+});
+const condition2 = new chrome.declarativeWebRequest.RequestMatcher({
+  url: { hostSuffix: 'foobar.com' }
+});
+const rule = { conditions: [condition1, condition2],
+              actions: [new chrome.declarativeWebRequest.CancelRequest()]
+             };
+chrome.declarativeWebRequest.onRequest.addRules([rule]);
+
+
+Filtered events
+
+Filtered events are a mechanism that allows listeners to specify a subset of events that they are
 interested in. A listener that uses a filter won't be invoked for events that don't pass the
-filter, which makes the listening code more declarative and efficient. A <a href="/docs/extensions/mv3/service_workers">service worker</a> need
-not be woken up to handle events it doesn't care about.</p>
+filter, which makes the listening code more declarative and efficient. A service worker need
+not be woken up to handle events it doesn't care about.
 
-<p>Filtered events are intended to allow a transition from manual filtering code.</p>
+Filtered events are intended to allow a transition from manual filtering code.
 
-<div class="dcc-compare">
-  <div class="compare-worse">Instead of</div>
-  <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JSON"><span class="devsite-syntax-err">chrome.webNaviga</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">io</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">.o</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">Commi</span><span class="devsite-syntax-kc">tte</span><span class="devsite-syntax-err">d.addLis</span><span class="devsite-syntax-kc">tener</span><span class="devsite-syntax-err">((eve</span><span class="devsite-syntax-kc">nt</span><span class="devsite-syntax-err">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">=&gt;</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-err">i</span><span class="devsite-syntax-kc">f</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">(hasHos</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">Su</span><span class="devsite-syntax-kc">ff</span><span class="devsite-syntax-err">ix(eve</span><span class="devsite-syntax-kc">nt</span><span class="devsite-syntax-err">.url</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">'google.com')</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">||</span>
-<span class="devsite-syntax-w">      </span><span class="devsite-syntax-err">hasHos</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">Su</span><span class="devsite-syntax-kc">ff</span><span class="devsite-syntax-err">ix(eve</span><span class="devsite-syntax-kc">nt</span><span class="devsite-syntax-err">.url</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">'google.com.au'))</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">    </span><span class="devsite-syntax-c1">// ...</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
-<span class="devsite-syntax-p">}</span><span class="devsite-syntax-err">);</span></pre></devsite-code>
-</div>
 
-<div class="dcc-compare">
-  <div class="compare-better">Prefer</div>
-  <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="JSON"><span class="devsite-syntax-err">chrome.webNaviga</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">io</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">.o</span><span class="devsite-syntax-kc">n</span><span class="devsite-syntax-err">Commi</span><span class="devsite-syntax-kc">tte</span><span class="devsite-syntax-err">d.addLis</span><span class="devsite-syntax-kc">tener</span><span class="devsite-syntax-err">((eve</span><span class="devsite-syntax-kc">nt</span><span class="devsite-syntax-err">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">=&gt;</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
-<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// ...</span>
-<span class="devsite-syntax-p">},</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-err">url</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[{</span><span class="devsite-syntax-err">hos</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">Su</span><span class="devsite-syntax-kc">ff</span><span class="devsite-syntax-err">ix</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">'google.com'</span><span class="devsite-syntax-p">},</span>
-<span class="devsite-syntax-w">          </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-err">hos</span><span class="devsite-syntax-kc">t</span><span class="devsite-syntax-err">Su</span><span class="devsite-syntax-kc">ff</span><span class="devsite-syntax-err">ix</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-err">'google.com.au'</span><span class="devsite-syntax-p">}]}</span><span class="devsite-syntax-err">);</span></pre></devsite-code>
-</div>
+  Instead of
+  chrome.webNavigation.onCommitted.addListener((event) => {
+  if (hasHostSuffix(event.url, 'google.com') ||
+      hasHostSuffix(event.url, 'google.com.au')) {
+    // ...
+  }
+});
 
-<p>Events support specific filters that are meaningful to that event. The list of filters that an event
-supports will be listed in the documentation for that event in the "filters" section.</p>
 
-<p>When matching URLs (as in the example above), event filters support the same URL matching
-capabilities as expressible with a <a href="#type-UrlFilter"><code translate="no" dir="ltr">events.UrlFilter</code></a>, except for scheme and port matching.</p>
 
-<p></p><div class="dcc-reference"><h2 id="type" data-text="Types" tabindex="-1">Types</h2>
-  <div><div>
-    <div class="notranslate">
-      <h3 id="type-Event" data-text="Event" tabindex="-1">Event</h3>
-    </div><p>An object which allows the addition and removal of listeners for a Chrome event.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-Event-addListener">addListener</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--">void</p></div>
-    </div><p>Registers an event listener <em>callback</em> to an event.</p>
-<p>
-          The <code translate="no" dir="ltr">addListener</code> function looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">H</span><span class="devsite-syntax-p">)&nbsp;=&gt;&nbsp;{...}</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-Event-addListener-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">H</p></div>
-    </div><p>Called when an event occurs. The parameters of this function depend on the type of event.</p>
-</li></ul>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-Event-addRules">addRules</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--">void</p></div>
-    </div><p>Registers rules to handle events.</p>
-<p>
-          The <code translate="no" dir="ltr">addRules</code> function looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">rules</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-Rule"><span class="devsite-syntax-kt">Rule</span></a>&lt;anyany&gt;<span class="devsite-syntax-p">[],</span>&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">)&nbsp;=&gt;&nbsp;{...}</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-Event-addRules-rules">rules</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-Rule">Rule</a>&lt;anyany&gt;[]</p></div>
-    </div><p>Rules to be registered. These do not replace previously registered rules.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-Event-addRules-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">rules</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-Rule"><span class="devsite-syntax-kt">Rule</span></a>&lt;anyany&gt;<span class="devsite-syntax-p">[])&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-Event-addRules-callback-rules">rules</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-Rule">Rule</a>&lt;anyany&gt;[]</p></div>
-    </div><p>Rules that were registered, the optional parameters are filled with values.</p>
-</li></ul>
-    </div></li></ul>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-Event-getRules">getRules</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--">void</p></div>
-    </div><p>Returns currently registered rules.</p>
-<p>
-          The <code translate="no" dir="ltr">getRules</code> function looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">ruleIdentifiers?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">[],</span>&nbsp;<span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">)&nbsp;=&gt;&nbsp;{...}</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-Event-getRules-ruleIdentifiers">ruleIdentifiers</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array">string[]&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>If an array is passed, only rules with identifiers contained in this array are returned.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-Event-getRules-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">rules</span><span class="devsite-syntax-o">:</span>&nbsp;<a href="#type-Rule"><span class="devsite-syntax-kt">Rule</span></a>&lt;anyany&gt;<span class="devsite-syntax-p">[])&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-Event-getRules-callback-rules">rules</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array"><a href="#type-Rule">Rule</a>&lt;anyany&gt;[]</p></div>
-    </div><p>Rules that were registered, the optional parameters are filled with values.</p>
-</li></ul>
-    </div></li></ul>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-Event-hasListener">hasListener</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--">void</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">hasListener</code> function looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">H</span><span class="devsite-syntax-p">)&nbsp;=&gt;&nbsp;{...}</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-Event-hasListener-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">H</p></div>
-    </div><p>Listener whose registration status shall be tested.</p>
-</li></ul>
-    </div><div class="dcc-code-sections"><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-code-sections__label" id="method-Event-hasListener">returns</div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
-            </div><p>True if <em>callback</em> is registered to the event.</p>
-</li>
-        </ul>
-      </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-Event-hasListeners">hasListeners</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--">void</p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">hasListeners</code> function looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;&nbsp;{...}</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack">
-          <li class="stack">
-            <div><div class="dcc-code-sections__label" id="method-Event-hasListeners">returns</div><div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--boolean">boolean</p></div>
-            </div><p>True if any event listeners are registered to the event.</p>
-</li>
-        </ul>
-      </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-Event-removeListener">removeListener</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--">void</p></div>
-    </div><p>Deregisters an event listener <em>callback</em> from an event.</p>
-<p>
-          The <code translate="no" dir="ltr">removeListener</code> function looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">callback</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">H</span><span class="devsite-syntax-p">)&nbsp;=&gt;&nbsp;{...}</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-Event-removeListener-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--object">H</p></div>
-    </div><p>Listener that shall be unregistered.</p>
-</li></ul>
-    </div></li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-Event-removeRules">removeRules</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--">void</p></div>
-    </div><p>Unregisters currently registered rules.</p>
-<p>
-          The <code translate="no" dir="ltr">removeRules</code> function looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">ruleIdentifiers?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">string</span><span class="devsite-syntax-p">[],</span>&nbsp;<span class="devsite-syntax-nx">callback?</span><span class="devsite-syntax-o">:</span>&nbsp;<span class="devsite-syntax-kt">function</span><span class="devsite-syntax-p">)&nbsp;=&gt;&nbsp;{...}</span></pre></devsite-code>
-        <p></p><div class="dcc-code-sections"><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="type-Event-removeRules-ruleIdentifiers">ruleIdentifiers</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array">string[]&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>If an array is passed, only rules with identifiers contained in this array are unregistered.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="method-Event-removeRules-callback">callback</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--function">function&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>
-          The <code translate="no" dir="ltr">callback</code> parameter looks like:
-          <span class="dcc-code-sections__callback dcc-type--xsmall"></span></p><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded="" syntax="TypeScript"><span class="devsite-syntax-p">()&nbsp;=&gt;</span>&nbsp;<span class="devsite-syntax-ow">void</span></pre></devsite-code>
-        <p></p></li></ul>
-    </div></li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="type-Rule" data-text="Rule" tabindex="-1">Rule</h3>
-    </div><p>Description of a declarative rule for handling events.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_1" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-Rule-actions">actions</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array">any[]</p></div>
-    </div><p>List of actions that are triggered if one of the conditions is fulfilled.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-Rule-conditions">conditions</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array">any[]</p></div>
-    </div><p>List of conditions that can trigger the actions.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-Rule-id">id</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Optional identifier that allows referencing this rule.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-Rule-priority">priority</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--number">number&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Optional priority of this rule. Defaults to 100.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-Rule-tags">tags</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array">string[]&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Tags can be used to annotate rules and perform operations on sets of rules.</p>
-</li></ul>
-    </div><div>
-    <div class="notranslate">
-      <h3 id="type-UrlFilter" data-text="UrlFilter" tabindex="-1">UrlFilter</h3>
-    </div><p>Filters URLs for various criteria. See <a href="https://developer.chrome.com/docs/extensions/reference/events/#filtered">event filtering</a>. All criteria are case sensitive.</p>
-</div><div class="dcc-code-sections"><h4 class="dcc-type--label dcc-code-sections__mode" id="properties_2" data-text="Properties" tabindex="-1">Properties</h4><ul class="stack"><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-UrlFilter-cidrBlocks">cidrBlocks</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array">string[]&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><div class="pad-top-200">
-      <div><span class="dcc-tag-pill--blue dcc-tag-pill" title="Available from this Chrome version and higher">Chrome 123+
-      </span></div>
-    </div><p>Matches if the host part of the URL is an IP address and is contained in any of the CIDR blocks specified in the array.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-UrlFilter-hostContains">hostContains</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Matches if the host name of the URL contains a specified string. To test whether a host name component has a prefix 'foo', use hostContains: '.foo'. This matches 'www.foobar.com' and 'foo.com', because an implicit dot is added at the beginning of the host name. Similarly, hostContains can be used to match against component suffix ('foo.') and to exactly match against components ('.foo.'). Suffix- and exact-matching for the last components need to be done separately using hostSuffix, because no implicit dot is added at the end of the host name.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-UrlFilter-hostEquals">hostEquals</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Matches if the host name of the URL is equal to a specified string.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-UrlFilter-hostPrefix">hostPrefix</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Matches if the host name of the URL starts with a specified string.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-UrlFilter-hostSuffix">hostSuffix</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Matches if the host name of the URL ends with a specified string.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-UrlFilter-originAndPathMatches">originAndPathMatches</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Matches if the URL without query segment and fragment identifier matches a specified regular expression. Port numbers are stripped from the URL if they match the default port number. The regular expressions use the <a href="https://github.com/google/re2/blob/master/doc/syntax.txt">RE2 syntax</a>.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-UrlFilter-pathContains">pathContains</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Matches if the path segment of the URL contains a specified string.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-UrlFilter-pathEquals">pathEquals</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Matches if the path segment of the URL is equal to a specified string.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-UrlFilter-pathPrefix">pathPrefix</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Matches if the path segment of the URL starts with a specified string.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-UrlFilter-pathSuffix">pathSuffix</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Matches if the path segment of the URL ends with a specified string.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-UrlFilter-ports">ports</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array">(number&nbsp;|&nbsp;number[])[]&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Matches if the port of the URL is contained in any of the specified port lists. For example <code translate="no" dir="ltr">[80, 443, [1000, 1200]]</code> matches all requests on port 80, 443 and in the range 1000-1200.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-UrlFilter-queryContains">queryContains</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Matches if the query segment of the URL contains a specified string.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-UrlFilter-queryEquals">queryEquals</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Matches if the query segment of the URL is equal to a specified string.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-UrlFilter-queryPrefix">queryPrefix</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Matches if the query segment of the URL starts with a specified string.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-UrlFilter-querySuffix">querySuffix</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Matches if the query segment of the URL ends with a specified string.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-UrlFilter-schemes">schemes</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--array">string[]&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Matches if the scheme of the URL is equal to any of the schemes specified in the array.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-UrlFilter-urlContains">urlContains</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Matches if the URL (without fragment identifier) contains a specified string. Port numbers are stripped from the URL if they match the default port number.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-UrlFilter-urlEquals">urlEquals</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Matches if the URL (without fragment identifier) is equal to a specified string. Port numbers are stripped from the URL if they match the default port number.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-UrlFilter-urlMatches">urlMatches</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Matches if the URL (without fragment identifier) matches a specified regular expression. Port numbers are stripped from the URL if they match the default port number. The regular expressions use the <a href="https://github.com/google/re2/blob/master/doc/syntax.txt">RE2 syntax</a>.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-UrlFilter-urlPrefix">urlPrefix</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Matches if the URL (without fragment identifier) starts with a specified string. Port numbers are stripped from the URL if they match the default port number.</p>
-</li><li class="stack">
-    <div>
-      <div class="dcc-code-sections__label" id="property-UrlFilter-urlSuffix">urlSuffix</div>
-      <div class="dcc-type--xsmall"><p class="dcc-code-sections__icon dcc-code-sections__icon--string">string&nbsp;<span class="dcc-code-sections__optional">optional</span></p></div>
-    </div><p>Matches if the URL (without fragment identifier) ends with a specified string. Port numbers are stripped from the URL if they match the default port number.</p>
-</li></ul>
-    </div></div></div>
-<p></p>
+  Prefer
+  chrome.webNavigation.onCommitted.addListener((event) => {
+  // ...
+}, {url: [{hostSuffix: 'google.com'},
+          {hostSuffix: 'google.com.au'}]});
+
+
+Events support specific filters that are meaningful to that event. The list of filters that an event
+supports will be listed in the documentation for that event in the "filters" section.
+
+When matching URLs (as in the example above), event filters support the same URL matching
+capabilities as expressible with a events.UrlFilter, except for scheme and port matching.
+
+Types
+  
+    
+      Event
+    An object which allows the addition and removal of listeners for a Chrome event.
+Properties
+    
+      addListener
+      void
+    Registers an event listener callback to an event.
+
+          The addListener function looks like:
+          (callback: H) => {...}
+        
+    
+      callback
+      H
+    Called when an event occurs. The parameters of this function depend on the type of event.
+
+    
+    
+      addRules
+      void
+    Registers rules to handle events.
+
+          The addRules function looks like:
+          (rules: Rule<anyany>[], callback?: function) => {...}
+        
+    
+      rules
+      Rule<anyany>[]
+    Rules to be registered. These do not replace previously registered rules.
+
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (rules: Rule<anyany>[]) => void
+        
+    
+      rules
+      Rule<anyany>[]
+    Rules that were registered, the optional parameters are filled with values.
+
+    
+    
+    
+      getRules
+      void
+    Returns currently registered rules.
+
+          The getRules function looks like:
+          (ruleIdentifiers?: string[], callback: function) => {...}
+        
+    
+      ruleIdentifiers
+      string[] optional
+    If an array is passed, only rules with identifiers contained in this array are returned.
+
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (rules: Rule<anyany>[]) => void
+        
+    
+      rules
+      Rule<anyany>[]
+    Rules that were registered, the optional parameters are filled with values.
+
+    
+    
+    
+      hasListener
+      void
+    
+          The hasListener function looks like:
+          (callback: H) => {...}
+        
+    
+      callback
+      H
+    Listener whose registration status shall be tested.
+
+    
+          
+            returnsboolean
+            True if callback is registered to the event.
+
+        
+      
+    
+      hasListeners
+      void
+    
+          The hasListeners function looks like:
+          () => {...}
+        
+          
+            returnsboolean
+            True if any event listeners are registered to the event.
+
+        
+      
+    
+      removeListener
+      void
+    Deregisters an event listener callback from an event.
+
+          The removeListener function looks like:
+          (callback: H) => {...}
+        
+    
+      callback
+      H
+    Listener that shall be unregistered.
+
+    
+    
+      removeRules
+      void
+    Unregisters currently registered rules.
+
+          The removeRules function looks like:
+          (ruleIdentifiers?: string[], callback?: function) => {...}
+        
+    
+      ruleIdentifiers
+      string[] optional
+    If an array is passed, only rules with identifiers contained in this array are unregistered.
+
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          () => void
+        
+    
+    
+    
+      Rule
+    Description of a declarative rule for handling events.
+Properties
+    
+      actions
+      any[]
+    List of actions that are triggered if one of the conditions is fulfilled.
+
+    
+      conditions
+      any[]
+    List of conditions that can trigger the actions.
+
+    
+      id
+      string optional
+    Optional identifier that allows referencing this rule.
+
+    
+      priority
+      number optional
+    Optional priority of this rule. Defaults to 100.
+
+    
+      tags
+      string[] optional
+    Tags can be used to annotate rules and perform operations on sets of rules.
+
+    
+    
+      UrlFilter
+    Filters URLs for various criteria. See event filtering. All criteria are case sensitive.
+Properties
+    
+      cidrBlocks
+      string[] optional
+    
+      Chrome 123+
+      
+    Matches if the host part of the URL is an IP address and is contained in any of the CIDR blocks specified in the array.
+
+    
+      hostContains
+      string optional
+    Matches if the host name of the URL contains a specified string. To test whether a host name component has a prefix 'foo', use hostContains: '.foo'. This matches 'www.foobar.com' and 'foo.com', because an implicit dot is added at the beginning of the host name. Similarly, hostContains can be used to match against component suffix ('foo.') and to exactly match against components ('.foo.'). Suffix- and exact-matching for the last components need to be done separately using hostSuffix, because no implicit dot is added at the end of the host name.
+
+    
+      hostEquals
+      string optional
+    Matches if the host name of the URL is equal to a specified string.
+
+    
+      hostPrefix
+      string optional
+    Matches if the host name of the URL starts with a specified string.
+
+    
+      hostSuffix
+      string optional
+    Matches if the host name of the URL ends with a specified string.
+
+    
+      originAndPathMatches
+      string optional
+    Matches if the URL without query segment and fragment identifier matches a specified regular expression. Port numbers are stripped from the URL if they match the default port number. The regular expressions use the RE2 syntax.
+
+    
+      pathContains
+      string optional
+    Matches if the path segment of the URL contains a specified string.
+
+    
+      pathEquals
+      string optional
+    Matches if the path segment of the URL is equal to a specified string.
+
+    
+      pathPrefix
+      string optional
+    Matches if the path segment of the URL starts with a specified string.
+
+    
+      pathSuffix
+      string optional
+    Matches if the path segment of the URL ends with a specified string.
+
+    
+      ports
+      (number | number[])[] optional
+    Matches if the port of the URL is contained in any of the specified port lists. For example [80, 443, [1000, 1200]] matches all requests on port 80, 443 and in the range 1000-1200.
+
+    
+      queryContains
+      string optional
+    Matches if the query segment of the URL contains a specified string.
+
+    
+      queryEquals
+      string optional
+    Matches if the query segment of the URL is equal to a specified string.
+
+    
+      queryPrefix
+      string optional
+    Matches if the query segment of the URL starts with a specified string.
+
+    
+      querySuffix
+      string optional
+    Matches if the query segment of the URL ends with a specified string.
+
+    
+      schemes
+      string[] optional
+    Matches if the scheme of the URL is equal to any of the schemes specified in the array.
+
+    
+      urlContains
+      string optional
+    Matches if the URL (without fragment identifier) contains a specified string. Port numbers are stripped from the URL if they match the default port number.
+
+    
+      urlEquals
+      string optional
+    Matches if the URL (without fragment identifier) is equal to a specified string. Port numbers are stripped from the URL if they match the default port number.
+
+    
+      urlMatches
+      string optional
+    Matches if the URL (without fragment identifier) matches a specified regular expression. Port numbers are stripped from the URL if they match the default port number. The regular expressions use the RE2 syntax.
+
+    
+      urlPrefix
+      string optional
+    Matches if the URL (without fragment identifier) starts with a specified string. Port numbers are stripped from the URL if they match the default port number.
+
+    
+      urlSuffix
+      string optional
+    Matches if the URL (without fragment identifier) ends with a specified string. Port numbers are stripped from the URL if they match the default port number.
+
+    
+
 
   
 

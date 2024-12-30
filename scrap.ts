@@ -51,7 +51,7 @@ const getApiLinks = async (): Promise<string[]> => {
   }
 }
 
-const extractHtml = async (apiUrl: string) => {
+const extractContent = async (apiUrl: string) => {
   const apiName = apiUrl.split(`${API_URL}/`).pop() ?? ''
   const apiFileName = apiName.replaceAll('/', '.')
   const snapshotPath = path.join(`${SNAPSHOTS_DIR}/`, `${apiFileName}.html`)
@@ -59,7 +59,7 @@ const extractHtml = async (apiUrl: string) => {
   try {
     const html = await fetch(apiUrl)
     const cheerioHtml = cheerio.load(html)
-    const content = cheerioHtml(MAIN_SELECTOR).html()
+    const content = cheerioHtml(MAIN_SELECTOR).text()
 
     if (!content) {
       console.error(`No content found for ${apiName}`)
@@ -83,7 +83,7 @@ const init = async () => {
   console.log(`${apiLinks.length} APIs found.`)
 
   for (const apiUrl of apiLinks) {
-    extractHtml(apiUrl)
+    extractContent(apiUrl)
   }
 }
 
