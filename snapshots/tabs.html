@@ -46,8 +46,8 @@ Host permissions
 Host permissions allow an extension to read and query a matching tab's four sensitive
 tabs.Tab properties. They can also interact directly with the matching tabs using methods such
 as tabs.captureVisibleTab(),
-tabs.executeScript(), tabs.insertCSS(), and
-tabs.removeCSS().
+scripting.executeScript(), scripting.insertCSS(), and
+scripting.removeCSS().
 {
   "name": "My extension",
   ...
@@ -336,7 +336,7 @@ Enum
     
       Chrome 121+
       
-    The last time the tab was accessed as the number of milliseconds since epoch.
+    The last time the tab became active in its window as the number of milliseconds since epoch.
 
     
       mutedInfo
