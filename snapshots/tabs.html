@@ -288,13 +288,14 @@ Enum
     
       favIconUrl
       string optional
-    The URL of the tab's favicon. This property is only present if the extension's manifest includes the "tabs" permission. It may also be an empty string if the tab is loading.
+    The URL of the tab's favicon. This property is only present if the extension has the "tabs" permission or has host permissions for the page. It may also be an empty string if the tab is loading.
 
     
       frozen
       boolean
     
-      Pending
+      Chrome 132+
+      
     Whether the tab is frozen. A frozen tab cannot execute tasks, including event handlers or timers. It is visible in the tab strip and its content is loaded in memory. It is unfrozen on activation.
 
     
@@ -357,7 +358,7 @@ Enum
     
       Chrome 79+
       
-    The URL the tab is navigating to, before it has committed. This property is only present if the extension's manifest includes the "tabs" permission and there is a pending navigation.
+    The URL the tab is navigating to, before it has committed. This property is only present if the extension has the "tabs" permission or has host permissions for the page and there is a pending navigation.
 
     
       pinned
@@ -385,12 +386,12 @@ Enum
     
       title
       string optional
-    The title of the tab. This property is only present if the extension's manifest includes the "tabs" permission.
+    The title of the tab. This property is only present if the extension has the "tabs" permission or has host permissions for the page.
 
     
       url
       string optional
-    The last committed URL of the main frame of the tab. This property is only present if the extension's manifest includes the "tabs" permission and may be an empty string if the tab has not yet committed. See also Tab.pendingUrl.
+    The last committed URL of the main frame of the tab. This property is only present if the extension has the "tabs" permission or has host permissions for the page. May be an empty string if the tab has not yet committed. See also Tab.pendingUrl.
 
     
       width
@@ -778,7 +779,7 @@ Parameters
     
       tab
       Tab optional
-    Details about the duplicated tab. The tabs.Tab object does not contain url, pendingUrl, title, and favIconUrl if the "tabs" permission has not been requested.
+    Details about the duplicated tab. The url, pendingUrl, title and favIconUrl properties are only included on the tabs.Tab object if the extension has the "tabs" permission or has host permissions for the page.
 
     
     Returns
@@ -1261,7 +1262,8 @@ Parameters
       frozen
       boolean optional
     
-      Pending
+      Chrome 132+
+      
     Whether the tabs are frozen. A frozen tab cannot execute tasks, including event handlers or timers. It is visible in the tab strip and its content is loaded in memory. It is unfrozen on activation.
 
     
@@ -1308,12 +1310,12 @@ Parameters
     
       title
       string optional
-    Match page titles against a pattern. This property is ignored if the extension does not have the "tabs" permission.
+    Match page titles against a pattern. This property is ignored if the extension does not have the "tabs" permission or host permissions for the page.
 
     
       url
       string | string[] optional
-    Match tabs against one or more URL patterns. Fragment identifiers are not matched. This property is ignored if the extension does not have the "tabs" permission.
+    Match tabs against one or more URL patterns. Fragment identifiers are not matched. This property is ignored if the extension does not have the "tabs" permission or host permissions for the page.
 
     
       windowId
@@ -1703,7 +1705,7 @@ Parameters
     
       tab
       Tab optional
-    Details about the updated tab. The tabs.Tab object does not contain url, pendingUrl, title, and favIconUrl if the "tabs" permission has not been requested.
+    Details about the updated tab. The url, pendingUrl, title and favIconUrl properties are only included on the tabs.Tab object if the extension has the "tabs" permission or has host permissions for the page.
 
     
     Returns
@@ -2012,7 +2014,8 @@ Parameters
       frozen
       boolean optional
     
-      Pending
+      Chrome 132+
+      
     The tab's new frozen state.
 
     

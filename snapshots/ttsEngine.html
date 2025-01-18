@@ -177,7 +177,8 @@ Properties
     
       LanguageInstallStatus
     
-      Pending
+      Chrome 132+
+      
     The install status of a voice.
 Enum
       "notInstalled"  "installing"  "installed"  "failed"  
@@ -186,7 +187,8 @@ Enum
     
       LanguageStatus
     
-      Pending
+      Chrome 132+
+      
     Install status of a language.
 Properties
     
@@ -208,7 +210,8 @@ Properties
     
       LanguageUninstallOptions
     
-      Pending
+      Chrome 132+
+      
     Options for uninstalling a given language.
 Properties
     
@@ -300,7 +303,8 @@ Enum
     
       updateLanguage()
     
-      Pending
+      Chrome 132+
+      
     
         chrome.ttsEngine.updateLanguage(  status: LanguageStatus,)
       Called by an engine when a language install is attempted, and when a language is uninstalled. Also called in response to a status request from a client. When a voice is installed or uninstalled, the engine should also call ttsEngine.updateVoices to register the voice.
@@ -356,7 +360,8 @@ Parameters
     
       onLanguageStatusRequest
     
-      Pending
+      Chrome 132+
+      
     
         chrome.ttsEngine.onLanguageStatusRequest.addListener(  callback: function,)
       Fired when a TTS client requests the install status of a language.
@@ -518,7 +523,8 @@ Parameters
     
       onUninstallLanguageRequest
     
-      Pending
+      Chrome 132+
+      
     
         chrome.ttsEngine.onUninstallLanguageRequest.addListener(  callback: function,)
       Fired when a TTS client indicates a language is no longer needed.

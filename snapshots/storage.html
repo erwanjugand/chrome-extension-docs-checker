@@ -76,7 +76,7 @@ Data is stored locally and cleared when the extension is removed. The storage li
 storage.managed
 Managed storage is read-only storage for policy installed extensions and managed by system administrators using a developer-defined schema and enterprise policies. Policies are analogous to options but are configured by a system administrator instead of the user, allowing the extension to be preconfigured for all users of an organization. For information on policies, see Documentation for Administrators. To learn more about the managed storage area, see Manifest for storage areas.
 storage.session
-Holds data in memory for the duration of a browser session. By default, it's not exposed to content scripts, but this behavior can be changed by setting chrome.storage.session.setAccessLevel(). The storage limit is 10 MB (1 MB in Chrome 111 and earlier). Thestorage.session interface is one of several we recommend for service workers.
+Holds data in memory while an extension is loaded. The storage is cleared if the extension is disabled, reloaded or updated and when the browser restarts. By default, it's not exposed to content scripts, but this behavior can be changed by setting chrome.storage.session.setAccessLevel(). The storage limit is 10 MB (1 MB in Chrome 111 and earlier). Thestorage.session interface is one of several we recommend for service workers.
 storage.sync
 If syncing is enabled, the data is synced to any Chrome browser that the user is logged into. If disabled, it behaves like storage.local. Chrome stores the data locally when the browser is offline and resumes syncing when it's back online. The quota limitation is approximately 100 KB, 8 KB per item. We recommend using storage.sync to preserve user settings across synced browsers. If you're working with sensitive user data, instead use storage.session.
 
@@ -179,6 +179,12 @@ chrome.action.onClicked.addListener(async (tab) => {
   storageCache.lastTabId = tab.id;
   chrome.storage.sync.set(storageCache);
 });
+
+DevTools
+
+You can view and edit data stored using the API in DevTools. To learn more, see
+the View and edit extension storage
+page in the DevTools documentation.
 
 Examples
 
