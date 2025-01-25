@@ -105,6 +105,14 @@ Properties
     When this node was last opened, in milliseconds since the epoch. Not set for folders.
 
     
+      folderType
+      FolderType optional
+    
+      Pending
+    If present, this is a folder that is added by the browser and that cannot be modified by the user or the extension. Child nodes may be modified, if this node does not have the unmodifiable property set. Omitted if the node can be modified by the user and the extension (default).
+There may be zero, one or multiple nodes of each folder type. A folder may be added or removed by the browser, but not via the extensions API.
+
+    
       id
       string
     The unique identifier for the node. IDs are unique within the current profile, and they remain valid even after the browser is restarted.
@@ -118,6 +126,15 @@ Properties
       parentId
       string optional
     The id of the parent folder. Omitted for the root node.
+
+    
+      syncing
+      boolean
+    
+      Pending
+    Whether this node is synced with the user's remote account storage by the browser. This can be used to distinguish between account and local-only versions of the same FolderType. The value of this property may change for an existing node, for example as a result of user action.
+Note: this reflects whether the node is saved to the browser's built-in account provider. It is possible that a node could be synced via a third-party, even if this value is false.
+For managed nodes (nodes where unmodifiable is set to true), this property will always be false.
 
     
       title
@@ -166,7 +183,22 @@ Properties
       url
       string optional
     
-    Properties
+    
+    
+      FolderType
+    
+      Pending
+    Indicates the type of folder.
+
+bookmarks-bar: The folder whose contents is displayed at the top of the browser window
+other: Bookmarks which are displayed in the full list of bookmarks on all platforms
+mobile: bookmarks generally available on the user's mobile devices, but modifiable by extension or in the bookmarks manager
+managed: a top-level folder that may be present if the system administrator or the custodian of a supervised user has configured bookmarks.
+
+Enum
+      "bookmarks-bar"  "other"  "mobile"  "managed"  
+    
+  Properties
   
     
       MAX_SUSTAINED_WRITE_OPERATIONS_PER_MINUTE
