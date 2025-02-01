@@ -165,7 +165,8 @@ Enum
       worldId
       string optional
     
-      Pending
+      Chrome 133+
+      
     Specifies the user script world ID to execute in. If omitted, the script will execute in the default user script world. Only valid if world is omitted or is USER_SCRIPT. Values with leading underscores (_) are reserved.
 
     
@@ -209,7 +210,8 @@ Enum
       worldId
       string optional
     
-      Pending
+      Chrome 133+
+      
     Specifies the ID of the specific user script world to update. If not provided, updates the properties of the default user script world. Values with leading underscores (_) are reserved.
 
     Methods
@@ -292,7 +294,8 @@ Parameters
     
       
         Promise
-      Pending
+      Chrome 133+
+      
     
         chrome.userScripts.getWorldConfigurations(  callback?: function,)
       Retrieves all registered world configurations.
@@ -360,7 +363,8 @@ Parameters
     
       
         Promise
-      Pending
+      Chrome 133+
+      
     
         chrome.userScripts.resetWorldConfiguration(  worldId?: string,  callback?: function,)
       Resets the configuration for a user script world. Any scripts that inject into the world with the specified ID will use the default world configuration.
