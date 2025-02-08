@@ -319,6 +319,44 @@ Parameters
         
       
     
+      getJobStatus()
+    
+      
+        Promise
+      Pending
+    
+        chrome.printing.getJobStatus(  jobId: string,  callback?: function,)
+      Returns the status of the print job. This call will fail with a runtime error if the print job with the given jobId doesn't exist. jobId: The id of the print job to return the status of. This should be the same id received in a SubmitJobResponse.
+Parameters
+    
+      jobId
+      string
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (status: JobStatus) => void
+        
+    
+      status
+      JobStatus
+    
+    
+    Returns
+          
+            Promise<JobStatus>
+            
+              
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              
+            
+        
+      
+    
       getPrinterInfo()
     
       
