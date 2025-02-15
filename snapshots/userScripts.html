@@ -15,7 +15,7 @@ Use the userScripts API to execute user scripts in the User Scripts context.
 Permissions
 userScripts
 
-To use the chrome.userScripts API, add the "userScripts" permission to your manifest.json and "host_permissions" for sites you want to run scripts on.
+To use the User Scripts API, chrome.userScripts, add the "userScripts" permission to your manifest.json and "host_permissions" for sites you want to run scripts on.
 {
   "name": "User script test extension",
   "manifest_version": 3,
@@ -39,7 +39,7 @@ Availability
 
 Concepts and usage
 
-A user script is a bit of code injected into a web page to modify its appearance or behavior. Scripts are either created by users or downloaded from a script repository or a user script extension.
+A user script is a snippet of code injected into a web page to modify its appearance or behavior. Unlike other extension features, such as Content Scripts and the chrome.scripting API, the User Scripts API lets you run arbitrary code. This API is required for extensions that run scripts provided by the user that cannot be shipped as part of your extension package.
 
 Developer mode for extension users
 
