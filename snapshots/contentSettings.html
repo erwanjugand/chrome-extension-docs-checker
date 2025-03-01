@@ -529,7 +529,7 @@ The primary URL is the URL of the top-level frame. The secondary URL is not used
 allow: Allow sites to use the Private State Tokens API,
 block: Block sites from using the Private State Tokens API.
 Default is allow.
-The primary URL is the URL of the top-level frame. The secondary URL is not used. NOTE: When calling set(), the primary pattern must be .
+When calling set(), the primary URL pattern must be <all_urls>. The secondary URL is not used.
 
       Type
       ContentSetting<AutoVerifyContentSetting>
@@ -545,7 +545,7 @@ block: Don't allow sites to access the camera,
 ask: Ask when a site wants to access the camera.
 Default is ask.
 The primary URL is the URL of the document which requested camera access. The secondary URL is not used.
-NOTE: The 'allow' setting is not valid if both patterns are ''.
+NOTE: The 'allow' setting is not valid if both patterns are '<all_urls>'.
 
       Type
       ContentSetting<CameraContentSetting>
@@ -629,7 +629,7 @@ block: Don't allow sites to access the microphone,
 ask: Ask when a site wants to access the microphone.
 Default is ask.
 The primary URL is the URL of the document which requested microphone access. The secondary URL is not used.
-NOTE: The 'allow' setting is not valid if both patterns are ''.
+NOTE: The 'allow' setting is not valid if both patterns are '<all_urls>'.
 
       Type
       ContentSetting<MicrophoneContentSetting>
