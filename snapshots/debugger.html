@@ -108,6 +108,13 @@ await chrome.debugger.sendCommand({ tabId }, "Target.setAutoAttach", {
   filter: [{ type: "iframe", exclude: false }]
 });
 
+Auto-attach only attaches to frames the target is aware of, which is limited to
+frames which are immediate children of a frame associated with it. For example,
+with the frame hierarchy A -> B -> C (where all are cross-origin), calling
+Target.setAutoAttach for the target associated with A would result in the
+session also being attached to B. However, this is not recursive, so
+Target.setAutoAttach also needs to be called for B to attach the session to C.
+
 Examples
 
 To try this API, install the debugger API example from the chrome-extension-samples

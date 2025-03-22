@@ -217,7 +217,7 @@ async function unregisterAllDynamicContentScripts() {
   try {
     const scripts = await chrome.scripting.getRegisteredContentScripts();
     const scriptIds = scripts.map(script => script.id);
-    return chrome.scripting.unregisterContentScripts(scriptIds);
+    return chrome.scripting.unregisterContentScripts({ ids: scriptIds });
   } catch (error) {
     const message = [
       "An unexpected error occurred while",
