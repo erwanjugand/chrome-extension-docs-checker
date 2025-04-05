@@ -116,7 +116,8 @@ Enum
     
       InjectionResult
     
-      Pending
+      Chrome 135+
+      
     Properties
     
       documentId
@@ -142,7 +143,8 @@ Enum
     
       InjectionTarget
     
-      Pending
+      Chrome 135+
+      
     Properties
     
       allFrames
@@ -248,7 +250,8 @@ Enum
     
       UserScriptInjection
     
-      Pending
+      Chrome 135+
+      
     Properties
     
       injectImmediately
@@ -338,7 +341,8 @@ Parameters
     
       
         Promise
-      Pending
+      Chrome 135+
+      
     
         chrome.userScripts.execute(  injection: UserScriptInjection,  callback?: function,)
       Injects a script into a target context. By default, the script will be run at document_idle, or immediately if the page has already loaded. If the injectImmediately property is set, the script will inject without waiting, even if the page has not finished loading. If the script evaluates to a promise, the browser will wait for the promise to settle and return the resulting value.

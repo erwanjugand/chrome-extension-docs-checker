@@ -250,6 +250,7 @@ Enum
       thirdPartyCookiesAllowed
       types.ChromeSetting<boolean>
     If disabled, Chrome blocks third-party sites from setting cookies. The value of this preference is of type boolean, and the default value is true.
+**Note:**Individual sites may still be able to access third-party cookies when this API returns false, if they have a valid exemption or they use the Storage Access API instead.
 
     
       topicsEnabled
