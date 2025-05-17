@@ -526,12 +526,19 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          (resource: Resource) => void
+          (resource: Resource, lineNumber: number) => void
         
     
       resource
       Resource
     A devtools.inspectedWindow.Resource object for the resource that was clicked.
+
+    
+      lineNumber
+      number
+    
+      Pending
+    Specifies the line number within the resource that was clicked.
 
     
     
