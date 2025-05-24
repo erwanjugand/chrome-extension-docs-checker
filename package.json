@@ -16,11 +16,11 @@
   "devDependencies": {
     "@types/node": "22",
     "cheerio": "1.0.0",
-    "eslint": "9.25.1",
-    "eslint-config-prettier": "10.1.2",
+    "eslint": "9.27.0",
+    "eslint-config-prettier": "10.1.5",
     "path": "0.12.7",
     "prettier": "3.5.3",
     "typescript": "5.8.3",
-    "typescript-eslint": "8.31.0"
+    "typescript-eslint": "8.32.1"
   }
 }
