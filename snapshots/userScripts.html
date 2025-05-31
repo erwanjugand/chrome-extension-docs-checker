@@ -41,9 +41,32 @@ Concepts and usage
 
 A user script is a snippet of code injected into a web page to modify its appearance or behavior. Unlike other extension features, such as Content Scripts and the chrome.scripting API, the User Scripts API lets you run arbitrary code. This API is required for extensions that run scripts provided by the user that cannot be shipped as part of your extension package.
 
-Developer mode for extension users
+Enable usage of the userScripts API
 
-As an extension developer, you already have Developer mode enabled in your installation of Chrome. For user script extensions, your users will also need to enable developer mode. Here are instructions that you can copy and paste into your own documentation.
+After your extension receives the permission to use the userScripts API, users
+must enable a specific toggle to allow your extension to use the API. The
+specific toggle required, and the API's behavior when disabled, vary by Chrome
+version.
+
+Use the following check to determine which toggle the user needs to enable, for
+example, during new user onboarding:
+let version = Number(navigator.userAgent.match(/(Chrome|Chromium)\/([0-9]+)/)?.[2]);
+if (version > 138) {
+  // Allow User Scripts toggle will be used.
+} else {
+  // Developer mode toggle will be used.
+}
+
+The following sections describe the different toggles and how to enable them.
+
+Chrome versions prior to 138 (Developer mode toggle)
+
+AAs an extension developer, you already have Developer
+mode enabled in your installation of Chrome. Your
+users must also enable Developer mode.
+
+You can copy and paste the following
+instructions into your extension's documentation for your users
 
 
 Go to the Extensions page by entering chrome://extensions in a new tab. (By design chrome:// URLs are not linkable.)
@@ -56,12 +79,45 @@ Enable Developer Mode by clicking the toggle switch next to Developer mode.
   
 
 
+Note: If Developer mode is not enabled, accessing chrome.userScripts shows an
+error. You can use this error to determine API availability, see Check for API
+availability.
+Chrome versions 138 and newer (Allow User Scripts toggle)
 
-You can determine if developer mode is enabled by checking whether chrome.userScripts throws an error. For example:
+The Allow User Scripts toggle is on each extension's
+details page (for example, chrome://extensions/?id=YOUR_EXTENSION_ID).
+
+You can copy and paste the following instructions
+into your extension's documentation for your users:
+
+
+Go to the Extensions page by entering chrome://extensions in a new tab. (By design chrome:// URLs are not linkable.)
+Click the "Details" button on the extension card to view detailed information about the extension.
+Click the toggle switch next to Allow User Scripts.
+
+
+
+    
+      
+      Allow User Scripts toggle (chrome://extensions/?id=abc...)
+      
+    
+Note: If the Allow User Scripts toggle is not enabled, chrome.userScripts
+is undefined. This undefined state (similar to how other APIs behave) only
+resets when an extension script context reloads. For example, if a user revokes
+access while your service worker is running, chrome.userScripts remains
+defined. However, in this scenario, attempting to call any of its methods
+throws an error.
+Check for API availability
+
+We recommend the following check to determine if the userScripts API is enabled,
+as it works in all Chrome versions. This check attempts to call a
+chrome.userScripts() method that should always succeed when the API is
+available. If this call throws an error, the API is not available:
 function isUserScriptsAvailable() {
   try {
-    // Property access which throws if developer mode is not enabled.
-    chrome.userScripts;
+    // Method call which throws if API permission or toggle is not enabled.
+    chrome.userScripts.getScripts();
     return true;
   } catch {
     // Not available.
