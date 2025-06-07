@@ -51,7 +51,7 @@ version.
 Use the following check to determine which toggle the user needs to enable, for
 example, during new user onboarding:
 let version = Number(navigator.userAgent.match(/(Chrome|Chromium)\/([0-9]+)/)?.[2]);
-if (version > 138) {
+if (version >= 138) {
   // Allow User Scripts toggle will be used.
 } else {
   // Developer mode toggle will be used.
