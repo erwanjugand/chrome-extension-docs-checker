@@ -7,120 +7,63 @@
 
 
 
+This API is only for extensions installed by a policy.
+
+Important:
+This API works only on ChromeOS.
 
 
 Description
-The Desktop Capture API captures the content of the screen, individual windows, or individual tabs.
+Use the chrome.enterprise.login API to exit Managed Guest sessions. Note: This API is only available to extensions installed by enterprise policy in ChromeOS Managed Guest sessions.
 
 Permissions
-desktopCapture
+enterprise.login
 
+Availability
 
-
-
-
-Types
-  
-    
-      DesktopCaptureSourceType
-    Enum used to define set of desktop media sources used in chooseDesktopMedia().
-Enum
-      "screen"  "window"  "tab"  "audio"  
-    
-  
-    
-      SelfCapturePreferenceEnum
-    
-      Chrome 107+
-      
-    Mirrors SelfCapturePreferenceEnum.
-Enum
-      "include"  "exclude"  
-    
-  
-    
-      SystemAudioPreferenceEnum
-    
-      Chrome 105+
-      
-    Mirrors SystemAudioPreferenceEnum.
-Enum
-      "include"  "exclude"  
-    
-  
-    
-      WindowAudioPreferenceEnum
-    
       Pending
-    Mirrors WindowAudioPreferenceEnum.
-Enum
-      "system"  "window"  "exclude"  
+        ChromeOS only
+      
+      
+        
+          Requires policy
+        
+      
     
-  Methods
+
+
+
+Methods
   
     
-      cancelChooseDesktopMedia()
+      exitCurrentManagedGuestSession()
     
-        chrome.desktopCapture.cancelChooseDesktopMedia(  desktopMediaRequestId: number,)
-      Hides desktop media picker dialog shown by chooseDesktopMedia().
+      
+        Promise
+      
+    
+        chrome.enterprise.login.exitCurrentManagedGuestSession(  callback?: function,)
+      Exits the current managed guest session.
 Parameters
-    
-      desktopMediaRequestId
-      number
-    Id returned by chooseDesktopMedia()
-
-    
-    
-      chooseDesktopMedia()
-    
-        chrome.desktopCapture.chooseDesktopMedia(  sources: DesktopCaptureSourceType[],  targetTab?: Tab,  callback: function,)
-      Shows desktop media picker UI with the specified set of sources.
-Parameters
-    
-      sources
-      DesktopCaptureSourceType[]
-    Set of sources that should be shown to the user. The sources order in the set decides the tab order in the picker.
-
-    
-      targetTab
-      Tab optional
-    Optional tab for which the stream is created. If not specified then the resulting stream can be used only by the calling extension. The stream can only be used by frames in the given tab whose security origin matches tab.url. The tab's origin must be a secure origin, e.g. HTTPS.
-
     
       callback
-      function
+      function optional
     
           The callback parameter looks like:
-          (streamId: string, options: object) => void
+          () => void
         
-    
-      streamId
-      string
-    An opaque string that can be passed to getUserMedia() API to generate media stream that corresponds to the source selected by the user. If user didn't select any source (i.e. canceled the prompt) then the callback is called with an empty streamId. The created streamId can be used only once and expires after a few seconds when it is not used.
-
-    
-      options
-      object
-    
-      Chrome 57+
-      
-    Contains properties that describe the stream.
-
-    
-      canRequestAudioTrack
-      boolean
-    True if "audio" is included in parameter sources, and the end user does not uncheck the "Share audio" checkbox. Otherwise false, and in this case, one should not ask for audio stream through getUserMedia call.
-
-    
-    
     Returns
           
-            number
-            An id that can be passed to cancelChooseDesktopMedia() in case the prompt need to be canceled.
-
+            Promise<void>
+            
+              
+                Promises are supported in Manifest V3 and later, but callbacks are provided for
+                backward compatibility. You cannot use both on the same function call. The
+                promise resolves with the same type that is passed to the callback.
+              
+            
         
       
-
 
   
 
