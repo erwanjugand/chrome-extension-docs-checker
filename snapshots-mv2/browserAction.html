@@ -1,0 +1,655 @@
+
+
+  
+    
+    
+.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}
+
+
+
+
+
+
+Description
+Use browser actions to put icons in the main Google Chrome toolbar, to the right of the address bar. In addition to its icon, a browser action can have a tooltip, a badge, and a popup.
+
+
+
+Availability
+
+      
+        ≤ MV2
+    
+
+In the following figure, the multicolored square to the right of the address bar is the icon for a
+browser action. A popup is below the icon.
+
+
+
+If you want to create an icon that isn't always active, use a page action instead of a browser
+action.
+
+Manifest
+
+Register your browser action in the extension manifest like this:
+{
+  "name": "My extension",
+  ...
+  "browser_action": {
+    "default_icon": {                // optional
+      "16": "images/icon16.png",     // optional
+      "24": "images/icon24.png",     // optional
+      "32": "images/icon32.png"      // optional
+    },
+    "default_title": "Google Mail",  // optional, shown in tooltip
+    "default_popup": "popup.html"    // optional
+  },
+  ...
+}
+
+You can provide any size icon to be used in Chrome, and Chrome will select the closest one and scale
+it to the appropriate size to fill the 16-dip space. However, if the exact size isn't provided, this
+scaling can cause the icon to lose detail or look fuzzy.
+
+Since devices with less-common scale factors like 1.5x or 1.2x are becoming more common, you are
+encouraged to provide multiple sizes for your icons. This also ensures that if the icon display size
+is ever changed, you don't need to do any more work to provide different icons!
+
+The old syntax for registering the default icon is still supported:
+{
+  "name": "My extension",
+  ...
+  "browser_action": {
+    ...
+    "default_icon": "images/icon32.png"  // optional
+    // equivalent to "default_icon": { "32": "images/icon32.png" }
+  },
+  ...
+}
+
+Parts of the UI
+
+A browser action can have an icon, a tooltip, a badge, and a popup.
+
+Icon
+
+The browser action icons in Chrome are 16 dips (device-independent pixels) wide and high. Larger
+icons are resized to fit, but for best results, use a 16-dip square icon.
+
+You can set the icon in two ways: using a static image or using the HTML5 canvas element. Using
+static images is easier for simple applications, but you can create more dynamic UIs—such as
+smooth animation—using the canvas element.
+
+Static images can be in any format WebKit can display, including BMP, GIF, ICO, JPEG, or PNG. For
+unpacked extensions, images must be in the PNG format.
+
+To set the icon, use the default_icon field of browser_action in the manifest, or call
+the browserAction.setIcon method.
+
+To properly display icon when screen pixel density (ratio size_in_pixel / size_in_dip) is
+different than 1, the icon can be defined as set of images with different sizes. The actual image to
+display will be selected from the set to best fit the pixel size of 16 dip. The icon set can contain
+any size icon specification, and Chrome will select the most appropriate one.
+
+Tooltip
+
+To set the tooltip, use the default_title field of browser_action in the manifest, or
+call the browserAction.setTitle method. You can specify locale-specific strings for the
+default_title field; see Internationalization for details.
+
+Badge
+
+Browser actions can optionally display a badge—a bit of text that is layered over the icon.
+Badges make it easy to update the browser action to display a small amount of information about the
+state of the extension.
+
+Because the badge has limited space, it should have 4 characters or less.
+
+Set the text and color of the badge using browserAction.setBadgeText and
+browserAction.setBadgeBackgroundColor, respectively.
+
+Popup
+
+If a browser action has a popup, the popup appears when the user clicks the extension's icon. The
+popup can contain any HTML contents that you like, and it's automatically sized to fit its contents.
+The popup cannot be smaller than 25x25 and cannot be larger than 800x600.
+
+To add a popup to your browser action, create an HTML file with the popup's contents. Specify the
+HTML file in the default_popup field of browser_action in the manifest, or call the
+browserAction.setPopup method.
+
+Tips
+
+For the best visual impact, follow these guidelines:
+
+
+Do use browser actions for features that make sense on most pages.
+Don't use browser actions for features that make sense for only a few pages. Use page
+actions instead.
+Do use big, colorful icons that make the most of the 16x16-dip space. Browser action icons
+should seem a little bigger and heavier than page action icons.
+Don't attempt to mimic Google Chrome's monochrome menu icon. That doesn't work well with
+themes, and anyway, extensions should stand out a little.
+Do use alpha transparency to add soft edges to your icon. Because many people use themes, your
+icon should look nice on a variety of background colors.
+Don't constantly animate your icon. That's just annoying.
+
+
+Examples
+
+You can find simple examples of using browser actions in the examples/api/browserAction
+directory. For other examples and for help in viewing the source code, see Samples.
+
+Types
+  
+    
+      TabDetails
+    
+      Chrome 88+
+      
+    Properties
+    
+      tabId
+      number optional
+    The ID of the tab to query state for. If no tab is specified, the non-tab-specific state is returned.
+
+    Methods
+  
+    
+      disable()
+    
+      
+        Promise
+      
+    
+        chrome.browserAction.disable(  tabId?: number,  callback?: function,)
+      Disables the browser action for a tab.
+Parameters
+    
+      tabId
+      number optional
+    The ID of the tab for which to modify the browser action.
+
+    
+      callback
+      function optional
+    
+      Chrome 67+
+      
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 88+
+      
+    
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
+    
+      enable()
+    
+      
+        Promise
+      
+    
+        chrome.browserAction.enable(  tabId?: number,  callback?: function,)
+      Enables the browser action for a tab. Defaults to enabled.
+Parameters
+    
+      tabId
+      number optional
+    The ID of the tab for which to modify the browser action.
+
+    
+      callback
+      function optional
+    
+      Chrome 67+
+      
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 88+
+      
+    
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
+    
+      getBadgeBackgroundColor()
+    
+      
+        Promise
+      
+    
+        chrome.browserAction.getBadgeBackgroundColor(  details: TabDetails,  callback?: function,)
+      Gets the background color of the browser action.
+Parameters
+    
+      details
+      TabDetails
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (result: ColorArray) => void
+        
+    
+      result
+      ColorArray
+    
+    
+    Returns
+          
+            Promise<extensionTypes.ColorArray>
+            
+      Chrome 88+
+      
+    
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
+    
+      getBadgeText()
+    
+      
+        Promise
+      
+    
+        chrome.browserAction.getBadgeText(  details: TabDetails,  callback?: function,)
+      Gets the badge text of the browser action. If no tab is specified, the non-tab-specific badge text is returned.
+Parameters
+    
+      details
+      TabDetails
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (result: string) => void
+        
+    
+      result
+      string
+    
+    
+    Returns
+          
+            Promise<string>
+            
+      Chrome 88+
+      
+    
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
+    
+      getPopup()
+    
+      
+        Promise
+      
+    
+        chrome.browserAction.getPopup(  details: TabDetails,  callback?: function,)
+      Gets the HTML document that is set as the popup for this browser action.
+Parameters
+    
+      details
+      TabDetails
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (result: string) => void
+        
+    
+      result
+      string
+    
+    
+    Returns
+          
+            Promise<string>
+            
+      Chrome 88+
+      
+    
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
+    
+      getTitle()
+    
+      
+        Promise
+      
+    
+        chrome.browserAction.getTitle(  details: TabDetails,  callback?: function,)
+      Gets the title of the browser action.
+Parameters
+    
+      details
+      TabDetails
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (result: string) => void
+        
+    
+      result
+      string
+    
+    
+    Returns
+          
+            Promise<string>
+            
+      Chrome 88+
+      
+    
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
+    
+      setBadgeBackgroundColor()
+    
+      
+        Promise
+      
+    
+        chrome.browserAction.setBadgeBackgroundColor(  details: object,  callback?: function,)
+      Sets the background color for the badge.
+Parameters
+    
+      details
+      object
+    
+    
+      color
+      string | ColorArray
+    An array of four integers in the range 0-255 that make up the RGBA color of the badge. Can also be a string with a CSS hex color value; for example, #FF0000 or #F00 (red). Renders colors at full opacity.
+
+    
+      tabId
+      number optional
+    Limits the change to when a particular tab is selected. Automatically resets when the tab is closed.
+
+    
+    
+      callback
+      function optional
+    
+      Chrome 67+
+      
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 88+
+      
+    
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
+    
+      setBadgeText()
+    
+      
+        Promise
+      
+    
+        chrome.browserAction.setBadgeText(  details: object,  callback?: function,)
+      Sets the badge text for the browser action. The badge is displayed on top of the icon.
+Parameters
+    
+      details
+      object
+    
+    
+      tabId
+      number optional
+    Limits the change to when a particular tab is selected. Automatically resets when the tab is closed.
+
+    
+      text
+      string optional
+    Any number of characters can be passed, but only about four can fit into the space. If an empty string ('') is passed, the badge text is cleared. If tabId is specified and text is null, the text for the specified tab is cleared and defaults to the global badge text.
+
+    
+    
+      callback
+      function optional
+    
+      Chrome 67+
+      
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 88+
+      
+    
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
+    
+      setIcon()
+    
+      
+        Promise
+      
+    
+        chrome.browserAction.setIcon(  details: object,  callback?: function,)
+      Sets the icon for the browser action. The icon can be specified as the path to an image file, as the pixel data from a canvas element, or as a dictionary of one of those. Either the path or the imageData property must be specified.
+Parameters
+    
+      details
+      object
+    
+    
+      imageData
+      ImageData | object optional
+    Either an ImageData object or a dictionary {size -> ImageData} representing an icon to be set. If the icon is specified as a dictionary, the image used is chosen depending on the screen's pixel density. If the number of image pixels that fit into one screen space unit equals scale, then an image with size scale * n is selected, where n is the size of the icon in the UI. At least one image must be specified. Note that 'details.imageData = foo' is equivalent to 'details.imageData = {'16': foo}'
+
+    
+      path
+      string | object optional
+    Either a relative image path or a dictionary {size -> relative image path} pointing to an icon to be set. If the icon is specified as a dictionary, the image used is chosen depending on the screen's pixel density. If the number of image pixels that fit into one screen space unit equals scale, then an image with size scale * n is selected, where n is the size of the icon in the UI. At least one image must be specified. Note that 'details.path = foo' is equivalent to 'details.path = {'16': foo}'
+
+    
+      tabId
+      number optional
+    Limits the change to when a particular tab is selected. Automatically resets when the tab is closed.
+
+    
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 116+
+      
+    
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
+    
+      setPopup()
+    
+      
+        Promise
+      
+    
+        chrome.browserAction.setPopup(  details: object,  callback?: function,)
+      Sets the HTML document to be opened as a popup when the user clicks the browser action icon.
+Parameters
+    
+      details
+      object
+    
+    
+      popup
+      string
+    The relative path to the HTML file to show in a popup. If set to the empty string (''), no popup is shown.
+
+    
+      tabId
+      number optional
+    Limits the change to when a particular tab is selected. Automatically resets when the tab is closed.
+
+    
+    
+      callback
+      function optional
+    
+      Chrome 67+
+      
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 88+
+      
+    
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
+    
+      setTitle()
+    
+      
+        Promise
+      
+    
+        chrome.browserAction.setTitle(  details: object,  callback?: function,)
+      Sets the title of the browser action. This title appears in the tooltip.
+Parameters
+    
+      details
+      object
+    
+    
+      tabId
+      number optional
+    Limits the change to when a particular tab is selected. Automatically resets when the tab is closed.
+
+    
+      title
+      string
+    The string the browser action should display when moused over.
+
+    
+    
+      callback
+      function optional
+    
+      Chrome 67+
+      
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 88+
+      
+    
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      Events
+  
+    
+      onClicked
+    
+        chrome.browserAction.onClicked.addListener(  callback: function,)
+      Fired when a browser action icon is clicked. Does not fire if the browser action has a popup.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (tab: tabs.Tab) => void
+        
+    
+      tab
+      tabs.Tab
+    
+    
+    
+
+  
+
+  

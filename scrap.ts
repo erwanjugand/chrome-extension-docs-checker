@@ -2,13 +2,16 @@ import * as cheerio from 'cheerio'
 import * as path from 'path'
 import fs from 'node:fs'
 import https from 'node:https'
+
 const SNAPSHOTS_DIR = 'snapshots'
+const SNAPSHOTS_DIR_MV2 = 'snapshots-mv2'
 
 const BASE_URL = 'https://developer.chrome.com'
-const API_URL = `${BASE_URL}/docs/extensions/reference/api`
+const MV3_URL = `${BASE_URL}/docs/extensions/reference/api`
+const MV2_URL = `${BASE_URL}/docs/extensions/mv2/reference`
 const MAIN_SELECTOR = '.devsite-article-body'
 const LINK_SELECTORS =
-  ".devsite-nav-list[menu='_book'] .devsite-nav-item:not(.devsite-nav-deprecated) > a[href^='/docs/extensions/reference/api/']"
+  ".devsite-nav-list[menu='_book'] .devsite-nav-item:not(.devsite-nav-deprecated) > a[href^='/docs/extensions/']"
 
 function fetch(url: string): Promise<string> {
   return new Promise((resolve, reject) => {
@@ -32,9 +35,9 @@ function fetch(url: string): Promise<string> {
   })
 }
 
-const getApiLinks = async (): Promise<string[]> => {
+const getApiLinks = async (baseUrl: string): Promise<string[]> => {
   try {
-    const html = await fetch(API_URL)
+    const html = await fetch(baseUrl)
     const cheerioHtml = cheerio.load(html)
     const links: string[] = []
 
@@ -51,10 +54,10 @@ const getApiLinks = async (): Promise<string[]> => {
   }
 }
 
-const extractContent = async (apiUrl: string) => {
-  const apiName = apiUrl.split(`${API_URL}/`).pop() ?? ''
+const extractContent = async (apiUrl: string, dist: string, baseUrl: string) => {
+  const apiName = apiUrl.split(`${baseUrl}/`).pop() ?? ''
   const apiFileName = apiName.replaceAll('/', '.')
-  const snapshotPath = path.join(`${SNAPSHOTS_DIR}/`, `${apiFileName}.html`)
+  const snapshotPath = path.join(`${dist}/`, `${apiFileName}.html`)
 
   try {
     const html = await fetch(apiUrl)
@@ -73,18 +76,19 @@ const extractContent = async (apiUrl: string) => {
   }
 }
 
-const init = async () => {
-  if (fs.existsSync(SNAPSHOTS_DIR)) {
-    fs.rmSync(SNAPSHOTS_DIR, { recursive: true })
+const init = async (dist: string, baseUrl: string) => {
+  if (fs.existsSync(dist)) {
+    fs.rmSync(dist, { recursive: true })
   }
-  fs.mkdirSync(SNAPSHOTS_DIR)
+  fs.mkdirSync(dist)
 
-  const apiLinks = await getApiLinks()
+  const apiLinks = await getApiLinks(baseUrl)
   console.log(`${apiLinks.length} APIs found.`)
 
   for (const apiUrl of apiLinks) {
-    extractContent(apiUrl)
+    extractContent(apiUrl, dist, baseUrl)
   }
 }
 
-init()
+init(SNAPSHOTS_DIR, MV3_URL)
+init(SNAPSHOTS_DIR_MV2, MV2_URL)

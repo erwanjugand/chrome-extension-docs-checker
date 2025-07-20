@@ -1,0 +1,878 @@
+
+
+  
+    
+    
+.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}
+
+
+
+
+
+
+Description
+Use the system.display API to query display metadata.
+
+Permissions
+system.display
+
+
+
+
+
+Types
+  
+    
+      ActiveState
+    
+      Chrome 117+
+      
+    An enum to tell if the display is detected and used by the system. The display is considered 'inactive', if it is not detected by the system (maybe disconnected, or considered disconnected due to sleep mode, etc). This state is used to keep existing display when the all displays are disconnected, for example.
+Enum
+      "active"  "inactive"  
+    
+  
+    
+      Bounds
+    Properties
+    
+      height
+      number
+    The height of the display in pixels.
+
+    
+      left
+      number
+    The x-coordinate of the upper-left corner.
+
+    
+      top
+      number
+    The y-coordinate of the upper-left corner.
+
+    
+      width
+      number
+    The width of the display in pixels.
+
+    
+    
+      DisplayLayout
+    
+      Chrome 53+
+      
+    Properties
+    
+      id
+      string
+    The unique identifier of the display.
+
+    
+      offset
+      number
+    The offset of the display along the connected edge. 0 indicates that the topmost or leftmost corners are aligned.
+
+    
+      parentId
+      string
+    The unique identifier of the parent display. Empty if this is the root.
+
+    
+      position
+      LayoutPosition
+    The layout position of this display relative to the parent. This will be ignored for the root.
+
+    
+    
+      DisplayMode
+    
+      Chrome 52+
+      
+    Properties
+    
+      deviceScaleFactor
+      number
+    The display mode device scale factor.
+
+    
+      height
+      number
+    The display mode height in device independent (user visible) pixels.
+
+    
+      heightInNativePixels
+      number
+    The display mode height in native pixels.
+
+    
+      isInterlaced
+      boolean optional
+    
+      Chrome 74+
+      
+    True if this mode is interlaced, false if not provided.
+
+    
+      isNative
+      boolean
+    True if the mode is the display's native mode.
+
+    
+      isSelected
+      boolean
+    True if the display mode is currently selected.
+
+    
+      refreshRate
+      number
+    
+      Chrome 67+
+      
+    The display mode refresh rate in hertz.
+
+    
+      uiScale
+      number optional
+    
+      
+        Deprecated since Chrome 70
+    Use displayZoomFactorThe display mode UI scale factor.
+
+    
+      width
+      number
+    The display mode width in device independent (user visible) pixels.
+
+    
+      widthInNativePixels
+      number
+    The display mode width in native pixels.
+
+    
+    
+      DisplayProperties
+    Properties
+    
+      boundsOriginX
+      number optional
+    If set, updates the display's logical bounds origin along the x-axis. Applied together with boundsOriginY. Defaults to the current value if not set and boundsOriginY is set. Note that when updating the display origin, some constraints will be applied, so the final bounds origin may be different than the one set. The final bounds can be retrieved using getInfo. The bounds origin cannot be changed on the primary display.
+
+    
+      boundsOriginY
+      number optional
+    If set, updates the display's logical bounds origin along the y-axis. See documentation for boundsOriginX parameter.
+
+    
+      displayMode
+      DisplayMode optional
+    
+      Chrome 52+
+      
+    If set, updates the display mode to the mode matching this value. If other parameters are invalid, this will not be applied. If the display mode is invalid, it will not be applied and an error will be set, but other properties will still be applied.
+
+    
+      displayZoomFactor
+      number optional
+    
+      Chrome 65+
+      
+    If set, updates the zoom associated with the display. This zoom performs re-layout and repaint thus resulting in a better quality zoom than just performing a pixel by pixel stretch enlargement.
+
+    
+      isPrimary
+      boolean optional
+    If set to true, makes the display primary. No-op if set to false. Note: If set, the display is considered primary for all other properties (i.e. isUnified may be set and bounds origin may not).
+
+    
+      isUnified
+      boolean optional
+    
+      Chrome 59+
+      
+    ChromeOS only. If set to true, changes the display mode to unified desktop (see enableUnifiedDesktop for details). If set to false, unified desktop mode will be disabled. This is only valid for the primary display. If provided, mirroringSourceId must not be provided and other properties will be ignored. This is has no effect if not provided.
+
+    
+      mirroringSourceId
+      string optional
+    
+      
+        Deprecated since Chrome 68
+    Use setMirrorMode.ChromeOS only. If set and not empty, enables mirroring for this display only. Otherwise disables mirroring for all displays. This value should indicate the id of the source display to mirror, which must not be the same as the id passed to setDisplayProperties. If set, no other property may be set.
+
+    
+      overscan
+      Insets optional
+    If set, sets the display's overscan insets to the provided values. Note that overscan values may not be negative or larger than a half of the screen's size. Overscan cannot be changed on the internal monitor.
+
+    
+      rotation
+      number optional
+    If set, updates the display's rotation. Legal values are [0, 90, 180, 270]. The rotation is set clockwise, relative to the display's vertical position.
+
+    
+    
+      DisplayUnitInfo
+    Properties
+    
+      activeState
+      ActiveState
+    
+      Chrome 117+
+      
+    Active if the display is detected and used by the system.
+
+    
+      availableDisplayZoomFactors
+      number[]
+    
+      Chrome 67+
+      
+    A list of zoom factor values that can be set for the display.
+
+    
+      bounds
+      Bounds
+    The display's logical bounds.
+
+    
+      displayZoomFactor
+      number
+    
+      Chrome 65+
+      
+    The ratio between the display's current and default zoom. For example, value 1 is equivalent to 100% zoom, and value 1.5 is equivalent to 150% zoom.
+
+    
+      dpiX
+      number
+    The number of pixels per inch along the x-axis.
+
+    
+      dpiY
+      number
+    The number of pixels per inch along the y-axis.
+
+    
+      edid
+      Edid optional
+    
+      Chrome 67+
+      
+    NOTE: This is only available to ChromeOS Kiosk apps and Web UI.
+
+    
+      hasTouchSupport
+      boolean
+    
+      Chrome 57+
+      
+    True if this display has a touch input device associated with it.
+
+    
+      id
+      string
+    The unique identifier of the display.
+
+    
+      isEnabled
+      boolean
+    True if this display is enabled.
+
+    
+      isPrimary
+      boolean
+    True if this is the primary display.
+
+    
+      isUnified
+      boolean
+    
+      Chrome 59+
+      
+    True for all displays when in unified desktop mode. See documentation for enableUnifiedDesktop.
+
+    
+      mirroringDestinationIds
+      string[]
+    
+      Chrome 64+
+      
+    ChromeOS only. Identifiers of the displays to which the source display is being mirrored. Empty if no displays are being mirrored. This will be set to the same value for all displays. This must not include mirroringSourceId.
+
+    
+      mirroringSourceId
+      string
+    ChromeOS only. Identifier of the display that is being mirrored if mirroring is enabled, otherwise empty. This will be set for all displays (including the display being mirrored).
+
+    
+      modes
+      DisplayMode[]
+    
+      Chrome 52+
+      
+    The list of available display modes. The current mode will have isSelected=true. Only available on ChromeOS. Will be set to an empty array on other platforms.
+
+    
+      name
+      string
+    The user-friendly name (e.g. "HP LCD monitor").
+
+    
+      overscan
+      Insets
+    The display's insets within its screen's bounds. Currently exposed only on ChromeOS. Will be set to empty insets on other platforms.
+
+    
+      rotation
+      number
+    The display's clockwise rotation in degrees relative to the vertical position. Currently exposed only on ChromeOS. Will be set to 0 on other platforms. A value of -1 will be interpreted as auto-rotate when the device is in a physical tablet state.
+
+    
+      workArea
+      Bounds
+    The usable work area of the display within the display bounds. The work area excludes areas of the display reserved for OS, for example taskbar and launcher.
+
+    
+    
+      Edid
+    
+      Chrome 67+
+      
+    Properties
+    
+      manufacturerId
+      string
+    3 character manufacturer code. See Sec. 3.4.1 page 21. Required in v1.4.
+
+    
+      productId
+      string
+    2 byte manufacturer-assigned code, Sec. 3.4.2 page 21. Required in v1.4.
+
+    
+      yearOfManufacture
+      number
+    Year of manufacturer, Sec. 3.4.4 page 22. Required in v1.4.
+
+    
+    
+      GetInfoFlags
+    
+      Chrome 59+
+      
+    Properties
+    
+      singleUnified
+      boolean optional
+    If set to true, only a single DisplayUnitInfo will be returned by getInfo when in unified desktop mode (see enableUnifiedDesktop). Defaults to false.
+
+    
+    
+      Insets
+    Properties
+    
+      bottom
+      number
+    The y-axis distance from the bottom bound.
+
+    
+      left
+      number
+    The x-axis distance from the left bound.
+
+    
+      right
+      number
+    The x-axis distance from the right bound.
+
+    
+      top
+      number
+    The y-axis distance from the top bound.
+
+    
+    
+      LayoutPosition
+    
+      Chrome 53+
+      
+    Layout position, i.e. edge of parent that the display is attached to.
+Enum
+      "top"  "right"  "bottom"  "left"  
+    
+  
+    
+      MirrorMode
+    
+      Chrome 65+
+      
+    Mirror mode, i.e. different ways of how a display is mirrored to other displays.
+Enum
+      "off"  Specifies the default mode (extended or unified desktop)."normal"  Specifies that the default source display will be mirrored to all other displays."mixed"  Specifies that the specified source display will be mirrored to the provided destination displays. All other connected displays will be extended.
+    
+  
+    
+      MirrorModeInfo
+    
+      Chrome 65+
+      
+    Properties
+    
+      mirroringDestinationIds
+      string[] optional
+    The ids of the mirroring destination displays. This is only valid for 'mixed'.
+
+    
+      mirroringSourceId
+      string optional
+    The id of the mirroring source display. This is only valid for 'mixed'.
+
+    
+      mode
+      MirrorMode
+    The mirror mode that should be set.
+
+    
+    
+      Point
+    
+      Chrome 57+
+      
+    Properties
+    
+      x
+      number
+    The x-coordinate of the point.
+
+    
+      y
+      number
+    The y-coordinate of the point.
+
+    
+    
+      TouchCalibrationPair
+    
+      Chrome 57+
+      
+    Properties
+    
+      displayPoint
+      Point
+    The coordinates of the display point.
+
+    
+      touchPoint
+      Point
+    The coordinates of the touch point corresponding to the display point.
+
+    
+    
+      TouchCalibrationPairQuad
+    
+      Chrome 57+
+      
+    Properties
+    
+      pair1
+      TouchCalibrationPair
+    First pair of touch and display point required for touch calibration.
+
+    
+      pair2
+      TouchCalibrationPair
+    Second pair of touch and display point required for touch calibration.
+
+    
+      pair3
+      TouchCalibrationPair
+    Third pair of touch and display point required for touch calibration.
+
+    
+      pair4
+      TouchCalibrationPair
+    Fourth pair of touch and display point required for touch calibration.
+
+    Methods
+  
+    
+      clearTouchCalibration()
+    
+      Chrome 57+
+      
+    
+        chrome.system.display.clearTouchCalibration(  id: string,)
+      Resets the touch calibration for the display and brings it back to its default state by clearing any touch calibration data associated with the display.
+Parameters
+    
+      id
+      string
+    The display's unique identifier.
+
+    
+    
+      completeCustomTouchCalibration()
+    
+      Chrome 57+
+      
+    
+        chrome.system.display.completeCustomTouchCalibration(  pairs: TouchCalibrationPairQuad,  bounds: Bounds,)
+      Sets the touch calibration pairs for a display. These pairs would be used to calibrate the touch screen for display with id called in startCustomTouchCalibration(). Always call startCustomTouchCalibration before calling this method. If another touch calibration is already in progress this will throw an error.
+Parameters
+    
+      pairs
+      TouchCalibrationPairQuad
+    The pairs of point used to calibrate the display.
+
+    
+      bounds
+      Bounds
+    Bounds of the display when the touch calibration was performed. bounds.left and bounds.top values are ignored.
+
+    
+    
+      enableUnifiedDesktop()
+    
+      Chrome 46+
+      
+    
+        chrome.system.display.enableUnifiedDesktop(  enabled: boolean,)
+      Enables/disables the unified desktop feature. If enabled while mirroring is active, the desktop mode will not change until mirroring is turned off. Otherwise, the desktop mode will switch to unified immediately. NOTE: This is only available to ChromeOS Kiosk apps and Web UI.
+Parameters
+    
+      enabled
+      boolean
+    True if unified desktop should be enabled.
+
+    
+    
+      getDisplayLayout()
+    
+      
+        Promise
+      Chrome 53+
+      
+    
+        chrome.system.display.getDisplayLayout(  callback?: function,)
+      Requests the layout info for all displays. NOTE: This is only available to ChromeOS Kiosk apps and Web UI.
+Parameters
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (layouts: DisplayLayout[]) => void
+        
+    
+      layouts
+      DisplayLayout[]
+    
+    
+    Returns
+          
+            Promise<DisplayLayout[]>
+            
+      Chrome 91+
+      
+    
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
+    
+      getInfo()
+    
+      
+        Promise
+      
+    
+        chrome.system.display.getInfo(  flags?: GetInfoFlags,  callback?: function,)
+      Requests the information for all attached display devices.
+Parameters
+    
+      flags
+      GetInfoFlags optional
+    
+      Chrome 59+
+      
+    Options affecting how the information is returned.
+
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (displayInfo: DisplayUnitInfo[]) => void
+        
+    
+      displayInfo
+      DisplayUnitInfo[]
+    
+    
+    Returns
+          
+            Promise<DisplayUnitInfo[]>
+            
+      Chrome 91+
+      
+    
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
+    
+      overscanCalibrationAdjust()
+    
+      Chrome 53+
+      
+    
+        chrome.system.display.overscanCalibrationAdjust(  id: string,  delta: Insets,)
+      Adjusts the current overscan insets for a display. Typically this should either move the display along an axis (e.g. left+right have the same value) or scale it along an axis (e.g. top+bottom have opposite values). Each Adjust call is cumulative with previous calls since Start.
+Parameters
+    
+      id
+      string
+    The display's unique identifier.
+
+    
+      delta
+      Insets
+    The amount to change the overscan insets.
+
+    
+    
+      overscanCalibrationComplete()
+    
+      Chrome 53+
+      
+    
+        chrome.system.display.overscanCalibrationComplete(  id: string,)
+      Complete overscan adjustments for a display by saving the current values and hiding the overlay.
+Parameters
+    
+      id
+      string
+    The display's unique identifier.
+
+    
+    
+      overscanCalibrationReset()
+    
+      Chrome 53+
+      
+    
+        chrome.system.display.overscanCalibrationReset(  id: string,)
+      Resets the overscan insets for a display to the last saved value (i.e before Start was called).
+Parameters
+    
+      id
+      string
+    The display's unique identifier.
+
+    
+    
+      overscanCalibrationStart()
+    
+      Chrome 53+
+      
+    
+        chrome.system.display.overscanCalibrationStart(  id: string,)
+      Starts overscan calibration for a display. This will show an overlay on the screen indicating the current overscan insets. If overscan calibration for display id is in progress this will reset calibration.
+Parameters
+    
+      id
+      string
+    The display's unique identifier.
+
+    
+    
+      setDisplayLayout()
+    
+      
+        Promise
+      Chrome 53+
+      
+    
+        chrome.system.display.setDisplayLayout(  layouts: DisplayLayout[],  callback?: function,)
+      Set the layout for all displays. Any display not included will use the default layout. If a layout would overlap or be otherwise invalid it will be adjusted to a valid layout. After layout is resolved, an onDisplayChanged event will be triggered. NOTE: This is only available to ChromeOS Kiosk apps and Web UI.
+Parameters
+    
+      layouts
+      DisplayLayout[]
+    The layout information, required for all displays except the primary display.
+
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 91+
+      
+    
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
+    
+      setDisplayProperties()
+    
+      
+        Promise
+      
+    
+        chrome.system.display.setDisplayProperties(  id: string,  info: DisplayProperties,  callback?: function,)
+      Updates the properties for the display specified by id, according to the information provided in info. On failure, runtime.lastError will be set. NOTE: This is only available to ChromeOS Kiosk apps and Web UI.
+Parameters
+    
+      id
+      string
+    The display's unique identifier.
+
+    
+      info
+      DisplayProperties
+    The information about display properties that should be changed. A property will be changed only if a new value for it is specified in info.
+
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 91+
+      
+    
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
+    
+      setMirrorMode()
+    
+      
+        Promise
+      Chrome 65+
+      
+    
+        chrome.system.display.setMirrorMode(  info: MirrorModeInfo,  callback?: function,)
+      Sets the display mode to the specified mirror mode. Each call resets the state from previous calls. Calling setDisplayProperties() will fail for the mirroring destination displays. NOTE: This is only available to ChromeOS Kiosk apps and Web UI.
+Parameters
+    
+      info
+      MirrorModeInfo
+    The information of the mirror mode that should be applied to the display mode.
+
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 91+
+      
+    
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
+    
+      showNativeTouchCalibration()
+    
+      
+        Promise
+      Chrome 57+
+      
+    
+        chrome.system.display.showNativeTouchCalibration(  id: string,  callback?: function,)
+      Displays the native touch calibration UX for the display with id as display id. This will show an overlay on the screen with required instructions on how to proceed. The callback will be invoked in case of successful calibration only. If the calibration fails, this will throw an error.
+Parameters
+    
+      id
+      string
+    The display's unique identifier.
+
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (success: boolean) => void
+        
+    
+      success
+      boolean
+    
+    
+    Returns
+          
+            Promise<boolean>
+            
+      Chrome 91+
+      
+    
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
+    
+      startCustomTouchCalibration()
+    
+      Chrome 57+
+      
+    
+        chrome.system.display.startCustomTouchCalibration(  id: string,)
+      Starts custom touch calibration for a display. This should be called when using a custom UX for collecting calibration data. If another touch calibration is already in progress this will throw an error.
+Parameters
+    
+      id
+      string
+    The display's unique identifier.
+
+    Events
+  
+    
+      onDisplayChanged
+    
+        chrome.system.display.onDisplayChanged.addListener(  callback: function,)
+      Fired when anything changes to the display configuration.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          () => void
+        
+    
+
+  
+
+  

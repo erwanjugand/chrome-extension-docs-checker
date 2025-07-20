@@ -1,0 +1,1836 @@
+
+
+  
+    
+    
+.dcc-reference{--color-hairline: #dadce0;--color-blue-lightest: rgba(232, 240, 254, 0.4);--color-blue-lighter: #d2e3fc;--color-blue-medium: #1967d2;--color-blue-darkest: #174ea6;--rgb-blue-darkest: 23, 78, 166;--color-yellow-lightest: rgba(254, 247, 224, 0.3);--color-yellow-lighter: #feefc3;--color-yellow-medium: #f29900;--color-yellow-darkest: #de7100;--rgb-yellow-darkest: 227, 117, 0;--color-red-lightest: rgba(252, 232, 230, 0.4);--color-red-lighter: rgba(252, 232, 230, 0.5);--color-red-medium: #c5221f;--color-red-darkest: #9f0e0e;--rgb-red-darkest: 165, 14, 14;--color-green-lightest: rgba(230, 244, 234, 0.4);--color-green-lighter: #ceead6;--color-green-medium: #188038;--color-green-darkest: #0d652d;--rgb-green-darkest: 13, 101, 45;--color-purple-lightest: rgba(243, 232, 253, 0.4);--color-purple-lighter: rgba(243, 232, 253, 0.5);--color-purple-medium: #8430ce;--color-purple-darkest: #681da8;--rgb-purple-darkest: 104, 29, 168;--color-pink-lightest: rgba(253, 231, 243, 0.4);--color-pink-lighter: rgba(253, 231, 243, 0.5);--color-pink-medium: #d01884;--color-pink-darkest: #9c166b;--rgb-pink-darkest: 156, 22, 107}.dcc-type--label{font-weight:500;font-size:.75rem;line-height:1.3333333333}.dcc-type--xsmall{font-size:.75rem;line-height:1.6666666667}h2.dcc-api-title{display:none}.dcc-code-sections ul{padding-left:0}.dcc-code-sections .dcc-code-sections{border:1px solid var(--color-hairline);padding:calc(1rem - 1px)}.dcc-code-sections .dcc-code-sections ul>li:first-child{border-top:0;padding-top:0}.dcc-code-sections .dcc-code-sections devsite-code{margin-left:calc(-1rem + 1px);margin-right:calc(-1rem + 1px)}.dcc-code-sections .dcc-type--small{font-size:.875em;line-height:2em}.dcc-code-sections__label{font-size:.875rem;line-height:2}.dcc-code-sections__type>:not(:last-child){margin-right:.5ch}.dcc-code-sections__enum{margin-bottom:1rem}.dcc-code-sections__icon::before{background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNzc2MzkgMS41NTI3OUM3LjkxNzE2IDEuNDgyNCA4LjA4Mjg0IDEuNDgyNCA4LjIyMzYxIDEuNTUyNzlMMTQuMjIzNiA0LjU1Mjc5QzE0LjM5MyA0LjYzNzQ4IDE0LjUgNC44MTA2MSAxNC41IDVWMTFDMTQuNSAxMS4xODk0IDE0LjM5MyAxMS4zNjI1IDE0LjIyMzYgMTEuNDQ3Mkw4LjIyMzYxIDE0LjQ0NzJDOC4wODI4NCAxNC41MTc2IDcuOTE3MTYgMTQuNTE3NiA3Ljc3NjM5IDE0LjQ0NzJMMS43NzYzOSAxMS40NDcyQzEuNjA3IDExLjM2MjUgMS41IDExLjE4OTQgMS41IDExVjVDMS41IDQuODEwNjEgMS42MDcgNC42Mzc0OCAxLjc3NjM5IDQuNTUyNzlMNy43NzYzOSAxLjU1Mjc5Wk0yLjUgNS44MDkwMlYxMC42OTFMNy41IDEzLjE5MVY4LjMwOTAyTDIuNSA1LjgwOTAyWk04LjUgOC4zMDkwMlYxMy4xOTFMMTMuNSAxMC42OTFWNS44MDkwMkw4LjUgOC4zMDkwMlpNMTIuODgyIDVMOCA3LjQ0MDk4TDMuMTE4MDMgNUw4IDIuNTU5MDJMMTIuODgyIDVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=") center/contain no-repeat;content:"";display:inline-block;height:1.25em;margin-right:.5ch;vertical-align:middle;width:1.25em}.dcc-code-sections__icon.dcc-code-sections__icon--number::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNiAyLjVINFY0LjVINlYyLjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik02IDUuNUg0VjcuNUg2VjUuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTQgOC41SDZWMTAuNUg0VjguNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTkgMi41SDdWNC41SDlWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNNyA1LjVIOVY3LjVIN1Y1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05IDguNUg3VjEwLjVIOVY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik03IDExLjVIOVYxMy41SDdWMTEuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPHBhdGggZD0iTTEyIDIuNUgxMFY0LjVIMTJWMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBkPSJNMTAgNS41SDEyVjcuNUgxMFY1LjVaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik0xMiA4LjVIMTBWMTAuNUgxMlY4LjVaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--string::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNC43MTQyOSAxMkg1Ljg1NzE0TDcuMjg1NzEgOC4yODU3MVY0LjVDNy4yODU3MSA0LjIyMzg2IDcuMDYxODYgNCA2Ljc4NTcxIDRIMy41QzMuMjIzODYgNCAzIDQuMjIzODYgMyA0LjVWNy43ODU3MUMzIDguMDYxODYgMy4yMjM4NiA4LjI4NTcxIDMuNSA4LjI4NTcxSDYuMTQyODZMNC43MTQyOSAxMlpNMTAuNDI4NiAxMkgxMS41NzE0TDEzIDguMjg1NzFWNC41QzEzIDQuMjIzODYgMTIuNzc2MSA0IDEyLjUgNEg5LjIxNDI5QzguOTM4MTQgNCA4LjcxNDI5IDQuMjIzODYgOC43MTQyOSA0LjVWNy43ODU3MUM4LjcxNDI5IDguMDYxODYgOC45MzgxNCA4LjI4NTcxIDkuMjE0MjkgOC4yODU3MUgxMS44NTcxTDEwLjQyODYgMTJaIiBmaWxsPSIjNUY2MzY4Ii8+Cjwvc3ZnPgo=")}.dcc-code-sections__icon.dcc-code-sections__icon--boolean::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIuMzUzNiA1Ljg1MzU1TDExLjY0NjQgNS4xNDY0NUw3IDkuNzkyODlMNC44NTM1NSA3LjY0NjQ1TDQuMTQ2NDUgOC4zNTM1NUw3IDExLjIwNzFMMTIuMzUzNiA1Ljg1MzU1WiIgZmlsbD0iIzVGNjM2OCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIgM0MyIDIuNDQ3NzIgMi40NDc3MiAyIDMgMkgxM0MxMy41NTIzIDIgMTQgMi40NDc3MiAxNCAzVjEzQzE0IDEzLjU1MjMgMTMuNTUyMyAxNCAxMyAxNEgzQzIuNDQ3NzIgMTQgMiAxMy41NTIzIDIgMTNWM1pNMyAzSDEzVjEzSDNMMyAzWiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--function::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNSA0QzMuNSAyLjYxOTI5IDQuNjE5MjkgMS41IDYgMS41SDYuNVYyLjVINkM1LjE3MTU3IDIuNSA0LjUgMy4xNzE1NyA0LjUgNFY1Ljc2MzkzQzQuNSA2LjcxMDg2IDMuOTY0OTkgNy41NzY1MiAzLjExODAzIDhDMy45NjQ5OSA4LjQyMzQ4IDQuNSA5LjI4OTE0IDQuNSAxMC4yMzYxVjEyQzQuNSAxMi44Mjg0IDUuMTcxNTcgMTMuNSA2IDEzLjVINi41VjE0LjVINkM0LjYxOTI5IDE0LjUgMy41IDEzLjM4MDcgMy41IDEyVjEwLjIzNjFDMy41IDkuNjY3OTEgMy4xNzkgOS4xNDg1MiAyLjY3MDgyIDguODk0NDNMMS43NzYzOSA4LjQ0NzIxQzEuNjA3IDguMzYyNTIgMS41IDguMTg5MzkgMS41IDhDMS41IDcuODEwNjEgMS42MDcgNy42Mzc0OCAxLjc3NjM5IDcuNTUyNzlMMi42NzA4MiA3LjEwNTU3QzMuMTc5IDYuODUxNDggMy41IDYuMzMyMDkgMy41IDUuNzYzOTNWNFpNMTAgMi41SDkuNVYxLjVIMTBDMTEuMzgwNyAxLjUgMTIuNSAyLjYxOTI5IDEyLjUgNFY1Ljc2MzkzQzEyLjUgNi4zMzIwOSAxMi44MjEgNi44NTE0OCAxMy4zMjkyIDcuMTA1NTdMMTQuMjIzNiA3LjU1Mjc5QzE0LjM5MyA3LjYzNzQ4IDE0LjUgNy44MTA2MSAxNC41IDhDMTQuNSA4LjE4OTM5IDE0LjM5MyA4LjM2MjUyIDE0LjIyMzYgOC40NDcyMUwxMy4zMjkyIDguODk0NDNDMTIuODIxIDkuMTQ4NTIgMTIuNSA5LjY2NzkxIDEyLjUgMTAuMjM2MVYxMkMxMi41IDEzLjM4MDcgMTEuMzgwNyAxNC41IDEwIDE0LjVIOS41VjEzLjVIMTBDMTAuODI4NCAxMy41IDExLjUgMTIuODI4NCAxMS41IDEyVjEwLjIzNjFDMTEuNSA5LjI4OTE0IDEyLjAzNSA4LjQyMzQ4IDEyLjg4MiA4QzEyLjAzNSA3LjU3NjUyIDExLjUgNi43MTA4NiAxMS41IDUuNzYzOTNWNEMxMS41IDMuMTcxNTcgMTAuODI4NCAyLjUgMTAgMi41WiIgZmlsbD0iIzVGNjM2OCIvPgo8L3N2Zz4K")}.dcc-code-sections__icon.dcc-code-sections__icon--array::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDYuNUg0VjkuNUgxMlY2LjVaTTEyIDUuNUg0VjNIMTJWNS41Wk0xMyAzQzEzIDIuNDQ3NzIgMTIuNTUyMyAyIDEyIDJINEMzLjQ0NzcyIDIgMyAyLjQ0NzcyIDMgM1YxM0MzIDEzLjU1MjMgMy40NDc3MiAxNCA0IDE0SDEyQzEyLjU1MjMgMTQgMTMgMTMuNTUyMyAxMyAxM1YzWk0xMiAxMC41SDRWMTNIMTJWMTAuNVoiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__icon.dcc-code-sections__icon--reference::before{background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMyAySDhWM0gzTDMgMTNIMTNWOEgxNFYxM0MxNCAxMy41NTIzIDEzLjU1MjMgMTQgMTMgMTRIM0MyLjQ0NzcyIDE0IDIgMTMuNTUyMyAyIDEzVjNDMiAyLjQ0NzcyIDIuNDQ3NzIgMiAzIDJaIiBmaWxsPSIjNUY2MzY4Ii8+CjxwYXRoIGQ9Ik05LjUgM0gxMi4yOTI5TDUuNjQ2NDUgOS42NDY0NUw2LjM1MzU1IDEwLjM1MzZMMTMgMy43MDcxMVY2LjVIMTRWMkg5LjVWM1oiIGZpbGw9IiM1RjYzNjgiLz4KPC9zdmc+Cg==")}.dcc-code-sections__optional{color:var(--color-pink-medium)}.dcc-code-sections__value{color:var(--color-code-number)}.dcc-code-sections__deprecated{color:var(--color-red-medium)}.dcc-code-sections__callback{display:block}p>.dcc-code-sections__callback{margin-top:.5em}.dcc-code-sections__overline{border-top:1px solid var(--color-hairline);margin:1em 0;padding-top:get-size(300)}.dcc-code-sections__mode{color:var(--color-code-comment);text-transform:uppercase}.dcc-code-sections li{border-top:1px solid var(--color-hairline);display:flex;flex-direction:column;padding-top:get-size(300);position:relative}.dcc-code-sections li>:first-child{font-weight:500;flex:0 0 auto;flex-shrink:1;min-width:9rem;padding-right:1rem}.dcc-code-sections li>:not(:first-child){flex-grow:1}.dcc-code-sections--summary{padding-left:0}.dcc-code-sections--summary>li:first-child{border-top:0;padding-top:0}@media(min-width: 992px){.dcc-code-sections--summary>li{flex-direction:row}}.dcc-code-sections--summary>li>:first-child{min-width:6.5rem}.dcc-tag-pill{--flow-space: 0.25rem;box-sizing:border-box;border-radius:.75rem;font-weight:500;font-size:.75rem;line-height:1.3333333333;margin:calc(var(--flow-space)/2);background-color:var(--color-blue-lightest);color:var(--color-blue-darkest);margin-bottom:.5rem;padding:.25rem .75rem;cursor:help}.dcc-tag-pill--blue{background-color:var(--color-blue-lightest);color:var(--color-blue-darkest)}.dcc-tag-pill--yellow{background-color:var(--color-yellow-lightest);color:var(--color-yellow-darkest)}.dcc-tag-pill--red{background-color:var(--color-red-lightest);color:var(--color-red-darkest)}.dcc-tag-pill--green{background-color:var(--color-green-lightest);color:var(--color-green-darkest)}.dcc-tag-pill--pink{background-color:var(--color-pink-lightest);color:var(--color-pink-darkest)}.dcc-tag-pill--purple{background-color:var(--color-purple-lightest);color:var(--color-purple-darkest)}a>.dcc-tag-pill{cursor:pointer}
+
+
+
+
+
+
+Description
+Use the chrome.webRequest API to observe and analyze traffic and to intercept, block, or modify requests in-flight.
+
+Permissions
+webRequest
+
+
+
+Manifest
+
+You must declare the "webRequest" permission in the extension manifest to use the web request
+API, along with the necessary host permissions. To intercept a sub-resource request, the
+extension must have access to both the requested URL and its initiator. For example:
+{
+  "name": "My extension",
+  ...
+  "permissions": [
+    "webRequest"
+  ],
+  "host_permissions": [
+    "*://*.google.com/*"
+  ],
+  ...
+}
+
+As of Chrome 108, you can asynchronously supply credentials for onAuthRequired events if you use the "webRequest" and "webRequestAuthProvider"
+permissions.
+
+Note: As of Manifest V3, the "webRequestBlocking" permission is no longer available for most extensions. Consider "declarativeNetRequest", which enables use of the declarativeNetRequest API. Aside from "webRequestBlocking", the webRequest API will be unchanged and available for normal use. Policy installed extensions can continue to use "webRequestBlocking".
+
+Life cycle of requests
+
+The web request API defines a set of events that follow the life cycle of a web request. You can use
+these events to observe and analyze traffic. Certain synchronous events will allow you to intercept,
+block, or modify a request.
+
+The event life cycle for successful requests is illustrated here, followed by event definitions:
+
+
+
+
+onBeforeRequest (optionally synchronous)
+Fires when a request is about to occur. This event is sent before any TCP connection is made and can
+be used to cancel or redirect requests.
+onBeforeSendHeaders (optionally synchronous)
+Fires when a request is about to occur and the initial headers have been prepared. The event is
+intended to allow extensions to add, modify, and delete request headers (*). The
+onBeforeSendHeaders event is passed to all subscribers, so different subscribers may attempt to
+modify the request; see the Implementation details section for how this is handled. This event
+can be used to cancel the request.
+onSendHeaders
+Fires after all extensions have had a chance to modify the request headers, and presents the final
+(*) version. The event is triggered before the headers are sent to the network. This event is
+informational and handled asynchronously. It does not allow modifying or cancelling the request.
+onHeadersReceived (optionally synchronous)
+Fires each time that an HTTP(S) response header is received. Due to redirects and authentication
+requests this can happen multiple times per request. This event is intended to allow extensions to
+add, modify, and delete response headers, such as incoming Content-Type headers. The caching
+directives are processed before this event is triggered, so modifying headers such as Cache-Control
+has no influence on the browser's cache. It also allows you to cancel or redirect the request.
+onAuthRequired (optionally synchronous)
+Fires when a request requires authentication of the user. This event can be handled synchronously to
+provide authentication credentials. Note that extensions may provide invalid credentials. Take care
+not to enter an infinite loop by repeatedly providing invalid credentials. This can also be used to
+cancel the request.
+onBeforeRedirect
+Fires when a redirect is about to be executed. A redirection can be triggered by an HTTP response
+code or by an extension. This event is informational and handled asynchronously. It does not allow
+you to modify or cancel the request.
+onResponseStarted
+Fires when the first byte of the response body is received. For HTTP requests, this means that the
+status line and response headers are available. This event is informational and handled
+asynchronously. It does not allow modifying or canceling the request.
+onCompleted
+Fires when a request has been processed successfully.
+onErrorOccurred
+Fires when a request could not be processed successfully.
+
+
+The web request API guarantees that for each request, either onCompleted or onErrorOccurred is
+fired as the final event with one exception: If a request is redirected to a data:// URL,
+onBeforeRedirect is the last reported event.
+
+*
+Note that the web request API presents an abstraction of the network stack to the extension.
+Internally, one URL request can be split into several HTTP requests (for example, to fetch individual
+byte ranges from a large file) or can be handled by the network stack without communicating with the
+network. For this reason, the API does not provide the final HTTP headers that are sent to the
+network. For example, all headers that are related to caching are invisible to the extension.
+
+The following headers are currently not provided to the onBeforeSendHeaders event. This list
+is not guaranteed to be complete or stable.
+
+
+Authorization
+Cache-Control
+Connection
+Content-Length
+Host
+If-Modified-Since
+If-None-Match
+If-Range
+Partial-Data
+Pragma
+Proxy-Authorization
+Proxy-Connection
+Transfer-Encoding
+
+
+Starting from Chrome 79, request header modifications affect Cross-Origin Resource Sharing (CORS)
+checks. If modified headers for cross-origin requests do not meet the criteria, it will result in
+sending a CORS preflight to ask the server if such headers can be accepted. If you really need to
+modify headers in a way to violate the CORS protocol, you need to specify 'extraHeaders' in
+opt_extraInfoSpec. On the other hand, response header modifications do not work to deceive CORS
+checks. If you need to deceive the CORS protocol, you also need to specify 'extraHeaders' for the
+response modifications.
+
+Starting from Chrome 79, the webRequest API does not intercept CORS preflight requests and
+responses by default. A CORS preflight for a request URL is visible to an extension if there is a
+listener with 'extraHeaders' specified in opt_extraInfoSpec for the request URL.
+onBeforeRequest can also take 'extraHeaders' from Chrome 79.
+
+Starting from Chrome 79, the following request header is not provided and cannot be modified or
+removed without specifying 'extraHeaders' in opt_extraInfoSpec:
+
+
+Origin
+
+
+Note: Modifying the Origin request header might not work as intended and may result in
+unexpected errors in the response's CORS checks. This is because while extensions can only
+modify the Origin request header, they can't change the request origin or initiator, which is
+a concept defined in the Fetch spec to represent who initiates the request. In such a scenario, the
+server may allow the CORS access for the modified request and put the header's Origin into the
+Access-Control-Allow-Origin header in the response. But it won't match the immutable
+request origin and will result in a CORS failure.
+
+Starting from Chrome 72, if you need to modify responses before Cross Origin Read Blocking
+(CORB) can block the response, you need to specify 'extraHeaders' in opt_extraInfoSpec.
+
+Starting from Chrome 72, the following request headers are not provided and cannot be modified
+or removed without specifying 'extraHeaders' in opt_extraInfoSpec:
+
+
+Accept-Language
+Accept-Encoding
+Referer
+Cookie
+
+
+Starting from Chrome 72, the Set-Cookie response header is not provided and cannot be modified
+or removed without specifying 'extraHeaders' in opt_extraInfoSpec.
+
+Starting from Chrome 89, the X-Frame-Options response header cannot be effectively modified
+or removed without specifying 'extraHeaders' in opt_extraInfoSpec.
+
+Note: Specifying 'extraHeaders' in opt_extraInfoSpec may have a negative impact on
+performance, hence it should only be used when really necessary.
+
+The webRequest API only exposes requests that the extension has permission to see, given its host
+permissions. Moreover, only the following schemes are accessible: http://, https://,
+ftp://, file://, ws:// (since Chrome 58), wss:// (since Chrome 58), urn: (since Chrome 91), or
+chrome-extension://. In addition, even certain requests with URLs using one of the above schemes
+are hidden. These include chrome-extension://other_extension_id where other_extension_id is not
+the ID of the extension to handle the request, https://www.google.com/chrome, and other sensitive
+requests core to browser functionality. Also synchronous XMLHttpRequests from your extension are
+hidden from blocking event handlers in order to prevent deadlocks. Note that for some of the
+supported schemes the set of available events might be limited due to the nature of the
+corresponding protocol. For example, for the file: scheme, only onBeforeRequest,
+onResponseStarted, onCompleted, and onErrorOccurred may be dispatched.
+
+Starting from Chrome 58, the webRequest API supports intercepting the WebSocket handshake request.
+Since the handshake is done by means of an HTTP upgrade request, its flow fits into HTTP-oriented
+webRequest model. Note that the API does not intercept:
+
+
+Individual messages sent over an established WebSocket connection.
+WebSocket closing connection.
+
+
+Redirects are not supported for WebSocket requests.
+
+Starting from Chrome 72, an extension will be able to intercept a request only if it has host
+permissions to both the requested URL and the request initiator.
+
+Starting from Chrome 96, the webRequest API supports intercepting the WebTransport over HTTP/3
+handshake request. Since the handshake is done by means of an HTTP CONNECT request, its flow fits
+into HTTP-oriented webRequest model. Note that:
+
+
+Once the session is established, extensions cannot observe or intervene in the session via the
+webRequest API.
+Modifying HTTP request headers in onBeforeSendHeaders is ignored.
+Redirects and authentications are not supported in WebTransport over HTTP/3.
+
+
+Concepts
+
+As the following sections explain, events in the web request API use request IDs, and you can
+optionally specify filters and extra information when you register event listeners.
+
+Request IDs
+
+Each request is identified by a request ID. This ID is unique within a browser session and the
+context of an extension. It remains constant during the life cycle of a request and can be used
+to match events for the same request. Note that several HTTP requests are mapped to one web request
+in case of HTTP redirection or HTTP authentication.
+
+Registering event listeners
+
+To register an event listener for a web request, you use a variation on the usual addListener()
+function. In addition to specifying a callback function, you have to specify a filter argument, and you may specify an optional extra info argument.
+
+The three arguments to the web request API's addListener() have the following definitions:
+var callback = function(details) {...};
+var filter = {...};
+var opt_extraInfoSpec = [...];
+
+Here's an example of listening for the onBeforeRequest event:
+chrome.webRequest.onBeforeRequest.addListener(
+    callback, filter, opt_extraInfoSpec);
+
+Each addListener() call takes a mandatory callback function as the first parameter. This callback
+function is passed a dictionary containing information about the current URL request. The
+information in this dictionary depends on the specific event type as well as the content of
+opt_extraInfoSpec.
+
+If the optional opt_extraInfoSpec array contains the string 'blocking' (only allowed for
+specific events), the callback function is handled synchronously. That means that the request is
+blocked until the callback function returns. In this case, the callback can return a
+webRequest.BlockingResponse that determines the further life cycle of the request. Depending
+on the context, this response allows canceling or redirecting a request (onBeforeRequest),
+canceling a request or modifying headers (onBeforeSendHeaders, onHeadersReceived), and
+canceling a request or providing authentication credentials (onAuthRequired).
+
+If the optional opt_extraInfoSpec array contains the string 'asyncBlocking' instead (only
+allowed for onAuthRequired), the extension can generate the webRequest.BlockingResponse
+asynchronously.
+
+The webRequest.RequestFilter filter allows limiting the requests for which events are
+triggered in various dimensions:
+
+
+URLs
+URL patterns such as *://www.google.com/foo*bar.
+Types
+Request types such as main_frame (a document that is loaded for a top-level frame), sub_frame (a
+document that is loaded for an embedded frame), and image (an image on a web site). See
+webRequest.RequestFilter.
+Tab ID
+The identifier for one tab.
+Window ID
+The identifier for a window.
+
+
+Depending on the event type, you can specify strings in opt_extraInfoSpec to ask for additional
+information about the request. This is used to provide detailed information on request's data only
+if explicitly requested.
+
+Implementation details
+
+Several implementation details can be important to understand when developing an extension that uses
+the web request API:
+
+web_accessible_resources
+
+When an extension uses webRequest APIs to redirect a public resource request to a resource that is not web accessible, it is blocked and will result in an error. The above holds true even if the resource that is not web accessible is owned by the redirecting extension. To declare resources for use with declarativeWebRequest APIs, the "web_accessible_resources" array must be declared and populated in the manifest as documented here.
+
+Conflict resolution
+
+In the current implementation of the web request API, a request is considered canceled if at
+least one extension instructs to cancel the request. If an extension cancels a request, all
+extensions are notified by an onErrorOccurred event. Only one extension can redirect a
+request or modify a header at a time. If more than one extension attempts to modify the request, the
+most recently installed extension wins, and all others are ignored. An extension is not notified if
+its instruction to modify or redirect has been ignored.
+
+Caching
+
+Chrome employs two caches—an on-disk cache and a very fast in-memory cache. The lifetime of an
+in-memory cache is attached to the lifetime of a render process, which roughly corresponds to a tab.
+Requests that are answered from the in-memory cache are invisible to the web request API. If a
+request handler changes its behavior (for example, the behavior according to which requests are
+blocked), a simple page refresh might not respect this changed behavior. To ensure the behavior
+change goes through, call handlerBehaviorChanged() to flush the in-memory cache. But don't do it
+often; flushing the cache is a very expensive operation. You don't need to call
+handlerBehaviorChanged() after registering or unregistering an event listener.
+
+Timestamps
+
+The timestamp property of web request events is only guaranteed to be internally consistent.
+Comparing one event to another event will give you the correct offset between them, but comparing
+them to the current time inside the extension (via (new Date()).getTime(), for instance) might
+give unexpected results.
+
+Error handling
+
+If you try to register an event with invalid arguments, then a JavaScript error will be thrown, and
+the event handler will not be registered. If an error is thrown while an event is handled or if an
+event handler returns an invalid blocking response, an error message is logged to your extension's
+console, and the handler is ignored for that request.
+
+Examples
+
+The following example illustrates how to block all requests to www.evil.com:
+chrome.webRequest.onBeforeRequest.addListener(
+  function(details) {
+    return {cancel: details.url.indexOf("://www.evil.com/") != -1};
+  },
+  {urls: ["<all_urls>"]},
+  ["blocking"]
+);
+
+As this function uses a blocking event handler, it requires the "webRequest" as well as the
+"webRequestBlocking" permission in the manifest file.
+
+The following example achieves the same goal in a more efficient way because requests that are not
+targeted to www.evil.com do not need to be passed to the extension:
+chrome.webRequest.onBeforeRequest.addListener(
+  function(details) { return {cancel: true}; },
+  {urls: ["*://www.evil.com/*"]},
+  ["blocking"]
+);
+
+The following example illustrates how to delete the User-Agent header from all requests:
+chrome.webRequest.onBeforeSendHeaders.addListener(
+  function(details) {
+    for (var i = 0; i < details.requestHeaders.length; ++i) {
+      if (details.requestHeaders[i].name === 'User-Agent') {
+        details.requestHeaders.splice(i, 1);
+        break;
+      }
+    }
+    return {requestHeaders: details.requestHeaders};
+  },
+  {urls: ["<all_urls>"]},
+  ["blocking", "requestHeaders"]
+);
+
+To try the chrome.webRequest API,
+install the webRequest sample from the chrome-extension-samples
+repository.
+
+Types
+  
+    
+      BlockingResponse
+    Returns value for event handlers that have the 'blocking' extraInfoSpec applied. Allows the event handler to modify network requests.
+Properties
+    
+      authCredentials
+      object optional
+    Only used as a response to the onAuthRequired event. If set, the request is made using the supplied credentials.
+
+    
+      password
+      string
+    
+    
+      username
+      string
+    
+    
+    
+      cancel
+      boolean optional
+    If true, the request is cancelled. This prevents the request from being sent. This can be used as a response to the onBeforeRequest, onBeforeSendHeaders, onHeadersReceived and onAuthRequired events.
+
+    
+      redirectUrl
+      string optional
+    Only used as a response to the onBeforeRequest and onHeadersReceived events. If set, the original request is prevented from being sent/completed and is instead redirected to the given URL. Redirections to non-HTTP schemes such as data: are allowed. Redirects initiated by a redirect action use the original request method for the redirect, with one exception: If the redirect is initiated at the onHeadersReceived stage, then the redirect will be issued using the GET method. Redirects from URLs with ws:// and wss:// schemes are ignored.
+
+    
+      requestHeaders
+      HttpHeaders optional
+    Only used as a response to the onBeforeSendHeaders event. If set, the request is made with these request headers instead.
+
+    
+      responseHeaders
+      HttpHeaders optional
+    Only used as a response to the onHeadersReceived event. If set, the server is assumed to have responded with these response headers instead. Only return responseHeaders if you really want to modify the headers in order to limit the number of conflicts (only one extension may modify responseHeaders for each request).
+
+    
+    
+      FormDataItem
+    
+      Chrome 66+
+      
+    Contains data passed within form data. For urlencoded form it is stored as string if data is utf-8 string and as ArrayBuffer otherwise. For form-data it is ArrayBuffer. If form-data represents uploading file, it is string with filename, if the filename is provided.
+Enum
+      ArrayBufferstring
+    
+  
+    
+      HttpHeaders
+    An array of HTTP headers. Each header is represented as a dictionary containing the keys name and either value or binaryValue.
+
+      Type
+      object[]
+    Properties
+    
+      binaryValue
+      number[] optional
+    Value of the HTTP header if it cannot be represented by UTF-8, stored as individual byte values (0..255).
+
+    
+      name
+      string
+    Name of the HTTP header.
+
+    
+      value
+      string optional
+    Value of the HTTP header if it can be represented by UTF-8.
+
+    
+    
+      IgnoredActionType
+    
+      Chrome 70+
+      
+    Enum
+      "redirect"  "request_headers"  "response_headers"  "auth_credentials"  
+    
+  
+    
+      OnAuthRequiredOptions
+    
+      Chrome 44+
+      
+    Enum
+      "responseHeaders"  Specifies that the response headers should be included in the event."blocking"  Specifies the request is blocked until the callback function returns."asyncBlocking"  Specifies that the callback function is handled asynchronously."extraHeaders"  Specifies that headers can violate Cross-Origin Resource Sharing (CORS).
+    
+  
+    
+      OnBeforeRedirectOptions
+    
+      Chrome 44+
+      
+    Enum
+      "responseHeaders"  Specifies that the response headers should be included in the event."extraHeaders"  Specifies that headers can violate Cross-Origin Resource Sharing (CORS).
+    
+  
+    
+      OnBeforeRequestOptions
+    
+      Chrome 44+
+      
+    Enum
+      "blocking"  Specifies the request is blocked until the callback function returns."requestBody"  Specifies that the request body should be included in the event."extraHeaders"  Specifies that headers can violate Cross-Origin Resource Sharing (CORS).
+    
+  
+    
+      OnBeforeSendHeadersOptions
+    
+      Chrome 44+
+      
+    Enum
+      "requestHeaders"  Specifies that the request header should be included in the event."blocking"  Specifies the request is blocked until the callback function returns."extraHeaders"  Specifies that headers can violate Cross-Origin Resource Sharing (CORS).
+    
+  
+    
+      OnCompletedOptions
+    
+      Chrome 44+
+      
+    Enum
+      "responseHeaders"  Specifies that the response headers should be included in the event."extraHeaders"  Specifies that headers can violate Cross-Origin Resource Sharing (CORS).
+    
+  
+    
+      OnErrorOccurredOptions
+    
+      Chrome 79+
+      
+    
+      Value
+      "extraHeaders"  
+    
+    
+      OnHeadersReceivedOptions
+    
+      Chrome 44+
+      
+    Enum
+      "blocking"  Specifies the request is blocked until the callback function returns."responseHeaders"  Specifies that the response headers should be included in the event."extraHeaders"  Specifies that headers can violate Cross-Origin Resource Sharing (CORS).
+    
+  
+    
+      OnResponseStartedOptions
+    
+      Chrome 44+
+      
+    Enum
+      "responseHeaders"  Specifies that the response headers should be included in the event."extraHeaders"  Specifies that headers can violate Cross-Origin Resource Sharing (CORS).
+    
+  
+    
+      OnSendHeadersOptions
+    
+      Chrome 44+
+      
+    Enum
+      "requestHeaders"  Specifies that the request header should be included in the event."extraHeaders"  Specifies that headers can violate Cross-Origin Resource Sharing (CORS).
+    
+  
+    
+      RequestFilter
+    An object describing filters to apply to webRequest events.
+Properties
+    
+      tabId
+      number optional
+    
+    
+      types
+      ResourceType[] optional
+    A list of request types. Requests that cannot match any of the types will be filtered out.
+
+    
+      urls
+      string[]
+    A list of URLs or URL patterns. Requests that cannot match any of the URLs will be filtered out.
+
+    
+      windowId
+      number optional
+    
+    
+    
+      ResourceType
+    
+      Chrome 44+
+      
+    Enum
+      "main_frame"  Specifies the resource as the main frame."sub_frame"  Specifies the resource as a sub frame."stylesheet"  Specifies the resource as a stylesheet."script"  Specifies the resource as a script."image"  Specifies the resource as an image."font"  Specifies the resource as a font."object"  Specifies the resource as an object."xmlhttprequest"  Specifies the resource as an XMLHttpRequest."ping"  Specifies the resource as a ping."csp_report"  Specifies the resource as a Content Security Policy (CSP) report."media"  Specifies the resource as a media object."websocket"  Specifies the resource as a WebSocket."webbundle"  Specifies the resource as a WebBundle."other"  Specifies the resource as a type not included in the listed types.
+    
+  
+    
+      UploadData
+    Contains data uploaded in a URL request.
+Properties
+    
+      bytes
+      any optional
+    An ArrayBuffer with a copy of the data.
+
+    
+      file
+      string optional
+    A string with the file's path and name.
+
+    Properties
+  
+    
+      MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES
+    The maximum number of times that handlerBehaviorChanged can be called per 10 minute sustained interval. handlerBehaviorChanged is an expensive function call that shouldn't be called often.
+
+      Value
+      20  
+    Methods
+  
+    
+      handlerBehaviorChanged()
+    
+      
+        Promise
+      
+    
+        chrome.webRequest.handlerBehaviorChanged(  callback?: function,)
+      Needs to be called when the behavior of the webRequest handlers has changed to prevent incorrect handling due to caching. This function call is expensive. Don't call it often.
+Parameters
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          () => void
+        
+    Returns
+          
+            Promise<void>
+            
+      Chrome 116+
+      
+    
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      Events
+  
+    
+      onActionIgnored
+    
+      Chrome 70+
+      
+    
+        chrome.webRequest.onActionIgnored.addListener(  callback: function,)
+      Fired when an extension's proposed modification to a network request is ignored. This happens in case of conflicts with other extensions.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (details: object) => void
+        
+    
+      details
+      object
+    
+    
+      action
+      IgnoredActionType
+    The proposed action which was ignored.
+
+    
+      requestId
+      string
+    The ID of the request. Request IDs are unique within a browser session. As a result, they could be used to relate different events of the same request.
+
+    
+    
+    
+    
+      onAuthRequired
+    
+        chrome.webRequest.onAuthRequired.addListener(  callback: function,  filter: RequestFilter,  extraInfoSpec?: OnAuthRequiredOptions[],)
+      Fired when an authentication failure is received. The listener has three options: it can provide authentication credentials, it can cancel the request and display the error page, or it can take no action on the challenge. If bad user credentials are provided, this may be called multiple times for the same request. Note, only one of 'blocking' or 'asyncBlocking' modes must be specified in the extraInfoSpec parameter.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (details: object, asyncCallback?: function) => BlockingResponse | undefined
+        
+    
+      details
+      object
+    
+    
+      challenger
+      object
+    The server requesting authentication.
+
+    
+      host
+      string
+    
+    
+      port
+      number
+    
+    
+    
+      documentId
+      string
+    
+      Chrome 106+
+      
+    The UUID of the document making the request.
+
+    
+      documentLifecycle
+      extensionTypes.DocumentLifecycle
+    
+      Chrome 106+
+      
+    The lifecycle the document is in.
+
+    
+      frameId
+      number
+    The value 0 indicates that the request happens in the main frame; a positive value indicates the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (type is main_frame or sub_frame), frameId indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
+
+    
+      frameType
+      extensionTypes.FrameType
+    
+      Chrome 106+
+      
+    The type of frame the request occurred in.
+
+    
+      initiator
+      string optional
+    
+      Chrome 63+
+      
+    The origin where the request was initiated. This does not change through redirects. If this is an opaque origin, the string 'null' will be used.
+
+    
+      isProxy
+      boolean
+    True for Proxy-Authenticate, false for WWW-Authenticate.
+
+    
+      method
+      string
+    Standard HTTP method.
+
+    
+      parentDocumentId
+      string optional
+    
+      Chrome 106+
+      
+    The UUID of the parent document owning this frame. This is not set if there is no parent.
+
+    
+      parentFrameId
+      number
+    ID of frame that wraps the frame which sent the request. Set to -1 if no parent frame exists.
+
+    
+      realm
+      string optional
+    The authentication realm provided by the server, if there is one.
+
+    
+      requestId
+      string
+    The ID of the request. Request IDs are unique within a browser session. As a result, they could be used to relate different events of the same request.
+
+    
+      responseHeaders
+      HttpHeaders optional
+    The HTTP response headers that were received along with this response.
+
+    
+      scheme
+      string
+    The authentication scheme, e.g. Basic or Digest.
+
+    
+      statusCode
+      number
+    
+      Chrome 43+
+      
+    Standard HTTP status code returned by the server.
+
+    
+      statusLine
+      string
+    HTTP status line of the response or the 'HTTP/0.9 200 OK' string for HTTP/0.9 responses (i.e., responses that lack a status line) or an empty string if there are no headers.
+
+    
+      tabId
+      number
+    The ID of the tab in which the request takes place. Set to -1 if the request isn't related to a tab.
+
+    
+      timeStamp
+      number
+    The time when this signal is triggered, in milliseconds since the epoch.
+
+    
+      type
+      ResourceType
+    How the requested resource will be used.
+
+    
+      url
+      string
+    
+    
+    
+      asyncCallback
+      function optional
+    
+      Chrome 58+
+      
+    
+          The asyncCallback parameter looks like:
+          (response: BlockingResponse) => void
+        
+    
+      response
+      BlockingResponse
+    
+    
+    
+          
+            returnsBlockingResponse | undefined
+            If "blocking" is specified in the "extraInfoSpec" parameter, the event listener should return an object of this type.
+
+        
+      
+    
+      filter
+      RequestFilter
+    
+    
+      extraInfoSpec
+      OnAuthRequiredOptions[] optional
+    
+    
+    
+      onBeforeRedirect
+    
+        chrome.webRequest.onBeforeRedirect.addListener(  callback: function,  filter: RequestFilter,  extraInfoSpec?: OnBeforeRedirectOptions[],)
+      Fired when a server-initiated redirect is about to occur.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (details: object) => void
+        
+    
+      details
+      object
+    
+    
+      documentId
+      string
+    
+      Chrome 106+
+      
+    The UUID of the document making the request.
+
+    
+      documentLifecycle
+      extensionTypes.DocumentLifecycle
+    
+      Chrome 106+
+      
+    The lifecycle the document is in.
+
+    
+      frameId
+      number
+    The value 0 indicates that the request happens in the main frame; a positive value indicates the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (type is main_frame or sub_frame), frameId indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
+
+    
+      frameType
+      extensionTypes.FrameType
+    
+      Chrome 106+
+      
+    The type of frame the request occurred in.
+
+    
+      fromCache
+      boolean
+    Indicates if this response was fetched from disk cache.
+
+    
+      initiator
+      string optional
+    
+      Chrome 63+
+      
+    The origin where the request was initiated. This does not change through redirects. If this is an opaque origin, the string 'null' will be used.
+
+    
+      ip
+      string optional
+    The server IP address that the request was actually sent to. Note that it may be a literal IPv6 address.
+
+    
+      method
+      string
+    Standard HTTP method.
+
+    
+      parentDocumentId
+      string optional
+    
+      Chrome 106+
+      
+    The UUID of the parent document owning this frame. This is not set if there is no parent.
+
+    
+      parentFrameId
+      number
+    ID of frame that wraps the frame which sent the request. Set to -1 if no parent frame exists.
+
+    
+      redirectUrl
+      string
+    The new URL.
+
+    
+      requestId
+      string
+    The ID of the request. Request IDs are unique within a browser session. As a result, they could be used to relate different events of the same request.
+
+    
+      responseHeaders
+      HttpHeaders optional
+    The HTTP response headers that were received along with this redirect.
+
+    
+      statusCode
+      number
+    Standard HTTP status code returned by the server.
+
+    
+      statusLine
+      string
+    HTTP status line of the response or the 'HTTP/0.9 200 OK' string for HTTP/0.9 responses (i.e., responses that lack a status line) or an empty string if there are no headers.
+
+    
+      tabId
+      number
+    The ID of the tab in which the request takes place. Set to -1 if the request isn't related to a tab.
+
+    
+      timeStamp
+      number
+    The time when this signal is triggered, in milliseconds since the epoch.
+
+    
+      type
+      ResourceType
+    How the requested resource will be used.
+
+    
+      url
+      string
+    
+    
+    
+    
+      filter
+      RequestFilter
+    
+    
+      extraInfoSpec
+      OnBeforeRedirectOptions[] optional
+    
+    
+    
+      onBeforeRequest
+    
+        chrome.webRequest.onBeforeRequest.addListener(  callback: function,  filter: RequestFilter,  extraInfoSpec?: OnBeforeRequestOptions[],)
+      Fired when a request is about to occur.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (details: object) => BlockingResponse | undefined
+        
+    
+      details
+      object
+    
+    
+      documentId
+      string optional
+    
+      Chrome 106+
+      
+    The UUID of the document making the request.
+
+    
+      documentLifecycle
+      extensionTypes.DocumentLifecycle optional
+    
+      Chrome 106+
+      
+    The lifecycle the document is in.
+
+    
+      frameId
+      number
+    The value 0 indicates that the request happens in the main frame; a positive value indicates the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (type is main_frame or sub_frame), frameId indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
+
+    
+      frameType
+      extensionTypes.FrameType optional
+    
+      Chrome 106+
+      
+    The type of frame the request occurred in.
+
+    
+      initiator
+      string optional
+    
+      Chrome 63+
+      
+    The origin where the request was initiated. This does not change through redirects. If this is an opaque origin, the string 'null' will be used.
+
+    
+      method
+      string
+    Standard HTTP method.
+
+    
+      parentDocumentId
+      string optional
+    
+      Chrome 106+
+      
+    The UUID of the parent document owning this frame. This is not set if there is no parent.
+
+    
+      parentFrameId
+      number
+    ID of frame that wraps the frame which sent the request. Set to -1 if no parent frame exists.
+
+    
+      requestBody
+      object optional
+    Contains the HTTP request body data. Only provided if extraInfoSpec contains 'requestBody'.
+
+    
+      error
+      string optional
+    Errors when obtaining request body data.
+
+    
+      formData
+      object optional
+    If the request method is POST and the body is a sequence of key-value pairs encoded in UTF8, encoded as either multipart/form-data, or application/x-www-form-urlencoded, this dictionary is present and for each key contains the list of all values for that key. If the data is of another media type, or if it is malformed, the dictionary is not present. An example value of this dictionary is {'key': ['value1', 'value2']}.
+
+    
+      raw
+      UploadData[] optional
+    If the request method is PUT or POST, and the body is not already parsed in formData, then the unparsed request body elements are contained in this array.
+
+    
+    
+      requestId
+      string
+    The ID of the request. Request IDs are unique within a browser session. As a result, they could be used to relate different events of the same request.
+
+    
+      tabId
+      number
+    The ID of the tab in which the request takes place. Set to -1 if the request isn't related to a tab.
+
+    
+      timeStamp
+      number
+    The time when this signal is triggered, in milliseconds since the epoch.
+
+    
+      type
+      ResourceType
+    How the requested resource will be used.
+
+    
+      url
+      string
+    
+    
+    
+          
+            returnsBlockingResponse | undefined
+            If "blocking" is specified in the "extraInfoSpec" parameter, the event listener should return an object of this type.
+
+        
+      
+    
+      filter
+      RequestFilter
+    
+    
+      extraInfoSpec
+      OnBeforeRequestOptions[] optional
+    
+    
+    
+      onBeforeSendHeaders
+    
+        chrome.webRequest.onBeforeSendHeaders.addListener(  callback: function,  filter: RequestFilter,  extraInfoSpec?: OnBeforeSendHeadersOptions[],)
+      Fired before sending an HTTP request, once the request headers are available. This may occur after a TCP connection is made to the server, but before any HTTP data is sent.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (details: object) => BlockingResponse | undefined
+        
+    
+      details
+      object
+    
+    
+      documentId
+      string
+    
+      Chrome 106+
+      
+    The UUID of the document making the request.
+
+    
+      documentLifecycle
+      extensionTypes.DocumentLifecycle
+    
+      Chrome 106+
+      
+    The lifecycle the document is in.
+
+    
+      frameId
+      number
+    The value 0 indicates that the request happens in the main frame; a positive value indicates the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (type is main_frame or sub_frame), frameId indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
+
+    
+      frameType
+      extensionTypes.FrameType
+    
+      Chrome 106+
+      
+    The type of frame the request occurred in.
+
+    
+      initiator
+      string optional
+    
+      Chrome 63+
+      
+    The origin where the request was initiated. This does not change through redirects. If this is an opaque origin, the string 'null' will be used.
+
+    
+      method
+      string
+    Standard HTTP method.
+
+    
+      parentDocumentId
+      string optional
+    
+      Chrome 106+
+      
+    The UUID of the parent document owning this frame. This is not set if there is no parent.
+
+    
+      parentFrameId
+      number
+    ID of frame that wraps the frame which sent the request. Set to -1 if no parent frame exists.
+
+    
+      requestHeaders
+      HttpHeaders optional
+    The HTTP request headers that are going to be sent out with this request.
+
+    
+      requestId
+      string
+    The ID of the request. Request IDs are unique within a browser session. As a result, they could be used to relate different events of the same request.
+
+    
+      tabId
+      number
+    The ID of the tab in which the request takes place. Set to -1 if the request isn't related to a tab.
+
+    
+      timeStamp
+      number
+    The time when this signal is triggered, in milliseconds since the epoch.
+
+    
+      type
+      ResourceType
+    How the requested resource will be used.
+
+    
+      url
+      string
+    
+    
+    
+          
+            returnsBlockingResponse | undefined
+            If "blocking" is specified in the "extraInfoSpec" parameter, the event listener should return an object of this type.
+
+        
+      
+    
+      filter
+      RequestFilter
+    
+    
+      extraInfoSpec
+      OnBeforeSendHeadersOptions[] optional
+    
+    
+    
+      onCompleted
+    
+        chrome.webRequest.onCompleted.addListener(  callback: function,  filter: RequestFilter,  extraInfoSpec?: OnCompletedOptions[],)
+      Fired when a request is completed.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (details: object) => void
+        
+    
+      details
+      object
+    
+    
+      documentId
+      string
+    
+      Chrome 106+
+      
+    The UUID of the document making the request.
+
+    
+      documentLifecycle
+      extensionTypes.DocumentLifecycle
+    
+      Chrome 106+
+      
+    The lifecycle the document is in.
+
+    
+      frameId
+      number
+    The value 0 indicates that the request happens in the main frame; a positive value indicates the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (type is main_frame or sub_frame), frameId indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
+
+    
+      frameType
+      extensionTypes.FrameType
+    
+      Chrome 106+
+      
+    The type of frame the request occurred in.
+
+    
+      fromCache
+      boolean
+    Indicates if this response was fetched from disk cache.
+
+    
+      initiator
+      string optional
+    
+      Chrome 63+
+      
+    The origin where the request was initiated. This does not change through redirects. If this is an opaque origin, the string 'null' will be used.
+
+    
+      ip
+      string optional
+    The server IP address that the request was actually sent to. Note that it may be a literal IPv6 address.
+
+    
+      method
+      string
+    Standard HTTP method.
+
+    
+      parentDocumentId
+      string optional
+    
+      Chrome 106+
+      
+    The UUID of the parent document owning this frame. This is not set if there is no parent.
+
+    
+      parentFrameId
+      number
+    ID of frame that wraps the frame which sent the request. Set to -1 if no parent frame exists.
+
+    
+      requestId
+      string
+    The ID of the request. Request IDs are unique within a browser session. As a result, they could be used to relate different events of the same request.
+
+    
+      responseHeaders
+      HttpHeaders optional
+    The HTTP response headers that were received along with this response.
+
+    
+      statusCode
+      number
+    Standard HTTP status code returned by the server.
+
+    
+      statusLine
+      string
+    HTTP status line of the response or the 'HTTP/0.9 200 OK' string for HTTP/0.9 responses (i.e., responses that lack a status line) or an empty string if there are no headers.
+
+    
+      tabId
+      number
+    The ID of the tab in which the request takes place. Set to -1 if the request isn't related to a tab.
+
+    
+      timeStamp
+      number
+    The time when this signal is triggered, in milliseconds since the epoch.
+
+    
+      type
+      ResourceType
+    How the requested resource will be used.
+
+    
+      url
+      string
+    
+    
+    
+    
+      filter
+      RequestFilter
+    
+    
+      extraInfoSpec
+      OnCompletedOptions[] optional
+    
+    
+    
+      onErrorOccurred
+    
+        chrome.webRequest.onErrorOccurred.addListener(  callback: function,  filter: RequestFilter,  extraInfoSpec?: OnErrorOccurredOptions[],)
+      Fired when an error occurs.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (details: object) => void
+        
+    
+      details
+      object
+    
+    
+      documentId
+      string
+    
+      Chrome 106+
+      
+    The UUID of the document making the request. This value is not present if the request is a navigation of a frame.
+
+    
+      documentLifecycle
+      extensionTypes.DocumentLifecycle
+    
+      Chrome 106+
+      
+    The lifecycle the document is in.
+
+    
+      error
+      string
+    The error description. This string is not guaranteed to remain backwards compatible between releases. You must not parse and act based upon its content.
+
+    
+      frameId
+      number
+    The value 0 indicates that the request happens in the main frame; a positive value indicates the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (type is main_frame or sub_frame), frameId indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
+
+    
+      frameType
+      extensionTypes.FrameType
+    
+      Chrome 106+
+      
+    The type of frame the request occurred in.
+
+    
+      fromCache
+      boolean
+    Indicates if this response was fetched from disk cache.
+
+    
+      initiator
+      string optional
+    
+      Chrome 63+
+      
+    The origin where the request was initiated. This does not change through redirects. If this is an opaque origin, the string 'null' will be used.
+
+    
+      ip
+      string optional
+    The server IP address that the request was actually sent to. Note that it may be a literal IPv6 address.
+
+    
+      method
+      string
+    Standard HTTP method.
+
+    
+      parentDocumentId
+      string optional
+    
+      Chrome 106+
+      
+    The UUID of the parent document owning this frame. This is not set if there is no parent.
+
+    
+      parentFrameId
+      number
+    ID of frame that wraps the frame which sent the request. Set to -1 if no parent frame exists.
+
+    
+      requestId
+      string
+    The ID of the request. Request IDs are unique within a browser session. As a result, they could be used to relate different events of the same request.
+
+    
+      tabId
+      number
+    The ID of the tab in which the request takes place. Set to -1 if the request isn't related to a tab.
+
+    
+      timeStamp
+      number
+    The time when this signal is triggered, in milliseconds since the epoch.
+
+    
+      type
+      ResourceType
+    How the requested resource will be used.
+
+    
+      url
+      string
+    
+    
+    
+    
+      filter
+      RequestFilter
+    
+    
+      extraInfoSpec
+      OnErrorOccurredOptions[] optional
+    
+    
+    
+      onHeadersReceived
+    
+        chrome.webRequest.onHeadersReceived.addListener(  callback: function,  filter: RequestFilter,  extraInfoSpec?: OnHeadersReceivedOptions[],)
+      Fired when HTTP response headers of a request have been received.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (details: object) => BlockingResponse | undefined
+        
+    
+      details
+      object
+    
+    
+      documentId
+      string
+    
+      Chrome 106+
+      
+    The UUID of the document making the request.
+
+    
+      documentLifecycle
+      extensionTypes.DocumentLifecycle
+    
+      Chrome 106+
+      
+    The lifecycle the document is in.
+
+    
+      frameId
+      number
+    The value 0 indicates that the request happens in the main frame; a positive value indicates the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (type is main_frame or sub_frame), frameId indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
+
+    
+      frameType
+      extensionTypes.FrameType
+    
+      Chrome 106+
+      
+    The type of frame the request occurred in.
+
+    
+      initiator
+      string optional
+    
+      Chrome 63+
+      
+    The origin where the request was initiated. This does not change through redirects. If this is an opaque origin, the string 'null' will be used.
+
+    
+      method
+      string
+    Standard HTTP method.
+
+    
+      parentDocumentId
+      string optional
+    
+      Chrome 106+
+      
+    The UUID of the parent document owning this frame. This is not set if there is no parent.
+
+    
+      parentFrameId
+      number
+    ID of frame that wraps the frame which sent the request. Set to -1 if no parent frame exists.
+
+    
+      requestId
+      string
+    The ID of the request. Request IDs are unique within a browser session. As a result, they could be used to relate different events of the same request.
+
+    
+      responseHeaders
+      HttpHeaders optional
+    The HTTP response headers that have been received with this response.
+
+    
+      statusCode
+      number
+    
+      Chrome 43+
+      
+    Standard HTTP status code returned by the server.
+
+    
+      statusLine
+      string
+    HTTP status line of the response or the 'HTTP/0.9 200 OK' string for HTTP/0.9 responses (i.e., responses that lack a status line).
+
+    
+      tabId
+      number
+    The ID of the tab in which the request takes place. Set to -1 if the request isn't related to a tab.
+
+    
+      timeStamp
+      number
+    The time when this signal is triggered, in milliseconds since the epoch.
+
+    
+      type
+      ResourceType
+    How the requested resource will be used.
+
+    
+      url
+      string
+    
+    
+    
+          
+            returnsBlockingResponse | undefined
+            If "blocking" is specified in the "extraInfoSpec" parameter, the event listener should return an object of this type.
+
+        
+      
+    
+      filter
+      RequestFilter
+    
+    
+      extraInfoSpec
+      OnHeadersReceivedOptions[] optional
+    
+    
+    
+      onResponseStarted
+    
+        chrome.webRequest.onResponseStarted.addListener(  callback: function,  filter: RequestFilter,  extraInfoSpec?: OnResponseStartedOptions[],)
+      Fired when the first byte of the response body is received. For HTTP requests, this means that the status line and response headers are available.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (details: object) => void
+        
+    
+      details
+      object
+    
+    
+      documentId
+      string
+    
+      Chrome 106+
+      
+    The UUID of the document making the request.
+
+    
+      documentLifecycle
+      extensionTypes.DocumentLifecycle
+    
+      Chrome 106+
+      
+    The lifecycle the document is in.
+
+    
+      frameId
+      number
+    The value 0 indicates that the request happens in the main frame; a positive value indicates the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (type is main_frame or sub_frame), frameId indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
+
+    
+      frameType
+      extensionTypes.FrameType
+    
+      Chrome 106+
+      
+    The type of frame the request occurred in.
+
+    
+      fromCache
+      boolean
+    Indicates if this response was fetched from disk cache.
+
+    
+      initiator
+      string optional
+    
+      Chrome 63+
+      
+    The origin where the request was initiated. This does not change through redirects. If this is an opaque origin, the string 'null' will be used.
+
+    
+      ip
+      string optional
+    The server IP address that the request was actually sent to. Note that it may be a literal IPv6 address.
+
+    
+      method
+      string
+    Standard HTTP method.
+
+    
+      parentDocumentId
+      string optional
+    
+      Chrome 106+
+      
+    The UUID of the parent document owning this frame. This is not set if there is no parent.
+
+    
+      parentFrameId
+      number
+    ID of frame that wraps the frame which sent the request. Set to -1 if no parent frame exists.
+
+    
+      requestId
+      string
+    The ID of the request. Request IDs are unique within a browser session. As a result, they could be used to relate different events of the same request.
+
+    
+      responseHeaders
+      HttpHeaders optional
+    The HTTP response headers that were received along with this response.
+
+    
+      statusCode
+      number
+    Standard HTTP status code returned by the server.
+
+    
+      statusLine
+      string
+    HTTP status line of the response or the 'HTTP/0.9 200 OK' string for HTTP/0.9 responses (i.e., responses that lack a status line) or an empty string if there are no headers.
+
+    
+      tabId
+      number
+    The ID of the tab in which the request takes place. Set to -1 if the request isn't related to a tab.
+
+    
+      timeStamp
+      number
+    The time when this signal is triggered, in milliseconds since the epoch.
+
+    
+      type
+      ResourceType
+    How the requested resource will be used.
+
+    
+      url
+      string
+    
+    
+    
+    
+      filter
+      RequestFilter
+    
+    
+      extraInfoSpec
+      OnResponseStartedOptions[] optional
+    
+    
+    
+      onSendHeaders
+    
+        chrome.webRequest.onSendHeaders.addListener(  callback: function,  filter: RequestFilter,  extraInfoSpec?: OnSendHeadersOptions[],)
+      Fired just before a request is going to be sent to the server (modifications of previous onBeforeSendHeaders callbacks are visible by the time onSendHeaders is fired).
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (details: object) => void
+        
+    
+      details
+      object
+    
+    
+      documentId
+      string
+    
+      Chrome 106+
+      
+    The UUID of the document making the request.
+
+    
+      documentLifecycle
+      extensionTypes.DocumentLifecycle
+    
+      Chrome 106+
+      
+    The lifecycle the document is in.
+
+    
+      frameId
+      number
+    The value 0 indicates that the request happens in the main frame; a positive value indicates the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (type is main_frame or sub_frame), frameId indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
+
+    
+      frameType
+      extensionTypes.FrameType
+    
+      Chrome 106+
+      
+    The type of frame the request occurred in.
+
+    
+      initiator
+      string optional
+    
+      Chrome 63+
+      
+    The origin where the request was initiated. This does not change through redirects. If this is an opaque origin, the string 'null' will be used.
+
+    
+      method
+      string
+    Standard HTTP method.
+
+    
+      parentDocumentId
+      string optional
+    
+      Chrome 106+
+      
+    The UUID of the parent document owning this frame. This is not set if there is no parent.
+
+    
+      parentFrameId
+      number
+    ID of frame that wraps the frame which sent the request. Set to -1 if no parent frame exists.
+
+    
+      requestHeaders
+      HttpHeaders optional
+    The HTTP request headers that have been sent out with this request.
+
+    
+      requestId
+      string
+    The ID of the request. Request IDs are unique within a browser session. As a result, they could be used to relate different events of the same request.
+
+    
+      tabId
+      number
+    The ID of the tab in which the request takes place. Set to -1 if the request isn't related to a tab.
+
+    
+      timeStamp
+      number
+    The time when this signal is triggered, in milliseconds since the epoch.
+
+    
+      type
+      ResourceType
+    How the requested resource will be used.
+
+    
+      url
+      string
+    
+    
+    
+    
+      filter
+      RequestFilter
+    
+    
+      extraInfoSpec
+      OnSendHeadersOptions[] optional
+    
+    
+
+  
+
+  
