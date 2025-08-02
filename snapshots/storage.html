@@ -75,7 +75,7 @@ The Storage API is divided into the following storage areas:
 storage.local
 Data is stored locally and cleared when the extension is removed. The storage limit is 10 MB (5 MB in Chrome 113 and earlier), but can be increased by requesting the "unlimitedStorage" permission. We recommend using storage.local to store larger amounts of data. By default, it's exposed to content scripts, but this behavior can be changed by calling chrome.storage.local.setAccessLevel().
 storage.managed
-Managed storage is read-only storage for policy installed extensions and managed by system administrators using a developer-defined schema and enterprise policies. Policies are analogous to options but are configured by a system administrator instead of the user, allowing the extension to be preconfigured for all users of an organization. For information on policies, see Documentation for Administrators. To learn more about the managed storage area, see Manifest for storage areas.
+Managed storage is read-only storage for policy installed extensions and managed by system administrators using a developer-defined schema and enterprise policies. Policies are analogous to options but are configured by a system administrator instead of the user, allowing the extension to be preconfigured for all users of an organization. By default, storage.managed is exposed to content scripts, but this behavior can be changed by calling chrome.storage.managed.setAccessLevel(). For information on policies, see Documentation for Administrators. To learn more about the managed storage area, see Manifest for storage areas.
 storage.session
 Holds data in memory while an extension is loaded. The storage is cleared if the extension is disabled, reloaded or updated and when the browser restarts. By default, it's not exposed to content scripts, but this behavior can be changed by calling chrome.storage.session.setAccessLevel(). The storage limit is 10 MB (1 MB in Chrome 111 and earlier). Thestorage.session interface is one of several we recommend for service workers.
 storage.sync
@@ -512,7 +512,7 @@ Primitive values such as numbers will serialize as expected. Values with a typeo
         Promise
       Chrome 102+
       
-    Sets the desired access level for the storage area. By default, session storage is restricted to trusted contexts (extension pages and service workers), while local and sync storage allow access from both trusted and untrusted contexts.
+    Sets the desired access level for the storage area. By default, session storage is restricted to trusted contexts (extension pages and service workers), while managed, local, and sync storage allow access from both trusted and untrusted contexts.
 
           The setAccessLevel function looks like:
           (accessOptions: object, callback?: function) => {...}

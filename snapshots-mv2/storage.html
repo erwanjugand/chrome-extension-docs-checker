@@ -519,7 +519,7 @@ Primitive values such as numbers will serialize as expected. Values with a typeo
         Promise
       Chrome 102+
       
-    Sets the desired access level for the storage area. By default, session storage is restricted to trusted contexts (extension pages and service workers), while local and sync storage allow access from both trusted and untrusted contexts.
+    Sets the desired access level for the storage area. By default, session storage is restricted to trusted contexts (extension pages and service workers), while managed, local, and sync storage allow access from both trusted and untrusted contexts.
 
           The setAccessLevel function looks like:
           (accessOptions: object, callback?: function) => {...}
