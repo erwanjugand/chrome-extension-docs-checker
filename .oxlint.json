@@ -1,0 +1,15 @@
+{
+  "plugins": ["typescript", "unicorn", "oxc", "import"],
+  "rules": {
+    "unicorn/filename-case": ["error", { "cases": { "camelCase": true } }],
+    "import/prefer-default-export": "off",
+    "eslint/no-ternary": "off"
+  },
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error",
+    "pedantic": "error",
+    "perf": "error",
+    "style": "error"
+  }
+}
