@@ -6,21 +6,20 @@
     "build": "tsc",
     "scrap": "node dist/scrap.js",
     "check:prettier": "prettier --check .",
-    "check:eslint": "eslint .",
+    "check:lint": "oxlint",
     "check:ts": "tsc --noEmit",
-    "check:all": "pnpm check:prettier && pnpm check:eslint && pnpm check:ts",
-    "fix:prettier": "prettier --loglevel warn --write .",
-    "fix:eslint": "pnpm check:eslint --fix",
-    "fix:all": "pnpm fix:prettier && pnpm fix:eslint"
+    "check:all": "pnpm check:prettier && pnpm check:lint && pnpm check:ts",
+    "fix:prettier": "prettier --log-level warn --write .",
+    "fix:lint": "pnpm check:lint --fix --fix-suggestions",
+    "fix:all": "pnpm fix:prettier && pnpm fix:lint"
   },
   "devDependencies": {
+    "@prettier/plugin-oxc": "0.0.4",
     "@types/node": "22",
     "cheerio": "1.1.0",
-    "eslint": "9.31.0",
-    "eslint-config-prettier": "10.1.8",
+    "oxlint": "1.11.0",
     "path": "0.12.7",
     "prettier": "3.6.2",
-    "typescript": "5.8.3",
-    "typescript-eslint": "8.37.0"
+    "typescript": "5.8.3"
   }
 }
