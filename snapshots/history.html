@@ -152,7 +152,7 @@ Properties
         Promise
       
     
-        chrome.history.addUrl(  details: UrlDetails,  callback?: function,)
+        chrome.history.addUrl(  details: UrlDetails,  callback?: function,): Promise<void>
       Adds a URL to the history at the current time with a transition type of "link".
 Parameters
     
@@ -173,12 +173,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -188,7 +182,7 @@ Parameters
         Promise
       
     
-        chrome.history.deleteAll(  callback?: function,)
+        chrome.history.deleteAll(  callback?: function,): Promise<void>
       Deletes all items from the history.
 Parameters
     
@@ -205,12 +199,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -220,7 +208,7 @@ Parameters
         Promise
       
     
-        chrome.history.deleteRange(  range: object,  callback?: function,)
+        chrome.history.deleteRange(  range: object,  callback?: function,): Promise<void>
       Removes all items within the specified date range from the history. Pages will not be removed from the history unless all visits fall within the range.
 Parameters
     
@@ -252,12 +240,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -267,7 +249,7 @@ Parameters
         Promise
       
     
-        chrome.history.deleteUrl(  details: UrlDetails,  callback?: function,)
+        chrome.history.deleteUrl(  details: UrlDetails,  callback?: function,): Promise<void>
       Removes all occurrences of the given URL from the history.
 Parameters
     
@@ -288,12 +270,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -303,7 +279,7 @@ Parameters
         Promise
       
     
-        chrome.history.getVisits(  details: UrlDetails,  callback?: function,)
+        chrome.history.getVisits(  details: UrlDetails,  callback?: function,): Promise<VisitItem[]>
       Retrieves information about visits to a URL.
 Parameters
     
@@ -329,12 +305,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -344,7 +314,7 @@ Parameters
         Promise
       
     
-        chrome.history.search(  query: object,  callback?: function,)
+        chrome.history.search(  query: object,  callback?: function,): Promise<HistoryItem[]>
       Searches the history for the last visit time of each page matching the query.
 Parameters
     
@@ -391,12 +361,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       Events
   

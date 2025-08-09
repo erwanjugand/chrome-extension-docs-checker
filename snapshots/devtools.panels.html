@@ -462,7 +462,7 @@ Properties
     
       create()
     
-        chrome.devtools.panels.create(  title: string,  iconPath: string,  pagePath: string,  callback?: function,)
+        chrome.devtools.panels.create(  title: string,  iconPath: string,  pagePath: string,  callback?: function,): void
       Creates an extension panel.
 Parameters
     
@@ -497,7 +497,7 @@ Parameters
     
       openResource()
     
-        chrome.devtools.panels.openResource(  url: string,  lineNumber: number,  columnNumber?: number,  callback?: function,)
+        chrome.devtools.panels.openResource(  url: string,  lineNumber: number,  columnNumber?: number,  callback?: function,): void
       Requests DevTools to open a URL in a Developer Tools panel.
 Parameters
     
@@ -529,7 +529,7 @@ Parameters
     
       setOpenResourceHandler()
     
-        chrome.devtools.panels.setOpenResourceHandler(  callback?: function,)
+        chrome.devtools.panels.setOpenResourceHandler(  callback?: function,): void
       Specifies the function to be called when the user clicks a resource link in the Developer Tools window. To unset the handler, either call the method with no parameters or pass null as the parameter.
 Parameters
     

@@ -221,7 +221,7 @@ Types
         Promise
       
     
-        chrome.permissions.contains(  permissions: Permissions,  callback?: function,)
+        chrome.permissions.contains(  permissions: Permissions,  callback?: function,): Promise<boolean>
       Checks if the extension has the specified permissions.
 Parameters
     
@@ -261,7 +261,7 @@ Parameters
         Promise
       
     
-        chrome.permissions.getAll(  callback?: function,)
+        chrome.permissions.getAll(  callback?: function,): Promise<Permissions>
       Gets the extension's current set of permissions.
 Parameters
     
@@ -297,7 +297,7 @@ Parameters
         Promise
       
     
-        chrome.permissions.remove(  permissions: Permissions,  callback?: function,)
+        chrome.permissions.remove(  permissions: Permissions,  callback?: function,): Promise<boolean>
       Removes access to the specified permissions. If there are any problems removing the permissions, runtime.lastError will be set.
 Parameters
     
@@ -337,7 +337,7 @@ Parameters
         Promise
       
     
-        chrome.permissions.request(  permissions: Permissions,  callback?: function,)
+        chrome.permissions.request(  permissions: Permissions,  callback?: function,): Promise<boolean>
       Requests access to the specified permissions, displaying a prompt to the user if necessary. These permissions must either be defined in the optional_permissions field of the manifest or be required permissions that were withheld by the user. Paths on origin patterns will be ignored. You can request subsets of optional origin permissions; for example, if you specify *://*\/* in the optional_permissions section of the manifest, you can request http://example.com/. If there are any problems requesting the permissions, runtime.lastError will be set.
 Parameters
     

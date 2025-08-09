@@ -87,7 +87,7 @@ Enum
         Promise
       
     
-        chrome.tabGroups.get(  groupId: number,  callback?: function,)
+        chrome.tabGroups.get(  groupId: number,  callback?: function,): Promise<TabGroup>
       Retrieves details about the specified group.
 Parameters
     
@@ -113,12 +113,6 @@ Parameters
       Chrome 90+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -128,7 +122,7 @@ Parameters
         Promise
       
     
-        chrome.tabGroups.move(  groupId: number,  moveProperties: object,  callback?: function,)
+        chrome.tabGroups.move(  groupId: number,  moveProperties: object,  callback?: function,): Promise<TabGroup | undefined>
       Moves the group and all its tabs within its window, or to a new window.
 Parameters
     
@@ -171,12 +165,6 @@ Parameters
       Chrome 90+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -186,7 +174,7 @@ Parameters
         Promise
       
     
-        chrome.tabGroups.query(  queryInfo: object,  callback?: function,)
+        chrome.tabGroups.query(  queryInfo: object,  callback?: function,): Promise<TabGroup[]>
       Gets all groups that have the specified properties, or all groups if no properties are specified.
 Parameters
     
@@ -241,12 +229,6 @@ Parameters
       Chrome 90+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -256,7 +238,7 @@ Parameters
         Promise
       
     
-        chrome.tabGroups.update(  groupId: number,  updateProperties: object,  callback?: function,)
+        chrome.tabGroups.update(  groupId: number,  updateProperties: object,  callback?: function,): Promise<TabGroup | undefined>
       Modifies the properties of a group. Properties that are not specified in updateProperties are not modified.
 Parameters
     
@@ -304,12 +286,6 @@ Parameters
       Chrome 90+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       Events
   

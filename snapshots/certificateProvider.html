@@ -377,7 +377,7 @@ Enum
       Chrome 86+
       
     
-        chrome.certificateProvider.reportSignature(  details: ReportSignatureDetails,  callback?: function,)
+        chrome.certificateProvider.reportSignature(  details: ReportSignatureDetails,  callback?: function,): Promise<void>
       Should be called as a response to onSignatureRequested.
 The extension must eventually call this function for every onSignatureRequested event; the API implementation will stop waiting for this call after some time and respond with a timeout error when this function is called.
 Parameters
@@ -399,12 +399,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -415,7 +409,7 @@ Parameters
       Chrome 57+
       
     
-        chrome.certificateProvider.requestPin(  details: RequestPinDetails,  callback?: function,)
+        chrome.certificateProvider.requestPin(  details: RequestPinDetails,  callback?: function,): Promise<PinResponseDetails | undefined>
       Requests the PIN from the user. Only one ongoing request at a time is allowed. The requests issued while another flow is ongoing are rejected. It's the extension's responsibility to try again later if another flow is in progress.
 Parameters
     
@@ -442,12 +436,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -458,7 +446,7 @@ Parameters
       Chrome 86+
       
     
-        chrome.certificateProvider.setCertificates(  details: SetCertificatesDetails,  callback?: function,)
+        chrome.certificateProvider.setCertificates(  details: SetCertificatesDetails,  callback?: function,): Promise<void>
       Sets a list of certificates to use in the browser.
 The extension should call this function after initialization and on every change in the set of currently available certificates. The extension should also call this function in response to onCertificatesUpdateRequested every time this event is received.
 Parameters
@@ -481,12 +469,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -497,7 +479,7 @@ Parameters
       Chrome 57+
       
     
-        chrome.certificateProvider.stopPinRequest(  details: StopPinRequestDetails,  callback?: function,)
+        chrome.certificateProvider.stopPinRequest(  details: StopPinRequestDetails,  callback?: function,): Promise<void>
       Stops the pin request started by the requestPin function.
 Parameters
     
@@ -519,12 +501,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       Events
   

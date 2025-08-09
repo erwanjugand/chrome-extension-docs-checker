@@ -64,7 +64,7 @@ Enum
     
       cancelChooseDesktopMedia()
     
-        chrome.desktopCapture.cancelChooseDesktopMedia(  desktopMediaRequestId: number,)
+        chrome.desktopCapture.cancelChooseDesktopMedia(  desktopMediaRequestId: number,): void
       Hides desktop media picker dialog shown by chooseDesktopMedia().
 Parameters
     
@@ -76,7 +76,7 @@ Parameters
     
       chooseDesktopMedia()
     
-        chrome.desktopCapture.chooseDesktopMedia(  sources: DesktopCaptureSourceType[],  targetTab?: Tab,  callback: function,)
+        chrome.desktopCapture.chooseDesktopMedia(  sources: DesktopCaptureSourceType[],  targetTab?: Tab,  callback: function,): number
       Shows desktop media picker UI with the specified set of sources.
 Parameters
     

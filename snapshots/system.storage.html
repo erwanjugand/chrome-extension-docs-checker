@@ -80,7 +80,7 @@ Types
         Promise
       
     
-        chrome.system.storage.ejectDevice(  id: string,  callback?: function,)
+        chrome.system.storage.ejectDevice(  id: string,  callback?: function,): Promise<EjectDeviceResultCode>
       Ejects a removable storage device.
 Parameters
     
@@ -106,12 +106,6 @@ Parameters
       Chrome 91+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -123,7 +117,7 @@ Parameters
         Dev channel
       
     
-        chrome.system.storage.getAvailableCapacity(  id: string,  callback?: function,)
+        chrome.system.storage.getAvailableCapacity(  id: string,  callback?: function,): Promise<StorageAvailableCapacityInfo>
       Get the available capacity of a specified id storage device. The id is the transient device ID from StorageUnitInfo.
 Parameters
     
@@ -146,12 +140,6 @@ Parameters
           
             Promise<StorageAvailableCapacityInfo>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -161,7 +149,7 @@ Parameters
         Promise
       
     
-        chrome.system.storage.getInfo(  callback?: function,)
+        chrome.system.storage.getInfo(  callback?: function,): Promise<StorageUnitInfo[]>
       Get the storage information from the system. The argument passed to the callback is an array of StorageUnitInfo objects.
 Parameters
     
@@ -183,12 +171,6 @@ Parameters
       Chrome 91+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       Events
   

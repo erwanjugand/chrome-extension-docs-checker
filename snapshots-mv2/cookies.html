@@ -245,7 +245,7 @@ Enum
         Promise
       
     
-        chrome.cookies.get(  details: CookieDetails,  callback?: function,)
+        chrome.cookies.get(  details: CookieDetails,  callback?: function,): Promise<Cookie | undefined>
       Retrieves information about a single cookie. If more than one cookie of the same name exists for the given URL, the one with the longest path will be returned. For cookies with the same path length, the cookie with the earliest creation time will be returned.
 Parameters
     
@@ -285,7 +285,7 @@ Parameters
         Promise
       
     
-        chrome.cookies.getAll(  details: object,  callback?: function,)
+        chrome.cookies.getAll(  details: object,  callback?: function,): Promise<Cookie[]>
       Retrieves all cookies from a single cookie store that match the given information. The cookies returned will be sorted, with those with the longest path first. If multiple cookies have the same path length, those with the earliest creation time will be first. This method only retrieves cookies for domains that the extension has host permissions to.
 Parameters
     
@@ -370,7 +370,7 @@ Parameters
         Promise
       
     
-        chrome.cookies.getAllCookieStores(  callback?: function,)
+        chrome.cookies.getAllCookieStores(  callback?: function,): Promise<CookieStore[]>
       Lists all existing cookie stores.
 Parameters
     
@@ -407,7 +407,7 @@ Parameters
       Chrome 132+
       
     
-        chrome.cookies.getPartitionKey(  details: FrameDetails,  callback?: function,)
+        chrome.cookies.getPartitionKey(  details: FrameDetails,  callback?: function,): Promise<object>
       The partition key for the frame indicated.
 Parameters
     
@@ -450,7 +450,7 @@ Parameters
         Promise
       
     
-        chrome.cookies.remove(  details: CookieDetails,  callback?: function,)
+        chrome.cookies.remove(  details: CookieDetails,  callback?: function,): Promise<object | undefined>
       Deletes a cookie by name.
 Parameters
     
@@ -514,7 +514,7 @@ Parameters
         Promise
       
     
-        chrome.cookies.set(  details: object,  callback?: function,)
+        chrome.cookies.set(  details: object,  callback?: function,): Promise<Cookie | undefined>
       Sets a cookie with the given cookie data; may overwrite equivalent cookies if they exist.
 Parameters
     

@@ -75,7 +75,7 @@ Types
         Promise
       
     
-        chrome.dns.resolve(  hostname: string,  callback?: function,)
+        chrome.dns.resolve(  hostname: string,  callback?: function,): Promise<ResolveCallbackResolveInfo>
       Resolves the given hostname or IP address literal.
 Parameters
     
@@ -98,12 +98,6 @@ Parameters
     Returns
           
             Promise<ResolveCallbackResolveInfo>
-            
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
             
         
       

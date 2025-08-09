@@ -51,7 +51,7 @@ Types
         Promise
       
     
-        chrome.systemLog.add(  options: MessageOptions,  callback?: function,)
+        chrome.systemLog.add(  options: MessageOptions,  callback?: function,): Promise<void>
       Adds a new log record.
 Parameters
     
@@ -69,12 +69,6 @@ Parameters
     Returns
           
             Promise<void>
-            
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
             
         
       

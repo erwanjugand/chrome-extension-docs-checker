@@ -53,7 +53,7 @@ Types
         Promise
       
     
-        chrome.enterprise.hardwarePlatform.getHardwarePlatformInfo(  callback?: function,)
+        chrome.enterprise.hardwarePlatform.getHardwarePlatformInfo(  callback?: function,): Promise<HardwarePlatformInfo>
       Obtains the manufacturer and model for the hardware platform and, if the extension is authorized, returns it via callback.
 Parameters
     
@@ -75,12 +75,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
 

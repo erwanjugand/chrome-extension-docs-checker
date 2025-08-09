@@ -1319,7 +1319,7 @@ Enum
       Chrome 89+
       
     
-        chrome.declarativeNetRequest.getAvailableStaticRuleCount(  callback?: function,)
+        chrome.declarativeNetRequest.getAvailableStaticRuleCount(  callback?: function,): Promise<number>
       Returns the number of static rules an extension can enable before the global static rule limit is reached.
 Parameters
     
@@ -1355,7 +1355,7 @@ Parameters
       Chrome 111+
       
     
-        chrome.declarativeNetRequest.getDisabledRuleIds(  options: GetDisabledRuleIdsOptions,  callback?: function,)
+        chrome.declarativeNetRequest.getDisabledRuleIds(  options: GetDisabledRuleIdsOptions,  callback?: function,): Promise<number[]>
       Returns the list of static rules in the given Ruleset that are currently disabled.
 Parameters
     
@@ -1392,7 +1392,7 @@ Parameters
         Promise
       
     
-        chrome.declarativeNetRequest.getDynamicRules(  filter?: GetRulesFilter,  callback?: function,)
+        chrome.declarativeNetRequest.getDynamicRules(  filter?: GetRulesFilter,  callback?: function,): Promise<Rule[]>
       Returns the current set of dynamic rules for the extension. Callers can optionally filter the list of fetched rules by specifying a filter.
 Parameters
     
@@ -1435,7 +1435,7 @@ Parameters
         Promise
       
     
-        chrome.declarativeNetRequest.getEnabledRulesets(  callback?: function,)
+        chrome.declarativeNetRequest.getEnabledRulesets(  callback?: function,): Promise<string[]>
       Returns the ids for the current set of enabled static rulesets.
 Parameters
     
@@ -1470,7 +1470,7 @@ Parameters
         Promise
       
     
-        chrome.declarativeNetRequest.getMatchedRules(  filter?: MatchedRulesFilter,  callback?: function,)
+        chrome.declarativeNetRequest.getMatchedRules(  filter?: MatchedRulesFilter,  callback?: function,): Promise<RulesMatchedDetails>
       Returns all rules matched for the extension. Callers can optionally filter the list of matched rules by specifying a filter. This method is only available to extensions with the "declarativeNetRequestFeedback" permission or having the "activeTab" permission granted for the tabId specified in filter. Note: Rules not associated with an active document that were matched more than five minutes ago will not be returned.
 Parameters
     
@@ -1511,7 +1511,7 @@ Parameters
       Chrome 90+
       
     
-        chrome.declarativeNetRequest.getSessionRules(  filter?: GetRulesFilter,  callback?: function,)
+        chrome.declarativeNetRequest.getSessionRules(  filter?: GetRulesFilter,  callback?: function,): Promise<Rule[]>
       Returns the current set of session scoped rules for the extension. Callers can optionally filter the list of fetched rules by specifying a filter.
 Parameters
     
@@ -1555,7 +1555,7 @@ Parameters
       Chrome 87+
       
     
-        chrome.declarativeNetRequest.isRegexSupported(  regexOptions: RegexOptions,  callback?: function,)
+        chrome.declarativeNetRequest.isRegexSupported(  regexOptions: RegexOptions,  callback?: function,): Promise<IsRegexSupportedResult>
       Checks if the given regular expression will be supported as a regexFilter rule condition.
 Parameters
     
@@ -1596,7 +1596,7 @@ Parameters
       Chrome 88+
       
     
-        chrome.declarativeNetRequest.setExtensionActionOptions(  options: ExtensionActionOptions,  callback?: function,)
+        chrome.declarativeNetRequest.setExtensionActionOptions(  options: ExtensionActionOptions,  callback?: function,): Promise<void>
       Configures if the action count for tabs should be displayed as the extension action's badge text and provides a way for that action count to be incremented.
 Parameters
     
@@ -1634,7 +1634,7 @@ Parameters
       Chrome 103+
       
     
-        chrome.declarativeNetRequest.testMatchOutcome(  request: TestMatchRequestDetails,  callback?: function,)
+        chrome.declarativeNetRequest.testMatchOutcome(  request: TestMatchRequestDetails,  callback?: function,): Promise<TestMatchOutcomeResult>
       Checks if any of the extension's declarativeNetRequest rules would match a hypothetical request. Note: Only available for unpacked extensions as this is only intended to be used during extension development.
 Parameters
     
@@ -1670,7 +1670,7 @@ Parameters
         Promise
       
     
-        chrome.declarativeNetRequest.updateDynamicRules(  options: UpdateRuleOptions,  callback?: function,)
+        chrome.declarativeNetRequest.updateDynamicRules(  options: UpdateRuleOptions,  callback?: function,): Promise<void>
       Modifies the current set of dynamic rules for the extension. The rules with IDs listed in options.removeRuleIds are first removed, and then the rules given in options.addRules are added. Notes:
 
 This update happens as a single atomic operation: either all specified rules are added and removed, or an error is returned.
@@ -1713,7 +1713,7 @@ Parameters
         Promise
       
     
-        chrome.declarativeNetRequest.updateEnabledRulesets(  options: UpdateRulesetOptions,  callback?: function,)
+        chrome.declarativeNetRequest.updateEnabledRulesets(  options: UpdateRulesetOptions,  callback?: function,): Promise<void>
       Updates the set of enabled static rulesets for the extension. The rulesets with IDs listed in options.disableRulesetIds are first removed, and then the rulesets listed in options.enableRulesetIds are added.
 Note that the set of enabled static rulesets is persisted across sessions but not across extension updates, i.e. the rule_resources manifest key will determine the set of enabled static rulesets on each extension update.
 Parameters
@@ -1752,7 +1752,7 @@ Parameters
       Chrome 90+
       
     
-        chrome.declarativeNetRequest.updateSessionRules(  options: UpdateRuleOptions,  callback?: function,)
+        chrome.declarativeNetRequest.updateSessionRules(  options: UpdateRuleOptions,  callback?: function,): Promise<void>
       Modifies the current set of session scoped rules for the extension. The rules with IDs listed in options.removeRuleIds are first removed, and then the rules given in options.addRules are added. Notes:
 
 This update happens as a single atomic operation: either all specified rules are added and removed, or an error is returned.
@@ -1792,7 +1792,7 @@ Parameters
       Chrome 111+
       
     
-        chrome.declarativeNetRequest.updateStaticRules(  options: UpdateStaticRulesOptions,  callback?: function,)
+        chrome.declarativeNetRequest.updateStaticRules(  options: UpdateStaticRulesOptions,  callback?: function,): Promise<void>
       Disables and enables individual static rules in a Ruleset. Changes to rules belonging to a disabled Ruleset will take effect the next time that it becomes enabled.
 Parameters
     

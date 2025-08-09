@@ -319,7 +319,7 @@ Properties
         Promise
       
     
-        chrome.action.disable(  tabId?: number,  callback?: function,)
+        chrome.action.disable(  tabId?: number,  callback?: function,): Promise<void>
       Disables the action for a tab.
 Parameters
     
@@ -338,12 +338,6 @@ Parameters
           
             Promise<void>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -353,7 +347,7 @@ Parameters
         Promise
       
     
-        chrome.action.enable(  tabId?: number,  callback?: function,)
+        chrome.action.enable(  tabId?: number,  callback?: function,): Promise<void>
       Enables the action for a tab. By default, actions are enabled.
 Parameters
     
@@ -372,12 +366,6 @@ Parameters
           
             Promise<void>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -387,7 +375,7 @@ Parameters
         Promise
       
     
-        chrome.action.getBadgeBackgroundColor(  details: TabDetails,  callback?: function,)
+        chrome.action.getBadgeBackgroundColor(  details: TabDetails,  callback?: function,): Promise<extensionTypes.ColorArray>
       Gets the background color of the action.
 Parameters
     
@@ -410,12 +398,6 @@ Parameters
           
             Promise<extensionTypes.ColorArray>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -425,7 +407,7 @@ Parameters
         Promise
       
     
-        chrome.action.getBadgeText(  details: TabDetails,  callback?: function,)
+        chrome.action.getBadgeText(  details: TabDetails,  callback?: function,): Promise<string>
       Gets the badge text of the action. If no tab is specified, the non-tab-specific badge text is returned. If displayActionCountAsBadgeText is enabled, a placeholder text will be returned unless the declarativeNetRequestFeedback permission is present or tab-specific badge text was provided.
 Parameters
     
@@ -448,12 +430,6 @@ Parameters
           
             Promise<string>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -464,7 +440,7 @@ Parameters
       Chrome 110+
       
     
-        chrome.action.getBadgeTextColor(  details: TabDetails,  callback?: function,)
+        chrome.action.getBadgeTextColor(  details: TabDetails,  callback?: function,): Promise<extensionTypes.ColorArray>
       Gets the text color of the action.
 Parameters
     
@@ -487,12 +463,6 @@ Parameters
           
             Promise<extensionTypes.ColorArray>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -502,7 +472,7 @@ Parameters
         Promise
       
     
-        chrome.action.getPopup(  details: TabDetails,  callback?: function,)
+        chrome.action.getPopup(  details: TabDetails,  callback?: function,): Promise<string>
       Gets the html document set as the popup for this action.
 Parameters
     
@@ -525,12 +495,6 @@ Parameters
           
             Promise<string>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -540,7 +504,7 @@ Parameters
         Promise
       
     
-        chrome.action.getTitle(  details: TabDetails,  callback?: function,)
+        chrome.action.getTitle(  details: TabDetails,  callback?: function,): Promise<string>
       Gets the title of the action.
 Parameters
     
@@ -563,12 +527,6 @@ Parameters
           
             Promise<string>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -579,7 +537,7 @@ Parameters
       Chrome 91+
       
     
-        chrome.action.getUserSettings(  callback?: function,)
+        chrome.action.getUserSettings(  callback?: function,): Promise<UserSettings>
       Returns the user-specified settings relating to an extension's action.
 Parameters
     
@@ -598,12 +556,6 @@ Parameters
           
             Promise<UserSettings>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -614,7 +566,7 @@ Parameters
       Chrome 110+
       
     
-        chrome.action.isEnabled(  tabId?: number,  callback?: function,)
+        chrome.action.isEnabled(  tabId?: number,  callback?: function,): Promise<boolean>
       Indicates whether the extension action is enabled for a tab (or globally if no tabId is provided). Actions enabled using only declarativeContent always return false.
 Parameters
     
@@ -639,12 +591,6 @@ Parameters
           
             Promise<boolean>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -655,7 +601,7 @@ Parameters
       Chrome 127+
       
     
-        chrome.action.openPopup(  options?: OpenPopupOptions,  callback?: function,)
+        chrome.action.openPopup(  options?: OpenPopupOptions,  callback?: function,): Promise<void>
       Opens the extension's popup. Between Chrome 118 and Chrome 126, this is only available to policy installed extensions.
 Parameters
     
@@ -674,12 +620,6 @@ Parameters
           
             Promise<void>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -689,7 +629,7 @@ Parameters
         Promise
       
     
-        chrome.action.setBadgeBackgroundColor(  details: object,  callback?: function,)
+        chrome.action.setBadgeBackgroundColor(  details: object,  callback?: function,): Promise<void>
       Sets the background color for the badge.
 Parameters
     
@@ -718,12 +658,6 @@ Parameters
           
             Promise<void>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -733,7 +667,7 @@ Parameters
         Promise
       
     
-        chrome.action.setBadgeText(  details: object,  callback?: function,)
+        chrome.action.setBadgeText(  details: object,  callback?: function,): Promise<void>
       Sets the badge text for the action. The badge is displayed on top of the icon.
 Parameters
     
@@ -762,12 +696,6 @@ Parameters
           
             Promise<void>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -778,7 +706,7 @@ Parameters
       Chrome 110+
       
     
-        chrome.action.setBadgeTextColor(  details: object,  callback?: function,)
+        chrome.action.setBadgeTextColor(  details: object,  callback?: function,): Promise<void>
       Sets the text color for the badge.
 Parameters
     
@@ -807,12 +735,6 @@ Parameters
           
             Promise<void>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -822,7 +744,7 @@ Parameters
         Promise
       
     
-        chrome.action.setIcon(  details: object,  callback?: function,)
+        chrome.action.setIcon(  details: object,  callback?: function,): Promise<void>
       Sets the icon for the action. The icon can be specified either as the path to an image file or as the pixel data from a canvas element, or as dictionary of either one of those. Either the path or the imageData property must be specified.
 Parameters
     
@@ -859,12 +781,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -874,7 +790,7 @@ Parameters
         Promise
       
     
-        chrome.action.setPopup(  details: object,  callback?: function,)
+        chrome.action.setPopup(  details: object,  callback?: function,): Promise<void>
       Sets the HTML document to be opened as a popup when the user clicks on the action's icon.
 Parameters
     
@@ -903,12 +819,6 @@ Parameters
           
             Promise<void>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -918,7 +828,7 @@ Parameters
         Promise
       
     
-        chrome.action.setTitle(  details: object,  callback?: function,)
+        chrome.action.setTitle(  details: object,  callback?: function,): Promise<void>
       Sets the title of the action. This shows up in the tooltip.
 Parameters
     
@@ -946,12 +856,6 @@ Parameters
     Returns
           
             Promise<void>
-            
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
             
         
       Events

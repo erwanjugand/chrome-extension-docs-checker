@@ -37,7 +37,7 @@ Properties
         Promise
       
     
-        chrome.gcm.register(  senderIds: string[],  callback?: function,)
+        chrome.gcm.register(  senderIds: string[],  callback?: function,): Promise<string>
       Registers the application with FCM. The registration ID will be returned by the callback. If register is called again with the same list of senderIds, the same registration ID will be returned.
 Parameters
     
@@ -50,7 +50,7 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          (registrationId: string) => void
+          (registrationId: string) =& gt;void
         
     
       registrationId
@@ -65,12 +65,6 @@ Parameters
       Chrome 116+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -80,7 +74,7 @@ Parameters
         Promise
       
     
-        chrome.gcm.send(  message: object,  callback?: function,)
+        chrome.gcm.send(  message: object,  callback?: function,): Promise<string>
       Sends a message according to its contents.
 Parameters
     
@@ -114,7 +108,7 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          (messageId: string) => void
+          (messageId: string) =& gt;void
         
     
       messageId
@@ -129,12 +123,6 @@ Parameters
       Chrome 116+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -144,7 +132,7 @@ Parameters
         Promise
       
     
-        chrome.gcm.unregister(  callback?: function,)
+        chrome.gcm.unregister(  callback?: function,): Promise<void>
       Unregisters the application from FCM.
 Parameters
     
@@ -152,7 +140,7 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          () => void
+          () =& gt;void
         
     Returns
           
@@ -161,12 +149,6 @@ Parameters
       Chrome 116+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       Events
   
@@ -181,7 +163,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (message: object) => void
+          (message: object) =& gt;void
         
     
       message
@@ -216,7 +198,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          () => void
+          () =& gt;void
         
     
     
@@ -230,7 +212,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (error: object) => void
+          (error: object) =& gt;void
         
     
       error

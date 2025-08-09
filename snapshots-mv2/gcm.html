@@ -37,7 +37,7 @@ Properties
         Promise
       
     
-        chrome.gcm.register(  senderIds: string[],  callback?: function,)
+        chrome.gcm.register(  senderIds: string[],  callback?: function,): Promise<string>
       Registers the application with FCM. The registration ID will be returned by the callback. If register is called again with the same list of senderIds, the same registration ID will be returned.
 Parameters
     
@@ -78,7 +78,7 @@ Parameters
         Promise
       
     
-        chrome.gcm.send(  message: object,  callback?: function,)
+        chrome.gcm.send(  message: object,  callback?: function,): Promise<string>
       Sends a message according to its contents.
 Parameters
     
@@ -140,7 +140,7 @@ Parameters
         Promise
       
     
-        chrome.gcm.unregister(  callback?: function,)
+        chrome.gcm.unregister(  callback?: function,): Promise<void>
       Unregisters the application from FCM.
 Parameters
     

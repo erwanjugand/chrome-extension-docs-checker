@@ -520,7 +520,7 @@ Enum
         Promise
       
     
-        chrome.tabs.captureVisibleTab(  windowId?: number,  options?: ImageDetails,  callback?: function,)
+        chrome.tabs.captureVisibleTab(  windowId?: number,  options?: ImageDetails,  callback?: function,): Promise<string>
       Captures the visible area of the currently active tab in the specified window. In order to call this method, the extension must have either the <all_urls> permission or the activeTab permission. In addition to sites that extensions can normally access, this method allows extensions to capture sensitive sites that are otherwise restricted, including chrome:-scheme pages, other extensions' pages, and data: URLs. These sensitive sites can only be captured with the activeTab permission. File URLs may be captured only if the extension has been granted file access.
 Parameters
     
@@ -561,7 +561,7 @@ Parameters
     
       connect()
     
-        chrome.tabs.connect(  tabId: number,  connectInfo?: object,)
+        chrome.tabs.connect(  tabId: number,  connectInfo?: object,): runtime.Port
       Connects to the content script(s) in the specified tab. The runtime.onConnect event is fired in each content script running in the specified tab for the current extension. For more details, see Content Script Messaging.
 Parameters
     
@@ -605,7 +605,7 @@ Parameters
         Promise
       
     
-        chrome.tabs.create(  createProperties: object,  callback?: function,)
+        chrome.tabs.create(  createProperties: object,  callback?: function,): Promise<Tab>
       Creates a new tab.
 Parameters
     
@@ -684,7 +684,7 @@ Parameters
         Promise
       
     
-        chrome.tabs.detectLanguage(  tabId?: number,  callback?: function,)
+        chrome.tabs.detectLanguage(  tabId?: number,  callback?: function,): Promise<string>
       Detects the primary language of the content in a tab.
 Parameters
     
@@ -726,7 +726,7 @@ Parameters
       Chrome 54+
       
     
-        chrome.tabs.discard(  tabId?: number,  callback?: function,)
+        chrome.tabs.discard(  tabId?: number,  callback?: function,): Promise<Tab | undefined>
       Discards a tab from memory. Discarded tabs are still visible on the tab strip and are reloaded when activated.
 Parameters
     
@@ -767,7 +767,7 @@ Parameters
         Promise
       
     
-        chrome.tabs.duplicate(  tabId: number,  callback?: function,)
+        chrome.tabs.duplicate(  tabId: number,  callback?: function,): Promise<Tab | undefined>
       Duplicates a tab.
 Parameters
     
@@ -810,7 +810,7 @@ Parameters
         ≤ MV2
         Deprecated since Chrome 91
     
-        chrome.tabs.executeScript(  tabId?: number,  details: InjectDetails,  callback?: function,)
+        chrome.tabs.executeScript(  tabId?: number,  details: InjectDetails,  callback?: function,): Promise<any[] | undefined>
       Replaced by scripting.executeScript in Manifest V3.Injects JavaScript code into a page. For details, see the programmatic injection section of the content scripts doc.
 Parameters
     
@@ -856,7 +856,7 @@ Parameters
         Promise
       
     
-        chrome.tabs.get(  tabId: number,  callback?: function,)
+        chrome.tabs.get(  tabId: number,  callback?: function,): Promise<Tab>
       Retrieves details about the specified tab.
 Parameters
     
@@ -897,7 +897,7 @@ Parameters
         ≤ MV2
         Deprecated
     
-        chrome.tabs.getAllInWindow(  windowId?: number,  callback?: function,)
+        chrome.tabs.getAllInWindow(  windowId?: number,  callback?: function,): Promise<Tab[]>
       Please use tabs.query {windowId: windowId}.Gets details about all tabs in the specified window.
 Parameters
     
@@ -937,7 +937,7 @@ Parameters
         Promise
       
     
-        chrome.tabs.getCurrent(  callback?: function,)
+        chrome.tabs.getCurrent(  callback?: function,): Promise<Tab | undefined>
       Gets the tab that this script call is being made from. Returns undefined if called from a non-tab context (for example, a background page or popup view).
 Parameters
     
@@ -974,7 +974,7 @@ Parameters
         ≤ MV2
         Deprecated
     
-        chrome.tabs.getSelected(  windowId?: number,  callback?: function,)
+        chrome.tabs.getSelected(  windowId?: number,  callback?: function,): Promise<Tab>
       Please use tabs.query {active: true}.Gets the tab that is selected in the specified window.
 Parameters
     
@@ -1014,7 +1014,7 @@ Parameters
         Promise
       
     
-        chrome.tabs.getZoom(  tabId?: number,  callback?: function,)
+        chrome.tabs.getZoom(  tabId?: number,  callback?: function,): Promise<number>
       Gets the current zoom factor of a specified tab.
 Parameters
     
@@ -1055,7 +1055,7 @@ Parameters
         Promise
       
     
-        chrome.tabs.getZoomSettings(  tabId?: number,  callback?: function,)
+        chrome.tabs.getZoomSettings(  tabId?: number,  callback?: function,): Promise<ZoomSettings>
       Gets the current zoom settings of a specified tab.
 Parameters
     
@@ -1097,7 +1097,7 @@ Parameters
       Chrome 72+
       
     
-        chrome.tabs.goBack(  tabId?: number,  callback?: function,)
+        chrome.tabs.goBack(  tabId?: number,  callback?: function,): Promise<void>
       Go back to the previous page, if one is available.
 Parameters
     
@@ -1133,7 +1133,7 @@ Parameters
       Chrome 72+
       
     
-        chrome.tabs.goForward(  tabId?: number,  callback?: function,)
+        chrome.tabs.goForward(  tabId?: number,  callback?: function,): Promise<void>
       Go foward to the next page, if one is available.
 Parameters
     
@@ -1169,7 +1169,7 @@ Parameters
       Chrome 88+
       
     
-        chrome.tabs.group(  options: object,  callback?: function,)
+        chrome.tabs.group(  options: object,  callback?: function,): Promise<number>
       Adds one or more tabs to a specified group, or if no group is specified, adds the given tabs to a newly created group.
 Parameters
     
@@ -1228,7 +1228,7 @@ Parameters
         Promise
       
     
-        chrome.tabs.highlight(  highlightInfo: object,  callback?: function,)
+        chrome.tabs.highlight(  highlightInfo: object,  callback?: function,): Promise<windows.Window>
       Highlights the given tabs and focuses on the first of group. Will appear to do nothing if the specified tab is currently active.
 Parameters
     
@@ -1281,7 +1281,7 @@ Parameters
         ≤ MV2
         Deprecated since Chrome 91
     
-        chrome.tabs.insertCSS(  tabId?: number,  details: InjectDetails,  callback?: function,)
+        chrome.tabs.insertCSS(  tabId?: number,  details: InjectDetails,  callback?: function,): Promise<void>
       Replaced by scripting.insertCSS in Manifest V3.Injects CSS into a page. Styles inserted with this method can be removed with scripting.removeCSS. For details, see the programmatic injection section of the content scripts doc.
 Parameters
     
@@ -1321,7 +1321,7 @@ Parameters
         Promise
       
     
-        chrome.tabs.move(  tabIds: number | number[],  moveProperties: object,  callback?: function,)
+        chrome.tabs.move(  tabIds: number | number[],  moveProperties: object,  callback?: function,): Promise<Tab | Tab[]>
       Moves one or more tabs to a new position within its window, or to a new window. Note that tabs can only be moved to and from normal (window.type === "normal") windows.
 Parameters
     
@@ -1377,7 +1377,7 @@ Parameters
         Promise
       
     
-        chrome.tabs.query(  queryInfo: object,  callback?: function,)
+        chrome.tabs.query(  queryInfo: object,  callback?: function,): Promise<Tab[]>
       Gets all tabs that have the specified properties, or all tabs if no properties are specified.
 Parameters
     
@@ -1527,7 +1527,7 @@ Parameters
         Promise
       
     
-        chrome.tabs.reload(  tabId?: number,  reloadProperties?: object,  callback?: function,)
+        chrome.tabs.reload(  tabId?: number,  reloadProperties?: object,  callback?: function,): Promise<void>
       Reload a tab.
 Parameters
     
@@ -1572,7 +1572,7 @@ Parameters
         Promise
       
     
-        chrome.tabs.remove(  tabIds: number | number[],  callback?: function,)
+        chrome.tabs.remove(  tabIds: number | number[],  callback?: function,): Promise<void>
       Closes one or more tabs.
 Parameters
     
@@ -1610,7 +1610,7 @@ Parameters
         ≤ MV2
         Deprecated since Chrome 91
     
-        chrome.tabs.removeCSS(  tabId?: number,  details: DeleteInjectionDetails,  callback?: function,)
+        chrome.tabs.removeCSS(  tabId?: number,  details: DeleteInjectionDetails,  callback?: function,): Promise<void>
       Replaced by scripting.removeCSS in Manifest V3.Removes from a page CSS that was previously injected by a call to scripting.insertCSS.
 Parameters
     
@@ -1650,7 +1650,7 @@ Parameters
         Promise
       
     
-        chrome.tabs.sendMessage(  tabId: number,  message: any,  options?: object,  callback?: function,)
+        chrome.tabs.sendMessage(  tabId: number,  message: any,  options?: object,  callback?: function,): Promise<any>
       Sends a single message to the content script(s) in the specified tab, with an optional callback to run when a response is sent back. The runtime.onMessage event is fired in each content script running in the specified tab for the current extension.
 Parameters
     
@@ -1718,7 +1718,7 @@ Parameters
         ≤ MV2
         Deprecated
     
-        chrome.tabs.sendRequest(  tabId: number,  request: any,  callback?: function,)
+        chrome.tabs.sendRequest(  tabId: number,  request: any,  callback?: function,): Promise<any>
       Please use runtime.sendMessage.Sends a single request to the content script(s) in the specified tab, with an optional callback to run when a response is sent back. The extension.onRequest event is fired in each content script running in the specified tab for the current extension.
 Parameters
     
@@ -1765,7 +1765,7 @@ Parameters
         Promise
       
     
-        chrome.tabs.setZoom(  tabId?: number,  zoomFactor: number,  callback?: function,)
+        chrome.tabs.setZoom(  tabId?: number,  zoomFactor: number,  callback?: function,): Promise<void>
       Zooms a specified tab.
 Parameters
     
@@ -1805,7 +1805,7 @@ Parameters
         Promise
       
     
-        chrome.tabs.setZoomSettings(  tabId?: number,  zoomSettings: ZoomSettings,  callback?: function,)
+        chrome.tabs.setZoomSettings(  tabId?: number,  zoomSettings: ZoomSettings,  callback?: function,): Promise<void>
       Sets the zoom settings for a specified tab, which define how zoom changes are handled. These settings are reset to defaults upon navigating the tab.
 Parameters
     
@@ -1846,7 +1846,7 @@ Parameters
       Chrome 88+
       
     
-        chrome.tabs.ungroup(  tabIds: number | [number, ...number[]],  callback?: function,)
+        chrome.tabs.ungroup(  tabIds: number | [number, ...number[]],  callback?: function,): Promise<void>
       Removes one or more tabs from their respective groups. If any groups become empty, they are deleted.
 Parameters
     
@@ -1878,7 +1878,7 @@ Parameters
         Promise
       
     
-        chrome.tabs.update(  tabId?: number,  updateProperties: object,  callback?: function,)
+        chrome.tabs.update(  tabId?: number,  updateProperties: object,  callback?: function,): Promise<Tab | undefined>
       Modifies the properties of a tab. Properties that are not specified in updateProperties are not modified.
 Parameters
     

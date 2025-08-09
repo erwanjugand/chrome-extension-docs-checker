@@ -50,7 +50,7 @@ Types
         Promise
       
     
-        chrome.loginState.getProfileType(  callback?: function,)
+        chrome.loginState.getProfileType(  callback?: function,): Promise<ProfileType>
       Gets the type of the profile the extension is in.
 Parameters
     
@@ -72,12 +72,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -87,7 +81,7 @@ Parameters
         Promise
       
     
-        chrome.loginState.getSessionState(  callback?: function,)
+        chrome.loginState.getSessionState(  callback?: function,): Promise<SessionState>
       Gets the current session state.
 Parameters
     
@@ -109,12 +103,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       Events
   

@@ -101,7 +101,7 @@ Currently supported on Chrome OS only.
         Promise
       
     
-        chrome.system.cpu.getInfo(  callback?: function,)
+        chrome.system.cpu.getInfo(  callback?: function,): Promise<CpuInfo>
       Queries basic CPU information of the system.
 Parameters
     
@@ -123,12 +123,6 @@ Parameters
       Chrome 91+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
 

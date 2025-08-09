@@ -157,7 +157,7 @@ Enum
         Promise
       
     
-        chrome.webNavigation.getAllFrames(  details: object,  callback?: function,)
+        chrome.webNavigation.getAllFrames(  details: object,  callback?: function,): Promise<object[] | undefined>
       Retrieves information about all frames of a given tab.
 Parameters
     
@@ -249,12 +249,6 @@ Parameters
       Chrome 93+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -264,7 +258,7 @@ Parameters
         Promise
       
     
-        chrome.webNavigation.getFrame(  details: object,  callback?: function,)
+        chrome.webNavigation.getFrame(  details: object,  callback?: function,): Promise<object | undefined>
       Retrieves information about the given frame. A frame refers to an <iframe> or a <frame> of a web page and is identified by a tab ID and a frame ID.
 Parameters
     
@@ -367,12 +361,6 @@ Parameters
       Chrome 93+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       Events
   

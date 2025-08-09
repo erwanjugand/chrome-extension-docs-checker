@@ -116,7 +116,7 @@ Note: This list is meant for debugging only and may not contain all relevant err
     
       getKeyPair()
     
-        chrome.platformKeys.getKeyPair(  certificate: ArrayBuffer,  parameters: object,  callback: function,)
+        chrome.platformKeys.getKeyPair(  certificate: ArrayBuffer,  parameters: object,  callback: function,): void
       Passes the key pair of certificate for usage with platformKeys.subtleCrypto to callback.
 Parameters
     
@@ -154,7 +154,7 @@ Currently, this method only supports the "RSASSA-PKCS1-v1_5" and "ECDSA" algorit
       Chrome 85+
       
     
-        chrome.platformKeys.getKeyPairBySpki(  publicKeySpkiDer: ArrayBuffer,  parameters: object,  callback: function,)
+        chrome.platformKeys.getKeyPairBySpki(  publicKeySpkiDer: ArrayBuffer,  parameters: object,  callback: function,): void
       Passes the key pair identified by publicKeySpkiDer for usage with platformKeys.subtleCrypto to callback.
 Parameters
     
@@ -193,7 +193,7 @@ Currently, this method supports the "ECDSA" algorithm with named-curve P-256 and
         Promise
       
     
-        chrome.platformKeys.selectClientCertificates(  details: SelectDetails,  callback?: function,)
+        chrome.platformKeys.selectClientCertificates(  details: SelectDetails,  callback?: function,): Promise<Match[]>
       This method filters from a list of client certificates the ones that are known to the platform, match request and for which the extension has permission to access the certificate and its private key. If interactive is true, the user is presented a dialog where they can select from matching certificates and grant the extension access to the certificate. The selected/filtered client certificates will be passed to callback.
 Parameters
     
@@ -220,18 +220,12 @@ Parameters
       Chrome 121+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
       subtleCrypto()
     
-        chrome.platformKeys.subtleCrypto()
+        chrome.platformKeys.subtleCrypto(): object | undefined
       An implementation of WebCrypto's SubtleCrypto that allows crypto operations on keys of client certificates that are available to this extension.
 Returns
           
@@ -246,7 +240,7 @@ Returns
         Promise
       
     
-        chrome.platformKeys.verifyTLSServerCertificate(  details: VerificationDetails,  callback?: function,)
+        chrome.platformKeys.verifyTLSServerCertificate(  details: VerificationDetails,  callback?: function,): Promise<VerificationResult>
       Checks whether details.serverCertificateChain can be trusted for details.hostname according to the trust settings of the platform. Note: The actual behavior of the trust verification is not fully specified and might change in the future. The API implementation verifies certificate expiration, validates the certification path and checks trust by a known CA. The implementation is supposed to respect the EKU serverAuth and to support subject alternative names.
 Parameters
     
@@ -272,12 +266,6 @@ Parameters
       Chrome 121+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
 

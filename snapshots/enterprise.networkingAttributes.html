@@ -64,7 +64,7 @@ Types
         Promise
       
     
-        chrome.enterprise.networkingAttributes.getNetworkDetails(  callback?: function,)
+        chrome.enterprise.networkingAttributes.getNetworkDetails(  callback?: function,): Promise<NetworkDetails>
       Retrieves the network details of the device's default network. If the user is not affiliated or the device is not connected to a network, runtime.lastError will be set with a failure reason.
 Parameters
     
@@ -86,12 +86,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
 

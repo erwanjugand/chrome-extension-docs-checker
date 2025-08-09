@@ -194,7 +194,7 @@ Enum
         Promise
       
     
-        chrome.windows.create(  createData?: object,  callback?: function,)
+        chrome.windows.create(  createData?: object,  callback?: function,): Promise<Window | undefined>
       Creates (opens) a new browser window with any optional sizing, position, or default URL provided.
 Parameters
     
@@ -283,12 +283,6 @@ Parameters
       Chrome 88+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -298,7 +292,7 @@ Parameters
         Promise
       
     
-        chrome.windows.get(  windowId: number,  queryOptions?: QueryOptions,  callback?: function,)
+        chrome.windows.get(  windowId: number,  queryOptions?: QueryOptions,  callback?: function,): Promise<Window>
       Gets details about a window.
 Parameters
     
@@ -331,12 +325,6 @@ Parameters
       Chrome 88+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -346,7 +334,7 @@ Parameters
         Promise
       
     
-        chrome.windows.getAll(  queryOptions?: QueryOptions,  callback?: function,)
+        chrome.windows.getAll(  queryOptions?: QueryOptions,  callback?: function,): Promise<Window[]>
       Gets all windows.
 Parameters
     
@@ -375,12 +363,6 @@ Parameters
       Chrome 88+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -390,7 +372,7 @@ Parameters
         Promise
       
     
-        chrome.windows.getCurrent(  queryOptions?: QueryOptions,  callback?: function,)
+        chrome.windows.getCurrent(  queryOptions?: QueryOptions,  callback?: function,): Promise<Window>
       Gets the current window.
 Parameters
     
@@ -419,12 +401,6 @@ Parameters
       Chrome 88+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -434,7 +410,7 @@ Parameters
         Promise
       
     
-        chrome.windows.getLastFocused(  queryOptions?: QueryOptions,  callback?: function,)
+        chrome.windows.getLastFocused(  queryOptions?: QueryOptions,  callback?: function,): Promise<Window>
       Gets the window that was most recently focused — typically the window 'on top'.
 Parameters
     
@@ -463,12 +439,6 @@ Parameters
       Chrome 88+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -478,7 +448,7 @@ Parameters
         Promise
       
     
-        chrome.windows.remove(  windowId: number,  callback?: function,)
+        chrome.windows.remove(  windowId: number,  callback?: function,): Promise<void>
       Removes (closes) a window and all the tabs inside it.
 Parameters
     
@@ -499,12 +469,6 @@ Parameters
       Chrome 88+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -514,7 +478,7 @@ Parameters
         Promise
       
     
-        chrome.windows.update(  windowId: number,  updateInfo: object,  callback?: function,)
+        chrome.windows.update(  windowId: number,  updateInfo: object,  callback?: function,): Promise<Window>
       Updates the properties of a window. Specify only the properties that to be changed; unspecified properties are unchanged.
 Parameters
     
@@ -580,12 +544,6 @@ Parameters
       Chrome 88+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       Events
   

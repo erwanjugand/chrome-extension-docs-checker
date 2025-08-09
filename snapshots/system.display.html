@@ -501,7 +501,7 @@ Enum
       Chrome 57+
       
     
-        chrome.system.display.clearTouchCalibration(  id: string,)
+        chrome.system.display.clearTouchCalibration(  id: string,): void
       Resets the touch calibration for the display and brings it back to its default state by clearing any touch calibration data associated with the display.
 Parameters
     
@@ -516,7 +516,7 @@ Parameters
       Chrome 57+
       
     
-        chrome.system.display.completeCustomTouchCalibration(  pairs: TouchCalibrationPairQuad,  bounds: Bounds,)
+        chrome.system.display.completeCustomTouchCalibration(  pairs: TouchCalibrationPairQuad,  bounds: Bounds,): void
       Sets the touch calibration pairs for a display. These pairs would be used to calibrate the touch screen for display with id called in startCustomTouchCalibration(). Always call startCustomTouchCalibration before calling this method. If another touch calibration is already in progress this will throw an error.
 Parameters
     
@@ -536,7 +536,7 @@ Parameters
       Chrome 46+
       
     
-        chrome.system.display.enableUnifiedDesktop(  enabled: boolean,)
+        chrome.system.display.enableUnifiedDesktop(  enabled: boolean,): void
       Enables/disables the unified desktop feature. If enabled while mirroring is active, the desktop mode will not change until mirroring is turned off. Otherwise, the desktop mode will switch to unified immediately. NOTE: This is only available to ChromeOS Kiosk apps and Web UI.
 Parameters
     
@@ -553,7 +553,7 @@ Parameters
       Chrome 53+
       
     
-        chrome.system.display.getDisplayLayout(  callback?: function,)
+        chrome.system.display.getDisplayLayout(  callback?: function,): Promise<DisplayLayout[]>
       Requests the layout info for all displays. NOTE: This is only available to ChromeOS Kiosk apps and Web UI.
 Parameters
     
@@ -575,12 +575,6 @@ Parameters
       Chrome 91+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -590,7 +584,7 @@ Parameters
         Promise
       
     
-        chrome.system.display.getInfo(  flags?: GetInfoFlags,  callback?: function,)
+        chrome.system.display.getInfo(  flags?: GetInfoFlags,  callback?: function,): Promise<DisplayUnitInfo[]>
       Requests the information for all attached display devices.
 Parameters
     
@@ -620,12 +614,6 @@ Parameters
       Chrome 91+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -634,7 +622,7 @@ Parameters
       Chrome 53+
       
     
-        chrome.system.display.overscanCalibrationAdjust(  id: string,  delta: Insets,)
+        chrome.system.display.overscanCalibrationAdjust(  id: string,  delta: Insets,): void
       Adjusts the current overscan insets for a display. Typically this should either move the display along an axis (e.g. left+right have the same value) or scale it along an axis (e.g. top+bottom have opposite values). Each Adjust call is cumulative with previous calls since Start.
 Parameters
     
@@ -654,7 +642,7 @@ Parameters
       Chrome 53+
       
     
-        chrome.system.display.overscanCalibrationComplete(  id: string,)
+        chrome.system.display.overscanCalibrationComplete(  id: string,): void
       Complete overscan adjustments for a display by saving the current values and hiding the overlay.
 Parameters
     
@@ -669,7 +657,7 @@ Parameters
       Chrome 53+
       
     
-        chrome.system.display.overscanCalibrationReset(  id: string,)
+        chrome.system.display.overscanCalibrationReset(  id: string,): void
       Resets the overscan insets for a display to the last saved value (i.e before Start was called).
 Parameters
     
@@ -684,7 +672,7 @@ Parameters
       Chrome 53+
       
     
-        chrome.system.display.overscanCalibrationStart(  id: string,)
+        chrome.system.display.overscanCalibrationStart(  id: string,): void
       Starts overscan calibration for a display. This will show an overlay on the screen indicating the current overscan insets. If overscan calibration for display id is in progress this will reset calibration.
 Parameters
     
@@ -701,7 +689,7 @@ Parameters
       Chrome 53+
       
     
-        chrome.system.display.setDisplayLayout(  layouts: DisplayLayout[],  callback?: function,)
+        chrome.system.display.setDisplayLayout(  layouts: DisplayLayout[],  callback?: function,): Promise<void>
       Set the layout for all displays. Any display not included will use the default layout. If a layout would overlap or be otherwise invalid it will be adjusted to a valid layout. After layout is resolved, an onDisplayChanged event will be triggered. NOTE: This is only available to ChromeOS Kiosk apps and Web UI.
 Parameters
     
@@ -723,12 +711,6 @@ Parameters
       Chrome 91+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -738,7 +720,7 @@ Parameters
         Promise
       
     
-        chrome.system.display.setDisplayProperties(  id: string,  info: DisplayProperties,  callback?: function,)
+        chrome.system.display.setDisplayProperties(  id: string,  info: DisplayProperties,  callback?: function,): Promise<void>
       Updates the properties for the display specified by id, according to the information provided in info. On failure, runtime.lastError will be set. NOTE: This is only available to ChromeOS Kiosk apps and Web UI.
 Parameters
     
@@ -765,12 +747,6 @@ Parameters
       Chrome 91+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -781,7 +757,7 @@ Parameters
       Chrome 65+
       
     
-        chrome.system.display.setMirrorMode(  info: MirrorModeInfo,  callback?: function,)
+        chrome.system.display.setMirrorMode(  info: MirrorModeInfo,  callback?: function,): Promise<void>
       Sets the display mode to the specified mirror mode. Each call resets the state from previous calls. Calling setDisplayProperties() will fail for the mirroring destination displays. NOTE: This is only available to ChromeOS Kiosk apps and Web UI.
 Parameters
     
@@ -803,12 +779,6 @@ Parameters
       Chrome 91+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -819,7 +789,7 @@ Parameters
       Chrome 57+
       
     
-        chrome.system.display.showNativeTouchCalibration(  id: string,  callback?: function,)
+        chrome.system.display.showNativeTouchCalibration(  id: string,  callback?: function,): Promise<boolean>
       Displays the native touch calibration UX for the display with id as display id. This will show an overlay on the screen with required instructions on how to proceed. The callback will be invoked in case of successful calibration only. If the calibration fails, this will throw an error.
 Parameters
     
@@ -846,12 +816,6 @@ Parameters
       Chrome 91+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -860,7 +824,7 @@ Parameters
       Chrome 57+
       
     
-        chrome.system.display.startCustomTouchCalibration(  id: string,)
+        chrome.system.display.startCustomTouchCalibration(  id: string,): void
       Starts custom touch calibration for a display. This should be called when using a custom UX for collecting calibration data. If another touch calibration is already in progress this will throw an error.
 Parameters
     

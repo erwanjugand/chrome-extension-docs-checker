@@ -200,7 +200,7 @@ Enum
         Promise
       
     
-        chrome.printingMetrics.getPrintJobs(  callback?: function,)
+        chrome.printingMetrics.getPrintJobs(  callback?: function,): Promise<PrintJobInfo[]>
       Returns the list of the finished print jobs.
 Parameters
     
@@ -222,12 +222,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       Events
   

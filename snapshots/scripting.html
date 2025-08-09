@@ -462,7 +462,7 @@ Enum
         Promise
       
     
-        chrome.scripting.executeScript(  injection: ScriptInjection,  callback?: function,)
+        chrome.scripting.executeScript(  injection: ScriptInjection,  callback?: function,): Promise<InjectionResult[]>
       Injects a script into a target context. By default, the script will be run at document_idle, or immediately if the page has already loaded. If the injectImmediately property is set, the script will inject without waiting, even if the page has not finished loading. If the script evaluates to a promise, the browser will wait for the promise to settle and return the resulting value.
 Parameters
     
@@ -489,12 +489,6 @@ Parameters
       Chrome 90+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -505,7 +499,7 @@ Parameters
       Chrome 96+
       
     
-        chrome.scripting.getRegisteredContentScripts(  filter?: ContentScriptFilter,  callback?: function,)
+        chrome.scripting.getRegisteredContentScripts(  filter?: ContentScriptFilter,  callback?: function,): Promise<RegisteredContentScript[]>
       Returns all dynamically registered content scripts for this extension that match the given filter.
 Parameters
     
@@ -529,12 +523,6 @@ Parameters
           
             Promise<RegisteredContentScript[]>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -544,7 +532,7 @@ Parameters
         Promise
       
     
-        chrome.scripting.insertCSS(  injection: CSSInjection,  callback?: function,)
+        chrome.scripting.insertCSS(  injection: CSSInjection,  callback?: function,): Promise<void>
       Inserts a CSS stylesheet into a target context. If multiple frames are specified, unsuccessful injections are ignored.
 Parameters
     
@@ -566,12 +554,6 @@ Parameters
       Chrome 90+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -582,7 +564,7 @@ Parameters
       Chrome 96+
       
     
-        chrome.scripting.registerContentScripts(  scripts: RegisteredContentScript[],  callback?: function,)
+        chrome.scripting.registerContentScripts(  scripts: RegisteredContentScript[],  callback?: function,): Promise<void>
       Registers one or more content scripts for this extension.
 Parameters
     
@@ -601,12 +583,6 @@ Parameters
           
             Promise<void>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -617,7 +593,7 @@ Parameters
       Chrome 90+
       
     
-        chrome.scripting.removeCSS(  injection: CSSInjection,  callback?: function,)
+        chrome.scripting.removeCSS(  injection: CSSInjection,  callback?: function,): Promise<void>
       Removes a CSS stylesheet that was previously inserted by this extension from a target context.
 Parameters
     
@@ -636,12 +612,6 @@ Parameters
           
             Promise<void>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -652,7 +622,7 @@ Parameters
       Chrome 96+
       
     
-        chrome.scripting.unregisterContentScripts(  filter?: ContentScriptFilter,  callback?: function,)
+        chrome.scripting.unregisterContentScripts(  filter?: ContentScriptFilter,  callback?: function,): Promise<void>
       Unregisters content scripts for this extension.
 Parameters
     
@@ -671,12 +641,6 @@ Parameters
           
             Promise<void>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -687,7 +651,7 @@ Parameters
       Chrome 96+
       
     
-        chrome.scripting.updateContentScripts(  scripts: RegisteredContentScript[],  callback?: function,)
+        chrome.scripting.updateContentScripts(  scripts: RegisteredContentScript[],  callback?: function,): Promise<void>
       Updates one or more content scripts for this extension.
 Parameters
     
@@ -705,12 +669,6 @@ Parameters
     Returns
           
             Promise<void>
-            
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
             
         
       

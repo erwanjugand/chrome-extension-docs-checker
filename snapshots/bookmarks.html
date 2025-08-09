@@ -60,7 +60,7 @@ executed after the folder is created.
 chrome.bookmarks.create(
   {'parentId': bookmarkBar.id, 'title': 'Extension bookmarks'},
   function(newFolder) {
-    console.log("added folder: " + newFolder.title);
+    console.log("added folder: &quot; + newFolder.title);
   },
 );
 
@@ -224,7 +224,7 @@ Enum
         Promise
       
     
-        chrome.bookmarks.create(  bookmark: CreateDetails,  callback?: function,)
+        chrome.bookmarks.create(  bookmark: CreateDetails,  callback?: function,): Promise<BookmarkTreeNode>
       Creates a bookmark or folder under the specified parentId. If url is NULL or missing, it will be a folder.
 Parameters
     
@@ -236,7 +236,7 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          (result: BookmarkTreeNode) => void
+          (result: BookmarkTreeNode) =& gt;void
         
     
       result
@@ -250,12 +250,6 @@ Parameters
       Chrome 90+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -265,7 +259,7 @@ Parameters
         Promise
       
     
-        chrome.bookmarks.get(  idOrIdList: string | [string, ...string[]],  callback?: function,)
+        chrome.bookmarks.get(  idOrIdList: string | [string, ...string[]],  callback?: function,): Promise<BookmarkTreeNode[]>
       Retrieves the specified BookmarkTreeNode(s).
 Parameters
     
@@ -278,7 +272,7 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          (results: BookmarkTreeNode[]) => void
+          (results: BookmarkTreeNode[]) =& gt;void
         
     
       results
@@ -292,12 +286,6 @@ Parameters
       Chrome 90+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -307,7 +295,7 @@ Parameters
         Promise
       
     
-        chrome.bookmarks.getChildren(  id: string,  callback?: function,)
+        chrome.bookmarks.getChildren(  id: string,  callback?: function,): Promise<BookmarkTreeNode[]>
       Retrieves the children of the specified BookmarkTreeNode id.
 Parameters
     
@@ -319,7 +307,7 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          (results: BookmarkTreeNode[]) => void
+          (results: BookmarkTreeNode[]) =& gt;void
         
     
       results
@@ -333,12 +321,6 @@ Parameters
       Chrome 90+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -348,7 +330,7 @@ Parameters
         Promise
       
     
-        chrome.bookmarks.getRecent(  numberOfItems: number,  callback?: function,)
+        chrome.bookmarks.getRecent(  numberOfItems: number,  callback?: function,): Promise<BookmarkTreeNode[]>
       Retrieves the recently added bookmarks.
 Parameters
     
@@ -361,7 +343,7 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          (results: BookmarkTreeNode[]) => void
+          (results: BookmarkTreeNode[]) =& gt;void
         
     
       results
@@ -375,12 +357,6 @@ Parameters
       Chrome 90+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -390,7 +366,7 @@ Parameters
         Promise
       
     
-        chrome.bookmarks.getSubTree(  id: string,  callback?: function,)
+        chrome.bookmarks.getSubTree(  id: string,  callback?: function,): Promise<BookmarkTreeNode[]>
       Retrieves part of the Bookmarks hierarchy, starting at the specified node.
 Parameters
     
@@ -403,7 +379,7 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          (results: BookmarkTreeNode[]) => void
+          (results: BookmarkTreeNode[]) =& gt;void
         
     
       results
@@ -417,12 +393,6 @@ Parameters
       Chrome 90+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -432,7 +402,7 @@ Parameters
         Promise
       
     
-        chrome.bookmarks.getTree(  callback?: function,)
+        chrome.bookmarks.getTree(  callback?: function,): Promise<BookmarkTreeNode[]>
       Retrieves the entire Bookmarks hierarchy.
 Parameters
     
@@ -440,7 +410,7 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          (results: BookmarkTreeNode[]) => void
+          (results: BookmarkTreeNode[]) =& gt;void
         
     
       results
@@ -454,12 +424,6 @@ Parameters
       Chrome 90+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -469,7 +433,7 @@ Parameters
         Promise
       
     
-        chrome.bookmarks.move(  id: string,  destination: object,  callback?: function,)
+        chrome.bookmarks.move(  id: string,  destination: object,  callback?: function,): Promise<BookmarkTreeNode>
       Moves the specified BookmarkTreeNode to the provided location.
 Parameters
     
@@ -494,7 +458,7 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          (result: BookmarkTreeNode) => void
+          (result: BookmarkTreeNode) =& gt;void
         
     
       result
@@ -508,12 +472,6 @@ Parameters
       Chrome 90+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -523,7 +481,7 @@ Parameters
         Promise
       
     
-        chrome.bookmarks.remove(  id: string,  callback?: function,)
+        chrome.bookmarks.remove(  id: string,  callback?: function,): Promise<void>
       Removes a bookmark or an empty bookmark folder.
 Parameters
     
@@ -535,7 +493,7 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          () => void
+          () =& gt;void
         
     Returns
           
@@ -544,12 +502,6 @@ Parameters
       Chrome 90+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -559,7 +511,7 @@ Parameters
         Promise
       
     
-        chrome.bookmarks.removeTree(  id: string,  callback?: function,)
+        chrome.bookmarks.removeTree(  id: string,  callback?: function,): Promise<void>
       Recursively removes a bookmark folder.
 Parameters
     
@@ -571,7 +523,7 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          () => void
+          () =& gt;void
         
     Returns
           
@@ -580,12 +532,6 @@ Parameters
       Chrome 90+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -595,7 +541,7 @@ Parameters
         Promise
       
     
-        chrome.bookmarks.search(  query: string | object,  callback?: function,)
+        chrome.bookmarks.search(  query: string | object,  callback?: function,): Promise<BookmarkTreeNode[]>
       Searches for BookmarkTreeNodes matching the given query. Queries specified with an object produce BookmarkTreeNodes matching all specified properties.
 Parameters
     
@@ -624,7 +570,7 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          (results: BookmarkTreeNode[]) => void
+          (results: BookmarkTreeNode[]) =& gt;void
         
     
       results
@@ -638,12 +584,6 @@ Parameters
       Chrome 90+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -653,7 +593,7 @@ Parameters
         Promise
       
     
-        chrome.bookmarks.update(  id: string,  changes: object,  callback?: function,)
+        chrome.bookmarks.update(  id: string,  changes: object,  callback?: function,): Promise<BookmarkTreeNode>
       Updates the properties of a bookmark or folder. Specify only the properties that you want to change; unspecified properties will be left unchanged. Note: Currently, only 'title' and 'url' are supported.
 Parameters
     
@@ -678,7 +618,7 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          (result: BookmarkTreeNode) => void
+          (result: BookmarkTreeNode) =& gt;void
         
     
       result
@@ -692,12 +632,6 @@ Parameters
       Chrome 90+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       Events
   
@@ -712,7 +646,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (id: string, changeInfo: object) => void
+          (id: string, changeInfo: object) =& gt;void
         
     
       id
@@ -744,7 +678,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (id: string, reorderInfo: object) => void
+          (id: string, reorderInfo: object) =& gt;void
         
     
       id
@@ -772,7 +706,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (id: string, bookmark: BookmarkTreeNode) => void
+          (id: string, bookmark: BookmarkTreeNode) =& gt;void
         
     
       id
@@ -795,7 +729,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          () => void
+          () =& gt;void
         
     
     
@@ -809,7 +743,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          () => void
+          () =& gt;void
         
     
     
@@ -823,7 +757,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (id: string, moveInfo: object) => void
+          (id: string, moveInfo: object) =& gt;void
         
     
       id
@@ -863,7 +797,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (id: string, removeInfo: object) => void
+          (id: string, removeInfo: object) =& gt;void
         
     
       id

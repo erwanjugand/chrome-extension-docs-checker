@@ -80,7 +80,7 @@ Types
         Promise
       
     
-        chrome.sessions.getDevices(  filter?: Filter,  callback?: function,)
+        chrome.sessions.getDevices(  filter?: Filter,  callback?: function,): Promise<Device[]>
       Retrieves all devices with synced sessions.
 Parameters
     
@@ -107,12 +107,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -122,7 +116,7 @@ Parameters
         Promise
       
     
-        chrome.sessions.getRecentlyClosed(  filter?: Filter,  callback?: function,)
+        chrome.sessions.getRecentlyClosed(  filter?: Filter,  callback?: function,): Promise<Session[]>
       Gets the list of recently closed tabs and/or windows.
 Parameters
     
@@ -149,12 +143,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -164,7 +152,7 @@ Parameters
         Promise
       
     
-        chrome.sessions.restore(  sessionId?: string,  callback?: function,)
+        chrome.sessions.restore(  sessionId?: string,  callback?: function,): Promise<Session>
       Reopens a windows.Window or tabs.Tab, with an optional callback to run when the entry has been restored.
 Parameters
     
@@ -192,12 +180,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       Events
   

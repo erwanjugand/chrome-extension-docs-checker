@@ -315,7 +315,7 @@ Types
         Promise
       
     
-        chrome.commands.getAll(  callback?: function,)
+        chrome.commands.getAll(  callback?: function,): Promise<Command[]>
       Returns all the registered extension commands for this extension and their shortcut (if active). Before Chrome 110, this command did not return _execute_action.
 Parameters
     

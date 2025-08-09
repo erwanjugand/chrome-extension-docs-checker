@@ -149,7 +149,7 @@ Enum
         Promise
       
     
-        chrome.processes.getProcessIdForTab(  tabId: number,  callback?: function,)
+        chrome.processes.getProcessIdForTab(  tabId: number,  callback?: function,): Promise<number>
       Returns the ID of the renderer process for the specified tab.
 Parameters
     
@@ -174,12 +174,6 @@ Parameters
           
             Promise<number>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -189,7 +183,7 @@ Parameters
         Promise
       
     
-        chrome.processes.getProcessInfo(  processIds: number | number[],  includeMemory: boolean,  callback?: function,)
+        chrome.processes.getProcessInfo(  processIds: number | number[],  includeMemory: boolean,  callback?: function,): Promise<object>
       Retrieves the process information for each process ID specified.
 Parameters
     
@@ -219,12 +213,6 @@ Parameters
           
             Promise<object>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -234,7 +222,7 @@ Parameters
         Promise
       
     
-        chrome.processes.terminate(  processId: number,  callback?: function,)
+        chrome.processes.terminate(  processId: number,  callback?: function,): Promise<boolean>
       Terminates the specified renderer process. Equivalent to visiting about:crash, but without changing the tab's URL.
 Parameters
     
@@ -258,12 +246,6 @@ Parameters
     Returns
           
             Promise<boolean>
-            
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
             
         
       Events

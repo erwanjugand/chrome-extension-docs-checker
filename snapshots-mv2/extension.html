@@ -64,7 +64,7 @@ Enum
         Foreground only
       
     
-        chrome.extension.getBackgroundPage()
+        chrome.extension.getBackgroundPage(): Window | undefined
       Returns the JavaScript 'window' object for the background page running inside the current extension. Returns null if the extension has no background page.
 Returns
           
@@ -81,7 +81,7 @@ Returns
       
         Deprecated
     
-        chrome.extension.getExtensionTabs(  windowId?: number,)
+        chrome.extension.getExtensionTabs(  windowId?: number,): Window[]
       Please use extension.getViews {type: "tab"}.Returns an array of the JavaScript 'window' objects for each of the tabs running inside the current extension. If windowId is specified, returns only the 'window' objects of tabs attached to the specified window.
 Parameters
     
@@ -102,7 +102,7 @@ Parameters
         ≤ MV2
         Deprecated since Chrome 58
     
-        chrome.extension.getURL(  path: string,)
+        chrome.extension.getURL(  path: string,): string
       Please use runtime.getURL.Converts a relative path within an extension install directory to a fully-qualified URL.
 Parameters
     
@@ -124,7 +124,7 @@ Parameters
         Foreground only
       
     
-        chrome.extension.getViews(  fetchProperties?: object,)
+        chrome.extension.getViews(  fetchProperties?: object,): Window[]
       Returns an array of the JavaScript 'window' objects for each of the pages running inside the current extension.
 Parameters
     
@@ -164,7 +164,7 @@ Parameters
         Promise
       
     
-        chrome.extension.isAllowedFileSchemeAccess(  callback?: function,)
+        chrome.extension.isAllowedFileSchemeAccess(  callback?: function,): Promise<boolean>
       Retrieves the state of the extension's access to the 'file://' scheme. This corresponds to the user-controlled per-extension 'Allow access to File URLs' setting accessible via the chrome://extensions page.
 Parameters
     
@@ -200,7 +200,7 @@ Parameters
         Promise
       
     
-        chrome.extension.isAllowedIncognitoAccess(  callback?: function,)
+        chrome.extension.isAllowedIncognitoAccess(  callback?: function,): Promise<boolean>
       Retrieves the state of the extension's access to Incognito-mode. This corresponds to the user-controlled per-extension 'Allowed in Incognito' setting accessible via the chrome://extensions page.
 Parameters
     
@@ -238,7 +238,7 @@ Parameters
         ≤ MV2
         Deprecated
     
-        chrome.extension.sendRequest(  extensionId?: string,  request: any,  callback?: function,)
+        chrome.extension.sendRequest(  extensionId?: string,  request: any,  callback?: function,): Promise<any>
       Please use runtime.sendMessage.Sends a single request to other listeners within the extension. Similar to runtime.connect, but only sends a single request with an optional response. The extension.onRequest event is fired in each page of the extension.
 Parameters
     
@@ -282,7 +282,7 @@ Parameters
     
       setUpdateUrlData()
     
-        chrome.extension.setUpdateUrlData(  data: string,)
+        chrome.extension.setUpdateUrlData(  data: string,): void
       Sets the value of the ap CGI parameter used in the extension's update URL. This value is ignored for extensions that are hosted in the Chrome Extension Gallery.
 Parameters
     

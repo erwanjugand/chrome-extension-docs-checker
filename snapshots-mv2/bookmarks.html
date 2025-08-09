@@ -221,7 +221,7 @@ Enum
         Promise
       
     
-        chrome.bookmarks.create(  bookmark: CreateDetails,  callback?: function,)
+        chrome.bookmarks.create(  bookmark: CreateDetails,  callback?: function,): Promise<BookmarkTreeNode>
       Creates a bookmark or folder under the specified parentId. If url is NULL or missing, it will be a folder.
 Parameters
     
@@ -260,7 +260,7 @@ Parameters
         Promise
       
     
-        chrome.bookmarks.get(  idOrIdList: string | [string, ...string[]],  callback?: function,)
+        chrome.bookmarks.get(  idOrIdList: string | [string, ...string[]],  callback?: function,): Promise<BookmarkTreeNode[]>
       Retrieves the specified BookmarkTreeNode(s).
 Parameters
     
@@ -300,7 +300,7 @@ Parameters
         Promise
       
     
-        chrome.bookmarks.getChildren(  id: string,  callback?: function,)
+        chrome.bookmarks.getChildren(  id: string,  callback?: function,): Promise<BookmarkTreeNode[]>
       Retrieves the children of the specified BookmarkTreeNode id.
 Parameters
     
@@ -339,7 +339,7 @@ Parameters
         Promise
       
     
-        chrome.bookmarks.getRecent(  numberOfItems: number,  callback?: function,)
+        chrome.bookmarks.getRecent(  numberOfItems: number,  callback?: function,): Promise<BookmarkTreeNode[]>
       Retrieves the recently added bookmarks.
 Parameters
     
@@ -379,7 +379,7 @@ Parameters
         Promise
       
     
-        chrome.bookmarks.getSubTree(  id: string,  callback?: function,)
+        chrome.bookmarks.getSubTree(  id: string,  callback?: function,): Promise<BookmarkTreeNode[]>
       Retrieves part of the Bookmarks hierarchy, starting at the specified node.
 Parameters
     
@@ -419,7 +419,7 @@ Parameters
         Promise
       
     
-        chrome.bookmarks.getTree(  callback?: function,)
+        chrome.bookmarks.getTree(  callback?: function,): Promise<BookmarkTreeNode[]>
       Retrieves the entire Bookmarks hierarchy.
 Parameters
     
@@ -454,7 +454,7 @@ Parameters
         Promise
       
     
-        chrome.bookmarks.move(  id: string,  destination: object,  callback?: function,)
+        chrome.bookmarks.move(  id: string,  destination: object,  callback?: function,): Promise<BookmarkTreeNode>
       Moves the specified BookmarkTreeNode to the provided location.
 Parameters
     
@@ -506,7 +506,7 @@ Parameters
         Promise
       
     
-        chrome.bookmarks.remove(  id: string,  callback?: function,)
+        chrome.bookmarks.remove(  id: string,  callback?: function,): Promise<void>
       Removes a bookmark or an empty bookmark folder.
 Parameters
     
@@ -540,7 +540,7 @@ Parameters
         Promise
       
     
-        chrome.bookmarks.removeTree(  id: string,  callback?: function,)
+        chrome.bookmarks.removeTree(  id: string,  callback?: function,): Promise<void>
       Recursively removes a bookmark folder.
 Parameters
     
@@ -574,7 +574,7 @@ Parameters
         Promise
       
     
-        chrome.bookmarks.search(  query: string | object,  callback?: function,)
+        chrome.bookmarks.search(  query: string | object,  callback?: function,): Promise<BookmarkTreeNode[]>
       Searches for BookmarkTreeNodes matching the given query. Queries specified with an object produce BookmarkTreeNodes matching all specified properties.
 Parameters
     
@@ -630,7 +630,7 @@ Parameters
         Promise
       
     
-        chrome.bookmarks.update(  id: string,  changes: object,  callback?: function,)
+        chrome.bookmarks.update(  id: string,  changes: object,  callback?: function,): Promise<BookmarkTreeNode>
       Updates the properties of a bookmark or folder. Specify only the properties that you want to change; unspecified properties will be left unchanged. Note: Currently, only 'title' and 'url' are supported.
 Parameters
     

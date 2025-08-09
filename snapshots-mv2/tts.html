@@ -328,7 +328,7 @@ Properties
         Promise
       
     
-        chrome.tts.getVoices(  callback?: function,)
+        chrome.tts.getVoices(  callback?: function,): Promise<TtsVoice[]>
       Gets an array of all available voices.
 Parameters
     
@@ -364,7 +364,7 @@ Parameters
         Promise
       
     
-        chrome.tts.isSpeaking(  callback?: function,)
+        chrome.tts.isSpeaking(  callback?: function,): Promise<boolean>
       Checks whether the engine is currently speaking. On Mac OS X, the result is true whenever the system speech engine is speaking, even if the speech wasn't initiated by Chrome.
 Parameters
     
@@ -396,13 +396,13 @@ Parameters
     
       pause()
     
-        chrome.tts.pause()
+        chrome.tts.pause(): void
       Pauses speech synthesis, potentially in the middle of an utterance. A call to resume or stop will un-pause speech.
 
     
       resume()
     
-        chrome.tts.resume()
+        chrome.tts.resume(): void
       If speech was paused, resumes speaking where it left off.
 
     
@@ -412,7 +412,7 @@ Parameters
         Promise
       
     
-        chrome.tts.speak(  utterance: string,  options?: TtsOptions,  callback?: function,)
+        chrome.tts.speak(  utterance: string,  options?: TtsOptions,  callback?: function,): Promise<void>
       Speaks text using a text-to-speech engine.
 Parameters
     
@@ -448,7 +448,7 @@ Parameters
     
       stop()
     
-        chrome.tts.stop()
+        chrome.tts.stop(): void
       Stops any current speech and flushes the queue of any pending utterances. In addition, if speech was paused, it will now be un-paused for the next call to speak.
 Events
   

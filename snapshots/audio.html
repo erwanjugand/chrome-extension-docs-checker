@@ -163,7 +163,7 @@ Enum
         Promise
       
     
-        chrome.audio.getDevices(  filter?: DeviceFilter,  callback?: function,)
+        chrome.audio.getDevices(  filter?: DeviceFilter,  callback?: function,): Promise<AudioDeviceInfo[]>
       Gets a list of audio devices filtered based on filter.
 Parameters
     
@@ -190,12 +190,6 @@ Parameters
       Chrome 116+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -205,7 +199,7 @@ Parameters
         Promise
       
     
-        chrome.audio.getMute(  streamType: StreamType,  callback?: function,)
+        chrome.audio.getMute(  streamType: StreamType,  callback?: function,): Promise<boolean>
       Gets the system-wide mute state for the specified stream type.
 Parameters
     
@@ -232,12 +226,6 @@ Parameters
       Chrome 116+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -247,7 +235,7 @@ Parameters
         Promise
       
     
-        chrome.audio.setActiveDevices(  ids: DeviceIdLists,  callback?: function,)
+        chrome.audio.setActiveDevices(  ids: DeviceIdLists,  callback?: function,): Promise<void>
       Sets lists of active input and/or output devices.
 Parameters
     
@@ -270,12 +258,6 @@ It is an error to pass in a non-existent device ID.
       Chrome 116+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -285,7 +267,7 @@ It is an error to pass in a non-existent device ID.
         Promise
       
     
-        chrome.audio.setMute(  streamType: StreamType,  isMuted: boolean,  callback?: function,)
+        chrome.audio.setMute(  streamType: StreamType,  isMuted: boolean,  callback?: function,): Promise<void>
       Sets mute state for a stream type. The mute state will apply to all audio devices with the specified audio stream type.
 Parameters
     
@@ -312,12 +294,6 @@ Parameters
       Chrome 116+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -327,7 +303,7 @@ Parameters
         Promise
       
     
-        chrome.audio.setProperties(  id: string,  properties: DeviceProperties,  callback?: function,)
+        chrome.audio.setProperties(  id: string,  properties: DeviceProperties,  callback?: function,): Promise<void>
       Sets the properties for the input or output device.
 Parameters
     
@@ -352,12 +328,6 @@ Parameters
       Chrome 116+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       Events
   

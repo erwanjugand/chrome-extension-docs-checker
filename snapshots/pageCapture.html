@@ -46,7 +46,7 @@ Methods
         Promise
       
     
-        chrome.pageCapture.saveAsMHTML(  details: object,  callback?: function,)
+        chrome.pageCapture.saveAsMHTML(  details: object,  callback?: function,): Promise<Blob | undefined>
       Saves the content of the tab with given id as MHTML.
 Parameters
     
@@ -79,12 +79,6 @@ Parameters
       Chrome 116+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
 

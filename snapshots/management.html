@@ -243,7 +243,7 @@ Properties
         Promise
       
     
-        chrome.management.createAppShortcut(  id: string,  callback?: function,)
+        chrome.management.createAppShortcut(  id: string,  callback?: function,): Promise<void>
       Display options to create shortcuts for an app. On Mac, only packaged app shortcuts can be created.
 Parameters
     
@@ -265,12 +265,6 @@ Parameters
       Chrome 88+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -280,7 +274,7 @@ Parameters
         Promise
       
     
-        chrome.management.generateAppForLink(  url: string,  title: string,  callback?: function,)
+        chrome.management.generateAppForLink(  url: string,  title: string,  callback?: function,): Promise<ExtensionInfo>
       Generate an app for a URL. Returns the generated bookmark app.
 Parameters
     
@@ -312,12 +306,6 @@ Parameters
       Chrome 88+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -327,7 +315,7 @@ Parameters
         Promise
       
     
-        chrome.management.get(  id: string,  callback?: function,)
+        chrome.management.get(  id: string,  callback?: function,): Promise<ExtensionInfo>
       Returns information about the installed extension, app, or theme that has the given ID.
 Parameters
     
@@ -354,12 +342,6 @@ Parameters
       Chrome 88+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -369,7 +351,7 @@ Parameters
         Promise
       
     
-        chrome.management.getAll(  callback?: function,)
+        chrome.management.getAll(  callback?: function,): Promise<ExtensionInfo[]>
       Returns a list of information about installed extensions and apps.
 Parameters
     
@@ -391,12 +373,6 @@ Parameters
       Chrome 88+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -406,7 +382,7 @@ Parameters
         Promise
       
     
-        chrome.management.getPermissionWarningsById(  id: string,  callback?: function,)
+        chrome.management.getPermissionWarningsById(  id: string,  callback?: function,): Promise<string[]>
       Returns a list of permission warnings for the given extension id.
 Parameters
     
@@ -433,12 +409,6 @@ Parameters
       Chrome 88+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -448,7 +418,7 @@ Parameters
         Promise
       
     
-        chrome.management.getPermissionWarningsByManifest(  manifestStr: string,  callback?: function,)
+        chrome.management.getPermissionWarningsByManifest(  manifestStr: string,  callback?: function,): Promise<string[]>
       Returns a list of permission warnings for the given extension manifest string. Note: This function can be used without requesting the 'management' permission in the manifest.
 Parameters
     
@@ -475,12 +445,6 @@ Parameters
       Chrome 88+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -490,7 +454,7 @@ Parameters
         Promise
       
     
-        chrome.management.getSelf(  callback?: function,)
+        chrome.management.getSelf(  callback?: function,): Promise<ExtensionInfo>
       Returns information about the calling extension, app, or theme. Note: This function can be used without requesting the 'management' permission in the manifest.
 Parameters
     
@@ -512,12 +476,6 @@ Parameters
       Chrome 88+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -528,7 +486,7 @@ Parameters
       Chrome 77+
       
     
-        chrome.management.installReplacementWebApp(  callback?: function,)
+        chrome.management.installReplacementWebApp(  callback?: function,): Promise<void>
       Launches the replacement_web_app specified in the manifest. Prompts the user to install if not already installed.
 Parameters
     
@@ -545,12 +503,6 @@ Parameters
       Chrome 88+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -560,7 +512,7 @@ Parameters
         Promise
       
     
-        chrome.management.launchApp(  id: string,  callback?: function,)
+        chrome.management.launchApp(  id: string,  callback?: function,): Promise<void>
       Launches an application.
 Parameters
     
@@ -582,12 +534,6 @@ Parameters
       Chrome 88+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -597,7 +543,7 @@ Parameters
         Promise
       
     
-        chrome.management.setEnabled(  id: string,  enabled: boolean,  callback?: function,)
+        chrome.management.setEnabled(  id: string,  enabled: boolean,  callback?: function,): Promise<void>
       Enables or disables an app or extension. In most cases this function must be called in the context of a user gesture (e.g. an onclick handler for a button), and may present the user with a native confirmation UI as a way of preventing abuse.
 Parameters
     
@@ -624,12 +570,6 @@ Parameters
       Chrome 88+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -639,7 +579,7 @@ Parameters
         Promise
       
     
-        chrome.management.setLaunchType(  id: string,  launchType: LaunchType,  callback?: function,)
+        chrome.management.setLaunchType(  id: string,  launchType: LaunchType,  callback?: function,): Promise<void>
       Set the launch type of an app.
 Parameters
     
@@ -666,12 +606,6 @@ Parameters
       Chrome 88+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -681,7 +615,7 @@ Parameters
         Promise
       
     
-        chrome.management.uninstall(  id: string,  options?: UninstallOptions,  callback?: function,)
+        chrome.management.uninstall(  id: string,  options?: UninstallOptions,  callback?: function,): Promise<void>
       Uninstalls a currently installed app or extension. Note: This function does not work in managed environments when the user is not allowed to uninstall the specified extension/app. If the uninstall fails (e.g. the user cancels the dialog) the promise will be rejected or the callback will be called with runtime.lastError set.
 Parameters
     
@@ -707,12 +641,6 @@ Parameters
       Chrome 88+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -722,7 +650,7 @@ Parameters
         Promise
       
     
-        chrome.management.uninstallSelf(  options?: UninstallOptions,  callback?: function,)
+        chrome.management.uninstallSelf(  options?: UninstallOptions,  callback?: function,): Promise<void>
       Uninstalls the calling extension. Note: This function can be used without requesting the 'management' permission in the manifest. This function does not work in managed environments when the user is not allowed to uninstall the specified extension/app.
 Parameters
     
@@ -743,12 +671,6 @@ Parameters
       Chrome 88+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       Events
   

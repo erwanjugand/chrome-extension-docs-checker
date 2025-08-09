@@ -332,7 +332,7 @@ Types
       Chrome 47+
       
     
-        chrome.i18n.detectLanguage(  text: string,  callback?: function,)
+        chrome.i18n.detectLanguage(  text: string,  callback?: function,): Promise<object>
       Detects the language of the provided text using CLD.
 Parameters
     
@@ -394,7 +394,7 @@ Parameters
         Promise
       
     
-        chrome.i18n.getAcceptLanguages(  callback?: function,)
+        chrome.i18n.getAcceptLanguages(  callback?: function,): Promise<LanguageCode[]>
       Gets the accept-languages of the browser. This is different from the locale used by the browser; to get the locale, use i18n.getUILanguage.
 Parameters
     
@@ -426,7 +426,7 @@ Parameters
     
       getMessage()
     
-        chrome.i18n.getMessage(  messageName: string,  substitutions?: any,  options?: object,)
+        chrome.i18n.getMessage(  messageName: string,  substitutions?: any,  options?: object,): string
       Gets the localized string for the specified message. If the message is missing, this method returns an empty string (''). If the format of the getMessage() call is wrong — for example, messageName is not a string or the substitutions array has more than 9 elements — this method returns undefined.
 Parameters
     
@@ -462,7 +462,7 @@ Parameters
     
       getUILanguage()
     
-        chrome.i18n.getUILanguage()
+        chrome.i18n.getUILanguage(): string
       Gets the browser UI language of the browser. This is different from i18n.getAcceptLanguages which returns the preferred user languages.
 Returns
           

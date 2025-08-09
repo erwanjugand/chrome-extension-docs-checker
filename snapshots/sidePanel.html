@@ -269,6 +269,16 @@ Types
 
     
     
+      PanelLayout
+    
+      Pending
+    Properties
+    
+      side
+      Side
+    
+    
+    
       PanelOptions
     Properties
     
@@ -288,6 +298,15 @@ Types
 
     
     
+      Side
+    
+      Pending
+    Defines the possible alignment for the side panel in the browser UI.
+Enum
+      "left"  "right"  
+    
+  
+    
       SidePanel
     Properties
     
@@ -298,13 +317,41 @@ Types
     Methods
   
     
+      getLayout()
+    
+      
+        Promise
+      Pending
+    
+        chrome.sidePanel.getLayout(  callback?: function,): Promise<PanelLayout>
+      Returns the side panel's current layout.
+Parameters
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (layout: PanelLayout) => void
+        
+    
+      layout
+      PanelLayout
+    
+    
+    Returns
+          
+            Promise<PanelLayout>
+            
+        
+      
+    
       getOptions()
     
       
         Promise
       
     
-        chrome.sidePanel.getOptions(  options: GetPanelOptions,  callback?: function,)
+        chrome.sidePanel.getOptions(  options: GetPanelOptions,  callback?: function,): Promise<PanelOptions>
       Returns the active panel configuration.
 Parameters
     
@@ -328,12 +375,6 @@ Parameters
           
             Promise<PanelOptions>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -343,7 +384,7 @@ Parameters
         Promise
       
     
-        chrome.sidePanel.getPanelBehavior(  callback?: function,)
+        chrome.sidePanel.getPanelBehavior(  callback?: function,): Promise<PanelBehavior>
       Returns the extension's current side panel behavior.
 Parameters
     
@@ -362,12 +403,6 @@ Parameters
           
             Promise<PanelBehavior>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -378,7 +413,7 @@ Parameters
       Chrome 116+
       
     
-        chrome.sidePanel.open(  options: OpenOptions,  callback?: function,)
+        chrome.sidePanel.open(  options: OpenOptions,  callback?: function,): Promise<void>
       Opens the side panel for the extension. This may only be called in response to a user action.
 Parameters
     
@@ -397,12 +432,6 @@ Parameters
           
             Promise<void>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -412,7 +441,7 @@ Parameters
         Promise
       
     
-        chrome.sidePanel.setOptions(  options: PanelOptions,  callback?: function,)
+        chrome.sidePanel.setOptions(  options: PanelOptions,  callback?: function,): Promise<void>
       Configures the side panel.
 Parameters
     
@@ -431,12 +460,6 @@ Parameters
           
             Promise<void>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -446,7 +469,7 @@ Parameters
         Promise
       
     
-        chrome.sidePanel.setPanelBehavior(  behavior: PanelBehavior,  callback?: function,)
+        chrome.sidePanel.setPanelBehavior(  behavior: PanelBehavior,  callback?: function,): Promise<void>
       Configures the extension's side panel behavior. This is an upsert operation.
 Parameters
     
@@ -464,12 +487,6 @@ Parameters
     Returns
           
             Promise<void>
-            
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
             
         
       

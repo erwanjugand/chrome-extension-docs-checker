@@ -73,7 +73,7 @@ Enum
         Promise
       
     
-        chrome.wallpaper.setWallpaper(  details: object,  callback?: function,)
+        chrome.wallpaper.setWallpaper(  details: object,  callback?: function,): Promise<ArrayBuffer | undefined>
       Sets wallpaper to the image at url or wallpaperData with the specified layout
 Parameters
     
@@ -126,12 +126,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
 

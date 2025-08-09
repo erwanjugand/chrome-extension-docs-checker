@@ -80,7 +80,7 @@ Types
         Promise
       
     
-        chrome.sessions.getDevices(  filter?: Filter,  callback?: function,)
+        chrome.sessions.getDevices(  filter?: Filter,  callback?: function,): Promise<Device[]>
       Retrieves all devices with synced sessions.
 Parameters
     
@@ -120,7 +120,7 @@ Parameters
         Promise
       
     
-        chrome.sessions.getRecentlyClosed(  filter?: Filter,  callback?: function,)
+        chrome.sessions.getRecentlyClosed(  filter?: Filter,  callback?: function,): Promise<Session[]>
       Gets the list of recently closed tabs and/or windows.
 Parameters
     
@@ -160,7 +160,7 @@ Parameters
         Promise
       
     
-        chrome.sessions.restore(  sessionId?: string,  callback?: function,)
+        chrome.sessions.restore(  sessionId?: string,  callback?: function,): Promise<Session>
       Reopens a windows.Window or tabs.Tab, with an optional callback to run when the entry has been restored.
 Parameters
     

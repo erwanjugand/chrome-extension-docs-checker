@@ -227,7 +227,7 @@ Types
       MV3+
       
     
-        chrome.permissions.addHostAccessRequest(  request: object,  callback?: function,)
+        chrome.permissions.addHostAccessRequest(  request: object,  callback?: function,): Promise<void>
       Adds a host access request. Request will only be signaled to the user if extension can be granted access to the host in the request. Request will be reset on cross-origin navigation. When accepted, grants persistent access to the site’s top origin
 Parameters
     
@@ -261,12 +261,6 @@ Parameters
           
             Promise<void>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -276,7 +270,7 @@ Parameters
         Promise
       
     
-        chrome.permissions.contains(  permissions: Permissions,  callback?: function,)
+        chrome.permissions.contains(  permissions: Permissions,  callback?: function,): Promise<boolean>
       Checks if the extension has the specified permissions.
 Parameters
     
@@ -303,12 +297,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -318,7 +306,7 @@ Parameters
         Promise
       
     
-        chrome.permissions.getAll(  callback?: function,)
+        chrome.permissions.getAll(  callback?: function,): Promise<Permissions>
       Gets the extension's current set of permissions.
 Parameters
     
@@ -341,12 +329,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -356,7 +338,7 @@ Parameters
         Promise
       
     
-        chrome.permissions.remove(  permissions: Permissions,  callback?: function,)
+        chrome.permissions.remove(  permissions: Permissions,  callback?: function,): Promise<boolean>
       Removes access to the specified permissions. If there are any problems removing the permissions, runtime.lastError will be set.
 Parameters
     
@@ -383,12 +365,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -400,7 +376,7 @@ Parameters
       MV3+
       
     
-        chrome.permissions.removeHostAccessRequest(  request: object,  callback?: function,)
+        chrome.permissions.removeHostAccessRequest(  request: object,  callback?: function,): Promise<void>
       Removes a host access request, if existent.
 Parameters
     
@@ -434,12 +410,6 @@ Parameters
           
             Promise<void>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -449,7 +419,7 @@ Parameters
         Promise
       
     
-        chrome.permissions.request(  permissions: Permissions,  callback?: function,)
+        chrome.permissions.request(  permissions: Permissions,  callback?: function,): Promise<boolean>
       Requests access to the specified permissions, displaying a prompt to the user if necessary. These permissions must either be defined in the optional_permissions field of the manifest or be required permissions that were withheld by the user. Paths on origin patterns will be ignored. You can request subsets of optional origin permissions; for example, if you specify *://*\/* in the optional_permissions section of the manifest, you can request http://example.com/. If there are any problems requesting the permissions, runtime.lastError will be set.
 Parameters
     
@@ -476,12 +446,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       Events
   

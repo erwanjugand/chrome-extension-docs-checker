@@ -128,7 +128,7 @@ Types
         Promise
       
     
-        chrome.pageAction.getPopup(  details: TabDetails,  callback?: function,)
+        chrome.pageAction.getPopup(  details: TabDetails,  callback?: function,): Promise<string>
       Gets the html document set as the popup for this page action.
 Parameters
     
@@ -167,7 +167,7 @@ Parameters
         Promise
       
     
-        chrome.pageAction.getTitle(  details: TabDetails,  callback?: function,)
+        chrome.pageAction.getTitle(  details: TabDetails,  callback?: function,): Promise<string>
       Gets the title of the page action.
 Parameters
     
@@ -206,7 +206,7 @@ Parameters
         Promise
       
     
-        chrome.pageAction.hide(  tabId: number,  callback?: function,)
+        chrome.pageAction.hide(  tabId: number,  callback?: function,): Promise<void>
       Hides the page action. Hidden page actions still appear in the Chrome toolbar, but are grayed out.
 Parameters
     
@@ -244,7 +244,7 @@ Parameters
         Promise
       
     
-        chrome.pageAction.setIcon(  details: object,  callback?: function,)
+        chrome.pageAction.setIcon(  details: object,  callback?: function,): Promise<void>
       Sets the icon for the page action. The icon can be specified either as the path to an image file or as the pixel data from a canvas element, or as dictionary of either one of those. Either the path or the imageData property must be specified.
 Parameters
     
@@ -299,7 +299,7 @@ Parameters
         Promise
       
     
-        chrome.pageAction.setPopup(  details: object,  callback?: function,)
+        chrome.pageAction.setPopup(  details: object,  callback?: function,): Promise<void>
       Sets the HTML document to be opened as a popup when the user clicks on the page action's icon.
 Parameters
     
@@ -347,7 +347,7 @@ Parameters
         Promise
       
     
-        chrome.pageAction.setTitle(  details: object,  callback?: function,)
+        chrome.pageAction.setTitle(  details: object,  callback?: function,): Promise<void>
       Sets the title of the page action. This is displayed in a tooltip over the page action.
 Parameters
     
@@ -395,7 +395,7 @@ Parameters
         Promise
       
     
-        chrome.pageAction.show(  tabId: number,  callback?: function,)
+        chrome.pageAction.show(  tabId: number,  callback?: function,): Promise<void>
       Shows the page action. The page action is shown whenever the tab is selected.
 Parameters
     

@@ -366,7 +366,7 @@ Enum
         Promise
       
     
-        chrome.userScripts.configureWorld(  properties: WorldProperties,  callback?: function,)
+        chrome.userScripts.configureWorld(  properties: WorldProperties,  callback?: function,): Promise<void>
       Configures the `USER_SCRIPT` execution environment.
 Parameters
     
@@ -385,12 +385,6 @@ Parameters
           
             Promise<void>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -401,7 +395,7 @@ Parameters
       Chrome 135+
       
     
-        chrome.userScripts.execute(  injection: UserScriptInjection,  callback?: function,)
+        chrome.userScripts.execute(  injection: UserScriptInjection,  callback?: function,): Promise<InjectionResult[]>
       Injects a script into a target context. By default, the script will be run at document_idle, or immediately if the page has already loaded. If the injectImmediately property is set, the script will inject without waiting, even if the page has not finished loading. If the script evaluates to a promise, the browser will wait for the promise to settle and return the resulting value.
 Parameters
     
@@ -424,12 +418,6 @@ Parameters
           
             Promise<InjectionResult[]>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -439,7 +427,7 @@ Parameters
         Promise
       
     
-        chrome.userScripts.getScripts(  filter?: UserScriptFilter,  callback?: function,)
+        chrome.userScripts.getScripts(  filter?: UserScriptFilter,  callback?: function,): Promise<RegisteredUserScript[]>
       Returns all dynamically-registered user scripts for this extension.
 Parameters
     
@@ -463,12 +451,6 @@ Parameters
           
             Promise<RegisteredUserScript[]>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -479,7 +461,7 @@ Parameters
       Chrome 133+
       
     
-        chrome.userScripts.getWorldConfigurations(  callback?: function,)
+        chrome.userScripts.getWorldConfigurations(  callback?: function,): Promise<WorldProperties[]>
       Retrieves all registered world configurations.
 Parameters
     
@@ -498,12 +480,6 @@ Parameters
           
             Promise<WorldProperties[]>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -513,7 +489,7 @@ Parameters
         Promise
       
     
-        chrome.userScripts.register(  scripts: RegisteredUserScript[],  callback?: function,)
+        chrome.userScripts.register(  scripts: RegisteredUserScript[],  callback?: function,): Promise<void>
       Registers one or more user scripts for this extension.
 Parameters
     
@@ -532,12 +508,6 @@ Parameters
           
             Promise<void>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -548,7 +518,7 @@ Parameters
       Chrome 133+
       
     
-        chrome.userScripts.resetWorldConfiguration(  worldId?: string,  callback?: function,)
+        chrome.userScripts.resetWorldConfiguration(  worldId?: string,  callback?: function,): Promise<void>
       Resets the configuration for a user script world. Any scripts that inject into the world with the specified ID will use the default world configuration.
 Parameters
     
@@ -567,12 +537,6 @@ Parameters
           
             Promise<void>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -582,7 +546,7 @@ Parameters
         Promise
       
     
-        chrome.userScripts.unregister(  filter?: UserScriptFilter,  callback?: function,)
+        chrome.userScripts.unregister(  filter?: UserScriptFilter,  callback?: function,): Promise<void>
       Unregisters all dynamically-registered user scripts for this extension.
 Parameters
     
@@ -601,12 +565,6 @@ Parameters
           
             Promise<void>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -616,7 +574,7 @@ Parameters
         Promise
       
     
-        chrome.userScripts.update(  scripts: RegisteredUserScript[],  callback?: function,)
+        chrome.userScripts.update(  scripts: RegisteredUserScript[],  callback?: function,): Promise<void>
       Updates one or more user scripts for this extension.
 Parameters
     
@@ -634,12 +592,6 @@ Parameters
     Returns
           
             Promise<void>
-            
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
             
         
       

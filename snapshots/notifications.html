@@ -172,7 +172,7 @@ URLs can be a data URL, a blob URL, or a URL relative to a resource within this 
         Promise
       
     
-        chrome.notifications.clear(  notificationId: string,  callback?: function,)
+        chrome.notifications.clear(  notificationId: string,  callback?: function,): Promise<boolean>
       Clears the specified notification.
 Parameters
     
@@ -199,12 +199,6 @@ Parameters
       Chrome 116+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -214,7 +208,7 @@ Parameters
         Promise
       
     
-        chrome.notifications.create(  notificationId?: string,  options: NotificationOptions,  callback?: function,)
+        chrome.notifications.create(  notificationId?: string,  options: NotificationOptions,  callback?: function,): Promise<string>
       Creates and displays a notification.
 Parameters
     
@@ -247,12 +241,6 @@ The notificationId parameter is required before Chrome 42.
       Chrome 116+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -262,7 +250,7 @@ The notificationId parameter is required before Chrome 42.
         Promise
       
     
-        chrome.notifications.getAll(  callback?: function,)
+        chrome.notifications.getAll(  callback?: function,): Promise<object>
       Retrieves all the notifications of this app or extension.
 Parameters
     
@@ -284,12 +272,6 @@ Parameters
       Chrome 116+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -299,7 +281,7 @@ Parameters
         Promise
       
     
-        chrome.notifications.getPermissionLevel(  callback?: function,)
+        chrome.notifications.getPermissionLevel(  callback?: function,): Promise<PermissionLevel>
       Retrieves whether the user has enabled notifications from this app or extension.
 Parameters
     
@@ -321,12 +303,6 @@ Parameters
       Chrome 116+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -336,7 +312,7 @@ Parameters
         Promise
       
     
-        chrome.notifications.update(  notificationId: string,  options: NotificationOptions,  callback?: function,)
+        chrome.notifications.update(  notificationId: string,  options: NotificationOptions,  callback?: function,): Promise<boolean>
       Updates an existing notification.
 Parameters
     
@@ -368,12 +344,6 @@ Parameters
       Chrome 116+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       Events
   

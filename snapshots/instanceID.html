@@ -33,7 +33,7 @@ Methods
         Promise
       
     
-        chrome.instanceID.deleteID(  callback?: function,)
+        chrome.instanceID.deleteID(  callback?: function,): Promise<void>
       Resets the app instance identifier and revokes all tokens associated with it.
 Parameters
     
@@ -50,12 +50,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -65,7 +59,7 @@ Parameters
         Promise
       
     
-        chrome.instanceID.deleteToken(  deleteTokenParams: object,  callback?: function,)
+        chrome.instanceID.deleteToken(  deleteTokenParams: object,  callback?: function,): Promise<void>
       Revokes a granted token.
 Parameters
     
@@ -104,12 +98,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -119,7 +107,7 @@ Parameters
         Promise
       
     
-        chrome.instanceID.getCreationTime(  callback?: function,)
+        chrome.instanceID.getCreationTime(  callback?: function,): Promise<number>
       Retrieves the time when the InstanceID has been generated. The creation time will be returned by the callback.
 Parameters
     
@@ -142,12 +130,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -157,7 +139,7 @@ Parameters
         Promise
       
     
-        chrome.instanceID.getID(  callback?: function,)
+        chrome.instanceID.getID(  callback?: function,): Promise<string>
       Retrieves an identifier for the app instance. The instance ID will be returned by the callback. The same ID will be returned as long as the application identity has not been revoked or expired.
 Parameters
     
@@ -180,12 +162,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -195,7 +171,7 @@ Parameters
         Promise
       
     
-        chrome.instanceID.getToken(  getTokenParams: object,  callback?: function,)
+        chrome.instanceID.getToken(  getTokenParams: object,  callback?: function,): Promise<string>
       Return a token that allows the authorized entity to access the service defined by scope.
 Parameters
     
@@ -249,12 +225,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       Events
   

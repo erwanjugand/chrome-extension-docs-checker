@@ -124,7 +124,7 @@ Enum
         Promise
       
     
-        chrome.vpnProvider.createConfig(  name: string,  callback?: function,)
+        chrome.vpnProvider.createConfig(  name: string,  callback?: function,): Promise<string>
       Creates a new VPN configuration that persists across multiple login sessions of the user.
 Parameters
     
@@ -152,12 +152,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -167,7 +161,7 @@ Parameters
         Promise
       
     
-        chrome.vpnProvider.destroyConfig(  id: string,  callback?: function,)
+        chrome.vpnProvider.destroyConfig(  id: string,  callback?: function,): Promise<void>
       Destroys a VPN configuration created by the extension.
 Parameters
     
@@ -189,12 +183,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -204,7 +192,7 @@ Parameters
         Promise
       
     
-        chrome.vpnProvider.notifyConnectionStateChanged(  state: VpnConnectionState,  callback?: function,)
+        chrome.vpnProvider.notifyConnectionStateChanged(  state: VpnConnectionState,  callback?: function,): Promise<void>
       Notifies the VPN session state to the platform. This will succeed only when the VPN session is owned by the extension.
 Parameters
     
@@ -226,12 +214,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -241,7 +223,7 @@ Parameters
         Promise
       
     
-        chrome.vpnProvider.sendPacket(  data: ArrayBuffer,  callback?: function,)
+        chrome.vpnProvider.sendPacket(  data: ArrayBuffer,  callback?: function,): Promise<void>
       Sends an IP packet through the tunnel created for the VPN session. This will succeed only when the VPN session is owned by the extension.
 Parameters
     
@@ -263,12 +245,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -278,7 +254,7 @@ Parameters
         Promise
       
     
-        chrome.vpnProvider.setParameters(  parameters: Parameters,  callback?: function,)
+        chrome.vpnProvider.setParameters(  parameters: Parameters,  callback?: function,): Promise<void>
       Sets the parameters for the VPN session. This should be called immediately after "connected" is received from the platform. This will succeed only when the VPN session is owned by the extension.
 Parameters
     
@@ -300,12 +276,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       Events
   

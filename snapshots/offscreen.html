@@ -182,7 +182,7 @@ Types
         Promise
       
     
-        chrome.offscreen.closeDocument(  callback?: function,)
+        chrome.offscreen.closeDocument(  callback?: function,): Promise<void>
       Closes the currently-open offscreen document for the extension.
 Parameters
     
@@ -196,12 +196,6 @@ Parameters
           
             Promise<void>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -211,7 +205,7 @@ Parameters
         Promise
       
     
-        chrome.offscreen.createDocument(  parameters: CreateParameters,  callback?: function,)
+        chrome.offscreen.createDocument(  parameters: CreateParameters,  callback?: function,): Promise<void>
       Creates a new offscreen document for the extension.
 Parameters
     
@@ -229,12 +223,6 @@ Parameters
     Returns
           
             Promise<void>
-            
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
             
         
       

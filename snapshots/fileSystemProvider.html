@@ -964,7 +964,7 @@ Enum
         Promise
       
     
-        chrome.fileSystemProvider.get(  fileSystemId: string,  callback?: function,)
+        chrome.fileSystemProvider.get(  fileSystemId: string,  callback?: function,): Promise<FileSystemInfo>
       Returns information about a file system with the passed fileSystemId.
 Parameters
     
@@ -976,7 +976,7 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          (fileSystem: FileSystemInfo) => void
+          (fileSystem: FileSystemInfo) =& gt;void
         
     
       fileSystem
@@ -990,12 +990,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -1005,7 +999,7 @@ Parameters
         Promise
       
     
-        chrome.fileSystemProvider.getAll(  callback?: function,)
+        chrome.fileSystemProvider.getAll(  callback?: function,): Promise<FileSystemInfo[]>
       Returns all file systems mounted by the extension.
 Parameters
     
@@ -1013,7 +1007,7 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          (fileSystems: FileSystemInfo[]) => void
+          (fileSystems: FileSystemInfo[]) =& gt;void
         
     
       fileSystems
@@ -1027,12 +1021,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -1042,7 +1030,7 @@ Parameters
         Promise
       
     
-        chrome.fileSystemProvider.mount(  options: MountOptions,  callback?: function,)
+        chrome.fileSystemProvider.mount(  options: MountOptions,  callback?: function,): Promise<void>
       Mounts a file system with the given fileSystemId and displayName. displayName will be shown in the left panel of the Files app. displayName can contain any characters including '/', but cannot be an empty string. displayName must be descriptive but doesn't have to be unique. The fileSystemId must not be an empty string.
 Depending on the type of the file system being mounted, the source option must be set appropriately.
 In case of an error, runtime.lastError will be set with a corresponding error code.
@@ -1056,7 +1044,7 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          () => void
+          () =& gt;void
         
     Returns
           
@@ -1065,12 +1053,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -1081,7 +1063,7 @@ Parameters
       Chrome 45+
       
     
-        chrome.fileSystemProvider.notify(  options: NotifyOptions,  callback?: function,)
+        chrome.fileSystemProvider.notify(  options: NotifyOptions,  callback?: function,): Promise<void>
       Notifies about changes in the watched directory at observedPath in recursive mode. If the file system is mounted with supportsNotifyTag, then tag must be provided, and all changes since the last notification always reported, even if the system was shutdown. The last tag can be obtained with getAll.
 To use, the file_system_provider.notify manifest option must be set to true.
 Value of tag can be any string which is unique per call, so it's possible to identify the last registered notification. Eg. if the providing extension starts after a reboot, and the last registered notification's tag is equal to "123", then it should call notify for all changes which happened since the change tagged as "123". It cannot be an empty string.
@@ -1098,7 +1080,7 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          () => void
+          () =& gt;void
         
     Returns
           
@@ -1107,12 +1089,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -1122,7 +1098,7 @@ Parameters
         Promise
       
     
-        chrome.fileSystemProvider.unmount(  options: UnmountOptions,  callback?: function,)
+        chrome.fileSystemProvider.unmount(  options: UnmountOptions,  callback?: function,): Promise<void>
       Unmounts a file system with the given fileSystemId. It must be called after onUnmountRequested is invoked. Also, the providing extension can decide to perform unmounting if not requested (eg. in case of lost connection, or a file error).
 In case of an error, runtime.lastError will be set with a corresponding error code.
 Parameters
@@ -1135,7 +1111,7 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          () => void
+          () =& gt;void
         
     Returns
           
@@ -1144,12 +1120,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       Events
   
@@ -1164,7 +1134,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (options: AbortRequestedOptions, successCallback: function, errorCallback: function) => void
+          (options: AbortRequestedOptions, successCallback: function, errorCallback: function) =& gt;void
         
     
       options
@@ -1175,14 +1145,14 @@ Parameters
       function
     
           The successCallback parameter looks like:
-          () => void
+          () =& gt;void
         
     
       errorCallback
       function
     
           The errorCallback parameter looks like:
-          (error: ProviderError) => void
+          (error: ProviderError) =& gt;void
         
     
       error
@@ -1205,7 +1175,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (options: AddWatcherRequestedOptions, successCallback: function, errorCallback: function) => void
+          (options: AddWatcherRequestedOptions, successCallback: function, errorCallback: function) =& gt;void
         
     
       options
@@ -1216,14 +1186,14 @@ Parameters
       function
     
           The successCallback parameter looks like:
-          () => void
+          () =& gt;void
         
     
       errorCallback
       function
     
           The errorCallback parameter looks like:
-          (error: ProviderError) => void
+          (error: ProviderError) =& gt;void
         
     
       error
@@ -1243,7 +1213,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (options: CloseFileRequestedOptions, successCallback: function, errorCallback: function) => void
+          (options: CloseFileRequestedOptions, successCallback: function, errorCallback: function) =& gt;void
         
     
       options
@@ -1254,14 +1224,14 @@ Parameters
       function
     
           The successCallback parameter looks like:
-          () => void
+          () =& gt;void
         
     
       errorCallback
       function
     
           The errorCallback parameter looks like:
-          (error: ProviderError) => void
+          (error: ProviderError) =& gt;void
         
     
       error
@@ -1284,7 +1254,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (options: ConfigureRequestedOptions, successCallback: function, errorCallback: function) => void
+          (options: ConfigureRequestedOptions, successCallback: function, errorCallback: function) =& gt;void
         
     
       options
@@ -1295,14 +1265,14 @@ Parameters
       function
     
           The successCallback parameter looks like:
-          () => void
+          () =& gt;void
         
     
       errorCallback
       function
     
           The errorCallback parameter looks like:
-          (error: ProviderError) => void
+          (error: ProviderError) =& gt;void
         
     
       error
@@ -1322,7 +1292,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (options: CopyEntryRequestedOptions, successCallback: function, errorCallback: function) => void
+          (options: CopyEntryRequestedOptions, successCallback: function, errorCallback: function) =& gt;void
         
     
       options
@@ -1333,14 +1303,14 @@ Parameters
       function
     
           The successCallback parameter looks like:
-          () => void
+          () =& gt;void
         
     
       errorCallback
       function
     
           The errorCallback parameter looks like:
-          (error: ProviderError) => void
+          (error: ProviderError) =& gt;void
         
     
       error
@@ -1360,7 +1330,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (options: CreateDirectoryRequestedOptions, successCallback: function, errorCallback: function) => void
+          (options: CreateDirectoryRequestedOptions, successCallback: function, errorCallback: function) =& gt;void
         
     
       options
@@ -1371,14 +1341,14 @@ Parameters
       function
     
           The successCallback parameter looks like:
-          () => void
+          () =& gt;void
         
     
       errorCallback
       function
     
           The errorCallback parameter looks like:
-          (error: ProviderError) => void
+          (error: ProviderError) =& gt;void
         
     
       error
@@ -1398,7 +1368,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (options: CreateFileRequestedOptions, successCallback: function, errorCallback: function) => void
+          (options: CreateFileRequestedOptions, successCallback: function, errorCallback: function) =& gt;void
         
     
       options
@@ -1409,14 +1379,14 @@ Parameters
       function
     
           The successCallback parameter looks like:
-          () => void
+          () =& gt;void
         
     
       errorCallback
       function
     
           The errorCallback parameter looks like:
-          (error: ProviderError) => void
+          (error: ProviderError) =& gt;void
         
     
       error
@@ -1436,7 +1406,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (options: DeleteEntryRequestedOptions, successCallback: function, errorCallback: function) => void
+          (options: DeleteEntryRequestedOptions, successCallback: function, errorCallback: function) =& gt;void
         
     
       options
@@ -1447,14 +1417,14 @@ Parameters
       function
     
           The successCallback parameter looks like:
-          () => void
+          () =& gt;void
         
     
       errorCallback
       function
     
           The errorCallback parameter looks like:
-          (error: ProviderError) => void
+          (error: ProviderError) =& gt;void
         
     
       error
@@ -1477,7 +1447,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (options: ExecuteActionRequestedOptions, successCallback: function, errorCallback: function) => void
+          (options: ExecuteActionRequestedOptions, successCallback: function, errorCallback: function) =& gt;void
         
     
       options
@@ -1488,14 +1458,14 @@ Parameters
       function
     
           The successCallback parameter looks like:
-          () => void
+          () =& gt;void
         
     
       errorCallback
       function
     
           The errorCallback parameter looks like:
-          (error: ProviderError) => void
+          (error: ProviderError) =& gt;void
         
     
       error
@@ -1518,7 +1488,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (options: GetActionsRequestedOptions, successCallback: function, errorCallback: function) => void
+          (options: GetActionsRequestedOptions, successCallback: function, errorCallback: function) =& gt;void
         
     
       options
@@ -1529,7 +1499,7 @@ Parameters
       function
     
           The successCallback parameter looks like:
-          (actions: Action[]) => void
+          (actions: Action[]) =& gt;void
         
     
       actions
@@ -1541,7 +1511,7 @@ Parameters
       function
     
           The errorCallback parameter looks like:
-          (error: ProviderError) => void
+          (error: ProviderError) =& gt;void
         
     
       error
@@ -1561,7 +1531,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (options: GetMetadataRequestedOptions, successCallback: function, errorCallback: function) => void
+          (options: GetMetadataRequestedOptions, successCallback: function, errorCallback: function) =& gt;void
         
     
       options
@@ -1572,7 +1542,7 @@ Parameters
       function
     
           The successCallback parameter looks like:
-          (metadata: EntryMetadata) => void
+          (metadata: EntryMetadata) =& gt;void
         
     
       metadata
@@ -1584,7 +1554,7 @@ Parameters
       function
     
           The errorCallback parameter looks like:
-          (error: ProviderError) => void
+          (error: ProviderError) =& gt;void
         
     
       error
@@ -1607,21 +1577,21 @@ Parameters
       function
     
           The callback parameter looks like:
-          (successCallback: function, errorCallback: function) => void
+          (successCallback: function, errorCallback: function) =& gt;void
         
     
       successCallback
       function
     
           The successCallback parameter looks like:
-          () => void
+          () =& gt;void
         
     
       errorCallback
       function
     
           The errorCallback parameter looks like:
-          (error: ProviderError) => void
+          (error: ProviderError) =& gt;void
         
     
       error
@@ -1641,7 +1611,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (options: MoveEntryRequestedOptions, successCallback: function, errorCallback: function) => void
+          (options: MoveEntryRequestedOptions, successCallback: function, errorCallback: function) =& gt;void
         
     
       options
@@ -1652,14 +1622,14 @@ Parameters
       function
     
           The successCallback parameter looks like:
-          () => void
+          () =& gt;void
         
     
       errorCallback
       function
     
           The errorCallback parameter looks like:
-          (error: ProviderError) => void
+          (error: ProviderError) =& gt;void
         
     
       error
@@ -1679,7 +1649,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (options: OpenFileRequestedOptions, successCallback: function, errorCallback: function) => void
+          (options: OpenFileRequestedOptions, successCallback: function, errorCallback: function) =& gt;void
         
     
       options
@@ -1690,7 +1660,7 @@ Parameters
       function
     
           The successCallback parameter looks like:
-          (metadata?: EntryMetadata) => void
+          (metadata?: EntryMetadata) =& gt;void
         
     
       metadata
@@ -1702,7 +1672,7 @@ Parameters
       function
     
           The errorCallback parameter looks like:
-          (error: ProviderError) => void
+          (error: ProviderError) =& gt;void
         
     
       error
@@ -1722,7 +1692,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (options: ReadDirectoryRequestedOptions, successCallback: function, errorCallback: function) => void
+          (options: ReadDirectoryRequestedOptions, successCallback: function, errorCallback: function) =& gt;void
         
     
       options
@@ -1733,7 +1703,7 @@ Parameters
       function
     
           The successCallback parameter looks like:
-          (entries: EntryMetadata[], hasMore: boolean) => void
+          (entries: EntryMetadata[], hasMore: boolean) =& gt;void
         
     
       entries
@@ -1749,7 +1719,7 @@ Parameters
       function
     
           The errorCallback parameter looks like:
-          (error: ProviderError) => void
+          (error: ProviderError) =& gt;void
         
     
       error
@@ -1769,7 +1739,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (options: ReadFileRequestedOptions, successCallback: function, errorCallback: function) => void
+          (options: ReadFileRequestedOptions, successCallback: function, errorCallback: function) =& gt;void
         
     
       options
@@ -1780,7 +1750,7 @@ Parameters
       function
     
           The successCallback parameter looks like:
-          (data: ArrayBuffer, hasMore: boolean) => void
+          (data: ArrayBuffer, hasMore: boolean) =& gt;void
         
     
       data
@@ -1796,7 +1766,7 @@ Parameters
       function
     
           The errorCallback parameter looks like:
-          (error: ProviderError) => void
+          (error: ProviderError) =& gt;void
         
     
       error
@@ -1819,7 +1789,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (options: RemoveWatcherRequestedOptions, successCallback: function, errorCallback: function) => void
+          (options: RemoveWatcherRequestedOptions, successCallback: function, errorCallback: function) =& gt;void
         
     
       options
@@ -1830,14 +1800,14 @@ Parameters
       function
     
           The successCallback parameter looks like:
-          () => void
+          () =& gt;void
         
     
       errorCallback
       function
     
           The errorCallback parameter looks like:
-          (error: ProviderError) => void
+          (error: ProviderError) =& gt;void
         
     
       error
@@ -1857,7 +1827,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (options: TruncateRequestedOptions, successCallback: function, errorCallback: function) => void
+          (options: TruncateRequestedOptions, successCallback: function, errorCallback: function) =& gt;void
         
     
       options
@@ -1868,14 +1838,14 @@ Parameters
       function
     
           The successCallback parameter looks like:
-          () => void
+          () =& gt;void
         
     
       errorCallback
       function
     
           The errorCallback parameter looks like:
-          (error: ProviderError) => void
+          (error: ProviderError) =& gt;void
         
     
       error
@@ -1895,7 +1865,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (options: UnmountRequestedOptions, successCallback: function, errorCallback: function) => void
+          (options: UnmountRequestedOptions, successCallback: function, errorCallback: function) =& gt;void
         
     
       options
@@ -1906,14 +1876,14 @@ Parameters
       function
     
           The successCallback parameter looks like:
-          () => void
+          () =& gt;void
         
     
       errorCallback
       function
     
           The errorCallback parameter looks like:
-          (error: ProviderError) => void
+          (error: ProviderError) =& gt;void
         
     
       error
@@ -1933,7 +1903,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (options: WriteFileRequestedOptions, successCallback: function, errorCallback: function) => void
+          (options: WriteFileRequestedOptions, successCallback: function, errorCallback: function) =& gt;void
         
     
       options
@@ -1944,14 +1914,14 @@ Parameters
       function
     
           The successCallback parameter looks like:
-          () => void
+          () =& gt;void
         
     
       errorCallback
       function
     
           The errorCallback parameter looks like:
-          (error: ProviderError) => void
+          (error: ProviderError) =& gt;void
         
     
       error

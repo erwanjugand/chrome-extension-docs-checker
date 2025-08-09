@@ -60,7 +60,7 @@ Properties
         Promise
       
     
-        chrome.topSites.get(  callback?: function,)
+        chrome.topSites.get(  callback?: function,): Promise<MostVisitedURL[]>
       Gets a list of top sites.
 Parameters
     
@@ -82,12 +82,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
 

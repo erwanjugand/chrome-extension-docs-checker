@@ -580,7 +580,7 @@ Properties
         Promise
       
     
-        chrome.webRequest.handlerBehaviorChanged(  callback?: function,)
+        chrome.webRequest.handlerBehaviorChanged(  callback?: function,): Promise<void>
       Needs to be called when the behavior of the webRequest handlers has changed to prevent incorrect handling due to caching. This function call is expensive. Don't call it often.
 Parameters
     

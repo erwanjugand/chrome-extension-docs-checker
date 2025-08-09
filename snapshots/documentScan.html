@@ -852,7 +852,7 @@ This property will be set even if some options were not set successfully, but wi
       Chrome 125+
       
     
-        chrome.documentScan.cancelScan(  job: string,  callback?: function,)
+        chrome.documentScan.cancelScan(  job: string,  callback?: function,): Promise<CancelScanResponse>
       Cancels a started scan and returns a Promise that resolves with a CancelScanResponse object. If a callback is used, the object is passed to it instead.
 Parameters
     
@@ -876,12 +876,6 @@ Parameters
           
             Promise<CancelScanResponse>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -892,7 +886,7 @@ Parameters
       Chrome 125+
       
     
-        chrome.documentScan.closeScanner(  scannerHandle: string,  callback?: function,)
+        chrome.documentScan.closeScanner(  scannerHandle: string,  callback?: function,): Promise<CloseScannerResponse>
       Closes the scanner with the passed in handle and returns a Promise that resolves with a CloseScannerResponse object. If a callback is used, the object is passed to it instead. Even if the response is not a success, the supplied handle becomes invalid and should not be used for further operations.
 Parameters
     
@@ -916,12 +910,6 @@ Parameters
           
             Promise<CloseScannerResponse>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -932,7 +920,7 @@ Parameters
       Chrome 125+
       
     
-        chrome.documentScan.getOptionGroups(  scannerHandle: string,  callback?: function,)
+        chrome.documentScan.getOptionGroups(  scannerHandle: string,  callback?: function,): Promise<GetOptionGroupsResponse>
       Gets the group names and member options from a scanner previously opened by openScanner. This method returns a Promise that resolves with a GetOptionGroupsResponse object. If a callback is passed to this function, returned data is passed to it instead.
 Parameters
     
@@ -956,12 +944,6 @@ Parameters
           
             Promise<GetOptionGroupsResponse>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -972,7 +954,7 @@ Parameters
       Chrome 125+
       
     
-        chrome.documentScan.getScannerList(  filter: DeviceFilter,  callback?: function,)
+        chrome.documentScan.getScannerList(  filter: DeviceFilter,  callback?: function,): Promise<GetScannerListResponse>
       Gets the list of available scanners and returns a Promise that resolves with a GetScannerListResponse object. If a callback is passed to this function, returned data is passed to it instead.
 Parameters
     
@@ -996,12 +978,6 @@ Parameters
           
             Promise<GetScannerListResponse>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -1012,7 +988,7 @@ Parameters
       Chrome 125+
       
     
-        chrome.documentScan.openScanner(  scannerId: string,  callback?: function,)
+        chrome.documentScan.openScanner(  scannerId: string,  callback?: function,): Promise<OpenScannerResponse>
       Opens a scanner for exclusive access and returns a Promise that resolves with an OpenScannerResponse object. If a callback is passed to this function, returned data is passed to it instead.
 Parameters
     
@@ -1036,12 +1012,6 @@ Parameters
           
             Promise<OpenScannerResponse>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -1052,7 +1022,7 @@ Parameters
       Chrome 125+
       
     
-        chrome.documentScan.readScanData(  job: string,  callback?: function,)
+        chrome.documentScan.readScanData(  job: string,  callback?: function,): Promise<ReadScanDataResponse>
       Reads the next chunk of available image data from an active job handle, and returns a Promise that resolves with a ReadScanDataResponse object. If a callback is used, the object is passed to it instead.
 **Note:**It is valid for a response result to be SUCCESS with a zero-length data member. This means the scanner is still working but does not yet have additional data ready. The caller should wait a short time and try again.
 When the scan job completes, the response will have the result value of EOF. This response may contain a final non-zero data member.
@@ -1078,12 +1048,6 @@ Parameters
           
             Promise<ReadScanDataResponse>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -1093,7 +1057,7 @@ Parameters
         Promise
       
     
-        chrome.documentScan.scan(  options: ScanOptions,  callback?: function,)
+        chrome.documentScan.scan(  options: ScanOptions,  callback?: function,): Promise<ScanResults>
       Performs a document scan and returns a Promise that resolves with a ScanResults object. If a callback is passed to this function, the returned data is passed to it instead.
 Parameters
     
@@ -1120,12 +1084,6 @@ Parameters
       Chrome 96+
       
     
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -1136,7 +1094,7 @@ Parameters
       Chrome 125+
       
     
-        chrome.documentScan.setOptions(  scannerHandle: string,  options: OptionSetting[],  callback?: function,)
+        chrome.documentScan.setOptions(  scannerHandle: string,  options: OptionSetting[],  callback?: function,): Promise<SetOptionsResponse>
       Sets options on the specified scanner and returns a Promise that resolves with a SetOptionsResponse object containing the result of trying to set every value in the order of the passed-in OptionSetting object. If a callback is used, the object is passed to it instead.
 Parameters
     
@@ -1165,12 +1123,6 @@ Parameters
           
             Promise<SetOptionsResponse>
             
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
-            
         
       
     
@@ -1181,7 +1133,7 @@ Parameters
       Chrome 125+
       
     
-        chrome.documentScan.startScan(  scannerHandle: string,  options: StartScanOptions,  callback?: function,)
+        chrome.documentScan.startScan(  scannerHandle: string,  options: StartScanOptions,  callback?: function,): Promise<StartScanResponse>
       Starts a scan on the specified scanner and returns a Promise that resolves with a StartScanResponse. If a callback is used, the object is passed to it instead. If the call was successful, the response includes a job handle that can be used in subsequent calls to read scan data or cancel a scan.
 Parameters
     
@@ -1209,12 +1161,6 @@ Parameters
     Returns
           
             Promise<StartScanResponse>
-            
-              
-                Promises are supported in Manifest V3 and later, but callbacks are provided for
-                backward compatibility. You cannot use both on the same function call. The
-                promise resolves with the same type that is passed to the callback.
-              
             
         
       

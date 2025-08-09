@@ -175,7 +175,7 @@ Enum
         Promise
       
     
-        chrome.debugger.attach(  target: Debuggee,  requiredVersion: string,  callback?: function,)
+        chrome.debugger.attach(  target: Debuggee,  requiredVersion: string,  callback?: function,): Promise<void>
       Attaches debugger to the given target.
 Parameters
     
@@ -215,7 +215,7 @@ Parameters
         Promise
       
     
-        chrome.debugger.detach(  target: Debuggee,  callback?: function,)
+        chrome.debugger.detach(  target: Debuggee,  callback?: function,): Promise<void>
       Detaches debugger from the given target.
 Parameters
     
@@ -250,7 +250,7 @@ Parameters
         Promise
       
     
-        chrome.debugger.getTargets(  callback?: function,)
+        chrome.debugger.getTargets(  callback?: function,): Promise<TargetInfo[]>
       Returns the list of available debug targets.
 Parameters
     
@@ -286,7 +286,7 @@ Parameters
         Promise
       
     
-        chrome.debugger.sendCommand(  target: DebuggerSession,  method: string,  commandParams?: object,  callback?: function,)
+        chrome.debugger.sendCommand(  target: DebuggerSession,  method: string,  commandParams?: object,  callback?: function,): Promise<object | undefined>
       Sends given command to the debugging target.
 Parameters
     
