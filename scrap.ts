@@ -1,5 +1,5 @@
 import * as cheerio from 'cheerio'
-import * as path from 'path'
+import path from 'node:path'
 import fs from 'node:fs'
 import https from 'node:https'
 
