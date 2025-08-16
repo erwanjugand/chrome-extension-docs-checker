@@ -178,21 +178,9 @@ Types
     
       closeDocument()
     
-      
-        Promise
-      
-    
-        chrome.offscreen.closeDocument(  callback?: function,): Promise<void>
+        chrome.offscreen.closeDocument(): Promise<void>
       Closes the currently-open offscreen document for the extension.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
-    Returns
+Returns
           
             Promise<void>
             
@@ -201,11 +189,7 @@ Parameters
     
       createDocument()
     
-      
-        Promise
-      
-    
-        chrome.offscreen.createDocument(  parameters: CreateParameters,  callback?: function,): Promise<void>
+        chrome.offscreen.createDocument(  parameters: CreateParameters,): Promise<void>
       Creates a new offscreen document for the extension.
 Parameters
     
@@ -213,19 +197,13 @@ Parameters
       CreateParameters
     The parameters describing the offscreen document to create.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
             
         
       
+
 
   
 

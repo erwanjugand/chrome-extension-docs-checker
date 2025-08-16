@@ -362,11 +362,7 @@ Enum
     
       configureWorld()
     
-      
-        Promise
-      
-    
-        chrome.userScripts.configureWorld(  properties: WorldProperties,  callback?: function,): Promise<void>
+        chrome.userScripts.configureWorld(  properties: WorldProperties,): Promise<void>
       Configures the `USER_SCRIPT` execution environment.
 Parameters
     
@@ -374,13 +370,6 @@ Parameters
       WorldProperties
     Contains the user script world configuration.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -390,29 +379,15 @@ Parameters
     
       execute()
     
-      
-        Promise
       Chrome 135+
       
     
-        chrome.userScripts.execute(  injection: UserScriptInjection,  callback?: function,): Promise<InjectionResult[]>
+        chrome.userScripts.execute(  injection: UserScriptInjection,): Promise<InjectionResult[]>
       Injects a script into a target context. By default, the script will be run at document_idle, or immediately if the page has already loaded. If the injectImmediately property is set, the script will inject without waiting, even if the page has not finished loading. If the script evaluates to a promise, the browser will wait for the promise to settle and return the resulting value.
 Parameters
     
       injection
       UserScriptInjection
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (result: InjectionResult[]) => void
-        
-    
-      result
-      InjectionResult[]
-    
     
     Returns
           
@@ -423,11 +398,7 @@ Parameters
     
       getScripts()
     
-      
-        Promise
-      
-    
-        chrome.userScripts.getScripts(  filter?: UserScriptFilter,  callback?: function,): Promise<RegisteredUserScript[]>
+        chrome.userScripts.getScripts(  filter?: UserScriptFilter,): Promise<RegisteredUserScript[]>
       Returns all dynamically-registered user scripts for this extension.
 Parameters
     
@@ -435,18 +406,6 @@ Parameters
       UserScriptFilter optional
     If specified, this method returns only the user scripts that match it.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (scripts: RegisteredUserScript[]) => void
-        
-    
-      scripts
-      RegisteredUserScript[]
-    
-    
     Returns
           
             Promise<RegisteredUserScript[]>
@@ -456,27 +415,12 @@ Parameters
     
       getWorldConfigurations()
     
-      
-        Promise
       Chrome 133+
       
     
-        chrome.userScripts.getWorldConfigurations(  callback?: function,): Promise<WorldProperties[]>
+        chrome.userScripts.getWorldConfigurations(): Promise<WorldProperties[]>
       Retrieves all registered world configurations.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (worlds: WorldProperties[]) => void
-        
-    
-      worlds
-      WorldProperties[]
-    
-    
-    Returns
+Returns
           
             Promise<WorldProperties[]>
             
@@ -485,11 +429,7 @@ Parameters
     
       register()
     
-      
-        Promise
-      
-    
-        chrome.userScripts.register(  scripts: RegisteredUserScript[],  callback?: function,): Promise<void>
+        chrome.userScripts.register(  scripts: RegisteredUserScript[],): Promise<void>
       Registers one or more user scripts for this extension.
 Parameters
     
@@ -497,13 +437,6 @@ Parameters
       RegisteredUserScript[]
     Contains a list of user scripts to be registered.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -513,12 +446,10 @@ Parameters
     
       resetWorldConfiguration()
     
-      
-        Promise
       Chrome 133+
       
     
-        chrome.userScripts.resetWorldConfiguration(  worldId?: string,  callback?: function,): Promise<void>
+        chrome.userScripts.resetWorldConfiguration(  worldId?: string,): Promise<void>
       Resets the configuration for a user script world. Any scripts that inject into the world with the specified ID will use the default world configuration.
 Parameters
     
@@ -526,13 +457,6 @@ Parameters
       string optional
     The ID of the user script world to reset. If omitted, resets the default world's configuration.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -542,11 +466,7 @@ Parameters
     
       unregister()
     
-      
-        Promise
-      
-    
-        chrome.userScripts.unregister(  filter?: UserScriptFilter,  callback?: function,): Promise<void>
+        chrome.userScripts.unregister(  filter?: UserScriptFilter,): Promise<void>
       Unregisters all dynamically-registered user scripts for this extension.
 Parameters
     
@@ -554,13 +474,6 @@ Parameters
       UserScriptFilter optional
     If specified, this method unregisters only the user scripts that match it.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -570,11 +483,7 @@ Parameters
     
       update()
     
-      
-        Promise
-      
-    
-        chrome.userScripts.update(  scripts: RegisteredUserScript[],  callback?: function,): Promise<void>
+        chrome.userScripts.update(  scripts: RegisteredUserScript[],): Promise<void>
       Updates one or more user scripts for this extension.
 Parameters
     
@@ -582,19 +491,13 @@ Parameters
       RegisteredUserScript[]
     Contains a list of user scripts to be updated. A property is only updated for the existing script if it is specified in this object. If there are errors during script parsing/file validation, or if the IDs specified do not correspond to a fully registered script, then no scripts are updated.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
             
         
       
+
 
   
 

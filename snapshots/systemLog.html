@@ -47,11 +47,7 @@ Types
     
       add()
     
-      
-        Promise
-      
-    
-        chrome.systemLog.add(  options: MessageOptions,  callback?: function,): Promise<void>
+        chrome.systemLog.add(  options: MessageOptions,): Promise<void>
       Adds a new log record.
 Parameters
     
@@ -59,19 +55,13 @@ Parameters
       MessageOptions
     The logging options.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
             
         
       
+
 
   
 

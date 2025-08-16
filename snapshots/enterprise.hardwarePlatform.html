@@ -49,26 +49,9 @@ Types
     
       getHardwarePlatformInfo()
     
-      
-        Promise
-      
-    
-        chrome.enterprise.hardwarePlatform.getHardwarePlatformInfo(  callback?: function,): Promise<HardwarePlatformInfo>
+        chrome.enterprise.hardwarePlatform.getHardwarePlatformInfo(): Promise<HardwarePlatformInfo>
       Obtains the manufacturer and model for the hardware platform and, if the extension is authorized, returns it via callback.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (info: HardwarePlatformInfo) => void
-        
-    
-      info
-      HardwarePlatformInfo
-    
-    
-    Returns
+Returns
           
             Promise<HardwarePlatformInfo>
             
@@ -77,6 +60,7 @@ Parameters
     
         
       
+
 
   
 

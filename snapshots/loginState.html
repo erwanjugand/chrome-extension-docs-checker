@@ -46,26 +46,9 @@ Types
     
       getProfileType()
     
-      
-        Promise
-      
-    
-        chrome.loginState.getProfileType(  callback?: function,): Promise<ProfileType>
+        chrome.loginState.getProfileType(): Promise<ProfileType>
       Gets the type of the profile the extension is in.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (result: ProfileType) => void
-        
-    
-      result
-      ProfileType
-    
-    
-    Returns
+Returns
           
             Promise<ProfileType>
             
@@ -77,26 +60,9 @@ Parameters
     
       getSessionState()
     
-      
-        Promise
-      
-    
-        chrome.loginState.getSessionState(  callback?: function,): Promise<SessionState>
+        chrome.loginState.getSessionState(): Promise<SessionState>
       Gets the current session state.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (result: SessionState) => void
-        
-    
-      result
-      SessionState
-    
-    
-    Returns
+Returns
           
             Promise<SessionState>
             
@@ -125,6 +91,7 @@ Parameters
     
     
     
+
 
   
 

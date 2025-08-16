@@ -285,11 +285,7 @@ Enum
     
       cancelJob()
     
-      
-        Promise
-      
-    
-        chrome.printing.cancelJob(  jobId: string,  callback?: function,): Promise<void>
+        chrome.printing.cancelJob(  jobId: string,): Promise<void>
       Cancels previously submitted job.
 Parameters
     
@@ -297,13 +293,6 @@ Parameters
       string
     The id of the print job to cancel. This should be the same id received in a SubmitJobResponse.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -316,29 +305,15 @@ Parameters
     
       getJobStatus()
     
-      
-        Promise
       Chrome 135+
       
     
-        chrome.printing.getJobStatus(  jobId: string,  callback?: function,): Promise<JobStatus>
+        chrome.printing.getJobStatus(  jobId: string,): Promise<JobStatus>
       Returns the status of the print job. This call will fail with a runtime error if the print job with the given jobId doesn't exist. jobId: The id of the print job to return the status of. This should be the same id received in a SubmitJobResponse.
 Parameters
     
       jobId
       string
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (status: JobStatus) => void
-        
-    
-      status
-      JobStatus
-    
     
     Returns
           
@@ -349,28 +324,12 @@ Parameters
     
       getPrinterInfo()
     
-      
-        Promise
-      
-    
-        chrome.printing.getPrinterInfo(  printerId: string,  callback?: function,): Promise<GetPrinterInfoResponse>
+        chrome.printing.getPrinterInfo(  printerId: string,): Promise<GetPrinterInfoResponse>
       Returns the status and capabilities of the printer in CDD format. This call will fail with a runtime error if no printers with given id are installed.
 Parameters
     
       printerId
       string
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (response: GetPrinterInfoResponse) => void
-        
-    
-      response
-      GetPrinterInfoResponse
-    
     
     Returns
           
@@ -384,26 +343,9 @@ Parameters
     
       getPrinters()
     
-      
-        Promise
-      
-    
-        chrome.printing.getPrinters(  callback?: function,): Promise<Printer[]>
+        chrome.printing.getPrinters(): Promise<Printer[]>
       Returns the list of available printers on the device. This includes manually added, enterprise and discovered printers.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (printers: Printer[]) => void
-        
-    
-      printers
-      Printer[]
-    
-    
-    Returns
+Returns
           
             Promise<Printer[]>
             
@@ -415,29 +357,13 @@ Parameters
     
       submitJob()
     
-      
-        Promise
-      
-    
-        chrome.printing.submitJob(  request: SubmitJobRequest,  callback?: function,): Promise<SubmitJobResponse>
+        chrome.printing.submitJob(  request: SubmitJobRequest,): Promise<SubmitJobResponse>
       Submits the job for printing. If the extension is not listed in the PrintingAPIExtensionsAllowlist policy, the user is prompted to accept the print job.
 Before Chrome 120, this function did not return a promise.
 Parameters
     
       request
       SubmitJobRequest
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (response: SubmitJobResponse) => void
-        
-    
-      response
-      SubmitJobResponse
-    
     
     Returns
           
@@ -472,6 +398,7 @@ Parameters
     
     
     
+
 
   
 

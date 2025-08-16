@@ -97,26 +97,9 @@ Currently supported on Chrome OS only.
     
       getInfo()
     
-      
-        Promise
-      
-    
-        chrome.system.cpu.getInfo(  callback?: function,): Promise<CpuInfo>
+        chrome.system.cpu.getInfo(): Promise<CpuInfo>
       Queries basic CPU information of the system.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (info: CpuInfo) => void
-        
-    
-      info
-      CpuInfo
-    
-    
-    Returns
+Returns
           
             Promise<CpuInfo>
             
@@ -125,6 +108,7 @@ Parameters
     
         
       
+
 
   
 

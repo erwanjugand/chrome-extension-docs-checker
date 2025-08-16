@@ -83,28 +83,12 @@ Enum
     
       get()
     
-      
-        Promise
-      
-    
-        chrome.tabGroups.get(  groupId: number,  callback?: function,): Promise<TabGroup>
+        chrome.tabGroups.get(  groupId: number,): Promise<TabGroup>
       Retrieves details about the specified group.
 Parameters
     
       groupId
       number
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (group: TabGroup) => void
-        
-    
-      group
-      TabGroup
-    
     
     Returns
           
@@ -118,11 +102,7 @@ Parameters
     
       move()
     
-      
-        Promise
-      
-    
-        chrome.tabGroups.move(  groupId: number,  moveProperties: object,  callback?: function,): Promise<TabGroup | undefined>
+        chrome.tabGroups.move(  groupId: number,  moveProperties: object,): Promise<TabGroup | undefined>
       Moves the group and all its tabs within its window, or to a new window.
 Parameters
     
@@ -145,19 +125,6 @@ Parameters
     The window to move the group to. Defaults to the window the group is currently in. Note that groups can only be moved to and from windows with windows.WindowType type "normal".
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (group?: TabGroup) => void
-        
-    
-      group
-      TabGroup optional
-    Details about the moved group.
-
-    
     Returns
           
             Promise<TabGroup | undefined>
@@ -170,11 +137,7 @@ Parameters
     
       query()
     
-      
-        Promise
-      
-    
-        chrome.tabGroups.query(  queryInfo: object,  callback?: function,): Promise<TabGroup[]>
+        chrome.tabGroups.query(  queryInfo: object,): Promise<TabGroup[]>
       Gets all groups that have the specified properties, or all groups if no properties are specified.
 Parameters
     
@@ -210,18 +173,6 @@ Parameters
     The ID of the parent window, or windows.WINDOW_ID_CURRENT for the current window.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (result: TabGroup[]) => void
-        
-    
-      result
-      TabGroup[]
-    
-    
     Returns
           
             Promise<TabGroup[]>
@@ -234,11 +185,7 @@ Parameters
     
       update()
     
-      
-        Promise
-      
-    
-        chrome.tabGroups.update(  groupId: number,  updateProperties: object,  callback?: function,): Promise<TabGroup | undefined>
+        chrome.tabGroups.update(  groupId: number,  updateProperties: object,): Promise<TabGroup | undefined>
       Modifies the properties of a group. Properties that are not specified in updateProperties are not modified.
 Parameters
     
@@ -264,19 +211,6 @@ Parameters
       title
       string optional
     The title of the group.
-
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (group?: TabGroup) => void
-        
-    
-      group
-      TabGroup optional
-    Details about the updated group.
 
     
     Returns
@@ -365,6 +299,7 @@ Parameters
     
     
     
+
 
   
 

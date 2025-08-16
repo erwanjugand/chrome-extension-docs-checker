@@ -33,11 +33,7 @@ Properties
     
       register()
     
-      
-        Promise
-      
-    
-        chrome.gcm.register(  senderIds: string[],  callback?: function,): Promise<string>
+        chrome.gcm.register(  senderIds: string[],): Promise<string>
       Registers the application with FCM. The registration ID will be returned by the callback. If register is called again with the same list of senderIds, the same registration ID will be returned.
 Parameters
     
@@ -45,19 +41,6 @@ Parameters
       string[]
     A list of server IDs that are allowed to send messages to the application. It should contain at least one and no more than 100 sender IDs.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (registrationId: string) =& gt;void
-        
-    
-      registrationId
-      string
-    A registration ID assigned to the application by the FCM.
-
-    
     Returns
           
             Promise<string>
@@ -70,11 +53,7 @@ Parameters
     
       send()
     
-      
-        Promise
-      
-    
-        chrome.gcm.send(  message: object,  callback?: function,): Promise<string>
+        chrome.gcm.send(  message: object,): Promise<string>
       Sends a message according to its contents.
 Parameters
     
@@ -103,19 +82,6 @@ Parameters
     Time-to-live of the message in seconds. If it is not possible to send the message within that time, an onSendError event will be raised. A time-to-live of 0 indicates that the message should be sent immediately or fail if it's not possible. The default value of time-to-live is 86,400 seconds (1 day) and the maximum value is 2,419,200 seconds (28 days).
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (messageId: string) =& gt;void
-        
-    
-      messageId
-      string
-    The ID of the message that the callback was issued for.
-
-    
     Returns
           
             Promise<string>
@@ -128,21 +94,9 @@ Parameters
     
       unregister()
     
-      
-        Promise
-      
-    
-        chrome.gcm.unregister(  callback?: function,): Promise<void>
+        chrome.gcm.unregister(): Promise<void>
       Unregisters the application from FCM.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () =& gt;void
-        
-    Returns
+Returns
           
             Promise<void>
             
@@ -163,7 +117,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (message: object) =& gt;void
+          (message: object) => void
         
     
       message
@@ -198,7 +152,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          () =& gt;void
+          () => void
         
     
     
@@ -212,7 +166,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (error: object) =& gt;void
+          (error: object) => void
         
     
       error
@@ -236,6 +190,7 @@ Parameters
     
     
     
+
 
   
 

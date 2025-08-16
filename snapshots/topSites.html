@@ -56,26 +56,9 @@ Properties
     
       get()
     
-      
-        Promise
-      
-    
-        chrome.topSites.get(  callback?: function,): Promise<MostVisitedURL[]>
+        chrome.topSites.get(): Promise<MostVisitedURL[]>
       Gets a list of top sites.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (data: MostVisitedURL[]) => void
-        
-    
-      data
-      MostVisitedURL[]
-    
-    
-    Returns
+Returns
           
             Promise<MostVisitedURL[]>
             
@@ -84,6 +67,7 @@ Parameters
     
         
       
+
 
   
 

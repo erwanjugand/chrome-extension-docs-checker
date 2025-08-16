@@ -40,26 +40,9 @@ Types
     
       getInfo()
     
-      
-        Promise
-      
-    
-        chrome.system.memory.getInfo(  callback?: function,): Promise<MemoryInfo>
+        chrome.system.memory.getInfo(): Promise<MemoryInfo>
       Get physical memory information.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (info: MemoryInfo) => void
-        
-    
-      info
-      MemoryInfo
-    
-    
-    Returns
+Returns
           
             Promise<MemoryInfo>
             
@@ -68,6 +51,7 @@ Parameters
     
         
       
+
 
   
 

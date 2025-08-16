@@ -98,27 +98,9 @@ Parameters
     
       isAllowedFileSchemeAccess()
     
-      
-        Promise
-      
-    
-        chrome.extension.isAllowedFileSchemeAccess(  callback?: function,): Promise<boolean>
+        chrome.extension.isAllowedFileSchemeAccess(): Promise<boolean>
       Retrieves the state of the extension's access to the 'file://' scheme. This corresponds to the user-controlled per-extension 'Allow access to File URLs' setting accessible via the chrome://extensions page.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (isAllowedAccess: boolean) => void
-        
-    
-      isAllowedAccess
-      boolean
-    True if the extension can access the 'file://' scheme, false otherwise.
-
-    
-    Returns
+Returns
           
             Promise<boolean>
             
@@ -130,27 +112,9 @@ Parameters
     
       isAllowedIncognitoAccess()
     
-      
-        Promise
-      
-    
-        chrome.extension.isAllowedIncognitoAccess(  callback?: function,): Promise<boolean>
+        chrome.extension.isAllowedIncognitoAccess(): Promise<boolean>
       Retrieves the state of the extension's access to Incognito-mode. This corresponds to the user-controlled per-extension 'Allowed in Incognito' setting accessible via the chrome://extensions page.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (isAllowedAccess: boolean) => void
-        
-    
-      isAllowedAccess
-      boolean
-    True if the extension has access to Incognito mode, false otherwise.
-
-    
-    Returns
+Returns
           
             Promise<boolean>
             

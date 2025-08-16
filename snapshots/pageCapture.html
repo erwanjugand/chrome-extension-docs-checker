@@ -42,11 +42,7 @@ Methods
     
       saveAsMHTML()
     
-      
-        Promise
-      
-    
-        chrome.pageCapture.saveAsMHTML(  details: object,  callback?: function,): Promise<Blob | undefined>
+        chrome.pageCapture.saveAsMHTML(  details: object,): Promise<Blob | undefined>
       Saves the content of the tab with given id as MHTML.
 Parameters
     
@@ -59,19 +55,6 @@ Parameters
     The id of the tab to save as MHTML.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (mhtmlData?: Blob) => void
-        
-    
-      mhtmlData
-      Blob optional
-    The MHTML data as a Blob.
-
-    
     Returns
           
             Promise<Blob | undefined>
@@ -81,6 +64,7 @@ Parameters
     
         
       
+
 
   
 

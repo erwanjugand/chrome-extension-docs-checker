@@ -29,21 +29,9 @@ Methods
     
       deleteID()
     
-      
-        Promise
-      
-    
-        chrome.instanceID.deleteID(  callback?: function,): Promise<void>
+        chrome.instanceID.deleteID(): Promise<void>
       Resets the app instance identifier and revokes all tokens associated with it.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
-    Returns
+Returns
           
             Promise<void>
             
@@ -55,11 +43,7 @@ Parameters
     
       deleteToken()
     
-      
-        Promise
-      
-    
-        chrome.instanceID.deleteToken(  deleteTokenParams: object,  callback?: function,): Promise<void>
+        chrome.instanceID.deleteToken(  deleteTokenParams: object,): Promise<void>
       Revokes a granted token.
 Parameters
     
@@ -84,13 +68,6 @@ Parameters
     The scope that is used to obtain the token.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -103,27 +80,9 @@ Parameters
     
       getCreationTime()
     
-      
-        Promise
-      
-    
-        chrome.instanceID.getCreationTime(  callback?: function,): Promise<number>
+        chrome.instanceID.getCreationTime(): Promise<number>
       Retrieves the time when the InstanceID has been generated. The creation time will be returned by the callback.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (creationTime: number) => void
-        
-    
-      creationTime
-      number
-    The time when the Instance ID has been generated, represented in milliseconds since the epoch.
-
-    
-    Returns
+Returns
           
             Promise<number>
             
@@ -135,27 +94,9 @@ Parameters
     
       getID()
     
-      
-        Promise
-      
-    
-        chrome.instanceID.getID(  callback?: function,): Promise<string>
+        chrome.instanceID.getID(): Promise<string>
       Retrieves an identifier for the app instance. The instance ID will be returned by the callback. The same ID will be returned as long as the application identity has not been revoked or expired.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (instanceID: string) => void
-        
-    
-      instanceID
-      string
-    An Instance ID assigned to the app instance.
-
-    
-    Returns
+Returns
           
             Promise<string>
             
@@ -167,11 +108,7 @@ Parameters
     
       getToken()
     
-      
-        Promise
-      
-    
-        chrome.instanceID.getToken(  getTokenParams: object,  callback?: function,): Promise<string>
+        chrome.instanceID.getToken(  getTokenParams: object,): Promise<string>
       Return a token that allows the authorized entity to access the service defined by scope.
 Parameters
     
@@ -205,19 +142,6 @@ Parameters
     Identifies authorized actions that the authorized entity can take. E.g. for sending GCM messages, GCM scope should be used.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (token: string) => void
-        
-    
-      token
-      string
-    A token assigned by the requested service.
-
-    
     Returns
           
             Promise<string>
@@ -242,6 +166,7 @@ Parameters
           () => void
         
     
+
 
   
 

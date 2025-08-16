@@ -199,11 +199,7 @@ Types
     
       addEntry()
     
-      
-        Promise
-      
-    
-        chrome.readingList.addEntry(  entry: AddEntryOptions,  callback?: function,): Promise<void>
+        chrome.readingList.addEntry(  entry: AddEntryOptions,): Promise<void>
       Adds an entry to the reading list if it does not exist.
 Parameters
     
@@ -211,13 +207,6 @@ Parameters
       AddEntryOptions
     The entry to add to the reading list.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -227,11 +216,7 @@ Parameters
     
       query()
     
-      
-        Promise
-      
-    
-        chrome.readingList.query(  info: QueryInfo,  callback?: function,): Promise<ReadingListEntry[]>
+        chrome.readingList.query(  info: QueryInfo,): Promise<ReadingListEntry[]>
       Retrieves all entries that match the QueryInfo properties. Properties that are not provided will not be matched.
 Parameters
     
@@ -239,18 +224,6 @@ Parameters
       QueryInfo
     The properties to search for.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (entries: ReadingListEntry[]) => void
-        
-    
-      entries
-      ReadingListEntry[]
-    
-    
     Returns
           
             Promise<ReadingListEntry[]>
@@ -260,11 +233,7 @@ Parameters
     
       removeEntry()
     
-      
-        Promise
-      
-    
-        chrome.readingList.removeEntry(  info: RemoveOptions,  callback?: function,): Promise<void>
+        chrome.readingList.removeEntry(  info: RemoveOptions,): Promise<void>
       Removes an entry from the reading list if it exists.
 Parameters
     
@@ -272,13 +241,6 @@ Parameters
       RemoveOptions
     The entry to remove from the reading list.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -288,11 +250,7 @@ Parameters
     
       updateEntry()
     
-      
-        Promise
-      
-    
-        chrome.readingList.updateEntry(  info: UpdateEntryOptions,  callback?: function,): Promise<void>
+        chrome.readingList.updateEntry(  info: UpdateEntryOptions,): Promise<void>
       Updates a reading list entry if it exists.
 Parameters
     
@@ -300,13 +258,6 @@ Parameters
       UpdateEntryOptions
     The entry to update.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -371,6 +322,7 @@ Parameters
     
     
     
+
 
   
 

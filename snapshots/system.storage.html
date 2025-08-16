@@ -76,28 +76,12 @@ Types
     
       ejectDevice()
     
-      
-        Promise
-      
-    
-        chrome.system.storage.ejectDevice(  id: string,  callback?: function,): Promise<EjectDeviceResultCode>
+        chrome.system.storage.ejectDevice(  id: string,): Promise<EjectDeviceResultCode>
       Ejects a removable storage device.
 Parameters
     
       id
       string
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (result: EjectDeviceResultCode) => void
-        
-    
-      result
-      EjectDeviceResultCode
-    
     
     Returns
           
@@ -112,29 +96,15 @@ Parameters
       getAvailableCapacity()
     
       
-        Promise
-      
         Dev channel
       
     
-        chrome.system.storage.getAvailableCapacity(  id: string,  callback?: function,): Promise<StorageAvailableCapacityInfo>
+        chrome.system.storage.getAvailableCapacity(  id: string,): Promise<StorageAvailableCapacityInfo>
       Get the available capacity of a specified id storage device. The id is the transient device ID from StorageUnitInfo.
 Parameters
     
       id
       string
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (info: StorageAvailableCapacityInfo) => void
-        
-    
-      info
-      StorageAvailableCapacityInfo
-    
     
     Returns
           
@@ -145,26 +115,9 @@ Parameters
     
       getInfo()
     
-      
-        Promise
-      
-    
-        chrome.system.storage.getInfo(  callback?: function,): Promise<StorageUnitInfo[]>
+        chrome.system.storage.getInfo(): Promise<StorageUnitInfo[]>
       Get the storage information from the system. The argument passed to the callback is an array of StorageUnitInfo objects.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (info: StorageUnitInfo[]) => void
-        
-    
-      info
-      StorageUnitInfo[]
-    
-    
-    Returns
+Returns
           
             Promise<StorageUnitInfo[]>
             
@@ -212,6 +165,7 @@ Parameters
     
     
     
+
 
   
 

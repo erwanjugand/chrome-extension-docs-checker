@@ -148,24 +148,13 @@ Properties
     
       addUrl()
     
-      
-        Promise
-      
-    
-        chrome.history.addUrl(  details: UrlDetails,  callback?: function,): Promise<void>
+        chrome.history.addUrl(  details: UrlDetails,): Promise<void>
       Adds a URL to the history at the current time with a transition type of "link".
 Parameters
     
       details
       UrlDetails
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -178,21 +167,9 @@ Parameters
     
       deleteAll()
     
-      
-        Promise
-      
-    
-        chrome.history.deleteAll(  callback?: function,): Promise<void>
+        chrome.history.deleteAll(): Promise<void>
       Deletes all items from the history.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
-    Returns
+Returns
           
             Promise<void>
             
@@ -204,11 +181,7 @@ Parameters
     
       deleteRange()
     
-      
-        Promise
-      
-    
-        chrome.history.deleteRange(  range: object,  callback?: function,): Promise<void>
+        chrome.history.deleteRange(  range: object,): Promise<void>
       Removes all items within the specified date range from the history. Pages will not be removed from the history unless all visits fall within the range.
 Parameters
     
@@ -226,13 +199,6 @@ Parameters
     Items added to history after this date, represented in milliseconds since the epoch.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -245,24 +211,13 @@ Parameters
     
       deleteUrl()
     
-      
-        Promise
-      
-    
-        chrome.history.deleteUrl(  details: UrlDetails,  callback?: function,): Promise<void>
+        chrome.history.deleteUrl(  details: UrlDetails,): Promise<void>
       Removes all occurrences of the given URL from the history.
 Parameters
     
       details
       UrlDetails
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -275,28 +230,12 @@ Parameters
     
       getVisits()
     
-      
-        Promise
-      
-    
-        chrome.history.getVisits(  details: UrlDetails,  callback?: function,): Promise<VisitItem[]>
+        chrome.history.getVisits(  details: UrlDetails,): Promise<VisitItem[]>
       Retrieves information about visits to a URL.
 Parameters
     
       details
       UrlDetails
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (results: VisitItem[]) => void
-        
-    
-      results
-      VisitItem[]
-    
     
     Returns
           
@@ -310,11 +249,7 @@ Parameters
     
       search()
     
-      
-        Promise
-      
-    
-        chrome.history.search(  query: object,  callback?: function,): Promise<HistoryItem[]>
+        chrome.history.search(  query: object,): Promise<HistoryItem[]>
       Searches the history for the last visit time of each page matching the query.
 Parameters
     
@@ -341,18 +276,6 @@ Parameters
       string
     A free-text query to the history service. Leave this empty to retrieve all pages.
 
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (results: HistoryItem[]) => void
-        
-    
-      results
-      HistoryItem[]
-    
     
     Returns
           
@@ -412,6 +335,7 @@ Parameters
     
     
     
+
 
   
 

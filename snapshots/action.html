@@ -315,11 +315,7 @@ Properties
     
       disable()
     
-      
-        Promise
-      
-    
-        chrome.action.disable(  tabId?: number,  callback?: function,): Promise<void>
+        chrome.action.disable(  tabId?: number,): Promise<void>
       Disables the action for a tab.
 Parameters
     
@@ -327,13 +323,6 @@ Parameters
       number optional
     The ID of the tab for which you want to modify the action.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -343,11 +332,7 @@ Parameters
     
       enable()
     
-      
-        Promise
-      
-    
-        chrome.action.enable(  tabId?: number,  callback?: function,): Promise<void>
+        chrome.action.enable(  tabId?: number,): Promise<void>
       Enables the action for a tab. By default, actions are enabled.
 Parameters
     
@@ -355,13 +340,6 @@ Parameters
       number optional
     The ID of the tab for which you want to modify the action.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -371,28 +349,12 @@ Parameters
     
       getBadgeBackgroundColor()
     
-      
-        Promise
-      
-    
-        chrome.action.getBadgeBackgroundColor(  details: TabDetails,  callback?: function,): Promise<extensionTypes.ColorArray>
+        chrome.action.getBadgeBackgroundColor(  details: TabDetails,): Promise<extensionTypes.ColorArray>
       Gets the background color of the action.
 Parameters
     
       details
       TabDetails
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (result: ColorArray) => void
-        
-    
-      result
-      ColorArray
-    
     
     Returns
           
@@ -403,28 +365,12 @@ Parameters
     
       getBadgeText()
     
-      
-        Promise
-      
-    
-        chrome.action.getBadgeText(  details: TabDetails,  callback?: function,): Promise<string>
+        chrome.action.getBadgeText(  details: TabDetails,): Promise<string>
       Gets the badge text of the action. If no tab is specified, the non-tab-specific badge text is returned. If displayActionCountAsBadgeText is enabled, a placeholder text will be returned unless the declarativeNetRequestFeedback permission is present or tab-specific badge text was provided.
 Parameters
     
       details
       TabDetails
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (result: string) => void
-        
-    
-      result
-      string
-    
     
     Returns
           
@@ -435,29 +381,15 @@ Parameters
     
       getBadgeTextColor()
     
-      
-        Promise
       Chrome 110+
       
     
-        chrome.action.getBadgeTextColor(  details: TabDetails,  callback?: function,): Promise<extensionTypes.ColorArray>
+        chrome.action.getBadgeTextColor(  details: TabDetails,): Promise<extensionTypes.ColorArray>
       Gets the text color of the action.
 Parameters
     
       details
       TabDetails
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (result: ColorArray) => void
-        
-    
-      result
-      ColorArray
-    
     
     Returns
           
@@ -468,28 +400,12 @@ Parameters
     
       getPopup()
     
-      
-        Promise
-      
-    
-        chrome.action.getPopup(  details: TabDetails,  callback?: function,): Promise<string>
+        chrome.action.getPopup(  details: TabDetails,): Promise<string>
       Gets the html document set as the popup for this action.
 Parameters
     
       details
       TabDetails
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (result: string) => void
-        
-    
-      result
-      string
-    
     
     Returns
           
@@ -500,28 +416,12 @@ Parameters
     
       getTitle()
     
-      
-        Promise
-      
-    
-        chrome.action.getTitle(  details: TabDetails,  callback?: function,): Promise<string>
+        chrome.action.getTitle(  details: TabDetails,): Promise<string>
       Gets the title of the action.
 Parameters
     
       details
       TabDetails
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (result: string) => void
-        
-    
-      result
-      string
-    
     
     Returns
           
@@ -532,27 +432,12 @@ Parameters
     
       getUserSettings()
     
-      
-        Promise
       Chrome 91+
       
     
-        chrome.action.getUserSettings(  callback?: function,): Promise<UserSettings>
+        chrome.action.getUserSettings(): Promise<UserSettings>
       Returns the user-specified settings relating to an extension's action.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (userSettings: UserSettings) => void
-        
-    
-      userSettings
-      UserSettings
-    
-    
-    Returns
+Returns
           
             Promise<UserSettings>
             
@@ -561,12 +446,10 @@ Parameters
     
       isEnabled()
     
-      
-        Promise
       Chrome 110+
       
     
-        chrome.action.isEnabled(  tabId?: number,  callback?: function,): Promise<boolean>
+        chrome.action.isEnabled(  tabId?: number,): Promise<boolean>
       Indicates whether the extension action is enabled for a tab (or globally if no tabId is provided). Actions enabled using only declarativeContent always return false.
 Parameters
     
@@ -574,19 +457,6 @@ Parameters
       number optional
     The ID of the tab for which you want check enabled status.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (isEnabled: boolean) => void
-        
-    
-      isEnabled
-      boolean
-    True if the extension action is enabled.
-
-    
     Returns
           
             Promise<boolean>
@@ -596,12 +466,10 @@ Parameters
     
       openPopup()
     
-      
-        Promise
       Chrome 127+
       
     
-        chrome.action.openPopup(  options?: OpenPopupOptions,  callback?: function,): Promise<void>
+        chrome.action.openPopup(  options?: OpenPopupOptions,): Promise<void>
       Opens the extension's popup. Between Chrome 118 and Chrome 126, this is only available to policy installed extensions.
 Parameters
     
@@ -609,13 +477,6 @@ Parameters
       OpenPopupOptions optional
     Specifies options for opening the popup.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -625,11 +486,7 @@ Parameters
     
       setBadgeBackgroundColor()
     
-      
-        Promise
-      
-    
-        chrome.action.setBadgeBackgroundColor(  details: object,  callback?: function,): Promise<void>
+        chrome.action.setBadgeBackgroundColor(  details: object,): Promise<void>
       Sets the background color for the badge.
 Parameters
     
@@ -647,13 +504,6 @@ Parameters
     Limits the change to when a particular tab is selected. Automatically resets when the tab is closed.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -663,11 +513,7 @@ Parameters
     
       setBadgeText()
     
-      
-        Promise
-      
-    
-        chrome.action.setBadgeText(  details: object,  callback?: function,): Promise<void>
+        chrome.action.setBadgeText(  details: object,): Promise<void>
       Sets the badge text for the action. The badge is displayed on top of the icon.
 Parameters
     
@@ -685,13 +531,6 @@ Parameters
     Any number of characters can be passed, but only about four can fit in the space. If an empty string ('') is passed, the badge text is cleared. If tabId is specified and text is null, the text for the specified tab is cleared and defaults to the global badge text.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -701,12 +540,10 @@ Parameters
     
       setBadgeTextColor()
     
-      
-        Promise
       Chrome 110+
       
     
-        chrome.action.setBadgeTextColor(  details: object,  callback?: function,): Promise<void>
+        chrome.action.setBadgeTextColor(  details: object,): Promise<void>
       Sets the text color for the badge.
 Parameters
     
@@ -724,13 +561,6 @@ Parameters
     Limits the change to when a particular tab is selected. Automatically resets when the tab is closed.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -740,11 +570,7 @@ Parameters
     
       setIcon()
     
-      
-        Promise
-      
-    
-        chrome.action.setIcon(  details: object,  callback?: function,): Promise<void>
+        chrome.action.setIcon(  details: object,): Promise<void>
       Sets the icon for the action. The icon can be specified either as the path to an image file or as the pixel data from a canvas element, or as dictionary of either one of those. Either the path or the imageData property must be specified.
 Parameters
     
@@ -767,13 +593,6 @@ Parameters
     Limits the change to when a particular tab is selected. Automatically resets when the tab is closed.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -786,11 +605,7 @@ Parameters
     
       setPopup()
     
-      
-        Promise
-      
-    
-        chrome.action.setPopup(  details: object,  callback?: function,): Promise<void>
+        chrome.action.setPopup(  details: object,): Promise<void>
       Sets the HTML document to be opened as a popup when the user clicks on the action's icon.
 Parameters
     
@@ -808,13 +623,6 @@ Parameters
     Limits the change to when a particular tab is selected. Automatically resets when the tab is closed.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -824,11 +632,7 @@ Parameters
     
       setTitle()
     
-      
-        Promise
-      
-    
-        chrome.action.setTitle(  details: object,  callback?: function,): Promise<void>
+        chrome.action.setTitle(  details: object,): Promise<void>
       Sets the title of the action. This shows up in the tooltip.
 Parameters
     
@@ -846,13 +650,6 @@ Parameters
     The string the action should display when moused over.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -901,6 +698,7 @@ Parameters
     
     
     
+
 
   
 

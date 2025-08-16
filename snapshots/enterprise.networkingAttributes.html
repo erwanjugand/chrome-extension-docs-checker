@@ -60,26 +60,9 @@ Types
     
       getNetworkDetails()
     
-      
-        Promise
-      
-    
-        chrome.enterprise.networkingAttributes.getNetworkDetails(  callback?: function,): Promise<NetworkDetails>
+        chrome.enterprise.networkingAttributes.getNetworkDetails(): Promise<NetworkDetails>
       Retrieves the network details of the device's default network. If the user is not affiliated or the device is not connected to a network, runtime.lastError will be set with a failure reason.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (networkAddresses: NetworkDetails) => void
-        
-    
-      networkAddresses
-      NetworkDetails
-    
-    
-    Returns
+Returns
           
             Promise<NetworkDetails>
             
@@ -88,6 +71,7 @@ Parameters
     
         
       
+
 
   
 

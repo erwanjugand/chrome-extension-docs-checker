@@ -402,7 +402,7 @@ Enum
       
     The operating system Chrome is running on.
 Enum
-      "mac"  Specifies the MacOS operating system."win"  Specifies the Windows operating system."android"  Specifies the Android operating system."cros"  Specifies the Chrome operating system."linux"  Specifies the Linux operating system."openbsd"  Specifies the OpenBSD operating system."fuchsia"  Specifies the Fuchsia operating system.
+      "mac"  Specifies the MacOS operating system."win"  Specifies the Windows operating system."android"  Specifies the Android operating system."cros"  Specifies the Chrome operating system."linux"  Specifies the Linux operating system."openbsd"  Specifies the OpenBSD operating system.
     
   
     
@@ -578,29 +578,13 @@ Parameters
       getBackgroundPage()
     
       
-        Promise
-      
         Foreground only
       
         Deprecated since Chrome 133
     
-        chrome.runtime.getBackgroundPage(  callback?: function,): Promise<Window | undefined>
+        chrome.runtime.getBackgroundPage(): Promise<Window | undefined>
       Background pages do not exist in MV3 extensions.Retrieves the JavaScript 'window' object for the background page running inside the current extension/app. If the background page is an event page, the system will ensure it is loaded before calling the callback. If there is no background page, an error is set.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (backgroundPage?: Window) => void
-        
-    
-      backgroundPage
-      Window optional
-    The JavaScript 'window' object for the background page.
-
-    
-    Returns
+Returns
           
             Promise<Window | undefined>
             
@@ -612,13 +596,11 @@ Parameters
     
       getContexts()
     
-      
-        Promise
       Chrome 116+
       MV3+
       
     
-        chrome.runtime.getContexts(  filter: ContextFilter,  callback?: function,): Promise<ExtensionContext[]>
+        chrome.runtime.getContexts(  filter: ContextFilter,): Promise<ExtensionContext[]>
       Fetches information about active contexts associated with this extension
 Parameters
     
@@ -626,19 +608,6 @@ Parameters
       ContextFilter
     A filter to find matching contexts. A context matches if it matches all specified fields in the filter. Any unspecified field in the filter matches all contexts.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (contexts: ExtensionContext[]) => void
-        
-    
-      contexts
-      ExtensionContext[]
-    The matching contexts, if any.
-
-    
     Returns
           
             Promise<ExtensionContext[]>
@@ -661,27 +630,12 @@ Returns
       getPackageDirectoryEntry()
     
       
-        Promise
-      
         Foreground only
       
     
-        chrome.runtime.getPackageDirectoryEntry(  callback?: function,): Promise<DirectoryEntry>
+        chrome.runtime.getPackageDirectoryEntry(): Promise<DirectoryEntry>
       Returns a DirectoryEntry for the package directory.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (directoryEntry: DirectoryEntry) => void
-        
-    
-      directoryEntry
-      DirectoryEntry
-    
-    
-    Returns
+Returns
           
             Promise<DirectoryEntry>
             
@@ -693,26 +647,9 @@ Parameters
     
       getPlatformInfo()
     
-      
-        Promise
-      
-    
-        chrome.runtime.getPlatformInfo(  callback?: function,): Promise<PlatformInfo>
+        chrome.runtime.getPlatformInfo(): Promise<PlatformInfo>
       Returns information about the current platform.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (platformInfo: PlatformInfo) => void
-        
-    
-      platformInfo
-      PlatformInfo
-    
-    
-    Returns
+Returns
           
             Promise<PlatformInfo>
             
@@ -742,23 +679,11 @@ Parameters
     
       openOptionsPage()
     
-      
-        Promise
-      
-    
-        chrome.runtime.openOptionsPage(  callback?: function,): Promise<void>
+        chrome.runtime.openOptionsPage(): Promise<void>
       Open your Extension's options page, if possible.
 The precise behavior may depend on your manifest's options_ui or options_page key, or what Chrome happens to support at the time. For example, the page may be opened in a new tab, within chrome://extensions, within an App, or it may just focus an open options page. It will never cause the caller page to reload.
 If your Extension does not declare an options page, or Chrome failed to create one for some other reason, the callback will set lastError.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
-    Returns
+Returns
           
             Promise<void>
             
@@ -776,44 +701,12 @@ Parameters
     
       requestUpdateCheck()
     
-      
-        Promise
-      
-    
-        chrome.runtime.requestUpdateCheck(  callback?: function,): Promise<object>
+        chrome.runtime.requestUpdateCheck(): Promise<object>
       Requests an immediate update check be done for this app/extension.
 Important: Most extensions/apps should not use this method, since Chrome already does automatic checks every few hours, and you can listen for the runtime.onUpdateAvailable event without needing to call requestUpdateCheck.
 This method is only appropriate to call in very limited circumstances, such as if your extension talks to a backend service, and the backend service has determined that the client extension version is very far out of date and you'd like to prompt a user to update. Most other uses of requestUpdateCheck, such as calling it unconditionally based on a repeating timer, probably only serve to waste client, network, and server resources.
 Note: When called with a callback, instead of returning an object this function will return the two properties as separate arguments passed to the callback.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (result: object) => void
-        
-    
-      result
-      object
-    
-      Chrome 109+
-      
-    RequestUpdateCheckResult object that holds the status of the update check and any details of the result if there is an update available
-
-    
-      status
-      RequestUpdateCheckStatus
-    Result of the update check.
-
-    
-      version
-      string optional
-    If an update is available, this contains the version of the available update.
-
-    
-    
-    Returns
+Returns
           
             Promise<object>
             
@@ -831,12 +724,10 @@ Parameters
     
       restartAfterDelay()
     
-      
-        Promise
       Chrome 53+
       
     
-        chrome.runtime.restartAfterDelay(  seconds: number,  callback?: function,): Promise<void>
+        chrome.runtime.restartAfterDelay(  seconds: number,): Promise<void>
       Restart the ChromeOS device when the app runs in kiosk mode after the given seconds. If called again before the time ends, the reboot will be delayed. If called with a value of -1, the reboot will be cancelled. It's a no-op in non-kiosk mode. It's only allowed to be called repeatedly by the first extension to invoke this API.
 Parameters
     
@@ -844,13 +735,6 @@ Parameters
       number
     Time to wait in seconds before rebooting the device, or -1 to cancel a scheduled reboot.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -863,11 +747,7 @@ Parameters
     
       sendMessage()
     
-      
-        Promise
-      
-    
-        chrome.runtime.sendMessage(  extensionId?: string,  message: any,  options?: object,  callback?: function,): Promise<any>
+        chrome.runtime.sendMessage(  extensionId?: string,  message: any,  options?: object,): Promise<any>
       Sends a single message to event listeners within your extension or a different extension/app. Similar to runtime.connect but only sends a single message, with an optional response. If sending to your extension, the runtime.onMessage event will be fired in every frame of your extension (except for the sender's frame), or runtime.onMessageExternal, if a different extension. Note that extensions cannot send messages to content scripts using this method. To send messages to content scripts, use tabs.sendMessage.
 Parameters
     
@@ -890,22 +770,6 @@ Parameters
     Whether the TLS channel ID will be passed into onMessageExternal for processes that are listening for the connection event.
 
     
-    
-      callback
-      function optional
-    
-      Chrome 99+
-      
-    
-          The callback parameter looks like:
-          (response: any) => void
-        
-    
-      response
-      any
-    The JSON response object sent by the handler of the message. If an error occurs while connecting to the extension, the callback will be called with no arguments and runtime.lastError will be set to the error message.
-
-    
     Returns
           
             Promise<any>
@@ -918,11 +782,7 @@ Parameters
     
       sendNativeMessage()
     
-      
-        Promise
-      
-    
-        chrome.runtime.sendNativeMessage(  application: string,  message: object,  callback?: function,): Promise<any>
+        chrome.runtime.sendNativeMessage(  application: string,  message: object,): Promise<any>
       Send a single message to a native application. This method requires the "nativeMessaging" permission.
 Parameters
     
@@ -935,22 +795,6 @@ Parameters
       object
     The message that will be passed to the native messaging host.
 
-    
-      callback
-      function optional
-    
-      Chrome 99+
-      
-    
-          The callback parameter looks like:
-          (response: any) => void
-        
-    
-      response
-      any
-    The response message sent by the native messaging host. If an error occurs while connecting to the native messaging host, the callback will be called with no arguments and runtime.lastError will be set to the error message.
-
-    
     Returns
           
             Promise<any>
@@ -963,11 +807,7 @@ Parameters
     
       setUninstallURL()
     
-      
-        Promise
-      
-    
-        chrome.runtime.setUninstallURL(  url: string,  callback?: function,): Promise<void>
+        chrome.runtime.setUninstallURL(  url: string,): Promise<void>
       Sets the URL to be visited upon uninstallation. This may be used to clean up server-side data, do analytics, and implement surveys. Maximum 1023 characters.
 Parameters
     
@@ -975,16 +815,6 @@ Parameters
       string
     URL to be opened after the extension is uninstalled. This URL must have an http: or https: scheme. Set an empty string to not open a new tab upon uninstallation.
 
-    
-      callback
-      function optional
-    
-      Chrome 45+
-      
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>

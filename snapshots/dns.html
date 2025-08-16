@@ -71,11 +71,7 @@ Types
     
       resolve()
     
-      
-        Promise
-      
-    
-        chrome.dns.resolve(  hostname: string,  callback?: function,): Promise<ResolveCallbackResolveInfo>
+        chrome.dns.resolve(  hostname: string,): Promise<ResolveCallbackResolveInfo>
       Resolves the given hostname or IP address literal.
 Parameters
     
@@ -83,24 +79,13 @@ Parameters
       string
     The hostname to resolve.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (resolveInfo: ResolveCallbackResolveInfo) => void
-        
-    
-      resolveInfo
-      ResolveCallbackResolveInfo
-    
-    
     Returns
           
             Promise<ResolveCallbackResolveInfo>
             
         
       
+
 
   
 

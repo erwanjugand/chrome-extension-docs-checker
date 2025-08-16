@@ -196,26 +196,9 @@ Enum
     
       getPrintJobs()
     
-      
-        Promise
-      
-    
-        chrome.printingMetrics.getPrintJobs(  callback?: function,): Promise<PrintJobInfo[]>
+        chrome.printingMetrics.getPrintJobs(): Promise<PrintJobInfo[]>
       Returns the list of the finished print jobs.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (jobs: PrintJobInfo[]) => void
-        
-    
-      jobs
-      PrintJobInfo[]
-    
-    
-    Returns
+Returns
           
             Promise<PrintJobInfo[]>
             
@@ -244,6 +227,7 @@ Parameters
     
     
     
+
 
   
 

@@ -60,7 +60,7 @@ executed after the folder is created.
 chrome.bookmarks.create(
   {'parentId': bookmarkBar.id, 'title': 'Extension bookmarks'},
   function(newFolder) {
-    console.log("added folder: &quot; + newFolder.title);
+    console.log("added folder: " + newFolder.title);
   },
 );
 
@@ -220,28 +220,12 @@ Enum
     
       create()
     
-      
-        Promise
-      
-    
-        chrome.bookmarks.create(  bookmark: CreateDetails,  callback?: function,): Promise<BookmarkTreeNode>
+        chrome.bookmarks.create(  bookmark: CreateDetails,): Promise<BookmarkTreeNode>
       Creates a bookmark or folder under the specified parentId. If url is NULL or missing, it will be a folder.
 Parameters
     
       bookmark
       CreateDetails
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (result: BookmarkTreeNode) =& gt;void
-        
-    
-      result
-      BookmarkTreeNode
-    
     
     Returns
           
@@ -255,11 +239,7 @@ Parameters
     
       get()
     
-      
-        Promise
-      
-    
-        chrome.bookmarks.get(  idOrIdList: string | [string, ...string[]],  callback?: function,): Promise<BookmarkTreeNode[]>
+        chrome.bookmarks.get(  idOrIdList: string | [string, ...string[]],): Promise<BookmarkTreeNode[]>
       Retrieves the specified BookmarkTreeNode(s).
 Parameters
     
@@ -267,18 +247,6 @@ Parameters
       string | [string, ...string[]]
     A single string-valued id, or an array of string-valued ids
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (results: BookmarkTreeNode[]) =& gt;void
-        
-    
-      results
-      BookmarkTreeNode[]
-    
-    
     Returns
           
             Promise<BookmarkTreeNode[]>
@@ -291,28 +259,12 @@ Parameters
     
       getChildren()
     
-      
-        Promise
-      
-    
-        chrome.bookmarks.getChildren(  id: string,  callback?: function,): Promise<BookmarkTreeNode[]>
+        chrome.bookmarks.getChildren(  id: string,): Promise<BookmarkTreeNode[]>
       Retrieves the children of the specified BookmarkTreeNode id.
 Parameters
     
       id
       string
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (results: BookmarkTreeNode[]) =& gt;void
-        
-    
-      results
-      BookmarkTreeNode[]
-    
     
     Returns
           
@@ -326,11 +278,7 @@ Parameters
     
       getRecent()
     
-      
-        Promise
-      
-    
-        chrome.bookmarks.getRecent(  numberOfItems: number,  callback?: function,): Promise<BookmarkTreeNode[]>
+        chrome.bookmarks.getRecent(  numberOfItems: number,): Promise<BookmarkTreeNode[]>
       Retrieves the recently added bookmarks.
 Parameters
     
@@ -338,18 +286,6 @@ Parameters
       number
     The maximum number of items to return.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (results: BookmarkTreeNode[]) =& gt;void
-        
-    
-      results
-      BookmarkTreeNode[]
-    
-    
     Returns
           
             Promise<BookmarkTreeNode[]>
@@ -362,11 +298,7 @@ Parameters
     
       getSubTree()
     
-      
-        Promise
-      
-    
-        chrome.bookmarks.getSubTree(  id: string,  callback?: function,): Promise<BookmarkTreeNode[]>
+        chrome.bookmarks.getSubTree(  id: string,): Promise<BookmarkTreeNode[]>
       Retrieves part of the Bookmarks hierarchy, starting at the specified node.
 Parameters
     
@@ -374,18 +306,6 @@ Parameters
       string
     The ID of the root of the subtree to retrieve.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (results: BookmarkTreeNode[]) =& gt;void
-        
-    
-      results
-      BookmarkTreeNode[]
-    
-    
     Returns
           
             Promise<BookmarkTreeNode[]>
@@ -398,26 +318,9 @@ Parameters
     
       getTree()
     
-      
-        Promise
-      
-    
-        chrome.bookmarks.getTree(  callback?: function,): Promise<BookmarkTreeNode[]>
+        chrome.bookmarks.getTree(): Promise<BookmarkTreeNode[]>
       Retrieves the entire Bookmarks hierarchy.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (results: BookmarkTreeNode[]) =& gt;void
-        
-    
-      results
-      BookmarkTreeNode[]
-    
-    
-    Returns
+Returns
           
             Promise<BookmarkTreeNode[]>
             
@@ -429,11 +332,7 @@ Parameters
     
       move()
     
-      
-        Promise
-      
-    
-        chrome.bookmarks.move(  id: string,  destination: object,  callback?: function,): Promise<BookmarkTreeNode>
+        chrome.bookmarks.move(  id: string,  destination: object,): Promise<BookmarkTreeNode>
       Moves the specified BookmarkTreeNode to the provided location.
 Parameters
     
@@ -453,18 +352,6 @@ Parameters
       string optional
     
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (result: BookmarkTreeNode) =& gt;void
-        
-    
-      result
-      BookmarkTreeNode
-    
-    
     Returns
           
             Promise<BookmarkTreeNode>
@@ -477,24 +364,13 @@ Parameters
     
       remove()
     
-      
-        Promise
-      
-    
-        chrome.bookmarks.remove(  id: string,  callback?: function,): Promise<void>
+        chrome.bookmarks.remove(  id: string,): Promise<void>
       Removes a bookmark or an empty bookmark folder.
 Parameters
     
       id
       string
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () =& gt;void
-        
     Returns
           
             Promise<void>
@@ -507,24 +383,13 @@ Parameters
     
       removeTree()
     
-      
-        Promise
-      
-    
-        chrome.bookmarks.removeTree(  id: string,  callback?: function,): Promise<void>
+        chrome.bookmarks.removeTree(  id: string,): Promise<void>
       Recursively removes a bookmark folder.
 Parameters
     
       id
       string
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () =& gt;void
-        
     Returns
           
             Promise<void>
@@ -537,11 +402,7 @@ Parameters
     
       search()
     
-      
-        Promise
-      
-    
-        chrome.bookmarks.search(  query: string | object,  callback?: function,): Promise<BookmarkTreeNode[]>
+        chrome.bookmarks.search(  query: string | object,): Promise<BookmarkTreeNode[]>
       Searches for BookmarkTreeNodes matching the given query. Queries specified with an object produce BookmarkTreeNodes matching all specified properties.
 Parameters
     
@@ -565,18 +426,6 @@ Parameters
     The URL of the bookmark; matches verbatim. Note that folders have no URL.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (results: BookmarkTreeNode[]) =& gt;void
-        
-    
-      results
-      BookmarkTreeNode[]
-    
-    
     Returns
           
             Promise<BookmarkTreeNode[]>
@@ -589,11 +438,7 @@ Parameters
     
       update()
     
-      
-        Promise
-      
-    
-        chrome.bookmarks.update(  id: string,  changes: object,  callback?: function,): Promise<BookmarkTreeNode>
+        chrome.bookmarks.update(  id: string,  changes: object,): Promise<BookmarkTreeNode>
       Updates the properties of a bookmark or folder. Specify only the properties that you want to change; unspecified properties will be left unchanged. Note: Currently, only 'title' and 'url' are supported.
 Parameters
     
@@ -611,18 +456,6 @@ Parameters
     
       url
       string optional
-    
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (result: BookmarkTreeNode) =& gt;void
-        
-    
-      result
-      BookmarkTreeNode
     
     
     Returns
@@ -646,7 +479,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (id: string, changeInfo: object) =& gt;void
+          (id: string, changeInfo: object) => void
         
     
       id
@@ -678,7 +511,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (id: string, reorderInfo: object) =& gt;void
+          (id: string, reorderInfo: object) => void
         
     
       id
@@ -706,7 +539,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (id: string, bookmark: BookmarkTreeNode) =& gt;void
+          (id: string, bookmark: BookmarkTreeNode) => void
         
     
       id
@@ -729,7 +562,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          () =& gt;void
+          () => void
         
     
     
@@ -743,7 +576,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          () =& gt;void
+          () => void
         
     
     
@@ -757,7 +590,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (id: string, moveInfo: object) =& gt;void
+          (id: string, moveInfo: object) => void
         
     
       id
@@ -797,7 +630,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (id: string, removeInfo: object) =& gt;void
+          (id: string, removeInfo: object) => void
         
     
       id
@@ -825,6 +658,7 @@ Parameters
     
     
     
+
 
   
 

@@ -324,27 +324,9 @@ Properties
     
       getVoices()
     
-      
-        Promise
-      
-    
-        chrome.tts.getVoices(  callback?: function,): Promise<TtsVoice[]>
+        chrome.tts.getVoices(): Promise<TtsVoice[]>
       Gets an array of all available voices.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (voices: TtsVoice[]) => void
-        
-    
-      voices
-      TtsVoice[]
-    Array of tts.TtsVoice objects representing the available voices for speech synthesis.
-
-    
-    Returns
+Returns
           
             Promise<TtsVoice[]>
             
@@ -356,27 +338,9 @@ Parameters
     
       isSpeaking()
     
-      
-        Promise
-      
-    
-        chrome.tts.isSpeaking(  callback?: function,): Promise<boolean>
+        chrome.tts.isSpeaking(): Promise<boolean>
       Checks whether the engine is currently speaking. On Mac OS X, the result is true whenever the system speech engine is speaking, even if the speech wasn't initiated by Chrome.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (speaking: boolean) => void
-        
-    
-      speaking
-      boolean
-    True if speaking, false otherwise.
-
-    
-    Returns
+Returns
           
             Promise<boolean>
             
@@ -400,11 +364,7 @@ Parameters
     
       speak()
     
-      
-        Promise
-      
-    
-        chrome.tts.speak(  utterance: string,  options?: TtsOptions,  callback?: function,): Promise<void>
+        chrome.tts.speak(  utterance: string,  options?: TtsOptions,): Promise<void>
       Speaks text using a text-to-speech engine.
 Parameters
     
@@ -417,13 +377,6 @@ Parameters
       TtsOptions optional
     The speech options.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -457,6 +410,7 @@ Parameters
           () => void
         
     
+
 
   
 

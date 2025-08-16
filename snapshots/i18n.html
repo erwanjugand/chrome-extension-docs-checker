@@ -560,12 +560,10 @@ Types
     
       detectLanguage()
     
-      
-        Promise
       Chrome 47+
       
     
-        chrome.i18n.detectLanguage(  text: string,  callback?: function,): Promise<object>
+        chrome.i18n.detectLanguage(  text: string,): Promise<object>
       Detects the language of the provided text using CLD.
 Parameters
     
@@ -573,40 +571,6 @@ Parameters
       string
     User input string to be translated.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (result: object) => void
-        
-    
-      result
-      object
-    LanguageDetectionResult object that holds detected langugae reliability and array of DetectedLanguage
-
-    
-      isReliable
-      boolean
-    CLD detected language reliability
-
-    
-      languages
-      object[]
-    array of detectedLanguage
-
-    
-      language
-      string
-    
-    
-      percentage
-      number
-    The percentage of the detected language
-
-    
-    
-    
     Returns
           
             Promise<object>
@@ -619,27 +583,9 @@ Parameters
     
       getAcceptLanguages()
     
-      
-        Promise
-      
-    
-        chrome.i18n.getAcceptLanguages(  callback?: function,): Promise<LanguageCode[]>
+        chrome.i18n.getAcceptLanguages(): Promise<LanguageCode[]>
       Gets the accept-languages of the browser. This is different from the locale used by the browser; to get the locale, use i18n.getUILanguage.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (languages: string[]) => void
-        
-    
-      languages
-      string[]
-    Array of LanguageCode
-
-    
-    Returns
+Returns
           
             Promise<LanguageCode[]>
             
@@ -696,6 +642,7 @@ Returns
 
         
       
+
 
   
 

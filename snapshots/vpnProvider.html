@@ -120,11 +120,7 @@ Enum
     
       createConfig()
     
-      
-        Promise
-      
-    
-        chrome.vpnProvider.createConfig(  name: string,  callback?: function,): Promise<string>
+        chrome.vpnProvider.createConfig(  name: string,): Promise<string>
       Creates a new VPN configuration that persists across multiple login sessions of the user.
 Parameters
     
@@ -132,19 +128,6 @@ Parameters
       string
     The name of the VPN configuration.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (id: string) => void
-        
-    
-      id
-      string
-    A unique ID for the created configuration, or undefined on failure.
-
-    
     Returns
           
             Promise<string>
@@ -157,11 +140,7 @@ Parameters
     
       destroyConfig()
     
-      
-        Promise
-      
-    
-        chrome.vpnProvider.destroyConfig(  id: string,  callback?: function,): Promise<void>
+        chrome.vpnProvider.destroyConfig(  id: string,): Promise<void>
       Destroys a VPN configuration created by the extension.
 Parameters
     
@@ -169,13 +148,6 @@ Parameters
       string
     ID of the VPN configuration to destroy.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -188,11 +160,7 @@ Parameters
     
       notifyConnectionStateChanged()
     
-      
-        Promise
-      
-    
-        chrome.vpnProvider.notifyConnectionStateChanged(  state: VpnConnectionState,  callback?: function,): Promise<void>
+        chrome.vpnProvider.notifyConnectionStateChanged(  state: VpnConnectionState,): Promise<void>
       Notifies the VPN session state to the platform. This will succeed only when the VPN session is owned by the extension.
 Parameters
     
@@ -200,13 +168,6 @@ Parameters
       VpnConnectionState
     The VPN session state of the VPN client.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -219,11 +180,7 @@ Parameters
     
       sendPacket()
     
-      
-        Promise
-      
-    
-        chrome.vpnProvider.sendPacket(  data: ArrayBuffer,  callback?: function,): Promise<void>
+        chrome.vpnProvider.sendPacket(  data: ArrayBuffer,): Promise<void>
       Sends an IP packet through the tunnel created for the VPN session. This will succeed only when the VPN session is owned by the extension.
 Parameters
     
@@ -231,13 +188,6 @@ Parameters
       ArrayBuffer
     The IP packet to be sent to the platform.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -250,11 +200,7 @@ Parameters
     
       setParameters()
     
-      
-        Promise
-      
-    
-        chrome.vpnProvider.setParameters(  parameters: Parameters,  callback?: function,): Promise<void>
+        chrome.vpnProvider.setParameters(  parameters: Parameters,): Promise<void>
       Sets the parameters for the VPN session. This should be called immediately after "connected" is received from the platform. This will succeed only when the VPN session is owned by the extension.
 Parameters
     
@@ -262,13 +208,6 @@ Parameters
       Parameters
     The parameters for the VPN session.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -394,6 +333,7 @@ Parameters
     
     
     
+
 
   
 

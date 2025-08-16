@@ -159,11 +159,7 @@ Enum
     
       getDevices()
     
-      
-        Promise
-      
-    
-        chrome.audio.getDevices(  filter?: DeviceFilter,  callback?: function,): Promise<AudioDeviceInfo[]>
+        chrome.audio.getDevices(  filter?: DeviceFilter,): Promise<AudioDeviceInfo[]>
       Gets a list of audio devices filtered based on filter.
 Parameters
     
@@ -171,18 +167,6 @@ Parameters
       DeviceFilter optional
     Device properties by which to filter the list of returned audio devices. If the filter is not set or set to {}, returned device list will contain all available audio devices.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (devices: AudioDeviceInfo[]) => void
-        
-    
-      devices
-      AudioDeviceInfo[]
-    
-    
     Returns
           
             Promise<AudioDeviceInfo[]>
@@ -195,11 +179,7 @@ Parameters
     
       getMute()
     
-      
-        Promise
-      
-    
-        chrome.audio.getMute(  streamType: StreamType,  callback?: function,): Promise<boolean>
+        chrome.audio.getMute(  streamType: StreamType,): Promise<boolean>
       Gets the system-wide mute state for the specified stream type.
 Parameters
     
@@ -207,18 +187,6 @@ Parameters
       StreamType
     Stream type for which mute state should be fetched.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (value: boolean) => void
-        
-    
-      value
-      boolean
-    
-    
     Returns
           
             Promise<boolean>
@@ -231,11 +199,7 @@ Parameters
     
       setActiveDevices()
     
-      
-        Promise
-      
-    
-        chrome.audio.setActiveDevices(  ids: DeviceIdLists,  callback?: function,): Promise<void>
+        chrome.audio.setActiveDevices(  ids: DeviceIdLists,): Promise<void>
       Sets lists of active input and/or output devices.
 Parameters
     
@@ -244,13 +208,6 @@ Parameters
     Specifies IDs of devices that should be active. If either the input or output list is not set, devices in that category are unaffected.
 It is an error to pass in a non-existent device ID.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -263,11 +220,7 @@ It is an error to pass in a non-existent device ID.
     
       setMute()
     
-      
-        Promise
-      
-    
-        chrome.audio.setMute(  streamType: StreamType,  isMuted: boolean,  callback?: function,): Promise<void>
+        chrome.audio.setMute(  streamType: StreamType,  isMuted: boolean,): Promise<void>
       Sets mute state for a stream type. The mute state will apply to all audio devices with the specified audio stream type.
 Parameters
     
@@ -280,13 +233,6 @@ Parameters
       boolean
     New mute value.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -299,11 +245,7 @@ Parameters
     
       setProperties()
     
-      
-        Promise
-      
-    
-        chrome.audio.setProperties(  id: string,  properties: DeviceProperties,  callback?: function,): Promise<void>
+        chrome.audio.setProperties(  id: string,  properties: DeviceProperties,): Promise<void>
       Sets the properties for the input or output device.
 Parameters
     
@@ -314,13 +256,6 @@ Parameters
       properties
       DeviceProperties
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -388,6 +323,7 @@ Parameters
     
     
     
+
 
   
 

@@ -234,6 +234,22 @@ Site-specific side panel.
 Types
   
     
+      CloseOptions
+    
+      Pending
+    Properties
+    
+      tabId
+      number optional
+    The tab in which to close the side panel. If a tab-specific side panel is open in the specified tab, it will be closed for that tab. At least one of this or windowId must be provided.
+
+    
+      windowId
+      number optional
+    The window in which to close the side panel. If a global side panel is open in the specified window, it will be closed for all tabs in that window where no tab-specific panel is active. At least one of this or tabId must be provided.
+
+    
+    
       GetPanelOptions
     Properties
     
@@ -319,26 +335,11 @@ Enum
     
       getLayout()
     
-      
-        Promise
       Pending
     
-        chrome.sidePanel.getLayout(  callback?: function,): Promise<PanelLayout>
+        chrome.sidePanel.getLayout(): Promise<PanelLayout>
       Returns the side panel's current layout.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (layout: PanelLayout) => void
-        
-    
-      layout
-      PanelLayout
-    
-    
-    Returns
+Returns
           
             Promise<PanelLayout>
             
@@ -347,11 +348,7 @@ Parameters
     
       getOptions()
     
-      
-        Promise
-      
-    
-        chrome.sidePanel.getOptions(  options: GetPanelOptions,  callback?: function,): Promise<PanelOptions>
+        chrome.sidePanel.getOptions(  options: GetPanelOptions,): Promise<PanelOptions>
       Returns the active panel configuration.
 Parameters
     
@@ -359,18 +356,6 @@ Parameters
       GetPanelOptions
     Specifies the context to return the configuration for.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (options: PanelOptions) => void
-        
-    
-      options
-      PanelOptions
-    
-    
     Returns
           
             Promise<PanelOptions>
@@ -380,26 +365,9 @@ Parameters
     
       getPanelBehavior()
     
-      
-        Promise
-      
-    
-        chrome.sidePanel.getPanelBehavior(  callback?: function,): Promise<PanelBehavior>
+        chrome.sidePanel.getPanelBehavior(): Promise<PanelBehavior>
       Returns the extension's current side panel behavior.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (behavior: PanelBehavior) => void
-        
-    
-      behavior
-      PanelBehavior
-    
-    
-    Returns
+Returns
           
             Promise<PanelBehavior>
             
@@ -408,12 +376,10 @@ Parameters
     
       open()
     
-      
-        Promise
       Chrome 116+
       
     
-        chrome.sidePanel.open(  options: OpenOptions,  callback?: function,): Promise<void>
+        chrome.sidePanel.open(  options: OpenOptions,): Promise<void>
       Opens the side panel for the extension. This may only be called in response to a user action.
 Parameters
     
@@ -421,13 +387,6 @@ Parameters
       OpenOptions
     Specifies the context in which to open the side panel.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -437,11 +396,7 @@ Parameters
     
       setOptions()
     
-      
-        Promise
-      
-    
-        chrome.sidePanel.setOptions(  options: PanelOptions,  callback?: function,): Promise<void>
+        chrome.sidePanel.setOptions(  options: PanelOptions,): Promise<void>
       Configures the side panel.
 Parameters
     
@@ -449,13 +404,6 @@ Parameters
       PanelOptions
     The configuration options to apply to the panel.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -465,11 +413,7 @@ Parameters
     
       setPanelBehavior()
     
-      
-        Promise
-      
-    
-        chrome.sidePanel.setPanelBehavior(  behavior: PanelBehavior,  callback?: function,): Promise<void>
+        chrome.sidePanel.setPanelBehavior(  behavior: PanelBehavior,): Promise<void>
       Configures the extension's side panel behavior. This is an upsert operation.
 Parameters
     
@@ -477,19 +421,13 @@ Parameters
       PanelBehavior
     The new behavior to be set.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
             
         
       
+
 
   
 

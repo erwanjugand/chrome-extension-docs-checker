@@ -548,27 +548,12 @@ Parameters
     
       getDisplayLayout()
     
-      
-        Promise
       Chrome 53+
       
     
-        chrome.system.display.getDisplayLayout(  callback?: function,): Promise<DisplayLayout[]>
+        chrome.system.display.getDisplayLayout(): Promise<DisplayLayout[]>
       Requests the layout info for all displays. NOTE: This is only available to ChromeOS Kiosk apps and Web UI.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (layouts: DisplayLayout[]) => void
-        
-    
-      layouts
-      DisplayLayout[]
-    
-    
-    Returns
+Returns
           
             Promise<DisplayLayout[]>
             
@@ -580,11 +565,7 @@ Parameters
     
       getInfo()
     
-      
-        Promise
-      
-    
-        chrome.system.display.getInfo(  flags?: GetInfoFlags,  callback?: function,): Promise<DisplayUnitInfo[]>
+        chrome.system.display.getInfo(  flags?: GetInfoFlags,): Promise<DisplayUnitInfo[]>
       Requests the information for all attached display devices.
 Parameters
     
@@ -595,18 +576,6 @@ Parameters
       
     Options affecting how the information is returned.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (displayInfo: DisplayUnitInfo[]) => void
-        
-    
-      displayInfo
-      DisplayUnitInfo[]
-    
-    
     Returns
           
             Promise<DisplayUnitInfo[]>
@@ -684,12 +653,10 @@ Parameters
     
       setDisplayLayout()
     
-      
-        Promise
       Chrome 53+
       
     
-        chrome.system.display.setDisplayLayout(  layouts: DisplayLayout[],  callback?: function,): Promise<void>
+        chrome.system.display.setDisplayLayout(  layouts: DisplayLayout[],): Promise<void>
       Set the layout for all displays. Any display not included will use the default layout. If a layout would overlap or be otherwise invalid it will be adjusted to a valid layout. After layout is resolved, an onDisplayChanged event will be triggered. NOTE: This is only available to ChromeOS Kiosk apps and Web UI.
 Parameters
     
@@ -697,13 +664,6 @@ Parameters
       DisplayLayout[]
     The layout information, required for all displays except the primary display.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -716,11 +676,7 @@ Parameters
     
       setDisplayProperties()
     
-      
-        Promise
-      
-    
-        chrome.system.display.setDisplayProperties(  id: string,  info: DisplayProperties,  callback?: function,): Promise<void>
+        chrome.system.display.setDisplayProperties(  id: string,  info: DisplayProperties,): Promise<void>
       Updates the properties for the display specified by id, according to the information provided in info. On failure, runtime.lastError will be set. NOTE: This is only available to ChromeOS Kiosk apps and Web UI.
 Parameters
     
@@ -733,13 +689,6 @@ Parameters
       DisplayProperties
     The information about display properties that should be changed. A property will be changed only if a new value for it is specified in info.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -752,12 +701,10 @@ Parameters
     
       setMirrorMode()
     
-      
-        Promise
       Chrome 65+
       
     
-        chrome.system.display.setMirrorMode(  info: MirrorModeInfo,  callback?: function,): Promise<void>
+        chrome.system.display.setMirrorMode(  info: MirrorModeInfo,): Promise<void>
       Sets the display mode to the specified mirror mode. Each call resets the state from previous calls. Calling setDisplayProperties() will fail for the mirroring destination displays. NOTE: This is only available to ChromeOS Kiosk apps and Web UI.
 Parameters
     
@@ -765,13 +712,6 @@ Parameters
       MirrorModeInfo
     The information of the mirror mode that should be applied to the display mode.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -784,12 +724,10 @@ Parameters
     
       showNativeTouchCalibration()
     
-      
-        Promise
       Chrome 57+
       
     
-        chrome.system.display.showNativeTouchCalibration(  id: string,  callback?: function,): Promise<boolean>
+        chrome.system.display.showNativeTouchCalibration(  id: string,): Promise<boolean>
       Displays the native touch calibration UX for the display with id as display id. This will show an overlay on the screen with required instructions on how to proceed. The callback will be invoked in case of successful calibration only. If the calibration fails, this will throw an error.
 Parameters
     
@@ -797,18 +735,6 @@ Parameters
       string
     The display's unique identifier.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (success: boolean) => void
-        
-    
-      success
-      boolean
-    
-    
     Returns
           
             Promise<boolean>
@@ -848,6 +774,7 @@ Parameters
           () => void
         
     
+
 
   
 

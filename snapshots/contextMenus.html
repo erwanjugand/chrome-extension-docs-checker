@@ -253,11 +253,7 @@ Parameters
     
       remove()
     
-      
-        Promise
-      
-    
-        chrome.contextMenus.remove(  menuItemId: string | number,  callback?: function,): Promise<void>
+        chrome.contextMenus.remove(  menuItemId: string | number,): Promise<void>
       Removes a context menu item.
 Parameters
     
@@ -265,13 +261,6 @@ Parameters
       string | number
     The ID of the context menu item to remove.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -284,21 +273,9 @@ Parameters
     
       removeAll()
     
-      
-        Promise
-      
-    
-        chrome.contextMenus.removeAll(  callback?: function,): Promise<void>
+        chrome.contextMenus.removeAll(): Promise<void>
       Removes all context menu items added by this extension.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
-    Returns
+Returns
           
             Promise<void>
             
@@ -310,11 +287,7 @@ Parameters
     
       update()
     
-      
-        Promise
-      
-    
-        chrome.contextMenus.update(  id: string | number,  updateProperties: object,  callback?: function,): Promise<void>
+        chrome.contextMenus.update(  id: string | number,  updateProperties: object,): Promise<void>
       Updates a previously created context menu item.
 Parameters
     
@@ -392,13 +365,6 @@ Parameters
 
     
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -432,6 +398,7 @@ Parameters
     
     
     
+
 
   
 

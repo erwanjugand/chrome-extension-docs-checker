@@ -221,13 +221,11 @@ Types
     
       addHostAccessRequest()
     
-      
-        Promise
       Chrome 133+
       MV3+
       
     
-        chrome.permissions.addHostAccessRequest(  request: object,  callback?: function,): Promise<void>
+        chrome.permissions.addHostAccessRequest(  request: object,): Promise<void>
       Adds a host access request. Request will only be signaled to the user if extension can be granted access to the host in the request. Request will be reset on cross-origin navigation. When accepted, grants persistent access to the site’s top origin
 Parameters
     
@@ -250,13 +248,6 @@ Parameters
     The id of the tab where host access requests can be shown. If provided, the request is shown on the specified tab and is removed when the tab navigates to a new origin. Adding a new request will override an existent request for documentId. This or documentId must be specified.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -266,29 +257,12 @@ Parameters
     
       contains()
     
-      
-        Promise
-      
-    
-        chrome.permissions.contains(  permissions: Permissions,  callback?: function,): Promise<boolean>
+        chrome.permissions.contains(  permissions: Permissions,): Promise<boolean>
       Checks if the extension has the specified permissions.
 Parameters
     
       permissions
       Permissions
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (result: boolean) => void
-        
-    
-      result
-      boolean
-    True if the extension has the specified permissions. If an origin is specified as both an optional permission and a content script match pattern, this will return false unless both permissions are granted.
-
     
     Returns
           
@@ -302,27 +276,9 @@ Parameters
     
       getAll()
     
-      
-        Promise
-      
-    
-        chrome.permissions.getAll(  callback?: function,): Promise<Permissions>
+        chrome.permissions.getAll(): Promise<Permissions>
       Gets the extension's current set of permissions.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (permissions: Permissions) => void
-        
-    
-      permissions
-      Permissions
-    The extension's active permissions. Note that the origins property will contain granted origins from those specified in the permissions and optional_permissions keys in the manifest and those associated with Content Scripts.
-
-    
-    Returns
+Returns
           
             Promise<Permissions>
             
@@ -334,29 +290,12 @@ Parameters
     
       remove()
     
-      
-        Promise
-      
-    
-        chrome.permissions.remove(  permissions: Permissions,  callback?: function,): Promise<boolean>
+        chrome.permissions.remove(  permissions: Permissions,): Promise<boolean>
       Removes access to the specified permissions. If there are any problems removing the permissions, runtime.lastError will be set.
 Parameters
     
       permissions
       Permissions
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (removed: boolean) => void
-        
-    
-      removed
-      boolean
-    True if the permissions were removed.
-
     
     Returns
           
@@ -370,13 +309,11 @@ Parameters
     
       removeHostAccessRequest()
     
-      
-        Promise
       Chrome 133+
       MV3+
       
     
-        chrome.permissions.removeHostAccessRequest(  request: object,  callback?: function,): Promise<void>
+        chrome.permissions.removeHostAccessRequest(  request: object,): Promise<void>
       Removes a host access request, if existent.
 Parameters
     
@@ -399,13 +336,6 @@ Parameters
     The id of the tab where host access request will be removed. This or documentId must be specified.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -415,29 +345,12 @@ Parameters
     
       request()
     
-      
-        Promise
-      
-    
-        chrome.permissions.request(  permissions: Permissions,  callback?: function,): Promise<boolean>
+        chrome.permissions.request(  permissions: Permissions,): Promise<boolean>
       Requests access to the specified permissions, displaying a prompt to the user if necessary. These permissions must either be defined in the optional_permissions field of the manifest or be required permissions that were withheld by the user. Paths on origin patterns will be ignored. You can request subsets of optional origin permissions; for example, if you specify *://*\/* in the optional_permissions section of the manifest, you can request http://example.com/. If there are any problems requesting the permissions, runtime.lastError will be set.
 Parameters
     
       permissions
       Permissions
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (granted: boolean) => void
-        
-    
-      granted
-      boolean
-    True if the user granted the specified permissions.
-
     
     Returns
           

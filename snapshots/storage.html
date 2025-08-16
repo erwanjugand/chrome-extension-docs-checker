@@ -266,23 +266,11 @@ Enum
     
       clear
       void
-    
-      
-        Promise
-      
     Removes all items from storage.
 
           The clear function looks like:
-          (callback?: function) => {...}
+          () => {...}
         
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
-    
           
             returnsPromise<void>
             
@@ -294,33 +282,16 @@ Enum
     
       get
       void
-    
-      
-        Promise
-      
     Gets one or more items from storage.
 
           The get function looks like:
-          (keys?: string | string[] | object, callback?: function) => {...}
+          (keys?: string | string[] | object) => {...}
         
     
       keys
       string | string[] | object optional
     A single key to get, list of keys to get, or a dictionary specifying default values (see description of the object). An empty list or object will return an empty result object. Pass in null to get the entire contents of storage.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (items: object) => void
-        
-    
-      items
-      object
-    Object with items in their key-value mappings.
-
-    
     
           
             returnsPromise<object>
@@ -333,33 +304,16 @@ Enum
     
       getBytesInUse
       void
-    
-      
-        Promise
-      
     Gets the amount of space (in bytes) being used by one or more items.
 
           The getBytesInUse function looks like:
-          (keys?: string | string[], callback?: function) => {...}
+          (keys?: string | string[]) => {...}
         
     
       keys
       string | string[] optional
     A single key or list of keys to get the total usage for. An empty list will return 0. Pass in null to get the total usage of all of storage.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (bytesInUse: number) => void
-        
-    
-      bytesInUse
-      number
-    Amount of space being used in storage, in bytes.
-
-    
     
           
             returnsPromise<number>
@@ -373,29 +327,13 @@ Enum
       getKeys
       void
     
-      
-        Promise
       Chrome 130+
       
     Gets all keys from storage.
 
           The getKeys function looks like:
-          (callback?: function) => {...}
+          () => {...}
         
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (keys: string[]) => void
-        
-    
-      keys
-      string[]
-    Array with keys read from storage.
-
-    
-    
           
             returnsPromise<string[]>
             
@@ -404,27 +342,16 @@ Enum
     
       remove
       void
-    
-      
-        Promise
-      
     Removes one or more items from storage.
 
           The remove function looks like:
-          (keys: string | string[], callback?: function) => {...}
+          (keys: string | string[]) => {...}
         
     
       keys
       string | string[]
     A single key or a list of keys for items to remove.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     
           
             returnsPromise<void>
@@ -437,14 +364,10 @@ Enum
     
       set
       void
-    
-      
-        Promise
-      
     Sets multiple items.
 
           The set function looks like:
-          (items: object, callback?: function) => {...}
+          (items: object) => {...}
         
     
       items
@@ -452,13 +375,6 @@ Enum
     An object which gives each key/value pair to update storage with. Any other key/value pairs in storage will not be affected.
 Primitive values such as numbers will serialize as expected. Values with a typeof "object" and "function" will typically serialize to {}, with the exception of Array (serializes as expected), Date, and Regex (serialize using their String representation).
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     
           
             returnsPromise<void>
@@ -472,14 +388,12 @@ Primitive values such as numbers will serialize as expected. Values with a typeo
       setAccessLevel
       void
     
-      
-        Promise
       Chrome 102+
       
     Sets the desired access level for the storage area. By default, session storage is restricted to trusted contexts (extension pages and service workers), while managed, local, and sync storage allow access from both trusted and untrusted contexts.
 
           The setAccessLevel function looks like:
-          (accessOptions: object, callback?: function) => {...}
+          (accessOptions: object) => {...}
         
     
       accessOptions
@@ -491,13 +405,6 @@ Primitive values such as numbers will serialize as expected. Values with a typeo
     The access level of the storage area.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     
           
             returnsPromise<void>

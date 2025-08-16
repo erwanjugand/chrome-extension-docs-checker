@@ -76,29 +76,12 @@ Types
     
       getDevices()
     
-      
-        Promise
-      
-    
-        chrome.sessions.getDevices(  filter?: Filter,  callback?: function,): Promise<Device[]>
+        chrome.sessions.getDevices(  filter?: Filter,): Promise<Device[]>
       Retrieves all devices with synced sessions.
 Parameters
     
       filter
       Filter optional
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (devices: Device[]) => void
-        
-    
-      devices
-      Device[]
-    The list of sessions.Device objects for each synced session, sorted in order from device with most recently modified session to device with least recently modified session. tabs.Tab objects are sorted by recency in the windows.Window of the sessions.Session objects.
-
     
     Returns
           
@@ -112,29 +95,12 @@ Parameters
     
       getRecentlyClosed()
     
-      
-        Promise
-      
-    
-        chrome.sessions.getRecentlyClosed(  filter?: Filter,  callback?: function,): Promise<Session[]>
+        chrome.sessions.getRecentlyClosed(  filter?: Filter,): Promise<Session[]>
       Gets the list of recently closed tabs and/or windows.
 Parameters
     
       filter
       Filter optional
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (sessions: Session[]) => void
-        
-    
-      sessions
-      Session[]
-    The list of closed entries in reverse order that they were closed (the most recently closed tab or window will be at index 0). The entries may contain either tabs or windows.
-
     
     Returns
           
@@ -148,11 +114,7 @@ Parameters
     
       restore()
     
-      
-        Promise
-      
-    
-        chrome.sessions.restore(  sessionId?: string,  callback?: function,): Promise<Session>
+        chrome.sessions.restore(  sessionId?: string,): Promise<Session>
       Reopens a windows.Window or tabs.Tab, with an optional callback to run when the entry has been restored.
 Parameters
     
@@ -160,19 +122,6 @@ Parameters
       string optional
     The windows.Window.sessionId, or tabs.Tab.sessionId to restore. If this parameter is not specified, the most recently closed session is restored.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (restoredSession: Session) => void
-        
-    
-      restoredSession
-      Session
-    A sessions.Session containing the restored windows.Window or tabs.Tab object.
-
-    
     Returns
           
             Promise<Session>
@@ -197,6 +146,7 @@ Parameters
           () => void
         
     
+
 
   
 

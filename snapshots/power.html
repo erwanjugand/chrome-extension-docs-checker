@@ -55,24 +55,14 @@ Types
     
       reportActivity()
     
-      
-        Promise
       Chrome 113+
       
         ChromeOS only
       
     
-        chrome.power.reportActivity(  callback?: function,): Promise<void>
+        chrome.power.reportActivity(): Promise<void>
       Reports a user activity in order to awake the screen from a dimmed or turned off state or from a screensaver. Exits the screensaver if it is currently active.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
-    Returns
+Returns
           
             Promise<void>
             
@@ -89,6 +79,7 @@ Parameters
       Level
     
     
+
 
   
 

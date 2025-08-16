@@ -115,11 +115,7 @@ Enum
     
       clearDefaultFixedFontSize()
     
-      
-        Promise
-      
-    
-        chrome.fontSettings.clearDefaultFixedFontSize(  details?: object,  callback?: function,): Promise<void>
+        chrome.fontSettings.clearDefaultFixedFontSize(  details?: object,): Promise<void>
       Clears the default fixed font size set by this extension, if any.
 Parameters
     
@@ -127,13 +123,6 @@ Parameters
       object optional
     This parameter is currently unused.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -146,11 +135,7 @@ Parameters
     
       clearDefaultFontSize()
     
-      
-        Promise
-      
-    
-        chrome.fontSettings.clearDefaultFontSize(  details?: object,  callback?: function,): Promise<void>
+        chrome.fontSettings.clearDefaultFontSize(  details?: object,): Promise<void>
       Clears the default font size set by this extension, if any.
 Parameters
     
@@ -158,13 +143,6 @@ Parameters
       object optional
     This parameter is currently unused.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -177,11 +155,7 @@ Parameters
     
       clearFont()
     
-      
-        Promise
-      
-    
-        chrome.fontSettings.clearFont(  details: object,  callback?: function,): Promise<void>
+        chrome.fontSettings.clearFont(  details: object,): Promise<void>
       Clears the font set by this extension, if any.
 Parameters
     
@@ -199,13 +173,6 @@ Parameters
     The script for which the font should be cleared. If omitted, the global script font setting is cleared.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -218,11 +185,7 @@ Parameters
     
       clearMinimumFontSize()
     
-      
-        Promise
-      
-    
-        chrome.fontSettings.clearMinimumFontSize(  details?: object,  callback?: function,): Promise<void>
+        chrome.fontSettings.clearMinimumFontSize(  details?: object,): Promise<void>
       Clears the minimum font size set by this extension, if any.
 Parameters
     
@@ -230,13 +193,6 @@ Parameters
       object optional
     This parameter is currently unused.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -249,11 +205,7 @@ Parameters
     
       getDefaultFixedFontSize()
     
-      
-        Promise
-      
-    
-        chrome.fontSettings.getDefaultFixedFontSize(  details?: object,  callback?: function,): Promise<object>
+        chrome.fontSettings.getDefaultFixedFontSize(  details?: object,): Promise<object>
       Gets the default size for fixed width fonts.
 Parameters
     
@@ -261,29 +213,6 @@ Parameters
       object optional
     This parameter is currently unused.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (details: object) => void
-        
-    
-      details
-      object
-    
-    
-      levelOfControl
-      LevelOfControl
-    The level of control this extension has over the setting.
-
-    
-      pixelSize
-      number
-    The font size in pixels.
-
-    
-    
     Returns
           
             Promise<object>
@@ -296,11 +225,7 @@ Parameters
     
       getDefaultFontSize()
     
-      
-        Promise
-      
-    
-        chrome.fontSettings.getDefaultFontSize(  details?: object,  callback?: function,): Promise<object>
+        chrome.fontSettings.getDefaultFontSize(  details?: object,): Promise<object>
       Gets the default font size.
 Parameters
     
@@ -308,29 +233,6 @@ Parameters
       object optional
     This parameter is currently unused.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (details: object) => void
-        
-    
-      details
-      object
-    
-    
-      levelOfControl
-      LevelOfControl
-    The level of control this extension has over the setting.
-
-    
-      pixelSize
-      number
-    The font size in pixels.
-
-    
-    
     Returns
           
             Promise<object>
@@ -343,11 +245,7 @@ Parameters
     
       getFont()
     
-      
-        Promise
-      
-    
-        chrome.fontSettings.getFont(  details: object,  callback?: function,): Promise<object>
+        chrome.fontSettings.getFont(  details: object,): Promise<object>
       Gets the font for a given script and generic font family.
 Parameters
     
@@ -365,29 +263,6 @@ Parameters
     The script for which the font should be retrieved. If omitted, the font setting for the global script (script code "Zyyy") is retrieved.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (details: object) => void
-        
-    
-      details
-      object
-    
-    
-      fontId
-      string
-    The font ID. Rather than the literal font ID preference value, this may be the ID of the font that the system resolves the preference value to. So, fontId can differ from the font passed to setFont, if, for example, the font is not available on the system. The empty string signifies fallback to the global script font setting.
-
-    
-      levelOfControl
-      LevelOfControl
-    The level of control this extension has over the setting.
-
-    
-    
     Returns
           
             Promise<object>
@@ -400,26 +275,9 @@ Parameters
     
       getFontList()
     
-      
-        Promise
-      
-    
-        chrome.fontSettings.getFontList(  callback?: function,): Promise<FontName[]>
+        chrome.fontSettings.getFontList(): Promise<FontName[]>
       Gets a list of fonts on the system.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (results: FontName[]) => void
-        
-    
-      results
-      FontName[]
-    
-    
-    Returns
+Returns
           
             Promise<FontName[]>
             
@@ -431,11 +289,7 @@ Parameters
     
       getMinimumFontSize()
     
-      
-        Promise
-      
-    
-        chrome.fontSettings.getMinimumFontSize(  details?: object,  callback?: function,): Promise<object>
+        chrome.fontSettings.getMinimumFontSize(  details?: object,): Promise<object>
       Gets the minimum font size.
 Parameters
     
@@ -443,29 +297,6 @@ Parameters
       object optional
     This parameter is currently unused.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (details: object) => void
-        
-    
-      details
-      object
-    
-    
-      levelOfControl
-      LevelOfControl
-    The level of control this extension has over the setting.
-
-    
-      pixelSize
-      number
-    The font size in pixels.
-
-    
-    
     Returns
           
             Promise<object>
@@ -478,11 +309,7 @@ Parameters
     
       setDefaultFixedFontSize()
     
-      
-        Promise
-      
-    
-        chrome.fontSettings.setDefaultFixedFontSize(  details: object,  callback?: function,): Promise<void>
+        chrome.fontSettings.setDefaultFixedFontSize(  details: object,): Promise<void>
       Sets the default size for fixed width fonts.
 Parameters
     
@@ -495,13 +322,6 @@ Parameters
     The font size in pixels.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -514,11 +334,7 @@ Parameters
     
       setDefaultFontSize()
     
-      
-        Promise
-      
-    
-        chrome.fontSettings.setDefaultFontSize(  details: object,  callback?: function,): Promise<void>
+        chrome.fontSettings.setDefaultFontSize(  details: object,): Promise<void>
       Sets the default font size.
 Parameters
     
@@ -531,13 +347,6 @@ Parameters
     The font size in pixels.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -550,11 +359,7 @@ Parameters
     
       setFont()
     
-      
-        Promise
-      
-    
-        chrome.fontSettings.setFont(  details: object,  callback?: function,): Promise<void>
+        chrome.fontSettings.setFont(  details: object,): Promise<void>
       Sets the font for a given script and generic font family.
 Parameters
     
@@ -577,13 +382,6 @@ Parameters
     The script code which the font should be set. If omitted, the font setting for the global script (script code "Zyyy") is set.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -596,11 +394,7 @@ Parameters
     
       setMinimumFontSize()
     
-      
-        Promise
-      
-    
-        chrome.fontSettings.setMinimumFontSize(  details: object,  callback?: function,): Promise<void>
+        chrome.fontSettings.setMinimumFontSize(  details: object,): Promise<void>
       Sets the minimum font size.
 Parameters
     
@@ -613,13 +407,6 @@ Parameters
     The font size in pixels.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -760,6 +547,7 @@ Parameters
     
     
     
+
 
   
 

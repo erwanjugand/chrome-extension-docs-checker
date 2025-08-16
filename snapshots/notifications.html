@@ -168,11 +168,7 @@ URLs can be a data URL, a blob URL, or a URL relative to a resource within this 
     
       clear()
     
-      
-        Promise
-      
-    
-        chrome.notifications.clear(  notificationId: string,  callback?: function,): Promise<boolean>
+        chrome.notifications.clear(  notificationId: string,): Promise<boolean>
       Clears the specified notification.
 Parameters
     
@@ -180,18 +176,6 @@ Parameters
       string
     The id of the notification to be cleared. This is returned by notifications.create method.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (wasCleared: boolean) => void
-        
-    
-      wasCleared
-      boolean
-    
-    
     Returns
           
             Promise<boolean>
@@ -204,11 +188,7 @@ Parameters
     
       create()
     
-      
-        Promise
-      
-    
-        chrome.notifications.create(  notificationId?: string,  options: NotificationOptions,  callback?: function,): Promise<string>
+        chrome.notifications.create(  notificationId?: string,  options: NotificationOptions,): Promise<string>
       Creates and displays a notification.
 Parameters
     
@@ -222,18 +202,6 @@ The notificationId parameter is required before Chrome 42.
       NotificationOptions
     Contents of the notification.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (notificationId: string) => void
-        
-    
-      notificationId
-      string
-    
-    
     Returns
           
             Promise<string>
@@ -246,26 +214,9 @@ The notificationId parameter is required before Chrome 42.
     
       getAll()
     
-      
-        Promise
-      
-    
-        chrome.notifications.getAll(  callback?: function,): Promise<object>
+        chrome.notifications.getAll(): Promise<object>
       Retrieves all the notifications of this app or extension.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (notifications: object) => void
-        
-    
-      notifications
-      object
-    
-    
-    Returns
+Returns
           
             Promise<object>
             
@@ -277,26 +228,9 @@ Parameters
     
       getPermissionLevel()
     
-      
-        Promise
-      
-    
-        chrome.notifications.getPermissionLevel(  callback?: function,): Promise<PermissionLevel>
+        chrome.notifications.getPermissionLevel(): Promise<PermissionLevel>
       Retrieves whether the user has enabled notifications from this app or extension.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (level: PermissionLevel) => void
-        
-    
-      level
-      PermissionLevel
-    
-    
-    Returns
+Returns
           
             Promise<PermissionLevel>
             
@@ -308,11 +242,7 @@ Parameters
     
       update()
     
-      
-        Promise
-      
-    
-        chrome.notifications.update(  notificationId: string,  options: NotificationOptions,  callback?: function,): Promise<boolean>
+        chrome.notifications.update(  notificationId: string,  options: NotificationOptions,): Promise<boolean>
       Updates an existing notification.
 Parameters
     
@@ -325,18 +255,6 @@ Parameters
       NotificationOptions
     Contents of the notification to update to.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (wasUpdated: boolean) => void
-        
-    
-      wasUpdated
-      boolean
-    
-    
     Returns
           
             Promise<boolean>
@@ -448,6 +366,7 @@ Parameters
           () => void
         
     
+
 
   
 

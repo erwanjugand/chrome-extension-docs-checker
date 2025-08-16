@@ -307,11 +307,7 @@ Properties
     
       remove()
     
-      
-        Promise
-      
-    
-        chrome.browsingData.remove(  options: RemovalOptions,  dataToRemove: DataTypeSet,  callback?: function,): Promise<void>
+        chrome.browsingData.remove(  options: RemovalOptions,  dataToRemove: DataTypeSet,): Promise<void>
       Clears various types of browsing data stored in a user's profile.
 Parameters
     
@@ -323,13 +319,6 @@ Parameters
       DataTypeSet
     The set of data types to remove.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -342,24 +331,13 @@ Parameters
     
       removeAppcache()
     
-      
-        Promise
-      
-    
-        chrome.browsingData.removeAppcache(  options: RemovalOptions,  callback?: function,): Promise<void>
+        chrome.browsingData.removeAppcache(  options: RemovalOptions,): Promise<void>
       Clears websites' appcache data.
 Parameters
     
       options
       RemovalOptions
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -372,24 +350,13 @@ Parameters
     
       removeCache()
     
-      
-        Promise
-      
-    
-        chrome.browsingData.removeCache(  options: RemovalOptions,  callback?: function,): Promise<void>
+        chrome.browsingData.removeCache(  options: RemovalOptions,): Promise<void>
       Clears the browser's cache.
 Parameters
     
       options
       RemovalOptions
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -402,25 +369,16 @@ Parameters
     
       removeCacheStorage()
     
-      
-        Promise
       Chrome 72+
       
     
-        chrome.browsingData.removeCacheStorage(  options: RemovalOptions,  callback?: function,): Promise<void>
+        chrome.browsingData.removeCacheStorage(  options: RemovalOptions,): Promise<void>
       Clears websites' cache storage data.
 Parameters
     
       options
       RemovalOptions
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -433,24 +391,13 @@ Parameters
     
       removeCookies()
     
-      
-        Promise
-      
-    
-        chrome.browsingData.removeCookies(  options: RemovalOptions,  callback?: function,): Promise<void>
+        chrome.browsingData.removeCookies(  options: RemovalOptions,): Promise<void>
       Clears the browser's cookies and server-bound certificates modified within a particular timeframe.
 Parameters
     
       options
       RemovalOptions
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -463,24 +410,13 @@ Parameters
     
       removeDownloads()
     
-      
-        Promise
-      
-    
-        chrome.browsingData.removeDownloads(  options: RemovalOptions,  callback?: function,): Promise<void>
+        chrome.browsingData.removeDownloads(  options: RemovalOptions,): Promise<void>
       Clears the browser's list of downloaded files (not the downloaded files themselves).
 Parameters
     
       options
       RemovalOptions
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -493,24 +429,13 @@ Parameters
     
       removeFileSystems()
     
-      
-        Promise
-      
-    
-        chrome.browsingData.removeFileSystems(  options: RemovalOptions,  callback?: function,): Promise<void>
+        chrome.browsingData.removeFileSystems(  options: RemovalOptions,): Promise<void>
       Clears websites' file system data.
 Parameters
     
       options
       RemovalOptions
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -523,24 +448,13 @@ Parameters
     
       removeFormData()
     
-      
-        Promise
-      
-    
-        chrome.browsingData.removeFormData(  options: RemovalOptions,  callback?: function,): Promise<void>
+        chrome.browsingData.removeFormData(  options: RemovalOptions,): Promise<void>
       Clears the browser's stored form data (autofill).
 Parameters
     
       options
       RemovalOptions
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -553,24 +467,13 @@ Parameters
     
       removeHistory()
     
-      
-        Promise
-      
-    
-        chrome.browsingData.removeHistory(  options: RemovalOptions,  callback?: function,): Promise<void>
+        chrome.browsingData.removeHistory(  options: RemovalOptions,): Promise<void>
       Clears the browser's history.
 Parameters
     
       options
       RemovalOptions
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -583,24 +486,13 @@ Parameters
     
       removeIndexedDB()
     
-      
-        Promise
-      
-    
-        chrome.browsingData.removeIndexedDB(  options: RemovalOptions,  callback?: function,): Promise<void>
+        chrome.browsingData.removeIndexedDB(  options: RemovalOptions,): Promise<void>
       Clears websites' IndexedDB data.
 Parameters
     
       options
       RemovalOptions
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -613,24 +505,13 @@ Parameters
     
       removeLocalStorage()
     
-      
-        Promise
-      
-    
-        chrome.browsingData.removeLocalStorage(  options: RemovalOptions,  callback?: function,): Promise<void>
+        chrome.browsingData.removeLocalStorage(  options: RemovalOptions,): Promise<void>
       Clears websites' local storage data.
 Parameters
     
       options
       RemovalOptions
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -643,24 +524,13 @@ Parameters
     
       removePasswords()
     
-      
-        Promise
-      
-    
-        chrome.browsingData.removePasswords(  options: RemovalOptions,  callback?: function,): Promise<void>
+        chrome.browsingData.removePasswords(  options: RemovalOptions,): Promise<void>
       Clears the browser's stored passwords.
 Parameters
     
       options
       RemovalOptions
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -674,24 +544,15 @@ Parameters
       removePluginData()
     
       
-        Promise
-      
         Deprecated since Chrome 88
     
-        chrome.browsingData.removePluginData(  options: RemovalOptions,  callback?: function,): Promise<void>
+        chrome.browsingData.removePluginData(  options: RemovalOptions,): Promise<void>
       Support for Flash has been removed. This function has no effect.Clears plugins' data.
 Parameters
     
       options
       RemovalOptions
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -704,25 +565,16 @@ Parameters
     
       removeServiceWorkers()
     
-      
-        Promise
       Chrome 72+
       
     
-        chrome.browsingData.removeServiceWorkers(  options: RemovalOptions,  callback?: function,): Promise<void>
+        chrome.browsingData.removeServiceWorkers(  options: RemovalOptions,): Promise<void>
       Clears websites' service workers.
 Parameters
     
       options
       RemovalOptions
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -735,24 +587,13 @@ Parameters
     
       removeWebSQL()
     
-      
-        Promise
-      
-    
-        chrome.browsingData.removeWebSQL(  options: RemovalOptions,  callback?: function,): Promise<void>
+        chrome.browsingData.removeWebSQL(  options: RemovalOptions,): Promise<void>
       Clears websites' WebSQL data.
 Parameters
     
       options
       RemovalOptions
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -765,41 +606,9 @@ Parameters
     
       settings()
     
-      
-        Promise
-      
-    
-        chrome.browsingData.settings(  callback?: function,): Promise<object>
+        chrome.browsingData.settings(): Promise<object>
       Reports which types of data are currently selected in the 'Clear browsing data' settings UI. Note: some of the data types included in this API are not available in the settings UI, and some UI settings control more than one data type listed here.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (result: object) => void
-        
-    
-      result
-      object
-    
-    
-      dataRemovalPermitted
-      DataTypeSet
-    All of the types will be present in the result, with values of true if they are permitted to be removed (e.g., by enterprise policy) and false if not.
-
-    
-      dataToRemove
-      DataTypeSet
-    All of the types will be present in the result, with values of true if they are both selected to be removed and permitted to be removed, otherwise false.
-
-    
-      options
-      RemovalOptions
-    
-    
-    
-    Returns
+Returns
           
             Promise<object>
             
@@ -808,6 +617,7 @@ Parameters
     
         
       
+
 
   
 

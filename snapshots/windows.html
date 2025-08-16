@@ -190,11 +190,7 @@ Enum
     
       create()
     
-      
-        Promise
-      
-    
-        chrome.windows.create(  createData?: object,  callback?: function,): Promise<Window | undefined>
+        chrome.windows.create(  createData?: object,): Promise<Window | undefined>
       Creates (opens) a new browser window with any optional sizing, position, or default URL provided.
 Parameters
     
@@ -263,19 +259,6 @@ Parameters
     The width in pixels of the new window, including the frame. If not specified, defaults to a natural width.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (window?: Window) => void
-        
-    
-      window
-      Window optional
-    Contains details about the created window.
-
-    
     Returns
           
             Promise<Window | undefined>
@@ -288,11 +271,7 @@ Parameters
     
       get()
     
-      
-        Promise
-      
-    
-        chrome.windows.get(  windowId: number,  queryOptions?: QueryOptions,  callback?: function,): Promise<Window>
+        chrome.windows.get(  windowId: number,  queryOptions?: QueryOptions,): Promise<Window>
       Gets details about a window.
 Parameters
     
@@ -306,18 +285,6 @@ Parameters
       Chrome 88+
       
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (window: Window) => void
-        
-    
-      window
-      Window
-    
-    
     Returns
           
             Promise<Window>
@@ -330,11 +297,7 @@ Parameters
     
       getAll()
     
-      
-        Promise
-      
-    
-        chrome.windows.getAll(  queryOptions?: QueryOptions,  callback?: function,): Promise<Window[]>
+        chrome.windows.getAll(  queryOptions?: QueryOptions,): Promise<Window[]>
       Gets all windows.
 Parameters
     
@@ -343,18 +306,6 @@ Parameters
     
       Chrome 88+
       
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (windows: Window[]) => void
-        
-    
-      windows
-      Window[]
-    
     
     Returns
           
@@ -368,11 +319,7 @@ Parameters
     
       getCurrent()
     
-      
-        Promise
-      
-    
-        chrome.windows.getCurrent(  queryOptions?: QueryOptions,  callback?: function,): Promise<Window>
+        chrome.windows.getCurrent(  queryOptions?: QueryOptions,): Promise<Window>
       Gets the current window.
 Parameters
     
@@ -381,18 +328,6 @@ Parameters
     
       Chrome 88+
       
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (window: Window) => void
-        
-    
-      window
-      Window
-    
     
     Returns
           
@@ -406,11 +341,7 @@ Parameters
     
       getLastFocused()
     
-      
-        Promise
-      
-    
-        chrome.windows.getLastFocused(  queryOptions?: QueryOptions,  callback?: function,): Promise<Window>
+        chrome.windows.getLastFocused(  queryOptions?: QueryOptions,): Promise<Window>
       Gets the window that was most recently focused — typically the window 'on top'.
 Parameters
     
@@ -419,18 +350,6 @@ Parameters
     
       Chrome 88+
       
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (window: Window) => void
-        
-    
-      window
-      Window
-    
     
     Returns
           
@@ -444,24 +363,13 @@ Parameters
     
       remove()
     
-      
-        Promise
-      
-    
-        chrome.windows.remove(  windowId: number,  callback?: function,): Promise<void>
+        chrome.windows.remove(  windowId: number,): Promise<void>
       Removes (closes) a window and all the tabs inside it.
 Parameters
     
       windowId
       number
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -474,11 +382,7 @@ Parameters
     
       update()
     
-      
-        Promise
-      
-    
-        chrome.windows.update(  windowId: number,  updateInfo: object,  callback?: function,): Promise<Window>
+        chrome.windows.update(  windowId: number,  updateInfo: object,): Promise<Window>
       Updates the properties of a window. Specify only the properties that to be changed; unspecified properties are unchanged.
 Parameters
     
@@ -524,18 +428,6 @@ Parameters
       number optional
     The width to resize the window to in pixels. This value is ignored for panels.
 
-    
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (window: Window) => void
-        
-    
-      window
-      Window
-    
     
     Returns
           
@@ -668,6 +560,7 @@ Parameters
 
     
     
+
 
   
 

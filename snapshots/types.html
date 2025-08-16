@@ -129,14 +129,10 @@ This property will only be present if the user has enabled the extension in inco
     
       clear
       void
-    
-      
-        Promise
-      
     Clears the setting, restoring any default value.
 
           The clear function looks like:
-          (details: object, callback?: function) => {...}
+          (details: object) => {...}
         
     
       details
@@ -150,13 +146,6 @@ This property will only be present if the user has enabled the extension in inco
 
     
     
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
-    
           
             returnsPromise<void>
             
@@ -168,14 +157,10 @@ This property will only be present if the user has enabled the extension in inco
     
       get
       void
-    
-      
-        Promise
-      
     Gets the value of a setting.
 
           The get function looks like:
-          (details: object, callback?: function) => {...}
+          (details: object) => {...}
         
     
       details
@@ -189,36 +174,6 @@ This property will only be present if the user has enabled the extension in inco
 
     
     
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (details: object) => void
-        
-    
-      details
-      object
-    Details of the currently effective value.
-
-    
-      incognitoSpecific
-      boolean optional
-    Whether the effective value is specific to the incognito session.
-This property will only be present if the incognito property in the details parameter of get() was true.
-
-    
-      levelOfControl
-      LevelOfControl
-    The level of control of the setting.
-
-    
-      value
-      T
-    The value of the setting.
-
-    
-    
-    
           
             returnsPromise<object>
             
@@ -230,14 +185,10 @@ This property will only be present if the incognito property in the details para
     
       set
       void
-    
-      
-        Promise
-      
     Sets the value of a setting.
 
           The set function looks like:
-          (details: object, callback?: function) => {...}
+          (details: object) => {...}
         
     
       details
@@ -256,13 +207,6 @@ This property will only be present if the incognito property in the details para
 Note that every setting has a specific value type, which is described together with the setting. An extension should not set a value of a different type.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     
           
             returnsPromise<void>
@@ -305,6 +249,7 @@ Enum
       "not_controllable"  "controlled_by_other_extensions"  "controllable_by_this_extension"  "controlled_by_this_extension"  
     
   
+
 
   
 

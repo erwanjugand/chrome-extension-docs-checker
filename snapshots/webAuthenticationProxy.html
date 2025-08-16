@@ -130,30 +130,13 @@ Types
     
       attach()
     
-      
-        Promise
-      
-    
-        chrome.webAuthenticationProxy.attach(  callback?: function,): Promise<string | undefined>
+        chrome.webAuthenticationProxy.attach(): Promise<string | undefined>
       Makes this extension the active Web Authentication API request proxy.
 Remote desktop extensions typically call this method after detecting attachment of a remote session to this host. Once this method returns without error, regular processing of WebAuthn requests is suspended, and events from this extension API are raised.
 This method fails with an error if a different extension is already attached.
 The attached extension must call detach() once the remote desktop session has ended in order to resume regular WebAuthn request processing. Extensions automatically become detached if they are unloaded.
 Refer to the onRemoteSessionStateChange event for signaling a change of remote session attachment from a native application to to the (possibly suspended) extension.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (error?: string) => void
-        
-    
-      error
-      string optional
-    
-    
-    Returns
+Returns
           
             Promise<string | undefined>
             
@@ -162,24 +145,13 @@ Parameters
     
       completeCreateRequest()
     
-      
-        Promise
-      
-    
-        chrome.webAuthenticationProxy.completeCreateRequest(  details: CreateResponseDetails,  callback?: function,): Promise<void>
+        chrome.webAuthenticationProxy.completeCreateRequest(  details: CreateResponseDetails,): Promise<void>
       Reports the result of a navigator.credentials.create() call. The extension must call this for every onCreateRequest event it has received, unless the request was canceled (in which case, an onRequestCanceled event is fired).
 Parameters
     
       details
       CreateResponseDetails
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -189,24 +161,13 @@ Parameters
     
       completeGetRequest()
     
-      
-        Promise
-      
-    
-        chrome.webAuthenticationProxy.completeGetRequest(  details: GetResponseDetails,  callback?: function,): Promise<void>
+        chrome.webAuthenticationProxy.completeGetRequest(  details: GetResponseDetails,): Promise<void>
       Reports the result of a navigator.credentials.get() call. The extension must call this for every onGetRequest event it has received, unless the request was canceled (in which case, an onRequestCanceled event is fired).
 Parameters
     
       details
       GetResponseDetails
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -216,24 +177,13 @@ Parameters
     
       completeIsUvpaaRequest()
     
-      
-        Promise
-      
-    
-        chrome.webAuthenticationProxy.completeIsUvpaaRequest(  details: IsUvpaaResponseDetails,  callback?: function,): Promise<void>
+        chrome.webAuthenticationProxy.completeIsUvpaaRequest(  details: IsUvpaaResponseDetails,): Promise<void>
       Reports the result of a PublicKeyCredential.isUserVerifyingPlatformAuthenticator() call. The extension must call this for every onIsUvpaaRequest event it has received.
 Parameters
     
       details
       IsUvpaaResponseDetails
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
-        
     Returns
           
             Promise<void>
@@ -243,28 +193,11 @@ Parameters
     
       detach()
     
-      
-        Promise
-      
-    
-        chrome.webAuthenticationProxy.detach(  callback?: function,): Promise<string | undefined>
+        chrome.webAuthenticationProxy.detach(): Promise<string | undefined>
       Removes this extension from being the active Web Authentication API request proxy.
 This method is typically called when the extension detects that a remote desktop session was terminated. Once this method returns, the extension ceases to be the active Web Authentication API request proxy.
 Refer to the onRemoteSessionStateChange event for signaling a change of remote session attachment from a native application to to the (possibly suspended) extension.
-Parameters
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (error?: string) => void
-        
-    
-      error
-      string optional
-    
-    
-    Returns
+Returns
           
             Promise<string | undefined>
             
@@ -364,6 +297,7 @@ Parameters
     
     
     
+
 
   
 
