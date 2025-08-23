@@ -35,9 +35,6 @@ jobs:
       - name: Check
         run: pnpm check:all
 
-      - name: Build
-        run: pnpm build
-
       - name: Scrap
         run: pnpm scrap
 
