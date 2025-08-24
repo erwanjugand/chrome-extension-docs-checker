@@ -46,7 +46,7 @@ jobs:
         if: ${{ steps.git_diff.outputs.changed == 'true' }}
         id: generate_commit_message
         run: |
-          MODIFIED_FILES=$(git diff --name-only | grep '^snapshots/')
+          MODIFIED_FILES=$(git diff --name-only | grep '^snapshots')
           FILE_COUNT=$(echo "$MODIFIED_FILES" | wc -l)
 
           if [ "$FILE_COUNT" -eq 1 ]; then
