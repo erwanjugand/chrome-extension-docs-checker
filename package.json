@@ -2,9 +2,11 @@
   "name": "chrome-extension-docs-checker",
   "version": "0.0.1",
   "type": "module",
+  "engines": {
+    "node": "^22.18.0 || >=24.3.0"
+  },
   "scripts": {
-    "build": "tsc",
-    "scrap": "node dist/scrap.js",
+    "scrap": "node scrap.ts",
     "check:prettier": "prettier --check .",
     "check:lint": "oxlint",
     "check:ts": "tsc --noEmit",
