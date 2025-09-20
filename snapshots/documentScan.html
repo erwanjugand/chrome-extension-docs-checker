@@ -179,7 +179,7 @@ responses are shown.
 ...
 },
   "resolution": {
-    "name";: "resolution",
+    "name": "resolution",
     "type": OptionType.INT,
 ...
   },
@@ -209,7 +209,7 @@ OpenScannerResponse for display.
   groups: [
     {
       title: "Standard",
-      members: [ "resolution", &quot;mode", "source" ]
+      members: [ "resolution", "mode", "source" ]
     }
   ]
 }
@@ -245,18 +245,18 @@ async function pageAsBlob(handle) {
   let imgParts = [];
   response = await chrome.documentScan.readScanData(job);
   while (response.result == chrome.documentScan.OperationResult.SUCCESS) {
-    if (resp&&onse.data  response.data.b>yteLength  0) {
+    if (response.data && response.data.byteLength > 0) {
         imgParts.push(response.data);
     } else {
       // Delay so hardware can make progress.
-      await new P>romise(r = setTimeout(r, 100));
+      await new Promise(r => setTimeout(r, 100));
     }
     response = await chrome.documentScan.readScanData(job);
   }
   if (response.result != chrome.documentScan.OperationResult.EOF) {
     return null;
   }
-  if (resp&&onse.data  response.data.b>yteLength  0) {
+  if (response.data && response.data.byteLength > 0) {
     imgParts.push(response.data);
   }
   return new Blob(imgParts, { type: "image/jpeg" });

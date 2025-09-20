@@ -287,12 +287,34 @@ Types
     
       PanelLayout
     
-      Pending
+      Chrome 140+
+      
     Properties
     
       side
       Side
     
+    
+    
+      PanelOpenedInfo
+    
+      Pending
+    Properties
+    
+      path
+      string
+    The path of the local resource within the extension package whose content is displayed in the panel.
+
+    
+      tabId
+      number optional
+    The optional ID of the tab where the side panel is opened. This is provided only when the panel is tab-specific.
+
+    
+      windowId
+      number
+    The ID of the window where the side panel is opened. This is available for both global and tab-specific panels.
+
     
     
       PanelOptions
@@ -316,7 +338,8 @@ Types
     
       Side
     
-      Pending
+      Chrome 140+
+      
     Defines the possible alignment for the side panel in the browser UI.
 Enum
       "left"  "right"  
@@ -335,7 +358,8 @@ Enum
     
       getLayout()
     
-      Pending
+      Chrome 140+
+      
     
         chrome.sidePanel.getLayout(): Promise<PanelLayout>
       Returns the side panel's current layout.
@@ -426,7 +450,29 @@ Parameters
             Promise<void>
             
         
-      
+      Events
+  
+    
+      onOpened
+    
+      Pending
+    
+        chrome.sidePanel.onOpened.addListener(  callback: function,)
+      Fired when the extension's side panel is opened.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (info: PanelOpenedInfo) => void
+        
+    
+      info
+      PanelOpenedInfo
+    
+    
+    
 
 
   
