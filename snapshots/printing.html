@@ -67,7 +67,7 @@ chrome.printing.onJobStatusChanged.addListener((jobId, status) => {
 getPrinters() and getPrinterInfo()
 
 A single example is used for these functions because getting printer information requires a printer ID, which is retrieved by calling getPrinters(). This example logs the name and description of the default printer to the console. This is a simplified version of the printing example.
-​​const printers = await chrome.printing.getPrinters();
+​���const printers = await chrome.printing.getPrinters();
 const defaultPrinter = printers.find((printer) => {
   const printerInfo = await chrome.printing.getPrinterInfo(printer.id);
   return printerInfo.isDefault;
@@ -80,7 +80,7 @@ The submitJob() method requires three things.
 
 
 A ticket structure specifying which capabilities of the printer are to be used. If the user needs to select from available capabilities, you can retrieve them for a specific printer using getPrinterInfo().
-A SubmitJobRequest structure, which specifies the printer to use, and the file or date to print. This structure contains a reference to the ticket structure.
+A SubmitJobRequest structure, which specifies the printer to use, and the file or data to print. This structure contains a reference to the ticket structure.
 A blob of the file or data to print.
 
 
