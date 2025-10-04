@@ -67,7 +67,7 @@ chrome.printing.onJobStatusChanged.addListener((jobId, status) => {
 getPrinters() and getPrinterInfo()
 
 A single example is used for these functions because getting printer information requires a printer ID, which is retrieved by calling getPrinters(). This example logs the name and description of the default printer to the console. This is a simplified version of the printing example.
-​���const printers = await chrome.printing.getPrinters();
+​​const printers = await chrome.printing.getPrinters();
 const defaultPrinter = printers.find((printer) => {
   const printerInfo = await chrome.printing.getPrinterInfo(printer.id);
   return printerInfo.isDefault;
