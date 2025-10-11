@@ -337,7 +337,11 @@ A declarativeNetRequest rule cannot redirect from a public resource request to a
 
 Header modification
 
-The append operation is only supported for the following headers: accept, accept-encoding, accept-language, access-control-request-headers, cache-control, connection, content-language, cookie, forwarded, if-match, if-none-match, keep-alive, range, te, trailer, transfer-encoding, upgrade, user-agent, via, want-digest, x-forwarded-for.
+The append operation is only supported for the following request headers: accept, accept-encoding, accept-language, access-control-request-headers, cache-control, connection, content-language, cookie, forwarded, if-match, if-none-match, keep-alive, range, te, trailer, transfer-encoding, upgrade, user-agent, via, want-digest, x-forwarded-for. This allowlist
+is case sensitive (bug 449152902).
+
+When appending to a request or response header, the browser will use the
+appropriate separator where possible.
 
 Examples
 
