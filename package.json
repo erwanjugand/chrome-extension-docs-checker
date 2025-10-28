@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@prettier/plugin-oxc": "0.0.4",
-    "@types/node": "22.18.8",
+    "@types/node": "24.9.1",
     "cheerio": "1.1.2",
     "oxlint": "1.19.0",
     "prettier": "3.6.2",
