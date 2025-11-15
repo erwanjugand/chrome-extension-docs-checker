@@ -433,7 +433,17 @@ Properties
 
     
     
-    Properties
+    
+    
+      Theme
+    
+      Chrome 99+
+      
+    Theme used by DevTools.
+Enum
+      "default"  Default DevTools theme. This is always the light theme."dark"  Dark theme.
+    
+  Properties
   
     
       elements
@@ -549,6 +559,29 @@ Parameters
       lineNumber
       number
     Specifies the line number within the resource that was clicked.
+
+    
+    
+    
+      setThemeChangeHandler()
+    
+      Chrome 99+
+      
+    
+        chrome.devtools.panels.setThemeChangeHandler(  callback?: function,): void
+      Specifies the function to be called when the current theme changes in DevTools. To unset the handler, either call the method with no parameters or pass null as the parameter.
+Parameters
+    
+      callback
+      function optional
+    
+          The callback parameter looks like:
+          (theme: Theme) => void
+        
+    
+      theme
+      Theme
+    Current theme in DevTools.
 
     
     
