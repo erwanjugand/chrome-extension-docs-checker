@@ -227,7 +227,10 @@ Properties
     
       passwords
       boolean optional
-    Stored passwords.
+    
+      
+        Deprecated
+    Support for password deletion through extensions has been removed. This data type will be ignored.Stored passwords.
 
     
       pluginData
@@ -524,8 +527,11 @@ Parameters
     
       removePasswords()
     
+      
+        Deprecated
+    
         chrome.browsingData.removePasswords(  options: RemovalOptions,): Promise<void>
-      Clears the browser's stored passwords.
+      Support for password deletion through extensions has been removed. This function has no effect.Clears the browser's stored passwords.
 Parameters
     
       options
