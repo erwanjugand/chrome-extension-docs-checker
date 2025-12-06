@@ -496,7 +496,7 @@ Enum
       Chrome 44+
       
     Enum
-      "blocking"  Specifies the request is blocked until the callback function returns."responseHeaders"  Specifies that the response headers should be included in the event."extraHeaders"  Specifies that headers can violate Cross-Origin Resource Sharing (CORS).
+      "blocking"  Specifies the request is blocked until the callback function returns."responseHeaders"  Specifies that the response headers should be included in the event."extraHeaders"  Specifies that headers can violate Cross-Origin Resource Sharing (CORS)."securityInfo"  Specifies that the SecurityInfo should be included in the event."securityInfoRawDer"  Specifies that the SecurityInfo with raw bytes of certificates should be included in the event.
     
   
     
@@ -549,6 +549,39 @@ Properties
       "main_frame"  Specifies the resource as the main frame."sub_frame"  Specifies the resource as a sub frame."stylesheet"  Specifies the resource as a stylesheet."script"  Specifies the resource as a script."image"  Specifies the resource as an image."font"  Specifies the resource as a font."object"  Specifies the resource as an object."xmlhttprequest"  Specifies the resource as an XMLHttpRequest."ping"  Specifies the resource as a ping."csp_report"  Specifies the resource as a Content Security Policy (CSP) report."media"  Specifies the resource as a media object."websocket"  Specifies the resource as a WebSocket."webbundle"  Specifies the resource as a WebBundle."other"  Specifies the resource as a type not included in the listed types.
     
   
+    
+      SecurityInfo
+    
+      Pending
+    Properties
+    
+      certificates
+      object[]
+    A list of certificates
+
+    
+      fingerprint
+      object
+    Fingerprints of the certificate.
+
+    
+      sha256
+      string
+    sha256 fingerprint of the certificate.
+
+    
+    
+      rawDER
+      ArrayBuffer optional
+    Raw bytes of DER encoded server certificate
+
+    
+    
+      state
+      string
+    State of the connection. One of secure, insecure, broken.
+
+    
     
       UploadData
     Contains data uploaded in a URL request.
@@ -1536,6 +1569,13 @@ Parameters
       responseHeaders
       HttpHeaders optional
     The HTTP response headers that have been received with this response.
+
+    
+      securityInfo
+      SecurityInfo optional
+    
+      Pending
+    Information about the TLS/QUIC connection used for the underlying connection. Only provided if securityInfo is specified in the extraInfoSpec parameter.
 
     
       statusCode
