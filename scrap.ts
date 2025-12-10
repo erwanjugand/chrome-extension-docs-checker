@@ -63,7 +63,7 @@ const extractContent = async (apiUrl: string, dist: string, baseUrl: string) => 
     const html = await fetch(apiUrl)
     const cheerioHtml = cheerio.load(html)
     const rawContent = cheerioHtml(MAIN_SELECTOR).text()
-    const content = rawContent.replaceAll(/&(?:\s|\u00A0)*gt;/g, '> ')
+    const content = rawContent.replaceAll(/&(?:\s|\u00A0)*gt;/g, '> ').replaceAll(/&(?:\s|\u00A0)*quot;/g, '"')
 
     if (!content) {
       console.error(`No content found for ${apiName}`)
