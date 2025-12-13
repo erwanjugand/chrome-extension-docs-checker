@@ -990,6 +990,21 @@ Sub-domains of the listed domains are also excluded.
     List of tabs.Tab.id which the rule should not match. An ID of tabs.TAB_ID_NONE excludes requests which don't originate from a tab. Only supported for session-scoped rules.
 
     
+      excludedTopDomains
+      string[] optional
+    
+      Pending
+    The rule will not match network requests when the associated top-level frame's domain matches one from the list of excludedTopDomains. If the list is empty or omitted, no domains are excluded. This takes precedence over topDomains.
+Notes:
+
+Sub-domains like "a.example.com" are also allowed.
+The entries must consist of only ascii characters.
+Use punycode encoding for internationalized domains.
+Sub-domains of the listed domains are also excluded.
+For requests with no associated top-level frame (e.g. ServiceWorker initiated requests, the request initiator's domain is considered instead.
+
+
+    
       initiatorDomains
       string[] optional
     
@@ -1064,6 +1079,21 @@ Note: this must be specified for allowAllRequests rules and may only include the
     List of tabs.Tab.id which the rule should match. An ID of tabs.TAB_ID_NONE matches requests which don't originate from a tab. An empty list is not allowed. Only supported for session-scoped rules.
 
     
+      topDomains
+      string[] optional
+    
+      Pending
+    The rule will only match network requests when the associated top-level frame's domain matches one from the list of topDomains. If the list is omitted, the rule is applied to requests associated with all top-level frame domains. An empty list is not allowed.
+Notes:
+
+Sub-domains like "a.example.com" are also allowed.
+The entries must consist of only ascii characters.
+Use punycode encoding for internationalized domains.
+Sub-domains of the listed domains are also matched.
+For requests with no associated top-level frame (e.g. ServiceWorker initiated requests, the request initiator's domain is considered instead.
+
+
+    
       urlFilter
       string optional
     The pattern which is matched against the network request url. Supported constructs:
@@ -1078,6 +1108,14 @@ Note: Only one of urlFilter or regexFilter can be specified.
 Note: The urlFilter must be composed of only ASCII characters. This is matched against a url where the host is encoded in the punycode format (in case of internationalized domains) and any other non-ascii characters are url encoded in utf-8. For example, when the request url is http://abc.рф?q=ф, the urlFilter will be matched against the url http://abc.xn--p1ai/?q=%D1%84.
 
     
+    
+      RuleConditionKeys
+    
+      Pending
+    Enum
+      "urlFilter"  "regexFilter"  "isUrlFilterCaseSensitive"  "initiatorDomains"  "excludedInitiatorDomains"  "requestDomains"  "excludedRequestDomains"  "topDomains"  "excludedTopDomains"  "domains"  "excludedDomains"  "resourceTypes"  "excludedResourceTypes"  "requestMethods"  "excludedRequestMethods"  "domainType"  "tabIds"  "excludedTabIds"  "responseHeaders"  "excludedResponseHeaders"  
+    
+  
     
       Ruleset
     Properties
@@ -1163,6 +1201,13 @@ Note: The urlFilter must be composed of only ASCII characters. This is matched a
       tabId
       number optional
     The ID of the tab in which the hypothetical request takes place. Does not need to correspond to a real tab ID. Default is -1, meaning that the request isn't related to a tab.
+
+    
+      topUrl
+      string optional
+    
+      Pending
+    The associated top-level frame URL (if any) for the request.
 
     
       type

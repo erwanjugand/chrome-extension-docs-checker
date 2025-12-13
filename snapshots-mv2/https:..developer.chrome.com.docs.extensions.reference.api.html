@@ -10,6 +10,11 @@
 Most extensions need access to one or more Chrome Extensions APIs to function. This API reference describes the APIs available
 for use in extensions and presents example use cases.
 
+Beginning in Chrome 144, all Chrome Extension APIs are also available under the
+browser namespace (e.g. browser.tabs.create({})). This is an alias for the
+chrome namespace (e.g. chrome.tabs.create({})) provided for compatibility
+with other browsers that use the browser namespace for their extension APIs.
+
 Common Extensions API features
 
 An Extensions API consists of a namespace containing methods and properties for doing extensions work, and usually, but not
