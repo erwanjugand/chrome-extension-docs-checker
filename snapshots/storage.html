@@ -31,6 +31,43 @@ manifest. For example:
 
 
 
+Examples
+
+The following samples demonstrate the local, sync, and
+session storage areas:
+
+Example (Local)chrome.storage.local.set({ key: value }).then(() => {
+  console.log("Value is set");
+});
+
+chrome.storage.local.get(["key"]).then((result) => {
+  console.log("Value is " + result.key);
+});
+
+Example (Sync)chrome.storage.sync.set({ key: value }).then(() => {
+  console.log("Value is set");
+});
+
+chrome.storage.sync.get(["key"]).then((result) => {
+  console.log("Value is " + result.key);
+});
+
+Example (Session)chrome.storage.session.set({ key: value }).then(() => {
+  console.log("Value is set");
+});
+
+chrome.storage.session.get(["key"]).then((result) => {
+  console.log("Value is " + result.key);
+});
+
+
+To see other demos of the Storage API, explore any of the following samples:
+
+
+Global search extension.
+Water alarm extension.
+
+
 Concepts and usage
 
 The Storage API provides an extension-specific way to persist user data and state. It's similar to the web platform's storage APIs (IndexedDB, and Storage), but was designed to meet the storage needs of extensions. The following are a few key features:
@@ -67,31 +104,78 @@ Inside the offscreen document's onMessage handler, call the conversion routine.
 There are also some nuances to how web storage APIs work in extensions. Learn more in the
 Storage and Cookies article.
 
+Storage and throttling limits
+
+The Storage API has usage limitations:
+
+
+Storing data has performance costs, and the API includes storage quotas. Plan the data you intend to store, so you maintain storage space.
+Storage can take time to complete. Structure your code to account for that time.
+
+
+For details on storage area limitations and what happens when they're exceeded, see the quota information for sync, local, and session.
+
 Storage areas
 
 The Storage API is divided into the following storage areas:
 
+Local
 
-storage.local
 Data is stored locally and cleared when the extension is removed. The storage limit is 10 MB (5 MB in Chrome 113 and earlier), but can be increased by requesting the "unlimitedStorage" permission. We recommend using storage.local to store larger amounts of data. By default, it's exposed to content scripts, but this behavior can be changed by calling chrome.storage.local.setAccessLevel().
-storage.managed
-Managed storage is read-only storage for policy installed extensions and managed by system administrators using a developer-defined schema and enterprise policies. Policies are analogous to options but are configured by a system administrator instead of the user, allowing the extension to be preconfigured for all users of an organization. By default, storage.managed is exposed to content scripts, but this behavior can be changed by calling chrome.storage.managed.setAccessLevel(). For information on policies, see Documentation for Administrators. To learn more about the managed storage area, see Manifest for storage areas.
-storage.session
-Holds data in memory while an extension is loaded. The storage is cleared if the extension is disabled, reloaded or updated and when the browser restarts. By default, it's not exposed to content scripts, but this behavior can be changed by calling chrome.storage.session.setAccessLevel(). The storage limit is 10 MB (1 MB in Chrome 111 and earlier). Thestorage.session interface is one of several we recommend for service workers.
-storage.sync
-If syncing is enabled, the data is synced to any Chrome browser that the user is logged into. If disabled, it behaves like storage.local. Chrome stores the data locally when the browser is offline and resumes syncing when it's back online. The quota limitation is approximately 100 KB, 8 KB per item. We recommend using storage.sync to preserve user settings across synced browsers. If you're working with sensitive user data, instead use storage.session. By default, storage.sync is exposed to content scripts, but this behavior can be changed by calling chrome.storage.sync.setAccessLevel().
 
+Managed
 
-Storage and throttling limits
+Managed storage is read-only for policy-installed extensions. It's managed by system administrators, using a developer-defined schema and enterprise policies. Policies are similar to options but are configured by a system administrator, instead of the user. This allows the extension to be preconfigured for all users of an organization.
 
-The Storage API has the following usage limitations:
+By default, storage.managed is exposed to content scripts, but this behavior can be changed by calling chrome.storage.managed.setAccessLevel(). For information on policies, see Documentation for Administrators. To learn more about the managed storage area, see Manifest for storage areas.
 
+Session
 
-Storing data often comes with performance costs, and the API includes storage quotas. We recommend being careful about what data you store so that you don't lose the ability to store data.
-Storage can take time to complete. Make sure to structure your code to account for that time.
+Session storage holds data in memory while an extension is loaded. The storage is cleared if the extension is disabled, reloaded, updated, and when the browser restarts. By default, it's not exposed to content scripts, but this behavior can be changed by calling chrome.storage.session.setAccessLevel(). The storage limit is 10 MB (1 MB in Chrome 111 and earlier).
 
+Thestorage.session interface is one of several we recommend for service workers.
 
-For details on storage area limitations and what happens when they're exceeded, see the quota information for sync, local, and session.
+Sync
+
+If the user enables syncing, the data syncs with every Chrome browser that the user is logged into. If disabled, it behaves like storage.local. Chrome stores the data locally when the browser is offline and resumes syncing when it's back online. The quota limitation is approximately 100 KB, 8 KB per item.
+
+We recommend using storage.sync to preserve user settings across synced browsers. If you're working with sensitive user data, instead use storage.session. By default, storage.sync is exposed to content scripts, but this behavior can be changed by calling chrome.storage.sync.setAccessLevel().
+
+Methods and events
+
+All storage areas implement the StorageArea interface.
+
+get()
+
+The get() method lets you read one or more keys from a StorageArea.
+
+getBytesInUse()
+
+The getBytesInUse() method lets you see the quota used by a StorageArea.
+
+getKeys()
+
+The getKeys() method lets you get all keys stored in a StorageArea.
+
+remove()
+
+The remove() method lets you remove an item from a StorageArea.
+
+set()
+
+The set() method lets you set an item in a StorageArea.
+
+setAccessLevel()
+
+The setAccessLevel() method lets you control access to a StorageArea.
+
+clear()
+
+The clear() method lets you clear all data from a StorageArea.
+
+onChanged
+
+The onChanged event lets you monitor changes to a StorageArea.
 
 Use cases
 
@@ -187,43 +271,6 @@ You can view and edit data stored using the API in DevTools. To learn more, see
 the View and edit extension storage
 page in the DevTools documentation.
 
-Examples
-
-The following samples demonstrate the local, sync, and
-session storage areas:
-
-Localchrome.storage.local.set({ key: value }).then(() => {
-  console.log("Value is set");
-});
-
-chrome.storage.local.get(["key"]).then((result) => {
-  console.log("Value is " + result.key);
-});
-
-Syncchrome.storage.sync.set({ key: value }).then(() => {
-  console.log("Value is set");
-});
-
-chrome.storage.sync.get(["key"]).then((result) => {
-  console.log("Value is " + result.key);
-});
-
-Sessionchrome.storage.session.set({ key: value }).then(() => {
-  console.log("Value was set");
-});
-
-chrome.storage.session.get(["key"]).then((result) => {
-  console.log("Value is " + result.key);
-});
-
-
-To see other demos of the Storage API, explore any of the following samples:
-
-
-Global search extension.
-Water alarm extension.
-
-
 Types
   
     
@@ -236,182 +283,6 @@ Enum
       "TRUSTED_CONTEXTS"  Specifies contexts originating from the extension itself."TRUSTED_AND_UNTRUSTED_CONTEXTS"  Specifies contexts originating from outside the extension.
     
   
-    
-      StorageArea
-    Properties
-    
-      onChanged
-      Event<functionvoidvoid>
-    
-      Chrome 73+
-      
-    Fired when one or more items change.
-
-          The onChanged.addListener function looks like:
-          (callback: function) => {...}
-        
-    
-      callback
-      function
-    
-          The callback parameter looks like:
-          (changes: object) => void
-        
-    
-      changes
-      object
-    
-    
-    
-    
-      clear
-      void
-    Removes all items from storage.
-
-          The clear function looks like:
-          () => {...}
-        
-          
-            returnsPromise<void>
-            
-      Chrome 95+
-      
-    
-        
-      
-    
-      get
-      void
-    Gets one or more items from storage.
-
-          The get function looks like:
-          (keys?: string | string[] | object) => {...}
-        
-    
-      keys
-      string | string[] | object optional
-    A single key to get, list of keys to get, or a dictionary specifying default values (see description of the object). An empty list or object will return an empty result object. Pass in null to get the entire contents of storage.
-
-    
-          
-            returnsPromise<object>
-            
-      Chrome 95+
-      
-    
-        
-      
-    
-      getBytesInUse
-      void
-    Gets the amount of space (in bytes) being used by one or more items.
-
-          The getBytesInUse function looks like:
-          (keys?: string | string[]) => {...}
-        
-    
-      keys
-      string | string[] optional
-    A single key or list of keys to get the total usage for. An empty list will return 0. Pass in null to get the total usage of all of storage.
-
-    
-          
-            returnsPromise<number>
-            
-      Chrome 95+
-      
-    
-        
-      
-    
-      getKeys
-      void
-    
-      Chrome 130+
-      
-    Gets all keys from storage.
-
-          The getKeys function looks like:
-          () => {...}
-        
-          
-            returnsPromise<string[]>
-            
-        
-      
-    
-      remove
-      void
-    Removes one or more items from storage.
-
-          The remove function looks like:
-          (keys: string | string[]) => {...}
-        
-    
-      keys
-      string | string[]
-    A single key or a list of keys for items to remove.
-
-    
-          
-            returnsPromise<void>
-            
-      Chrome 95+
-      
-    
-        
-      
-    
-      set
-      void
-    Sets multiple items.
-
-          The set function looks like:
-          (items: object) => {...}
-        
-    
-      items
-      object
-    An object which gives each key/value pair to update storage with. Any other key/value pairs in storage will not be affected.
-Primitive values such as numbers will serialize as expected. Values with a typeof "object" and "function" will typically serialize to {}, with the exception of Array (serializes as expected), Date, and Regex (serialize using their String representation).
-
-    
-          
-            returnsPromise<void>
-            
-      Chrome 95+
-      
-    
-        
-      
-    
-      setAccessLevel
-      void
-    
-      Chrome 102+
-      
-    Sets the desired access level for the storage area. By default, session storage is restricted to trusted contexts (extension pages and service workers), while managed, local, and sync storage allow access from both trusted and untrusted contexts.
-
-          The setAccessLevel function looks like:
-          (accessOptions: object) => {...}
-        
-    
-      accessOptions
-      object
-    
-    
-      accessLevel
-      AccessLevel
-    The access level of the storage area.
-
-    
-    
-          
-            returnsPromise<void>
-            
-        
-      
-    
     
       StorageChange
     Properties
