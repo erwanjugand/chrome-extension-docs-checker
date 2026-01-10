@@ -467,7 +467,7 @@ Parameters
     
       details
       object optional
-    Contains details about the cookie that's been removed. If removal failed for any reason, this will be "null", and runtime.lastError will be set.
+    Contains details about the cookie that's been removed. If removal failed for any reason, the promise will be rejected.
 
     
       name
@@ -594,7 +594,7 @@ Parameters
     
       cookie
       Cookie optional
-    Contains details about the cookie that's been set. If setting failed for any reason, this will be "null", and runtime.lastError will be set.
+    Contains details about the cookie that's been set. If setting failed for any reason, the promise will be rejected.
 
     
     Returns

@@ -611,7 +611,8 @@ Parameters
     Returns
           
             Promise<ExtensionContext[]>
-            
+            Promise that resolves with the matching contexts, if any.
+
         
       
     
@@ -655,7 +656,8 @@ Returns
             
       Chrome 99+
       
-    
+    Promise that resolves with information about the current platform.
+
         
       
     
@@ -756,7 +758,8 @@ Parameters
             
       Chrome 99+
       
-    
+    Promise that resolves when a restart request was successfully rescheduled.
+
         
       
     
@@ -791,7 +794,8 @@ Parameters
             
       Chrome 99+
       
-    
+    Promise support was added for extension contexts in Chrome 99. When communicating from a web page to an extension, promises are available from Chrome 118.
+
         
       
     
@@ -836,7 +840,8 @@ Parameters
             
       Chrome 99+
       
-    
+    Promise that resolves when the uninstall URL is set. If the given URL is invalid, the promise will be rejected.
+
         
       Events
   
@@ -963,7 +968,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (message: any, sender: MessageSender, sendResponse: function) => boolean | undefined
+          (message: any, sender: MessageSender, sendResponse: function) => boolean | Promise<any> | undefined
         
     
       message
@@ -988,7 +993,7 @@ Parameters
     
     
           
-            returnsboolean | undefined
+            returnsboolean | Promise<any> | undefined
             
         
       

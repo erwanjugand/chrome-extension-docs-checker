@@ -769,7 +769,8 @@ Parameters
             
       Chrome 88+
       
-    
+    Resolves after the operation is completed.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -858,7 +859,8 @@ Parameters
             
       Chrome 88+
       
-    
+    Resolves after all the JavaScript has been executed.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -1057,7 +1059,8 @@ Parameters
             
       Chrome 88+
       
-    
+    Resolves with the tab's current zoom factor after it has been fetched.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -1098,7 +1101,8 @@ Parameters
             
       Chrome 88+
       
-    
+    Resolves with the tab's current zoom settings.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -1323,7 +1327,8 @@ Parameters
             
       Chrome 88+
       
-    
+    Resolves when all the CSS has been inserted.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -1653,7 +1658,8 @@ Parameters
             
       Chrome 88+
       
-    
+    Resolves when all the CSS has been removed.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -1710,7 +1716,7 @@ Parameters
     
       response
       any
-    The JSON response object sent by the handler of the message. If an error occurs while connecting to the specified tab, the callback is called with no arguments and runtime.lastError is set to the error message.
+    The JSON response object sent by the handler of the message. If an error occurs while connecting to the specified tab, the promise will be rejected.
 
     
     Returns
@@ -1759,7 +1765,7 @@ Parameters
     
       response
       any
-    The JSON response object sent by the handler of the request. If an error occurs while connecting to the specified tab, the callback is called with no arguments and runtime.lastError is set to the error message.
+    The JSON response object sent by the handler of the request. If an error occurs while connecting to the specified tab, the promise will be rejected.
 
     
     Returns
@@ -1808,7 +1814,8 @@ Parameters
             
       Chrome 88+
       
-    
+    Resolves after the zoom factor has been changed.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -1848,7 +1855,8 @@ Parameters
             
       Chrome 88+
       
-    
+    Resolves after the zoom settings are changed.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               

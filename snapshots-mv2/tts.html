@@ -48,7 +48,7 @@ can use the enqueue option to cause this utterance to be added to a queue of utt
 be spoken when the current utterance has finished.
 chrome.tts.speak('Speak this first.');
 chrome.tts.speak(
-    'Speak this next, when the first sentence is done.', {'enqueue': true});
+    'Speak this next, when the first sentence is done.', {9;enqueue': true});
 
 A complete description of all options can be found in the tts.speak below. Not all speech
 engines will support all options.
@@ -125,11 +125,11 @@ an XML header and a top-level <speak> tag, not a document fragment.
 
 For example:
 chrome.tts.speak(
-  '<?xml version="1.0"?>' +
-  '<speak>' +
-  '  The <emphasis>second</emphasis> ' +
-  '  word of this sentence was emphasized.' +
-  '</speak>'
+  &<#39;?xml version=&q>uot;1.0<">;?' +
+  &<#39;spea>k'< +
+  '>;  The emphasissecond/emphasis ' +
+  '  word o<f this> sentence was emphasized.' +
+  '/speak'
 );
 
 Not all speech engines will support all SSML tags, and some may not support SSML at all, but all
@@ -438,7 +438,8 @@ Parameters
             
       Chrome 101+
       
-    
+    Resolves right away, before speech finishes. If an error occurs, the promise will be rejected. Use options.onEvent to get more detailed feedback.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               

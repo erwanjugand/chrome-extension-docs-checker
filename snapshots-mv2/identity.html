@@ -184,7 +184,8 @@ Parameters
             
       Chrome 106+
       
-    
+    Returns a Promise which resolves when the state has been cleared.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -265,7 +266,8 @@ Parameters
             
       Chrome 105+
       
-    
+    Returns a Promise which resolves with an OAuth2 access token as specified by the manifest, or rejects if there was an error. The grantedScopes parameter is populated since Chrome 87. When available, this parameter contains the list of granted scopes corresponding with the returned token.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -310,7 +312,8 @@ Parameters
             
       Chrome 106+
       
-    
+    Returns a Promise which resolves with the ProfileUserInfo of the primary Chrome account, or an empty ProfileUserInfo if the account with given details doesn't exist.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -370,7 +373,8 @@ Parameters
             
       Chrome 106+
       
-    
+    Returns a Promise which resolves with the URL redirected back to your application.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -406,7 +410,8 @@ Parameters
             
       Chrome 106+
       
-    
+    Returns a Promise which resolves when the token has been removed from the cache.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               

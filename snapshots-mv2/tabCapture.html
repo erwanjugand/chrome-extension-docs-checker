@@ -217,7 +217,8 @@ Parameters
             
       Chrome 116+
       
-    
+    Returns a Promise which resolves with CaptureInfo[] for captured tabs.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -257,7 +258,8 @@ Parameters
             
       Chrome 116+
       
-    
+    Returns a Promise which resolves with the result. If successful, the result is an opaque string that can be passed to the getUserMedia() API to generate a media stream that corresponds to the target tab. The created streamId can only be used once and expires after a few seconds if it is not used.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               

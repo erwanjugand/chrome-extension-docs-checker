@@ -1423,7 +1423,8 @@ Parameters
     Returns
           
             Promise<number[]>
-            
+            Promise that resolves with a list of ids that correspond to the disabled rules in that ruleset.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -1466,7 +1467,8 @@ Parameters
             
       Chrome 91+
       
-    
+    Promise that resolves with the set of dynamic rules. The Promise may be rejected in case of transient internal errors.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -1501,7 +1503,8 @@ Parameters
             
       Chrome 91+
       
-    
+    Promise that resolves with a list of ids, where each id corresponds to an enabled static Ruleset.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -1541,7 +1544,8 @@ Parameters
             
       Chrome 91+
       
-    
+    Promise that resolves once the list of matched rules has been fetched. In case of an error, the Promise will be rejected. This can happen for multiple reasons, such as insufficient permissions, or exceeding the quota.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -1585,7 +1589,8 @@ Parameters
             
       Chrome 91+
       
-    
+    Promise that resolves with the set of session scoped rules.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -1626,7 +1631,8 @@ Parameters
             
       Chrome 91+
       
-    
+    Promise that resolves with details consisting of whether the regular expression is supported and the reason if not.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -1701,7 +1707,8 @@ Parameters
     Returns
           
             Promise<TestMatchOutcomeResult>
-            
+            Promise that resolves with the details of matched rules.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -1744,7 +1751,8 @@ Parameters
             
       Chrome 91+
       
-    
+    Promise that resolves once the update is complete. In case of an error, the promise will be rejected and no change will be made to the rule set. This can happen for multiple reasons, such as invalid rule format, duplicate rule ID, rule count limit exceeded, internal errors, and others.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -1782,7 +1790,8 @@ Parameters
             
       Chrome 91+
       
-    
+    Promise that resolves once the update is complete. In case of an error, the promise will be rejected and no change will be made to the set of enabled rulesets. This can happen for multiple reasons, such as invalid ruleset IDs, rule count limit exceeded, or internal errors.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -1822,7 +1831,8 @@ Parameters
             
       Chrome 91+
       
-    
+    Promise that resolves once the update is complete. In case of an error, the promise will be rejected and no change will be made to the rule set. This can happen for multiple reasons, such as invalid rule format, duplicate rule ID, rule count limit exceeded, and others.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -1854,7 +1864,8 @@ Parameters
     Returns
           
             Promise<void>
-            
+            Promise that resolves when the update is complete. In case of an error, the promise will be rejected and no change will be made to the enabled static rules.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               

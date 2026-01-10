@@ -472,7 +472,8 @@ Parameters
             
       Chrome 90+
       
-    
+    Returns a Promise which resolves upon completion of the injection. The resulting array contains the result of execution for each frame where the injection succeeded.
+
         
       
     
@@ -512,7 +513,8 @@ Parameters
             
       Chrome 90+
       
-    
+    Returns a Promise which resolves upon completion of the insertion.
+
         
       
     
@@ -532,7 +534,8 @@ Parameters
     Returns
           
             Promise<void>
-            
+            Returns a Promise which resolves once scripts have been fully registered or rejects if an error has occurred.
+
         
       
     
@@ -552,7 +555,8 @@ Parameters
     Returns
           
             Promise<void>
-            
+            Returns a Promise which resolves upon the completion of the removal.
+
         
       
     
@@ -572,7 +576,8 @@ Parameters
     Returns
           
             Promise<void>
-            
+            Returns a Promise which resolves once scripts have been unregistered or rejects if an error has occurred.
+
         
       
     
@@ -592,7 +597,8 @@ Parameters
     Returns
           
             Promise<void>
-            
+            Returns a Promise which resolves once scripts have been updated or rejects if an error has occurred.
+
         
       
 

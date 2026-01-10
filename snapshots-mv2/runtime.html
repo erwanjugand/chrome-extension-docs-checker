@@ -696,7 +696,8 @@ Parameters
             
       Chrome 99+
       
-    
+    Promise that resolves with information about the current platform.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -862,7 +863,8 @@ Parameters
             
       Chrome 99+
       
-    
+    Promise that resolves when a restart request was successfully rescheduled.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -921,7 +923,8 @@ Parameters
             
       Chrome 99+
       
-    
+    Promise support was added for extension contexts in Chrome 99. When communicating from a web page to an extension, promises are available from Chrome 118.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -1008,7 +1011,8 @@ Parameters
             
       Chrome 99+
       
-    
+    Promise that resolves when the uninstall URL is set. If the given URL is invalid, the promise will be rejected.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
@@ -1139,7 +1143,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (message: any, sender: MessageSender, sendResponse: function) => boolean | undefined
+          (message: any, sender: MessageSender, sendResponse: function) => boolean | Promise<any> | undefined
         
     
       message
@@ -1164,7 +1168,7 @@ Parameters
     
     
           
-            returnsboolean | undefined
+            returnsboolean | Promise<any> | undefined
             
         
       
