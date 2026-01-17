@@ -380,6 +380,27 @@ Enum
     Methods
   
     
+      close()
+    
+      Chrome 141+
+      
+    
+        chrome.sidePanel.close(  options: CloseOptions,): Promise<void>
+      Closes the extension's side panel. This is a no-op if the panel is already closed.
+Parameters
+    
+      options
+      CloseOptions
+    Specifies the context in which to close the side panel.
+
+    Returns
+          
+            Promise<void>
+            Returns a Promise which resolves when the side panel has been closed.
+
+        
+      
+    
       getLayout()
     
       Chrome 140+
@@ -485,7 +506,8 @@ Parameters
     
       onClosed
     
-      Pending
+      Chrome 142+
+      
     
         chrome.sidePanel.onClosed.addListener(  callback: function,)
       Fired when the extension's side panel is closed.

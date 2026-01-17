@@ -1009,7 +1009,7 @@ Parameters
       function
     
           The callback parameter looks like:
-          (message: any, sender: MessageSender, sendResponse: function) => boolean | undefined
+          (message: any, sender: MessageSender, sendResponse: function) => boolean | Promise<any> | undefined
         
     
       message
@@ -1034,7 +1034,7 @@ Parameters
     
     
           
-            returnsboolean | undefined
+            returnsboolean | Promise<any> | undefined
             
         
       
