@@ -910,7 +910,8 @@ Sub-domains of the listed domains are also excluded.
       excludedTopDomains
       string[] optional
     
-      Pending
+      Chrome 145+
+      
     The rule will not match network requests when the associated top-level frame's domain matches one from the list of excludedTopDomains. If the list is empty or omitted, no domains are excluded. This takes precedence over topDomains.
 Notes:
 
@@ -999,7 +1000,8 @@ Note: this must be specified for allowAllRequests rules and may only include the
       topDomains
       string[] optional
     
-      Pending
+      Chrome 145+
+      
     The rule will only match network requests when the associated top-level frame's domain matches one from the list of topDomains. If the list is omitted, the rule is applied to requests associated with all top-level frame domains. An empty list is not allowed.
 Notes:
 
@@ -1028,7 +1030,8 @@ Note: The urlFilter must be composed of only ASCII characters. This is matched a
     
       RuleConditionKeys
     
-      Pending
+      Chrome 145+
+      
     Enum
       "urlFilter"  "regexFilter"  "isUrlFilterCaseSensitive"  "initiatorDomains"  "excludedInitiatorDomains"  "requestDomains"  "excludedRequestDomains"  "topDomains"  "excludedTopDomains"  "domains"  "excludedDomains"  "resourceTypes"  "excludedResourceTypes"  "requestMethods"  "excludedRequestMethods"  "domainType"  "tabIds"  "excludedTabIds"  "responseHeaders"  "excludedResponseHeaders"  
     
@@ -1123,7 +1126,8 @@ Note: The urlFilter must be composed of only ASCII characters. This is matched a
       topUrl
       string optional
     
-      Pending
+      Chrome 145+
+      
     The associated top-level frame URL (if any) for the request.
 
     
