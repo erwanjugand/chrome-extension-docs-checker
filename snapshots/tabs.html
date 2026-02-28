@@ -1116,7 +1116,7 @@ Parameters
       sendMessage()
     
         chrome.tabs.sendMessage(  tabId: number,  message: any,  options?: object,): Promise<any>
-      Sends a single message to the content script(s) in the specified tab, with an optional callback to run when a response is sent back. The runtime.onMessage event is fired in each content script running in the specified tab for the current extension.
+      Sends a single message to the content script(s) in the specified tab. The runtime.onMessage event is fired in each content script running in the specified tab for the current extension.
 Parameters
     
       tabId
@@ -1151,7 +1151,8 @@ Parameters
             
       Chrome 99+
       
-    
+    Promise that resolves with the response from the content script. If an error occurs while connecting to the specified tab, the promise will be rejected.
+
         
       
     

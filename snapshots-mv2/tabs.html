@@ -1676,7 +1676,7 @@ Parameters
       
     
         chrome.tabs.sendMessage(  tabId: number,  message: any,  options?: object,  callback?: function,): Promise<any>
-      Sends a single message to the content script(s) in the specified tab, with an optional callback to run when a response is sent back. The runtime.onMessage event is fired in each content script running in the specified tab for the current extension.
+      Sends a single message to the content script(s) in the specified tab. The runtime.onMessage event is fired in each content script running in the specified tab for the current extension.
 Parameters
     
       tabId
@@ -1718,7 +1718,7 @@ Parameters
     
       response
       any
-    The JSON response object sent by the handler of the message. If an error occurs while connecting to the specified tab, the promise will be rejected.
+    The JSON response object sent by the handler of the message.
 
     
     Returns
@@ -1727,7 +1727,8 @@ Parameters
             
       Chrome 99+
       
-    
+    Promise that resolves with the response from the content script. If an error occurs while connecting to the specified tab, the promise will be rejected.
+
               
                 Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
               
