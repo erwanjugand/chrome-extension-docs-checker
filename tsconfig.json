@@ -3,21 +3,18 @@
     /* Base Options: */
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "target": "es2022",
     "allowJs": false,
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
+    "types": ["node"],
 
     /* Strictness */
-    "strict": true,
-
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
 
     /* If transpiling with TypeScript: */
-    "module": "NodeNext",
     "outDir": "dist",
     "sourceMap": true,
 
