@@ -46,27 +46,95 @@ jobs:
         if: ${{ steps.git_diff.outputs.changed == 'true' }}
         id: generate_commit_message
         run: |
-          MODIFIED_FILES=$(git diff --name-only | grep '^snapshots')
-          FILE_COUNT=$(echo "$MODIFIED_FILES" | wc -l)
+          MODIFIED_FILES=$(git diff --name-only -- snapshots-mv3 snapshots-mv2)
+          RECOGNIZED_URLS=""
 
-          if [ "$FILE_COUNT" -eq 1 ]; then
-            FILENAME=$(basename "$MODIFIED_FILES" .html)
-            API_PATH=$(echo "$FILENAME" | sed 's/\./\//g')
-            COMMIT_MESSAGE="chore(scrap): update ${API_PATH} snapshot"
+          while IFS= read -r FILE; do
+            case "$FILE" in
+              snapshots-mv3/api/*.html)
+                NAME="${FILE#snapshots-mv3/api/}"
+                NAME="${NAME%.html}"
+                RECOGNIZED_URLS="${RECOGNIZED_URLS}MV3|https://developer.chrome.com/docs/extensions/reference/api/${NAME}"$'\n'
+                ;;
+              snapshots-mv3/manifest/*.html)
+                NAME="${FILE#snapshots-mv3/manifest/}"
+                NAME="${NAME%.html}"
+                RECOGNIZED_URLS="${RECOGNIZED_URLS}MV3|https://developer.chrome.com/docs/extensions/reference/manifest/${NAME}"$'\n'
+                ;;
+              snapshots-mv3/api.html)
+                RECOGNIZED_URLS="${RECOGNIZED_URLS}MV3|https://developer.chrome.com/docs/extensions/reference/api"$'\n'
+                ;;
+              snapshots-mv3/manifest.html)
+                RECOGNIZED_URLS="${RECOGNIZED_URLS}MV3|https://developer.chrome.com/docs/extensions/reference/manifest"$'\n'
+                ;;
+              snapshots-mv3/permissions-list.html)
+                RECOGNIZED_URLS="${RECOGNIZED_URLS}MV3|https://developer.chrome.com/docs/extensions/reference/permissions-list"$'\n'
+                ;;
+              snapshots-mv2/api/*.html)
+                NAME="${FILE#snapshots-mv2/api/}"
+                NAME="${NAME%.html}"
+                RECOGNIZED_URLS="${RECOGNIZED_URLS}MV2|https://developer.chrome.com/docs/extensions/mv2/reference/${NAME}"$'\n'
+                ;;
+              snapshots-mv2/index.html)
+                RECOGNIZED_URLS="${RECOGNIZED_URLS}MV2|https://developer.chrome.com/docs/extensions/mv2/reference"$'\n'
+                ;;
+            esac
+          done <<< "$MODIFIED_FILES"
+
+          mapfile -t URL_LINES < <(printf '%s' "$RECOGNIZED_URLS" | sed '/^$/d' | sort -u)
+          FILE_COUNT=${#URL_LINES[@]}
+
+          if [ "$FILE_COUNT" -eq 0 ]; then
+            COMMIT_MESSAGE="chore(scrap): update generated files"
           else
             COMMIT_MESSAGE="chore(scrap): update ${FILE_COUNT} snapshots"
           fi
 
+          MV3_SECTION=""
+          MV2_SECTION=""
+
+          for LINE in "${URL_LINES[@]}"; do
+            VERSION="${LINE%%|*}"
+            URL="${LINE#*|}"
+
+            case "$VERSION" in
+              MV3)
+                MV3_SECTION="${MV3_SECTION}${URL}"$'\n'
+                ;;
+              MV2)
+                MV2_SECTION="${MV2_SECTION}${URL}"$'\n'
+                ;;
+            esac
+          done
+
           DESCRIPTION=""
-          while IFS= read -r FILE; do
-            FILENAME=$(basename "$FILE" .html)
-            API_PATH=$(echo "$FILENAME" | sed 's/\./\//g')
-            DESCRIPTION="${DESCRIPTION}https://developer.chrome.com/docs/extensions/reference/api/${API_PATH}  "
-          done <<< "$MODIFIED_FILES"
 
+          if [ -n "$MV3_SECTION" ]; then
+            DESCRIPTION="${DESCRIPTION}MV3:"$'\n'
+            DESCRIPTION="${DESCRIPTION}${MV3_SECTION}"
+          fi
 
-          echo "commit_message=$COMMIT_MESSAGE" >> $GITHUB_ENV
-          echo "commit_description=$DESCRIPTION" >> $GITHUB_ENV
+          if [ -n "$MV2_SECTION" ]; then
+            if [ -n "$DESCRIPTION" ]; then
+              DESCRIPTION="${DESCRIPTION}"$'\n'
+            fi
+            DESCRIPTION="${DESCRIPTION}MV2:"$'\n'
+            DESCRIPTION="${DESCRIPTION}${MV2_SECTION}"
+          fi
+
+          DESCRIPTION="${DESCRIPTION%$'\n'}"
+
+          {
+            echo "commit_message<<EOF"
+            printf '%s\n' "$COMMIT_MESSAGE"
+            echo "EOF"
+          } >> "$GITHUB_ENV"
+
+          {
+            echo "commit_description<<EOF"
+            printf '%s\n' "$DESCRIPTION"
+            echo "EOF"
+          } >> "$GITHUB_ENV"
 
       - name: Commit changes
         if: ${{ steps.git_diff.outputs.changed == 'true' }}
