@@ -1,0 +1,429 @@
+
+
+  
+    
+    
+
+
+To access most extension APIs and features, you must declare permissions in your
+extension's manifest. Some permissions
+trigger warnings that users must allow to continue using the extension.
+
+For more information on how permissions work, see Declare permissions. For best
+practices for using permissions with warnings, see Permission warning guidelines.
+
+The following is a list of all available permissions and any warnings triggered
+by specific permissions.
+
+
+
+"accessibilityFeatures.modify"
+Lets extensions modify accessibility feature states when using the
+chrome.accessibilityFeatures API.
+
+Warning displayed: Change your accessibility settings.
+
+"accessibilityFeatures.read"
+Lets extensions read accessibility states when using the
+chrome.accessibilityFeatures API.
+
+Warning displayed: Read your accessibility settings.
+
+"activeTab"
+Gives temporary access to the active tab through a user gesture. For details,
+see activeTab.
+
+"alarms"
+Gives access to the
+chrome.alarms API.
+
+"audio"
+Gives access to the
+chrome.audio API.
+
+"background"
+Makes Chrome start up early (as soon as the user logs into their computer,
+before they launch Chrome), and shut down late (even after its last window is
+closed, until the user explicitly quits Chrome).
+
+"bookmarks"
+Gives access to the
+chrome.bookmarks API.
+
+Warning displayed: Read and change your bookmarks.
+
+"browsingData"
+Gives access to the
+chrome.browsingData API.
+
+"certificateProvider"
+Gives access to the chrome.certificateProvider
+API.
+
+"clipboardRead"
+Lets the extension paste items from the clipboard using the web platform Clipboard API.
+
+Warning displayed: Read data you copy and paste.
+
+"clipboardWrite"
+Lets the extension cut and copy items to the clipboard using the web platform Clipboard API.
+
+Warning displayed: Modify data you copy and paste.
+
+"contentSettings"
+Gives access to the
+chrome.contentSettings
+API.
+
+Warning displayed: Change your settings that control websites' access to
+features such as cookies, JavaScript, plugins, geolocation, microphone, camera
+etc.
+
+"contextMenus"
+Gives access to the
+chrome.contextMenus API.
+
+"cookies"
+Gives access to the
+chrome.cookies API.
+
+"debugger"
+Gives access to the
+chrome.debugger API.
+
+Warnings displayed:
+
+Access the page debugger backend.
+Read and change all your data on all websites.
+
+
+"declarativeContent"
+Gives access to the
+chrome.declarativeContent
+API.
+
+"declarativeNetRequest"
+Gives access to the
+chrome.declarativeNetRequest
+API.
+
+Warning displayed: Block content on any page.
+
+"declarativeNetRequestWithHostAccess"
+Gives access to the chrome.declarativeNetRequest
+API but requires host permissions for all actions.
+
+"declarativeNetRequestFeedback"
+Gives permission to write errors and warnings to the DevTools console when
+using the chrome.declarativeNetRequest
+API. This permission is for use with unpacked extensions and is ignored for
+extensions installed from the Chrome Web Store.
+
+Warning displayed: Read your browsing history.
+
+"dns"
+Gives access to the chrome.dns API. 
+
+"desktopCapture"
+Gives access to the
+chrome.desktopCapture
+API.
+
+Warning displayed: Capture content of your screen.
+
+"documentScan"
+Gives access to the
+chrome.documentScan API.
+
+"downloads"
+Gives access to the
+chrome.downloads API.
+
+Warning displayed: Manage your downloads.
+
+"downloads.open"
+Allows the use of chrome.downloads.open().
+
+Warning displayed: Manage your downloads.
+
+"downloads.ui"
+Allows the use of chrome.downloads.setUiOptions().
+
+Warning displayed: Manage your downloads.
+
+"enterprise.deviceAttributes"
+Gives access to the chrome.enterprise.deviceAttributes
+API.
+
+"enterprise.hardwarePlatform"
+Gives access to the chrome.enterprise.hardwarePlatform
+API.
+
+"enterprise.networkingAttributes"
+Gives access to the chrome.enterprise.networkingAttributes
+API.
+
+"enterprise.platformKeys"
+Gives access to the chrome.enterprise.platformKeys
+API.
+
+"favicon"
+Grants access to the Favicon API.
+
+Warning displayed: Read the icons of the
+websites you visit.
+
+"fileBrowserHandler"
+Gives access to the chrome.fileBrowserHandler
+API.
+
+"fileSystemProvider"
+Gives access to the chrome.fileSystemProvider
+API.
+
+"fontSettings"
+Gives access to the
+chrome.fontSettings API.
+
+"gcm"
+Gives access to the chrome.gcm and
+chrome.instanceID APIs.
+
+"geolocation"
+Allows the extension to use the geolocation API without prompting the user for
+permission.
+
+Warning displayed: Detect your physical location.
+
+"history"
+Gives access to the
+chrome.history API.
+
+Warning displayed: Read and change your browsing history on all signed-in
+devices.
+
+"identity"
+Gives access to the
+chrome.identity API.
+
+"identity.email"
+Gives access to the user's email address through the
+chrome.identity API.
+
+Warning displayed: Know your email address.
+
+"idle"
+Gives access to the chrome.idle API.
+
+"loginState"
+Gives access to the
+chrome.loginState API.
+
+"management"
+Gives access to the
+chrome.management API.
+
+Warning displayed: Manage your apps, extensions, and themes.
+
+"nativeMessaging"
+Gives access to the native messaging API.
+
+Warning displayed: Communicate with cooperating native applications.
+
+"notifications"
+Gives access to the
+chrome.notifications API.
+
+Warning displayed: Display notifications.
+
+"offscreen"
+Gives access to the
+chrome.offscreen API.
+
+"pageCapture"
+Gives access to the
+chrome.pageCapture API.
+
+Warning displayed: Read and change all your data on all websites.
+
+"platformKeys"
+Gives access to the
+chrome.platformKeys API.
+
+"power"
+Gives access to the
+chrome.power API.
+
+"printerProvider"
+Gives access to the
+chrome.printerProvider
+API.
+
+"printing"
+Gives access to the
+chrome.printing API.
+
+"printingMetrics"
+Gives access to the
+chrome.printingMetrics
+API.
+
+"privacy"
+Gives access to the
+chrome.privacy API.
+
+Warning displayed: Change your privacy-related settings.
+
+"processes"
+Gives access to the chrome.processes API. 
+
+"proxy"
+Gives access to the chrome.proxy
+API.
+
+Warning displayed: Read and change all your data on all websites.
+
+"readingList"
+Gives access to the
+chrome.readingList API.
+
+Warning displayed: Read and change entries in the reading list.
+
+"runtime"
+Gives access to runtime.connectNative()
+and runtime.sendNativeMessage().
+For all other features of the runtime namespace, no permission is required.
+
+"scripting"
+Gives access to the
+chrome.scripting API.
+
+"search"
+Gives access to the
+chrome.search API.
+
+"sessions"
+Gives access to the
+chrome.sessions API.
+
+Warnings displayed:
+
+When used with the "history" permission: Read and change your browsing
+history on all your
+signed-in devices. 
+When used with the "tabs" permission: Read your browsing history on all
+your signed-in devices.
+
+
+"sidePanel"
+Gives access to the
+chrome.sidePanel API.
+
+"storage"
+Gives access to the
+chrome.storage API.
+
+"system.cpu"
+Gives access to the
+chrome.system.cpu API.
+
+"system.display"
+Gives access to the
+chrome.system.display
+API.
+
+"system.memory"
+Gives access to the
+chrome.system.memory
+API.
+
+"system.storage"
+Gives access to the
+chrome.system.storage
+API.
+
+Warning displayed: Identify and eject storage devices.
+
+"tabCapture"
+Gives access to the
+chrome.tabCapture API.
+
+Warning displayed: Read and change all your data on all websites.
+
+"tabGroups"
+Gives access to the
+chrome.tabGroups API.
+
+Warning displayed: View and manage your tab groups.
+
+"tabs"
+Gives access to privileged fields of the Tab objects used by several APIs,
+including chrome.tabs and
+chrome.windows. You usually
+don't need to declare this permission to use those APIs.
+
+Warning displayed: Read your browsing history.
+
+"topSites"
+Gives access to the
+chrome.topSites API.
+
+Warning displayed: Read a list of your most frequently visited websites.
+
+"tts"
+Gives access to the chrome.tts API.
+
+"ttsEngine"
+Gives access to the
+chrome.ttsEngine API.
+
+Warning displayed: Read all text spoken using synthesized speech.
+
+"unlimitedStorage"
+Provides an unlimited quota for chrome.storage.local,
+IndexedDB,
+Cache Storage,
+and Origin Private File System.
+For more information, see Storage and cookies.
+
+"userScripts"
+Gives access to the
+chrome.userScripts API. NOTE:
+the user must also
+explicitly enable
+the usage of user scripts.
+
+"vpnProvider"
+Gives access to the
+chrome.vpnProvider API.
+
+"wallpaper"
+Gives access to the
+chrome.wallpaper API.
+
+"webAuthenticationProxy"
+Gives access to the chrome.webAuthenticationProxy
+API.
+
+Warning displayed: Read and change all your data on all websites.
+
+"webNavigation"
+Gives access to the
+chrome.webNavigation
+API.
+
+Warning displayed: Read your browsing history.
+
+"webRequest"
+Gives access to the
+chrome.webRequest API.
+
+"webRequestBlocking"
+Allows the use of the
+chrome.webRequest API for
+blocking.
+
+
+  
+
+  
