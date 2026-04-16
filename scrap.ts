@@ -71,14 +71,17 @@ const scrapMV3 = async () => {
 
   for (const apiLink of apiLinks.filter(link => link !== mainApiLink).map(link => link)) {
     extractContent(apiLink, `${SNAPSHOTS_DIR_MV3}/api`, mainApiLink)
+    await new Promise(resolve => setTimeout(resolve, 100))
   }
 
   for (const manifestLink of manifestLinks.filter(link => link !== mainManifestLink)) {
     extractContent(manifestLink, `${SNAPSHOTS_DIR_MV3}/manifest`, mainManifestLink)
+    await new Promise(resolve => setTimeout(resolve, 100))
   }
 
   for (const moreLink of moreLinks) {
     extractContent(moreLink, SNAPSHOTS_DIR_MV3, MV3_BASE_URL)
+    await new Promise(resolve => setTimeout(resolve, 100))
   }
 }
 
@@ -104,5 +107,5 @@ const scrapMV2 = async () => {
   }
 }
 
-await scrapMV3()
-await scrapMV2()
+scrapMV3()
+scrapMV2()
