@@ -1,6 +1,7 @@
-import * as cheerio from 'cheerio'
-import path from 'node:path'
 import fs from 'node:fs'
+import path from 'node:path'
+
+import * as cheerio from 'cheerio'
 
 const SNAPSHOTS_DIR_MV3 = 'snapshots-mv3'
 const SNAPSHOTS_DIR_MV2 = 'snapshots-mv2'
@@ -15,7 +16,7 @@ const extractContent = async (apiUrl: string, dist: string, baseUrl: string) => 
   const apiName = apiUrl.split(baseUrl).pop()?.replace('/', '') || 'index'
   const snapshotPath = path.join(`${dist}/`, `${apiName}.html`)
   try {
-    const html = await fetch(`${apiUrl}?hl=en`).then(response => response.text())
+    const html = await fetch(`${apiUrl}?hl=en`).then((response) => response.text())
     const cheerioHtml = cheerio.load(html)
     const rawContent = cheerioHtml(MAIN_SELECTOR).text()
     const content = rawContent
@@ -39,7 +40,7 @@ const API_LINK_SELECTORS =
 
 const getLinks = async (baseUrl: string, selector: string): Promise<string[]> => {
   try {
-    const html = await fetch(baseUrl).then(response => response.text())
+    const html = await fetch(baseUrl).then((response) => response.text())
     const cheerioHtml = cheerio.load(html)
     const links: string[] = []
 
@@ -69,19 +70,19 @@ const scrapMV3 = async () => {
   const manifestLinks = await getLinks(mainManifestLink, API_LINK_SELECTORS)
   const moreLinks = [mainApiLink, mainManifestLink, `${MV3_BASE_URL}/permissions-list`]
 
-  for (const apiLink of apiLinks.filter(link => link !== mainApiLink).map(link => link)) {
+  for (const apiLink of apiLinks.filter((link) => link !== mainApiLink).map((link) => link)) {
     extractContent(apiLink, `${SNAPSHOTS_DIR_MV3}/api`, mainApiLink)
-    await new Promise(resolve => setTimeout(resolve, 100))
+    await new Promise((resolve) => setTimeout(resolve, 100))
   }
 
-  for (const manifestLink of manifestLinks.filter(link => link !== mainManifestLink)) {
+  for (const manifestLink of manifestLinks.filter((link) => link !== mainManifestLink)) {
     extractContent(manifestLink, `${SNAPSHOTS_DIR_MV3}/manifest`, mainManifestLink)
-    await new Promise(resolve => setTimeout(resolve, 100))
+    await new Promise((resolve) => setTimeout(resolve, 100))
   }
 
   for (const moreLink of moreLinks) {
     extractContent(moreLink, SNAPSHOTS_DIR_MV3, MV3_BASE_URL)
-    await new Promise(resolve => setTimeout(resolve, 100))
+    await new Promise((resolve) => setTimeout(resolve, 100))
   }
 }
 
@@ -96,9 +97,9 @@ const scrapMV2 = async () => {
 
   for (const apiLink of apiLinks
     .filter(
-      link => link !== MV2_BASE_URL && !link.endsWith('enterprise/login') && !link.endsWith('devtools/performance'),
+      (link) => link !== MV2_BASE_URL && !link.endsWith('enterprise/login') && !link.endsWith('devtools/performance'),
     )
-    .map(link => link.replace('input/ime', 'input_ime'))) {
+    .map((link) => link.replace('input/ime', 'input_ime'))) {
     extractContent(apiLink, `${SNAPSHOTS_DIR_MV2}/api`, MV2_BASE_URL)
   }
 
