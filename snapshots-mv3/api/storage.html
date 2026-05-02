@@ -36,29 +36,20 @@ Examples
 The following samples demonstrate the local, sync, and
 session storage areas:
 
-Example (Local)chrome.storage.local.set({ key: value }).then(() => {
-  console.log("Value is set");
-});
+Example (Local)await chrome.storage.local.set({ key: value });
+console.log("Value is set");
+const result = await chrome.storage.local.get(["key"]);
+console.log("Value is " + result.key);
 
-chrome.storage.local.get(["key"]).then((result) => {
-  console.log("Value is " + result.key);
-});
+Example (Sync)await chrome.storage.sync.set({ key: value });
+console.log("Value is set");
+const result = await chrome.storage.sync.get(["key"]);
+console.log("Value is " + result.key);
 
-Example (Sync)chrome.storage.sync.set({ key: value }).then(() => {
-  console.log("Value is set");
-});
-
-chrome.storage.sync.get(["key"]).then((result) => {
-  console.log("Value is " + result.key);
-});
-
-Example (Session)chrome.storage.session.set({ key: value }).then(() => {
-  console.log("Value is set");
-});
-
-chrome.storage.session.get(["key"]).then((result) => {
-  console.log("Value is " + result.key);
-});
+Example (Session)await chrome.storage.session.set({ key: value });
+console.log("Value is set");
+const result = await chrome.storage.session.get(["key"]);
+console.log("Value is " + result.key);
 
 
 To see other demos of the Storage API, explore any of the following samples:
