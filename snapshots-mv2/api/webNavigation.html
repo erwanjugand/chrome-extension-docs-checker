@@ -44,10 +44,10 @@ navigation, there are no further events fired after onErrorOccurred.
 If a navigating frame contains subframes, its onCommitted is fired before any of its children's
 onBeforeNavigate; while onCompleted is fired after all of its children's onCompleted.
 
-If the reference fragment of a frame is changed, a onReferenceFragmentUpdated event is fired. This
+If the reference fragment of a frame is changed, an onReferenceFragmentUpdated event is fired. This
 event can fire any time after onDOMContentLoaded, even after onCompleted.
 
-If the history API is used to modify the state of a frame (e.g. using history.pushState(), a
+If the history API is used to modify the state of a frame (e.g. using history.pushState()), an
 onHistoryStateUpdated event is fired. This event can fire any time after onDOMContentLoaded.
 
 If a navigation restored a page from the Back Forward Cache, the onDOMContentLoaded event

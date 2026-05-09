@@ -96,7 +96,7 @@ function handleSignatureRequest(request) {
   const key = getPrivateKeyHandle(request.certificate);
   if (!key) {
     // Handle if the key isn't available.
-    console.error('Key for requested certificate no available.');
+    console.error('Key for requested certificate not available.');
 
     // Abort the request by reporting the error to the API.
     chrome.certificateProvider.reportSignature({

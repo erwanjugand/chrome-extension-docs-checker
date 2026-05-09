@@ -32,7 +32,7 @@ You must declare the "browsingData" permission in the extension manifest to use 
 
 Usage
 
-The simplest use-case for this API is a a time-based mechanism for clearing a user's browsing data.
+The simplest use-case for this API is a time-based mechanism for clearing a user's browsing data.
 Your code should provide a timestamp which indicates the historical date after which the user's
 browsing data should be removed. This timestamp is formatted as the number of milliseconds since the
 Unix epoch (which can be retrieved from a JavaScript Date object via the getTime method).
@@ -112,7 +112,7 @@ https://www.example.com will delete cookies with a domain of .example.com as wel
 Origin Types
 
 Adding an originTypes property to the API's options object allows you to specify which types of
-origins ought to be effected. Currently, origins are divided into three categories:
+origins ought to be affected. Currently, origins are divided into three categories:
 
 
 unprotectedWeb covers the general case of websites that users visit without taking any special

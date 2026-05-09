@@ -70,7 +70,7 @@ rules to the chrome.declarativeWebRequest.onRequest event object.
 The Declarative Web Request API supports a single type of match criteria, the RequestMatcher. The
 RequestMatcher matches network requests if and only if all listed criteria are met. The following
 RequestMatcher would match a network request when the user enters https://www.example.com in the
-ominibox:
+omnibox:
 var matcher = new chrome.declarativeWebRequest.RequestMatcher({
   url: { hostSuffix: 'example.com', schemes: ['http'] },
   resourceType: ['main_frame']

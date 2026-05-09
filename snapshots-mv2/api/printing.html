@@ -44,7 +44,7 @@ The examples below demonstrate using each of the methods in the printing namespa
 
 cancelJob()
 
-This example uses the onJobStatusChanged handler to hide a 'cancel' button when the jobStatus is neither PENDING or IN_PROGRESS. Note that on some networks or when a Chromebook is connected directly to the printer, these states may pass too quickly for the cancel button to be visible long enough to be called. This is greatly simplified printing example.
+This example uses the onJobStatusChanged handler to hide a 'cancel' button when the jobStatus is neither PENDING or IN_PROGRESS. Note that on some networks or when a Chromebook is connected directly to the printer, these states may pass too quickly for the cancel button to be visible long enough to be called. This is a greatly simplified printing example.
 chrome.printing.onJobStatusChanged.addListener((jobId, status) => {
   const cancelButton = document.getElementById("cancelButton");
   cancelButton.addEventListener('click', () => {
@@ -62,7 +62,7 @@ chrome.printing.onJobStatusChanged.addListener((jobId, status) => {
   } else {
     cancelButton.style.visibility = 'visible';
   }
-}
+});
 
 getPrinters() and getPrinterInfo()
 
@@ -71,7 +71,7 @@ A single example is used for these functions because getting printer information
 const defaultPrinter = printers.find((printer) => {
   const printerInfo = await chrome.printing.getPrinterInfo(printer.id);
   return printerInfo.isDefault;
-}
+});
 console.log(`Default printer: ${defaultPrinter.name}.\n\t${defaultPrinter.description}`);
 
 submitJob()

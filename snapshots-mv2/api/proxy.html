@@ -103,7 +103,7 @@ Examples: "foobar.com", "*foobar.com", "*.foobar.com", "*foobar.com:99", "https:
 
 PatternMatchesDoes not match".foobar.com""www.foobar.com""foobar.com""*.foobar.com""www.foobar.com""foobar.com""foobar.com""foobar.com""www.foobar.com""*foobar.com""foobar.com", "www.foobar.com", "foofoobar.com"
 [SCHEME://]IP_LITERAL[:PORT]
-Match URLs that are IP address literals. Conceptually this is the similar to the first case, but
+Match URLs that are IP address literals. Conceptually this is similar to the first case, but
 with special cases to handle IP literal canonicalization. For example, matching on "[0:0:0::1]"
 is the same as matching on "[::1]" because the IPv6 canonicalization is done internally.
 
