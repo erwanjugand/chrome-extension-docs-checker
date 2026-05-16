@@ -86,6 +86,13 @@ Types
     If not null, the alarm is a repeating alarm and will fire again in periodInMinutes minutes.
 
     
+      persistAcrossSessions
+      boolean
+    
+      Pending
+    Whether the alarm should persist across sessions (browser restarts).
+
+    
       scheduledTime
       number
     Time at which this alarm was scheduled to fire, in milliseconds past the epoch (e.g. Date.now() + n). For performance reasons, the alarm may have been delayed an arbitrary amount beyond this.
@@ -103,6 +110,13 @@ Types
       periodInMinutes
       number optional
     If set, the onAlarm event should fire every periodInMinutes minutes after the initial event specified by when or delayInMinutes. If not set, the alarm will only fire once.
+
+    
+      persistAcrossSessions
+      boolean optional
+    
+      Pending
+    Whether the alarm should persist across sessions (browser restarts). In Chrome, this defaults to true to match historical behavior, but you should set this explicitly to maximize compatibility across browsers.
 
     
       when
