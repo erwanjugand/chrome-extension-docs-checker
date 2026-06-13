@@ -10,10 +10,6 @@
 
 
 
-Chrome 120: Starting in Chrome 120, the minimum alarm interval has been reduced from 1 minute to 30 seconds. For an alarm to trigger in 30 seconds, set periodInMinutes: 0.5.
-
-Chrome 117: Starting in Chrome 117, the number of active alarms is limited to 500. Once this limit is reached, chrome.alarms.create() will fail. When using a callback, chrome.runtime.lastError will be set. When using promises, the promise will be rejected.
-
 Description
 Use the chrome.alarms API to schedule code to run periodically or at a specified time in the future.
 
@@ -48,8 +44,11 @@ any time that has already elapsed since the alarm was originally set to run.
 
 Persistence
 
-Alarms generally persist until an extension is updated. However, this is not guaranteed, and alarms
-may be cleared when the browser is restarted. Consequently, ensure it exists each time your service worker starts up. For example:
+You can control the persistence of an alarm at creation time using the persistAcrossSessions flag. This can be set to true (persists until the extension updates) or false (cleared if the extension is reloaded or the browser restarts, and whenever the extension updates).
+
+Other browsers and earlier versions of Chrome
+
+This property is not supported in other browsers (issue) or in versions of Chrome before Chrome 150, where the behavior can be unpredictable. Consequently, it is best to make sure important alarms exists each time your service worker starts up. For example:
 async function checkAlarmState() {
   const alarm = await chrome.alarms.get("my-alarm");
 
@@ -60,6 +59,8 @@ async function checkAlarmState() {
 
 checkAlarmState();
 
+If your alarm is created dynamically based on user action, you may want to store that an alarm was created elsewhere so you know to recreate it if needed.
+
 Examples
 
 The following examples show how to use and respond to an alarm. To try this API,
@@ -68,18 +69,15 @@ repository.
 
 Set an alarm
 
-The following example sets an alarm in the service worker when the extension is installed:
+The following example sets an alarm in the service worker when a new version of the extension is installed:
 
 service-worker.js:
 chrome.runtime.onInstalled.addListener(async ({ reason }) => {
-  if (reason !== 'install') {
-    return;
-  }
-
   // Create an alarm so we have something to look at in the demo
   await chrome.alarms.create('demo-default-alarm', {
     delayInMinutes: 1,
-    periodInMinutes: 1
+    periodInMinutes: 1,
+    persistAcrossSessions: true
   });
 });
 
