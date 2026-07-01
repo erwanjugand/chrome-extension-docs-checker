@@ -124,18 +124,29 @@ Properties
     
       getContent
       void
+    
+      
+        Promise
+      
     Gets the content of the resource.
 
           The getContent function looks like:
-          (callback: function) => {...}
+          (callback?: function) => {...}
         
     
       callback
-      function
+      function optional
     
           The callback parameter looks like:
-          (content: string, encoding: string) => void
+          (response: object) => void
         
+    
+      response
+      object
+    
+      Pending
+    An object containing the resource content and its encoding.
+
     
       content
       string
@@ -149,8 +160,25 @@ Properties
     
     
     
+          
+            returnsPromise<object>
+            
+      Pending
+    A function that receives resource content when the request completes.
+
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
+    
       setContent
       void
+    
+      
+        Promise
+      
     Sets the content of the resource.
 
           The setContent function looks like:
@@ -180,6 +208,18 @@ Properties
 
     
     
+          
+            returnsPromise<object>
+            
+      Pending
+    A function called upon request completion.
+
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
     Properties
   
     
@@ -193,7 +233,11 @@ Properties
     
       eval()
     
-        chrome.devtools.inspectedWindow.eval(  expression: string,  options?: object,  callback?: function,): void
+      
+        Promise
+      
+    
+        chrome.devtools.inspectedWindow.eval(  expression: string,  options?: object,  callback?: function,): Promise<object>
       Evaluates a JavaScript expression in the context of the main frame of the inspected page. The expression must evaluate to a JSON-compliant object, otherwise an exception is thrown. The eval function can report either a DevTools-side error or a JavaScript exception that occurs during evaluation. In either case, the result parameter of the callback is undefined. In the case of a DevTools-side error, the isException parameter is non-null and has isError set to true and code set to an error code. In the case of a JavaScript error, isException is set to true and value is set to the string value of thrown object.
 Parameters
     
@@ -230,12 +274,14 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          (result: object, exceptionInfo: object) => void
+          (response: object) => void
         
     
-      result
+      response
       object
-    The result of evaluation.
+    
+      Pending
+    The result of evaluation and exception information.
 
     
       exceptionInfo
@@ -274,16 +320,38 @@ Parameters
 
     
     
+      result
+      object
+    The result of evaluation.
+
     
+    
+    Returns
+          
+            Promise<object>
+            
+      Pending
+    A function called when evaluation completes.
+
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
     
       getResources()
     
-        chrome.devtools.inspectedWindow.getResources(  callback: function,): void
+      
+        Promise
+      
+    
+        chrome.devtools.inspectedWindow.getResources(  callback?: function,): Promise<Resource[]>
       Retrieves the list of resources from the inspected page.
 Parameters
     
       callback
-      function
+      function optional
     
           The callback parameter looks like:
           (resources: Resource[]) => void
@@ -294,7 +362,19 @@ Parameters
     The resources within the page.
 
     
-    
+    Returns
+          
+            Promise<Resource[]>
+            
+      Pending
+    A function that receives the list of resources when the request completes.
+
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
     
       reload()
     
@@ -365,7 +445,6 @@ Parameters
     
     
     
-
 
   
 

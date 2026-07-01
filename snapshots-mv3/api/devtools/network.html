@@ -65,49 +65,32 @@ Properties
     Returns content of the response body.
 
           The getContent function looks like:
-          (callback: function) => {...}
+          () => {...}
         
-    
-      callback
-      function
-    
-          The callback parameter looks like:
-          (content: string, encoding: string) => void
+          
+            returnsPromise<object>
+            
+      Pending
+    A function that receives the response body when the request completes.
+
         
-    
-      content
-      string
-    Content of the response body (potentially encoded).
-
-    
-      encoding
-      string
-    Empty if content is not encoded, encoding name otherwise. Currently, only base64 is supported.
-
-    
-    
+      
     Methods
   
     
       getHAR()
     
-        chrome.devtools.network.getHAR(  callback: function,): void
+        chrome.devtools.network.getHAR(): Promise<object>
       Returns HAR log that contains all known network requests.
-Parameters
-    
-      callback
-      function
-    
-          The callback parameter looks like:
-          (harLog: object) => void
-        
-    
-      harLog
-      object
-    A HAR log. See HAR specification for details.
+Returns
+          
+            Promise<object>
+            
+      Pending
+    A function that receives the HAR log when the request completes.
 
-    
-    Events
+        
+      Events
   
     
       onNavigated

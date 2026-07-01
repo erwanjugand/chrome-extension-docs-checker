@@ -117,34 +117,23 @@ Properties
     Gets the content of the resource.
 
           The getContent function looks like:
-          (callback: function) => {...}
+          () => {...}
         
-    
-      callback
-      function
-    
-          The callback parameter looks like:
-          (content: string, encoding: string) => void
+          
+            returnsPromise<object>
+            
+      Pending
+    A function that receives resource content when the request completes.
+
         
-    
-      content
-      string
-    Content of the resource (potentially encoded).
-
-    
-      encoding
-      string
-    Empty if the content is not encoded, encoding name otherwise. Currently, only base64 is supported.
-
-    
-    
+      
     
       setContent
       void
     Sets the content of the resource.
 
           The setContent function looks like:
-          (content: string, commit: boolean, callback?: function) => {...}
+          (content: string, commit: boolean) => {...}
         
     
       content
@@ -157,19 +146,14 @@ Properties
     True if the user has finished editing the resource, and the new content of the resource should be persisted; false if this is a minor change sent in progress of the user editing the resource.
 
     
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (error?: object) => void
-        
-    
-      error
-      object optional
-    Set to undefined if the resource content was set successfully; describes error otherwise.
+          
+            returnsPromise<object>
+            
+      Pending
+    A function called upon request completion.
 
-    
-    
+        
+      
     Properties
   
     
@@ -183,7 +167,7 @@ Properties
     
       eval()
     
-        chrome.devtools.inspectedWindow.eval(  expression: string,  options?: object,  callback?: function,): void
+        chrome.devtools.inspectedWindow.eval(  expression: string,  options?: object,): Promise<object>
       Evaluates a JavaScript expression in the context of the main frame of the inspected page. The expression must evaluate to a JSON-compliant object, otherwise an exception is thrown. The eval function can report either a DevTools-side error or a JavaScript exception that occurs during evaluation. In either case, the result parameter of the callback is undefined. In the case of a DevTools-side error, the isException parameter is non-null and has isError set to true and code set to an error code. In the case of a JavaScript error, isException is set to true and value is set to the string value of thrown object.
 Parameters
     
@@ -215,76 +199,29 @@ Parameters
     Evaluate the expression in the context of the content script of the calling extension, provided that the content script is already injected into the inspected page. If not, the expression is not evaluated and the callback is invoked with the exception parameter set to an object that has the isError field set to true and the code field set to E_NOTFOUND.
 
     
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (result: object, exceptionInfo: object) => void
+    Returns
+          
+            Promise<object>
+            
+      Pending
+    A function called when evaluation completes.
+
         
-    
-      result
-      object
-    The result of evaluation.
-
-    
-      exceptionInfo
-      object
-    An object providing details if an exception occurred while evaluating the expression.
-
-    
-      code
-      string
-    Set if the error occurred on the DevTools side before the expression is evaluated.
-
-    
-      description
-      string
-    Set if the error occurred on the DevTools side before the expression is evaluated.
-
-    
-      details
-      any[]
-    Set if the error occurred on the DevTools side before the expression is evaluated, contains the array of the values that may be substituted into the description string to provide more information about the cause of the error.
-
-    
-      isError
-      boolean
-    Set if the error occurred on the DevTools side before the expression is evaluated.
-
-    
-      isException
-      boolean
-    Set if the evaluated code produces an unhandled exception.
-
-    
-      value
-      string
-    Set if the evaluated code produces an unhandled exception.
-
-    
-    
-    
+      
     
       getResources()
     
-        chrome.devtools.inspectedWindow.getResources(  callback: function,): void
+        chrome.devtools.inspectedWindow.getResources(): Promise<Resource[]>
       Retrieves the list of resources from the inspected page.
-Parameters
-    
-      callback
-      function
-    
-          The callback parameter looks like:
-          (resources: Resource[]) => void
-        
-    
-      resources
-      Resource[]
-    The resources within the page.
+Returns
+          
+            Promise<Resource[]>
+            
+      Pending
+    A function that receives the list of resources when the request completes.
 
-    
-    
+        
+      
     
       reload()
     

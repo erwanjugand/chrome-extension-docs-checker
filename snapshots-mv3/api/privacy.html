@@ -92,6 +92,35 @@ repository.
 Types
   
     
+      AutofillBlockedType
+    
+      Pending
+    Categories of Autofill data.
+Enum
+      "contact_info"  "payments"  "identity_docs"  "travel"  
+    
+  
+    
+      AutofillSettings
+    
+      Pending
+    Site-specific block rules for Autofill features.
+
+      Type
+      object[]
+    Properties
+    
+      blockedTypes
+      AutofillBlockedType[]
+    The categories of Autofill data to block on matching sites.
+
+    
+      urlPattern
+      string
+    A URL pattern specifying the sites for which the block rule applies.
+
+    
+    
       IPHandlingPolicy
     
       Chrome 48+
@@ -158,6 +187,13 @@ Enum
       
         Deprecated since Chrome 70
     Please use privacy.services.autofillAddressEnabled and privacy.services.autofillCreditCardEnabled. This remains for backward compatibility in this release and will be removed in the future.If enabled, Chrome offers to automatically fill in forms. This preference's value is a boolean, defaulting to true.
+
+    
+      autofillSettings
+      types.ChromeSetting<AutofillSettings>
+    
+      Pending
+    If set, allows site-specific control over Autofill features by blocking specific data categories on matching URL patterns.
 
     
       passwordSavingEnabled
