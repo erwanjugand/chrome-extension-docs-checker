@@ -11,263 +11,242 @@
 
 
 Description
-Use the chrome.privacy API to control usage of the features in Chrome that can affect a user's privacy. This API relies on the ChromeSetting prototype of the type API for getting and setting Chrome's configuration.
-
-Permissions
-privacy
-
-You must declare the "privacy" permission in your extension's manifest to use the API. For
-example:
-{
-  "name": "My extension",
-  ...
-  "permissions": [
-    "privacy"
-  ],
-  ...
-}
+Use the chrome.mimeHandler API to handle MIME type streams in third-party extensions.
 
 
 
+Availability
 
+      Pending
+    
+
+Manifest
+
+  The following keys must be declared in the manifest to use this API."mime_types_handler"
 
 Concepts and usage
 
-Reading the current value of a Chrome setting is straightforward. You'll first need to find the
-property you're interested in, then you'll call get() on that object in order to retrieve its
-current value and your extension's level of control. For example, to determine if Chrome's credit card autofill
-feature is enabled, you'd write:
-chrome.privacy.services.autofillCreditCardEnabled.get({}, function(details) {
-  if (details.value) {
-    console.log('Autofill is on!');
-  } else {
-    console.log('Autofill is off!');
-  }
-});
+Historically, third-party extensions that handle specific document types (such as PDF viewers) relied on network request interception to catch navigations and redirect users to an extension page. Registering as a MIME handler avoids several limitations of that approach:
 
-Changing the value of a setting is a little bit more complex, because you first must verify
-that your extension can control the setting. The user won't see any change to their settings if your
-extension toggles a setting that is either locked to a specific value by enterprise policies
-(levelOfControl will be set to "not_controllable"), or if another extension is controlling the
-value (levelOfControl will be set to "controlled_by_other_extensions"). The set() call will
-succeed, but the setting will be immediately overridden. As this might be confusing, it is advisable
-to warn the user when the settings they've chosen aren't practically applied.
 
-Note: Full details about extensions' ability to control ChromeSettings can be found under
-chrome.types.ChromeSetting.
+The original URL stays in the address bar instead of being replaced by a chrome-extension:// URL.
+Your extension fetches the response Chrome already received, instead of making a second network request. Documents delivered by POST requests or from single-use URLs work correctly.
+Your extension can render documents loaded within <embed>, <object>, or <iframe> elements.
+Local files (file:// URLs) work without the user manually enabling "Allow access to file URLs" in the extension's settings.
 
-This means that you ought to use the get() method to determine your level of access, and then only
-call set() if your extension can grab control over the setting (in fact if your extension can't
-control the setting it's probably a good idea to visually disable the feature to reduce user
-confusion):
-chrome.privacy.services.autofillCreditCardEnabled.get({}, function(details) {
-  if (details.levelOfControl === 'controllable_by_this_extension') {
-    chrome.privacy.services.autofillCreditCardEnabled.set({ value: true }, function() {
-      if (chrome.runtime.lastError === undefined) {
-        console.log("Hooray, it worked!");
-      } else {
-        console.log("Sadness!", chrome.runtime.lastError);
-      }
-    });
-  }
-});
 
-If you're interested in changes to a setting's value, add a listener to its onChange event. Among
-other uses, this will allow you to warn the user if a more recently installed extension grabs
-control of a setting, or if enterprise policy overrides your control. To listen for changes to
-credit card autofill status, for example, the following code would suffice:
-chrome.privacy.services.autofillCreditCardEnabled.onChange.addListener(
-  function (details) {
-    // The new value is stored in `details.value`, the new level of control
-    // in `details.levelOfControl`, and `details.incognitoSpecific` will be
-    // `true` if the value is specific to Incognito mode.
-  }
-);
+MIME handlers apply only to documents that occupy an entire frame: top-level navigations and embedded documents. They never apply to inline subresources (e.g. <audio>, <img>, or <video> elements).
+
+Register a handler
+
+To register your extension as a MIME handler, declare the "mime_types_handler" key in the manifest. Each entry maps a MIME type to the extension page that renders it:
+
+manifest.json:
+{
+  "name": "My PDF Viewer",
+  ...
+  "mime_types_handler": {
+    "application/pdf": {
+      "handler_url": "viewer.html",
+      "can_embed": true
+    }
+  },
+  ...
+}
+
+Set "can_embed" to true to also handle documents embedded in <embed>, <object>, or <iframe> elements. If omitted, your handler only receives top-level navigations. As of Chrome 151, application/pdf is the only MIME type available to public handlers; declaring an unsupported MIME type causes an installation warning.
+
+If more than one installed extension registers for the same MIME type, the most recently installed extension handles it. If that extension is uninstalled, the previously installed handler becomes active again.
+
+Retrieve stream information
+
+When a user opens a document of a registered MIME type, Chrome loads your handler page in place of its built-in viewer. From the handler page, call getStreamInfo() to retrieve a StreamInfo object. This includes the originalUrl the user navigated to, the HTTP responseHeaders, whether the document is loaded in an embedded context, and a streamUrl that can be used to fetch the document's content.
+
+The streamUrl can be fetched exactly once, and only from your extension's origin. Read the response fully before processing it; a second fetch of the same streamUrl fails. Use originalUrl when displaying the document's location or title, not to fetch the content, because the original request may not be repeatable.
+Note: getStreamInfo() only succeeds on a handler page that Chrome loaded for a document. Calling it from another extension context, like the service worker or an options page, fails because there is no associated stream.
+Fall back to the native handler
+
+Your handler may encounter documents it cannot render, such as corrupted or password-protected files. Call abortAndFallbackToNativeHandler() to stop handling the document and hand it back to Chrome's built-in viewer, rather than leaving the user on a broken page. Chrome unloads your handler page as part of the fallback; no code runs after this call.
+
+Chrome buffers the response while your handler runs. If the response has been fully received when you call this method, Chrome serves the built-in viewer from the buffered copy without a new network request. Otherwise, Chrome reloads the document from the network, which may fail for documents delivered by POST or from single-use URLs. Fetch the stream fully before deciding whether you can render it; once your fetch of streamUrl completes, Chrome has the full response.
+
+Handle API availability
+
+In versions of Chrome before Chrome 151, an extension declaring "mime_types_handler" still installs and runs, but is not registered as a handler and chrome.mimeHandler is undefined. Extensions migrating from network request interception can check for the API at startup and keep their existing approach as a fallback:
+
+service-worker.js:
+if (chrome.mimeHandler) {
+  // Chrome routes registered MIME types to the handler page
+  // declared in the manifest.
+} else {
+  // Fall back to network request interception.
+}
 
 Examples
 
-To try this API, install the privacy API example from the chrome-extension-samples
-repository.
+Handle a stream
+
+The following example runs in the handler page declared in the manifest. It fetches the document's content and falls back to Chrome's built-in viewer if rendering fails:
+
+viewer.js:
+async function loadDocument() {
+  const streamInfo = await chrome.mimeHandler.getStreamInfo();
+
+  // The `embedded` property is true if the document is loaded
+  // within an <embed>, <object>, or <iframe> element.
+  if (streamInfo.embedded) {
+    // Adjust the UI (e.g., hide the top navigation bar).
+    document.body.classList.add('embedded-view');
+  }
+
+  // Fetch the content using the provided streamUrl. The stream can
+  // only be consumed once, so read it fully before continuing.
+  const response = await fetch(streamInfo.streamUrl);
+  const data = await response.arrayBuffer();
+
+  try {
+    // Render the document (e.g., using PDF.js).
+    await renderDocument(data);
+  } catch (e) {
+    // Can't render this document. Fall back to Chrome's built-in
+    // viewer; the page unloads and no code runs after this call.
+    chrome.mimeHandler.abortAndFallbackToNativeHandler();
+  }
+}
+
+loadDocument();
+
+Let users toggle handling
+
+Handler options are stored per MIME type. The following example uses getMimeHandlerOptions() and setMimeHandlerOptions() to let users turn handling off from the options page, without uninstalling the extension. While handling is disabled, documents of that type are no longer routed to your extension.
+
+options.js:
+const checkbox = document.querySelector('#handle-pdfs');
+
+async function initOptions() {
+  const options =
+      await chrome.mimeHandler.getMimeHandlerOptions('application/pdf');
+  // Handling is enabled unless it has been explicitly disabled.
+  checkbox.checked = options.enabled !== false;
+}
+
+checkbox.addEventListener('change', async () => {
+  await chrome.mimeHandler.setMimeHandlerOptions('application/pdf', {
+    enabled: checkbox.checked
+  });
+});
+
+initOptions();
 
 Types
   
     
-      AutofillBlockedType
+      MimeHandlerOptions
+    Properties
     
-      Pending
-    Categories of Autofill data.
-Enum
-      "contact_info"  "payments"  "identity_docs"  "travel"  
+      enabled
+      boolean
+    Whether this handler is active for the given MIME type.
+
     
+    
+      StreamInfo
+    Properties
+    
+      embedded
+      boolean
+    True if loaded in an embedded context (iframe/embed/object).
+
+    
+      mimeType
+      string
+    The MIME type of the intercepted content.
+
+    
+      originalUrl
+      string
+    The original URL the user navigated to.
+
+    
+      responseHeaders
+      object
+    HTTP response headers as key-value pairs.
+
+    
+      streamUrl
+      string
+    The URL to fetch the stream data from.
+
+    
+      tabId
+      number
+    The tab ID containing the document.
+
+    Methods
   
     
-      IPHandlingPolicy
+      abortAndFallbackToNativeHandler()
     
-      Chrome 48+
+        chrome.mimeHandler.abortAndFallbackToNativeHandler(): Promise<void>
+      Aborts current stream handling and hands the content off to the user agent's native handler. After this call the extension frame will be torn down; callers should not expect further execution.
+Returns
+          
+            Promise<void>
+            
+        
       
-    The IP handling policy of WebRTC.
-Enum
-      "default"  "default_public_and_private_interfaces"  "default_public_interface_only"  "disable_non_proxied_udp"  
     
-  Properties
-  
+      getMimeHandlerOptions()
     
-      network
-    Settings that influence Chrome's handling of network connections in general.
+        chrome.mimeHandler.getMimeHandlerOptions(  mimeType: string,): Promise<MimeHandlerOptions>
+      Reads the persisted options for a MIME type. Returns defaults (enabled=true) if none have been stored.
+Parameters
+    
+      mimeType
+      string
+    The MIME type whose options to read.
 
-      Type
-      object
-    Properties
-    
-      networkPredictionEnabled
-      types.ChromeSetting<boolean>
-    If enabled, Chrome attempts to speed up your web browsing experience by pre-resolving DNS entries and preemptively opening TCP and SSL connections to servers. This preference only affects actions taken by Chrome's internal prediction service. It does not affect webpage-initiated prefectches or preconnects. This preference's value is a boolean, defaulting to true.
+    Returns
+          
+            Promise<MimeHandlerOptions>
+            Promise resolved with the persisted options for the MIME type.
 
-    
-      webRTCIPHandlingPolicy
-      types.ChromeSetting<IPHandlingPolicy>
-    
-      Chrome 48+
+        
       
-    Allow users to specify the media performance/privacy tradeoffs which impacts how WebRTC traffic will be routed and how much local address information is exposed. This preference's value is of type IPHandlingPolicy, defaulting to default.
-
     
+      getStreamInfo()
     
-      services
-    Settings that enable or disable features that require third-party network services provided by Google and your default search provider.
-
-      Type
-      object
-    Properties
-    
-      alternateErrorPagesEnabled
-      types.ChromeSetting<boolean>
-    If enabled, Chrome uses a web service to help resolve navigation errors. This preference's value is a boolean, defaulting to true.
-
-    
-      autofillAddressEnabled
-      types.ChromeSetting<boolean>
-    
-      Chrome 70+
+        chrome.mimeHandler.getStreamInfo(): Promise<StreamInfo>
+      Retrieves stream information for the current MIME handler context. Must be called from within a MIME handler extension page.
+Returns
+          
+            Promise<StreamInfo>
+            
+        
       
-    If enabled, Chrome offers to automatically fill in addresses and other form data. This preference's value is a boolean, defaulting to true.
+    
+      setMimeHandlerOptions()
+    
+        chrome.mimeHandler.setMimeHandlerOptions(  mimeType: string,  options: MimeHandlerOptions,): Promise<void>
+      Sets the configuration options for a specified MIME type.
+Parameters
+    
+      mimeType
+      string
+    The MIME type to configure.
 
     
-      autofillCreditCardEnabled
-      types.ChromeSetting<boolean>
-    
-      Chrome 70+
+      options
+      MimeHandlerOptions
+    The new options to use.
+
+    Returns
+          
+            Promise<void>
+            Promise resolved when the configuration has been set.
+
+        
       
-    If enabled, Chrome offers to automatically fill in credit card forms. This preference's value is a boolean, defaulting to true.
-
-    
-      autofillEnabled
-      types.ChromeSetting<boolean>
-    
-      
-        Deprecated since Chrome 70
-    Please use privacy.services.autofillAddressEnabled and privacy.services.autofillCreditCardEnabled. This remains for backward compatibility in this release and will be removed in the future.If enabled, Chrome offers to automatically fill in forms. This preference's value is a boolean, defaulting to true.
-
-    
-      passwordSavingEnabled
-      types.ChromeSetting<boolean>
-    If enabled, the password manager will ask if you want to save passwords. This preference's value is a boolean, defaulting to true.
-
-    
-      safeBrowsingEnabled
-      types.ChromeSetting<boolean>
-    If enabled, Chrome does its best to protect you from phishing and malware. This preference's value is a boolean, defaulting to true.
-
-    
-      safeBrowsingExtendedReportingEnabled
-      types.ChromeSetting<boolean>
-    If enabled, Chrome will send additional information to Google when SafeBrowsing blocks a page, such as the content of the blocked page. This preference's value is a boolean, defaulting to false.
-
-    
-      searchSuggestEnabled
-      types.ChromeSetting<boolean>
-    If enabled, Chrome sends the text you type into the Omnibox to your default search engine, which provides predictions of websites and searches that are likely completions of what you've typed so far. This preference's value is a boolean, defaulting to true.
-
-    
-      spellingServiceEnabled
-      types.ChromeSetting<boolean>
-    If enabled, Chrome uses a web service to help correct spelling errors. This preference's value is a boolean, defaulting to false.
-
-    
-      translationServiceEnabled
-      types.ChromeSetting<boolean>
-    If enabled, Chrome offers to translate pages that aren't in a language you read. This preference's value is a boolean, defaulting to true.
-
-    
-    
-      websites
-    Settings that determine what information Chrome makes available to websites.
-
-      Type
-      object
-    Properties
-    
-      adMeasurementEnabled
-      types.ChromeSetting<boolean>
-    
-      Chrome 111+
-      
-    If disabled, the Attribution Reporting API and Private Aggregation API are deactivated. The value of this preference is of type boolean, and the default value is true. Extensions may only disable these APIs by setting the value to false. If you try setting these APIs to true, it will throw an error.
-
-    
-      doNotTrackEnabled
-      types.ChromeSetting<boolean>
-    
-      Chrome 65+
-      
-    If enabled, Chrome sends 'Do Not Track' (DNT: 1) header with your requests. The value of this preference is of type boolean, and the default value is false.
-
-    
-      fledgeEnabled
-      types.ChromeSetting<boolean>
-    
-      Chrome 111+
-      
-    If disabled, the Fledge API is deactivated. The value of this preference is of type boolean, and the default value is true. Extensions may only disable this API by setting the value to false. If you try setting this API to true, it will throw an error.
-
-    
-      hyperlinkAuditingEnabled
-      types.ChromeSetting<boolean>
-    If enabled, Chrome sends auditing pings when requested by a website (<a ping>). The value of this preference is of type boolean, and the default value is true.
-
-    
-      protectedContentEnabled
-      types.ChromeSetting<boolean>
-    Available on Windows and ChromeOS only: If enabled, Chrome provides a unique ID to plugins in order to run protected content. The value of this preference is of type boolean, and the default value is true.
-
-    
-      referrersEnabled
-      types.ChromeSetting<boolean>
-    If enabled, Chrome sends referer headers with your requests. Yes, the name of this preference doesn't match the misspelled header. No, we're not going to change it. The value of this preference is of type boolean, and the default value is true.
-
-    
-      relatedWebsiteSetsEnabled
-      types.ChromeSetting<boolean>
-    
-      Chrome 121+
-      
-    If disabled, Related Website Sets is deactivated. The value of this preference is of type boolean, and the default value is true. Extensions may only disable this API by setting the value to false. If you try setting this API to true, it will throw an error.
-
-    
-      thirdPartyCookiesAllowed
-      types.ChromeSetting<boolean>
-    If disabled, Chrome blocks third-party sites from setting cookies. The value of this preference is of type boolean, and the default value is true. Extensions may not enable this API in Incognito mode, where third-party cookies are blocked and can only be allowed at the site level. If you try setting this API to true in Incognito, it will throw an error.
-Note: Individual sites may still be able to access third-party cookies when this API returns false, if they have a valid exemption or they use the Storage Access API instead.
-
-    
-      topicsEnabled
-      types.ChromeSetting<boolean>
-    
-      Chrome 111+
-      
-    If disabled, the Topics API is deactivated. The value of this preference is of type boolean, and the default value is true. Extensions may only disable this API by setting the value to false. If you try setting this API to true, it will throw an error.
-
-    
 
 
   
