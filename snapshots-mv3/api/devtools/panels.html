@@ -135,7 +135,7 @@ Properties
     Creates a pane within panel's sidebar.
 
           The createSidebarPane function looks like:
-          (title: string, callback?: function) => {...}
+          (title: string) => {...}
         
     
       title
@@ -143,19 +143,14 @@ Properties
     Text that is displayed in sidebar caption.
 
     
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (result: ExtensionSidebarPane) => void
-        
-    
-      result
-      ExtensionSidebarPane
-    An ExtensionSidebarPane object for created sidebar pane.
+          
+            returnsPromise<ExtensionSidebarPane>
+            
+      Pending
+    A callback invoked when the sidebar is created.
 
-    
-    
+        
+      
     
     
       ExtensionPanel
@@ -311,7 +306,7 @@ Properties
     Sets an expression that is evaluated within the inspected page. The result is displayed in the sidebar pane.
 
           The setExpression function looks like:
-          (expression: string, rootTitle?: string, callback?: function) => {...}
+          (expression: string, rootTitle?: string) => {...}
         
     
       expression
@@ -324,13 +319,14 @@ Properties
     An optional title for the root of the expression tree.
 
     
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
+          
+            returnsPromise<void>
+            
+      Pending
+    A callback invoked after the sidebar pane is updated with the expression evaluation results.
+
         
-    
+      
     
       setHeight
       void
@@ -351,7 +347,7 @@ Properties
     Sets a JSON-compliant object to be displayed in the sidebar pane.
 
           The setObject function looks like:
-          (jsonObject: string, rootTitle?: string, callback?: function) => {...}
+          (jsonObject: string, rootTitle?: string) => {...}
         
     
       jsonObject
@@ -364,13 +360,14 @@ Properties
     An optional title for the root of the expression tree.
 
     
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
+          
+            returnsPromise<void>
+            
+      Pending
+    A callback invoked after the sidebar is updated with the object.
+
         
-    
+      
     
       setPage
       void
@@ -412,7 +409,7 @@ Properties
     Creates a pane within panel's sidebar.
 
           The createSidebarPane function looks like:
-          (title: string, callback?: function) => {...}
+          (title: string) => {...}
         
     
       title
@@ -420,19 +417,14 @@ Properties
     Text that is displayed in sidebar caption.
 
     
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (result: ExtensionSidebarPane) => void
-        
-    
-      result
-      ExtensionSidebarPane
-    An ExtensionSidebarPane object for created sidebar pane.
+          
+            returnsPromise<ExtensionSidebarPane>
+            
+      Pending
+    A callback invoked when the sidebar is created.
 
-    
-    
+        
+      
     
     
       Theme
@@ -473,7 +465,7 @@ Enum
     
       create()
     
-        chrome.devtools.panels.create(  title: string,  iconPath: string,  pagePath: string,  callback?: function,): void
+        chrome.devtools.panels.create(  title: string,  iconPath: string,  pagePath: string,): Promise<ExtensionPanel>
       Creates an extension panel.
 Parameters
     
@@ -491,24 +483,19 @@ Parameters
       string
     Path of the panel's HTML page relative to the extension directory.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          (panel: ExtensionPanel) => void
-        
-    
-      panel
-      ExtensionPanel
-    An ExtensionPanel object representing the created panel.
+    Returns
+          
+            Promise<ExtensionPanel>
+            
+      Pending
+    A function that is called when the panel is created.
 
-    
-    
+        
+      
     
       openResource()
     
-        chrome.devtools.panels.openResource(  url: string,  lineNumber: number,  columnNumber?: number,  callback?: function,): void
+        chrome.devtools.panels.openResource(  url: string,  lineNumber: number,  columnNumber?: number,): Promise<void>
       Requests DevTools to open a URL in a Developer Tools panel.
 Parameters
     
@@ -529,14 +516,15 @@ Parameters
       
     Specifies the column number to scroll to when the resource is loaded.
 
-    
-      callback
-      function optional
-    
-          The callback parameter looks like:
-          () => void
+    Returns
+          
+            Promise<void>
+            
+      Pending
+    A function that is called when the resource has been successfully loaded.
+
         
-    
+      
     
       setOpenResourceHandler()
     

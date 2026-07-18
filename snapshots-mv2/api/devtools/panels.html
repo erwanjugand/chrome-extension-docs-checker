@@ -133,6 +133,10 @@ Properties
     
       createSidebarPane
       void
+    
+      
+        Promise
+      
     Creates a pane within panel's sidebar.
 
           The createSidebarPane function looks like:
@@ -157,6 +161,18 @@ Properties
 
     
     
+          
+            returnsPromise<ExtensionSidebarPane>
+            
+      Pending
+    A callback invoked when the sidebar is created.
+
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
     
     
       ExtensionPanel
@@ -309,6 +325,10 @@ Properties
     
       setExpression
       void
+    
+      
+        Promise
+      
     Sets an expression that is evaluated within the inspected page. The result is displayed in the sidebar pane.
 
           The setExpression function looks like:
@@ -332,6 +352,18 @@ Properties
           () => void
         
     
+          
+            returnsPromise<void>
+            
+      Pending
+    A callback invoked after the sidebar pane is updated with the expression evaluation results.
+
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
     
       setHeight
       void
@@ -349,6 +381,10 @@ Properties
     
       setObject
       void
+    
+      
+        Promise
+      
     Sets a JSON-compliant object to be displayed in the sidebar pane.
 
           The setObject function looks like:
@@ -372,6 +408,18 @@ Properties
           () => void
         
     
+          
+            returnsPromise<void>
+            
+      Pending
+    A callback invoked after the sidebar is updated with the object.
+
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
     
       setPage
       void
@@ -410,6 +458,10 @@ Properties
     
       createSidebarPane
       void
+    
+      
+        Promise
+      
     Creates a pane within panel's sidebar.
 
           The createSidebarPane function looks like:
@@ -434,6 +486,18 @@ Properties
 
     
     
+          
+            returnsPromise<ExtensionSidebarPane>
+            
+      Pending
+    A callback invoked when the sidebar is created.
+
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
     
     
       Theme
@@ -474,7 +538,11 @@ Enum
     
       create()
     
-        chrome.devtools.panels.create(  title: string,  iconPath: string,  pagePath: string,  callback?: function,): void
+      
+        Promise
+      
+    
+        chrome.devtools.panels.create(  title: string,  iconPath: string,  pagePath: string,  callback?: function,): Promise<ExtensionPanel>
       Creates an extension panel.
 Parameters
     
@@ -505,11 +573,27 @@ Parameters
     An ExtensionPanel object representing the created panel.
 
     
-    
+    Returns
+          
+            Promise<ExtensionPanel>
+            
+      Pending
+    A function that is called when the panel is created.
+
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
     
       openResource()
     
-        chrome.devtools.panels.openResource(  url: string,  lineNumber: number,  columnNumber?: number,  callback?: function,): void
+      
+        Promise
+      
+    
+        chrome.devtools.panels.openResource(  url: string,  lineNumber: number,  columnNumber?: number,  callback?: function,): Promise<void>
       Requests DevTools to open a URL in a Developer Tools panel.
 Parameters
     
@@ -537,7 +621,19 @@ Parameters
           The callback parameter looks like:
           () => void
         
-    
+    Returns
+          
+            Promise<void>
+            
+      Pending
+    A function that is called when the resource has been successfully loaded.
+
+              
+                Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
+              
+            
+        
+      
     
       setOpenResourceHandler()
     
@@ -586,7 +682,6 @@ Parameters
 
     
     
-
 
   
 
