@@ -948,7 +948,7 @@ Parameters
     
       application
       string
-    The name of the native messaging host.
+    The name of the native messaging host, or target details.
 
     
       message
@@ -1100,6 +1100,22 @@ Parameters
       Port
     
     
+    
+    
+      onEnabled
+    
+      Pending
+    
+        chrome.runtime.onEnabled.addListener(  callback: function,)
+      Fired when an extension goes from being in a disabled state to an enabled state.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          () => void
+        
     
     
       onInstalled
