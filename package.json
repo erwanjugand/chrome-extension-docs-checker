@@ -1,6 +1,6 @@
 {
   "name": "chrome-extension-docs-checker",
-  "packageManager": "pnpm@11.9.0",
+  "packageManager": "pnpm@11.25.0",
   "version": "0.0.1",
   "type": "module",
   "engines": {
@@ -17,12 +17,12 @@
     "fix:all": "pnpm fix:prettier && pnpm fix:lint"
   },
   "devDependencies": {
-    "@erwanjugand/prettier-config": "1.0.1",
-    "@prettier/plugin-oxc": "0.2.0",
-    "@types/node": "24.13.2",
+    "@erwanjugand/prettier-config": "1.1.1",
+    "@prettier/plugin-oxc": "0.2.2",
+    "@types/node": "24.13.3",
     "cheerio": "1.2.0",
-    "oxlint": "1.72.0",
-    "prettier": "3.9.4",
+    "oxlint": "1.81.0",
+    "prettier": "3.9.6",
     "typescript": "6.0.3"
   }
 }
