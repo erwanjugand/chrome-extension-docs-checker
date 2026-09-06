@@ -1,6 +1,6 @@
 {
   "name": "chrome-extension-docs-checker",
-  "packageManager": "pnpm@11.25.0",
+  "packageManager": "pnpm@12.3.4",
   "version": "0.0.1",
   "type": "module",
   "engines": {
