@@ -148,7 +148,7 @@ In your service worker, you can bind a handler to each of the commands defined
 in the manifest using onCommand.addListener. For example:
 
 service-worker.js:
-chrome.commands.onCommand.addListener((command) => {
+browser.commands.onCommand.addListener((command) => {
   console.log(`Command: ${command}`);
 });
 
@@ -227,7 +227,7 @@ manifest.json:
 }
 
 service-worker.js:
-chrome.commands.onCommand.addListener((command) => {
+browser.commands.onCommand.addListener((command) => {
   console.log(`Command "${command}" triggered`);
 });
 
@@ -259,8 +259,8 @@ manifest.json:
 }
 
 service-worker.js:
-chrome.action.onClicked.addListener((tab) => {
-  chrome.scripting.executeScript({
+browser.action.onClicked.addListener((tab) => {
+  browser.scripting.executeScript({
     target: {tabId: tab.id},
     func: contentScriptFunc,
     args: ['action'],
@@ -272,7 +272,7 @@ function contentScriptFunc(name) {
 }
 
 // This callback WILL NOT be called for "_execute_action"
-chrome.commands.onCommand.addListener((command) => {
+browser.commands.onCommand.addListener((command) => {
   console.log(`Command "${command}" called`);
 });
 
@@ -284,8 +284,8 @@ provide a more robust end user experience by anticipating this possibility and
 checking for collisions at install time.
 
 service-worker.js:
-chrome.runtime.onInstalled.addListener((details) => {
-  if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
+browser.runtime.onInstalled.addListener((details) => {
+  if (details.reason === browser.runtime.OnInstalledReason.INSTALL) {
     checkCommandShortcuts();
   }
 });
@@ -293,7 +293,7 @@ chrome.runtime.onInstalled.addListener((details) => {
 // Only use this function during the initial install phase. After
 // installation the user may have intentionally unassigned commands.
 function checkCommandShortcuts() {
-  chrome.commands.getAll((commands) => {
+  browser.commands.getAll((commands) => {
     let missingShortcuts = [];
 
     for (let {name, shortcut} of commands) {

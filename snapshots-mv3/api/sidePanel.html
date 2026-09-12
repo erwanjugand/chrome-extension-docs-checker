@@ -88,24 +88,24 @@ sidepanel.html:
 
 Enable a side panel on a specific site
 
-An extension can use sidepanel.setOptions() to enable a side panel on a specific tab. This example uses chrome.tabs.onUpdated() to listen for any updates made to the tab. It checks if the URL is www.google.com and enables the side panel. Otherwise, it disables it.
+An extension can use sidepanel.setOptions() to enable a side panel on a specific tab. This example uses browser.tabs.onUpdated() to listen for any updates made to the tab. It checks if the URL is www.google.com and enables the side panel. Otherwise, it disables it.
 
 service-worker.js:
 const GOOGLE_ORIGIN = 'https://www.google.com';
 
-chrome.tabs.onUpdated.addListener(async (tabId, info, tab) => {
+browser.tabs.onUpdated.addListener(async (tabId, info, tab) => {
   if (!tab.url) return;
   const url = new URL(tab.url);
   // Enables the side panel on google.com
   if (url.origin === GOOGLE_ORIGIN) {
-    await chrome.sidePanel.setOptions({
+    await browser.sidePanel.setOptions({
       tabId,
       path: 'sidepanel.html',
       enabled: true
     });
   } else {
     // Disables the side panel on all other sites
-    await chrome.sidePanel.setOptions({
+    await browser.sidePanel.setOptions({
       tabId,
       enabled: false
     });
@@ -138,7 +138,7 @@ service-worker.js:
 const GOOGLE_ORIGIN = 'https://www.google.com';
 
 // Allows users to open the side panel by clicking on the action toolbar icon
-chrome.sidePanel
+browser.sidePanel
   .setPanelBehavior({ openPanelOnActionClick: true })
   .catch((error) => console.error(error));
 ...
@@ -150,18 +150,18 @@ Chrome 116 introduces sidePanel.open(). It allows extensions to open the side pa
 The following code shows how to open a global side panel on the current window when the user clicks on a context menu. When using sidePanel.open(), you must choose the context in which it should open. Use windowId to open a global side panel. Alternatively, set the tabId to open the side panel only on a specific tab.
 
 service-worker.js:
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.contextMenus.create({
+browser.runtime.onInstalled.addListener(() => {
+  browser.contextMenus.create({
     id: 'openSidePanel',
     title: 'Open side panel',
     contexts: ['all']
   });
 });
 
-chrome.contextMenus.onClicked.addListener((info, tab) => {
+browser.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === 'openSidePanel') {
     // This will open the panel in all the pages on the current window.
-    chrome.sidePanel.open({ windowId: tab.windowId });
+    browser.sidePanel.open({ windowId: tab.windowId });
   }
 });
 
@@ -175,15 +175,15 @@ service-worker.js:
 const welcomePage = 'sidepanels/welcome-sp.html';
 const mainPage = 'sidepanels/main-sp.html';
 
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.sidePanel.setOptions({ path: welcomePage });
-  chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true });
+browser.runtime.onInstalled.addListener(() => {
+  browser.sidePanel.setOptions({ path: welcomePage });
+  browser.sidePanel.setPanelBehavior({ openPanelOnActionClick: true });
 });
 
-chrome.tabs.onActivated.addListener(async ({ tabId }) => {
-  const { path } = await chrome.sidePanel.getOptions({ tabId });
+browser.tabs.onActivated.addListener(async ({ tabId }) => {
+  const { path } = await browser.sidePanel.getOptions({ tabId });
   if (path === welcomePage) {
-    chrome.sidePanel.setOptions({ path: mainPage });
+    browser.sidePanel.setOptions({ path: mainPage });
   }
 });
 

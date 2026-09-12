@@ -93,14 +93,14 @@ Most Chrome extension permissions can be specified as optional, with the followi
     
     
       "debugger"
-      The chrome.debugger API serves as an
+      The browser.debugger API serves as an
         alternate transport for Chrome's remote debugging
             protocol.
     
     
       "declarativeNetRequest"
       Grants the extension access to the 
-        chrome.declarativeNetRequest API.
+        browser.declarativeNetRequest API.
     
     
       "devtools"
@@ -114,26 +114,26 @@ Most Chrome extension permissions can be specified as optional, with the followi
     
       "mdns"
       Grants the extension access to the
-        chrome.mdns API.
+        browser.mdns API.
     
     
       "proxy"
-      Grants the extension access to the chrome.proxy API to manage Chrome's proxy
+      Grants the extension access to the browser.proxy API to manage Chrome's proxy
         settings.
     
     
       "tts"
-      The chrome.tts API plays synthesized
+      The browser.tts API plays synthesized
         text-to-speech (TTS).
     
     
       "ttsEngine"
-      The chrome.ttsEngine API implements a
+      The browser.ttsEngine API implements a
         text-to-speech (TTS) engine using an extension.
     
     
       "wallpaper"
-      ChromeOS only. Use the chrome.wallpaper API change the ChromeOS
+      ChromeOS only. Use the browser.wallpaper API change the ChromeOS
         wallpaper.
     
   
@@ -148,7 +148,7 @@ Request the permissions from within a user gesture using permissions.request():
 document.querySelector('#my-button').addEventListener('click', (event) => {
   // Permissions must be requested from inside a user gesture, like a button's
   // click handler.
-  chrome.permissions.request({
+  browser.permissions.request({
     permissions: ['tabs'],
     origins: ['https://www.google.com/']
   }, (granted) => {
@@ -174,7 +174,7 @@ Step 4: Check the extension's current permissions
 
 To check whether your extension has a specific permission or set of permissions, use
 permission.contains():
-chrome.permissions.contains({
+browser.permissions.contains({
   permissions: ['tabs'],
   origins: ['https://www.google.com/']
 }, (result) => {
@@ -189,7 +189,7 @@ Step 5: Remove the permissions
 
 You should remove permissions when you no longer need them. After a permission has been removed,
 calling permissions.request() usually adds the permission back without prompting the user.
-chrome.permissions.remove({
+browser.permissions.remove({
   permissions: ['tabs'],
   origins: ['https://www.google.com/']
 }, (removed) => {

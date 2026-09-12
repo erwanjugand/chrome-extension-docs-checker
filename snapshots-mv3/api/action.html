@@ -28,7 +28,7 @@ Manifest
 
   The following keys must be declared in the manifest to use this API."action"
 
-To use the chrome.action API, specify a "manifest_version" of 3 and include
+To use the browser.action API, specify a "manifest_version" of 3 and include
 the "action" key in your manifest file.
 Note: Every extension has an icon in the Chrome toolbar, even if the "action" key isn't added to the manifest.{
   "name": "Action Extension",
@@ -76,7 +76,7 @@ context.clearRect(0, 0, 16, 16);
 context.fillStyle = '#00FF00';  // Green
 context.fillRect(0, 0, 16, 16);
 const imageData = context.getImageData(0, 0, 16, 16);
-chrome.action.setIcon({imageData: imageData}, () => { /* ... */ });
+browser.action.setIcon({imageData: imageData}, () => { /* ... */ });
 
 Note: The action.setIcon() API is intended to set a static image. Don't use animated images for your icons.
 
@@ -104,17 +104,17 @@ To create a badge, set it programmatically by calling action.setBadgeBackgroundC
 action.setBadgeText(). There isn't a default badge setting in the manifest. Badge color values
 can be either an array of four integers between 0 and 255 that make up the RGBA color of the
 badge or a string with a CSS color value.
-chrome.action.setBadgeBackgroundColor(
+browser.action.setBadgeBackgroundColor(
   {color: [0, 255, 0, 0]},  // Green
   () => { /* ... */ },
 );
 
-chrome.action.setBadgeBackgroundColor(
+browser.action.setBadgeBackgroundColor(
   {color: '#00FF00'},  // Also green
   () => { /* ... */ },
 );
 
-chrome.action.setBadgeBackgroundColor(
+browser.action.setBadgeBackgroundColor(
   {color: 'green'},  // Also, also green
   () => { /* ... */ },
 );
@@ -143,7 +143,7 @@ set the badge text for a specific tab, do something like the following:
 function getTabId() { /* ... */}
 function getTabBadge() { /* ... */}
 
-chrome.action.setBadgeText(
+browser.action.setBadgeText(
   {
     text: getTabBadge(tabId),
     tabId: getTabId(),
@@ -224,8 +224,8 @@ that everything worked as expected.
   }
 }
 // background.js
-chrome.action.onClicked.addListener((tab) => {
-  chrome.scripting.executeScript({
+browser.action.onClicked.addListener((tab) => {
+  browser.scripting.executeScript({
     target: {tabId: tab.id},
     files: ['content.js']
   });
@@ -241,25 +241,25 @@ use declarativeContent to enable the action on specific sites.
 
 // Wrap in an onInstalled callback to avoid unnecessary work
 // every time the service worker is run
-chrome.runtime.onInstalled.addListener(() => {
+browser.runtime.onInstalled.addListener(() => {
   // Page actions are disabled by default and enabled on select tabs
-  chrome.action.disable();
+  browser.action.disable();
 
   // Clear all rules to ensure only our expected rules are set
-  chrome.declarativeContent.onPageChanged.removeRules(undefined, () => {
+  browser.declarativeContent.onPageChanged.removeRules(undefined, () => {
     // Declare a rule to enable the action on example.com pages
     let exampleRule = {
       conditions: [
-        new chrome.declarativeContent.PageStateMatcher({
+        new browser.declarativeContent.PageStateMatcher({
           pageUrl: {hostSuffix: '.example.com'},
         })
       ],
-      actions: [new chrome.declarativeContent.ShowAction()],
+      actions: [new browser.declarativeContent.ShowAction()],
     };
 
     // Finally, apply our new array of rules
     let rules = [exampleRule];
-    chrome.declarativeContent.onPageChanged.addRules(rules);
+    browser.declarativeContent.onPageChanged.addRules(rules);
   });
 });
 

@@ -56,13 +56,13 @@ everything the font covers, such as Latin.
 Examples
 
 The following code gets the standard font for Arabic.
-chrome.fontSettings.getFont(
+browser.fontSettings.getFont(
   { genericFamily: 'standard', script: 'Arab' },
   function(details) { console.log(details.fontId); }
 );
 
 The next snippet sets the sans-serif font for Japanese.
-chrome.fontSettings.setFont(
+browser.fontSettings.setFont(
   { genericFamily: 'sansserif', script: 'Jpan', fontId: 'MS PGothic' }
 );
 

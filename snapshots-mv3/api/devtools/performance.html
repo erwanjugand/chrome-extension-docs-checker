@@ -29,7 +29,7 @@ Starting from Chrome 128, you can listen to notifications of the recording statu
 
 Concepts and usage
 
-The chrome.devtools.performance API allows developers to interact with the recording features of the Performance panel panel in Chrome DevTools. You can use this API to get notifications when recording starts or stops.
+The browser.devtools.performance API allows developers to interact with the recording features of the Performance panel panel in Chrome DevTools. You can use this API to get notifications when recording starts or stops.
 
 Two events are available:
 
@@ -46,11 +46,11 @@ Examples
 
 This is how you can use the API to listen to recording status updates
 
-chrome.devtools.performance.onProfilingStarted.addListener(() => {
+browser.devtools.performance.onProfilingStarted.addListener(() => {
   // Profiling started listener implementation
 });
 
-chrome.devtools.performance.onProfilingStopped.addListener(() => {
+browser.devtools.performance.onProfilingStopped.addListener(() => {
   // Profiling stopped listener implementation
 })
 

@@ -352,11 +352,11 @@ Update dynamic rules
 The following example shows how to call updateDynamicRules(). The procedure for updateSessionRules() is the same.
 // Get arrays containing new and old rules
 const newRules = await getNewRules();
-const oldRules = await chrome.declarativeNetRequest.getDynamicRules();
+const oldRules = await browser.declarativeNetRequest.getDynamicRules();
 const oldRuleIds = oldRules.map(rule => rule.id);
 
 // Use the arrays to update the dynamic rules
-await chrome.declarativeNetRequest.updateDynamicRules({
+await browser.declarativeNetRequest.updateDynamicRules({
   removeRuleIds: oldRuleIds,
   addRules: newRules
 });
@@ -368,15 +368,15 @@ async function updateStaticRules(enableRulesetIds, disableCandidateIds) {
   // Create the options structure for the call to updateEnabledRulesets()
   let options = { enableRulesetIds: enableRulesetIds }
   // Get the number of enabled static rules
-  const enabledStaticCount = await chrome.declarativeNetRequest.getEnabledRulesets();
+  const enabledStaticCount = await browser.declarativeNetRequest.getEnabledRulesets();
   // Compare rule counts to determine if anything needs to be disabled so that
   // new rules can be enabled
   const proposedCount = enableRulesetIds.length;
-  if (enabledStaticCount + proposedCount > chrome.declarativeNetRequest.MAX_NUMBER_OF_ENABLED_STATIC_RULESETS) {
+  if (enabledStaticCount + proposedCount > browser.declarativeNetRequest.MAX_NUMBER_OF_ENABLED_STATIC_RULESETS) {
     options.disableRulesetIds = disableCandidateIds
   }
   // Update the enabled static rules
-  await chrome.declarativeNetRequest.updateEnabledRulesets(options);
+  await browser.declarativeNetRequest.updateEnabledRulesets(options);
 }
 
 Rule examples

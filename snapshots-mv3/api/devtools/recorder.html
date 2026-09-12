@@ -55,7 +55,7 @@ To customize the replay button in the Recorder, use the registerRecorderExtensio
 If the method is detected, a replay button will appear in the Recorder. 
 Upon clicking the button, the current recording object will be passed as the first argument to the replay method.
 
-At this point, the extension can display a RecorderView for handling the replay or use other extension APIs to process the replay request. To create a new RecorderView, invoke chrome.devtools.recorder.createView.
+At this point, the extension can display a RecorderView for handling the replay or use other extension APIs to process the replay request. To create a new RecorderView, invoke browser.devtools.recorder.createView.
 
 Examples
 
@@ -71,7 +71,7 @@ class MyPlugin {
   }
 }
 
-chrome.devtools.recorder.registerRecorderExtensionPlugin(
+browser.devtools.recorder.registerRecorderExtensionPlugin(
   new MyPlugin(),
   /*name=*/'MyPlugin',
   /*mediaType=*/'application/json'
@@ -80,7 +80,7 @@ chrome.devtools.recorder.registerRecorderExtensionPlugin(
 Replay plugin
 
 The following code implements an extension plugin that creates a dummy Recorder view and displays it upon a replay request:
-const view = await chrome.devtools.recorder.createView(
+const view = await browser.devtools.recorder.createView(
   /* name= */ 'ExtensionName',
   /* pagePath= */ 'Replay.html'
 );
@@ -89,7 +89,7 @@ let latestRecording;
 
 view.onShown.addListener(() => {
   // Recorder has shown the view. Send additional data to the view if needed.
-  chrome.runtime.sendMessage(JSON.stringify(latestRecording));
+  browser.runtime.sendMessage(JSON.stringify(latestRecording));
 });
 
 view.onHidden.addListener(() => {
@@ -105,7 +105,7 @@ export class RecorderPlugin {
   }
 }
 
-chrome.devtools.recorder.registerRecorderExtensionPlugin(
+browser.devtools.recorder.registerRecorderExtensionPlugin(
   new RecorderPlugin(),
   /* name=*/ 'CoffeeTest'
 );

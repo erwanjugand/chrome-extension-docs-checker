@@ -62,8 +62,8 @@ The following sections demonstrate some common use cases for the Reading List AP
 
 Add an item
 
-To add an item to the reading list, use chrome.readingList.addEntry():
-chrome.readingList.addEntry({
+To add an item to the reading list, use browser.readingList.addEntry():
+browser.readingList.addEntry({
   title: "New to the web platform in September | web.dev",
   url: "https://developer.chrome.com/",
   hasBeenRead: false
@@ -71,9 +71,9 @@ chrome.readingList.addEntry({
 
 Display items
 
-To display items from the reading list, use the chrome.readingList.query() method to retrieve them.
+To display items from the reading list, use the browser.readingList.query() method to retrieve them.
 method.
-const items = await chrome.readingList.query({});
+const items = await browser.readingList.query({});
 
 for (const item of items) {
   // Do something do display the item
@@ -81,16 +81,16 @@ for (const item of items) {
 
 Mark an item as read
 
-You can use chrome.readingList.updateEntry() to update the title, URL, and read status. The following code marks an item as read:
-chrome.readingList.updateEntry({
+You can use browser.readingList.updateEntry() to update the title, URL, and read status. The following code marks an item as read:
+browser.readingList.updateEntry({
   url: "https://developer.chrome.com/",
   hasBeenRead: true
 });
 
 Remove an item
 
-To remove an item, use chrome.readingList.removeEntry():
-chrome.readingList.removeEntry({
+To remove an item, use browser.readingList.removeEntry():
+browser.readingList.removeEntry({
   url: "https://developer.chrome.com/"
 });
 

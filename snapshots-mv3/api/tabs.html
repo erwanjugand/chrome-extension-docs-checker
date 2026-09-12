@@ -30,7 +30,7 @@ There are three permissions developers should be aware of when working with the 
 
 
 The "tabs" permission
-This permission does not give access to the chrome.tabs namespace. Instead, it
+This permission does not give access to the browser.tabs namespace. Instead, it
 grants an extension the ability to call tabs.query() against four
 sensitive properties on tabs.Tab instances: url, pendingUrl, title, and
 favIconUrl.
@@ -87,9 +87,9 @@ A common pattern for extensions is to open an onboarding page in a new tab when 
 installed. The following example shows how to do this.
 
 background.js:
-chrome.runtime.onInstalled.addListener(({reason}) => {
+browser.runtime.onInstalled.addListener(({reason}) => {
   if (reason === 'install') {
-    chrome.tabs.create({
+    browser.tabs.create({
       url: "onboarding.html"
     });
   }
@@ -108,7 +108,7 @@ can usually be thought of as the user's current tab.
   async function getCurrentTab() {
     let queryOptions = { active: true, lastFocusedWindow: true };
     // `tab` will either be a `tabs.Tab` instance or `undefined`.
-    let [tab] = await chrome.tabs.query(queryOptions);
+    let [tab] = await browser.tabs.query(queryOptions);
     return tab;
   }
 
@@ -116,9 +116,9 @@ can usually be thought of as the user's current tab.
   
   function getCurrentTab(callback) {
     let queryOptions = { active: true, lastFocusedWindow: true };
-    chrome.tabs.query(queryOptions, ([tab]) => {
-      if (chrome.runtime.lastError)
-      console.error(chrome.runtime.lastError);
+    browser.tabs.query(queryOptions, ([tab]) => {
+      if (browser.runtime.lastError)
+      console.error(browser.runtime.lastError);
       // `tab` will either be a `tabs.Tab` instance or `undefined`.
       callback(tab);
     });
@@ -134,18 +134,18 @@ This example shows how an extension can toggle the muted state for a given tab.
 
   
   async function toggleMuteState(tabId) {
-    const tab = await chrome.tabs.get(tabId);
+    const tab = await browser.tabs.get(tabId);
     const muted = !tab.mutedInfo.muted;
-    await chrome.tabs.update(tabId, {muted});
+    await browser.tabs.update(tabId, {muted});
     console.log(`Tab ${tab.id} is ${muted ? "muted" : "unmuted"}`);
   }
 
 
   
   function toggleMuteState(tabId) {
-    chrome.tabs.get(tabId, async (tab) => {
+    browser.tabs.get(tabId, async (tab) => {
       let muted = !tab.mutedInfo.muted;
-      await chrome.tabs.update(tabId, { muted });
+      await browser.tabs.update(tabId, { muted });
       console.log(`Tab ${tab.id} is ${ muted ? "muted" : "unmuted" }`);
     });
   }
@@ -156,16 +156,16 @@ This example shows how an extension can toggle the muted state for a given tab.
 Move the current tab to the first position when clicked
 
 This example shows how to move a tab while a drag may or may not be in progress. While this example
-uses chrome.tabs.move, you can use the same waiting pattern for other calls that modify tabs while
+uses browser.tabs.move, you can use the same waiting pattern for other calls that modify tabs while
 a drag is in progress.
 
 
   
-  chrome.tabs.onActivated.addListener(moveToFirstPosition);
+  browser.tabs.onActivated.addListener(moveToFirstPosition);
 
   async function moveToFirstPosition(activeInfo) {
     try {
-      await chrome.tabs.move(activeInfo.tabId, {index: 0});
+      await browser.tabs.move(activeInfo.tabId, {index: 0});
       console.log("Success.");
     } catch (error) {
       if (error == "Error: Tabs cannot be edited right now (user may be dragging a tab).") {
@@ -177,16 +177,16 @@ a drag is in progress.
   }
 
 Important: Using catch(error) in a Promise is a way to ensure that an error that otherwise
-populates `chrome.runtime.lastError` is not unchecked.
+populates `browser.runtime.lastError` is not unchecked.
 
 
   
-  chrome.tabs.onActivated.addListener(moveToFirstPositionMV2);
+  browser.tabs.onActivated.addListener(moveToFirstPositionMV2);
 
   function moveToFirstPositionMV2(activeInfo) {
-    chrome.tabs.move(activeInfo.tabId, { index: 0 }, () => {
-      if (chrome.runtime.lastError) {
-        const error = chrome.runtime.lastError;
+    browser.tabs.move(activeInfo.tabId, { index: 0 }, () => {
+      if (browser.runtime.lastError) {
+        const error = browser.runtime.lastError;
         if (error == "Error: Tabs cannot be edited right now (user may be dragging a tab).") {
           setTimeout(() => moveToFirstPositionMV2(activeInfo), 50);
         } else {
@@ -205,8 +205,8 @@ Pass a message to a selected tab's content script
 
 This example demonstrates how an extension's service worker can communicate with content scripts in specific browser tabs using tabs.sendMessage().
 function sendMessageToActiveTab(message) {
-  const [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
-  const response = await chrome.tabs.sendMessage(tab.id, message);
+  const [tab] = await browser.tabs.query({ active: true, lastFocusedWindow: true });
+  const response = await browser.tabs.sendMessage(tab.id, message);
   // TODO: Do something with the response.
 }
 

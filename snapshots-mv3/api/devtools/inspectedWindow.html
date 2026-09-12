@@ -19,10 +19,10 @@ See DevTools APIs summary for general introduction to using Developer Tools APIs
 
 
 
-The tabId property provides the tab identifier that you can use with the chrome.tabs.*
-API calls. However, please note that chrome.tabs.* API is not exposed to the Developer Tools
+The tabId property provides the tab identifier that you can use with the browser.tabs.*
+API calls. However, browser.tabs.* API is not exposed to the Developer Tools
 extension pages due to security considerations—you will need to pass the tab ID to the background
-page and invoke the chrome.tabs.* API functions from there.
+page and invoke the browser.tabs.* API functions from there.
 
 The reload method may be used to reload the inspected page. Additionally, the caller can specify
 an override for the user agent string, a script that will be injected early upon page load, or an
@@ -86,7 +86,7 @@ exchange data with the content script.
 Examples
 
 The following code checks for the version of jQuery used by the inspected page:
-chrome.devtools.inspectedWindow.eval(
+browser.devtools.inspectedWindow.eval(
   "jQuery.fn.jquery",
   function(result, isException) {
     if (isException) {

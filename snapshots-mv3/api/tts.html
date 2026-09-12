@@ -29,25 +29,25 @@ Concepts and usage
 Generate speech
 
 Call speak() from your extension to speak. For example:
-chrome.tts.speak('Hello, world.');
+browser.tts.speak('Hello, world.');
 
 To stop speaking immediately, just call stop():
-chrome.tts.stop();
+browser.tts.stop();
 
 You can provide options that control various properties of the speech, such as its rate, pitch, and
 more. For example:
-chrome.tts.speak('Hello, world.', {'rate': 2.0});
+browser.tts.speak('Hello, world.', {'rate': 2.0});
 
 It's also a good idea to specify the language so that a synthesizer supporting that language (and
 regional dialect, if applicable) is chosen.
-chrome.tts.speak('Hello, world.', {'lang': 'en-US', 'rate': 2.0});
+browser.tts.speak('Hello, world.', {'lang': 'en-US', 'rate': 2.0});
 
 By default, each call to speak() interrupts any ongoing speech and speaks immediately. To
 determine if a call would be interrupting anything, you can call isSpeaking(). In addition, you
 can use the enqueue option to cause this utterance to be added to a queue of utterances that will
 be spoken when the current utterance has finished.
-chrome.tts.speak('Speak this first.');
-chrome.tts.speak(
+browser.tts.speak('Speak this first.');
+browser.tts.speak(
     'Speak this next, when the first sentence is done.', {'enqueue': true});
 
 A complete description of all options can be found under tts.speak(). Not all speech
@@ -56,12 +56,12 @@ engines will support all options.
 To catch errors and make sure you're calling speak() correctly, pass a callback function that
 takes no arguments. Inside the callback, check runtime.lastError to see if there were any
 errors.
-chrome.tts.speak(
+browser.tts.speak(
   utterance,
   options,
   function() {
-    if (chrome.runtime.lastError) {
-      console.log('Error: ' + chrome.runtime.lastError.message);
+    if (browser.runtime.lastError) {
+      console.log('Error: ' + browser.runtime.lastError.message);
     }
   }
 );
@@ -75,7 +75,7 @@ Listen to events
 
 To get more real-time information about the status of synthesized speech, pass an event listener in
 the options to speak(), like this:
-chrome.tts.speak(
+browser.tts.speak(
   utterance,
   {
     onEvent: function(event) {
@@ -124,7 +124,7 @@ Utterances used in this API may include markup using the Speech Synthesis Markup
 an XML header and a top-level <speak> tag, not a document fragment.
 
 For example:
-chrome.tts.speak(
+browser.tts.speak(
   '<?xml version="1.0"?>' +
   '<speak>' +
   '  The <emphasis>second</emphasis> ' +
@@ -146,7 +146,7 @@ voice, or to present the user with a list of choices.
 
 To get a list of all voices, call getVoices() and pass it a function that receives an array of
 TtsVoice objects as its argument:
-chrome.tts.getVoices(
+browser.tts.getVoices(
   function(voices) {
     for (var i = 0; i < voices.length; i++) {
       console.log('Voice ' + i + ':');

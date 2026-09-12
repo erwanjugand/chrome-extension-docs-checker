@@ -20,7 +20,7 @@ alarms
 
 
 
-To use the chrome.alarms API, declare the "alarms" permission in the manifest:
+To use the browser.alarms API, declare the "alarms" permission in the manifest:
 {
   "name": "My extension",
   ...
@@ -50,10 +50,10 @@ Other browsers and earlier versions of Chrome
 
 This property is not supported in other browsers (issue) or in versions of Chrome before Chrome 150, where the behavior can be unpredictable. Consequently, it is best to make sure important alarms exists each time your service worker starts up. For example:
 async function checkAlarmState() {
-  const alarm = await chrome.alarms.get("my-alarm");
+  const alarm = await browser.alarms.get("my-alarm");
 
   if (!alarm) {
-    await chrome.alarms.create("my-alarm", { periodInMinutes: 1 });
+    await browser.alarms.create("my-alarm", { periodInMinutes: 1 });
   }
 }
 
@@ -72,9 +72,9 @@ Set an alarm
 The following example sets an alarm in the service worker when a new version of the extension is installed:
 
 service-worker.js:
-chrome.runtime.onInstalled.addListener(async ({ reason }) => {
+browser.runtime.onInstalled.addListener(async ({ reason }) => {
   // Create an alarm so we have something to look at in the demo
-  await chrome.alarms.create('demo-default-alarm', {
+  await browser.alarms.create('demo-default-alarm', {
     delayInMinutes: 1,
     periodInMinutes: 1,
     persistAcrossSessions: true
@@ -86,8 +86,8 @@ Respond to an alarm
 The following example sets the action toolbar icon based on the name of the alarm that went off.
 
 service-worker.js:
-chrome.alarms.onAlarm.addListener((alarm) => {
-  chrome.action.setIcon({
+browser.alarms.onAlarm.addListener((alarm) => {
+  browser.action.setIcon({
     path: getIconPath(alarm.name),
   });
 });

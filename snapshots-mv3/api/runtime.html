@@ -81,8 +81,8 @@ restartAfterDelay()`.
 Unpacked extension behavior
 
 When an unpacked extension is reloaded, this is treated as an update. This means that the
-chrome.runtime.onInstalled event will fire with the "update" reason. This
-includes when the extension is reloaded with chrome.runtime.reload().
+browser.runtime.onInstalled event will fire with the "update" reason. This
+includes when the extension is reloaded with browser.runtime.reload().
 
 Use cases
 
@@ -113,7 +113,7 @@ manifest.json:
 content.js:
 { // Block used to avoid setting global variables
   const img = document.createElement('img');
-  img.src = chrome.runtime.getURL('logo.png');
+  img.src = browser.runtime.getURL('logo.png');
   document.body.append(img);
 }
 
@@ -130,7 +130,7 @@ to the service worker, and it responds with a copy of the user's information.
 
 content.js:
 // 1. Send a message to the service worker requesting the user's data
-chrome.runtime.sendMessage('get-user-data', (response) => {
+browser.runtime.sendMessage('get-user-data', (response) => {
   // 3. Got an asynchronous response with the data from the service worker
   console.log('received user data', response);
   initializeUI(response);
@@ -142,7 +142,7 @@ const user = {
   username: 'demo-user'
 };
 
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
   // 2. A page requested user data, respond with a copy of `user`
   if (message === 'get-user-data') {
     sendResponse(user);
@@ -155,9 +155,9 @@ Many extensions use post-uninstall surveys to understand how the extension could
 users and improve retention. The following example shows how to add this functionality.
 
 background.js:
-chrome.runtime.onInstalled.addListener(details => {
-  if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
-    chrome.runtime.setUninstallURL('https://example.com/extension-survey');
+browser.runtime.onInstalled.addListener(details => {
+  if (details.reason === browser.runtime.OnInstalledReason.INSTALL) {
+    browser.runtime.setUninstallURL('https://example.com/extension-survey');
   }
 });
 

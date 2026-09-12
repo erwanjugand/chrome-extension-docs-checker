@@ -44,7 +44,7 @@ Bookmarks are organized in a tree, where each node in the tree is either a bookm
 (sometimes called a group). Each node in the tree is represented by a
 bookmarks.BookmarkTreeNode object.
 
-BookmarkTreeNode properties are used throughout the chrome.bookmarks API. For example, when you
+BookmarkTreeNode properties are used throughout the browser.bookmarks API. For example, when you
 call bookmarks.create, you pass in the new node's parent (parentId), and, optionally, the
 node's index, title, and url properties. See bookmarks.BookmarkTreeNode for information
 about the properties a node can have.
@@ -57,7 +57,7 @@ Examples
 The following code creates a folder with the title "Extension bookmarks". The first argument to
 create() specifies properties for the new folder. The second argument defines a function to be
 executed after the folder is created.
-chrome.bookmarks.create(
+browser.bookmarks.create(
   {'parentId': bookmarkBar.id, 'title': 'Extension bookmarks'},
   function(newFolder) {
     console.log("added folder: " + newFolder.title);
@@ -67,7 +67,7 @@ chrome.bookmarks.create(
 The next snippet creates a bookmark pointing to the developer documentation for extensions. Since
 nothing bad will happen if creating the bookmark fails, this code doesn't bother to define a
 callback function.
-chrome.bookmarks.create({
+browser.bookmarks.create({
   'parentId': extensionsFolderId,
   'title': 'Extensions doc',
   'url': 'https://developer.chrome.com/docs/extensions',

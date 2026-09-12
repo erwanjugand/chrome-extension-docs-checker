@@ -231,7 +231,7 @@ var filter = {...};
 var opt_extraInfoSpec = [...];
 
 Here's an example of listening for the onBeforeRequest event:
-chrome.webRequest.onBeforeRequest.addListener(
+browser.webRequest.onBeforeRequest.addListener(
     callback, filter, opt_extraInfoSpec);
 
 Each addListener() call takes a mandatory callback function as the first parameter. This callback
@@ -286,7 +286,7 @@ Note that this permission is not required for a policy installed extension with
 the "webRequestBlocking" permission.
 
 To provide credentials synchronously:
-chrome.webRequest.onAuthRequired.addListener((details) => {
+browser.webRequest.onAuthRequired.addListener((details) => {
     return {
       authCredentials: {
         username: 'guest',
@@ -299,7 +299,7 @@ chrome.webRequest.onAuthRequired.addListener((details) => {
 );
 
 To provide credentials asynchronously:
-chrome.webRequest.onAuthRequired.addListener((details, callback) => {
+browser.webRequest.onAuthRequired.addListener((details, callback) => {
     callback({
       authCredentials: {
         username: 'guest',
@@ -357,7 +357,7 @@ console, and the handler is ignored for that request.
 Examples
 
 The following example illustrates how to block all requests to www.evil.com:
-chrome.webRequest.onBeforeRequest.addListener(
+browser.webRequest.onBeforeRequest.addListener(
   function(details) {
     return {cancel: details.url.indexOf("://www.evil.com/") != -1};
   },
@@ -370,14 +370,14 @@ As this function uses a blocking event handler, it requires the "webRequest" as 
 
 The following example achieves the same goal in a more efficient way because requests that are not
 targeted to www.evil.com do not need to be passed to the extension:
-chrome.webRequest.onBeforeRequest.addListener(
+browser.webRequest.onBeforeRequest.addListener(
   function(details) { return {cancel: true}; },
   {urls: ["*://www.evil.com/*"]},
   ["blocking"]
 );
 
 The following example illustrates how to delete the User-Agent header from all requests:
-chrome.webRequest.onBeforeSendHeaders.addListener(
+browser.webRequest.onBeforeSendHeaders.addListener(
   function(details) {
     for (var i = 0; i < details.requestHeaders.length; ++i) {
       if (details.requestHeaders[i].name === 'User-Agent') {
@@ -391,7 +391,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
   ["blocking", "requestHeaders"]
 );
 
-To try the chrome.webRequest API,
+To try the browser.webRequest API,
 install the webRequest sample from the chrome-extension-samples
 repository.
 

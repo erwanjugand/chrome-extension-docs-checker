@@ -22,7 +22,7 @@ tabCapture
 
 Concepts and usage
 
-The chrome.tabCapture API lets you access a MediaStream containing video and
+The browser.tabCapture API lets you access a MediaStream containing video and
 audio of the current tab. It can only be called after the user invokes an extension, such as by
 clicking the extension's action button. This is similar to the behavior of the
 "activeTab" permission.
@@ -43,7 +43,7 @@ destination.
 
 Stream IDs
 
-Calling chrome.tabCapture.getMediaStreamId() will return a stream ID. To later
+Calling browser.tabCapture.getMediaStreamId() will return a stream ID. To later
 access a MediaStream from the ID, use the following:
 navigator.mediaDevices.getUserMedia({
   audio: {
@@ -78,7 +78,7 @@ the security origin, render process and render frame of the caller.
 
 Learn more
 
-To learn more about how to use the chrome.tabCapture API, see
+To learn more about how to use the browser.tabCapture API, see
 Audio recording and screen capture. This demonstrates how to use
 tabCapture and related APIs to solve a number of common use cases.
 

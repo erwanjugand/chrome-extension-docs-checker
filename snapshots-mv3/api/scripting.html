@@ -27,7 +27,7 @@ Manifest
 
 
 
-To use the chrome.scripting API, declare the "scripting" permission in the manifest plus the host permissions for the pages to inject scripts into. Use the "host_permissions" key or the "activeTab" permission, which grants temporary host permissions. The following example uses the activeTab permission.
+To use the browser.scripting API, declare the "scripting" permission in the manifest plus the host permissions for the pages to inject scripts into. Use the "host_permissions" key or the "activeTab" permission, which grants temporary host permissions. The following example uses the activeTab permission.
 {
   "name": "Scripting Extension",
   "manifest_version": 3,
@@ -37,9 +37,9 @@ To use the chrome.scripting API, declare the "scripting" permission in the manif
 
 Concepts and usage
 
-You can use the chrome.scripting API to inject JavaScript and CSS into
+You can use the browser.scripting API to inject JavaScript and CSS into
 websites. This is similar to what you can do with content
-scripts. But by using the chrome.scripting namespace, extensions
+scripts. But by using the browser.scripting namespace, extensions
 can make decisions at runtime.
 
 Injection targets
@@ -51,7 +51,7 @@ The only required field is tabId. By default, an injection will run in the
 main frame of the specified tab.
 function getTabId() { ... }
 
-chrome.scripting
+browser.scripting
     .executeScript({
       target : {tabId : getTabId()},
       files : [ "script.js" ],
@@ -62,7 +62,7 @@ To run in all frames of the specified tab, you can set the allFrames boolean
 to true.
 function getTabId() { ... }
 
-chrome.scripting
+browser.scripting
     .executeScript({
       target : {tabId : getTabId(), allFrames : true},
       files : [ "script.js" ],
@@ -70,11 +70,11 @@ chrome.scripting
     .then(() => console.log("script injected in all frames"));
 
 You can also inject into specific frames of a tab by specifying individual frame
-IDs. For more information on frame IDs, see the chrome.webNavigation
+IDs. For more information on frame IDs, see the browser.webNavigation
 API.
 function getTabId() { ... }
 
-chrome.scripting
+browser.scripting
     .executeScript({
       target : {tabId : getTabId(), frameIds : [ frameId1, frameId2 ]},
       files : [ "script.js" ],
@@ -95,7 +95,7 @@ directory. The following code will inject the file script.js into the main
 frame of the tab.
 function getTabId() { ... }
 
-chrome.scripting
+browser.scripting
     .executeScript({
       target : {tabId : getTabId()},
       files : [ "script.js" ],
@@ -110,7 +110,7 @@ variable available to the current extension context.
 function getTabId() { ... }
 function getTitle() { return document.title; }
 
-chrome.scripting
+browser.scripting
     .executeScript({
       target : {tabId : getTabId()},
       func : getTitle,
@@ -123,7 +123,7 @@ function changeBackgroundColor() {
   document.body.style.backgroundColor = getUserColor();
 }
 
-chrome.scripting
+browser.scripting
     .executeScript({
       target : {tabId : getTabId()},
       func : changeBackgroundColor,
@@ -137,7 +137,7 @@ function changeBackgroundColor(backgroundColor) {
   document.body.style.backgroundColor = backgroundColor;
 }
 
-chrome.scripting
+browser.scripting
     .executeScript({
       target : {tabId : getTabId()},
       func : changeBackgroundColor,
@@ -153,7 +153,7 @@ can't execute a string using scripting.executeScript().
 function getTabId() { ... }
 const css = "body { background-color: red; }";
 
-chrome.scripting
+browser.scripting
     .insertCSS({
       target : {tabId : getTabId()},
       css : css,
@@ -168,7 +168,7 @@ resulting array; all other frames are in a non-deterministic order.
 function getTabId() { ... }
 function getTitle() { return document.title; }
 
-chrome.scripting
+browser.scripting
     .executeScript({
       target : {tabId : getTabId(), allFrames : true},
       func : getTitle,
@@ -196,7 +196,7 @@ async function addIframe() {
   return iframe.contentWindow.document.title;
 }
 
-chrome.scripting
+browser.scripting
     .executeScript({
       target : {tabId : getTabId(), allFrames : true},
       func : addIframe,
@@ -216,9 +216,9 @@ The following snippet contains a function that unregisters all dynamic content
 scripts the extension has previously registered.
 async function unregisterAllDynamicContentScripts() {
   try {
-    const scripts = await chrome.scripting.getRegisteredContentScripts();
+    const scripts = await browser.scripting.getRegisteredContentScripts();
     const scriptIds = scripts.map(script => script.id);
-    return chrome.scripting.unregisterContentScripts({ ids: scriptIds });
+    return browser.scripting.unregisterContentScripts({ ids: scriptIds });
   } catch (error) {
     const message = [
       "An unexpected error occurred while",
@@ -231,7 +231,7 @@ async function unregisterAllDynamicContentScripts() {
 Key point: Unregistering content scripts will not remove scripts or styles that have
 already been injected.
 
-To try the chrome.scripting API,
+To try the browser.scripting API,
 install the scripting sample from the Chrome extension samples
 repository.
 

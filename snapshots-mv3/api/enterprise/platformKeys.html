@@ -50,7 +50,7 @@ If a certificate is received, import it using [enterprise.platformKeys.importCer
 
 Here's an example that shows the major API interaction except the building and sending of the certification request:
 function getUserToken(callback) {
-  chrome.enterprise.platformKeys.getTokens(function(tokens) {
+  browser.enterprise.platformKeys.getTokens(function(tokens) {
     for (var i = 0; i < tokens.length; i++) {
       if (tokens[i].id == "user") {
         callback(tokens[i]);
@@ -95,7 +95,7 @@ function generateAndSign(userToken) {
 }
 
 function onClientCertificateReceived(userToken, certificate) {
-  chrome.enterprise.platformKeys.importCertificate(userToken.id, certificate);
+  browser.enterprise.platformKeys.importCertificate(userToken.id, certificate);
 }
 
 getUserToken(generateAndSign);

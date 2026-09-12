@@ -36,19 +36,19 @@ Examples
 The following samples demonstrate the local, sync, and
 session storage areas:
 
-Example (Local)await chrome.storage.local.set({ key: value });
+Example (Local)await browser.storage.local.set({ key: value });
 console.log("Value is set");
-const result = await chrome.storage.local.get(["key"]);
+const result = await browser.storage.local.get(["key"]);
 console.log("Value is " + result.key);
 
-Example (Sync)await chrome.storage.sync.set({ key: value });
+Example (Sync)await browser.storage.sync.set({ key: value });
 console.log("Value is set");
-const result = await chrome.storage.sync.get(["key"]);
+const result = await browser.storage.sync.get(["key"]);
 console.log("Value is " + result.key);
 
-Example (Session)await chrome.storage.session.set({ key: value });
+Example (Session)await browser.storage.session.set({ key: value });
 console.log("Value is set");
-const result = await chrome.storage.session.get(["key"]);
+const result = await browser.storage.session.get(["key"]);
 console.log("Value is " + result.key);
 
 
@@ -86,7 +86,7 @@ To move data from web storage APIs to extension storage APIs from a service work
 
 
 Prepare an offscreen document html page and script file. The script file should contain a conversion routine and an onMessage handler.
-In the extension service worker, check chrome.storage for your data.
+In the extension service worker, check browser.storage for your data.
 If your data isn't found, call createDocument().
 After the returned Promise resolves, call sendMessage() to start the conversion routine.
 Inside the offscreen document's onMessage handler, call the conversion routine.
@@ -112,17 +112,17 @@ The Storage API is divided into the following storage areas:
 
 Local
 
-Data is stored locally and cleared when the extension is removed. The storage limit is 10 MB (5 MB in Chrome 113 and earlier), but can be increased by requesting the "unlimitedStorage" permission. We recommend using storage.local to store larger amounts of data. By default, it's exposed to content scripts, but this behavior can be changed by calling chrome.storage.local.setAccessLevel().
+Data is stored locally and cleared when the extension is removed. The storage limit is 10 MB (5 MB in Chrome 113 and earlier), but can be increased by requesting the "unlimitedStorage" permission. We recommend using storage.local to store larger amounts of data. By default, it's exposed to content scripts, but this behavior can be changed by calling browser.storage.local.setAccessLevel().
 
 Managed
 
 Managed storage is read-only for policy-installed extensions. It's managed by system administrators, using a developer-defined schema and enterprise policies. Policies are similar to options but are configured by a system administrator, instead of the user. This allows the extension to be preconfigured for all users of an organization.
 
-By default, storage.managed is exposed to content scripts, but this behavior can be changed by calling chrome.storage.managed.setAccessLevel(). For information on policies, see Documentation for Administrators. To learn more about the managed storage area, see Manifest for storage areas.
+By default, storage.managed is exposed to content scripts, but this behavior can be changed by calling browser.storage.managed.setAccessLevel(). For information on policies, see Documentation for Administrators. To learn more about the managed storage area, see Manifest for storage areas.
 
 Session
 
-Session storage holds data in memory while an extension is loaded. The storage is cleared if the extension is disabled, reloaded, updated, and when the browser restarts. By default, it's not exposed to content scripts, but this behavior can be changed by calling chrome.storage.session.setAccessLevel(). The storage limit is 10 MB (1 MB in Chrome 111 and earlier).
+Session storage holds data in memory while an extension is loaded. The storage is cleared if the extension is disabled, reloaded, updated, and when the browser restarts. By default, it's not exposed to content scripts, but this behavior can be changed by calling browser.storage.session.setAccessLevel(). The storage limit is 10 MB (1 MB in Chrome 111 and earlier).
 
 The storage.session interface is one of several we recommend for service workers.
 
@@ -130,7 +130,7 @@ Sync
 
 If the user enables syncing, the data syncs with every Chrome browser that the user is logged into. If disabled, it behaves like storage.local. Chrome stores the data locally when the browser is offline and resumes syncing when it's back online. The quota limitation is approximately 100 KB, 8 KB per item.
 
-We recommend using storage.sync to preserve user settings across synced browsers. If you're working with sensitive user data, instead use storage.session. By default, storage.sync is exposed to content scripts, but this behavior can be changed by calling chrome.storage.sync.setAccessLevel().
+We recommend using storage.sync to preserve user settings across synced browsers. If you're working with sensitive user data, instead use storage.session. By default, storage.sync is exposed to content scripts, but this behavior can be changed by calling browser.storage.sync.setAccessLevel().
 
 Methods and events
 
@@ -177,7 +177,7 @@ Respond to storage updates
 To track changes made to storage, add a listener to its onChanged event. When anything changes in storage, that event fires. The sample code listens for these changes:
 
 background.js:
-chrome.storage.onChanged.addListener((changes, namespace) => {
+browser.storage.onChanged.addListener((changes, namespace) => {
   for (let [key, { oldValue, newValue }] of Object.entries(changes)) {
     console.log(
       `Storage key "${key}" in namespace "${namespace}" changed.`,
@@ -207,11 +207,11 @@ const optionsForm = document.getElementById("optionsForm");
 // Immediately persist options changes
 optionsForm.debug.addEventListener("change", (event) => {
   options.debug = event.target.checked;
-  chrome.storage.sync.set({ options });
+  browser.storage.sync.set({ options });
 });
 
 // Initialize the form with the user's option settings
-const data = await chrome.storage.sync.get("options");
+const data = await browser.storage.sync.get("options");
 Object.assign(options, data.options);
 optionsForm.debug.checked = Boolean(options.debug);
 
@@ -219,7 +219,7 @@ background.js:
 function setDebugMode() { /* ... */ }
 
 // Watch for changes to the user's options & apply them
-chrome.storage.onChanged.addListener((changes, area) => {
+browser.storage.onChanged.addListener((changes, area) => {
   if (area === 'sync' && changes.options?.newValue) {
     const debugMode = Boolean(changes.options.newValue.debug);
     console.log('enable debug mode?', debugMode);
@@ -238,12 +238,12 @@ background.js:
 // Where we will expose all the data we retrieve from storage.sync.
 const storageCache = { count: 0 };
 // Asynchronously retrieve data from storage.sync, then cache it.
-const initStorageCache = chrome.storage.sync.get().then((items) => {
+const initStorageCache = browser.storage.sync.get().then((items) => {
   // Copy the data retrieved from storage into storageCache.
   Object.assign(storageCache, items);
 });
 
-chrome.action.onClicked.addListener(async (tab) => {
+browser.action.onClicked.addListener(async (tab) => {
   try {
     await initStorageCache;
   } catch (e) {
@@ -253,7 +253,7 @@ chrome.action.onClicked.addListener(async (tab) => {
   // Normal action handler logic.
   storageCache.count++;
   storageCache.lastTabId = tab.id;
-  chrome.storage.sync.set(storageCache);
+  browser.storage.sync.set(storageCache);
 });
 
 DevTools

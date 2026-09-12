@@ -73,7 +73,7 @@ on the progress of speech synthesis. At a minimum, supporting the 'end' event ty
 when speech is finished is highly recommended, otherwise Chrome cannot schedule queued utterances.
 
 Once loaded, an extension can replace the list of declared voices by calling
-chrome.ttsEngine.updateVoices. (Note that the parameters used in the programmatic call to
+browser.ttsEngine.updateVoices. (Note that the parameters used in the programmatic call to
 updateVoices are in camel case: e.g., voiceName, unlike the manifest file which uses
 voice_name.)
 
@@ -121,8 +121,8 @@ const stopListener = () => {
   // (stop all speech)
 };
 
-chrome.ttsEngine.onSpeak.addListener(speakListener);
-chrome.ttsEngine.onStop.addListener(stopListener);
+browser.ttsEngine.onSpeak.addListener(speakListener);
+browser.ttsEngine.onStop.addListener(stopListener);
 
 Caution: If your extension does not register listeners for both onSpeak and onStop, it
 will not intercept any speech calls, regardless of what is in the manifest.

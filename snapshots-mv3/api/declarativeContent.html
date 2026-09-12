@@ -42,12 +42,12 @@ or the bookmarked state of a page. The following rule enables
 the extension's action on Google pages when a password field is present:
 let rule1 = {
   conditions: [
-    new chrome.declarativeContent.PageStateMatcher({
+    new browser.declarativeContent.PageStateMatcher({
       pageUrl: { hostSuffix: '.google.com', schemes: ['https'] },
       css: ["input[type='password']"]
     })
   ],
-  actions: [ new chrome.declarativeContent.ShowAction() ]
+  actions: [ new browser.declarativeContent.ShowAction() ]
 };
 
 
@@ -57,24 +57,24 @@ To also enable the extension's action for Google sites with a video, you can add
 condition, as each condition is sufficient to trigger all specified actions:
 let rule2 = {
   conditions: [
-    new chrome.declarativeContent.PageStateMatcher({
+    new browser.declarativeContent.PageStateMatcher({
       pageUrl: { hostSuffix: '.google.com', schemes: ['https'] },
       css: ["input[type='password']"]
     }),
-    new chrome.declarativeContent.PageStateMatcher({
+    new browser.declarativeContent.PageStateMatcher({
       css: ["video"]
     })
   ],
-  actions: [ new chrome.declarativeContent.ShowAction() ]
+  actions: [ new browser.declarativeContent.ShowAction() ]
 };
 
 The onPageChanged event tests whether any rule has at least one fulfilled
 condition and executes the actions. Rules persist across browsing sessions; therefore, during
 extension installation time you should first use removeRules to clear
 previously installed rules and then use addRules to register new ones.
-chrome.runtime.onInstalled.addListener(function(details) {
-  chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
-    chrome.declarativeContent.onPageChanged.addRules([rule2]);
+browser.runtime.onInstalled.addListener(function(details) {
+  browser.declarativeContent.onPageChanged.removeRules(undefined, function() {
+    browser.declarativeContent.onPageChanged.addRules([rule2]);
   });
 });
 

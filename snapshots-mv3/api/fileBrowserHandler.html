@@ -72,8 +72,8 @@ Note: You can specify locale-specific strings for the value of "default_title". 
 
 Implement a file browser handler
 
-To use this API, you must implement a function that handles the onExecute event of chrome.fileBrowserHandler. Your function will be called whenever the user clicks the button that represents your file browser handler. In your function, use the File System API to get access to the file contents. Here is an example:
-chrome.fileBrowserHandler.onExecute.addListener(async (id, details) => {
+To use this API, you must implement a function that handles the onExecute event of browser.fileBrowserHandler. Your function will be called whenever the user clicks the button that represents your file browser handler. In your function, use the File System API to get access to the file contents. Here is an example:
+browser.fileBrowserHandler.onExecute.addListener(async (id, details) => {
   if (id !== 'upload') {
     return;  // check if you have multiple file_browser_handlers
   }

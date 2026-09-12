@@ -22,8 +22,8 @@ The chrome.events namespace contains common types used by APIs dispatching event
 Concepts and usage
 
 An Event is an object that lets you be notified when something interesting happens. Here's an
-example of using the chrome.alarms.onAlarm event to be notified whenever an alarm has elapsed:
-chrome.alarms.onAlarm.addListener((alarm) => {
+example of using the browser.alarms.onAlarm event to be notified whenever an alarm has elapsed:
+browser.alarms.onAlarm.addListener((alarm) => {
   appendToLog(`alarms.onAlarm -- name: ${alarm.name}, scheduledTime: ${alarm.scheduledTime}`);
 });
 
@@ -127,15 +127,15 @@ update internal data structures. This update is an expensive operation.
   Instead of
   const rule1 = {...};
 const rule2 = {...};
-chrome.declarativeWebRequest.onRequest.addRules([rule1]);
-chrome.declarativeWebRequest.onRequest.addRules([rule2]);
+browser.declarativeWebRequest.onRequest.addRules([rule1]);
+browser.declarativeWebRequest.onRequest.addRules([rule2]);
 
 
 
   Prefer
   const rule1 = {...};
 const rule2 = {...};
-chrome.declarativeWebRequest.onRequest.addRules([rule1, rule2]);
+browser.declarativeWebRequest.onRequest.addRules([rule1, rule2]);
 
 
 Prefer substring matching over regular expressions in an events.UrlFilter.
@@ -143,14 +143,14 @@ Substring based matching is extremely fast.
 
 
   Instead of
-  const match = new chrome.declarativeWebRequest.RequestMatcher({
+  const match = new browser.declarativeWebRequest.RequestMatcher({
   url: {urlMatches: "example.com/[^?]*foo" }
 });
 
 
 
   Prefer
-  const match = new chrome.declarativeWebRequest.RequestMatcher({
+  const match = new browser.declarativeWebRequest.RequestMatcher({
   url: {hostSuffix: "example.com", pathContains: "foo"}
 });
 
@@ -161,33 +161,33 @@ matching and reduces memory consumption for duplicate action sets.
 
 
   Instead of
-  const condition1 = new chrome.declarativeWebRequest.RequestMatcher({
+  const condition1 = new browser.declarativeWebRequest.RequestMatcher({
   url: { hostSuffix: 'example.com' }
 });
-const condition2 = new chrome.declarativeWebRequest.RequestMatcher({
+const condition2 = new browser.declarativeWebRequest.RequestMatcher({
   url: { hostSuffix: 'foobar.com' }
 });
 const rule1 = { conditions: [condition1],
-                actions: [new chrome.declarativeWebRequest.CancelRequest()]
+                actions: [new browser.declarativeWebRequest.CancelRequest()]
               };
 const rule2 = { conditions: [condition2],
-                actions: [new chrome.declarativeWebRequest.CancelRequest()]
+                actions: [new browser.declarativeWebRequest.CancelRequest()]
               };
-chrome.declarativeWebRequest.onRequest.addRules([rule1, rule2]);
+browser.declarativeWebRequest.onRequest.addRules([rule1, rule2]);
 
 
 
   Prefer
-  const condition1 = new chrome.declarativeWebRequest.RequestMatcher({
+  const condition1 = new browser.declarativeWebRequest.RequestMatcher({
   url: { hostSuffix: 'example.com' }
 });
-const condition2 = new chrome.declarativeWebRequest.RequestMatcher({
+const condition2 = new browser.declarativeWebRequest.RequestMatcher({
   url: { hostSuffix: 'foobar.com' }
 });
 const rule = { conditions: [condition1, condition2],
-              actions: [new chrome.declarativeWebRequest.CancelRequest()]
+              actions: [new browser.declarativeWebRequest.CancelRequest()]
              };
-chrome.declarativeWebRequest.onRequest.addRules([rule]);
+browser.declarativeWebRequest.onRequest.addRules([rule]);
 
 
 Filtered events
@@ -201,7 +201,7 @@ Filtered events are intended to allow a transition from manual filtering code.
 
 
   Instead of
-  chrome.webNavigation.onCommitted.addListener((event) => {
+  browser.webNavigation.onCommitted.addListener((event) => {
   if (hasHostSuffix(event.url, 'google.com') ||
       hasHostSuffix(event.url, 'google.com.au')) {
     // ...
@@ -211,7 +211,7 @@ Filtered events are intended to allow a transition from manual filtering code.
 
 
   Prefer
-  chrome.webNavigation.onCommitted.addListener((event) => {
+  browser.webNavigation.onCommitted.addListener((event) => {
   // ...
 }, {url: [{hostSuffix: 'google.com'},
           {hostSuffix: 'google.com.au'}]});

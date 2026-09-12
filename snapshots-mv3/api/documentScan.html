@@ -235,25 +235,25 @@ This example shows one way to retrieve a page from the scanner as a blob and
 demonstrates use of startScan() and readScanData() using the value of
 OperationResult.
 async function pageAsBlob(handle) {
-  let response = await chrome.documentScan.startScan(
+  let response = await browser.documentScan.startScan(
       handle, {format: "image/jpeg"});
-  if (response.result != chrome.documentScan.OperationResult.SUCCESS) {
+  if (response.result != browser.documentScan.OperationResult.SUCCESS) {
     return null;
   }
   const job = response.job;
 
   let imgParts = [];
-  response = await chrome.documentScan.readScanData(job);
-  while (response.result == chrome.documentScan.OperationResult.SUCCESS) {
+  response = await browser.documentScan.readScanData(job);
+  while (response.result == browser.documentScan.OperationResult.SUCCESS) {
     if (response.data && response.data.byteLength > 0) {
         imgParts.push(response.data);
     } else {
       // Delay so hardware can make progress.
       await new Promise(r => setTimeout(r, 100));
     }
-    response = await chrome.documentScan.readScanData(job);
+    response = await browser.documentScan.readScanData(job);
   }
-  if (response.result != chrome.documentScan.OperationResult.EOF) {
+  if (response.result != browser.documentScan.OperationResult.EOF) {
     return null;
   }
   if (response.data && response.data.byteLength > 0) {
@@ -270,8 +270,8 @@ demonstrates using getScannerList(), openScanner(), setOptions(), and
 closeScanner(). Note that the contents of the page are retrieved by calling
 the pageAsBlob() function from the previous example.
 async function scan() {
-    let response = await chrome.documentScan.getScannerList({ secure: true });
-    let scanner = await chrome.documentScan.openScanner(
+    let response = await browser.documentScan.getScannerList({ secure: true });
+    let scanner = await browser.documentScan.openScanner(
         response.scanners[0].scannerId);
     const handle = scanner.scannerHandle;
 
@@ -280,7 +280,7 @@ async function scan() {
         if (source.includes("ADF")) {
             options.push({
                 name: "source",
-                type: chrome.documentScan.OptionType.STRING,
+                type: browser.documentScan.OptionType.STRING,
                 value: { value: source }
             });
             break;
@@ -288,31 +288,31 @@ async function scan() {
     }
     options.push({
         name: "tl-x",
-        type: chrome.documentScan.OptionType.FIXED,
+        type: browser.documentScan.OptionType.FIXED,
         value: 0.0
     });
     options.push({
         name: "br-x",
-        type: chrome.documentScan.OptionType.FIXED,
+        type: browser.documentScan.OptionType.FIXED,
         value: 215.9  // 8.5" in mm
     });
     options.push({
         name: "tl-y",
-        type: chrome.documentScan.OptionType.FIXED,
+        type: browser.documentScan.OptionType.FIXED,
         value: 0.0
     });
     options.push({
         name: "br-y",
-        type: chrome.documentScan.OptionType.FIXED,
+        type: browser.documentScan.OptionType.FIXED,
         value: 279.4  // 11" in mm
     });
-    response = await chrome.documentScan.setOptions(handle, options);
+    response = await browser.documentScan.setOptions(handle, options);
 
     let imgBlob = await pageAsBlob(handle);
     if (imgBlob != null) {
         // Insert imgBlob into DOM, save to disk, etc
     }
-    await chrome.documentScan.closeScanner(handle);
+    await browser.documentScan.closeScanner(handle);
 }
 
 Show the configuration
@@ -322,10 +322,10 @@ calling getOptionGroups() in addition to the scanner options returned from a
 call to openScanner(). This is so that options can be shown to users in
 manufacturer-defined groups. This example shows how to do that.
 async function showConfig() {
-  let response = await chrome.documentScan.getScannerList({ secure: true });
-  let scanner = await chrome.documentScan.openScanner(
+  let response = await browser.documentScan.getScannerList({ secure: true });
+  let scanner = await browser.documentScan.openScanner(
       response.scanners[0].scannerId);
-  let groups = await chrome.documentScan.getOptionGroups(scanner.scannerHandle);
+  let groups = await browser.documentScan.getOptionGroups(scanner.scannerHandle);
 
   for (const group of groups.groups) {
     console.log("=== " + group.title + " ===");

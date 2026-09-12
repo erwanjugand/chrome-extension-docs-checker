@@ -70,7 +70,7 @@ function collectAvailableCertificates() {
 // The Extension calls this function every time the currently available list of
 // certificates changes, and also once after the Extension's initialization.
 function onAvailableCertificatesChanged() {
-  chrome.certificateProvider.setCertificates({
+  browser.certificateProvider.setCertificates({
     clientCertificates: collectAvailableCertificates()
   });
 }
@@ -79,7 +79,7 @@ function handleCertificatesUpdateRequest(request) {
   // Report the currently available certificates as a response to the request
   // event. This is important for supporting the case when the Extension is
   // unable to detect the changes proactively.
-  chrome.certificateProvider.setCertificates({
+  browser.certificateProvider.setCertificates({
     certificatesRequestId: request.certificatesRequestId,
     clientCertificates: collectAvailableCertificates()
   });
@@ -102,7 +102,7 @@ function handleSignatureRequest(request) {
     console.error('Key for requested certificate no available.');
 
     // Abort the request by reporting the error to the API.
-    chrome.certificateProvider.reportSignature({
+    browser.certificateProvider.reportSignature({
       signRequestId: request.signRequestId,
       error: 'GENERAL_ERROR'
     });
@@ -110,15 +110,15 @@ function handleSignatureRequest(request) {
   }
 
   const signature = signUnhashedData(key, request.input, request.algorithm);
-  chrome.certificateProvider.reportSignature({
+  browser.certificateProvider.reportSignature({
     signRequestId: request.signRequestId,
     signature: signature
   });
 }
 
-chrome.certificateProvider.onCertificatesUpdateRequested.addListener(
+browser.certificateProvider.onCertificatesUpdateRequested.addListener(
     handleCertificatesUpdateRequest);
-chrome.certificateProvider.onSignatureRequested.addListener(
+browser.certificateProvider.onSignatureRequested.addListener(
     handleSignatureRequest);
 
 Types

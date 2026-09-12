@@ -16,8 +16,8 @@ Use the chrome.devtools.network API to retrieve the information about network re
 Network requests information is represented in the HTTP Archive format (HAR). The description of
 HAR is outside of scope of this document, refer to HAR v1.2 Specification.
 
-In terms of HAR, the chrome.devtools.network.getHAR() method returns entire HAR log, while
-chrome.devtools.network.onRequestFinished event provides HAR entry as an argument to the event
+In terms of HAR, the browser.devtools.network.getHAR() method returns entire HAR log, while
+browser.devtools.network.onRequestFinished event provides HAR entry as an argument to the event
 callback.
 
 Note that request content is not provided as part of HAR for efficiency reasons. You may call
@@ -40,10 +40,10 @@ Manifest
 Examples
 
 The following code logs URLs of all images larger than 40KB as they are loaded:
-chrome.devtools.network.onRequestFinished.addListener(
+browser.devtools.network.onRequestFinished.addListener(
   function(request) {
     if (request.response.bodySize > 40*1024) {
-      chrome.devtools.inspectedWindow.eval(
+      browser.devtools.inspectedWindow.eval(
           'console.log("Large image: " + unescape("' +
           escape(request.request.url) + '"))');
     }

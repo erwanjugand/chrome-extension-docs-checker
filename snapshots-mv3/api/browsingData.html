@@ -45,7 +45,7 @@ var callback = function () {
 
 var millisecondsPerWeek = 1000 * 60 * 60 * 24 * 7;
 var oneWeekAgo = (new Date()).getTime() - millisecondsPerWeek;
-chrome.browsingData.remove({
+browser.browsingData.remove({
   "since": oneWeekAgo
 }, {
   "appcache": true,
@@ -63,7 +63,7 @@ chrome.browsingData.remove({
   "webSQL": true
 }, callback);
 
-The chrome.browsingData.remove() method lets you remove various types of browsing data with a
+The browser.browsingData.remove() method lets you remove various types of browsing data with a
 single call, and will be much faster than calling multiple more specific methods. If, however, you
 only want to clear one specific type of browsing data (cookies, for example), the more granular
 methods offer a readable alternative to a call filled with JSON.
@@ -73,14 +73,14 @@ var callback = function () {
 
 var millisecondsPerWeek = 1000 * 60 * 60 * 24 * 7;
 var oneWeekAgo = (new Date()).getTime() - millisecondsPerWeek;
-chrome.browsingData.removeCookies({
+browser.browsingData.removeCookies({
   "since": oneWeekAgo
 }, callback);
 
-If the user is syncing their data, chrome.browsingData.remove() may automatically rebuild the cookie
+If the user is syncing their data, browser.browsingData.remove() may automatically rebuild the cookie
 for the Sync account after clearing it. This is to ensure that Sync can continue working, so that
 the data can be eventually deleted on the server. However the more specific
-chrome.browsingData.removeCookies() can be used to clear the cookie for the Sync account, and Sync
+browser.browsingData.removeCookies() can be used to clear the cookie for the Sync account, and Sync
 will be paused in this case.
 
 Important: Removing browsing data involves a good deal of heavy
@@ -94,7 +94,7 @@ To remove data for a specific origin or to exclude a set of origins from deletio
 RemovalOptions.origins and RemovalOptions.excludeOrigins parameters. They can only be applied to
 cookies, cache, and storage (CacheStorage, FileSystems, IndexedDB, LocalStorage, ServiceWorkers, and
 WebSQL).
-chrome.browsingData.remove({
+browser.browsingData.remove({
   "origins": ["https://www.example.com"]
 }, {
   "cacheStorage": true,
@@ -135,7 +135,7 @@ var callback = function () {
 
 var millisecondsPerWeek = 1000 * 60 * 60 * 24 * 7;
 var oneWeekAgo = (new Date()).getTime() - millisecondsPerWeek;
-chrome.browsingData.remove({
+browser.browsingData.remove({
   "since": oneWeekAgo,
   "originTypes": {
     "protectedWeb": true

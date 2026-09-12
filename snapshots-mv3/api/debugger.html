@@ -29,14 +29,14 @@ You must declare the "debugger" permission in your extension's manifest to use t
 Enterprise policy restrictions
 
 On enterprise devices, some policies can restrict extensions from attaching the debugger using an all-or-nothing model at attach time
-(chrome.debugger.attach()):
+(browser.debugger.attach()):
 
 
 Host restrictions: If enterprise policy ExtensionSettings
-configures blocked hosts (runtime_blocked_hosts) for an extension, chrome.debugger.attach() is blocked on all targets with the error
+configures blocked hosts (runtime_blocked_hosts) for an extension, browser.debugger.attach() is blocked on all targets with the error
 "Host access is restricted by policy." (even if individual origins are in runtime_allowed_hosts).
 Screenshot and DLP policies: If enterprise policy DisableScreenshots
-disables screenshot capture or Data Loss Prevention (DLP) rules apply to the target, chrome.debugger.attach() fails with the error
+disables screenshot capture or Data Loss Prevention (DLP) rules apply to the target, browser.debugger.attach() fails with the error
 "Screenshot capture is restricted by policy.".
 
 
@@ -46,7 +46,7 @@ disables screenshot capture or Data Loss Prevention (DLP) rules apply to the tar
 
 Concepts and usage
 
-Once attached, the chrome.debugger API lets you send Chrome DevTools Protocol
+Once attached, the browser.debugger API lets you send Chrome DevTools Protocol
 (CDP) commands to a given target. Explaining the CDP in depth is out of scope
 for this documentation—to learn more about CDP check out the 
 official CDP documentation.
@@ -63,7 +63,7 @@ different contexts that can be accessed from a single target.
 
 Restricted domains
 
-For security reasons, the chrome.debugger API does not provide access to all Chrome DevTools
+For security reasons, the browser.debugger API does not provide access to all Chrome DevTools
 Protocol Domains. The available domains are: Accessibility,
 Audits, CacheStorage, Console,
 CSS, Database, Debugger, DOM,
@@ -95,28 +95,28 @@ Attach to related targets
 After connecting to a target, you may want to connect to further related targets
 including out-of-process child frames or associated workers.
 
-Starting in Chrome 125, the chrome.debugger API supports flat sessions. This
+Starting in Chrome 125, the browser.debugger API supports flat sessions. This
 lets you add additional targets as children to your main debugger session and
-message them without needing another call to chrome.debugger.attach. Instead,
-you can add a sessionId property when calling chrome.debugger.sendCommand to
+message them without needing another call to browser.debugger.attach. Instead,
+you can add a sessionId property when calling browser.debugger.sendCommand to
 identify the child target you would like to send a command to.
 
 To automatically attach to out of process child frames, first add a listener for
 the Target.attachedToTarget event:
-chrome.debugger.onEvent.addListener((source, method, params) => {
+browser.debugger.onEvent.addListener((source, method, params) => {
   if (method === "Target.attachedToTarget") {
     // `source` identifies the parent session, but we need to construct a new
     // identifier for the child session
     const session = { ...source, sessionId: params.sessionId };
 
     // Call any needed CDP commands for the child session
-    await chrome.debugger.sendCommand(session, "Runtime.enable");
+    await browser.debugger.sendCommand(session, "Runtime.enable");
   }
 });
 
 Then, enable auto attach by sending the Target.setAutoAttach command with
 the flatten option set to true:
-await chrome.debugger.sendCommand({ tabId }, "Target.setAutoAttach", {
+await browser.debugger.sendCommand({ tabId }, "Target.setAutoAttach", {
   autoAttach: true,
   waitForDebuggerOnStart: false,
   flatten: true,
