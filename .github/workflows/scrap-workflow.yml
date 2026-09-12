@@ -3,7 +3,7 @@ name: Check diff
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 6 * * 6'
+    - cron: '23 6 * * 6'
 
 jobs:
   run-scrap:
