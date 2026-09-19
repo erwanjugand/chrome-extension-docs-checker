@@ -621,6 +621,19 @@ Parameters
     Please use active.Whether the tab should become the selected tab in the window. Defaults to true
 
     
+      splitWithTabId
+      number optional
+    
+      Pending
+    The ID of an existing tab to create a split view with. If specified, the split-with tab must meet the following conditions:
+
+It must not be an already split tab.
+It must be in the same window as the newly created tab.
+If windowId is specified, it must be the same as the split-with tab's window ID.
+If index is specified, it must be an index adjacent to the split-with tab and will affect the relative positioning of the newly created tab.
+
+
+    
       url
       string optional
     The URL to initially navigate the tab to. Fully-qualified URLs must include a scheme (i.e., 'http://www.google.com', not 'www.google.com'). Relative URLs are relative to the current page within the extension. Defaults to the New Tab Page.
@@ -638,6 +651,28 @@ Parameters
       Chrome 88+
       
     
+        
+      
+    
+      createSplit()
+    
+      Pending
+    
+        chrome.tabs.createSplit(  tabIds: [number, number],): Promise<number>
+      Splits two existing tabs into a Split View.
+Parameters
+    
+      tabIds
+      [number, number]
+    An array of exactly two tab IDs to pair into a Split View. All tabs must meet the following conditions:
+They must be adjacent.
+They must not already be in a split view.
+They must have matching windowId, pinned, and groupId states.
+
+    Returns
+          
+            Promise<number>
+            
         
       
     
@@ -1220,6 +1255,25 @@ Parameters
       tabIds
       number | [number, ...number[]]
     The tab ID or list of tab IDs to remove from their respective groups.
+
+    Returns
+          
+            Promise<void>
+            
+        
+      
+    
+      unsplit()
+    
+      Pending
+    
+        chrome.tabs.unsplit(  splitViewId: number,): Promise<void>
+      Separates the tabs in a Split View into independent tabs.
+Parameters
+    
+      splitViewId
+      number
+    The ID of the Split View to separate.
 
     Returns
           
