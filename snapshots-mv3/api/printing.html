@@ -28,7 +28,7 @@ Availability
 
 
 
-All chrome.printing methods and events require you to declare the "printing" permission in the extension manifest. For example:
+All browser.printing methods and events require you to declare the "printing" permission in the extension manifest. For example:
 {
   "name": "My extension",
   ...
@@ -45,15 +45,15 @@ The examples below demonstrate using each of the methods in the printing namespa
 cancelJob()
 
 This example uses the onJobStatusChanged handler to hide a 'cancel' button when the jobStatus is neither PENDING or IN_PROGRESS. Note that on some networks or when a Chromebook is connected directly to the printer, these states may pass too quickly for the cancel button to be visible long enough to be called. This is greatly simplified printing example.
-chrome.printing.onJobStatusChanged.addListener((jobId, status) => {
+browser.printing.onJobStatusChanged.addListener((jobId, status) => {
   const cancelButton = document.getElementById("cancelButton");
   cancelButton.addEventListener('click', () => {
-    chrome.printing.cancelJob(jobId).then((response) => {
+    browser.printing.cancelJob(jobId).then((response) => {
       if (response !== undefined) {
         console.log(response.status);
       }
-      if (chrome.runtime.lastError !== undefined) {
-        console.log(chrome.runtime.lastError.message);
+      if (browser.runtime.lastError !== undefined) {
+        console.log(browser.runtime.lastError.message);
       }
     });
   });
@@ -67,9 +67,9 @@ chrome.printing.onJobStatusChanged.addListener((jobId, status) => {
 getPrinters() and getPrinterInfo()
 
 A single example is used for these functions because getting printer information requires a printer ID, which is retrieved by calling getPrinters(). This example logs the name and description of the default printer to the console. This is a simplified version of the printing example.
-​​const printers = await chrome.printing.getPrinters();
+​​const printers = await browser.printing.getPrinters();
 const defaultPrinter = printers.find((printer) => {
-  const printerInfo = await chrome.printing.getPrinterInfo(printer.id);
+  const printerInfo = await browser.printing.getPrinterInfo(printer.id);
   return printerInfo.isDefault;
 }
 console.log(`Default printer: ${defaultPrinter.name}.\n\t${defaultPrinter.description}`);
@@ -102,12 +102,12 @@ const submitJobRequest = {
   }
 };
 
-chrome.printing.submitJob(submitJobRequest, (response) => {
+browser.printing.submitJob(submitJobRequest, (response) => {
   if (response !== undefined) {
     console.log(response.status);
   }
-  if (chrome.runtime.lastError !== undefined) {
-    console.log(chrome.runtime.lastError.message);
+  if (browser.runtime.lastError !== undefined) {
+    console.log(browser.runtime.lastError.message);
   }
 });
 

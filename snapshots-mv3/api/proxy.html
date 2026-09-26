@@ -137,7 +137,7 @@ var config = {
     bypassList: ["foobar.com"]
   }
 };
-chrome.proxy.settings.set(
+browser.proxy.settings.set(
   {value: config, scope: 'regular'},
   function() {}
 );
@@ -153,14 +153,14 @@ var config = {
           "}"
   }
 };
-chrome.proxy.settings.set(
+browser.proxy.settings.set(
   {value: config, scope: 'regular'},
   function() {}
 );
 
 The next snippet queries the current effective proxy settings. The effective proxy settings can be
 determined by another extension or by a policy. See the Types API documentation for details.
-chrome.proxy.settings.get(
+browser.proxy.settings.get(
   {'incognito': false},
   function(config) {
     console.log(JSON.stringify(config));

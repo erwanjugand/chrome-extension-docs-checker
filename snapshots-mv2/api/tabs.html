@@ -662,7 +662,8 @@ Parameters
       splitWithTabId
       number optional
     
-      Pending
+      Chrome 155+
+      
     The ID of an existing tab to create a split view with. If specified, the split-with tab must meet the following conditions:
 
 It must not be an already split tab.
@@ -713,7 +714,8 @@ If index is specified, it must be an index adjacent to the split-with tab and wi
     
       
         Promise
-      Pending
+      Chrome 155+
+      
     
         chrome.tabs.createSplit(  tabIds: [number, number],  callback?: function,): Promise<number>
       Splits two existing tabs into a Split View.
@@ -1958,7 +1960,8 @@ Parameters
     
       
         Promise
-      Pending
+      Chrome 155+
+      
     
         chrome.tabs.unsplit(  splitViewId: number,  callback?: function,): Promise<void>
       Separates the tabs in a Split View into independent tabs.

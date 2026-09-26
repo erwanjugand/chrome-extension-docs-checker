@@ -37,7 +37,7 @@ Reading the current value of a Chrome setting is straightforward. You'll first n
 property you're interested in, then you'll call get() on that object in order to retrieve its
 current value and your extension's level of control. For example, to determine if Chrome's credit card autofill
 feature is enabled, you'd write:
-chrome.privacy.services.autofillCreditCardEnabled.get({}, function(details) {
+browser.privacy.services.autofillCreditCardEnabled.get({}, function(details) {
   if (details.value) {
     console.log('Autofill is on!');
   } else {
@@ -54,19 +54,19 @@ succeed, but the setting will be immediately overridden. As this might be confus
 to warn the user when the settings they've chosen aren't practically applied.
 
 Note: Full details about extensions' ability to control ChromeSettings can be found under
-chrome.types.ChromeSetting.
+browser.types.ChromeSetting.
 
 This means that you ought to use the get() method to determine your level of access, and then only
 call set() if your extension can grab control over the setting (in fact if your extension can't
 control the setting it's probably a good idea to visually disable the feature to reduce user
 confusion):
-chrome.privacy.services.autofillCreditCardEnabled.get({}, function(details) {
+browser.privacy.services.autofillCreditCardEnabled.get({}, function(details) {
   if (details.levelOfControl === 'controllable_by_this_extension') {
-    chrome.privacy.services.autofillCreditCardEnabled.set({ value: true }, function() {
-      if (chrome.runtime.lastError === undefined) {
+    browser.privacy.services.autofillCreditCardEnabled.set({ value: true }, function() {
+      if (browser.runtime.lastError === undefined) {
         console.log("Hooray, it worked!");
       } else {
-        console.log("Sadness!", chrome.runtime.lastError);
+        console.log("Sadness!", browser.runtime.lastError);
       }
     });
   }
@@ -76,7 +76,7 @@ If you're interested in changes to a setting's value, add a listener to its onCh
 other uses, this will allow you to warn the user if a more recently installed extension grabs
 control of a setting, or if enterprise policy overrides your control. To listen for changes to
 credit card autofill status, for example, the following code would suffice:
-chrome.privacy.services.autofillCreditCardEnabled.onChange.addListener(
+browser.privacy.services.autofillCreditCardEnabled.onChange.addListener(
   function (details) {
     // The new value is stored in `details.value`, the new level of control
     // in `details.levelOfControl`, and `details.incognitoSpecific` will be

@@ -73,10 +73,10 @@ Chrome buffers the response while your handler runs. If the response has been fu
 
 Handle API availability
 
-In versions of Chrome before Chrome 151, an extension declaring "mime_types_handler" still installs and runs, but is not registered as a handler and chrome.mimeHandler is undefined. Extensions migrating from network request interception can check for the API at startup and keep their existing approach as a fallback:
+In versions of Chrome before Chrome 151, an extension declaring "mime_types_handler" still installs and runs, but is not registered as a handler and browser.mimeHandler is undefined. Extensions migrating from network request interception can check for the API at startup and keep their existing approach as a fallback:
 
 service-worker.js:
-if (chrome.mimeHandler) {
+if (browser.mimeHandler) {
   // Chrome routes registered MIME types to the handler page
   // declared in the manifest.
 } else {
@@ -91,7 +91,7 @@ The following example runs in the handler page declared in the manifest. It fetc
 
 viewer.js:
 async function loadDocument() {
-  const streamInfo = await chrome.mimeHandler.getStreamInfo();
+  const streamInfo = await browser.mimeHandler.getStreamInfo();
 
   // The `embedded` property is true if the document is loaded
   // within an <embed>, <object>, or <iframe> element.
@@ -111,7 +111,7 @@ async function loadDocument() {
   } catch (e) {
     // Can't render this document. Fall back to Chrome's built-in
     // viewer; the page unloads and no code runs after this call.
-    chrome.mimeHandler.abortAndFallbackToNativeHandler();
+    browser.mimeHandler.abortAndFallbackToNativeHandler();
   }
 }
 
@@ -126,13 +126,13 @@ const checkbox = document.querySelector('#handle-pdfs');
 
 async function initOptions() {
   const options =
-      await chrome.mimeHandler.getMimeHandlerOptions('application/pdf');
+      await browser.mimeHandler.getMimeHandlerOptions('application/pdf');
   // Handling is enabled unless it has been explicitly disabled.
   checkbox.checked = options.enabled !== false;
 }
 
 checkbox.addEventListener('change', async () => {
-  await chrome.mimeHandler.setMimeHandlerOptions('application/pdf', {
+  await browser.mimeHandler.setMimeHandlerOptions('application/pdf', {
     enabled: checkbox.checked
   });
 });

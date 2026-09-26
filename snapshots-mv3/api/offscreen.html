@@ -45,7 +45,7 @@ supported by offscreen documents.
 
 Pages loaded as offscreen documents are handled differently from other types of extension pages.
 The extension's permissions carry over to offscreen documents, but with limits on extension API
-access. For example, because the chrome.runtime API is the only
+access. For example, because the browser.runtime API is the only
 extensions API supported by offscreen documents, messaging must be handled
 using members of that API.
 
@@ -61,10 +61,10 @@ in split mode with an active incognito profile, the normal and incognito profile
 have one offscreen document.
 
 
-Use chrome.offscreen.createDocument() and
-chrome.offscreen.closeDocument() to create and close an offscreen
+Use browser.offscreen.createDocument() and
+browser.offscreen.closeDocument() to create and close an offscreen
 document. createDocument() requires the document's url, a reason, and a justification:
-chrome.offscreen.createDocument({
+browser.offscreen.createDocument({
   url: 'off_screen.html',
   reasons: ['CLIPBOARD'],
   justification: 'reason for needing the document',
@@ -87,8 +87,8 @@ let creating; // A global promise to avoid concurrency issues
 async function setupOffscreenDocument(path) {
   // Check all windows controlled by the service worker to see if one
   // of them is the offscreen document with the given path
-  const offscreenUrl = chrome.runtime.getURL(path);
-  const existingContexts = await chrome.runtime.getContexts({
+  const offscreenUrl = browser.runtime.getURL(path);
+  const existingContexts = await browser.runtime.getContexts({
     contextTypes: ['OFFSCREEN_DOCUMENT'],
     documentUrls: [offscreenUrl]
   });
@@ -101,7 +101,7 @@ async function setupOffscreenDocument(path) {
   if (creating) {
     await creating;
   } else {
-    creating = chrome.offscreen.createDocument({
+    creating = browser.offscreen.createDocument({
       url: path,
       reasons: ['CLIPBOARD'],
       justification: 'reason for needing the document',
@@ -113,11 +113,11 @@ async function setupOffscreenDocument(path) {
 
 Before sending a message to an offscreen document, call setupOffscreenDocument() to make sure
 the document exists, as demonstrated in the following example.
-chrome.action.onClicked.addListener(async () => {
+browser.action.onClicked.addListener(async () => {
   await setupOffscreenDocument('off_screen.html');
 
   // Send message to offscreen document
-  chrome.runtime.sendMessage({
+  browser.runtime.sendMessage({
     type: '...',
     target: 'offscreen',
     data: '...'
@@ -133,8 +133,8 @@ runtime.getContexts() was added in Chrome 116. In earlier versions of
 Chrome, use clients.matchAll()
 to check for an existing offscreen document:
 async function hasOffscreenDocument() {
-  if ('getContexts' in chrome.runtime) {
-    const contexts = await chrome.runtime.getContexts({
+  if ('getContexts' in browser.runtime) {
+    const contexts = await browser.runtime.getContexts({
       contextTypes: ['OFFSCREEN_DOCUMENT'],
       documentUrls: [OFFSCREEN_DOCUMENT_PATH]
     });
@@ -142,7 +142,7 @@ async function hasOffscreenDocument() {
   } else {
     const matchedClients = await clients.matchAll();
     return matchedClients.some(client => {
-      return client.url.includes(chrome.runtime.id);
+      return client.url.includes(browser.runtime.id);
     });
   }
 }
