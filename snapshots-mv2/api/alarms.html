@@ -185,7 +185,7 @@ Parameters
         Promise
       
     
-        chrome.alarms.clearAll(  callback?: function,): Promise<boolean>
+        chrome.alarms.clearAll(  callback?: function,): Promise<boolean | undefined>
       Clears all alarms.
 Parameters
     
@@ -193,16 +193,16 @@ Parameters
       function optional
     
           The callback parameter looks like:
-          (wasCleared: boolean) => void
+          (wasCleared?: boolean) => void
         
     
       wasCleared
-      boolean
+      boolean optional
     
     
     Returns
           
-            Promise<boolean>
+            Promise<boolean | undefined>
             
       Chrome 91+
       

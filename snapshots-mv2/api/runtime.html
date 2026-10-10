@@ -283,6 +283,23 @@ Properties
 
     
     
+      ExtensionLoadDetails
+    
+      Pending
+    Details about the extension load event.
+Properties
+    
+      previousVersion
+      string optional
+    Indicates the previous version of the extension, which has just been updated. This is present only if 'reason' is 'update'.
+
+    
+      reason
+      OnLoadedReason
+    The reason that this event is being dispatched.
+
+    
+    
       MessageSender
     An object containing information about the script context that sent a message or request.
 Properties
@@ -352,6 +369,15 @@ Properties
     The reason that this event is being dispatched.
 Enum
       "install"  Specifies the event reason as an installation."update"  Specifies the event reason as an extension update."chrome_update"  Specifies the event reason as a Chrome update."shared_module_update"  Specifies the event reason as an update to a shared module.
+    
+  
+    
+      OnLoadedReason
+    
+      Pending
+    The reason that this event is being dispatched.
+Enum
+      "install"  The extension was newly installed."update"  The extension was reloaded after an update."browser_update"  The browser was updated to a new version."enable"  The extension was re-enabled from a disabled state."startup"  The extension is being loaded during browser startup."reload"  The extension was reloaded (e.g. via chrome.runtime.reload() or the user manually reloaded the extension).
     
   
     
@@ -1120,6 +1146,27 @@ Parameters
           The callback parameter looks like:
           () => void
         
+    
+    
+      onExtensionLoaded
+    
+      Pending
+    
+        chrome.runtime.onExtensionLoaded.addListener(  callback: function,)
+      Fired when the extension is added to the set of active extensions. This can occur in multiple scenarios: when an extension is first installed, updated to a new version, re-enabled after being disabled, reloaded, loaded during browser startup, or loaded when the browser is updated to a new version.
+Parameters
+    
+      callback
+      function
+    
+          The callback parameter looks like:
+          (details: ExtensionLoadDetails) => void
+        
+    
+      details
+      ExtensionLoadDetails
+    
+    
     
     
       onInstalled
