@@ -3,11 +3,25 @@ name: Check diff
 on:
   workflow_dispatch:
   schedule:
-    - cron: '23 6 * * 6'
+    - cron: '0 12 * * 2'
 
 jobs:
+  check:
+    runs-on: ubuntu-26.04
+
+    outputs:
+      release: ${{ steps.chrome.outputs.release }}
+
+    steps:
+      - id: chrome
+        run: |
+          echo "release=$(curl -fsS 'https://chromiumdash.appspot.com/fetch_milestone_schedule?offset=-1&n=4' \
+          | jq --arg d "$(date -u +%F)" 'any(.mstones[]; .stable_date // "" | startswith($d))')" >> "$GITHUB_OUTPUT"
+
   run-scrap:
-    runs-on: ubuntu-latest
+    needs: check
+    if: needs.check.outputs.release == 'true' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-26.04
 
     permissions:
       contents: write
