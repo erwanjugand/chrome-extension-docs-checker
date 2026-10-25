@@ -1,22 +1,16 @@
 {
   "compilerOptions": {
     /* Base Options: */
-    "esModuleInterop": true,
     "skipLibCheck": true,
-    "allowJs": false,
-    "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
+    "noEmit": true,
     "types": ["node"],
 
     /* Strictness */
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
-
-    /* If transpiling with TypeScript: */
-    "outDir": "dist",
-    "sourceMap": true,
 
     /* If your code doesn't run in the DOM: */
     "lib": ["es2022"]
