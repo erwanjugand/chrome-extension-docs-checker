@@ -14,9 +14,12 @@ jobs:
 
     steps:
       - id: chrome
+        if: github.event_name == 'schedule'
+        shell: bash
         run: |
-          echo "release=$(curl -fsS 'https://chromiumdash.appspot.com/fetch_milestone_schedule?offset=-1&n=4' \
-          | jq --arg d "$(date -u +%F)" 'any(.mstones[]; .stable_date // "" | startswith($d))')" >> "$GITHUB_OUTPUT"
+          release=$(curl -fsS --retry 3 --retry-all-errors 'https://chromiumdash.appspot.com/fetch_milestone_schedule?offset=-1&n=4' \
+          | jq -n --arg d "$(date -u +%F)" 'input | any(.mstones[]; .stable_date | startswith($d))')
+          echo "release=$release" >> "$GITHUB_OUTPUT"
 
   run-scrap:
     needs: check
