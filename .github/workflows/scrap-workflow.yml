@@ -37,120 +37,23 @@ jobs:
           cache: true
           require-lockfile: true
 
-      - name: Check
-        run: pnpm check:all
-
       - name: Scrap
         run: pnpm scrap
 
-      - name: Check for changes
-        id: git_diff
-        run: |
-          if git diff --quiet; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Generate commit message
-        if: ${{ steps.git_diff.outputs.changed == 'true' }}
-        id: generate_commit_message
-        run: |
-          MODIFIED_FILES=$(git diff --name-only -- snapshots-mv3 snapshots-mv2)
-          RECOGNIZED_URLS=""
-
-          while IFS= read -r FILE; do
-            case "$FILE" in
-              snapshots-mv3/api/*.html)
-                NAME="${FILE#snapshots-mv3/api/}"
-                NAME="${NAME%.html}"
-                RECOGNIZED_URLS="${RECOGNIZED_URLS}MV3|https://developer.chrome.com/docs/extensions/reference/api/${NAME}"$'\n'
-                ;;
-              snapshots-mv3/manifest/*.html)
-                NAME="${FILE#snapshots-mv3/manifest/}"
-                NAME="${NAME%.html}"
-                RECOGNIZED_URLS="${RECOGNIZED_URLS}MV3|https://developer.chrome.com/docs/extensions/reference/manifest/${NAME}"$'\n'
-                ;;
-              snapshots-mv3/api.html)
-                RECOGNIZED_URLS="${RECOGNIZED_URLS}MV3|https://developer.chrome.com/docs/extensions/reference/api"$'\n'
-                ;;
-              snapshots-mv3/manifest.html)
-                RECOGNIZED_URLS="${RECOGNIZED_URLS}MV3|https://developer.chrome.com/docs/extensions/reference/manifest"$'\n'
-                ;;
-              snapshots-mv3/permissions-list.html)
-                RECOGNIZED_URLS="${RECOGNIZED_URLS}MV3|https://developer.chrome.com/docs/extensions/reference/permissions-list"$'\n'
-                ;;
-              snapshots-mv2/api/*.html)
-                NAME="${FILE#snapshots-mv2/api/}"
-                NAME="${NAME%.html}"
-                RECOGNIZED_URLS="${RECOGNIZED_URLS}MV2|https://developer.chrome.com/docs/extensions/mv2/reference/${NAME}"$'\n'
-                ;;
-              snapshots-mv2/index.html)
-                RECOGNIZED_URLS="${RECOGNIZED_URLS}MV2|https://developer.chrome.com/docs/extensions/mv2/reference"$'\n'
-                ;;
-            esac
-          done <<< "$MODIFIED_FILES"
-
-          mapfile -t URL_LINES < <(printf '%s' "$RECOGNIZED_URLS" | sed '/^$/d' | sort -u)
-          FILE_COUNT=${#URL_LINES[@]}
-
-          if [ "$FILE_COUNT" -eq 0 ]; then
-            COMMIT_MESSAGE="chore(scrap): update generated files"
-          else
-            COMMIT_MESSAGE="chore(scrap): update ${FILE_COUNT} snapshots"
-          fi
-
-          MV3_SECTION=""
-          MV2_SECTION=""
-
-          for LINE in "${URL_LINES[@]}"; do
-            VERSION="${LINE%%|*}"
-            URL="${LINE#*|}"
-
-            case "$VERSION" in
-              MV3)
-                MV3_SECTION="${MV3_SECTION}${URL}"$'\n'
-                ;;
-              MV2)
-                MV2_SECTION="${MV2_SECTION}${URL}"$'\n'
-                ;;
-            esac
-          done
-
-          DESCRIPTION=""
-
-          if [ -n "$MV3_SECTION" ]; then
-            DESCRIPTION="${DESCRIPTION}MV3:"$'\n'
-            DESCRIPTION="${DESCRIPTION}${MV3_SECTION}"
-          fi
-
-          if [ -n "$MV2_SECTION" ]; then
-            if [ -n "$DESCRIPTION" ]; then
-              DESCRIPTION="${DESCRIPTION}"$'\n'
-            fi
-            DESCRIPTION="${DESCRIPTION}MV2:"$'\n'
-            DESCRIPTION="${DESCRIPTION}${MV2_SECTION}"
-          fi
-
-          DESCRIPTION="${DESCRIPTION%$'\n'}"
-
-          {
-            echo "commit_message<<EOF"
-            printf '%s\n' "$COMMIT_MESSAGE"
-            echo "EOF"
-          } >> "$GITHUB_ENV"
-
-          {
-            echo "commit_description<<EOF"
-            printf '%s\n' "$DESCRIPTION"
-            echo "EOF"
-          } >> "$GITHUB_ENV"
-
       - name: Commit changes
-        if: ${{ steps.git_diff.outputs.changed == 'true' }}
-        uses: stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d # v7.2.0
-        with:
-          commit_message: |
-            ${{ env.commit_message }}
+        run: |
+          git add -A snapshots-mv3 snapshots-mv2
+          if git diff --cached --quiet; then exit 0; fi
 
-            ${{ env.commit_description }}
+          # Snapshot paths mirror the docs URLs
+          DOCS=https://developer.chrome.com/docs/extensions
+          MV3=$(git diff --cached --no-renames --name-only -- snapshots-mv3 | sed -E "s#^snapshots-mv3/(.*)\.md\$#$DOCS/reference/\1#")
+          MV2=$(git diff --cached --no-renames --name-only -- snapshots-mv2 | sed -E "s#^snapshots-mv2/(api/)?(.*)\.md\$#$DOCS/mv2/reference/\2#; s#/index\$##")
+          COUNT=$(git diff --cached --no-renames --name-only | wc -l)
+          BODY=""
+          [ -z "$MV3" ] || BODY="MV3:"$'\n'"$MV3"$'\n\n'
+          [ -z "$MV2" ] || BODY+="MV2:"$'\n'"$MV2"
+
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+            commit -q -m "chore(scrap): update $COUNT snapshots" -m "$BODY"
+          git push
