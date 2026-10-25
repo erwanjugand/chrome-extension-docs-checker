@@ -1,112 +1,128 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import { setTimeout } from 'node:timers/promises'
 
-import * as cheerio from 'cheerio'
-
-const SNAPSHOTS_DIR_MV3 = 'snapshots-mv3'
-const SNAPSHOTS_DIR_MV2 = 'snapshots-mv2'
+import { load } from 'cheerio'
 
 const BASE_URL = 'https://developer.chrome.com'
-const MV3_BASE_URL = `${BASE_URL}/docs/extensions/reference`
-const MV2_BASE_URL = `${BASE_URL}/docs/extensions/mv2/reference`
+const MV3_URL = `${BASE_URL}/docs/extensions/reference`
+const MV2_URL = `${BASE_URL}/docs/extensions/mv2/reference`
 
-const MAIN_SELECTOR = '.devsite-article-body'
+const SNAPSHOTS_DIRS = ['snapshots-mv3', 'snapshots-mv2']
 
-const extractContent = async (apiUrl: string, dist: string, baseUrl: string) => {
-  const apiName = apiUrl.split(baseUrl).pop()?.replace('/', '') || 'index'
-  const snapshotPath = path.join(`${dist}/`, `${apiName}.html`)
+const NAV_LINK_SELECTOR = ".devsite-nav-list[menu='_book'] .devsite-nav-item:not(.devsite-nav-deprecated) > a[href]"
+
+// A few requests at a time reuse kept-alive connections: a burst of new connections hits ETIMEDOUT
+const CONCURRENCY = 8
+const MAX_ATTEMPTS = 4
+const RETRY_DELAY = 1000
+const TIMEOUT = 30_000
+
+interface Section {
+  url: string
+  file: string
+  /** Snapshots folder of the pages listed in the section sidebar */
+  dir?: string
+  /** Broken sidebar links */
+  ignore?: string[]
+  rename?: Record<string, string>
+}
+
+interface Page {
+  url: string
+  file: string
+}
+
+const SECTIONS: Section[] = [
+  { dir: 'snapshots-mv3/api', file: 'snapshots-mv3/api.md', url: `${MV3_URL}/api` },
+  { dir: 'snapshots-mv3/manifest', file: 'snapshots-mv3/manifest.md', url: `${MV3_URL}/manifest` },
+  { file: 'snapshots-mv3/permissions-list.md', url: `${MV3_URL}/permissions-list` },
+  {
+    dir: 'snapshots-mv2/api',
+    file: 'snapshots-mv2/index.md',
+    ignore: ['enterprise/login', 'devtools/performance'],
+    rename: { 'input/ime': 'input_ime' },
+    url: MV2_URL,
+  },
+]
+
+const fetchText = async (url: string, attempt = 1): Promise<string> => {
   try {
-    const html = await fetch(`${apiUrl}?hl=en`).then((response) => response.text())
-    const cheerioHtml = cheerio.load(html)
-    const rawContent = cheerioHtml(MAIN_SELECTOR).text()
-    const content = rawContent
-      .replaceAll(/&(?:\s|\u00A0)*gt;/g, '> ')
-      .replaceAll(/&(?:\s|\u00A0)*quot;/g, '"')
-      .replaceAll(/&(?:\s|\u00A0)*#39;/g, "'")
-    if (!content) {
-      console.error(`No content found for ${apiName}`)
-      return
+    const response = await fetch(url, { signal: AbortSignal.timeout(TIMEOUT) })
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`)
     }
-    fs.mkdirSync(path.dirname(snapshotPath), { recursive: true })
-    fs.writeFileSync(snapshotPath, content, 'utf-8')
-    console.log(`Snapshot saved in ${snapshotPath}`)
+    return await response.text()
   } catch (error) {
-    console.error(`Error while fetching ${apiUrl}:`, error)
+    if (attempt === MAX_ATTEMPTS) {
+      throw new Error(`Failed to fetch ${url}`, { cause: error })
+    }
+    console.warn(`Retrying ${url} (attempt ${attempt} failed)`)
+    await setTimeout(attempt * RETRY_DELAY)
+    return fetchText(url, attempt + 1)
   }
 }
 
-const API_LINK_SELECTORS =
-  ".devsite-nav-list[menu='_book'] .devsite-nav-item:not(.devsite-nav-deprecated) > a[href^='/docs/extensions/']"
+const getPages = async ({ url, file, dir, ignore = [], rename = {} }: Section): Promise<Page[]> => {
+  if (!dir) {
+    return [{ file, url }]
+  }
 
-const getLinks = async (baseUrl: string, selector: string): Promise<string[]> => {
+  const $ = load(await fetchText(url))
+  const prefix = `${new URL(url).pathname}/`
+  const slugs = $(NAV_LINK_SELECTOR)
+    .map((_, link) => link.attribs.href)
+    .get()
+    .filter((href) => href.startsWith(prefix))
+    .map((href) => href.slice(prefix.length))
+    .filter((slug) => !ignore.includes(slug))
+    .map((slug) => rename[slug] ?? slug)
+  if (slugs.length === 0) {
+    throw new Error(`No pages found in ${url} sidebar`)
+  }
+
+  return [{ file, url }, ...[...new Set(slugs)].map((slug) => ({ file: `${dir}/${slug}.md`, url: `${url}/${slug}` }))]
+}
+
+const forEachConcurrently = async <Item>(items: Item[], task: (item: Item) => Promise<void>) => {
+  const queue = items.values()
+  const worker = async () => {
+    for (const item of queue) {
+      // oxlint-disable-next-line no-await-in-loop -- each worker handles its items one after the other
+      await task(item)
+    }
+  }
+  await Promise.all(Array.from({ length: CONCURRENCY }, worker))
+}
+
+const sectionsPages = await Promise.all(SECTIONS.map((section) => getPages(section)))
+const pages = sectionsPages.flat()
+const snapshots = new Map<string, string>()
+const errors: unknown[] = []
+
+// The Markdown version of a page has neither CSS noise nor the double-escaped entities of the HTML code highlighting
+await forEachConcurrently(pages, async ({ url, file }) => {
   try {
-    const html = await fetch(baseUrl).then((response) => response.text())
-    const cheerioHtml = cheerio.load(html)
-    const links: string[] = []
-
-    cheerioHtml(selector).each((_, element) => {
-      const link = cheerioHtml(element)
-      const text = link.text()
-      const href = link.attr('href')
-      if (!href || text.includes('➡')) return
-      links.push(`${BASE_URL}${href}`)
-    })
-
-    return links
+    snapshots.set(file, await fetchText(`${url}.md.txt`))
   } catch (error) {
-    console.error('Error while fetching the APIs:', error)
-    return []
+    errors.push(error)
   }
+})
+
+if (errors.length > 0) {
+  for (const error of errors) {
+    console.error(error)
+  }
+  console.error(`${errors.length}/${pages.length} pages failed, snapshots left untouched`)
+  process.exit(1)
 }
 
-const scrapMV3 = async () => {
-  if (fs.existsSync(SNAPSHOTS_DIR_MV3)) {
-    fs.rmSync(SNAPSHOTS_DIR_MV3, { recursive: true })
-  }
-  fs.mkdirSync(SNAPSHOTS_DIR_MV3)
-  const mainApiLink = `${MV3_BASE_URL}/api`
-  const apiLinks = await getLinks(mainApiLink, API_LINK_SELECTORS)
-  const mainManifestLink = `${MV3_BASE_URL}/manifest`
-  const manifestLinks = await getLinks(mainManifestLink, API_LINK_SELECTORS)
-  const moreLinks = [mainApiLink, mainManifestLink, `${MV3_BASE_URL}/permissions-list`]
-
-  for (const apiLink of apiLinks.filter((link) => link !== mainApiLink).map((link) => link)) {
-    extractContent(apiLink, `${SNAPSHOTS_DIR_MV3}/api`, mainApiLink)
-    await new Promise((resolve) => setTimeout(resolve, 100))
-  }
-
-  for (const manifestLink of manifestLinks.filter((link) => link !== mainManifestLink)) {
-    extractContent(manifestLink, `${SNAPSHOTS_DIR_MV3}/manifest`, mainManifestLink)
-    await new Promise((resolve) => setTimeout(resolve, 100))
-  }
-
-  for (const moreLink of moreLinks) {
-    extractContent(moreLink, SNAPSHOTS_DIR_MV3, MV3_BASE_URL)
-    await new Promise((resolve) => setTimeout(resolve, 100))
-  }
+// Only replace snapshots once every page succeeded, so a failed request never deletes one
+for (const dir of SNAPSHOTS_DIRS) {
+  fs.rmSync(dir, { force: true, recursive: true })
 }
-
-const scrapMV2 = async () => {
-  if (fs.existsSync(SNAPSHOTS_DIR_MV2)) {
-    fs.rmSync(SNAPSHOTS_DIR_MV2, { recursive: true })
-  }
-  fs.mkdirSync(SNAPSHOTS_DIR_MV2)
-
-  const apiLinks = await getLinks(MV2_BASE_URL, API_LINK_SELECTORS)
-  const moreLinks = [MV2_BASE_URL]
-
-  for (const apiLink of apiLinks
-    .filter(
-      (link) => link !== MV2_BASE_URL && !link.endsWith('enterprise/login') && !link.endsWith('devtools/performance'),
-    )
-    .map((link) => link.replace('input/ime', 'input_ime'))) {
-    extractContent(apiLink, `${SNAPSHOTS_DIR_MV2}/api`, MV2_BASE_URL)
-  }
-
-  for (const moreLink of moreLinks) {
-    extractContent(moreLink, SNAPSHOTS_DIR_MV2, MV2_BASE_URL)
-  }
+for (const [file, content] of snapshots) {
+  fs.mkdirSync(path.dirname(file), { recursive: true })
+  fs.writeFileSync(file, content)
 }
-
-scrapMV3()
-scrapMV2()
+console.log(`${snapshots.size} snapshots saved`)
