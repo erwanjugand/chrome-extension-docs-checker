@@ -12,6 +12,30 @@ const SNAPSHOTS_DIRS = ['snapshots-mv3', 'snapshots-mv2']
 
 const NAV_LINK_SELECTOR = ".devsite-nav-list[menu='_book'] .devsite-nav-item:not(.devsite-nav-deprecated) > a[href]"
 
+// Google's code highlighter sometimes misplaces HTML entities and whitespace: fix each artifact found so far
+const FIXES: [RegExp, string][] = [
+  /**
+   * An escaped quote is left in a code block
+   * @example `"default_title&quot;:` → `"default_title":`
+   */
+  [/&(?<space>\s*)quot;/gu, '"$<space>'],
+  /**
+   * An escaped apostrophe is left in a code block
+   * @example `fontId: &#39;MS PGothic'` → `fontId: 'MS PGothic'`
+   */
+  [/&(?<space>\s*)#39;/gu, "'$<space>"],
+  /**
+   * The non-breaking space after a signature arrow moves into its entity as a plain space
+   * @example `(info: CpuInfo) =& gt;void` → `(info: CpuInfo) =>` U+00A0 `void`
+   */
+  [/&\s+gt;/gu, '>\u00A0'],
+  /**
+   * An arrow loses its `>`
+   * @example `.catch((>error) = console.error(error))` → `.catch((error) => console.error(error))`
+   */
+  [/\(>(?<param>\w+)\) = /gu, '($<param>) => '],
+]
+
 // A few requests at a time reuse kept-alive connections: a burst of new connections hits ETIMEDOUT
 const CONCURRENCY = 8
 const MAX_ATTEMPTS = 4
@@ -100,10 +124,14 @@ const pages = sectionsPages.flat()
 const snapshots = new Map<string, string>()
 const errors: unknown[] = []
 
-// The Markdown version of a page has neither CSS noise nor the double-escaped entities of the HTML code highlighting
+// The Markdown version of a page has no CSS noise, but keeps the artifacts of the HTML code highlighting
 await forEachConcurrently(pages, async ({ url, file }) => {
   try {
-    snapshots.set(file, await fetchText(`${url}.md.txt`))
+    const markdown = await fetchText(`${url}.md.txt`)
+    snapshots.set(
+      file,
+      FIXES.reduce((content, [pattern, replacement]) => content.replaceAll(pattern, replacement), markdown),
+    )
   } catch (error) {
     errors.push(error)
   }
