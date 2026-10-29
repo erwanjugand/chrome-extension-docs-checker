@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "type": "module",
   "engines": {
-    "node": "^22.18.0 || >=24.3.0"
+    "node": "^22.18.0 || ^24.3.0 || >=26.0.0"
   },
   "scripts": {
     "scrap": "node scrap.ts",
