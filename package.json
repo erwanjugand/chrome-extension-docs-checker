@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "type": "module",
   "engines": {
-    "node": "^22.18.0 || >=24.3.0"
+    "node": "^22.18.0 || ^24.3.0 || >=26.0.0"
   },
   "scripts": {
     "scrap": "node scrap.ts",
@@ -19,7 +19,7 @@
   "devDependencies": {
     "@erwanjugand/prettier-config": "1.1.2",
     "@prettier/plugin-oxc": "0.2.3",
-    "@types/node": "24.19.1",
+    "@types/node": "26.6.5",
     "cheerio": "1.2.0",
     "oxlint": "1.86.0",
     "prettier": "3.9.9",
