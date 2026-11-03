@@ -72,7 +72,7 @@ A suggest result.
 
 ### DescriptionStyleType
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The style type.
 
@@ -86,7 +86,7 @@ The style type.
 
 ### OnInputEnteredDisposition
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The window disposition for the omnibox query. This is the recommended context to display results. For example, if the omnibox command is to navigate to a certain URL, a disposition of 'newForegroundTab' means the navigation should take place in a new selected tab.
 
@@ -108,7 +108,7 @@ A suggest result.
 
   The text that is put into the URL bar, and that is sent to the extension when the user chooses this entry.
 - deletable boolean optional
-  Chrome 63+
+  Chrome 63+ browser.\* since Chrome 148
 
   Whether the suggest result can be deleted by the user.
 - description string
@@ -120,7 +120,7 @@ A suggest result.
 ### setDefaultSuggestion()
 
 ```typescript
-chrome.omnibox.setDefaultSuggestion(
+browser.omnibox.setDefaultSuggestion(
   suggestion: DefaultSuggestResult,
 ): Promise<void>
 ```
@@ -136,16 +136,16 @@ Sets the description and styling for the default suggestion. The default suggest
 #### Returns
 
 - Promise\<void\>
-  Chrome 100+
+  Chrome 100+ browser.\* since Chrome 148
 
 ## Events
 
 ### onDeleteSuggestion
 
-Chrome 63+
+Chrome 63+ browser.\* since Chrome 148
 
 ```typescript
-chrome.omnibox.onDeleteSuggestion.addListener(
+browser.omnibox.onDeleteSuggestion.addListener(
   callback: function,
 )
 ```
@@ -170,7 +170,7 @@ User has deleted a suggested result.
 ### onInputCancelled
 
 ```typescript
-chrome.omnibox.onInputCancelled.addListener(
+browser.omnibox.onInputCancelled.addListener(
   callback: function,
 )
 ```
@@ -193,7 +193,7 @@ User has ended the keyword input session without accepting the input.
 ### onInputChanged
 
 ```typescript
-chrome.omnibox.onInputChanged.addListener(
+browser.omnibox.onInputChanged.addListener(
   callback: function,
 )
 ```
@@ -232,7 +232,7 @@ User has changed what is typed into the omnibox.
 ### onInputEntered
 
 ```typescript
-chrome.omnibox.onInputEntered.addListener(
+browser.omnibox.onInputEntered.addListener(
   callback: function,
 )
 ```
@@ -258,7 +258,7 @@ User has accepted what is typed into the omnibox.
 ### onInputStarted
 
 ```typescript
-chrome.omnibox.onInputStarted.addListener(
+browser.omnibox.onInputStarted.addListener(
   callback: function,
 )
 ```

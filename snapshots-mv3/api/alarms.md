@@ -145,7 +145,7 @@ service-worker.js:
 ### clear()
 
 ```typescript
-chrome.alarms.clear(
+browser.alarms.clear(
   name?: string,
 ): Promise<boolean>
 ```
@@ -161,12 +161,12 @@ Clears the alarm with the given name.
 #### Returns
 
 - Promise\<boolean\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
 ### clearAll()
 
 ```typescript
-chrome.alarms.clearAll(): Promise<boolean | undefined>
+browser.alarms.clearAll(): Promise<boolean | undefined>
 ```
 
 Clears all alarms.
@@ -174,12 +174,12 @@ Clears all alarms.
 #### Returns
 
 - Promise\<boolean \| undefined\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
 ### create()
 
 ```typescript
-chrome.alarms.create(
+browser.alarms.create(
   name?: string,
   alarmInfo: AlarmCreateInfo,
 ): Promise<void>
@@ -187,9 +187,7 @@ chrome.alarms.create(
 
 Creates an alarm. Near the time(s) specified by `alarmInfo`, the `onAlarm` event is fired. If there is another alarm with the same name (or no name if none is specified), it will be cancelled and replaced by this alarm.
 
-In order to reduce the load on the user's machine, Chrome limits alarms to at most once every 30 seconds but may delay them an arbitrary amount more. That is, setting `delayInMinutes` or `periodInMinutes` to less than `0.5` will not be honored and will cause a warning. `when` can be set to less than 30 seconds after "now" without warning but won't actually cause the alarm to fire for at least 30 seconds.
-
-To help you debug your app or extension, when you've loaded it unpacked, there's no limit to how often the alarm can fire.
+In order to reduce the load on the user's machine, Chrome limits alarms to at most once every second but may delay them an arbitrary amount more. That is, setting `delayInMinutes` or `periodInMinutes` to less than 1 second will not be honored and will cause a warning. `when` can be set to less than 1 second after "now" without warning but won't actually cause the alarm to fire for at least 1 second.
 
 #### Parameters
 
@@ -203,14 +201,14 @@ To help you debug your app or extension, when you've loaded it unpacked, there's
 #### Returns
 
 - Promise\<void\>
-  Chrome 111+
+  Chrome 111+ browser.\* since Chrome 148
 
   Promise that resolves when the alarm has been created.
 
 ### get()
 
 ```typescript
-chrome.alarms.get(
+browser.alarms.get(
   name?: string,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/alarms#type-Alarm | undefined>
 ```
@@ -226,12 +224,12 @@ Retrieves details about the specified alarm.
 #### Returns
 
 - Promise\<[Alarm](https://developer.chrome.com/docs/extensions/reference/api/alarms#type-Alarm) \| undefined\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
 ### getAll()
 
 ```typescript
-chrome.alarms.getAll(): Promise<https://developer.chrome.com/docs/extensions/reference/api/alarms#type-Alarm[]>
+browser.alarms.getAll(): Promise<https://developer.chrome.com/docs/extensions/reference/api/alarms#type-Alarm[]>
 ```
 
 Gets an array of all the alarms.
@@ -239,14 +237,14 @@ Gets an array of all the alarms.
 #### Returns
 
 - Promise\<[Alarm](https://developer.chrome.com/docs/extensions/reference/api/alarms#type-Alarm)\[\]\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
 ## Events
 
 ### onAlarm
 
 ```typescript
-chrome.alarms.onAlarm.addListener(
+browser.alarms.onAlarm.addListener(
   callback: function,
 )
 ```

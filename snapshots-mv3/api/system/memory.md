@@ -40,7 +40,7 @@ The `chrome.system.memory` API.
 ### getInfo()
 
 ```typescript
-chrome.system.memory.getInfo(): Promise<https://developer.chrome.com/docs/extensions/reference/api/system/memory#type-MemoryInfo>
+browser.system.memory.getInfo(): Promise<https://developer.chrome.com/docs/extensions/reference/api/system/memory#type-MemoryInfo>
 ```
 
 Get physical memory information.
@@ -48,6 +48,6 @@ Get physical memory information.
 #### Returns
 
 - Promise\<[MemoryInfo](https://developer.chrome.com/docs/extensions/reference/api/system/memory#type-MemoryInfo)\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
 <br />

@@ -110,7 +110,7 @@ Provided file systems once mounted are remembered by Chrome and remounted automa
 
 ### Action
 
-Chrome 45+
+Chrome 45+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -146,7 +146,7 @@ Chrome 45+
 
   The type of the change which happened to the entry.
 - cloudFileInfo [CloudFileInfo](https://developer.chrome.com/docs/extensions/reference/api/fileSystemProvider#type-CloudFileInfo) optional
-  Chrome 125+
+  Chrome 125+ browser.\* since Chrome 148
 
   Information relating to the file if backed by a cloud file system.
 - entryPath string
@@ -180,7 +180,7 @@ Type of a change detected on the observed directory.
 
 ### CloudFileInfo
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -190,7 +190,7 @@ Chrome 125+
 
 ### CloudIdentifier
 
-Chrome 117+
+Chrome 117+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -203,7 +203,7 @@ Chrome 117+
 
 ### CommonActionId
 
-Chrome 45+
+Chrome 45+ browser.\* since Chrome 148
 
 List of common actions. `"SHARE"` is for sharing files with others. `"SAVE_FOR_OFFLINE"` for pinning (saving for offline access). `"OFFLINE_NOT_NECESSARY"` for notifying that the file doesn't need to be stored for offline access anymore. Used by [`onGetActionsRequested`](https://developer.chrome.com/docs/extensions/reference/api/fileSystemProvider#event-onGetActionsRequested) and [`onExecuteActionRequested`](https://developer.chrome.com/docs/extensions/reference/api/fileSystemProvider#event-onExecuteActionRequested).
 
@@ -217,7 +217,7 @@ List of common actions. `"SHARE"` is for sharing files with others. `"SAVE_FOR_O
 
 ### ConfigureRequestedOptions
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -298,11 +298,11 @@ Chrome 44+
 #### Properties
 
 - cloudFileInfo [CloudFileInfo](https://developer.chrome.com/docs/extensions/reference/api/fileSystemProvider#type-CloudFileInfo) optional
-  Chrome 125+
+  Chrome 125+ browser.\* since Chrome 148
 
   Information that identifies a specific file in the underlying cloud file system. Must be provided if requested in `options` and the file is backed by cloud storage.
 - cloudIdentifier [CloudIdentifier](https://developer.chrome.com/docs/extensions/reference/api/fileSystemProvider#type-CloudIdentifier) optional
-  Chrome 117+
+  Chrome 117+ browser.\* since Chrome 148
 
   Cloud storage representation of this entry. Must be provided if requested in `options` and the file is backed by cloud storage. For local files not backed by cloud storage, it should be undefined when requested.
 - isDirectory boolean optional
@@ -326,7 +326,7 @@ Chrome 44+
 
 ### ExecuteActionRequestedOptions
 
-Chrome 45+
+Chrome 45+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -334,7 +334,7 @@ Chrome 45+
 
   The identifier of the action to be executed.
 - entryPaths string\[\]
-  Chrome 47+
+  Chrome 47+ browser.\* since Chrome 148
 
   The set of paths of the entries to be used for the action.
 - fileSystemId string
@@ -361,11 +361,11 @@ Chrome 45+
 
   The maximum number of files that can be opened at once. If 0, then not limited.
 - supportsNotifyTag boolean optional
-  Chrome 45+
+  Chrome 45+ browser.\* since Chrome 148
 
   Whether the file system supports the `tag` field for observing directories.
 - watchers [Watcher](https://developer.chrome.com/docs/extensions/reference/api/fileSystemProvider#type-Watcher)\[\]
-  Chrome 45+
+  Chrome 45+ browser.\* since Chrome 148
 
   List of watchers.
 - writable boolean
@@ -374,12 +374,12 @@ Chrome 45+
 
 ### GetActionsRequestedOptions
 
-Chrome 45+
+Chrome 45+ browser.\* since Chrome 148
 
 #### Properties
 
 - entryPaths string\[\]
-  Chrome 47+
+  Chrome 47+ browser.\* since Chrome 148
 
   List of paths of entries for the list of actions.
 - fileSystemId string
@@ -394,11 +394,11 @@ Chrome 45+
 #### Properties
 
 - cloudFileInfo boolean
-  Chrome 125+
+  Chrome 125+ browser.\* since Chrome 148
 
   Set to `true` if `cloudFileInfo` value is requested.
 - cloudIdentifier boolean
-  Chrome 117+
+  Chrome 117+ browser.\* since Chrome 148
 
   Set to `true` if `cloudIdentifier` value is requested.
 - entryPath string
@@ -408,26 +408,26 @@ Chrome 45+
 
   The identifier of the file system related to this operation.
 - isDirectory boolean
-  Chrome 49+
+  Chrome 49+ browser.\* since Chrome 148
 
   Set to `true` if `is_directory` value is requested.
 - mimeType boolean
-  Chrome 49+
+  Chrome 49+ browser.\* since Chrome 148
 
   Set to `true` if `mimeType` value is requested.
 - modificationTime boolean
-  Chrome 49+
+  Chrome 49+ browser.\* since Chrome 148
 
   Set to `true` if `modificationTime` value is requested.
 - name boolean
-  Chrome 49+
+  Chrome 49+ browser.\* since Chrome 148
 
   Set to `true` if `name` value is requested.
 - requestId number
 
   The unique identifier of this request.
 - size boolean
-  Chrome 49+
+  Chrome 49+ browser.\* since Chrome 148
 
   Set to `true` if `size` value is requested.
 - thumbnail boolean
@@ -448,11 +448,11 @@ Chrome 45+
 
   The maximum number of files that can be opened at once. If not specified, or 0, then not limited.
 - persistent boolean optional
-  Chrome 64+
+  Chrome 64+ browser.\* since Chrome 148
 
   Whether the framework should resume the file system at the next sign-in session. True by default.
 - supportsNotifyTag boolean optional
-  Chrome 45+
+  Chrome 45+ browser.\* since Chrome 148
 
   Whether the file system supports the `tag` field for observed directories.
 - writable boolean optional
@@ -578,30 +578,30 @@ Error codes used by providing extensions in response to requests as well as in c
 
   The identifier of the file system related to this operation.
 - isDirectory boolean
-  Chrome 49+
+  Chrome 49+ browser.\* since Chrome 148
 
   Set to `true` if `is_directory` value is requested.
 - mimeType boolean
-  Chrome 49+
+  Chrome 49+ browser.\* since Chrome 148
 
   Set to `true` if `mimeType` value is requested.
 - modificationTime boolean
-  Chrome 49+
+  Chrome 49+ browser.\* since Chrome 148
 
   Set to `true` if `modificationTime` value is requested.
 - name boolean
-  Chrome 49+
+  Chrome 49+ browser.\* since Chrome 148
 
   Set to `true` if `name` value is requested.
 - requestId number
 
   The unique identifier of this request.
 - size boolean
-  Chrome 49+
+  Chrome 49+ browser.\* since Chrome 148
 
   Set to `true` if `size` value is requested.
 - thumbnail boolean
-  Chrome 49+
+  Chrome 49+ browser.\* since Chrome 148
 
   Set to `true` if `thumbnail` value is requested.
 
@@ -717,7 +717,7 @@ Error codes used by providing extensions in response to requests as well as in c
 ### get()
 
 ```typescript
-chrome.fileSystemProvider.get(
+browser.fileSystemProvider.get(
   fileSystemId: string,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/fileSystemProvider#type-FileSystemInfo>
 ```
@@ -731,14 +731,14 @@ Returns information about a file system with the passed `fileSystemId`.
 #### Returns
 
 - Promise\<[FileSystemInfo](https://developer.chrome.com/docs/extensions/reference/api/fileSystemProvider#type-FileSystemInfo)\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Callback to receive the result of [`get`](https://developer.chrome.com/docs/extensions/reference/api/fileSystemProvider#method-get) function.
 
 ### getAll()
 
 ```typescript
-chrome.fileSystemProvider.getAll(): Promise<https://developer.chrome.com/docs/extensions/reference/api/fileSystemProvider#type-FileSystemInfo[]>
+browser.fileSystemProvider.getAll(): Promise<https://developer.chrome.com/docs/extensions/reference/api/fileSystemProvider#type-FileSystemInfo[]>
 ```
 
 Returns all file systems mounted by the extension.
@@ -746,14 +746,14 @@ Returns all file systems mounted by the extension.
 #### Returns
 
 - Promise\<[FileSystemInfo](https://developer.chrome.com/docs/extensions/reference/api/fileSystemProvider#type-FileSystemInfo)\[\]\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Callback to receive the result of [`getAll`](https://developer.chrome.com/docs/extensions/reference/api/fileSystemProvider#method-getAll) function.
 
 ### mount()
 
 ```typescript
-chrome.fileSystemProvider.mount(
+browser.fileSystemProvider.mount(
   options: MountOptions,
 ): Promise<void>
 ```
@@ -771,16 +771,16 @@ In case of an error, [`runtime.lastError`](https://developer.chrome.com/docs/ext
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   A generic result callback to indicate success or failure.
 
 ### notify()
 
-Chrome 45+
+Chrome 45+ browser.\* since Chrome 148
 
 ```typescript
-chrome.fileSystemProvider.notify(
+browser.fileSystemProvider.notify(
   options: NotifyOptions,
 ): Promise<void>
 ```
@@ -804,14 +804,14 @@ In case of an error, [`runtime.lastError`](https://developer.chrome.com/docs/ext
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   A generic result callback to indicate success or failure.
 
 ### unmount()
 
 ```typescript
-chrome.fileSystemProvider.unmount(
+browser.fileSystemProvider.unmount(
   options: UnmountOptions,
 ): Promise<void>
 ```
@@ -827,7 +827,7 @@ In case of an error, [`runtime.lastError`](https://developer.chrome.com/docs/ext
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   A generic result callback to indicate success or failure.
 
@@ -836,7 +836,7 @@ In case of an error, [`runtime.lastError`](https://developer.chrome.com/docs/ext
 ### onAbortRequested
 
 ```typescript
-chrome.fileSystemProvider.onAbortRequested.addListener(
+browser.fileSystemProvider.onAbortRequested.addListener(
   callback: function,
 )
 ```
@@ -883,10 +883,10 @@ Raised when aborting an operation with `operationRequestId` is requested. The op
 
 ### onAddWatcherRequested
 
-Chrome 45+
+Chrome 45+ browser.\* since Chrome 148
 
 ```typescript
-chrome.fileSystemProvider.onAddWatcherRequested.addListener(
+browser.fileSystemProvider.onAddWatcherRequested.addListener(
   callback: function,
 )
 ```
@@ -934,7 +934,7 @@ Raised when setting a new directory watcher is requested. If an error occurs, th
 ### onCloseFileRequested
 
 ```typescript
-chrome.fileSystemProvider.onCloseFileRequested.addListener(
+browser.fileSystemProvider.onCloseFileRequested.addListener(
   callback: function,
 )
 ```
@@ -981,10 +981,10 @@ Raised when opening a file previously opened with `openRequestId` is requested t
 
 ### onConfigureRequested
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 ```typescript
-chrome.fileSystemProvider.onConfigureRequested.addListener(
+browser.fileSystemProvider.onConfigureRequested.addListener(
   callback: function,
 )
 ```
@@ -1032,7 +1032,7 @@ Raised when showing a configuration dialog for `fileSystemId` is requested. If i
 ### onCopyEntryRequested
 
 ```typescript
-chrome.fileSystemProvider.onCopyEntryRequested.addListener(
+browser.fileSystemProvider.onCopyEntryRequested.addListener(
   callback: function,
 )
 ```
@@ -1080,7 +1080,7 @@ Raised when copying an entry (recursively if a directory) is requested. If an er
 ### onCreateDirectoryRequested
 
 ```typescript
-chrome.fileSystemProvider.onCreateDirectoryRequested.addListener(
+browser.fileSystemProvider.onCreateDirectoryRequested.addListener(
   callback: function,
 )
 ```
@@ -1128,7 +1128,7 @@ Raised when creating a directory is requested. The operation must fail with the 
 ### onCreateFileRequested
 
 ```typescript
-chrome.fileSystemProvider.onCreateFileRequested.addListener(
+browser.fileSystemProvider.onCreateFileRequested.addListener(
   callback: function,
 )
 ```
@@ -1176,7 +1176,7 @@ Raised when creating a file is requested. If the file already exists, then `erro
 ### onDeleteEntryRequested
 
 ```typescript
-chrome.fileSystemProvider.onDeleteEntryRequested.addListener(
+browser.fileSystemProvider.onDeleteEntryRequested.addListener(
   callback: function,
 )
 ```
@@ -1223,10 +1223,10 @@ Raised when deleting an entry is requested. If `recursive` is true, and the entr
 
 ### onExecuteActionRequested
 
-Chrome 48+
+Chrome 48+ browser.\* since Chrome 148
 
 ```typescript
-chrome.fileSystemProvider.onExecuteActionRequested.addListener(
+browser.fileSystemProvider.onExecuteActionRequested.addListener(
   callback: function,
 )
 ```
@@ -1273,10 +1273,10 @@ Raised when executing an action for a set of files or directories is\\ requested
 
 ### onGetActionsRequested
 
-Chrome 48+
+Chrome 48+ browser.\* since Chrome 148
 
 ```typescript
-chrome.fileSystemProvider.onGetActionsRequested.addListener(
+browser.fileSystemProvider.onGetActionsRequested.addListener(
   callback: function,
 )
 ```
@@ -1325,7 +1325,7 @@ Raised when a list of actions for a set of files or directories at `entryPaths` 
 ### onGetMetadataRequested
 
 ```typescript
-chrome.fileSystemProvider.onGetMetadataRequested.addListener(
+browser.fileSystemProvider.onGetMetadataRequested.addListener(
   callback: function,
 )
 ```
@@ -1373,10 +1373,10 @@ Raised when metadata of a file or a directory at `entryPath` is requested. The m
 
 ### onMountRequested
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 ```typescript
-chrome.fileSystemProvider.onMountRequested.addListener(
+browser.fileSystemProvider.onMountRequested.addListener(
   callback: function,
 )
 ```
@@ -1423,7 +1423,7 @@ Raised when showing a dialog for mounting a new file system is requested. If the
 ### onMoveEntryRequested
 
 ```typescript
-chrome.fileSystemProvider.onMoveEntryRequested.addListener(
+browser.fileSystemProvider.onMoveEntryRequested.addListener(
   callback: function,
 )
 ```
@@ -1471,7 +1471,7 @@ Raised when moving an entry (recursively if a directory) is requested. If an err
 ### onOpenFileRequested
 
 ```typescript
-chrome.fileSystemProvider.onOpenFileRequested.addListener(
+browser.fileSystemProvider.onOpenFileRequested.addListener(
   callback: function,
 )
 ```
@@ -1520,7 +1520,7 @@ Raised when opening a file at `filePath` is requested. If the file does not exis
 ### onReadDirectoryRequested
 
 ```typescript
-chrome.fileSystemProvider.onReadDirectoryRequested.addListener(
+browser.fileSystemProvider.onReadDirectoryRequested.addListener(
   callback: function,
 )
 ```
@@ -1570,7 +1570,7 @@ Raised when contents of a directory at `directoryPath` are requested. The result
 ### onReadFileRequested
 
 ```typescript
-chrome.fileSystemProvider.onReadFileRequested.addListener(
+browser.fileSystemProvider.onReadFileRequested.addListener(
   callback: function,
 )
 ```
@@ -1619,10 +1619,10 @@ Raised when reading contents of a file opened previously with `openRequestId` is
 
 ### onRemoveWatcherRequested
 
-Chrome 45+
+Chrome 45+ browser.\* since Chrome 148
 
 ```typescript
-chrome.fileSystemProvider.onRemoveWatcherRequested.addListener(
+browser.fileSystemProvider.onRemoveWatcherRequested.addListener(
   callback: function,
 )
 ```
@@ -1670,7 +1670,7 @@ Raised when the watcher should be removed. If an error occurs, then `errorCallba
 ### onTruncateRequested
 
 ```typescript
-chrome.fileSystemProvider.onTruncateRequested.addListener(
+browser.fileSystemProvider.onTruncateRequested.addListener(
   callback: function,
 )
 ```
@@ -1718,7 +1718,7 @@ Raised when truncating a file to a desired length is requested. If an error occu
 ### onUnmountRequested
 
 ```typescript
-chrome.fileSystemProvider.onUnmountRequested.addListener(
+browser.fileSystemProvider.onUnmountRequested.addListener(
   callback: function,
 )
 ```
@@ -1766,7 +1766,7 @@ Raised when unmounting for the file system with the `fileSystemId` identifier is
 ### onWriteFileRequested
 
 ```typescript
-chrome.fileSystemProvider.onWriteFileRequested.addListener(
+browser.fileSystemProvider.onWriteFileRequested.addListener(
   callback: function,
 )
 ```

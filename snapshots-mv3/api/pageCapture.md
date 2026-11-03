@@ -45,7 +45,7 @@ API. For example:
 ### saveAsMHTML()
 
 ```typescript
-chrome.pageCapture.saveAsMHTML(
+browser.pageCapture.saveAsMHTML(
   details: object,
 ): Promise<Blob | undefined>
 ```
@@ -62,7 +62,7 @@ Saves the content of the tab with given id as MHTML.
 #### Returns
 
 - Promise\<Blob \| undefined\>
-  Chrome 116+
+  Chrome 116+ browser.\* since Chrome 148
 
   Resolves when the MHTML has been generated.
 

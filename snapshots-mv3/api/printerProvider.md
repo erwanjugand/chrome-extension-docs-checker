@@ -20,7 +20,7 @@ The `chrome.printerProvider` API exposes events used by print manager to query p
 
 ## Availability
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 <br />
 
@@ -88,7 +88,7 @@ Specifies that the document is invalid. For example, data may be corrupted or th
 ### onGetCapabilityRequested
 
 ```typescript
-chrome.printerProvider.onGetCapabilityRequested.addListener(
+browser.printerProvider.onGetCapabilityRequested.addListener(
   callback: function,
 )
 ```
@@ -127,7 +127,7 @@ Event fired when print manager requests printer capabilities.
 ### onGetPrintersRequested
 
 ```typescript
-chrome.printerProvider.onGetPrintersRequested.addListener(
+browser.printerProvider.onGetPrintersRequested.addListener(
   callback: function,
 )
 ```
@@ -162,10 +162,10 @@ Event fired when print manager requests printers provided by extensions.
 
 ### onGetUsbPrinterInfoRequested
 
-Chrome 45+
+Chrome 45+ browser.\* since Chrome 148
 
 ```typescript
-chrome.printerProvider.onGetUsbPrinterInfoRequested.addListener(
+browser.printerProvider.onGetUsbPrinterInfoRequested.addListener(
   callback: function,
 )
 ```
@@ -187,7 +187,7 @@ Event fired when print manager requests information about a USB device that may 
 
   <br />
 
-  - device [usb.Device](https://developer.chrome.com/docs/extensions/reference/usb/#type-Device)
+  - device usb.Device
   - resultCallback function
 
 
@@ -204,7 +204,7 @@ Event fired when print manager requests information about a USB device that may 
 ### onPrintRequested
 
 ```typescript
-chrome.printerProvider.onPrintRequested.addListener(
+browser.printerProvider.onPrintRequested.addListener(
   callback: function,
 )
 ```

@@ -18,7 +18,7 @@ See [DevTools APIs summary](https://developer.chrome.com/docs/extensions/how-to/
 
 ## Availability
 
-Chrome 105+
+Chrome 105+ browser.\* since Chrome 152
 
 <br />
 
@@ -120,7 +120,7 @@ A plugin interface that the Recorder panel invokes to customize the Recorder pan
 #### Properties
 
 - replay void
-  Chrome 112+
+  Chrome 112+ browser.\* since Chrome 152
 
   Allows the extension to implement custom replay functionality.
 
@@ -171,7 +171,7 @@ A plugin interface that the Recorder panel invokes to customize the Recorder pan
 
 ### RecorderView
 
-Chrome 112+
+Chrome 112+ browser.\* since Chrome 152
 
 Represents a view created by extension to be embedded inside the Recorder panel.
 
@@ -242,10 +242,10 @@ Represents a view created by extension to be embedded inside the Recorder panel.
 
 ### createView()
 
-Chrome 112+
+Chrome 112+ browser.\* since Chrome 152
 
 ```typescript
-chrome.devtools.recorder.createView(
+browser.devtools.recorder.createView(
   title: string,
   pagePath: string,
 ): RecorderView
@@ -269,7 +269,7 @@ Creates a view that can handle the replay. This view will be embedded inside the
 ### registerRecorderExtensionPlugin()
 
 ```typescript
-chrome.devtools.recorder.registerRecorderExtensionPlugin(
+browser.devtools.recorder.registerRecorderExtensionPlugin(
   plugin: RecorderExtensionPlugin,
   name: string,
   mediaType: string,

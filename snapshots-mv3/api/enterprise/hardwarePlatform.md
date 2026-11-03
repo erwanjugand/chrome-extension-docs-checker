@@ -22,7 +22,7 @@ Use the `chrome.enterprise.hardwarePlatform` API to get the manufacturer and mod
 
 ## Availability
 
-Chrome 71+ [Requires policy](https://support.google.com/chrome/a/answer/9296680)
+Chrome 71+ browser.\* since Chrome 148 [Requires policy](https://support.google.com/chrome/a/answer/9296680)
 
 <br />
 
@@ -44,7 +44,7 @@ Chrome 71+ [Requires policy](https://support.google.com/chrome/a/answer/9296680)
 ### getHardwarePlatformInfo()
 
 ```typescript
-chrome.enterprise.hardwarePlatform.getHardwarePlatformInfo(): Promise<https://developer.chrome.com/docs/extensions/reference/api/enterprise/hardwarePlatform#type-HardwarePlatformInfo>
+browser.enterprise.hardwarePlatform.getHardwarePlatformInfo(): Promise<https://developer.chrome.com/docs/extensions/reference/api/enterprise/hardwarePlatform#type-HardwarePlatformInfo>
 ```
 
 Obtains the manufacturer and model for the hardware platform and, if the extension is authorized, returns it via `callback`.
@@ -52,7 +52,7 @@ Obtains the manufacturer and model for the hardware platform and, if the extensi
 #### Returns
 
 - Promise\<[HardwarePlatformInfo](https://developer.chrome.com/docs/extensions/reference/api/enterprise/hardwarePlatform#type-HardwarePlatformInfo)\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Returns a Promise which resolves with the hardware platform info.
 

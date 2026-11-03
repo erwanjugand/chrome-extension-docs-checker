@@ -34,7 +34,7 @@ Use the `chrome.identity` API to get OAuth2 access tokens.
 
 ### AccountStatus
 
-Chrome 84+
+Chrome 84+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -47,7 +47,7 @@ Specifies the existence of a primary account, if any.
 
 ### GetAuthTokenResult
 
-Chrome 105+
+Chrome 105+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -68,7 +68,7 @@ Chrome 105+
 
 ### ProfileDetails
 
-Chrome 84+
+Chrome 84+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -95,7 +95,7 @@ Chrome 84+
 
   The account ID whose token should be returned. If not specified, the function will use an account from the Chrome profile: the Sync account if there is one, or otherwise the first Google web account.
 - enableGranularPermissions boolean optional
-  Chrome 87+
+  Chrome 87+ browser.\* since Chrome 148
 
   The `enableGranularPermissions` flag allows extensions to opt-in early to the granular permissions consent screen, in which requested permissions are granted or denied individually.
 - interactive boolean optional
@@ -112,7 +112,7 @@ Chrome 84+
 #### Properties
 
 - abortOnLoadForNonInteractive boolean optional
-  Chrome 113+
+  Chrome 113+ browser.\* since Chrome 148
 
   Whether to terminate `launchWebAuthFlow` for non-interactive requests after the page loads. This parameter does not affect interactive flows.
 
@@ -127,7 +127,7 @@ Chrome 84+
 
   For flows that use JavaScript for redirection, `abortOnLoadForNonInteractive` can be set to `false` in combination with setting `timeoutMsForNonInteractive` to give the page a chance to perform any redirects.
 - timeoutMsForNonInteractive number optional
-  Chrome 113+
+  Chrome 113+ browser.\* since Chrome 148
 
   The maximum amount of time, in miliseconds, `launchWebAuthFlow` is allowed to run in non-interactive mode in total. Only has an effect if `interactive` is `false`.
 - url string
@@ -138,10 +138,10 @@ Chrome 84+
 
 ### clearAllCachedAuthTokens()
 
-Chrome 87+
+Chrome 87+ browser.\* since Chrome 148
 
 ```typescript
-chrome.identity.clearAllCachedAuthTokens(): Promise<void>
+browser.identity.clearAllCachedAuthTokens(): Promise<void>
 ```
 
 Resets the state of the Identity API:
@@ -153,7 +153,7 @@ Resets the state of the Identity API:
 #### Returns
 
 - Promise\<void\>
-  Chrome 106+
+  Chrome 106+ browser.\* since Chrome 148
 
   Returns a Promise which resolves when the state has been cleared.
 
@@ -162,7 +162,7 @@ Resets the state of the Identity API:
 Dev channel
 
 ```typescript
-chrome.identity.getAccounts(): Promise<https://developer.chrome.com/docs/extensions/reference/api/identity#type-AccountInfo[]>
+browser.identity.getAccounts(): Promise<https://developer.chrome.com/docs/extensions/reference/api/identity#type-AccountInfo[]>
 ```
 
 Retrieves a list of AccountInfo objects describing the accounts present on the profile.
@@ -176,7 +176,7 @@ Retrieves a list of AccountInfo objects describing the accounts present on the p
 ### getAuthToken()
 
 ```typescript
-chrome.identity.getAuthToken(
+browser.identity.getAuthToken(
   details?: TokenDetails,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/identity#type-GetAuthTokenResult>
 ```
@@ -198,14 +198,14 @@ Note: When called with a callback, instead of returning an object this function 
 #### Returns
 
 - Promise\<[GetAuthTokenResult](https://developer.chrome.com/docs/extensions/reference/api/identity#type-GetAuthTokenResult)\>
-  Chrome 105+
+  Chrome 105+ browser.\* since Chrome 148
 
   Returns a Promise which resolves with an OAuth2 access token as specified by the manifest, or rejects if there was an error. The `grantedScopes` parameter is populated since Chrome 87. When available, this parameter contains the list of granted scopes corresponding with the returned token.
 
 ### getProfileUserInfo()
 
 ```typescript
-chrome.identity.getProfileUserInfo(
+browser.identity.getProfileUserInfo(
   details?: ProfileDetails,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/identity#type-ProfileUserInfo>
 ```
@@ -219,21 +219,21 @@ This API is different from identity.getAccounts in two ways. The information ret
 #### Parameters
 
 - details [ProfileDetails](https://developer.chrome.com/docs/extensions/reference/api/identity#type-ProfileDetails) optional
-  Chrome 84+
+  Chrome 84+ browser.\* since Chrome 148
 
   Profile options.
 
 #### Returns
 
 - Promise\<[ProfileUserInfo](https://developer.chrome.com/docs/extensions/reference/api/identity#type-ProfileUserInfo)\>
-  Chrome 106+
+  Chrome 106+ browser.\* since Chrome 148
 
   Returns a Promise which resolves with the `ProfileUserInfo` of the primary Chrome account, or an empty `ProfileUserInfo` if the account with given `details` doesn't exist.
 
 ### getRedirectURL()
 
 ```typescript
-chrome.identity.getRedirectURL(
+browser.identity.getRedirectURL(
   path?: string,
 ): string
 ```
@@ -255,7 +255,7 @@ The generated URLs match the pattern `https://<app-id>.chromiumapp.org/*`.
 ### launchWebAuthFlow()
 
 ```typescript
-chrome.identity.launchWebAuthFlow(
+browser.identity.launchWebAuthFlow(
   details: WebAuthFlowDetails,
 ): Promise<string | undefined>
 ```
@@ -275,14 +275,14 @@ For a good user experience it is important interactive auth flows are initiated 
 #### Returns
 
 - Promise\<string \| undefined\>
-  Chrome 106+
+  Chrome 106+ browser.\* since Chrome 148
 
   Returns a Promise which resolves with the URL redirected back to your application.
 
 ### removeCachedAuthToken()
 
 ```typescript
-chrome.identity.removeCachedAuthToken(
+browser.identity.removeCachedAuthToken(
   details: InvalidTokenDetails,
 ): Promise<void>
 ```
@@ -300,7 +300,7 @@ If an access token is discovered to be invalid, it should be passed to removeCac
 #### Returns
 
 - Promise\<void\>
-  Chrome 106+
+  Chrome 106+ browser.\* since Chrome 148
 
   Returns a Promise which resolves when the token has been removed from the cache.
 
@@ -309,7 +309,7 @@ If an access token is discovered to be invalid, it should be passed to removeCac
 ### onSignInChanged
 
 ```typescript
-chrome.identity.onSignInChanged.addListener(
+browser.identity.onSignInChanged.addListener(
   callback: function,
 )
 ```

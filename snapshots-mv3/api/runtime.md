@@ -172,7 +172,7 @@ See the [Manifest V3 - Web Accessible Resources demo](https://github.com/GoogleC
 
 ### ContextFilter
 
-Chrome 114+
+Chrome 114+ browser.\* since Chrome 148
 
 A filter to match against certain extension contexts. Matching contexts must match all specified filters; any filter that is not specified matches all available contexts. Thus, a filter of \`{}\` will match all available contexts.
 
@@ -190,7 +190,7 @@ A filter to match against certain extension contexts. Matching contexts must mat
 
 ### ContextType
 
-Chrome 114+
+Chrome 114+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -211,7 +211,7 @@ Specifies the context type as developer tools.
 
 ### ExtensionContext
 
-Chrome 114+
+Chrome 114+ browser.\* since Chrome 148
 
 A context hosting extension content.
 
@@ -247,7 +247,7 @@ A context hosting extension content.
 
 ### ExtensionLoadDetails
 
-Pending
+Chrome 157+
 
 Details about the extension load event.
 
@@ -255,7 +255,7 @@ Details about the extension load event.
 
 - previousVersion string optional
 
-  Indicates the previous version of the extension, which has just been updated. This is present only if 'reason' is 'update'.
+  Indicates the previous version of the extension. This is present only if 'reason' is 'update' or 'enable'. If 'reason' is 'update', this is the version of the extension before it was updated. If 'reason' is 'enable', this is the current version of the extension.
 - reason [OnLoadedReason](https://developer.chrome.com/docs/extensions/reference/api/runtime#type-OnLoadedReason)
 
   The reason that this event is being dispatched.
@@ -267,11 +267,11 @@ An object containing information about the script context that sent a message or
 #### Properties
 
 - documentId string optional
-  Chrome 106+
+  Chrome 106+ browser.\* since Chrome 148
 
   A UUID of the document that opened the connection.
 - documentLifecycle string optional
-  Chrome 106+
+  Chrome 106+ browser.\* since Chrome 148
 
   The lifecycle the document that opened the connection is in at the time the port was created. Note that the lifecycle state of the document may have changed since port creation.
 - frameId number optional
@@ -281,11 +281,11 @@ An object containing information about the script context that sent a message or
 
   The ID of the extension that opened the connection, if any.
 - nativeApplication string optional
-  Chrome 74+
+  Chrome 74+ browser.\* since Chrome 148
 
   The name of the native application that opened the connection, if any.
 - origin string optional
-  Chrome 80+
+  Chrome 80+ browser.\* since Chrome 148
 
   The origin of the page or frame that opened the connection. It can vary from the url property (e.g., about:blank) or can be opaque (e.g., sandboxed iframes). This is useful for identifying if the origin can be trusted if we can't immediately tell from the URL.
 - tab [Tab](https://developer.chrome.com/docs/extensions/reference/tabs/#type-Tab) optional
@@ -300,7 +300,7 @@ An object containing information about the script context that sent a message or
 
 ### OnInstalledReason
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The reason that this event is being dispatched.
 
@@ -319,7 +319,7 @@ Specifies the event reason as an update to a shared module.
 
 ### OnLoadedReason
 
-Pending
+Chrome 157+
 
 The reason that this event is being dispatched.
 
@@ -342,7 +342,7 @@ The extension was reloaded (e.g. via chrome.runtime.reload() or the user manuall
 
 ### OnRestartRequiredReason
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The reason that the event is being dispatched. 'app_update' is used when the restart is needed because the application is updated to a newer version. 'os_update' is used when the restart is needed because the browser/OS is updated to a newer version. 'periodic' is used when the system runs for more than the permitted uptime set in the enterprise policy.
 
@@ -359,7 +359,7 @@ Specifies the event reason as a periodic restart of the app.
 
 ### PlatformArch
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The machine's processor architecture.
 
@@ -405,7 +405,7 @@ An object containing information about the current platform.
 
 ### PlatformNaclArch
 
-Chrome 44+ Deprecated since Chrome 149
+Chrome 44+ browser.\* since Chrome 148 Deprecated since Chrome 149
 
 This enum is deprecated following complete removal of Native Client.
 
@@ -430,7 +430,7 @@ Specifies the native client architecture as mips64.
 
 ### PlatformOs
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The operating system Chrome is running on.
 
@@ -541,13 +541,13 @@ An object which allows two way communication with other pages. See [Long-lived c
   <br />
 
   - message any
-    Chrome 52+
+    Chrome 52+ browser.\* since Chrome 148
 
     The message to send. This object should be JSON-ifiable.
 
 ### RequestUpdateCheckStatus
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 Result of the update check.
 
@@ -591,7 +591,7 @@ object
 ### connect()
 
 ```typescript
-chrome.runtime.connect(
+browser.runtime.connect(
   extensionId?: string,
   connectInfo?: object,
 ): Port
@@ -621,7 +621,7 @@ Attempts to connect listeners within an extension (such as the background page),
 ### connectNative()
 
 ```typescript
-chrome.runtime.connectNative(
+browser.runtime.connectNative(
   application: string,
 ): Port
 ```
@@ -645,7 +645,7 @@ Connects to a native application in the host machine. This method requires the `
 Foreground only Deprecated since Chrome 133
 
 ```typescript
-chrome.runtime.getBackgroundPage(): Promise<Window | undefined>
+browser.runtime.getBackgroundPage(): Promise<Window | undefined>
 ```
 
 Background pages do not exist in MV3 extensions.
@@ -657,14 +657,14 @@ Retrieves the JavaScript 'window' object for the background page running inside 
 #### Returns
 
 - Promise\<Window \| undefined\>
-  Chrome 99+
+  Chrome 99+ browser.\* since Chrome 148
 
 ### getContexts()
 
-Chrome 116+ MV3+
+Chrome 116+ browser.\* since Chrome 148 MV3+
 
 ```typescript
-chrome.runtime.getContexts(
+browser.runtime.getContexts(
   filter: ContextFilter,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/runtime#type-ExtensionContext[]>
 ```
@@ -686,7 +686,7 @@ Fetches information about active contexts associated with this extension
 ### getManifest()
 
 ```typescript
-chrome.runtime.getManifest(): object
+browser.runtime.getManifest(): object
 ```
 
 Returns details about the app or extension from the manifest. The object returned is a serialization of the full [manifest file](https://developer.chrome.com/docs/extensions/reference/manifest).
@@ -702,7 +702,7 @@ Returns details about the app or extension from the manifest. The object returne
 Foreground only
 
 ```typescript
-chrome.runtime.getPackageDirectoryEntry(): Promise<DirectoryEntry>
+browser.runtime.getPackageDirectoryEntry(): Promise<DirectoryEntry>
 ```
 
 Returns a DirectoryEntry for the package directory.
@@ -710,12 +710,12 @@ Returns a DirectoryEntry for the package directory.
 #### Returns
 
 - Promise\<DirectoryEntry\>
-  Chrome 122+
+  Chrome 122+ browser.\* since Chrome 148
 
 ### getPlatformInfo()
 
 ```typescript
-chrome.runtime.getPlatformInfo(): Promise<https://developer.chrome.com/docs/extensions/reference/api/runtime#type-PlatformInfo>
+browser.runtime.getPlatformInfo(): Promise<https://developer.chrome.com/docs/extensions/reference/api/runtime#type-PlatformInfo>
 ```
 
 Returns information about the current platform.
@@ -723,14 +723,14 @@ Returns information about the current platform.
 #### Returns
 
 - Promise\<[PlatformInfo](https://developer.chrome.com/docs/extensions/reference/api/runtime#type-PlatformInfo)\>
-  Chrome 99+
+  Chrome 99+ browser.\* since Chrome 148
 
   Promise that resolves with information about the current platform.
 
 ### getURL()
 
 ```typescript
-chrome.runtime.getURL(
+browser.runtime.getURL(
   path: string,
 ): string
 ```
@@ -751,10 +751,10 @@ Converts a relative path within an app/extension install directory to a fully-qu
 
 ### getVersion()
 
-Chrome 143+
+Chrome 143+ browser.\* since Chrome 148
 
 ```typescript
-chrome.runtime.getVersion(): string
+browser.runtime.getVersion(): string
 ```
 
 Returns the extension's version as declared in the manifest.
@@ -768,7 +768,7 @@ Returns the extension's version as declared in the manifest.
 ### openOptionsPage()
 
 ```typescript
-chrome.runtime.openOptionsPage(): Promise<void>
+browser.runtime.openOptionsPage(): Promise<void>
 ```
 
 Open your Extension's options page, if possible.
@@ -780,12 +780,12 @@ If your Extension does not declare an options page, or Chrome failed to create o
 #### Returns
 
 - Promise\<void\>
-  Chrome 99+
+  Chrome 99+ browser.\* since Chrome 148
 
 ### reload()
 
 ```typescript
-chrome.runtime.reload(): void
+browser.runtime.reload(): void
 ```
 
 Reloads the app or extension. This method is not supported in kiosk mode. For kiosk mode, use chrome.runtime.restart() method.
@@ -793,7 +793,7 @@ Reloads the app or extension. This method is not supported in kiosk mode. For ki
 ### requestUpdateCheck()
 
 ```typescript
-chrome.runtime.requestUpdateCheck(): Promise<object>
+browser.runtime.requestUpdateCheck(): Promise<object>
 ```
 
 Requests an immediate update check be done for this app/extension.
@@ -807,22 +807,22 @@ Note: When called with a callback, instead of returning an object this function 
 #### Returns
 
 - Promise\<object\>
-  Chrome 109+
+  Chrome 109+ browser.\* since Chrome 148
 
 ### restart()
 
 ```typescript
-chrome.runtime.restart(): void
+browser.runtime.restart(): void
 ```
 
 Restart the ChromeOS device when the app runs in kiosk mode. Otherwise, it's no-op.
 
 ### restartAfterDelay()
 
-Chrome 53+
+Chrome 53+ browser.\* since Chrome 148
 
 ```typescript
-chrome.runtime.restartAfterDelay(
+browser.runtime.restartAfterDelay(
   seconds: number,
 ): Promise<void>
 ```
@@ -838,14 +838,14 @@ Restart the ChromeOS device when the app runs in kiosk mode after the given seco
 #### Returns
 
 - Promise\<void\>
-  Chrome 99+
+  Chrome 99+ browser.\* since Chrome 148
 
   Promise that resolves when a restart request was successfully rescheduled.
 
 ### sendMessage()
 
 ```typescript
-chrome.runtime.sendMessage(
+browser.runtime.sendMessage(
   extensionId?: string,
   message: any,
   options?: object,
@@ -870,14 +870,14 @@ Sends a single message to event listeners within your extension or a different e
 #### Returns
 
 - Promise\<any\>
-  Chrome 99+
+  Chrome 99+ browser.\* since Chrome 148
 
   Promise support was added for extension contexts in Chrome 99. When communicating from a web page to an extension, promises are available from Chrome 118.
 
 ### sendNativeMessage()
 
 ```typescript
-chrome.runtime.sendNativeMessage(
+browser.runtime.sendNativeMessage(
   application: string,
   message: object,
 ): Promise<any>
@@ -897,12 +897,12 @@ Send a single message to a native application. This method requires the `"native
 #### Returns
 
 - Promise\<any\>
-  Chrome 99+
+  Chrome 99+ browser.\* since Chrome 148
 
 ### setUninstallURL()
 
 ```typescript
-chrome.runtime.setUninstallURL(
+browser.runtime.setUninstallURL(
   url: string,
 ): Promise<void>
 ```
@@ -918,7 +918,7 @@ Sets the URL to be visited upon uninstallation. This may be used to clean up ser
 #### Returns
 
 - Promise\<void\>
-  Chrome 99+
+  Chrome 99+ browser.\* since Chrome 148
 
   Promise that resolves when the uninstall URL is set. If the given URL is invalid, the promise will be rejected.
 
@@ -929,7 +929,7 @@ Sets the URL to be visited upon uninstallation. This may be used to clean up ser
 Deprecated
 
 ```typescript
-chrome.runtime.onBrowserUpdateAvailable.addListener(
+browser.runtime.onBrowserUpdateAvailable.addListener(
   callback: function,
 )
 ```
@@ -956,7 +956,7 @@ Fired when a Chrome update is available, but isn't installed immediately because
 ### onConnect
 
 ```typescript
-chrome.runtime.onConnect.addListener(
+browser.runtime.onConnect.addListener(
   callback: function,
 )
 ```
@@ -981,7 +981,7 @@ Fired when a connection is made from either an extension process or a content sc
 ### onConnectExternal
 
 ```typescript
-chrome.runtime.onConnectExternal.addListener(
+browser.runtime.onConnectExternal.addListener(
   callback: function,
 )
 ```
@@ -1005,10 +1005,10 @@ Fired when a connection is made from another extension (by [`runtime.connect`](h
 
 ### onConnectNative
 
-Chrome 76+
+Chrome 76+ browser.\* since Chrome 148
 
 ```typescript
-chrome.runtime.onConnectNative.addListener(
+browser.runtime.onConnectNative.addListener(
   callback: function,
 )
 ```
@@ -1035,7 +1035,7 @@ Fired when a connection is made from a native application. This event requires t
 Chrome 155+
 
 ```typescript
-chrome.runtime.onEnabled.addListener(
+browser.runtime.onEnabled.addListener(
   callback: function,
 )
 ```
@@ -1057,10 +1057,10 @@ Fired when an extension goes from being in a disabled state to an enabled state.
 
 ### onExtensionLoaded
 
-Pending
+Chrome 157+
 
 ```typescript
-chrome.runtime.onExtensionLoaded.addListener(
+browser.runtime.onExtensionLoaded.addListener(
   callback: function,
 )
 ```
@@ -1085,7 +1085,7 @@ Fired when the extension is added to the set of active extensions. This can occu
 ### onInstalled
 
 ```typescript
-chrome.runtime.onInstalled.addListener(
+browser.runtime.onInstalled.addListener(
   callback: function,
 )
 ```
@@ -1119,7 +1119,7 @@ Fired when the extension is first installed, when the extension is updated to a 
 ### onMessage
 
 ```typescript
-chrome.runtime.onMessage.addListener(
+browser.runtime.onMessage.addListener(
   callback: function,
 )
 ```
@@ -1160,7 +1160,7 @@ Fired when a message is sent from either [`runtime.sendMessage`](https://develop
 ### onMessageExternal
 
 ```typescript
-chrome.runtime.onMessageExternal.addListener(
+browser.runtime.onMessageExternal.addListener(
   callback: function,
 )
 ```
@@ -1201,7 +1201,7 @@ Fired when a message is sent from another extension (by [`runtime.sendMessage`](
 ### onRestartRequired
 
 ```typescript
-chrome.runtime.onRestartRequired.addListener(
+browser.runtime.onRestartRequired.addListener(
   callback: function,
 )
 ```
@@ -1226,7 +1226,7 @@ Fired when an app or the device that it runs on needs to be restarted. The app s
 ### onStartup
 
 ```typescript
-chrome.runtime.onStartup.addListener(
+browser.runtime.onStartup.addListener(
   callback: function,
 )
 ```
@@ -1249,7 +1249,7 @@ Fired when a profile that has this extension installed first starts up. This eve
 ### onSuspend
 
 ```typescript
-chrome.runtime.onSuspend.addListener(
+browser.runtime.onSuspend.addListener(
   callback: function,
 )
 ```
@@ -1272,7 +1272,7 @@ Sent to the event page just before it is unloaded. This gives the extension oppo
 ### onSuspendCanceled
 
 ```typescript
-chrome.runtime.onSuspendCanceled.addListener(
+browser.runtime.onSuspendCanceled.addListener(
   callback: function,
 )
 ```
@@ -1295,7 +1295,7 @@ Sent after onSuspend to indicate that the app won't be unloaded after all.
 ### onUpdateAvailable
 
 ```typescript
-chrome.runtime.onUpdateAvailable.addListener(
+browser.runtime.onUpdateAvailable.addListener(
   callback: function,
 )
 ```
@@ -1322,10 +1322,10 @@ Fired when an update is available, but isn't installed immediately because the a
 
 ### onUserScriptConnect
 
-Chrome 115+ MV3+
+Chrome 115+ browser.\* since Chrome 148 MV3+
 
 ```typescript
-chrome.runtime.onUserScriptConnect.addListener(
+browser.runtime.onUserScriptConnect.addListener(
   callback: function,
 )
 ```
@@ -1349,10 +1349,10 @@ Fired when a connection is made from a user script from this extension.
 
 ### onUserScriptMessage
 
-Chrome 115+ MV3+
+Chrome 115+ browser.\* since Chrome 148 MV3+
 
 ```typescript
-chrome.runtime.onUserScriptMessage.addListener(
+browser.runtime.onUserScriptMessage.addListener(
   callback: function,
 )
 ```

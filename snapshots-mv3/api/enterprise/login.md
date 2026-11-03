@@ -27,7 +27,7 @@ Use the `chrome.enterprise.login` API to exit Managed Guest sessions. Note: This
 
 ## Availability
 
-Chrome 139+ ChromeOS only [Requires policy](https://support.google.com/chrome/a/answer/9296680)
+Chrome 139+ browser.\* since Chrome 148 ChromeOS only [Requires policy](https://support.google.com/chrome/a/answer/9296680)
 
 <br />
 
@@ -40,7 +40,7 @@ Chrome 139+ ChromeOS only [Requires policy](https://support.google.com/chrome/a/
 ### exitCurrentManagedGuestSession()
 
 ```typescript
-chrome.enterprise.login.exitCurrentManagedGuestSession(): Promise<void>
+browser.enterprise.login.exitCurrentManagedGuestSession(): Promise<void>
 ```
 
 Exits the current managed guest session.

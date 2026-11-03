@@ -411,7 +411,7 @@ Filters URLs for various criteria. See [event filtering](https://developer.chrom
 #### Properties
 
 - cidrBlocks string\[\] optional
-  Chrome 123+
+  Chrome 123+ browser.\* since Chrome 148
 
   Matches if the host part of the URL is an IP address and is contained in any of the CIDR blocks specified in the array.
 - hostContains string optional

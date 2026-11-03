@@ -25,7 +25,7 @@ The `chrome.audio` API is provided to allow users to get information about and c
 
 ## Availability
 
-Chrome 59+ ChromeOS only
+Chrome 59+ browser.\* since Chrome 148 ChromeOS only
 
 <br />
 
@@ -163,7 +163,7 @@ Type of stream an audio device provides.
 ### getDevices()
 
 ```typescript
-chrome.audio.getDevices(
+browser.audio.getDevices(
   filter?: DeviceFilter,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/audio#type-AudioDeviceInfo[]>
 ```
@@ -179,14 +179,14 @@ Gets a list of audio devices filtered based on `filter`.
 #### Returns
 
 - Promise\<[AudioDeviceInfo](https://developer.chrome.com/docs/extensions/reference/api/audio#type-AudioDeviceInfo)\[\]\>
-  Chrome 116+
+  Chrome 116+ browser.\* since Chrome 148
 
   Reports the requested list of audio devices.
 
 ### getMute()
 
 ```typescript
-chrome.audio.getMute(
+browser.audio.getMute(
   streamType: StreamType,
 ): Promise<boolean>
 ```
@@ -202,14 +202,14 @@ Gets the system-wide mute state for the specified stream type.
 #### Returns
 
 - Promise\<boolean\>
-  Chrome 116+
+  Chrome 116+ browser.\* since Chrome 148
 
   Promise that resolves with a boolean indicating whether mute is set or not for specified stream type.
 
 ### setActiveDevices()
 
 ```typescript
-chrome.audio.setActiveDevices(
+browser.audio.setActiveDevices(
   ids: DeviceIdLists,
 ): Promise<void>
 ```
@@ -227,12 +227,12 @@ Sets lists of active input and/or output devices.
 #### Returns
 
 - Promise\<void\>
-  Chrome 116+
+  Chrome 116+ browser.\* since Chrome 148
 
 ### setMute()
 
 ```typescript
-chrome.audio.setMute(
+browser.audio.setMute(
   streamType: StreamType,
   isMuted: boolean,
 ): Promise<void>
@@ -252,12 +252,12 @@ Sets mute state for a stream type. The mute state will apply to all audio device
 #### Returns
 
 - Promise\<void\>
-  Chrome 116+
+  Chrome 116+ browser.\* since Chrome 148
 
 ### setProperties()
 
 ```typescript
-chrome.audio.setProperties(
+browser.audio.setProperties(
   id: string,
   properties: DeviceProperties,
 ): Promise<void>
@@ -273,14 +273,14 @@ Sets the properties for the input or output device.
 #### Returns
 
 - Promise\<void\>
-  Chrome 116+
+  Chrome 116+ browser.\* since Chrome 148
 
 ## Events
 
 ### onDeviceListChanged
 
 ```typescript
-chrome.audio.onDeviceListChanged.addListener(
+browser.audio.onDeviceListChanged.addListener(
   callback: function,
 )
 ```
@@ -305,7 +305,7 @@ Fired when audio devices change, either new devices being added, or existing dev
 ### onLevelChanged
 
 ```typescript
-chrome.audio.onLevelChanged.addListener(
+browser.audio.onLevelChanged.addListener(
   callback: function,
 )
 ```
@@ -330,7 +330,7 @@ Fired when sound level changes for an active audio device.
 ### onMuteChanged
 
 ```typescript
-chrome.audio.onMuteChanged.addListener(
+browser.audio.onMuteChanged.addListener(
   callback: function,
 )
 ```

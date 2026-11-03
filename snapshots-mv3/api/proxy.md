@@ -198,7 +198,7 @@ callback function of `get()`. The latter will contain a `rules.proxyForHttp.port
 
 ### Mode
 
-Chrome 54+
+Chrome 54+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -289,7 +289,7 @@ An object encapsulating a single proxy server's specification.
 
 ### Scheme
 
-Chrome 54+
+Chrome 54+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -316,7 +316,7 @@ Proxy settings to be used. The value of this setting is a ProxyConfig object.
 ### onProxyError
 
 ```typescript
-chrome.proxy.onProxyError.addListener(
+browser.proxy.onProxyError.addListener(
   callback: function,
 )
 ```

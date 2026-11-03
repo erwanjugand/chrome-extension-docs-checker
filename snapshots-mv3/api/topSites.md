@@ -58,7 +58,7 @@ An object encapsulating a most visited URL, such as the default shortcuts on the
 ### get()
 
 ```typescript
-chrome.topSites.get(): Promise<https://developer.chrome.com/docs/extensions/reference/api/topSites#type-MostVisitedURL[]>
+browser.topSites.get(): Promise<https://developer.chrome.com/docs/extensions/reference/api/topSites#type-MostVisitedURL[]>
 ```
 
 Gets a list of top sites.
@@ -66,6 +66,6 @@ Gets a list of top sites.
 #### Returns
 
 - Promise\<[MostVisitedURL](https://developer.chrome.com/docs/extensions/reference/api/topSites#type-MostVisitedURL)\[\]\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 <br />

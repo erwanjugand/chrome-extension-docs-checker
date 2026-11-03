@@ -428,7 +428,7 @@ Returns value for event handlers that have the 'blocking' extraInfoSpec applied.
 
 ### FormDataItem
 
-Chrome 66+
+Chrome 66+ browser.\* since Chrome 148
 
 Contains data passed within form data. For urlencoded form it is stored as string if data is utf-8 string and as ArrayBuffer otherwise. For form-data it is ArrayBuffer. If form-data represents uploading file, it is string with filename, if the filename is provided.
 
@@ -461,7 +461,7 @@ object\[\]
 
 ### IgnoredActionType
 
-Chrome 70+
+Chrome 70+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -474,7 +474,7 @@ Chrome 70+
 
 ### OnAuthRequiredOptions
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -491,7 +491,7 @@ Specifies that headers can violate Cross-Origin Resource Sharing (CORS).
 
 ### OnBeforeRedirectOptions
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -504,7 +504,7 @@ Specifies that headers can violate Cross-Origin Resource Sharing (CORS).
 
 ### OnBeforeRequestOptions
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -519,7 +519,7 @@ Specifies that headers can violate Cross-Origin Resource Sharing (CORS).
 
 ### OnBeforeSendHeadersOptions
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -534,7 +534,7 @@ Specifies that headers can violate Cross-Origin Resource Sharing (CORS).
 
 ### OnCompletedOptions
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -547,7 +547,7 @@ Specifies that headers can violate Cross-Origin Resource Sharing (CORS).
 
 ### OnErrorOccurredOptions
 
-Chrome 79+
+Chrome 79+ browser.\* since Chrome 148
 
 #### Value
 
@@ -555,7 +555,7 @@ Chrome 79+
 
 ### OnHeadersReceivedOptions
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -574,7 +574,7 @@ Specifies that the SecurityInfo with raw bytes of certificates should be include
 
 ### OnResponseStartedOptions
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -587,7 +587,7 @@ Specifies that headers can violate Cross-Origin Resource Sharing (CORS).
 
 ### OnSendHeadersOptions
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -615,7 +615,7 @@ An object describing filters to apply to webRequest events.
 
 ### ResourceType
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -652,7 +652,7 @@ Specifies the resource as a type not included in the listed types.
 
 ### SecurityInfo
 
-Chrome 144+
+Chrome 144+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -700,7 +700,7 @@ The maximum number of times that `handlerBehaviorChanged` can be called per 10 m
 ### handlerBehaviorChanged()
 
 ```typescript
-chrome.webRequest.handlerBehaviorChanged(): Promise<void>
+browser.webRequest.handlerBehaviorChanged(): Promise<void>
 ```
 
 Needs to be called when the behavior of the webRequest handlers has changed to prevent incorrect handling due to caching. This function call is expensive. Don't call it often.
@@ -708,16 +708,16 @@ Needs to be called when the behavior of the webRequest handlers has changed to p
 #### Returns
 
 - Promise\<void\>
-  Chrome 116+
+  Chrome 116+ browser.\* since Chrome 148
 
 ## Events
 
 ### onActionIgnored
 
-Chrome 70+
+Chrome 70+ browser.\* since Chrome 148
 
 ```typescript
-chrome.webRequest.onActionIgnored.addListener(
+browser.webRequest.onActionIgnored.addListener(
   callback: function,
 )
 ```
@@ -748,7 +748,7 @@ Fired when an extension's proposed modification to a network request is ignored.
 ### onAuthRequired
 
 ```typescript
-chrome.webRequest.onAuthRequired.addListener(
+browser.webRequest.onAuthRequired.addListener(
   callback: function,
   filter: RequestFilter,
   extraInfoSpec?: OnAuthRequiredOptions[],
@@ -777,22 +777,22 @@ Fired when an authentication failure is received. The listener has three options
       - host string
       - port number
     - documentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The UUID of the document making the request.
     - documentLifecycle [extensionTypes.DocumentLifecycle](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The lifecycle the document is in.
     - frameId number
 
       The value 0 indicates that the request happens in the main frame; a positive value indicates the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (`type` is `main_frame` or `sub_frame`), `frameId` indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
     - frameType [extensionTypes.FrameType](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The type of frame the request occurred in.
     - initiator string optional
-      Chrome 63+
+      Chrome 63+ browser.\* since Chrome 148
 
       The origin where the request was initiated. This does not change through redirects. If this is an opaque origin, the string 'null' will be used.
     - isProxy boolean
@@ -802,7 +802,7 @@ Fired when an authentication failure is received. The listener has three options
 
       Standard HTTP method.
     - parentDocumentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The UUID of the parent document owning this frame. This is not set if there is no parent.
     - parentFrameId number
@@ -821,7 +821,7 @@ Fired when an authentication failure is received. The listener has three options
 
       The authentication scheme, e.g. Basic or Digest.
     - statusCode number
-      Chrome 43+
+      Chrome 43+ browser.\* since Chrome 148
 
       Standard HTTP status code returned by the server.
     - statusLine string
@@ -838,7 +838,7 @@ Fired when an authentication failure is received. The listener has three options
       How the requested resource will be used.
     - url string
   - asyncCallback function optional
-    Chrome 58+
+    Chrome 58+ browser.\* since Chrome 148
 
 
     The `asyncCallback` parameter looks like:
@@ -859,7 +859,7 @@ Fired when an authentication failure is received. The listener has three options
 ### onBeforeRedirect
 
 ```typescript
-chrome.webRequest.onBeforeRedirect.addListener(
+browser.webRequest.onBeforeRedirect.addListener(
   callback: function,
   filter: RequestFilter,
   extraInfoSpec?: OnBeforeRedirectOptions[],
@@ -883,25 +883,25 @@ Fired when a server-initiated redirect is about to occur.
 
   - details object
     - documentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The UUID of the document making the request.
     - documentLifecycle [extensionTypes.DocumentLifecycle](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The lifecycle the document is in.
     - frameId number
 
       The value 0 indicates that the request happens in the main frame; a positive value indicates the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (`type` is `main_frame` or `sub_frame`), `frameId` indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
     - frameType [extensionTypes.FrameType](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The type of frame the request occurred in.
     - fromCache boolean
 
       Indicates if this response was fetched from disk cache.
     - initiator string optional
-      Chrome 63+
+      Chrome 63+ browser.\* since Chrome 148
 
       The origin where the request was initiated. This does not change through redirects. If this is an opaque origin, the string 'null' will be used.
     - ip string optional
@@ -911,7 +911,7 @@ Fired when a server-initiated redirect is about to occur.
 
       Standard HTTP method.
     - parentDocumentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The UUID of the parent document owning this frame. This is not set if there is no parent.
     - parentFrameId number
@@ -948,7 +948,7 @@ Fired when a server-initiated redirect is about to occur.
 ### onBeforeRequest
 
 ```typescript
-chrome.webRequest.onBeforeRequest.addListener(
+browser.webRequest.onBeforeRequest.addListener(
   callback: function,
   filter: RequestFilter,
   extraInfoSpec?: OnBeforeRequestOptions[],
@@ -972,29 +972,29 @@ Fired when a request is about to occur.
 
   - details object
     - documentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The UUID of the document making the request.
     - documentLifecycle [extensionTypes.DocumentLifecycle](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle) optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The lifecycle the document is in.
     - frameId number
 
       The value 0 indicates that the request happens in the main frame; a positive value indicates the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (`type` is `main_frame` or `sub_frame`), `frameId` indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
     - frameType [extensionTypes.FrameType](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType) optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The type of frame the request occurred in.
     - initiator string optional
-      Chrome 63+
+      Chrome 63+ browser.\* since Chrome 148
 
       The origin where the request was initiated. This does not change through redirects. If this is an opaque origin, the string 'null' will be used.
     - method string
 
       Standard HTTP method.
     - parentDocumentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The UUID of the parent document owning this frame. This is not set if there is no parent.
     - parentFrameId number
@@ -1034,7 +1034,7 @@ Fired when a request is about to occur.
 ### onBeforeSendHeaders
 
 ```typescript
-chrome.webRequest.onBeforeSendHeaders.addListener(
+browser.webRequest.onBeforeSendHeaders.addListener(
   callback: function,
   filter: RequestFilter,
   extraInfoSpec?: OnBeforeSendHeadersOptions[],
@@ -1058,29 +1058,29 @@ Fired before sending an HTTP request, once the request headers are available. Th
 
   - details object
     - documentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The UUID of the document making the request.
     - documentLifecycle [extensionTypes.DocumentLifecycle](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The lifecycle the document is in.
     - frameId number
 
       The value 0 indicates that the request happens in the main frame; a positive value indicates the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (`type` is `main_frame` or `sub_frame`), `frameId` indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
     - frameType [extensionTypes.FrameType](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The type of frame the request occurred in.
     - initiator string optional
-      Chrome 63+
+      Chrome 63+ browser.\* since Chrome 148
 
       The origin where the request was initiated. This does not change through redirects. If this is an opaque origin, the string 'null' will be used.
     - method string
 
       Standard HTTP method.
     - parentDocumentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The UUID of the parent document owning this frame. This is not set if there is no parent.
     - parentFrameId number
@@ -1111,7 +1111,7 @@ Fired before sending an HTTP request, once the request headers are available. Th
 ### onCompleted
 
 ```typescript
-chrome.webRequest.onCompleted.addListener(
+browser.webRequest.onCompleted.addListener(
   callback: function,
   filter: RequestFilter,
   extraInfoSpec?: OnCompletedOptions[],
@@ -1135,25 +1135,25 @@ Fired when a request is completed.
 
   - details object
     - documentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The UUID of the document making the request.
     - documentLifecycle [extensionTypes.DocumentLifecycle](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The lifecycle the document is in.
     - frameId number
 
       The value 0 indicates that the request happens in the main frame; a positive value indicates the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (`type` is `main_frame` or `sub_frame`), `frameId` indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
     - frameType [extensionTypes.FrameType](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The type of frame the request occurred in.
     - fromCache boolean
 
       Indicates if this response was fetched from disk cache.
     - initiator string optional
-      Chrome 63+
+      Chrome 63+ browser.\* since Chrome 148
 
       The origin where the request was initiated. This does not change through redirects. If this is an opaque origin, the string 'null' will be used.
     - ip string optional
@@ -1163,7 +1163,7 @@ Fired when a request is completed.
 
       Standard HTTP method.
     - parentDocumentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The UUID of the parent document owning this frame. This is not set if there is no parent.
     - parentFrameId number
@@ -1197,7 +1197,7 @@ Fired when a request is completed.
 ### onErrorOccurred
 
 ```typescript
-chrome.webRequest.onErrorOccurred.addListener(
+browser.webRequest.onErrorOccurred.addListener(
   callback: function,
   filter: RequestFilter,
   extraInfoSpec?: OnErrorOccurredOptions[],
@@ -1221,11 +1221,11 @@ Fired when an error occurs.
 
   - details object
     - documentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The UUID of the document making the request. This value is not present if the request is a navigation of a frame.
     - documentLifecycle [extensionTypes.DocumentLifecycle](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The lifecycle the document is in.
     - error string
@@ -1235,14 +1235,14 @@ Fired when an error occurs.
 
       The value 0 indicates that the request happens in the main frame; a positive value indicates the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (`type` is `main_frame` or `sub_frame`), `frameId` indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
     - frameType [extensionTypes.FrameType](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The type of frame the request occurred in.
     - fromCache boolean
 
       Indicates if this response was fetched from disk cache.
     - initiator string optional
-      Chrome 63+
+      Chrome 63+ browser.\* since Chrome 148
 
       The origin where the request was initiated. This does not change through redirects. If this is an opaque origin, the string 'null' will be used.
     - ip string optional
@@ -1252,7 +1252,7 @@ Fired when an error occurs.
 
       Standard HTTP method.
     - parentDocumentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The UUID of the parent document owning this frame. This is not set if there is no parent.
     - parentFrameId number
@@ -1277,7 +1277,7 @@ Fired when an error occurs.
 ### onHeadersReceived
 
 ```typescript
-chrome.webRequest.onHeadersReceived.addListener(
+browser.webRequest.onHeadersReceived.addListener(
   callback: function,
   filter: RequestFilter,
   extraInfoSpec?: OnHeadersReceivedOptions[],
@@ -1301,29 +1301,29 @@ Fired when HTTP response headers of a request have been received.
 
   - details object
     - documentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The UUID of the document making the request.
     - documentLifecycle [extensionTypes.DocumentLifecycle](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The lifecycle the document is in.
     - frameId number
 
       The value 0 indicates that the request happens in the main frame; a positive value indicates the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (`type` is `main_frame` or `sub_frame`), `frameId` indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
     - frameType [extensionTypes.FrameType](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The type of frame the request occurred in.
     - initiator string optional
-      Chrome 63+
+      Chrome 63+ browser.\* since Chrome 148
 
       The origin where the request was initiated. This does not change through redirects. If this is an opaque origin, the string 'null' will be used.
     - method string
 
       Standard HTTP method.
     - parentDocumentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The UUID of the parent document owning this frame. This is not set if there is no parent.
     - parentFrameId number
@@ -1336,11 +1336,11 @@ Fired when HTTP response headers of a request have been received.
 
       The HTTP response headers that have been received with this response.
     - securityInfo [SecurityInfo](https://developer.chrome.com/docs/extensions/reference/api/webRequest#type-SecurityInfo) optional
-      Chrome 144+
+      Chrome 144+ browser.\* since Chrome 148
 
       Information about the TLS/QUIC connection used for the underlying connection. Only provided if `securityInfo` is specified in the `extraInfoSpec` parameter.
     - statusCode number
-      Chrome 43+
+      Chrome 43+ browser.\* since Chrome 148
 
       Standard HTTP status code returned by the server.
     - statusLine string
@@ -1365,7 +1365,7 @@ Fired when HTTP response headers of a request have been received.
 ### onResponseStarted
 
 ```typescript
-chrome.webRequest.onResponseStarted.addListener(
+browser.webRequest.onResponseStarted.addListener(
   callback: function,
   filter: RequestFilter,
   extraInfoSpec?: OnResponseStartedOptions[],
@@ -1389,25 +1389,25 @@ Fired when the first byte of the response body is received. For HTTP requests, t
 
   - details object
     - documentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The UUID of the document making the request.
     - documentLifecycle [extensionTypes.DocumentLifecycle](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The lifecycle the document is in.
     - frameId number
 
       The value 0 indicates that the request happens in the main frame; a positive value indicates the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (`type` is `main_frame` or `sub_frame`), `frameId` indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
     - frameType [extensionTypes.FrameType](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The type of frame the request occurred in.
     - fromCache boolean
 
       Indicates if this response was fetched from disk cache.
     - initiator string optional
-      Chrome 63+
+      Chrome 63+ browser.\* since Chrome 148
 
       The origin where the request was initiated. This does not change through redirects. If this is an opaque origin, the string 'null' will be used.
     - ip string optional
@@ -1417,7 +1417,7 @@ Fired when the first byte of the response body is received. For HTTP requests, t
 
       Standard HTTP method.
     - parentDocumentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The UUID of the parent document owning this frame. This is not set if there is no parent.
     - parentFrameId number
@@ -1451,7 +1451,7 @@ Fired when the first byte of the response body is received. For HTTP requests, t
 ### onSendHeaders
 
 ```typescript
-chrome.webRequest.onSendHeaders.addListener(
+browser.webRequest.onSendHeaders.addListener(
   callback: function,
   filter: RequestFilter,
   extraInfoSpec?: OnSendHeadersOptions[],
@@ -1475,29 +1475,29 @@ Fired just before a request is going to be sent to the server (modifications of 
 
   - details object
     - documentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The UUID of the document making the request.
     - documentLifecycle [extensionTypes.DocumentLifecycle](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The lifecycle the document is in.
     - frameId number
 
       The value 0 indicates that the request happens in the main frame; a positive value indicates the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (`type` is `main_frame` or `sub_frame`), `frameId` indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
     - frameType [extensionTypes.FrameType](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The type of frame the request occurred in.
     - initiator string optional
-      Chrome 63+
+      Chrome 63+ browser.\* since Chrome 148
 
       The origin where the request was initiated. This does not change through redirects. If this is an opaque origin, the string 'null' will be used.
     - method string
 
       Standard HTTP method.
     - parentDocumentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The UUID of the parent document owning this frame. This is not set if there is no parent.
     - parentFrameId number

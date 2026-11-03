@@ -15,7 +15,7 @@ The action icons are displayed in the browser toolbar next to the [omnibox](http
 
 ## Availability
 
-Chrome 88+ MV3+
+Chrome 88+ browser.\* since Chrome 148 MV3+
 
 <br />
 
@@ -81,7 +81,7 @@ canvas](https://developer.mozilla.org/docs/Web/API/OffscreenCanvas) API.
     context.fillStyle = '#00FF00';  // Green
     context.fillRect(0, 0, 16, 16);
     const imageData = context.getImageData(0, 0, 16, 16);
-    browser.action.setIcon({imageData: imageData}, () => { /* ... */ });
+    browser.action.setIcon({imageData: >imageData}, () = { /* ... */ });
 
 > [!NOTE]
 > **Note:** The `action.setIcon()` API is intended to set a static image. Don't use animated images for your icons.
@@ -117,13 +117,13 @@ badge or a string with a [CSS color](https://developer.mozilla.org/docs/Web/CSS/
     );
 
     browser.action.setBadgeBackgroundColor(
-      {color: '#00FF00'},  // Also green
-      () => { /* ... */ },
+      {color: '#00FF00'},  // Also gree>n
+      () = { /* ... */ },
     );
 
     browser.action.setBadgeBackgroundColor(
-      {color: 'green'},  // Also, also green
-      () => { /* ... */ },
+      {color: 'green'},  // Also, a>lso green
+      () = { /* ... */ },
     );
 
 #### Popup
@@ -283,7 +283,7 @@ use [declarativeContent](https://developer.chrome.com/docs/extensions/reference/
 
 ### OpenPopupOptions
 
-Chrome 99+
+Chrome 99+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -301,7 +301,7 @@ Chrome 99+
 
 ### UserSettings
 
-Chrome 91+
+Chrome 91+ browser.\* since Chrome 148
 
 The collection of user-specified settings relating to an extension's action.
 
@@ -313,7 +313,7 @@ The collection of user-specified settings relating to an extension's action.
 
 ### UserSettingsChange
 
-Chrome 130+
+Chrome 130+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -326,7 +326,7 @@ Chrome 130+
 ### disable()
 
 ```typescript
-chrome.action.disable(
+browser.action.disable(
   tabId?: number,
 ): Promise<void>
 ```
@@ -346,7 +346,7 @@ Disables the action for a tab.
 ### enable()
 
 ```typescript
-chrome.action.enable(
+browser.action.enable(
   tabId?: number,
 ): Promise<void>
 ```
@@ -366,7 +366,7 @@ Enables the action for a tab. By default, actions are enabled.
 ### getBadgeBackgroundColor()
 
 ```typescript
-chrome.action.getBadgeBackgroundColor(
+browser.action.getBadgeBackgroundColor(
   details: TabDetails,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/extensionTypes#type-ColorArray.ColorArray>
 ```
@@ -384,7 +384,7 @@ Gets the background color of the action.
 ### getBadgeText()
 
 ```typescript
-chrome.action.getBadgeText(
+browser.action.getBadgeText(
   details: TabDetails,
 ): Promise<string>
 ```
@@ -401,10 +401,10 @@ Gets the badge text of the action. If no tab is specified, the non-tab-specific 
 
 ### getBadgeTextColor()
 
-Chrome 110+
+Chrome 110+ browser.\* since Chrome 148
 
 ```typescript
-chrome.action.getBadgeTextColor(
+browser.action.getBadgeTextColor(
   details: TabDetails,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/extensionTypes#type-ColorArray.ColorArray>
 ```
@@ -422,7 +422,7 @@ Gets the text color of the action.
 ### getPopup()
 
 ```typescript
-chrome.action.getPopup(
+browser.action.getPopup(
   details: TabDetails,
 ): Promise<string>
 ```
@@ -440,7 +440,7 @@ Gets the html document set as the popup for this action.
 ### getTitle()
 
 ```typescript
-chrome.action.getTitle(
+browser.action.getTitle(
   details: TabDetails,
 ): Promise<string>
 ```
@@ -457,10 +457,10 @@ Gets the title of the action.
 
 ### getUserSettings()
 
-Chrome 91+
+Chrome 91+ browser.\* since Chrome 148
 
 ```typescript
-chrome.action.getUserSettings(): Promise<https://developer.chrome.com/docs/extensions/reference/api/action#type-UserSettings>
+browser.action.getUserSettings(): Promise<https://developer.chrome.com/docs/extensions/reference/api/action#type-UserSettings>
 ```
 
 Returns the user-specified settings relating to an extension's action.
@@ -471,10 +471,10 @@ Returns the user-specified settings relating to an extension's action.
 
 ### isEnabled()
 
-Chrome 110+
+Chrome 110+ browser.\* since Chrome 148
 
 ```typescript
-chrome.action.isEnabled(
+browser.action.isEnabled(
   tabId?: number,
 ): Promise<boolean>
 ```
@@ -493,10 +493,10 @@ Indicates whether the extension action is enabled for a tab (or globally if no `
 
 ### openPopup()
 
-Chrome 127+
+Chrome 127+ browser.\* since Chrome 148
 
 ```typescript
-chrome.action.openPopup(
+browser.action.openPopup(
   options?: OpenPopupOptions,
 ): Promise<void>
 ```
@@ -516,7 +516,7 @@ Opens the extension's popup. Between Chrome 118 and Chrome 126, this is only ava
 ### setBadgeBackgroundColor()
 
 ```typescript
-chrome.action.setBadgeBackgroundColor(
+browser.action.setBadgeBackgroundColor(
   details: object,
 ): Promise<void>
 ```
@@ -540,7 +540,7 @@ Sets the background color for the badge.
 ### setBadgeText()
 
 ```typescript
-chrome.action.setBadgeText(
+browser.action.setBadgeText(
   details: object,
 ): Promise<void>
 ```
@@ -563,10 +563,10 @@ Sets the badge text for the action. The badge is displayed on top of the icon.
 
 ### setBadgeTextColor()
 
-Chrome 110+
+Chrome 110+ browser.\* since Chrome 148
 
 ```typescript
-chrome.action.setBadgeTextColor(
+browser.action.setBadgeTextColor(
   details: object,
 ): Promise<void>
 ```
@@ -590,7 +590,7 @@ Sets the text color for the badge.
 ### setIcon()
 
 ```typescript
-chrome.action.setIcon(
+browser.action.setIcon(
   details: object,
 ): Promise<void>
 ```
@@ -613,12 +613,12 @@ Sets the icon for the action. The icon can be specified either as the path to an
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### setPopup()
 
 ```typescript
-chrome.action.setPopup(
+browser.action.setPopup(
   details: object,
 ): Promise<void>
 ```
@@ -642,7 +642,7 @@ Sets the HTML document to be opened as a popup when the user clicks on the actio
 ### setTitle()
 
 ```typescript
-chrome.action.setTitle(
+browser.action.setTitle(
   details: object,
 ): Promise<void>
 ```
@@ -668,7 +668,7 @@ Sets the title of the action. This shows up in the tooltip.
 ### onClicked
 
 ```typescript
-chrome.action.onClicked.addListener(
+browser.action.onClicked.addListener(
   callback: function,
 )
 ```
@@ -692,10 +692,10 @@ Fired when an action icon is clicked. This event will not fire if the action has
 
 ### onUserSettingsChanged
 
-Chrome 130+
+Chrome 130+ browser.\* since Chrome 148
 
 ```typescript
-chrome.action.onUserSettingsChanged.addListener(
+browser.action.onUserSettingsChanged.addListener(
   callback: function,
 )
 ```

@@ -153,7 +153,7 @@ Debuggee identifier. Either tabId, extensionId or targetId must be specified
 
 ### DebuggerSession
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 Debugger session identifier. One of tabId, extensionId or targetId must be specified. Additionally, an optional sessionId can be provided. If sessionId is specified for arguments sent from [`onEvent`](https://developer.chrome.com/docs/extensions/reference/api/debugger#event-onEvent), it means the event is coming from a child protocol session within the root debuggee session. If sessionId is specified when passed to [`sendCommand`](https://developer.chrome.com/docs/extensions/reference/api/debugger#method-sendCommand), it targets a child protocol session within the root debuggee session.
 
@@ -174,7 +174,7 @@ Debugger session identifier. One of tabId, extensionId or targetId must be speci
 
 ### DetachReason
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 Connection termination reason.
 
@@ -218,7 +218,7 @@ Debug target information
 
 ### TargetInfoType
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 Target type.
 
@@ -236,7 +236,7 @@ Target type.
 ### attach()
 
 ```typescript
-chrome.debugger.attach(
+browser.debugger.attach(
   target: Debuggee,
   requiredVersion: string,
 ): Promise<void>
@@ -256,14 +256,14 @@ Attaches debugger to the given target.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Resolves once the attach operation succeeds or fails. The promise resolves with no value. If the attach fails, the promise will be rejected.
 
 ### detach()
 
 ```typescript
-chrome.debugger.detach(
+browser.debugger.detach(
   target: Debuggee,
 ): Promise<void>
 ```
@@ -279,14 +279,14 @@ Detaches debugger from the given target.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Resolves once the detach operation succeeds or fails. The promise resolves with no value. If the detach fails, the promise will be rejected.
 
 ### getTargets()
 
 ```typescript
-chrome.debugger.getTargets(): Promise<https://developer.chrome.com/docs/extensions/reference/api/debugger#type-TargetInfo[]>
+browser.debugger.getTargets(): Promise<https://developer.chrome.com/docs/extensions/reference/api/debugger#type-TargetInfo[]>
 ```
 
 Returns the list of available debug targets.
@@ -294,12 +294,12 @@ Returns the list of available debug targets.
 #### Returns
 
 - Promise\<[TargetInfo](https://developer.chrome.com/docs/extensions/reference/api/debugger#type-TargetInfo)\[\]\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### sendCommand()
 
 ```typescript
-chrome.debugger.sendCommand(
+browser.debugger.sendCommand(
   target: DebuggerSession,
   method: string,
   commandParams?: object,
@@ -323,7 +323,7 @@ Sends given command to the debugging target.
 #### Returns
 
 - Promise\<object \| undefined\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Response body. If an error occurs while posting the message, the promise will be rejected.
 
@@ -332,7 +332,7 @@ Sends given command to the debugging target.
 ### onDetach
 
 ```typescript
-chrome.debugger.onDetach.addListener(
+browser.debugger.onDetach.addListener(
   callback: function,
 )
 ```
@@ -358,7 +358,7 @@ Fired when browser terminates debugging session for the tab. This happens when e
 ### onEvent
 
 ```typescript
-chrome.debugger.onEvent.addListener(
+browser.debugger.onEvent.addListener(
   callback: function,
 )
 ```

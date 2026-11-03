@@ -40,7 +40,7 @@ requested or granted.
 
 ## Availability
 
-Chrome 84+
+Chrome 84+ browser.\* since Chrome 148
 
 <br />
 
@@ -480,7 +480,7 @@ The network request is third party to the frame in which it originated.
 
 ### ExtensionActionOptions
 
-Chrome 88+
+Chrome 88+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -488,13 +488,13 @@ Chrome 88+
 
   Whether to automatically display the action count for a page as the extension's badge text. This preference is persisted across sessions.
 - tabUpdate [TabActionCountUpdate](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-TabActionCountUpdate) optional
-  Chrome 89+
+  Chrome 89+ browser.\* since Chrome 148
 
   Details of how the tab's action count should be adjusted.
 
 ### GetDisabledRuleIdsOptions
 
-Chrome 111+
+Chrome 111+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -504,7 +504,7 @@ Chrome 111+
 
 ### GetRulesFilter
 
-Chrome 111+
+Chrome 111+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -514,7 +514,7 @@ Chrome 111+
 
 ### HeaderInfo
 
-Chrome 128+
+Chrome 128+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -536,7 +536,7 @@ Chrome 128+
 
 ### HeaderOperation
 
-Chrome 86+
+Chrome 86+ browser.\* since Chrome 148
 
 This describes the possible operations for a "modifyHeaders" rule.
 
@@ -553,7 +553,7 @@ Removes all entries for the specified header.
 
 ### IsRegexSupportedResult
 
-Chrome 87+
+Chrome 87+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -607,7 +607,7 @@ Chrome 87+
 
 ### ModifyHeaderInfo
 
-Chrome 86+
+Chrome 86+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -627,7 +627,7 @@ Chrome 86+
 
 - key string
 - replaceOnly boolean optional
-  Chrome 94+
+  Chrome 94+ browser.\* since Chrome 148
 
   If true, the query key is replaced only if it's already present. Otherwise, the key is also added if it's missing. Defaults to false.
 - value string
@@ -662,7 +662,7 @@ Chrome 86+
 
 ### RegexOptions
 
-Chrome 87+
+Chrome 87+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -681,18 +681,18 @@ Chrome 87+
 #### Properties
 
 - documentId string optional
-  Chrome 106+
+  Chrome 106+ browser.\* since Chrome 148
 
   The unique identifier for the frame's document, if this request is for a frame.
 - documentLifecycle [DocumentLifecycle](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle) optional
-  Chrome 106+
+  Chrome 106+ browser.\* since Chrome 148
 
   The lifecycle of the frame's document, if this request is for a frame.
 - frameId number
 
   The value 0 indicates that the request happens in the main frame; a positive value indicates the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (`type` is `main_frame` or `sub_frame`), `frameId` indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
 - frameType [FrameType](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType) optional
-  Chrome 106+
+  Chrome 106+ browser.\* since Chrome 148
 
   The type of the frame, if this request is for a frame.
 - initiator string optional
@@ -702,7 +702,7 @@ Chrome 87+
 
   Standard HTTP method.
 - parentDocumentId string optional
-  Chrome 106+
+  Chrome 106+ browser.\* since Chrome 148
 
   The unique identifier for the frame's parent document, if this request is for a frame and has a parent.
 - parentFrameId number
@@ -723,7 +723,7 @@ Chrome 87+
 
 ### RequestMethod
 
-Chrome 91+
+Chrome 91+ browser.\* since Chrome 148
 
 This describes the HTTP request method of a network request.
 
@@ -790,11 +790,11 @@ This describes the resource type of the network request.
 
   Describes how the redirect should be performed. Only valid for redirect rules.
 - requestHeaders [ModifyHeaderInfo](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-ModifyHeaderInfo)\[\] optional
-  Chrome 86+
+  Chrome 86+ browser.\* since Chrome 148
 
   The request headers to modify for the request. Only valid if RuleActionType is "modifyHeaders".
 - responseHeaders [ModifyHeaderInfo](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-ModifyHeaderInfo)\[\] optional
-  Chrome 86+
+  Chrome 86+ browser.\* since Chrome 148
 
   The response headers to modify for the request. Only valid if RuleActionType is "modifyHeaders".
 - type [RuleActionType](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-RuleActionType)
@@ -846,7 +846,7 @@ Allow all requests within a frame hierarchy, including the frame request itself.
 
   The rule will not match network requests originating from the list of `excludedDomains`.
 - excludedInitiatorDomains string\[\] optional
-  Chrome 101+
+  Chrome 101+ browser.\* since Chrome 148
 
   The rule will not match network requests originating from the list of `excludedInitiatorDomains`. If the list is empty or omitted, no domains are excluded. This takes precedence over `initiatorDomains`.
 
@@ -857,7 +857,7 @@ Allow all requests within a frame hierarchy, including the frame request itself.
   - This matches against the request initiator and not the request url.
   - Sub-domains of the listed domains are also excluded.
 - excludedRequestDomains string\[\] optional
-  Chrome 101+
+  Chrome 101+ browser.\* since Chrome 148
 
   The rule will not match network requests when the domains matches one from the list of `excludedRequestDomains`. If the list is empty or omitted, no domains are excluded. This takes precedence over `requestDomains`.
 
@@ -867,22 +867,22 @@ Allow all requests within a frame hierarchy, including the frame request itself.
   - Use punycode encoding for internationalized domains.
   - Sub-domains of the listed domains are also excluded.
 - excludedRequestMethods [RequestMethod](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-RequestMethod)\[\] optional
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
   List of request methods which the rule won't match. Only one of `requestMethods` and `excludedRequestMethods` should be specified. If neither of them is specified, all request methods are matched.
 - excludedResourceTypes [ResourceType](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-ResourceType)\[\] optional
 
   List of resource types which the rule won't match. Only one of `resourceTypes` and `excludedResourceTypes` should be specified. If neither of them is specified, all resource types except "main_frame" are blocked.
 - excludedResponseHeaders [HeaderInfo](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-HeaderInfo)\[\] optional
-  Chrome 128+
+  Chrome 128+ browser.\* since Chrome 148
 
   Rule does not match if the request matches any response header condition in this list (if specified). If both `excludedResponseHeaders` and `responseHeaders` are specified, then the `excludedResponseHeaders` property takes precedence.
 - excludedTabIds number\[\] optional
-  Chrome 92+
+  Chrome 92+ browser.\* since Chrome 148
 
   List of [`tabs.Tab.id`](https://developer.chrome.com/docs/extensions/reference/tabs/#property-Tab-id) which the rule should not match. An ID of [`tabs.TAB_ID_NONE`](https://developer.chrome.com/docs/extensions/reference/tabs/#property-TAB_ID_NONE) excludes requests which don't originate from a tab. Only supported for session-scoped rules.
 - excludedTopDomains string\[\] optional
-  Chrome 145+
+  Chrome 145+ browser.\* since Chrome 148
 
   The rule will not match network requests when the associated top-level frame's domain matches one from the list of `excludedTopDomains`. If the list is empty or omitted, no domains are excluded. This takes precedence over `topDomains`.
 
@@ -893,7 +893,7 @@ Allow all requests within a frame hierarchy, including the frame request itself.
   - Sub-domains of the listed domains are also excluded.
   - For requests with no associated top-level frame (e.g. ServiceWorker initiated requests, the request initiator's domain is considered instead.
 - initiatorDomains string\[\] optional
-  Chrome 101+
+  Chrome 101+ browser.\* since Chrome 148
 
   The rule will only match network requests originating from the list of `initiatorDomains`. If the list is omitted, the rule is applied to requests from all domains. An empty list is not allowed.
 
@@ -914,7 +914,7 @@ Allow all requests within a frame hierarchy, including the frame request itself.
 
   Note: The `regexFilter` must be composed of only ASCII characters. This is matched against a url where the host is encoded in the punycode format (in case of internationalized domains) and any other non-ascii characters are url encoded in utf-8.
 - requestDomains string\[\] optional
-  Chrome 101+
+  Chrome 101+ browser.\* since Chrome 148
 
   The rule will only match network requests when the domain matches one from the list of `requestDomains`. If the list is omitted, the rule is applied to requests from all domains. An empty list is not allowed.
 
@@ -924,7 +924,7 @@ Allow all requests within a frame hierarchy, including the frame request itself.
   - Use punycode encoding for internationalized domains.
   - Sub-domains of the listed domains are also matched.
 - requestMethods [RequestMethod](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-RequestMethod)\[\] optional
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
   List of HTTP request methods which the rule can match. An empty list is not allowed.
 
@@ -935,15 +935,15 @@ Allow all requests within a frame hierarchy, including the frame request itself.
 
   Note: this must be specified for `allowAllRequests` rules and may only include the `sub_frame` and `main_frame` resource types.
 - responseHeaders [HeaderInfo](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-HeaderInfo)\[\] optional
-  Chrome 128+
+  Chrome 128+ browser.\* since Chrome 148
 
   Rule matches if the request matches any response header condition in this list (if specified).
 - tabIds number\[\] optional
-  Chrome 92+
+  Chrome 92+ browser.\* since Chrome 148
 
   List of [`tabs.Tab.id`](https://developer.chrome.com/docs/extensions/reference/tabs/#property-Tab-id) which the rule should match. An ID of [`tabs.TAB_ID_NONE`](https://developer.chrome.com/docs/extensions/reference/tabs/#property-TAB_ID_NONE) matches requests which don't originate from a tab. An empty list is not allowed. Only supported for session-scoped rules.
 - topDomains string\[\] optional
-  Chrome 145+
+  Chrome 145+ browser.\* since Chrome 148
 
   The rule will only match network requests when the associated top-level frame's domain matches one from the list of `topDomains`. If the list is omitted, the rule is applied to requests associated with all top-level frame domains. An empty list is not allowed.
 
@@ -977,7 +977,7 @@ Allow all requests within a frame hierarchy, including the frame request itself.
 
 ### RuleConditionKeys
 
-Chrome 145+
+Chrome 145+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -1028,7 +1028,7 @@ Chrome 145+
 
 ### TabActionCountUpdate
 
-Chrome 89+
+Chrome 89+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -1041,7 +1041,7 @@ Chrome 89+
 
 ### TestMatchOutcomeResult
 
-Chrome 103+
+Chrome 103+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -1051,7 +1051,7 @@ Chrome 103+
 
 ### TestMatchRequestDetails
 
-Chrome 103+
+Chrome 103+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -1062,14 +1062,14 @@ Chrome 103+
 
   Standard HTTP method of the hypothetical request. Defaults to "get" for HTTP requests and is ignored for non-HTTP requests.
 - responseHeaders object optional
-  Chrome 129+
+  Chrome 129+ browser.\* since Chrome 148
 
   The headers provided by a hypothetical response if the request does not get blocked or redirected before it is sent. Represented as an object which maps a header name to a list of string values. If not specified, the hypothetical response would return empty response headers, which can match rules which match on the non-existence of headers. E.g. `{"content-type": ["text/html; charset=utf-8", "multipart/form-data"]}`
 - tabId number optional
 
   The ID of the tab in which the hypothetical request takes place. Does not need to correspond to a real tab ID. Default is -1, meaning that the request isn't related to a tab.
 - topUrl string optional
-  Chrome 145+
+  Chrome 145+ browser.\* since Chrome 148
 
   The associated top-level frame URL (if any) for the request.
 - type [ResourceType](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-ResourceType)
@@ -1081,7 +1081,7 @@ Chrome 103+
 
 ### UnsupportedRegexReason
 
-Chrome 87+
+Chrome 87+ browser.\* since Chrome 148
 
 Describes the reason why a given regular expression isn't supported.
 
@@ -1096,7 +1096,7 @@ The regular expression exceeds the memory limit.
 
 ### UpdateRuleOptions
 
-Chrome 87+
+Chrome 87+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -1109,7 +1109,7 @@ Chrome 87+
 
 ### UpdateRulesetOptions
 
-Chrome 87+
+Chrome 87+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -1122,7 +1122,7 @@ Chrome 87+
 
 ### UpdateStaticRulesOptions
 
-Chrome 111+
+Chrome 111+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -1188,7 +1188,7 @@ Time interval within which `MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL getMatchedRul
 
 ### GUARANTEED_MINIMUM_STATIC_RULES
 
-Chrome 89+
+Chrome 89+ browser.\* since Chrome 148
 
 The minimum number of static rules guaranteed to an extension across its enabled static rulesets. Any rules above this limit will count towards the [global static rule limit](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#global-static-rule-limit).
 
@@ -1214,7 +1214,7 @@ The maximum number of dynamic rules that an extension can add.
 
 ### MAX_NUMBER_OF_ENABLED_STATIC_RULESETS
 
-Chrome 94+
+Chrome 94+ browser.\* since Chrome 148
 
 The maximum number of static `Rulesets` an extension can enable at any one time.
 
@@ -1232,7 +1232,7 @@ The maximum number of regular expression rules that an extension can add. This l
 
 ### MAX_NUMBER_OF_SESSION_RULES
 
-Chrome 120+
+Chrome 120+ browser.\* since Chrome 148
 
 The maximum number of session scoped rules that an extension can add.
 
@@ -1250,7 +1250,7 @@ The maximum number of static `Rulesets` an extension can specify as part of the 
 
 ### MAX_NUMBER_OF_UNSAFE_DYNAMIC_RULES
 
-Chrome 120+
+Chrome 120+ browser.\* since Chrome 148
 
 The maximum number of "unsafe" dynamic rules that an extension can add.
 
@@ -1260,7 +1260,7 @@ The maximum number of "unsafe" dynamic rules that an extension can add.
 
 ### MAX_NUMBER_OF_UNSAFE_SESSION_RULES
 
-Chrome 120+
+Chrome 120+ browser.\* since Chrome 148
 
 The maximum number of "unsafe" session scoped rules that an extension can add.
 
@@ -1270,7 +1270,7 @@ The maximum number of "unsafe" session scoped rules that an extension can add.
 
 ### SESSION_RULESET_ID
 
-Chrome 90+
+Chrome 90+ browser.\* since Chrome 148
 
 Ruleset ID for the session-scoped rules added by the extension.
 
@@ -1282,10 +1282,10 @@ Ruleset ID for the session-scoped rules added by the extension.
 
 ### getAvailableStaticRuleCount()
 
-Chrome 89+
+Chrome 89+ browser.\* since Chrome 148
 
 ```typescript
-chrome.declarativeNetRequest.getAvailableStaticRuleCount(): Promise<number>
+browser.declarativeNetRequest.getAvailableStaticRuleCount(): Promise<number>
 ```
 
 Returns the number of static rules an extension can enable before the [global static rule limit](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#global-static-rule-limit) is reached.
@@ -1293,14 +1293,14 @@ Returns the number of static rules an extension can enable before the [global st
 #### Returns
 
 - Promise\<number\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
 ### getDisabledRuleIds()
 
-Chrome 111+
+Chrome 111+ browser.\* since Chrome 148
 
 ```typescript
-chrome.declarativeNetRequest.getDisabledRuleIds(
+browser.declarativeNetRequest.getDisabledRuleIds(
   options: GetDisabledRuleIdsOptions,
 ): Promise<number[]>
 ```
@@ -1322,7 +1322,7 @@ Returns the list of static rules in the given [`Ruleset`](https://developer.chro
 ### getDynamicRules()
 
 ```typescript
-chrome.declarativeNetRequest.getDynamicRules(
+browser.declarativeNetRequest.getDynamicRules(
   filter?: GetRulesFilter,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-Rule[]>
 ```
@@ -1332,21 +1332,21 @@ Returns the current set of dynamic rules for the extension. Callers can optional
 #### Parameters
 
 - filter [GetRulesFilter](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-GetRulesFilter) optional
-  Chrome 111+
+  Chrome 111+ browser.\* since Chrome 148
 
   An object to filter the list of fetched rules.
 
 #### Returns
 
 - Promise\<[Rule](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-Rule)\[\]\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
   Promise that resolves with the set of dynamic rules. The Promise may be rejected in case of transient internal errors.
 
 ### getEnabledRulesets()
 
 ```typescript
-chrome.declarativeNetRequest.getEnabledRulesets(): Promise<string[]>
+browser.declarativeNetRequest.getEnabledRulesets(): Promise<string[]>
 ```
 
 Returns the ids for the current set of enabled static rulesets.
@@ -1354,14 +1354,14 @@ Returns the ids for the current set of enabled static rulesets.
 #### Returns
 
 - Promise\<string\[\]\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
   Promise that resolves with a list of ids, where each id corresponds to an enabled static [`Ruleset`](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-Ruleset).
 
 ### getMatchedRules()
 
 ```typescript
-chrome.declarativeNetRequest.getMatchedRules(
+browser.declarativeNetRequest.getMatchedRules(
   filter?: MatchedRulesFilter,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-RulesMatchedDetails>
 ```
@@ -1377,16 +1377,16 @@ Returns all rules matched for the extension. Callers can optionally filter the l
 #### Returns
 
 - Promise\<[RulesMatchedDetails](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-RulesMatchedDetails)\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
   Promise that resolves once the list of matched rules has been fetched. In case of an error, the Promise will be rejected. This can happen for multiple reasons, such as insufficient permissions, or exceeding the quota.
 
 ### getSessionRules()
 
-Chrome 90+
+Chrome 90+ browser.\* since Chrome 148
 
 ```typescript
-chrome.declarativeNetRequest.getSessionRules(
+browser.declarativeNetRequest.getSessionRules(
   filter?: GetRulesFilter,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-Rule[]>
 ```
@@ -1396,23 +1396,23 @@ Returns the current set of session scoped rules for the extension. Callers can o
 #### Parameters
 
 - filter [GetRulesFilter](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-GetRulesFilter) optional
-  Chrome 111+
+  Chrome 111+ browser.\* since Chrome 148
 
   An object to filter the list of fetched rules.
 
 #### Returns
 
 - Promise\<[Rule](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-Rule)\[\]\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
   Promise that resolves with the set of session scoped rules.
 
 ### isRegexSupported()
 
-Chrome 87+
+Chrome 87+ browser.\* since Chrome 148
 
 ```typescript
-chrome.declarativeNetRequest.isRegexSupported(
+browser.declarativeNetRequest.isRegexSupported(
   regexOptions: RegexOptions,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-IsRegexSupportedResult>
 ```
@@ -1428,16 +1428,16 @@ Checks if the given regular expression will be supported as a `regexFilter` rule
 #### Returns
 
 - Promise\<[IsRegexSupportedResult](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-IsRegexSupportedResult)\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
   Promise that resolves with details consisting of whether the regular expression is supported and the reason if not.
 
 ### setExtensionActionOptions()
 
-Chrome 88+
+Chrome 88+ browser.\* since Chrome 148
 
 ```typescript
-chrome.declarativeNetRequest.setExtensionActionOptions(
+browser.declarativeNetRequest.setExtensionActionOptions(
   options: ExtensionActionOptions,
 ): Promise<void>
 ```
@@ -1451,14 +1451,14 @@ Configures if the action count for tabs should be displayed as the extension act
 #### Returns
 
 - Promise\<void\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
 ### testMatchOutcome()
 
-Chrome 103+
+Chrome 103+ browser.\* since Chrome 148
 
 ```typescript
-chrome.declarativeNetRequest.testMatchOutcome(
+browser.declarativeNetRequest.testMatchOutcome(
   request: TestMatchRequestDetails,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-TestMatchOutcomeResult>
 ```
@@ -1478,7 +1478,7 @@ Checks if any of the extension's declarativeNetRequest rules would match a hypot
 ### updateDynamicRules()
 
 ```typescript
-chrome.declarativeNetRequest.updateDynamicRules(
+browser.declarativeNetRequest.updateDynamicRules(
   options: UpdateRuleOptions,
 ): Promise<void>
 ```
@@ -1493,19 +1493,19 @@ Modifies the current set of dynamic rules for the extension. The rules with IDs 
 #### Parameters
 
 - options [UpdateRuleOptions](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-UpdateRuleOptions)
-  Chrome 87+
+  Chrome 87+ browser.\* since Chrome 148
 
 #### Returns
 
 - Promise\<void\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
   Promise that resolves once the update is complete. In case of an error, the promise will be rejected and no change will be made to the rule set. This can happen for multiple reasons, such as invalid rule format, duplicate rule ID, rule count limit exceeded, internal errors, and others.
 
 ### updateEnabledRulesets()
 
 ```typescript
-chrome.declarativeNetRequest.updateEnabledRulesets(
+browser.declarativeNetRequest.updateEnabledRulesets(
   options: UpdateRulesetOptions,
 ): Promise<void>
 ```
@@ -1516,21 +1516,21 @@ Note that the set of enabled static rulesets is persisted across sessions but no
 #### Parameters
 
 - options [UpdateRulesetOptions](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#type-UpdateRulesetOptions)
-  Chrome 87+
+  Chrome 87+ browser.\* since Chrome 148
 
 #### Returns
 
 - Promise\<void\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
   Promise that resolves once the update is complete. In case of an error, the promise will be rejected and no change will be made to the set of enabled rulesets. This can happen for multiple reasons, such as invalid ruleset IDs, rule count limit exceeded, or internal errors.
 
 ### updateSessionRules()
 
-Chrome 90+
+Chrome 90+ browser.\* since Chrome 148
 
 ```typescript
-chrome.declarativeNetRequest.updateSessionRules(
+browser.declarativeNetRequest.updateSessionRules(
   options: UpdateRuleOptions,
 ): Promise<void>
 ```
@@ -1548,16 +1548,16 @@ Modifies the current set of session scoped rules for the extension. The rules wi
 #### Returns
 
 - Promise\<void\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
   Promise that resolves once the update is complete. In case of an error, the promise will be rejected and no change will be made to the rule set. This can happen for multiple reasons, such as invalid rule format, duplicate rule ID, rule count limit exceeded, and others.
 
 ### updateStaticRules()
 
-Chrome 111+
+Chrome 111+ browser.\* since Chrome 148
 
 ```typescript
-chrome.declarativeNetRequest.updateStaticRules(
+browser.declarativeNetRequest.updateStaticRules(
   options: UpdateStaticRulesOptions,
 ): Promise<void>
 ```
@@ -1579,7 +1579,7 @@ Disables and enables individual static rules in a [`Ruleset`](https://developer.
 ### onRuleMatchedDebug
 
 ```typescript
-chrome.declarativeNetRequest.onRuleMatchedDebug.addListener(
+browser.declarativeNetRequest.onRuleMatchedDebug.addListener(
   callback: function,
 )
 ```

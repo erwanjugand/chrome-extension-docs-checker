@@ -85,7 +85,7 @@ The storage type is unknown.
 ### ejectDevice()
 
 ```typescript
-chrome.system.storage.ejectDevice(
+browser.system.storage.ejectDevice(
   id: string,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/system/storage#type-EjectDeviceResultCode>
 ```
@@ -99,14 +99,14 @@ Ejects a removable storage device.
 #### Returns
 
 - Promise\<[EjectDeviceResultCode](https://developer.chrome.com/docs/extensions/reference/api/system/storage#type-EjectDeviceResultCode)\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
 ### getAvailableCapacity()
 
 Dev channel
 
 ```typescript
-chrome.system.storage.getAvailableCapacity(
+browser.system.storage.getAvailableCapacity(
   id: string,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/system/storage#type-StorageAvailableCapacityInfo>
 ```
@@ -124,7 +124,7 @@ Get the available capacity of a specified `id` storage device. The `id` is the t
 ### getInfo()
 
 ```typescript
-chrome.system.storage.getInfo(): Promise<https://developer.chrome.com/docs/extensions/reference/api/system/storage#type-StorageUnitInfo[]>
+browser.system.storage.getInfo(): Promise<https://developer.chrome.com/docs/extensions/reference/api/system/storage#type-StorageUnitInfo[]>
 ```
 
 Get the storage information from the system. The argument passed to the callback is an array of StorageUnitInfo objects.
@@ -132,14 +132,14 @@ Get the storage information from the system. The argument passed to the callback
 #### Returns
 
 - Promise\<[StorageUnitInfo](https://developer.chrome.com/docs/extensions/reference/api/system/storage#type-StorageUnitInfo)\[\]\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
 ## Events
 
 ### onAttached
 
 ```typescript
-chrome.system.storage.onAttached.addListener(
+browser.system.storage.onAttached.addListener(
   callback: function,
 )
 ```
@@ -164,7 +164,7 @@ Fired when a new removable storage is attached to the system.
 ### onDetached
 
 ```typescript
-chrome.system.storage.onDetached.addListener(
+browser.system.storage.onDetached.addListener(
   callback: function,
 )
 ```

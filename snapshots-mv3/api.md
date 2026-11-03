@@ -28,7 +28,7 @@ for the operation that calls them to finish. Use [promises](https://developer.mo
 
 [action](https://developer.chrome.com/docs/extensions/reference/api/action)
 :
-    Chrome 88+ MV3+
+    Chrome 88+ browser.\* since Chrome 148 MV3+
 
     Use the `chrome.action` API to control the extension's icon in the Google Chrome toolbar.
 
@@ -41,7 +41,7 @@ for the operation that calls them to finish. Use [promises](https://developer.mo
 
 [audio](https://developer.chrome.com/docs/extensions/reference/api/audio)
 :
-    Chrome 59+ ChromeOS only
+    Chrome 59+ browser.\* since Chrome 148 ChromeOS only
 
     The `chrome.audio` API is provided to allow users to get information about and control the audio devices attached to the system. This API is currently only available in kiosk mode for ChromeOS.
 
@@ -60,7 +60,7 @@ for the operation that calls them to finish. Use [promises](https://developer.mo
 
 [certificateProvider](https://developer.chrome.com/docs/extensions/reference/api/certificateProvider)
 :
-    Chrome 46+ ChromeOS only
+    Chrome 46+ browser.\* since Chrome 148 ChromeOS only
 
     Use this API to expose certificates to the platform which can use these certificates for TLS authentications.
 
@@ -103,7 +103,7 @@ for the operation that calls them to finish. Use [promises](https://developer.mo
 
 [declarativeNetRequest](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest)
 :
-    Chrome 84+
+    Chrome 84+ browser.\* since Chrome 148
 
     The `chrome.declarativeNetRequest` API is used to block or modify network requests by specifying declarative rules. This lets extensions modify network requests without intercepting them and viewing their content, thus providing more privacy.
 
@@ -134,14 +134,14 @@ for the operation that calls them to finish. Use [promises](https://developer.mo
 
 [devtools.performance](https://developer.chrome.com/docs/extensions/reference/api/devtools/performance)
 :
-    Chrome 129+
+    Chrome 129+ browser.\* since Chrome 152
 
     Use the `chrome.devtools.performance` API to listen to recording status updates in the Performance panel in DevTools.
 
 
 [devtools.recorder](https://developer.chrome.com/docs/extensions/reference/api/devtools/recorder)
 :
-    Chrome 105+
+    Chrome 105+ browser.\* since Chrome 152
 
     Use the `chrome.devtools.recorder` API to customize the Recorder panel in DevTools.
 
@@ -155,14 +155,14 @@ for the operation that calls them to finish. Use [promises](https://developer.mo
 
 [documentScan](https://developer.chrome.com/docs/extensions/reference/api/documentScan)
 :
-    Chrome 44+ ChromeOS only
+    Chrome 44+ browser.\* since Chrome 148 ChromeOS only
 
     Use the `chrome.documentScan` API to discover and retrieve images from attached document scanners.
 
 
 [dom](https://developer.chrome.com/docs/extensions/reference/api/dom)
 :
-    Chrome 88+
+    Chrome 88+ browser.\* since Chrome 148
 
     Use the `chrome.dom` API to access special DOM APIs for Extensions
 
@@ -175,28 +175,28 @@ for the operation that calls them to finish. Use [promises](https://developer.mo
 
 [enterprise.deviceAttributes](https://developer.chrome.com/docs/extensions/reference/api/enterprise/deviceAttributes)
 :
-    Chrome 46+ ChromeOS only [Requires policy](https://support.google.com/chrome/a/answer/9296680)
+    Chrome 46+ browser.\* since Chrome 148 ChromeOS only [Requires policy](https://support.google.com/chrome/a/answer/9296680)
 
     Use the `chrome.enterprise.deviceAttributes` API to read device attributes. Note: This API is only available to extensions force-installed by enterprise policy.
 
 
 [enterprise.hardwarePlatform](https://developer.chrome.com/docs/extensions/reference/api/enterprise/hardwarePlatform)
 :
-    Chrome 71+ [Requires policy](https://support.google.com/chrome/a/answer/9296680)
+    Chrome 71+ browser.\* since Chrome 148 [Requires policy](https://support.google.com/chrome/a/answer/9296680)
 
     Use the `chrome.enterprise.hardwarePlatform` API to get the manufacturer and model of the hardware platform where the browser runs. Note: This API is only available to extensions installed by enterprise policy.
 
 
 [enterprise.login](https://developer.chrome.com/docs/extensions/reference/api/enterprise/login)
 :
-    Chrome 139+ ChromeOS only [Requires policy](https://support.google.com/chrome/a/answer/9296680)
+    Chrome 139+ browser.\* since Chrome 148 ChromeOS only [Requires policy](https://support.google.com/chrome/a/answer/9296680)
 
     Use the `chrome.enterprise.login` API to exit Managed Guest sessions. Note: This API is only available to extensions installed by enterprise policy in ChromeOS Managed Guest sessions.
 
 
 [enterprise.networkingAttributes](https://developer.chrome.com/docs/extensions/reference/api/enterprise/networkingAttributes)
 :
-    Chrome 85+ ChromeOS only [Requires policy](https://support.google.com/chrome/a/answer/9296680)
+    Chrome 85+ browser.\* since Chrome 148 ChromeOS only [Requires policy](https://support.google.com/chrome/a/answer/9296680)
 
     Use the `chrome.enterprise.networkingAttributes` API to read information about your current network. Note: This API is only available to extensions force-installed by enterprise policy.
 
@@ -285,14 +285,14 @@ for the operation that calls them to finish. Use [promises](https://developer.mo
 
 [instanceID](https://developer.chrome.com/docs/extensions/reference/api/instanceID)
 :
-    Chrome 44+
+    Chrome 44+ browser.\* since Chrome 148
 
     Use `chrome.instanceID` to access the Instance ID service.
 
 
 [loginState](https://developer.chrome.com/docs/extensions/reference/api/loginState)
 :
-    Chrome 78+ ChromeOS only
+    Chrome 78+ browser.\* since Chrome 148 ChromeOS only
 
     Use the `chrome.loginState` API to read and monitor the login state.
 
@@ -318,7 +318,7 @@ for the operation that calls them to finish. Use [promises](https://developer.mo
 
 [offscreen](https://developer.chrome.com/docs/extensions/reference/api/offscreen)
 :
-    Chrome 109+ MV3+
+    Chrome 109+ browser.\* since Chrome 148 MV3+
 
     Use the `offscreen` API to create and manage offscreen documents.
 
@@ -343,7 +343,7 @@ for the operation that calls them to finish. Use [promises](https://developer.mo
 
 [platformKeys](https://developer.chrome.com/docs/extensions/reference/api/platformKeys)
 :
-    Chrome 45+ ChromeOS only
+    Chrome 45+ browser.\* since Chrome 148 ChromeOS only
 
     Use the `chrome.platformKeys` API to access client certificates managed by the platform. If the user or policy grants the permission, an extension can use such a certficate in its custom authentication protocol. E.g. this allows usage of platform managed certificates in third party VPNs (see [chrome.vpnProvider](https://developer.chrome.com/docs/extensions/reference/api/vpnProvider)).
 
@@ -356,21 +356,21 @@ for the operation that calls them to finish. Use [promises](https://developer.mo
 
 [printerProvider](https://developer.chrome.com/docs/extensions/reference/api/printerProvider)
 :
-    Chrome 44+
+    Chrome 44+ browser.\* since Chrome 148
 
     The `chrome.printerProvider` API exposes events used by print manager to query printers controlled by extensions, to query their capabilities and to submit print jobs to these printers.
 
 
 [printing](https://developer.chrome.com/docs/extensions/reference/api/printing)
 :
-    Chrome 81+ ChromeOS only
+    Chrome 81+ browser.\* since Chrome 148 ChromeOS only
 
     Use the `chrome.printing` API to send print jobs to printers installed on Chromebook.
 
 
 [printingMetrics](https://developer.chrome.com/docs/extensions/reference/api/printingMetrics)
 :
-    Chrome 79+ ChromeOS only [Requires policy](https://support.google.com/chrome/a/answer/9296680)
+    Chrome 79+ browser.\* since Chrome 148 ChromeOS only [Requires policy](https://support.google.com/chrome/a/answer/9296680)
 
     Use the `chrome.printingMetrics` API to fetch data about printing usage.
 
@@ -403,7 +403,7 @@ for the operation that calls them to finish. Use [promises](https://developer.mo
 
 [readingList](https://developer.chrome.com/docs/extensions/reference/api/readingList)
 :
-    Chrome 120+ MV3+
+    Chrome 120+ browser.\* since Chrome 148 MV3+
 
     Use the `chrome.readingList` API to read from and modify the items in the [Reading List](https://support.google.com/chrome/answer/7343019).
 
@@ -416,14 +416,14 @@ for the operation that calls them to finish. Use [promises](https://developer.mo
 
 [scripting](https://developer.chrome.com/docs/extensions/reference/api/scripting)
 :
-    Chrome 88+ MV3+
+    Chrome 88+ browser.\* since Chrome 148 MV3+
 
     Use the `chrome.scripting` API to execute script in different contexts.
 
 
 [search](https://developer.chrome.com/docs/extensions/reference/api/search)
 :
-    Chrome 87+
+    Chrome 87+ browser.\* since Chrome 148
 
     Use the `chrome.search` API to search via the default provider.
 
@@ -436,7 +436,7 @@ for the operation that calls them to finish. Use [promises](https://developer.mo
 
 [sidePanel](https://developer.chrome.com/docs/extensions/reference/api/sidePanel)
 :
-    Chrome 114+ MV3+
+    Chrome 114+ browser.\* since Chrome 148 MV3+
 
     Use the `chrome.sidePanel` API to host content in the browser's side panel alongside the main content of a webpage.
 
@@ -473,7 +473,7 @@ for the operation that calls them to finish. Use [promises](https://developer.mo
 
 [systemLog](https://developer.chrome.com/docs/extensions/reference/api/systemLog)
 :
-    Chrome 125+ ChromeOS only [Requires policy](https://support.google.com/chrome/a/answer/9296680)
+    Chrome 125+ browser.\* since Chrome 148 ChromeOS only [Requires policy](https://support.google.com/chrome/a/answer/9296680)
 
     Use the `chrome.systemLog` API to record Chrome system logs from extensions.
 
@@ -486,7 +486,7 @@ for the operation that calls them to finish. Use [promises](https://developer.mo
 
 [tabGroups](https://developer.chrome.com/docs/extensions/reference/api/tabGroups)
 :
-    Chrome 89+ MV3+
+    Chrome 89+ browser.\* since Chrome 148 MV3+
 
     Use the `chrome.tabGroups` API to interact with the browser's tab grouping system. You can use this API to modify and rearrange tab groups in the browser. To group and ungroup tabs, or to query what tabs are in groups, use the `chrome.tabs` API.
 
@@ -523,28 +523,28 @@ for the operation that calls them to finish. Use [promises](https://developer.mo
 
 [userScripts](https://developer.chrome.com/docs/extensions/reference/api/userScripts)
 :
-    Chrome 120+ MV3+
+    Chrome 120+ browser.\* since Chrome 148 MV3+
 
     Use the `userScripts` API to execute user scripts in the User Scripts context.
 
 
 [vpnProvider](https://developer.chrome.com/docs/extensions/reference/api/vpnProvider)
 :
-    Chrome 43+ ChromeOS only
+    Chrome 43+ browser.\* since Chrome 148 ChromeOS only
 
     Use the `chrome.vpnProvider` API to implement a VPN client.
 
 
 [wallpaper](https://developer.chrome.com/docs/extensions/reference/api/wallpaper)
 :
-    Chrome 43+ ChromeOS only
+    Chrome 43+ browser.\* since Chrome 148 ChromeOS only
 
     Use the `chrome.wallpaper` API to change the ChromeOS wallpaper.
 
 
 [webAuthenticationProxy](https://developer.chrome.com/docs/extensions/reference/api/webAuthenticationProxy)
 :
-    Chrome 115+ MV3+
+    Chrome 115+ browser.\* since Chrome 148 MV3+
 
     The `chrome.webAuthenticationProxy` API lets remote desktop software running on a remote host intercept Web Authentication API (WebAuthn) requests in order to handle them on a local client.
 

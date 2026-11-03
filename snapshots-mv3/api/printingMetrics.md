@@ -25,7 +25,7 @@ Use the `chrome.printingMetrics` API to fetch data about printing usage.
 
 ## Availability
 
-Chrome 79+ ChromeOS only [Requires policy](https://support.google.com/chrome/a/answer/9296680)
+Chrome 79+ browser.\* since Chrome 148 ChromeOS only [Requires policy](https://support.google.com/chrome/a/answer/9296680)
 
 <br />
 
@@ -120,7 +120,7 @@ Specifies that the printer was added via policy.
 
   The info about the printer which printed the document.
 - printer_status [PrinterStatus](https://developer.chrome.com/docs/extensions/reference/printing/#type-PrinterStatus)
-  Chrome 85+
+  Chrome 85+ browser.\* since Chrome 148
 
   The status of the printer.
 - settings [PrintSettings](https://developer.chrome.com/docs/extensions/reference/api/printingMetrics#type-PrintSettings)
@@ -193,7 +193,7 @@ Specifies that the print job was printed without any errors.
 ### getPrintJobs()
 
 ```typescript
-chrome.printingMetrics.getPrintJobs(): Promise<https://developer.chrome.com/docs/extensions/reference/api/printingMetrics#type-PrintJobInfo[]>
+browser.printingMetrics.getPrintJobs(): Promise<https://developer.chrome.com/docs/extensions/reference/api/printingMetrics#type-PrintJobInfo[]>
 ```
 
 Returns the list of the finished print jobs.
@@ -201,14 +201,14 @@ Returns the list of the finished print jobs.
 #### Returns
 
 - Promise\<[PrintJobInfo](https://developer.chrome.com/docs/extensions/reference/api/printingMetrics#type-PrintJobInfo)\[\]\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ## Events
 
 ### onPrintJobFinished
 
 ```typescript
-chrome.printingMetrics.onPrintJobFinished.addListener(
+browser.printingMetrics.onPrintJobFinished.addListener(
   callback: function,
 )
 ```

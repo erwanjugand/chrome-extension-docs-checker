@@ -25,7 +25,7 @@ Use this API to expose certificates to the platform which can use these certific
 
 ## Availability
 
-Chrome 46+ ChromeOS only
+Chrome 46+ browser.\* since Chrome 148 ChromeOS only
 
 <br />
 
@@ -124,7 +124,7 @@ In the Extension, this can look similar to the following snippet:
 
 ### Algorithm
 
-Chrome 86+
+Chrome 86+ browser.\* since Chrome 148
 
 Types of supported cryptographic signature algorithms.
 
@@ -162,7 +162,7 @@ Specifies the RSASSA PSS signature algorithm with the SHA-512 hashing function, 
 
 ### CertificatesUpdateRequest
 
-Chrome 86+
+Chrome 86+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -172,7 +172,7 @@ Chrome 86+
 
 ### ClientCertificateInfo
 
-Chrome 86+
+Chrome 86+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -187,7 +187,7 @@ Chrome 86+
 
 ### Error
 
-Chrome 86+
+Chrome 86+ browser.\* since Chrome 148
 
 Types of errors that the extension can report.
 
@@ -216,7 +216,7 @@ Specifies the SHA512 hashing algorithm.
 
 ### PinRequestErrorType
 
-Chrome 57+
+Chrome 57+ browser.\* since Chrome 148
 
 The types of errors that can be presented to the user through the requestPin function.
 
@@ -235,7 +235,7 @@ Specifies that the error cannot be represented by the above types.
 
 ### PinRequestType
 
-Chrome 57+
+Chrome 57+ browser.\* since Chrome 148
 
 The type of code being requested by the extension with requestPin function.
 
@@ -250,7 +250,7 @@ Specifies the requested code is a PUK.
 
 ### PinResponseDetails
 
-Chrome 57+
+Chrome 57+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -260,7 +260,7 @@ Chrome 57+
 
 ### ReportSignatureDetails
 
-Chrome 86+
+Chrome 86+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -277,7 +277,7 @@ Chrome 86+
 
 ### RequestPinDetails
 
-Chrome 57+
+Chrome 57+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -296,7 +296,7 @@ Chrome 57+
 
 ### SetCertificatesDetails
 
-Chrome 86+
+Chrome 86+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -313,7 +313,7 @@ Chrome 86+
 
 ### SignatureRequest
 
-Chrome 86+
+Chrome 86+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -344,13 +344,13 @@ Chrome 86+
 
   Refers to the hash algorithm that was used to create `digest`.
 - signRequestId number
-  Chrome 57+
+  Chrome 57+ browser.\* since Chrome 148
 
   The unique ID to be used by the extension should it need to call a method that requires it, e.g. requestPin.
 
 ### StopPinRequestDetails
 
-Chrome 57+
+Chrome 57+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -365,10 +365,10 @@ Chrome 57+
 
 ### reportSignature()
 
-Chrome 86+
+Chrome 86+ browser.\* since Chrome 148
 
 ```typescript
-chrome.certificateProvider.reportSignature(
+browser.certificateProvider.reportSignature(
   details: ReportSignatureDetails,
 ): Promise<void>
 ```
@@ -384,14 +384,14 @@ The extension must eventually call this function for every [`onSignatureRequeste
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### requestPin()
 
-Chrome 57+
+Chrome 57+ browser.\* since Chrome 148
 
 ```typescript
-chrome.certificateProvider.requestPin(
+browser.certificateProvider.requestPin(
   details: RequestPinDetails,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/certificateProvider#type-PinResponseDetails | undefined>
 ```
@@ -407,16 +407,16 @@ Requests the PIN from the user. Only one ongoing request at a time is allowed. T
 #### Returns
 
 - Promise\<[PinResponseDetails](https://developer.chrome.com/docs/extensions/reference/api/certificateProvider#type-PinResponseDetails) \| undefined\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Returns a Promise which resolves when the PIN is provided by the user. Rejects with an error if the dialog request finishes unsuccessfully (e.g. the dialog was canceled by the user or was not allowed to be shown).
 
 ### setCertificates()
 
-Chrome 86+
+Chrome 86+ browser.\* since Chrome 148
 
 ```typescript
-chrome.certificateProvider.setCertificates(
+browser.certificateProvider.setCertificates(
   details: SetCertificatesDetails,
 ): Promise<void>
 ```
@@ -434,16 +434,16 @@ The extension should call this function after initialization and on every change
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Returns a Promise which resolves upon completion.
 
 ### stopPinRequest()
 
-Chrome 57+
+Chrome 57+ browser.\* since Chrome 148
 
 ```typescript
-chrome.certificateProvider.stopPinRequest(
+browser.certificateProvider.stopPinRequest(
   details: StopPinRequestDetails,
 ): Promise<void>
 ```
@@ -459,7 +459,7 @@ Stops the pin request started by the [`requestPin`](https://developer.chrome.com
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Returns a Promise which resolves when the request to close the PIN dialog is complete.
 
@@ -467,10 +467,10 @@ Stops the pin request started by the [`requestPin`](https://developer.chrome.com
 
 ### onCertificatesUpdateRequested
 
-Chrome 86+
+Chrome 86+ browser.\* since Chrome 148
 
 ```typescript
-chrome.certificateProvider.onCertificatesUpdateRequested.addListener(
+browser.certificateProvider.onCertificatesUpdateRequested.addListener(
   callback: function,
 )
 ```
@@ -494,10 +494,10 @@ This event fires if the certificates set via [`setCertificates`](https://develop
 
 ### onSignatureRequested
 
-Chrome 86+
+Chrome 86+ browser.\* since Chrome 148
 
 ```typescript
-chrome.certificateProvider.onSignatureRequested.addListener(
+browser.certificateProvider.onSignatureRequested.addListener(
   callback: function,
 )
 ```

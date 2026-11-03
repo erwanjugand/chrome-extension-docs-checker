@@ -16,7 +16,7 @@ See [DevTools APIs summary](https://developer.chrome.com/docs/extensions/how-to/
 
 ## Availability
 
-Chrome 129+
+Chrome 129+ browser.\* since Chrome 152
 
 <br />
 
@@ -55,7 +55,7 @@ This is how you can use the API to listen to recording status updates
 ### onProfilingStarted
 
 ```typescript
-chrome.devtools.performance.onProfilingStarted.addListener(
+browser.devtools.performance.onProfilingStarted.addListener(
   callback: function,
 )
 ```
@@ -78,7 +78,7 @@ Fired when the Performance panel starts recording.
 ### onProfilingStopped
 
 ```typescript
-chrome.devtools.performance.onProfilingStopped.addListener(
+browser.devtools.performance.onProfilingStopped.addListener(
   callback: function,
 )
 ```

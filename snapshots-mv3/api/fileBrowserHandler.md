@@ -119,7 +119,7 @@ Event details payload for fileBrowserHandler.onExecute event.
 ### onExecute
 
 ```typescript
-chrome.fileBrowserHandler.onExecute.addListener(
+browser.fileBrowserHandler.onExecute.addListener(
   callback: function,
 )
 ```

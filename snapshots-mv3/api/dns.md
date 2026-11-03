@@ -76,7 +76,7 @@ service-worker.js:
 ### resolve()
 
 ```typescript
-chrome.dns.resolve(
+browser.dns.resolve(
   hostname: string,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/dns#type-ResolveCallbackResolveInfo>
 ```

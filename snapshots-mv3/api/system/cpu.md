@@ -44,7 +44,7 @@ Use the `system.cpu` API to query CPU metadata.
 
   Information about each logical processor.
 - temperatures number\[\]
-  Chrome 60+
+  Chrome 60+ browser.\* since Chrome 148
 
   List of CPU temperature readings from each thermal zone of the CPU. Temperatures are in degrees Celsius.
 
@@ -80,7 +80,7 @@ Use the `system.cpu` API to query CPU metadata.
 ### getInfo()
 
 ```typescript
-chrome.system.cpu.getInfo(): Promise<https://developer.chrome.com/docs/extensions/reference/api/system/cpu#type-CpuInfo>
+browser.system.cpu.getInfo(): Promise<https://developer.chrome.com/docs/extensions/reference/api/system/cpu#type-CpuInfo>
 ```
 
 Queries basic CPU information of the system.
@@ -88,6 +88,6 @@ Queries basic CPU information of the system.
 #### Returns
 
 - Promise\<[CpuInfo](https://developer.chrome.com/docs/extensions/reference/api/system/cpu#type-CpuInfo)\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
 <br />

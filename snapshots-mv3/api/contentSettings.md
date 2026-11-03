@@ -121,7 +121,7 @@ repository.
 
 ### AutoVerifyContentSetting
 
-Chrome 113+
+Chrome 113+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -132,7 +132,7 @@ Chrome 113+
 
 ### CameraContentSetting
 
-Chrome 46+
+Chrome 46+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -144,7 +144,7 @@ Chrome 46+
 
 ### ClipboardContentSetting
 
-Chrome 121+
+Chrome 121+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -176,7 +176,7 @@ Chrome 121+
 
       Where to clear the setting (default: regular).
   - returnsPromise\<void\>
-    Chrome 96+
+    Chrome 96+ browser.\* since Chrome 148
 - get void
 
   Gets the current content setting for a given pair of URLs.
@@ -204,7 +204,7 @@ Chrome 121+
 
       The secondary URL for which the content setting should be retrieved. Defaults to the primary URL. Note that the meaning of a secondary URL depends on the content type, and not all content types use secondary URLs.
   - returnsPromise\<object\>
-    Chrome 96+
+    Chrome 96+ browser.\* since Chrome 148
 - getResourceIdentifiers void
 
 
@@ -217,7 +217,7 @@ Chrome 121+
   <br />
 
   - returnsPromise\<[ResourceIdentifier](https://developer.chrome.com/docs/extensions/reference/api/contentSettings#type-ResourceIdentifier)\[\]\>
-    Chrome 96+
+    Chrome 96+ browser.\* since Chrome 148
 - set void
 
   Applies a new content setting rule.
@@ -248,11 +248,11 @@ Chrome 121+
 
       The setting applied by this rule. See the description of the individual ContentSetting objects for the possible values.
   - returnsPromise\<void\>
-    Chrome 96+
+    Chrome 96+ browser.\* since Chrome 148
 
 ### CookiesContentSetting
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -264,7 +264,7 @@ Chrome 44+
 
 ### FullscreenContentSetting
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Value
 
@@ -272,7 +272,7 @@ Chrome 44+
 
 ### ImagesContentSetting
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -283,7 +283,7 @@ Chrome 44+
 
 ### JavascriptContentSetting
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -294,7 +294,7 @@ Chrome 44+
 
 ### LocationContentSetting
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -306,7 +306,7 @@ Chrome 44+
 
 ### MicrophoneContentSetting
 
-Chrome 46+
+Chrome 46+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -318,7 +318,7 @@ Chrome 46+
 
 ### MouselockContentSetting
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Value
 
@@ -326,7 +326,7 @@ Chrome 44+
 
 ### MultipleAutomaticDownloadsContentSetting
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -338,7 +338,7 @@ Chrome 44+
 
 ### NotificationsContentSetting
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -350,7 +350,7 @@ Chrome 44+
 
 ### PluginsContentSetting
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Value
 
@@ -358,7 +358,7 @@ Chrome 44+
 
 ### PopupsContentSetting
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -369,7 +369,7 @@ Chrome 44+
 
 ### PpapiBrokerContentSetting
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Value
 
@@ -390,7 +390,7 @@ The only content type using resource identifiers is [`contentSettings.plugins`](
 
 ### Scope
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The scope of the ContentSetting. One of
 `regular`: setting for regular profile (which is inherited by the incognito profile if not overridden elsewhere),
@@ -405,7 +405,7 @@ The scope of the ContentSetting. One of
 
 ### SoundContentSetting
 
-Chrome 141+
+Chrome 141+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -431,7 +431,7 @@ The primary URL is the URL of the top-level frame. The secondary URL is not used
 
 ### autoVerify
 
-Chrome 113+
+Chrome 113+ browser.\* since Chrome 148
 
 Whether to allow sites to use the [Private State Tokens API](https://developer.chrome.com/docs/privacy-sandbox/trust-tokens/). One of
 `allow`: Allow sites to use the Private State Tokens API,
@@ -445,7 +445,7 @@ When calling `set()`, the primary URL pattern must be `<all_urls>`. The secondar
 
 ### camera
 
-Chrome 46+
+Chrome 46+ browser.\* since Chrome 148
 
 Whether to allow sites to access the camera. One of
 `allow`: Allow sites to access the camera,
@@ -461,7 +461,7 @@ NOTE: The 'allow' setting is not valid if both patterns are '\<all_urls\>'.
 
 ### clipboard
 
-Chrome 121+
+Chrome 121+ browser.\* since Chrome 148
 
 Whether to allow sites to access the clipboard via advanced capabilities of the Async Clipboard API. "Advanced" capabilities include anything besides writing built-in formats after a user gesture, i.e. the ability to read, the ability to write custom formats, and the ability to write without a user gesture. One of
 `allow`: Allow sites to use advanced clipboard capabilities,
@@ -534,7 +534,7 @@ The primary URL is the URL of the document which requested location data. The se
 
 ### microphone
 
-Chrome 46+
+Chrome 46+ browser.\* since Chrome 148
 
 Whether to allow sites to access the microphone. One of
 `allow`: Allow sites to access the microphone,

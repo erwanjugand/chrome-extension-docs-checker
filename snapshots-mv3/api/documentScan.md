@@ -28,7 +28,7 @@ content of paper documents on an attached document scanner.
 
 ## Availability
 
-Chrome 44+ ChromeOS only Availability for API members added later is shown with those members.
+Chrome 44+ browser.\* since Chrome 148 ChromeOS only Availability for API members added later is shown with those members.
 
 <br />
 
@@ -178,7 +178,7 @@ responses are shown.
     ...
     },
       "resolution": {
-        "name": "resolution",
+        "name";: "resolution",
         "type": OptionType.INT,
     ...
       },
@@ -246,18 +246,18 @@ demonstrates use of `startScan()` and `readScanData()` using the value of
       let imgParts = [];
       response = await browser.documentScan.readScanData(job);
       while (response.result == browser.documentScan.OperationResult.SUCCESS) {
-        if (response.data && response.data.byteLength > 0) {
+        if (resp&&onse.data  response.data.b>yteLength  0) {
             imgParts.push(response.data);
         } else {
           // Delay so hardware can make progress.
-          await new Promise(r => setTimeout(r, 100));
+          await new P>romise(r = setTimeout(r, 100));
         }
         response = await browser.documentScan.readScanData(job);
       }
       if (response.result != browser.documentScan.OperationResult.EOF) {
         return null;
       }
-      if (response.data && response.data.byteLength > 0) {
+      if (resp&&onse.data  response.data.b>yteLength  0) {
         imgParts.push(response.data);
       }
       return new Blob(imgParts, { type: "image/jpeg" });
@@ -349,7 +349,7 @@ manufacturer-defined groups. This example shows how to do that.
 
 ### CancelScanResponse
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -362,7 +362,7 @@ Chrome 125+
 
 ### CloseScannerResponse
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -375,7 +375,7 @@ Chrome 125+
 
 ### Configurability
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 How an option can be changed.
 
@@ -392,7 +392,7 @@ The option can be set by the user toggling or pushing a button on the scanner.
 
 ### ConnectionType
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 Indicates how the scanner is connected to the computer.
 
@@ -406,7 +406,7 @@ Indicates how the scanner is connected to the computer.
 
 ### ConstraintType
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 The data type of constraint represented by an [`OptionConstraint`](https://developer.chrome.com/docs/extensions/reference/api/documentScan#type-OptionConstraint).
 
@@ -427,7 +427,7 @@ The constraint on a specific list of `OptionType.STRING` values. The `OptionCons
 
 ### DeviceFilter
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -440,7 +440,7 @@ Chrome 125+
 
 ### GetOptionGroupsResponse
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -456,7 +456,7 @@ Chrome 125+
 
 ### GetScannerListResponse
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -469,7 +469,7 @@ Chrome 125+
 
 ### OpenScannerResponse
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -488,7 +488,7 @@ Chrome 125+
 
 ### OperationResult
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 An enum that indicates the result of each operation.
 
@@ -533,7 +533,7 @@ An error has occurred somewhere other than the calling application.
 
 ### OptionConstraint
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -545,7 +545,7 @@ Chrome 125+
 
 ### OptionGroup
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -558,7 +558,7 @@ Chrome 125+
 
 ### OptionSetting
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -574,7 +574,7 @@ Chrome 125+
 
 ### OptionType
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 The data type of an option.
 
@@ -599,7 +599,7 @@ Grouping option. No value. This is included for compatibility, but will not norm
 
 ### OptionUnit
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 Indicates the data type for [`ScannerOption.unit`](https://developer.chrome.com/docs/extensions/reference/api/documentScan#property-ScannerOption-unit).
 
@@ -624,7 +624,7 @@ The value is measured in microseconds, for example, exposure time.
 
 ### ReadScanDataResponse
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -643,7 +643,7 @@ Chrome 125+
 
 ### ScannerInfo
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -677,7 +677,7 @@ Chrome 125+
 
 ### ScannerOption
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -745,7 +745,7 @@ Chrome 125+
 
 ### SetOptionResult
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -758,7 +758,7 @@ Chrome 125+
 
 ### SetOptionsResponse
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -776,7 +776,7 @@ Chrome 125+
 
 ### StartScanOptions
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -789,7 +789,7 @@ Chrome 125+
 
 ### StartScanResponse
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -807,10 +807,10 @@ Chrome 125+
 
 ### cancelScan()
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 ```typescript
-chrome.documentScan.cancelScan(
+browser.documentScan.cancelScan(
   job: string,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/documentScan#type-CancelScanResponse>
 ```
@@ -831,10 +831,10 @@ Cancels a started scan and returns a Promise that resolves with a [`CancelScanRe
 
 ### closeScanner()
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 ```typescript
-chrome.documentScan.closeScanner(
+browser.documentScan.closeScanner(
   scannerHandle: string,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/documentScan#type-CloseScannerResponse>
 ```
@@ -855,10 +855,10 @@ Closes the scanner with the passed in handle and returns a Promise that resolves
 
 ### getOptionGroups()
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 ```typescript
-chrome.documentScan.getOptionGroups(
+browser.documentScan.getOptionGroups(
   scannerHandle: string,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/documentScan#type-GetOptionGroupsResponse>
 ```
@@ -879,10 +879,10 @@ Gets the group names and member options from a scanner previously opened by [`op
 
 ### getScannerList()
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 ```typescript
-chrome.documentScan.getScannerList(
+browser.documentScan.getScannerList(
   filter: DeviceFilter,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/documentScan#type-GetScannerListResponse>
 ```
@@ -903,10 +903,10 @@ Gets the list of available scanners and returns a Promise that resolves with a [
 
 ### openScanner()
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 ```typescript
-chrome.documentScan.openScanner(
+browser.documentScan.openScanner(
   scannerId: string,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/documentScan#type-OpenScannerResponse>
 ```
@@ -927,10 +927,10 @@ Opens a scanner for exclusive access and returns a Promise that resolves with an
 
 ### readScanData()
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 ```typescript
-chrome.documentScan.readScanData(
+browser.documentScan.readScanData(
   job: string,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/documentScan#type-ReadScanDataResponse>
 ```
@@ -956,7 +956,7 @@ When the scan job completes, the response will have the result value of `EOF`. T
 ### scan()
 
 ```typescript
-chrome.documentScan.scan(
+browser.documentScan.scan(
   options: ScanOptions,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/documentScan#type-ScanResults>
 ```
@@ -972,16 +972,16 @@ Performs a document scan and returns a Promise that resolves with a [`ScanResult
 #### Returns
 
 - Promise\<[ScanResults](https://developer.chrome.com/docs/extensions/reference/api/documentScan#type-ScanResults)\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Returns a Promise which resolves with the scan results.
 
 ### setOptions()
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 ```typescript
-chrome.documentScan.setOptions(
+browser.documentScan.setOptions(
   scannerHandle: string,
   options: OptionSetting[],
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/documentScan#type-SetOptionsResponse>
@@ -1006,10 +1006,10 @@ Sets options on the specified scanner and returns a Promise that resolves with a
 
 ### startScan()
 
-Chrome 125+
+Chrome 125+ browser.\* since Chrome 148
 
 ```typescript
-chrome.documentScan.startScan(
+browser.documentScan.startScan(
   scannerHandle: string,
   options: StartScanOptions,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/documentScan#type-StartScanResponse>

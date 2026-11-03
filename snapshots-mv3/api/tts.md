@@ -165,7 +165,7 @@ To get a list of all voices, call `getVoices()` and pass it a function that rece
 
 ### EventType
 
-Chrome 54+
+Chrome 54+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -195,7 +195,7 @@ An event from the TTS engine to communicate the status of an utterance.
 
   The error description, if the event type is `error`.
 - length number optional
-  Chrome 74+
+  Chrome 74+ browser.\* since Chrome 148
 
   The length of the next part of the utterance. For example, in a `word` event, this is the length of the word which will be spoken next. It will be set to -1 if not set by the speech engine.
 - type [EventType](https://developer.chrome.com/docs/extensions/reference/api/tts#type-EventType)
@@ -204,7 +204,7 @@ An event from the TTS engine to communicate the status of an utterance.
 
 ### TtsOptions
 
-Chrome 77+
+Chrome 77+ browser.\* since Chrome 148
 
 The speech options for the TTS engine.
 
@@ -294,7 +294,7 @@ A description of a voice available for speech synthesis.
 
 ### VoiceGender
 
-Chrome 54+ Deprecated since Chrome 70
+Chrome 54+ browser.\* since Chrome 148 Deprecated since Chrome 70
 
 Gender is deprecated and is ignored.
 
@@ -312,7 +312,7 @@ Gender is deprecated and is ignored.
 ### getVoices()
 
 ```typescript
-chrome.tts.getVoices(): Promise<https://developer.chrome.com/docs/extensions/reference/api/tts#type-TtsVoice[]>
+browser.tts.getVoices(): Promise<https://developer.chrome.com/docs/extensions/reference/api/tts#type-TtsVoice[]>
 ```
 
 Gets an array of all available voices.
@@ -320,12 +320,12 @@ Gets an array of all available voices.
 #### Returns
 
 - Promise\<[TtsVoice](https://developer.chrome.com/docs/extensions/reference/api/tts#type-TtsVoice)\[\]\>
-  Chrome 101+
+  Chrome 101+ browser.\* since Chrome 148
 
 ### isSpeaking()
 
 ```typescript
-chrome.tts.isSpeaking(): Promise<boolean>
+browser.tts.isSpeaking(): Promise<boolean>
 ```
 
 Checks whether the engine is currently speaking. On Mac OS X, the result is true whenever the system speech engine is speaking, even if the speech wasn't initiated by Chrome.
@@ -333,12 +333,12 @@ Checks whether the engine is currently speaking. On Mac OS X, the result is true
 #### Returns
 
 - Promise\<boolean\>
-  Chrome 101+
+  Chrome 101+ browser.\* since Chrome 148
 
 ### pause()
 
 ```typescript
-chrome.tts.pause(): void
+browser.tts.pause(): void
 ```
 
 Pauses speech synthesis, potentially in the middle of an utterance. A call to resume or stop will un-pause speech.
@@ -346,7 +346,7 @@ Pauses speech synthesis, potentially in the middle of an utterance. A call to re
 ### resume()
 
 ```typescript
-chrome.tts.resume(): void
+browser.tts.resume(): void
 ```
 
 If speech was paused, resumes speaking where it left off.
@@ -354,7 +354,7 @@ If speech was paused, resumes speaking where it left off.
 ### speak()
 
 ```typescript
-chrome.tts.speak(
+browser.tts.speak(
   utterance: string,
   options?: TtsOptions,
 ): Promise<void>
@@ -374,14 +374,14 @@ Speaks text using a text-to-speech engine.
 #### Returns
 
 - Promise\<void\>
-  Chrome 101+
+  Chrome 101+ browser.\* since Chrome 148
 
   Resolves right away, before speech finishes. If an error occurs, the promise will be rejected. Use options.onEvent to get more detailed feedback.
 
 ### stop()
 
 ```typescript
-chrome.tts.stop(): void
+browser.tts.stop(): void
 ```
 
 Stops any current speech and flushes the queue of any pending utterances. In addition, if speech was paused, it will now be un-paused for the next call to speak.
@@ -390,10 +390,10 @@ Stops any current speech and flushes the queue of any pending utterances. In add
 
 ### onVoicesChanged
 
-Chrome 124+
+Chrome 124+ browser.\* since Chrome 148
 
 ```typescript
-chrome.tts.onVoicesChanged.addListener(
+browser.tts.onVoicesChanged.addListener(
   callback: function,
 )
 ```

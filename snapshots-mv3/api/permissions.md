@@ -156,10 +156,10 @@ calling `permissions.request()` usually adds the permission back without prompti
 
 ### addHostAccessRequest()
 
-Chrome 133+ MV3+
+Chrome 133+ browser.\* since Chrome 148 MV3+
 
 ```typescript
-chrome.permissions.addHostAccessRequest(
+browser.permissions.addHostAccessRequest(
   request: object,
 ): Promise<void>
 ```
@@ -186,7 +186,7 @@ Adds a host access request. Request will only be signaled to the user if extensi
 ### contains()
 
 ```typescript
-chrome.permissions.contains(
+browser.permissions.contains(
   permissions: Permissions,
 ): Promise<boolean>
 ```
@@ -200,12 +200,12 @@ Checks if the extension has the specified permissions.
 #### Returns
 
 - Promise\<boolean\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### getAll()
 
 ```typescript
-chrome.permissions.getAll(): Promise<https://developer.chrome.com/docs/extensions/reference/api/permissions#type-Permissions>
+browser.permissions.getAll(): Promise<https://developer.chrome.com/docs/extensions/reference/api/permissions#type-Permissions>
 ```
 
 Gets the extension's current set of permissions.
@@ -213,12 +213,12 @@ Gets the extension's current set of permissions.
 #### Returns
 
 - Promise\<[Permissions](https://developer.chrome.com/docs/extensions/reference/api/permissions#type-Permissions)\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### remove()
 
 ```typescript
-chrome.permissions.remove(
+browser.permissions.remove(
   permissions: Permissions,
 ): Promise<boolean>
 ```
@@ -232,14 +232,14 @@ Removes access to the specified permissions. If there are any problems removing 
 #### Returns
 
 - Promise\<boolean\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### removeHostAccessRequest()
 
-Chrome 133+ MV3+
+Chrome 133+ browser.\* since Chrome 148 MV3+
 
 ```typescript
-chrome.permissions.removeHostAccessRequest(
+browser.permissions.removeHostAccessRequest(
   request: object,
 ): Promise<void>
 ```
@@ -266,7 +266,7 @@ Removes a host access request, if existent.
 ### request()
 
 ```typescript
-chrome.permissions.request(
+browser.permissions.request(
   permissions: Permissions,
 ): Promise<boolean>
 ```
@@ -280,14 +280,14 @@ Requests access to the specified permissions, displaying a prompt to the user if
 #### Returns
 
 - Promise\<boolean\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ## Events
 
 ### onAdded
 
 ```typescript
-chrome.permissions.onAdded.addListener(
+browser.permissions.onAdded.addListener(
   callback: function,
 )
 ```
@@ -312,7 +312,7 @@ Fired when the extension acquires new permissions.
 ### onRemoved
 
 ```typescript
-chrome.permissions.onRemoved.addListener(
+browser.permissions.onRemoved.addListener(
   callback: function,
 )
 ```

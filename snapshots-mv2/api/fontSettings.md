@@ -133,6 +133,7 @@ An ISO 15924 script code. The default, or global, script is represented by scrip
 
 "Afak"   
 "Arab"   
+"Aran"   
 "Armi"   
 "Armn"   
 "Avst"   

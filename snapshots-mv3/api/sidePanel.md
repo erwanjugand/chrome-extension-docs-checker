@@ -32,7 +32,7 @@ manifest.json:
 
 ## Availability
 
-Chrome 114+ MV3+
+Chrome 114+ browser.\* since Chrome 148 MV3+
 
 <br />
 
@@ -230,7 +230,7 @@ For more Side Panel API extensions demos, explore any of the following extension
 
 ### CloseOptions
 
-Chrome 141+
+Chrome 141+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -251,7 +251,7 @@ Chrome 141+
 
 ### OpenOptions
 
-Chrome 116+
+Chrome 116+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -272,7 +272,7 @@ Chrome 116+
 
 ### PanelClosedInfo
 
-Chrome 142+
+Chrome 142+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -288,7 +288,7 @@ Chrome 142+
 
 ### PanelLayout
 
-Chrome 140+
+Chrome 140+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -296,7 +296,7 @@ Chrome 140+
 
 ### PanelOpenedInfo
 
-Chrome 141+
+Chrome 141+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -326,7 +326,7 @@ Chrome 141+
 
 ### Side
 
-Chrome 140+
+Chrome 140+ browser.\* since Chrome 148
 
 Defines the possible alignment for the side panel in the browser UI.
 
@@ -349,10 +349,10 @@ Defines the possible alignment for the side panel in the browser UI.
 
 ### close()
 
-Chrome 141+
+Chrome 141+ browser.\* since Chrome 148
 
 ```typescript
-chrome.sidePanel.close(
+browser.sidePanel.close(
   options: CloseOptions,
 ): Promise<void>
 ```
@@ -373,10 +373,10 @@ Closes the extension's side panel. This is a no-op if the panel is already close
 
 ### getLayout()
 
-Chrome 140+
+Chrome 140+ browser.\* since Chrome 148
 
 ```typescript
-chrome.sidePanel.getLayout(): Promise<https://developer.chrome.com/docs/extensions/reference/api/sidePanel#type-PanelLayout>
+browser.sidePanel.getLayout(): Promise<https://developer.chrome.com/docs/extensions/reference/api/sidePanel#type-PanelLayout>
 ```
 
 Returns the side panel's current layout.
@@ -390,7 +390,7 @@ Returns the side panel's current layout.
 ### getOptions()
 
 ```typescript
-chrome.sidePanel.getOptions(
+browser.sidePanel.getOptions(
   options: GetPanelOptions,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/sidePanel#type-PanelOptions>
 ```
@@ -412,7 +412,7 @@ Returns the active panel configuration.
 ### getPanelBehavior()
 
 ```typescript
-chrome.sidePanel.getPanelBehavior(): Promise<https://developer.chrome.com/docs/extensions/reference/api/sidePanel#type-PanelBehavior>
+browser.sidePanel.getPanelBehavior(): Promise<https://developer.chrome.com/docs/extensions/reference/api/sidePanel#type-PanelBehavior>
 ```
 
 Returns the extension's current side panel behavior.
@@ -425,10 +425,10 @@ Returns the extension's current side panel behavior.
 
 ### open()
 
-Chrome 116+
+Chrome 116+ browser.\* since Chrome 148
 
 ```typescript
-chrome.sidePanel.open(
+browser.sidePanel.open(
   options: OpenOptions,
 ): Promise<void>
 ```
@@ -450,7 +450,7 @@ Opens the side panel for the extension. This may only be called in response to a
 ### setOptions()
 
 ```typescript
-chrome.sidePanel.setOptions(
+browser.sidePanel.setOptions(
   options: PanelOptions,
 ): Promise<void>
 ```
@@ -472,7 +472,7 @@ Configures the side panel.
 ### setPanelBehavior()
 
 ```typescript
-chrome.sidePanel.setPanelBehavior(
+browser.sidePanel.setPanelBehavior(
   behavior: PanelBehavior,
 ): Promise<void>
 ```
@@ -495,10 +495,10 @@ Configures the extension's side panel behavior. This is an upsert operation.
 
 ### onClosed
 
-Chrome 142+
+Chrome 142+ browser.\* since Chrome 148
 
 ```typescript
-chrome.sidePanel.onClosed.addListener(
+browser.sidePanel.onClosed.addListener(
   callback: function,
 )
 ```
@@ -522,10 +522,10 @@ Fired when the extension's side panel is closed.
 
 ### onOpened
 
-Chrome 141+
+Chrome 141+ browser.\* since Chrome 148
 
 ```typescript
-chrome.sidePanel.onOpened.addListener(
+browser.sidePanel.onOpened.addListener(
   callback: function,
 )
 ```

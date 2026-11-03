@@ -120,7 +120,7 @@ A resource within the inspected page, such as a document, a script, or an image.
   <br />
 
   - returnsPromise\<object\>
-    Chrome 151+
+    Chrome 151+ browser.\* since Chrome 152
 
     A function that receives resource content when the request completes.
 - setContent void
@@ -143,7 +143,7 @@ A resource within the inspected page, such as a document, a script, or an image.
 
     True if the user has finished editing the resource, and the new content of the resource should be persisted; false if this is a minor change sent in progress of the user editing the resource.
   - returnsPromise\<object\>
-    Chrome 151+
+    Chrome 151+ browser.\* since Chrome 152
 
     A function called upon request completion.
 
@@ -162,7 +162,7 @@ number
 ### eval()
 
 ```typescript
-chrome.devtools.inspectedWindow.eval(
+browser.devtools.inspectedWindow.eval(
   expression: string,
   options?: object,
 ): Promise<object>
@@ -182,7 +182,7 @@ Evaluates a JavaScript expression in the context of the main frame of the inspec
 
     If specified, the expression is evaluated on the iframe whose URL matches the one specified. By default, the expression is evaluated in the top frame of the inspected page.
   - scriptExecutionContext string optional
-    Chrome 107+
+    Chrome 107+ browser.\* since Chrome 152
 
     Evaluate the expression in the context of a content script of an extension that matches the specified origin. If given, scriptExecutionContext overrides the 'true' setting on useContentScriptContext.
   - useContentScriptContext boolean optional
@@ -192,14 +192,14 @@ Evaluates a JavaScript expression in the context of the main frame of the inspec
 #### Returns
 
 - Promise\<object\>
-  Chrome 151+
+  Chrome 151+ browser.\* since Chrome 152
 
   A function called when evaluation completes.
 
 ### getResources()
 
 ```typescript
-chrome.devtools.inspectedWindow.getResources(): Promise<https://developer.chrome.com/docs/extensions/reference/api/devtools/inspectedWindow#type-Resource[]>
+browser.devtools.inspectedWindow.getResources(): Promise<https://developer.chrome.com/docs/extensions/reference/api/devtools/inspectedWindow#type-Resource[]>
 ```
 
 Retrieves the list of resources from the inspected page.
@@ -207,14 +207,14 @@ Retrieves the list of resources from the inspected page.
 #### Returns
 
 - Promise\<[Resource](https://developer.chrome.com/docs/extensions/reference/api/devtools/inspectedWindow#type-Resource)\[\]\>
-  Chrome 151+
+  Chrome 151+ browser.\* since Chrome 152
 
   A function that receives the list of resources when the request completes.
 
 ### reload()
 
 ```typescript
-chrome.devtools.inspectedWindow.reload(
+browser.devtools.inspectedWindow.reload(
   reloadOptions?: object,
 ): void
 ```
@@ -239,7 +239,7 @@ Reloads the inspected page.
 ### onResourceAdded
 
 ```typescript
-chrome.devtools.inspectedWindow.onResourceAdded.addListener(
+browser.devtools.inspectedWindow.onResourceAdded.addListener(
   callback: function,
 )
 ```
@@ -264,7 +264,7 @@ Fired when a new resource is added to the inspected page.
 ### onResourceContentCommitted
 
 ```typescript
-chrome.devtools.inspectedWindow.onResourceContentCommitted.addListener(
+browser.devtools.inspectedWindow.onResourceContentCommitted.addListener(
   callback: function,
 )
 ```

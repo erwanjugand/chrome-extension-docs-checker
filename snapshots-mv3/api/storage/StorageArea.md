@@ -7,7 +7,7 @@ The `StorageArea` interface is used by the [`browser.storage`](https://developer
 ### clear()
 
 ```typescript
-chrome.storage.StorageArea.clear(): Promise<void>
+browser.storage.StorageArea.clear(): Promise<void>
 ```
 
 Removes all items from storage.
@@ -15,14 +15,14 @@ Removes all items from storage.
 #### Returns
 
 - Promise\<void\>
-  Chrome 95+
+  Chrome 95+ browser.\* since Chrome 148
 
   Promise that resolves on success, or rejects on failure.
 
 ### get()
 
 ```typescript
-chrome.storage.StorageArea.get(
+browser.storage.StorageArea.get(
   keys?: string | string[] | object,
 ): Promise<object>
 ```
@@ -38,14 +38,14 @@ Gets one or more items from storage.
 #### Returns
 
 - Promise\<object\>
-  Chrome 95+
+  Chrome 95+ browser.\* since Chrome 148
 
   Promise that resolves with an object containing a key-value map for the requested items, or rejects on failure.
 
 ### getBytesInUse()
 
 ```typescript
-chrome.storage.StorageArea.getBytesInUse(
+browser.storage.StorageArea.getBytesInUse(
   keys?: string | string[],
 ): Promise<number>
 ```
@@ -61,16 +61,16 @@ Gets the amount of space (in bytes) being used by one or more items.
 #### Returns
 
 - Promise\<number\>
-  Chrome 95+
+  Chrome 95+ browser.\* since Chrome 148
 
   Promise that resolves with the amount of space being used by storage, or rejects on failure.
 
 ### getKeys()
 
-Chrome 130+
+Chrome 130+ browser.\* since Chrome 148
 
 ```typescript
-chrome.storage.StorageArea.getKeys(): Promise<string[]>
+browser.storage.StorageArea.getKeys(): Promise<string[]>
 ```
 
 Gets all keys from storage.
@@ -84,7 +84,7 @@ Gets all keys from storage.
 ### remove()
 
 ```typescript
-chrome.storage.StorageArea.remove(
+browser.storage.StorageArea.remove(
   keys: string | string[],
 ): Promise<void>
 ```
@@ -100,14 +100,14 @@ Removes one or more items from storage.
 #### Returns
 
 - Promise\<void\>
-  Chrome 95+
+  Chrome 95+ browser.\* since Chrome 148
 
   Promise that resolves on success, or rejects on failure.
 
 ### set()
 
 ```typescript
-chrome.storage.StorageArea.set(
+browser.storage.StorageArea.set(
   items: object,
 ): Promise<void>
 ```
@@ -125,16 +125,16 @@ Sets multiple items.
 #### Returns
 
 - Promise\<void\>
-  Chrome 95+
+  Chrome 95+ browser.\* since Chrome 148
 
   Promise that resolves on success, or rejects on failure.
 
 ### setAccessLevel()
 
-Chrome 102+
+Chrome 102+ browser.\* since Chrome 148
 
 ```typescript
-chrome.storage.StorageArea.setAccessLevel(
+browser.storage.StorageArea.setAccessLevel(
   accessOptions: object,
 ): Promise<void>
 ```
@@ -158,10 +158,10 @@ Sets the desired access level for the storage area. By default, `session` storag
 
 ### onChanged
 
-Chrome 73+
+Chrome 73+ browser.\* since Chrome 148
 
 ```typescript
-chrome.storage.StorageArea.onChanged.addListener(
+browser.storage.StorageArea.onChanged.addListener(
   callback: function,
 )
 ```

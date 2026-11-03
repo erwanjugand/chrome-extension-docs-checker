@@ -130,6 +130,7 @@ An ISO 15924 script code. The default, or global, script is represented by scrip
 
 "Afak"   
 "Arab"   
+"Aran"   
 "Armi"   
 "Armn"   
 "Avst"   
@@ -288,7 +289,7 @@ An ISO 15924 script code. The default, or global, script is represented by scrip
 ### clearDefaultFixedFontSize()
 
 ```typescript
-chrome.fontSettings.clearDefaultFixedFontSize(
+browser.fontSettings.clearDefaultFixedFontSize(
   details?: object,
 ): Promise<void>
 ```
@@ -304,12 +305,12 @@ Clears the default fixed font size set by this extension, if any.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### clearDefaultFontSize()
 
 ```typescript
-chrome.fontSettings.clearDefaultFontSize(
+browser.fontSettings.clearDefaultFontSize(
   details?: object,
 ): Promise<void>
 ```
@@ -325,12 +326,12 @@ Clears the default font size set by this extension, if any.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### clearFont()
 
 ```typescript
-chrome.fontSettings.clearFont(
+browser.fontSettings.clearFont(
   details: object,
 ): Promise<void>
 ```
@@ -350,12 +351,12 @@ Clears the font set by this extension, if any.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### clearMinimumFontSize()
 
 ```typescript
-chrome.fontSettings.clearMinimumFontSize(
+browser.fontSettings.clearMinimumFontSize(
   details?: object,
 ): Promise<void>
 ```
@@ -371,12 +372,12 @@ Clears the minimum font size set by this extension, if any.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### getDefaultFixedFontSize()
 
 ```typescript
-chrome.fontSettings.getDefaultFixedFontSize(
+browser.fontSettings.getDefaultFixedFontSize(
   details?: object,
 ): Promise<object>
 ```
@@ -392,12 +393,12 @@ Gets the default size for fixed width fonts.
 #### Returns
 
 - Promise\<object\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### getDefaultFontSize()
 
 ```typescript
-chrome.fontSettings.getDefaultFontSize(
+browser.fontSettings.getDefaultFontSize(
   details?: object,
 ): Promise<object>
 ```
@@ -413,12 +414,12 @@ Gets the default font size.
 #### Returns
 
 - Promise\<object\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### getFont()
 
 ```typescript
-chrome.fontSettings.getFont(
+browser.fontSettings.getFont(
   details: object,
 ): Promise<object>
 ```
@@ -438,12 +439,12 @@ Gets the font for a given script and generic font family.
 #### Returns
 
 - Promise\<object\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### getFontList()
 
 ```typescript
-chrome.fontSettings.getFontList(): Promise<https://developer.chrome.com/docs/extensions/reference/api/fontSettings#type-FontName[]>
+browser.fontSettings.getFontList(): Promise<https://developer.chrome.com/docs/extensions/reference/api/fontSettings#type-FontName[]>
 ```
 
 Gets a list of fonts on the system.
@@ -451,12 +452,12 @@ Gets a list of fonts on the system.
 #### Returns
 
 - Promise\<[FontName](https://developer.chrome.com/docs/extensions/reference/api/fontSettings#type-FontName)\[\]\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### getMinimumFontSize()
 
 ```typescript
-chrome.fontSettings.getMinimumFontSize(
+browser.fontSettings.getMinimumFontSize(
   details?: object,
 ): Promise<object>
 ```
@@ -472,12 +473,12 @@ Gets the minimum font size.
 #### Returns
 
 - Promise\<object\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### setDefaultFixedFontSize()
 
 ```typescript
-chrome.fontSettings.setDefaultFixedFontSize(
+browser.fontSettings.setDefaultFixedFontSize(
   details: object,
 ): Promise<void>
 ```
@@ -494,12 +495,12 @@ Sets the default size for fixed width fonts.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### setDefaultFontSize()
 
 ```typescript
-chrome.fontSettings.setDefaultFontSize(
+browser.fontSettings.setDefaultFontSize(
   details: object,
 ): Promise<void>
 ```
@@ -516,12 +517,12 @@ Sets the default font size.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### setFont()
 
 ```typescript
-chrome.fontSettings.setFont(
+browser.fontSettings.setFont(
   details: object,
 ): Promise<void>
 ```
@@ -544,12 +545,12 @@ Sets the font for a given script and generic font family.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### setMinimumFontSize()
 
 ```typescript
-chrome.fontSettings.setMinimumFontSize(
+browser.fontSettings.setMinimumFontSize(
   details: object,
 ): Promise<void>
 ```
@@ -566,14 +567,14 @@ Sets the minimum font size.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ## Events
 
 ### onDefaultFixedFontSizeChanged
 
 ```typescript
-chrome.fontSettings.onDefaultFixedFontSizeChanged.addListener(
+browser.fontSettings.onDefaultFixedFontSizeChanged.addListener(
   callback: function,
 )
 ```
@@ -604,7 +605,7 @@ Fired when the default fixed font size setting changes.
 ### onDefaultFontSizeChanged
 
 ```typescript
-chrome.fontSettings.onDefaultFontSizeChanged.addListener(
+browser.fontSettings.onDefaultFontSizeChanged.addListener(
   callback: function,
 )
 ```
@@ -635,7 +636,7 @@ Fired when the default font size setting changes.
 ### onFontChanged
 
 ```typescript
-chrome.fontSettings.onFontChanged.addListener(
+browser.fontSettings.onFontChanged.addListener(
   callback: function,
 )
 ```
@@ -672,7 +673,7 @@ Fired when a font setting changes.
 ### onMinimumFontSizeChanged
 
 ```typescript
-chrome.fontSettings.onMinimumFontSizeChanged.addListener(
+browser.fontSettings.onMinimumFontSizeChanged.addListener(
   callback: function,
 )
 ```

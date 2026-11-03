@@ -20,7 +20,7 @@ The `chrome.extension` API has utilities that can be used by any extension page.
 
 ### ViewType
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The type of extension view.
 
@@ -48,7 +48,7 @@ boolean
 Foreground only
 
 ```typescript
-chrome.extension.getBackgroundPage(): Window | undefined
+browser.extension.getBackgroundPage(): Window | undefined
 ```
 
 Returns the JavaScript 'window' object for the background page running inside the current extension. Returns null if the extension has no background page.
@@ -62,7 +62,7 @@ Returns the JavaScript 'window' object for the background page running inside th
 Foreground only
 
 ```typescript
-chrome.extension.getViews(
+browser.extension.getViews(
   fetchProperties?: object,
 ): Window[]
 ```
@@ -73,7 +73,7 @@ Returns an array of the JavaScript 'window' objects for each of the pages runnin
 
 - fetchProperties object optional
   - tabId number optional
-    Chrome 54+
+    Chrome 54+ browser.\* since Chrome 148
 
     Find a view according to a tab id. If this field is omitted, returns all views.
   - type [ViewType](https://developer.chrome.com/docs/extensions/reference/api/extension#type-ViewType) optional
@@ -92,7 +92,7 @@ Returns an array of the JavaScript 'window' objects for each of the pages runnin
 ### isAllowedFileSchemeAccess()
 
 ```typescript
-chrome.extension.isAllowedFileSchemeAccess(): Promise<boolean>
+browser.extension.isAllowedFileSchemeAccess(): Promise<boolean>
 ```
 
 Retrieves the state of the extension's access to the 'file://' scheme. This corresponds to the user-controlled per-extension 'Allow access to File URLs' setting accessible via the chrome://extensions page.
@@ -100,12 +100,12 @@ Retrieves the state of the extension's access to the 'file://' scheme. This corr
 #### Returns
 
 - Promise\<boolean\>
-  Chrome 99+
+  Chrome 99+ browser.\* since Chrome 148
 
 ### isAllowedIncognitoAccess()
 
 ```typescript
-chrome.extension.isAllowedIncognitoAccess(): Promise<boolean>
+browser.extension.isAllowedIncognitoAccess(): Promise<boolean>
 ```
 
 Retrieves the state of the extension's access to Incognito-mode. This corresponds to the user-controlled per-extension 'Allowed in Incognito' setting accessible via the chrome://extensions page.
@@ -113,12 +113,12 @@ Retrieves the state of the extension's access to Incognito-mode. This correspond
 #### Returns
 
 - Promise\<boolean\>
-  Chrome 99+
+  Chrome 99+ browser.\* since Chrome 148
 
 ### setUpdateUrlData()
 
 ```typescript
-chrome.extension.setUpdateUrlData(
+browser.extension.setUpdateUrlData(
   data: string,
 ): void
 ```
@@ -128,7 +128,5 @@ Sets the value of the ap CGI parameter used in the extension's update URL. This 
 #### Parameters
 
 - data string
-
-## Events
 
 <br />

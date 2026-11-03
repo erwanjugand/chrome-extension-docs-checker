@@ -136,7 +136,7 @@ An interface that allows access to a Chrome browser setting. See [`accessibility
 
       Where to clear the setting (default: regular).
   - returnsPromise\<void\>
-    Chrome 96+
+    Chrome 96+ browser.\* since Chrome 148
 
     Called at the completion of the clear operation.
 - get void
@@ -159,7 +159,7 @@ An interface that allows access to a Chrome browser setting. See [`accessibility
 
       Whether to return the value that applies to the incognito session (default false).
   - returnsPromise\<object\>
-    Chrome 96+
+    Chrome 96+ browser.\* since Chrome 148
 - set void
 
   Sets the value of a setting.
@@ -184,13 +184,13 @@ An interface that allows access to a Chrome browser setting. See [`accessibility
       The value of the setting.
       Note that every setting has a specific value type, which is described together with the setting. An extension should *not* set a value of a different type.
   - returnsPromise\<void\>
-    Chrome 96+
+    Chrome 96+ browser.\* since Chrome 148
 
     Called at the completion of the set operation.
 
 ### ChromeSettingScope
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The scope of the ChromeSetting. One of
 
@@ -210,7 +210,7 @@ The scope of the ChromeSetting. One of
 
 ### LevelOfControl
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 One of
 

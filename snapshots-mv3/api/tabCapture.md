@@ -108,7 +108,7 @@ To learn more about how to use the `browser.tabCapture` API, see
 
 ### GetMediaStreamOptions
 
-Chrome 71+
+Chrome 71+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -144,7 +144,7 @@ Chrome 71+
 Foreground only
 
 ```typescript
-chrome.tabCapture.capture(
+browser.tabCapture.capture(
   options: CaptureOptions,
   callback: function,
 ): void
@@ -173,7 +173,7 @@ Captures the visible area of the currently active tab. Capture can only be start
 ### getCapturedTabs()
 
 ```typescript
-chrome.tabCapture.getCapturedTabs(): Promise<https://developer.chrome.com/docs/extensions/reference/api/tabCapture#type-CaptureInfo[]>
+browser.tabCapture.getCapturedTabs(): Promise<https://developer.chrome.com/docs/extensions/reference/api/tabCapture#type-CaptureInfo[]>
 ```
 
 Returns a list of tabs that have requested capture or are being captured, i.e. status != stopped and status != error. This allows extensions to inform the user that there is an existing tab capture that would prevent a new tab capture from succeeding (or to prevent redundant requests for the same tab).
@@ -181,16 +181,16 @@ Returns a list of tabs that have requested capture or are being captured, i.e. s
 #### Returns
 
 - Promise\<[CaptureInfo](https://developer.chrome.com/docs/extensions/reference/api/tabCapture#type-CaptureInfo)\[\]\>
-  Chrome 116+
+  Chrome 116+ browser.\* since Chrome 148
 
   Returns a Promise which resolves with CaptureInfo\[\] for captured tabs.
 
 ### getMediaStreamId()
 
-Chrome 71+
+Chrome 71+ browser.\* since Chrome 148
 
 ```typescript
-chrome.tabCapture.getMediaStreamId(
+browser.tabCapture.getMediaStreamId(
   options?: GetMediaStreamOptions,
 ): Promise<string>
 ```
@@ -204,7 +204,7 @@ Creates a stream ID to capture the target tab. Similar to chrome.tabCapture.capt
 #### Returns
 
 - Promise\<string\>
-  Chrome 116+
+  Chrome 116+ browser.\* since Chrome 148
 
   Returns a Promise which resolves with the result. If successful, the result is an opaque string that can be passed to the `getUserMedia()` API to generate a media stream that corresponds to the target tab. The created `streamId` can only be used once and expires after a few seconds if it is not used.
 
@@ -213,7 +213,7 @@ Creates a stream ID to capture the target tab. Similar to chrome.tabCapture.capt
 ### onStatusChanged
 
 ```typescript
-chrome.tabCapture.onStatusChanged.addListener(
+browser.tabCapture.onStatusChanged.addListener(
   callback: function,
 )
 ```

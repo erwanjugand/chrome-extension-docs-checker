@@ -27,7 +27,7 @@ Use the `chrome.enterprise.networkingAttributes` API to read information about y
 
 ## Availability
 
-Chrome 85+ ChromeOS only [Requires policy](https://support.google.com/chrome/a/answer/9296680)
+Chrome 85+ browser.\* since Chrome 148 ChromeOS only [Requires policy](https://support.google.com/chrome/a/answer/9296680)
 
 <br />
 
@@ -56,7 +56,7 @@ Chrome 85+ ChromeOS only [Requires policy](https://support.google.com/chrome/a/a
 ### getNetworkDetails()
 
 ```typescript
-chrome.enterprise.networkingAttributes.getNetworkDetails(): Promise<https://developer.chrome.com/docs/extensions/reference/api/enterprise/networkingAttributes#type-NetworkDetails>
+browser.enterprise.networkingAttributes.getNetworkDetails(): Promise<https://developer.chrome.com/docs/extensions/reference/api/enterprise/networkingAttributes#type-NetworkDetails>
 ```
 
 Retrieves the network details of the device's default network. If the user is not affiliated or the device is not connected to a network, [`runtime.lastError`](https://developer.chrome.com/docs/extensions/reference/api/runtime/#property-lastError) will be set with a failure reason.
@@ -64,7 +64,7 @@ Retrieves the network details of the device's default network. If the user is no
 #### Returns
 
 - Promise\<[NetworkDetails](https://developer.chrome.com/docs/extensions/reference/api/enterprise/networkingAttributes#type-NetworkDetails)\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Returns a Promise which resolves with the device's default network's [`NetworkDetails`](https://developer.chrome.com/docs/extensions/reference/api/enterprise/networkingAttributes#type-NetworkDetails).
 

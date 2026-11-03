@@ -72,7 +72,7 @@ The maximum number of [`sessions.Session`](https://developer.chrome.com/docs/ext
 ### getDevices()
 
 ```typescript
-chrome.sessions.getDevices(
+browser.sessions.getDevices(
   filter?: Filter,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/sessions#type-Device[]>
 ```
@@ -86,12 +86,12 @@ Retrieves all devices with synced sessions.
 #### Returns
 
 - Promise\<[Device](https://developer.chrome.com/docs/extensions/reference/api/sessions#type-Device)\[\]\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### getRecentlyClosed()
 
 ```typescript
-chrome.sessions.getRecentlyClosed(
+browser.sessions.getRecentlyClosed(
   filter?: Filter,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/sessions#type-Session[]>
 ```
@@ -105,12 +105,12 @@ Gets the list of recently closed tabs and/or windows.
 #### Returns
 
 - Promise\<[Session](https://developer.chrome.com/docs/extensions/reference/api/sessions#type-Session)\[\]\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### restore()
 
 ```typescript
-chrome.sessions.restore(
+browser.sessions.restore(
   sessionId?: string,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/sessions#type-Session>
 ```
@@ -126,14 +126,14 @@ Reopens a [`windows.Window`](https://developer.chrome.com/docs/extensions/refere
 #### Returns
 
 - Promise\<[Session](https://developer.chrome.com/docs/extensions/reference/api/sessions#type-Session)\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ## Events
 
 ### onChanged
 
 ```typescript
-chrome.sessions.onChanged.addListener(
+browser.sessions.onChanged.addListener(
   callback: function,
 )
 ```

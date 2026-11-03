@@ -61,7 +61,7 @@ repository.
 
 ### ContextType
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The different contexts a menu can appear in. Specifying 'all' is equivalent to the combination of all other contexts except for 'launcher' and 'tab'. The 'launcher' context is only supported by apps and is used to add menu items to the context menu that appears when clicking the app icon in the launcher/taskbar/dock/etc. Different platforms might put limitations on what is actually supported in a launcher context menu.
 
@@ -86,7 +86,7 @@ Applies to the context menu of a tab in the tab strip.
 
 ### CreateProperties
 
-Chrome 123+
+Chrome 123+ browser.\* since Chrome 148
 
 Properties of the new context menu item.
 
@@ -144,7 +144,7 @@ Properties of the new context menu item.
 
 ### ItemType
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The type of menu item.
 
@@ -170,7 +170,7 @@ Information sent when a context menu item is clicked.
 
   A flag indicating whether the element is editable (text input, textarea, etc.).
 - frameId number optional
-  Chrome 51+
+  Chrome 51+ browser.\* since Chrome 148
 
   The [ID of the frame](https://developer.chrome.com/docs/extensions/reference/webNavigation/#frame_ids) of the element where the context menu was clicked, if it was in a frame.
 - frameUrl string optional
@@ -216,7 +216,7 @@ The maximum number of top level extension items that can be added to an extensio
 ### create()
 
 ```typescript
-chrome.contextMenus.create(
+browser.contextMenus.create(
   createProperties: CreateProperties,
   callback?: function,
 ): number | string
@@ -247,7 +247,7 @@ Creates a new context menu item. If an error occurs during creation, it may not 
 ### remove()
 
 ```typescript
-chrome.contextMenus.remove(
+browser.contextMenus.remove(
   menuItemId: string | number,
 ): Promise<void>
 ```
@@ -263,14 +263,14 @@ Removes a context menu item.
 #### Returns
 
 - Promise\<void\>
-  Chrome 123+
+  Chrome 123+ browser.\* since Chrome 148
 
   Resolves when the context menu has been removed.
 
 ### removeAll()
 
 ```typescript
-chrome.contextMenus.removeAll(): Promise<void>
+browser.contextMenus.removeAll(): Promise<void>
 ```
 
 Removes all context menu items added by this extension.
@@ -278,14 +278,14 @@ Removes all context menu items added by this extension.
 #### Returns
 
 - Promise\<void\>
-  Chrome 123+
+  Chrome 123+ browser.\* since Chrome 148
 
   Resolves when removal is complete.
 
 ### update()
 
 ```typescript
-chrome.contextMenus.update(
+browser.contextMenus.update(
   id: string | number,
   updateProperties: object,
 ): Promise<void>
@@ -312,7 +312,7 @@ Updates a previously created context menu item.
   - title string optional
   - type [ItemType](https://developer.chrome.com/docs/extensions/reference/api/contextMenus#type-ItemType) optional
   - visible boolean optional
-    Chrome 62+
+    Chrome 62+ browser.\* since Chrome 148
 
     Whether the item is visible in the menu.
   - onclick void optional
@@ -327,16 +327,16 @@ Updates a previously created context menu item.
     <br />
 
     - info [OnClickData](https://developer.chrome.com/docs/extensions/reference/api/contextMenus#type-OnClickData)
-      Chrome 44+
+      Chrome 44+ browser.\* since Chrome 148
     - tab [Tab](https://developer.chrome.com/docs/extensions/reference/tabs/#type-Tab)
-      Chrome 44+
+      Chrome 44+ browser.\* since Chrome 148
 
       The details of the tab where the click took place. This parameter is not present for platform apps.
 
 #### Returns
 
 - Promise\<void\>
-  Chrome 123+
+  Chrome 123+ browser.\* since Chrome 148
 
   Resolves when the context menu has been updated.
 
@@ -345,7 +345,7 @@ Updates a previously created context menu item.
 ### onClicked
 
 ```typescript
-chrome.contextMenus.onClicked.addListener(
+browser.contextMenus.onClicked.addListener(
   callback: function,
 )
 ```

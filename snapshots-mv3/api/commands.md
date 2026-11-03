@@ -338,7 +338,7 @@ service-worker.js:
 ### getAll()
 
 ```typescript
-chrome.commands.getAll(): Promise<https://developer.chrome.com/docs/extensions/reference/api/commands#type-Command[]>
+browser.commands.getAll(): Promise<https://developer.chrome.com/docs/extensions/reference/api/commands#type-Command[]>
 ```
 
 Returns all the registered extension commands for this extension and their shortcut (if active). Before Chrome 110, this command did not return `_execute_action`.
@@ -346,7 +346,7 @@ Returns all the registered extension commands for this extension and their short
 #### Returns
 
 - Promise\<[Command](https://developer.chrome.com/docs/extensions/reference/api/commands#type-Command)\[\]\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Resolves with a list of the registered commands.
 
@@ -355,7 +355,7 @@ Returns all the registered extension commands for this extension and their short
 ### onCommand
 
 ```typescript
-chrome.commands.onCommand.addListener(
+browser.commands.onCommand.addListener(
   callback: function,
 )
 ```

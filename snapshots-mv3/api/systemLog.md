@@ -25,7 +25,7 @@ Use the `chrome.systemLog` API to record Chrome system logs from extensions.
 
 ## Availability
 
-Chrome 125+ ChromeOS only [Requires policy](https://support.google.com/chrome/a/answer/9296680)
+Chrome 125+ browser.\* since Chrome 148 ChromeOS only [Requires policy](https://support.google.com/chrome/a/answer/9296680)
 
 <br />
 
@@ -46,7 +46,7 @@ Chrome 125+ ChromeOS only [Requires policy](https://support.google.com/chrome/a/
 ### add()
 
 ```typescript
-chrome.systemLog.add(
+browser.systemLog.add(
   options: MessageOptions,
 ): Promise<void>
 ```

@@ -20,7 +20,7 @@ Use the `chrome.tabGroups` API to interact with the browser's tab grouping syste
 
 ## Availability
 
-Chrome 89+ MV3+
+Chrome 89+ browser.\* since Chrome 148 MV3+
 
 <br />
 
@@ -62,7 +62,7 @@ The group's color.
 
   The ID of the group. Group IDs are unique within a browser session.
 - shared boolean
-  Chrome 137+
+  Chrome 137+ browser.\* since Chrome 148
 
   Whether the group is shared.
 - title string optional
@@ -87,7 +87,7 @@ An ID that represents the absence of a group.
 ### get()
 
 ```typescript
-chrome.tabGroups.get(
+browser.tabGroups.get(
   groupId: number,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/tabGroups#type-TabGroup>
 ```
@@ -101,12 +101,12 @@ Retrieves details about the specified group.
 #### Returns
 
 - Promise\<[TabGroup](https://developer.chrome.com/docs/extensions/reference/api/tabGroups#type-TabGroup)\>
-  Chrome 90+
+  Chrome 90+ browser.\* since Chrome 148
 
 ### move()
 
 ```typescript
-chrome.tabGroups.move(
+browser.tabGroups.move(
   groupId: number,
   moveProperties: object,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/tabGroups#type-TabGroup | undefined>
@@ -130,12 +130,12 @@ Moves the group and all its tabs within its window, or to a new window.
 #### Returns
 
 - Promise\<[TabGroup](https://developer.chrome.com/docs/extensions/reference/api/tabGroups#type-TabGroup) \| undefined\>
-  Chrome 90+
+  Chrome 90+ browser.\* since Chrome 148
 
 ### query()
 
 ```typescript
-chrome.tabGroups.query(
+browser.tabGroups.query(
   queryInfo: object,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/tabGroups#type-TabGroup[]>
 ```
@@ -152,7 +152,7 @@ Gets all groups that have the specified properties, or all groups if no properti
 
     The color of the groups.
   - shared boolean optional
-    Chrome 137+
+    Chrome 137+ browser.\* since Chrome 148
 
     Whether the group is shared.
   - title string optional
@@ -165,12 +165,12 @@ Gets all groups that have the specified properties, or all groups if no properti
 #### Returns
 
 - Promise\<[TabGroup](https://developer.chrome.com/docs/extensions/reference/api/tabGroups#type-TabGroup)\[\]\>
-  Chrome 90+
+  Chrome 90+ browser.\* since Chrome 148
 
 ### update()
 
 ```typescript
-chrome.tabGroups.update(
+browser.tabGroups.update(
   groupId: number,
   updateProperties: object,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/tabGroups#type-TabGroup | undefined>
@@ -197,14 +197,14 @@ Modifies the properties of a group. Properties that are not specified in `update
 #### Returns
 
 - Promise\<[TabGroup](https://developer.chrome.com/docs/extensions/reference/api/tabGroups#type-TabGroup) \| undefined\>
-  Chrome 90+
+  Chrome 90+ browser.\* since Chrome 148
 
 ## Events
 
 ### onCreated
 
 ```typescript
-chrome.tabGroups.onCreated.addListener(
+browser.tabGroups.onCreated.addListener(
   callback: function,
 )
 ```
@@ -229,7 +229,7 @@ Fired when a group is created.
 ### onMoved
 
 ```typescript
-chrome.tabGroups.onMoved.addListener(
+browser.tabGroups.onMoved.addListener(
   callback: function,
 )
 ```
@@ -254,7 +254,7 @@ Fired when a group is moved within a window. Move events are still fired for the
 ### onRemoved
 
 ```typescript
-chrome.tabGroups.onRemoved.addListener(
+browser.tabGroups.onRemoved.addListener(
   callback: function,
 )
 ```
@@ -279,7 +279,7 @@ Fired when a group is closed, either directly by the user or automatically becau
 ### onUpdated
 
 ```typescript
-chrome.tabGroups.onUpdated.addListener(
+browser.tabGroups.onUpdated.addListener(
   callback: function,
 )
 ```

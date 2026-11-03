@@ -71,7 +71,7 @@ The following code creates an IME that converts typed letters to upper case.
 
 ### AssistiveWindowButton
 
-Chrome 85+
+Chrome 85+ browser.\* since Chrome 148
 
 ID of buttons in assistive window.
 
@@ -84,7 +84,7 @@ ID of buttons in assistive window.
 
 ### AssistiveWindowProperties
 
-Chrome 85+
+Chrome 85+ browser.\* since Chrome 148
 
 Properties of the assistive window.
 
@@ -100,7 +100,7 @@ Properties of the assistive window.
 
 ### AssistiveWindowType
 
-Chrome 85+
+Chrome 85+ browser.\* since Chrome 148
 
 Type of assistive window.
 
@@ -110,7 +110,7 @@ Type of assistive window.
 
 ### AutoCapitalizeType
 
-Chrome 69+
+Chrome 69+ browser.\* since Chrome 148
 
 The auto-capitalize type of the text field.
 
@@ -129,7 +129,7 @@ Describes an input Context
 #### Properties
 
 - autoCapitalize [AutoCapitalizeType](https://developer.chrome.com/docs/extensions/reference/api/input/ime#type-AutoCapitalizeType)
-  Chrome 69+
+  Chrome 69+ browser.\* since Chrome 148
 
   The auto-capitalize type of the text field.
 - autoComplete boolean
@@ -142,7 +142,7 @@ Describes an input Context
 
   This is used to specify targets of text field operations. This ID becomes invalid as soon as onBlur is called.
 - shouldDoLearning boolean
-  Chrome 68+
+  Chrome 68+ browser.\* since Chrome 148
 
   Whether text entered into the text field should be used to improve typing suggestions for the user.
 - spellCheck boolean
@@ -154,7 +154,7 @@ Describes an input Context
 
 ### InputContextType
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 Type of value this text field edits, (Text, Number, URL, etc)
 
@@ -181,7 +181,7 @@ See http://www.w3.org/TR/DOM-Level-3-Events/#events-KeyboardEvent
 
   Whether or not the ALT key is pressed.
 - altgrKey boolean optional
-  Chrome 79+
+  Chrome 79+ browser.\* since Chrome 148
 
   Whether or not the ALTGR key is pressed.
 - capsLock boolean optional
@@ -214,7 +214,7 @@ See http://www.w3.org/TR/DOM-Level-3-Events/#events-KeyboardEvent
 
 ### KeyboardEventType
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -250,7 +250,7 @@ A menu item used by an input method to interact with the user from the language 
 
 ### MenuItemStyle
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The type of menu item. Radio buttons between separators are considered grouped.
 
@@ -264,7 +264,7 @@ The type of menu item. Radio buttons between separators are considered grouped.
 
 ### MenuParameters
 
-Chrome 88+
+Chrome 88+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -277,7 +277,7 @@ Chrome 88+
 
 ### MouseButton
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 Which mouse buttons was clicked.
 
@@ -291,7 +291,7 @@ Which mouse buttons was clicked.
 
 ### ScreenType
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The screen type under which the IME is activated.
 
@@ -306,7 +306,7 @@ The screen type under which the IME is activated.
 
 ### UnderlineStyle
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The type of the underline to modify this segment.
 
@@ -320,7 +320,7 @@ The type of the underline to modify this segment.
 
 ### WindowPosition
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 Where to display the candidate window. If set to 'cursor', the window follows the cursor. If set to 'composition', the window is locked to the beginning of the composition.
 
@@ -336,7 +336,7 @@ Where to display the candidate window. If set to 'cursor', the window follows th
 ### clearComposition()
 
 ```typescript
-chrome.input.ime.clearComposition(
+browser.input.ime.clearComposition(
   parameters: object,
 ): Promise<boolean>
 ```
@@ -353,14 +353,14 @@ Clear the current composition. If this extension does not own the active IME, th
 #### Returns
 
 - Promise\<boolean\>
-  Chrome 111+
+  Chrome 111+ browser.\* since Chrome 148
 
   Resolves when the operation completes with a boolean indicating if the text was accepted or not. On failure, the promise will be rejected.
 
 ### commitText()
 
 ```typescript
-chrome.input.ime.commitText(
+browser.input.ime.commitText(
   parameters: object,
 ): Promise<boolean>
 ```
@@ -380,14 +380,14 @@ Commits the provided text to the current input.
 #### Returns
 
 - Promise\<boolean\>
-  Chrome 111+
+  Chrome 111+ browser.\* since Chrome 148
 
   Resolves when the operation completes with a boolean indicating if the text was accepted or not. On failure, the promise will be rejected.
 
 ### deleteSurroundingText()
 
 ```typescript
-chrome.input.ime.deleteSurroundingText(
+browser.input.ime.deleteSurroundingText(
   parameters: object,
 ): Promise<void>
 ```
@@ -413,14 +413,14 @@ Deletes the text around the caret.
 #### Returns
 
 - Promise\<void\>
-  Chrome 111+
+  Chrome 111+ browser.\* since Chrome 148
 
   Resolves when the operation completes.
 
 ### hideInputView()
 
 ```typescript
-chrome.input.ime.hideInputView(): void
+browser.input.ime.hideInputView(): void
 ```
 
 Hides the input view window, which is popped up automatically by system. If the input view window is already hidden, this function will do nothing.
@@ -428,7 +428,7 @@ Hides the input view window, which is popped up automatically by system. If the 
 ### keyEventHandled()
 
 ```typescript
-chrome.input.ime.keyEventHandled(
+browser.input.ime.keyEventHandled(
   requestId: string,
   response: boolean,
 ): void
@@ -448,7 +448,7 @@ Indicates that the key event received by onKeyEvent is handled. This should only
 ### sendKeyEvents()
 
 ```typescript
-chrome.input.ime.sendKeyEvents(
+browser.input.ime.sendKeyEvents(
   parameters: object,
 ): Promise<void>
 ```
@@ -468,16 +468,16 @@ Sends the key events. This function is expected to be used by virtual keyboards.
 #### Returns
 
 - Promise\<void\>
-  Chrome 111+
+  Chrome 111+ browser.\* since Chrome 148
 
   Resolves when the operation completes.
 
 ### setAssistiveWindowButtonHighlighted()
 
-Chrome 86+
+Chrome 86+ browser.\* since Chrome 148
 
 ```typescript
-chrome.input.ime.setAssistiveWindowButtonHighlighted(
+browser.input.ime.setAssistiveWindowButtonHighlighted(
   parameters: object,
 ): Promise<void>
 ```
@@ -506,16 +506,16 @@ Highlights/Unhighlights a button in an assistive window.
 #### Returns
 
 - Promise\<void\>
-  Chrome 111+
+  Chrome 111+ browser.\* since Chrome 148
 
   Resolves when the operation completes. On failure, the promise will be rejected.
 
 ### setAssistiveWindowProperties()
 
-Chrome 85+
+Chrome 85+ browser.\* since Chrome 148
 
 ```typescript
-chrome.input.ime.setAssistiveWindowProperties(
+browser.input.ime.setAssistiveWindowProperties(
   parameters: object,
 ): Promise<boolean>
 ```
@@ -535,14 +535,14 @@ Shows/Hides an assistive window with the given properties.
 #### Returns
 
 - Promise\<boolean\>
-  Chrome 111+
+  Chrome 111+ browser.\* since Chrome 148
 
   Resolves when the operation completes.
 
 ### setCandidates()
 
 ```typescript
-chrome.input.ime.setCandidates(
+browser.input.ime.setCandidates(
   parameters: object,
 ): Promise<boolean>
 ```
@@ -586,14 +586,14 @@ Sets the current candidate list. This fails if this extension doesn't own the ac
 #### Returns
 
 - Promise\<boolean\>
-  Chrome 111+
+  Chrome 111+ browser.\* since Chrome 148
 
   Resolves when the operation completes.
 
 ### setCandidateWindowProperties()
 
 ```typescript
-chrome.input.ime.setCandidateWindowProperties(
+browser.input.ime.setCandidateWindowProperties(
   parameters: object,
 ): Promise<boolean>
 ```
@@ -614,7 +614,7 @@ Sets the properties of the candidate window. This fails if the extension doesn't
 
       True to display the auxiliary text, false to hide it.
     - currentCandidateIndex number optional
-      Chrome 84+
+      Chrome 84+ browser.\* since Chrome 148
 
       The index of the current chosen candidate out of total candidates.
     - cursorVisible boolean optional
@@ -624,7 +624,7 @@ Sets the properties of the candidate window. This fails if the extension doesn't
 
       The number of candidates to display per page.
     - totalCandidates number optional
-      Chrome 84+
+      Chrome 84+ browser.\* since Chrome 148
 
       The total number of candidates for the candidate window.
     - vertical boolean optional
@@ -640,14 +640,14 @@ Sets the properties of the candidate window. This fails if the extension doesn't
 #### Returns
 
 - Promise\<boolean\>
-  Chrome 111+
+  Chrome 111+ browser.\* since Chrome 148
 
   Resolves when the operation completes.
 
 ### setComposition()
 
 ```typescript
-chrome.input.ime.setComposition(
+browser.input.ime.setComposition(
   parameters: object,
 ): Promise<boolean>
 ```
@@ -688,14 +688,14 @@ Set the current composition. If this extension does not own the active IME, this
 #### Returns
 
 - Promise\<boolean\>
-  Chrome 111+
+  Chrome 111+ browser.\* since Chrome 148
 
   Resolves when the operation completes with a boolean indicating if the text was accepted or not. On failure, the promise will be rejected.
 
 ### setCursorPosition()
 
 ```typescript
-chrome.input.ime.setCursorPosition(
+browser.input.ime.setCursorPosition(
   parameters: object,
 ): Promise<boolean>
 ```
@@ -715,14 +715,14 @@ Set the position of the cursor in the candidate window. This is a no-op if this 
 #### Returns
 
 - Promise\<boolean\>
-  Chrome 111+
+  Chrome 111+ browser.\* since Chrome 148
 
   Resolves when the operation completes
 
 ### setMenuItems()
 
 ```typescript
-chrome.input.ime.setMenuItems(
+browser.input.ime.setMenuItems(
   parameters: MenuParameters,
 ): Promise<void>
 ```
@@ -736,12 +736,12 @@ Adds the provided menu items to the language menu when this IME is active.
 #### Returns
 
 - Promise\<void\>
-  Chrome 111+
+  Chrome 111+ browser.\* since Chrome 148
 
 ### updateMenuItems()
 
 ```typescript
-chrome.input.ime.updateMenuItems(
+browser.input.ime.updateMenuItems(
   parameters: MenuParameters,
 ): Promise<void>
 ```
@@ -755,7 +755,7 @@ Updates the state of the MenuItems specified
 #### Returns
 
 - Promise\<void\>
-  Chrome 111+
+  Chrome 111+ browser.\* since Chrome 148
 
   Resolves when the operation completes
 
@@ -764,7 +764,7 @@ Updates the state of the MenuItems specified
 ### onActivate
 
 ```typescript
-chrome.input.ime.onActivate.addListener(
+browser.input.ime.onActivate.addListener(
   callback: function,
 )
 ```
@@ -789,10 +789,10 @@ This event is sent when an IME is activated. It signals that the IME will be rec
 
 ### onAssistiveWindowButtonClicked
 
-Chrome 85+
+Chrome 85+ browser.\* since Chrome 148
 
 ```typescript
-chrome.input.ime.onAssistiveWindowButtonClicked.addListener(
+browser.input.ime.onAssistiveWindowButtonClicked.addListener(
   callback: function,
 )
 ```
@@ -823,7 +823,7 @@ This event is sent when a button in an assistive window is clicked.
 ### onBlur
 
 ```typescript
-chrome.input.ime.onBlur.addListener(
+browser.input.ime.onBlur.addListener(
   callback: function,
 )
 ```
@@ -848,7 +848,7 @@ This event is sent when focus leaves a text box. It is sent to all extensions th
 ### onCandidateClicked
 
 ```typescript
-chrome.input.ime.onCandidateClicked.addListener(
+browser.input.ime.onCandidateClicked.addListener(
   callback: function,
 )
 ```
@@ -875,7 +875,7 @@ This event is sent if this extension owns the active IME.
 ### onDeactivated
 
 ```typescript
-chrome.input.ime.onDeactivated.addListener(
+browser.input.ime.onDeactivated.addListener(
   callback: function,
 )
 ```
@@ -900,7 +900,7 @@ This event is sent when an IME is deactivated. It signals that the IME will no l
 ### onFocus
 
 ```typescript
-chrome.input.ime.onFocus.addListener(
+browser.input.ime.onFocus.addListener(
   callback: function,
 )
 ```
@@ -925,7 +925,7 @@ This event is sent when focus enters a text box. It is sent to all extensions th
 ### onInputContextUpdate
 
 ```typescript
-chrome.input.ime.onInputContextUpdate.addListener(
+browser.input.ime.onInputContextUpdate.addListener(
   callback: function,
 )
 ```
@@ -950,7 +950,7 @@ This event is sent when the properties of the current InputContext change, such 
 ### onKeyEvent
 
 ```typescript
-chrome.input.ime.onKeyEvent.addListener(
+browser.input.ime.onKeyEvent.addListener(
   callback: function,
 )
 ```
@@ -978,7 +978,7 @@ Fired when a key event is sent from the operating system. The event will be sent
 ### onMenuItemActivated
 
 ```typescript
-chrome.input.ime.onMenuItemActivated.addListener(
+browser.input.ime.onMenuItemActivated.addListener(
   callback: function,
 )
 ```
@@ -1004,7 +1004,7 @@ Called when the user selects a menu item
 ### onReset
 
 ```typescript
-chrome.input.ime.onReset.addListener(
+browser.input.ime.onReset.addListener(
   callback: function,
 )
 ```
@@ -1029,7 +1029,7 @@ This event is sent when chrome terminates ongoing text input session.
 ### onSurroundingTextChanged
 
 ```typescript
-chrome.input.ime.onSurroundingTextChanged.addListener(
+browser.input.ime.onSurroundingTextChanged.addListener(
   callback: function,
 )
 ```
@@ -1058,7 +1058,7 @@ Called when the editable string around caret is changed or when the caret positi
 
       The ending position of the selection. This value indicates caret position if there is no selection.
     - offset number
-      Chrome 46+
+      Chrome 46+ browser.\* since Chrome 148
 
       The offset position of `text`. Since `text` only includes a subset of text around the cursor, offset indicates the absolute position of the first character of `text`.
     - text string

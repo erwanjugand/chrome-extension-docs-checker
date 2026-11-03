@@ -14,7 +14,7 @@ Use the `chrome.dom` API to access special DOM APIs for Extensions
 
 ## Availability
 
-Chrome 88+
+Chrome 88+ browser.\* since Chrome 148
 
 <br />
 
@@ -27,7 +27,7 @@ Chrome 88+
 ### openOrClosedShadowRoot()
 
 ```typescript
-chrome.dom.openOrClosedShadowRoot(
+browser.dom.openOrClosedShadowRoot(
   element: HTMLElement,
 ): object
 ```

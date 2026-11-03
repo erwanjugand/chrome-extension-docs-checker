@@ -38,7 +38,7 @@ example:
 
 ### IdleState
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -52,10 +52,10 @@ Chrome 44+
 
 ### getAutoLockDelay()
 
-Chrome 73+ ChromeOS only
+Chrome 73+ browser.\* since Chrome 148 ChromeOS only
 
 ```typescript
-chrome.idle.getAutoLockDelay(): Promise<number>
+browser.idle.getAutoLockDelay(): Promise<number>
 ```
 
 Gets the time, in seconds, it takes until the screen is locked automatically while idle. Returns a zero duration if the screen is never locked automatically. Currently supported on Chrome OS only.
@@ -63,12 +63,12 @@ Gets the time, in seconds, it takes until the screen is locked automatically whi
 #### Returns
 
 - Promise\<number\>
-  Chrome 116+
+  Chrome 116+ browser.\* since Chrome 148
 
 ### queryState()
 
 ```typescript
-chrome.idle.queryState(
+browser.idle.queryState(
   detectionIntervalInSeconds: number,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/idle#type-IdleState>
 ```
@@ -84,12 +84,12 @@ Returns "locked" if the system is locked, "idle" if the user has not generated a
 #### Returns
 
 - Promise\<[IdleState](https://developer.chrome.com/docs/extensions/reference/api/idle#type-IdleState)\>
-  Chrome 116+
+  Chrome 116+ browser.\* since Chrome 148
 
 ### setDetectionInterval()
 
 ```typescript
-chrome.idle.setDetectionInterval(
+browser.idle.setDetectionInterval(
   intervalInSeconds: number,
 ): void
 ```
@@ -107,7 +107,7 @@ Sets the interval, in seconds, used to determine when the system is in an idle s
 ### onStateChanged
 
 ```typescript
-chrome.idle.onStateChanged.addListener(
+browser.idle.onStateChanged.addListener(
   callback: function,
 )
 ```

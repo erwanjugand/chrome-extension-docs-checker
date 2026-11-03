@@ -96,11 +96,11 @@ A node (either a bookmark or a folder) in the bookmark tree. Child nodes are ord
 
   When the contents of this folder last changed, in milliseconds since the epoch.
 - dateLastUsed number optional
-  Chrome 114+
+  Chrome 114+ browser.\* since Chrome 148
 
   When this node was last opened, in milliseconds since the epoch. Not set for folders.
 - folderType [FolderType](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-FolderType) optional
-  Chrome 134+
+  Chrome 134+ browser.\* since Chrome 148
 
   If present, this is a folder that is added by the browser and that cannot be modified by the user or the extension. Child nodes may be modified, if this node does not have the `unmodifiable` property set. Omitted if the node can be modified by the user and the extension (default).
 
@@ -115,7 +115,7 @@ A node (either a bookmark or a folder) in the bookmark tree. Child nodes are ord
 
   The `id` of the parent folder. Omitted for the root node.
 - syncing boolean
-  Chrome 134+
+  Chrome 134+ browser.\* since Chrome 148
 
   Whether this node is synced with the user's remote account storage by the browser. This can be used to distinguish between account and local-only versions of the same [`FolderType`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-FolderType). The value of this property may change for an existing node, for example as a result of user action.
 
@@ -135,7 +135,7 @@ A node (either a bookmark or a folder) in the bookmark tree. Child nodes are ord
 
 ### BookmarkTreeNodeUnmodifiable
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 Indicates the reason why this node is unmodifiable. The `managed` value indicates that this node was configured by the system administrator. Omitted if the node can be modified by the user and the extension (default).
 
@@ -158,7 +158,7 @@ Object passed to the create() function.
 
 ### FolderType
 
-Chrome 134+
+Chrome 134+ browser.\* since Chrome 148
 
 Indicates the type of folder.
 
@@ -203,7 +203,7 @@ Bookmark write operations are no longer limited by Chrome.
 
 ### ROOT_NODE_ID
 
-Chrome 145+
+Chrome 145+ browser.\* since Chrome 148
 
 The `id` associated with the root level node.
 
@@ -216,7 +216,7 @@ The `id` associated with the root level node.
 ### create()
 
 ```typescript
-chrome.bookmarks.create(
+browser.bookmarks.create(
   bookmark: CreateDetails,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode>
 ```
@@ -230,12 +230,12 @@ Creates a bookmark or folder under the specified parentId. If url is NULL or mis
 #### Returns
 
 - Promise\<[BookmarkTreeNode](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode)\>
-  Chrome 90+
+  Chrome 90+ browser.\* since Chrome 148
 
 ### get()
 
 ```typescript
-chrome.bookmarks.get(
+browser.bookmarks.get(
   idOrIdList: string | [string, ...string[]],
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode[]>
 ```
@@ -251,12 +251,12 @@ Retrieves the specified BookmarkTreeNode(s).
 #### Returns
 
 - Promise\<[BookmarkTreeNode](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode)\[\]\>
-  Chrome 90+
+  Chrome 90+ browser.\* since Chrome 148
 
 ### getChildren()
 
 ```typescript
-chrome.bookmarks.getChildren(
+browser.bookmarks.getChildren(
   id: string,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode[]>
 ```
@@ -270,12 +270,12 @@ Retrieves the children of the specified BookmarkTreeNode id.
 #### Returns
 
 - Promise\<[BookmarkTreeNode](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode)\[\]\>
-  Chrome 90+
+  Chrome 90+ browser.\* since Chrome 148
 
 ### getRecent()
 
 ```typescript
-chrome.bookmarks.getRecent(
+browser.bookmarks.getRecent(
   numberOfItems: number,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode[]>
 ```
@@ -291,12 +291,12 @@ Retrieves the recently added bookmarks.
 #### Returns
 
 - Promise\<[BookmarkTreeNode](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode)\[\]\>
-  Chrome 90+
+  Chrome 90+ browser.\* since Chrome 148
 
 ### getSubTree()
 
 ```typescript
-chrome.bookmarks.getSubTree(
+browser.bookmarks.getSubTree(
   id: string,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode[]>
 ```
@@ -312,12 +312,12 @@ Retrieves part of the Bookmarks hierarchy, starting at the specified node.
 #### Returns
 
 - Promise\<[BookmarkTreeNode](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode)\[\]\>
-  Chrome 90+
+  Chrome 90+ browser.\* since Chrome 148
 
 ### getTree()
 
 ```typescript
-chrome.bookmarks.getTree(): Promise<https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode[]>
+browser.bookmarks.getTree(): Promise<https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode[]>
 ```
 
 Retrieves the entire Bookmarks hierarchy.
@@ -325,12 +325,12 @@ Retrieves the entire Bookmarks hierarchy.
 #### Returns
 
 - Promise\<[BookmarkTreeNode](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode)\[\]\>
-  Chrome 90+
+  Chrome 90+ browser.\* since Chrome 148
 
 ### move()
 
 ```typescript
-chrome.bookmarks.move(
+browser.bookmarks.move(
   id: string,
   destination: object,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode>
@@ -348,12 +348,12 @@ Moves the specified BookmarkTreeNode to the provided location.
 #### Returns
 
 - Promise\<[BookmarkTreeNode](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode)\>
-  Chrome 90+
+  Chrome 90+ browser.\* since Chrome 148
 
 ### remove()
 
 ```typescript
-chrome.bookmarks.remove(
+browser.bookmarks.remove(
   id: string,
 ): Promise<void>
 ```
@@ -367,12 +367,12 @@ Removes a bookmark or an empty bookmark folder.
 #### Returns
 
 - Promise\<void\>
-  Chrome 90+
+  Chrome 90+ browser.\* since Chrome 148
 
 ### removeTree()
 
 ```typescript
-chrome.bookmarks.removeTree(
+browser.bookmarks.removeTree(
   id: string,
 ): Promise<void>
 ```
@@ -386,12 +386,12 @@ Recursively removes a bookmark folder.
 #### Returns
 
 - Promise\<void\>
-  Chrome 90+
+  Chrome 90+ browser.\* since Chrome 148
 
 ### search()
 
 ```typescript
-chrome.bookmarks.search(
+browser.bookmarks.search(
   query: string | object,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode[]>
 ```
@@ -416,12 +416,12 @@ Searches for BookmarkTreeNodes matching the given query. Queries specified with 
 #### Returns
 
 - Promise\<[BookmarkTreeNode](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode)\[\]\>
-  Chrome 90+
+  Chrome 90+ browser.\* since Chrome 148
 
 ### update()
 
 ```typescript
-chrome.bookmarks.update(
+browser.bookmarks.update(
   id: string,
   changes: object,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode>
@@ -439,14 +439,14 @@ Updates the properties of a bookmark or folder. Specify only the properties that
 #### Returns
 
 - Promise\<[BookmarkTreeNode](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode)\>
-  Chrome 90+
+  Chrome 90+ browser.\* since Chrome 148
 
 ## Events
 
 ### onChanged
 
 ```typescript
-chrome.bookmarks.onChanged.addListener(
+browser.bookmarks.onChanged.addListener(
   callback: function,
 )
 ```
@@ -474,7 +474,7 @@ Fired when a bookmark or folder changes. **Note:** Currently, only title and url
 ### onChildrenReordered
 
 ```typescript
-chrome.bookmarks.onChildrenReordered.addListener(
+browser.bookmarks.onChildrenReordered.addListener(
   callback: function,
 )
 ```
@@ -501,7 +501,7 @@ Fired when the children of a folder have changed their order due to the order be
 ### onCreated
 
 ```typescript
-chrome.bookmarks.onCreated.addListener(
+browser.bookmarks.onCreated.addListener(
   callback: function,
 )
 ```
@@ -527,7 +527,7 @@ Fired when a bookmark or folder is created.
 ### onImportBegan
 
 ```typescript
-chrome.bookmarks.onImportBegan.addListener(
+browser.bookmarks.onImportBegan.addListener(
   callback: function,
 )
 ```
@@ -550,7 +550,7 @@ Fired when a bookmark import session is begun. Expensive observers should ignore
 ### onImportEnded
 
 ```typescript
-chrome.bookmarks.onImportEnded.addListener(
+browser.bookmarks.onImportEnded.addListener(
   callback: function,
 )
 ```
@@ -573,7 +573,7 @@ Fired when a bookmark import session is ended.
 ### onMoved
 
 ```typescript
-chrome.bookmarks.onMoved.addListener(
+browser.bookmarks.onMoved.addListener(
   callback: function,
 )
 ```
@@ -603,7 +603,7 @@ Fired when a bookmark or folder is moved to a different parent folder.
 ### onRemoved
 
 ```typescript
-chrome.bookmarks.onRemoved.addListener(
+browser.bookmarks.onRemoved.addListener(
   callback: function,
 )
 ```
@@ -627,7 +627,7 @@ Fired when a bookmark or folder is removed. When a folder is removed recursively
   - removeInfo object
     - index number
     - node [BookmarkTreeNode](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode)
-      Chrome 48+
+      Chrome 48+ browser.\* since Chrome 148
     - parentId string
 
 <br />

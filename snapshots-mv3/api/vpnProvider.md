@@ -25,7 +25,7 @@ Use the `chrome.vpnProvider` API to implement a VPN client.
 
 ## Availability
 
-Chrome 43+ ChromeOS only
+Chrome 43+ browser.\* since Chrome 148 ChromeOS only
 
 <br />
 
@@ -83,7 +83,7 @@ Typical usage of `browser.vpnProvider` is as follows:
 
   MTU setting for the VPN interface. (default: 1500 bytes)
 - reconnect string optional
-  Chrome 51+
+  Chrome 51+ browser.\* since Chrome 148
 
   Whether or not the VPN extension implements auto-reconnection.
 
@@ -147,7 +147,7 @@ Specifies that VPN connection has failed.
 ### createConfig()
 
 ```typescript
-chrome.vpnProvider.createConfig(
+browser.vpnProvider.createConfig(
   name: string,
 ): Promise<string>
 ```
@@ -163,14 +163,14 @@ Creates a new VPN configuration that persists across multiple login sessions of 
 #### Returns
 
 - Promise\<string\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Returns a Promise which resolves when the configuration is created or rejects if there is an error.
 
 ### destroyConfig()
 
 ```typescript
-chrome.vpnProvider.destroyConfig(
+browser.vpnProvider.destroyConfig(
   id: string,
 ): Promise<void>
 ```
@@ -186,14 +186,14 @@ Destroys a VPN configuration created by the extension.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Returns a Promise which resolves when the configuration is destroyed or rejects if there is an error.
 
 ### notifyConnectionStateChanged()
 
 ```typescript
-chrome.vpnProvider.notifyConnectionStateChanged(
+browser.vpnProvider.notifyConnectionStateChanged(
   state: VpnConnectionState,
 ): Promise<void>
 ```
@@ -209,14 +209,14 @@ Notifies the VPN session state to the platform. This will succeed only when the 
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Returns a Promise which resolves when the notification is complete or rejects if there is an error.
 
 ### sendPacket()
 
 ```typescript
-chrome.vpnProvider.sendPacket(
+browser.vpnProvider.sendPacket(
   data: ArrayBuffer,
 ): Promise<void>
 ```
@@ -232,14 +232,14 @@ Sends an IP packet through the tunnel created for the VPN session. This will suc
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Returns a Promise which resolves when the packet is sent or rejects if there is an error.
 
 ### setParameters()
 
 ```typescript
-chrome.vpnProvider.setParameters(
+browser.vpnProvider.setParameters(
   parameters: Parameters,
 ): Promise<void>
 ```
@@ -255,7 +255,7 @@ Sets the parameters for the VPN session. This should be called immediately after
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Returns a Promise which resolves when the parameters are set or rejects if there is an error.
 
@@ -264,7 +264,7 @@ Sets the parameters for the VPN session. This should be called immediately after
 ### onConfigCreated
 
 ```typescript
-chrome.vpnProvider.onConfigCreated.addListener(
+browser.vpnProvider.onConfigCreated.addListener(
   callback: function,
 )
 ```
@@ -291,7 +291,7 @@ Triggered when a configuration is created by the platform for the extension.
 ### onConfigRemoved
 
 ```typescript
-chrome.vpnProvider.onConfigRemoved.addListener(
+browser.vpnProvider.onConfigRemoved.addListener(
   callback: function,
 )
 ```
@@ -316,7 +316,7 @@ Triggered when a configuration created by the extension is removed by the platfo
 ### onPacketReceived
 
 ```typescript
-chrome.vpnProvider.onPacketReceived.addListener(
+browser.vpnProvider.onPacketReceived.addListener(
   callback: function,
 )
 ```
@@ -341,7 +341,7 @@ Triggered when an IP packet is received via the tunnel for the VPN session owned
 ### onPlatformMessage
 
 ```typescript
-chrome.vpnProvider.onPlatformMessage.addListener(
+browser.vpnProvider.onPlatformMessage.addListener(
   callback: function,
 )
 ```
@@ -368,7 +368,7 @@ Triggered when a message is received from the platform for a VPN configuration o
 ### onUIEvent
 
 ```typescript
-chrome.vpnProvider.onUIEvent.addListener(
+browser.vpnProvider.onUIEvent.addListener(
   callback: function,
 )
 ```

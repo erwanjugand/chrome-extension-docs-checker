@@ -110,11 +110,11 @@ Use the `chrome.notifications` API to create rich notifications using templates 
 
   Current progress ranges from 0 to 100.
 - requireInteraction boolean optional
-  Chrome 50+
+  Chrome 50+ browser.\* since Chrome 148
 
   Indicates that the notification should remain visible on screen until the user activates or dismisses the notification. This defaults to false.
 - silent boolean optional
-  Chrome 70+
+  Chrome 70+ browser.\* since Chrome 148
 
   Indicates that no sounds or vibrations should be made when the notification is being shown. This defaults to false.
 - title string optional
@@ -157,7 +157,7 @@ Contains an icon, title, message, progress, and up to two buttons.
 ### clear()
 
 ```typescript
-chrome.notifications.clear(
+browser.notifications.clear(
   notificationId: string,
 ): Promise<boolean>
 ```
@@ -173,14 +173,14 @@ Clears the specified notification.
 #### Returns
 
 - Promise\<boolean\>
-  Chrome 116+
+  Chrome 116+ browser.\* since Chrome 148
 
   Returns a Promise which resolves to indicate whether a matching notification existed.
 
 ### create()
 
 ```typescript
-chrome.notifications.create(
+browser.notifications.create(
   notificationId?: string,
   options: NotificationOptions,
 ): Promise<string>
@@ -202,14 +202,14 @@ Creates and displays a notification.
 #### Returns
 
 - Promise\<string\>
-  Chrome 116+
+  Chrome 116+ browser.\* since Chrome 148
 
   Returns a Promise which resolves with the notification id (either supplied or generated) that represents the created notification.
 
 ### getAll()
 
 ```typescript
-chrome.notifications.getAll(): Promise<object>
+browser.notifications.getAll(): Promise<object>
 ```
 
 Retrieves all the notifications of this app or extension.
@@ -217,14 +217,14 @@ Retrieves all the notifications of this app or extension.
 #### Returns
 
 - Promise\<object\>
-  Chrome 116+
+  Chrome 116+ browser.\* since Chrome 148
 
   Returns a Promise which resolves with the set of notification_ids currently in the system.
 
 ### getPermissionLevel()
 
 ```typescript
-chrome.notifications.getPermissionLevel(): Promise<https://developer.chrome.com/docs/extensions/reference/api/notifications#type-PermissionLevel>
+browser.notifications.getPermissionLevel(): Promise<https://developer.chrome.com/docs/extensions/reference/api/notifications#type-PermissionLevel>
 ```
 
 Retrieves whether the user has enabled notifications from this app or extension.
@@ -232,14 +232,14 @@ Retrieves whether the user has enabled notifications from this app or extension.
 #### Returns
 
 - Promise\<[PermissionLevel](https://developer.chrome.com/docs/extensions/reference/api/notifications#type-PermissionLevel)\>
-  Chrome 116+
+  Chrome 116+ browser.\* since Chrome 148
 
   Returns a Promise which resolves with the current permission level.
 
 ### update()
 
 ```typescript
-chrome.notifications.update(
+browser.notifications.update(
   notificationId: string,
   options: NotificationOptions,
 ): Promise<boolean>
@@ -259,7 +259,7 @@ Updates an existing notification.
 #### Returns
 
 - Promise\<boolean\>
-  Chrome 116+
+  Chrome 116+ browser.\* since Chrome 148
 
   Returns a Promise which resolves to indicate whether a matching notification existed.
 
@@ -268,7 +268,7 @@ Updates an existing notification.
 ### onButtonClicked
 
 ```typescript
-chrome.notifications.onButtonClicked.addListener(
+browser.notifications.onButtonClicked.addListener(
   callback: function,
 )
 ```
@@ -294,7 +294,7 @@ The user pressed a button in the notification.
 ### onClicked
 
 ```typescript
-chrome.notifications.onClicked.addListener(
+browser.notifications.onClicked.addListener(
   callback: function,
 )
 ```
@@ -319,7 +319,7 @@ The user clicked in a non-button area of the notification.
 ### onClosed
 
 ```typescript
-chrome.notifications.onClosed.addListener(
+browser.notifications.onClosed.addListener(
   callback: function,
 )
 ```
@@ -345,7 +345,7 @@ The notification closed, either by the system or by user action.
 ### onPermissionLevelChanged
 
 ```typescript
-chrome.notifications.onPermissionLevelChanged.addListener(
+browser.notifications.onPermissionLevelChanged.addListener(
   callback: function,
 )
 ```
@@ -372,7 +372,7 @@ The user changes the permission level. As of Chrome 47, only ChromeOS has UI tha
 Deprecated since Chrome 65
 
 ```typescript
-chrome.notifications.onShowSettings.addListener(
+browser.notifications.onShowSettings.addListener(
   callback: function,
 )
 ```

@@ -273,7 +273,7 @@ Represents a panel created by an extension.
     Whether the button is disabled.
   - returns[Button](https://developer.chrome.com/docs/extensions/reference/api/devtools/panels#type-Button)
 - show void
-  Chrome 140+
+  Chrome 140+ browser.\* since Chrome 152
 
   Shows the panel by activating the corresponding tab.
 
@@ -473,7 +473,7 @@ Represents the Sources panel.
 
 ### Theme
 
-Chrome 99+
+Chrome 99+ browser.\* since Chrome 152
 
 Theme used by DevTools.
 
@@ -506,7 +506,7 @@ Sources panel.
 
 ### themeName
 
-Chrome 59+
+Chrome 59+ browser.\* since Chrome 152
 
 The name of the color theme set in user's DevTools settings. Possible values: `default` (the default) and `dark`.
 
@@ -519,7 +519,7 @@ string
 ### create()
 
 ```typescript
-chrome.devtools.panels.create(
+browser.devtools.panels.create(
   title: string,
   iconPath: string,
   pagePath: string,
@@ -550,7 +550,7 @@ Creates an extension panel.
 ### openResource()
 
 ```typescript
-chrome.devtools.panels.openResource(
+browser.devtools.panels.openResource(
   url: string,
   lineNumber: number,
   columnNumber?: number,
@@ -568,7 +568,7 @@ Requests DevTools to open a URL in a Developer Tools panel.
 
   Specifies the line number to scroll to when the resource is loaded.
 - columnNumber number optional
-  Chrome 114+
+  Chrome 114+ browser.\* since Chrome 152
 
   Specifies the column number to scroll to when the resource is loaded.
 
@@ -582,7 +582,7 @@ Requests DevTools to open a URL in a Developer Tools panel.
 ### setOpenResourceHandler()
 
 ```typescript
-chrome.devtools.panels.setOpenResourceHandler(
+browser.devtools.panels.setOpenResourceHandler(
   callback?: function,
 ): void
 ```
@@ -611,10 +611,10 @@ Specifies the function to be called when the user clicks a resource link in the 
 
 ### setThemeChangeHandler()
 
-Chrome 99+
+Chrome 99+ browser.\* since Chrome 152
 
 ```typescript
-chrome.devtools.panels.setThemeChangeHandler(
+browser.devtools.panels.setThemeChangeHandler(
   callback?: function,
 ): void
 ```

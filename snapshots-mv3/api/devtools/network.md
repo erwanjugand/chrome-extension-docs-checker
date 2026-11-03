@@ -78,7 +78,7 @@ Represents a network request for a document resource (script, image and so on). 
   <br />
 
   - returnsPromise\<object\>
-    Chrome 151+
+    Chrome 151+ browser.\* since Chrome 152
 
     A function that receives the response body when the request completes.
 
@@ -87,7 +87,7 @@ Represents a network request for a document resource (script, image and so on). 
 ### getHAR()
 
 ```typescript
-chrome.devtools.network.getHAR(): Promise<object>
+browser.devtools.network.getHAR(): Promise<object>
 ```
 
 Returns HAR log that contains all known network requests.
@@ -95,7 +95,7 @@ Returns HAR log that contains all known network requests.
 #### Returns
 
 - Promise\<object\>
-  Chrome 151+
+  Chrome 151+ browser.\* since Chrome 152
 
   A function that receives the HAR log when the request completes.
 
@@ -104,7 +104,7 @@ Returns HAR log that contains all known network requests.
 ### onNavigated
 
 ```typescript
-chrome.devtools.network.onNavigated.addListener(
+browser.devtools.network.onNavigated.addListener(
   callback: function,
 )
 ```
@@ -129,7 +129,7 @@ Fired when the inspected window navigates to a new page.
 ### onRequestFinished
 
 ```typescript
-chrome.devtools.network.onRequestFinished.addListener(
+browser.devtools.network.onRequestFinished.addListener(
   callback: function,
 )
 ```

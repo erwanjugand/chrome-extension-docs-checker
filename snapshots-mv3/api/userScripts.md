@@ -34,7 +34,7 @@ To use the User Scripts API, `browser.userScripts`, add the `"userScripts"` perm
 
 ## Availability
 
-Chrome 120+ MV3+
+Chrome 120+ browser.\* since Chrome 148 MV3+
 
 <br />
 
@@ -181,7 +181,7 @@ Specifies the execution environment that is specific to user scripts and is exem
 
 ### InjectionResult
 
-Chrome 135+
+Chrome 135+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -200,7 +200,7 @@ Chrome 135+
 
 ### InjectionTarget
 
-Chrome 135+
+Chrome 135+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -249,7 +249,7 @@ Chrome 135+
 
   The JavaScript execution environment to run the script in. The default is `` `USER_SCRIPT` ``.
 - worldId string optional
-  Chrome 133+
+  Chrome 133+ browser.\* since Chrome 148
 
   Specifies the user script world ID to execute in. If omitted, the script will execute in the default user script world. Only valid if `world` is omitted or is `USER_SCRIPT`. Values with leading underscores (`_`) are reserved.
 
@@ -274,7 +274,7 @@ Chrome 135+
 
 ### UserScriptInjection
 
-Chrome 135+
+Chrome 135+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -305,7 +305,7 @@ Chrome 135+
 
   Specifies whether messaging APIs are exposed. The default is `false`.
 - worldId string optional
-  Chrome 133+
+  Chrome 133+ browser.\* since Chrome 148
 
   Specifies the ID of the specific user script world to update. If not provided, updates the properties of the default user script world. Values with leading underscores (`_`) are reserved.
 
@@ -314,7 +314,7 @@ Chrome 135+
 ### configureWorld()
 
 ```typescript
-chrome.userScripts.configureWorld(
+browser.userScripts.configureWorld(
   properties: WorldProperties,
 ): Promise<void>
 ```
@@ -335,10 +335,10 @@ Configures the `` `USER_SCRIPT` `` execution environment.
 
 ### execute()
 
-Chrome 135+
+Chrome 135+ browser.\* since Chrome 148
 
 ```typescript
-chrome.userScripts.execute(
+browser.userScripts.execute(
   injection: UserScriptInjection,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/userScripts#type-InjectionResult[]>
 ```
@@ -356,7 +356,7 @@ Injects a script into a target context. By default, the script will be run at `d
 ### getScripts()
 
 ```typescript
-chrome.userScripts.getScripts(
+browser.userScripts.getScripts(
   filter?: UserScriptFilter,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/userScripts#type-RegisteredUserScript[]>
 ```
@@ -377,10 +377,10 @@ Returns all dynamically-registered user scripts for this extension.
 
 ### getWorldConfigurations()
 
-Chrome 133+
+Chrome 133+ browser.\* since Chrome 148
 
 ```typescript
-chrome.userScripts.getWorldConfigurations(): Promise<https://developer.chrome.com/docs/extensions/reference/api/userScripts#type-WorldProperties[]>
+browser.userScripts.getWorldConfigurations(): Promise<https://developer.chrome.com/docs/extensions/reference/api/userScripts#type-WorldProperties[]>
 ```
 
 Retrieves all registered world configurations.
@@ -394,7 +394,7 @@ Retrieves all registered world configurations.
 ### register()
 
 ```typescript
-chrome.userScripts.register(
+browser.userScripts.register(
   scripts: RegisteredUserScript[],
 ): Promise<void>
 ```
@@ -415,10 +415,10 @@ Registers one or more user scripts for this extension.
 
 ### resetWorldConfiguration()
 
-Chrome 133+
+Chrome 133+ browser.\* since Chrome 148
 
 ```typescript
-chrome.userScripts.resetWorldConfiguration(
+browser.userScripts.resetWorldConfiguration(
   worldId?: string,
 ): Promise<void>
 ```
@@ -440,7 +440,7 @@ Resets the configuration for a user script world. Any scripts that inject into t
 ### unregister()
 
 ```typescript
-chrome.userScripts.unregister(
+browser.userScripts.unregister(
   filter?: UserScriptFilter,
 ): Promise<void>
 ```
@@ -462,7 +462,7 @@ Unregisters all dynamically-registered user scripts for this extension.
 ### update()
 
 ```typescript
-chrome.userScripts.update(
+browser.userScripts.update(
   scripts: RegisteredUserScript[],
 ): Promise<void>
 ```

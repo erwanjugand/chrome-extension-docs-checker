@@ -26,7 +26,7 @@ Use the `system.display` API to query display metadata.
 
 ### ActiveState
 
-Chrome 117+
+Chrome 117+ browser.\* since Chrome 148
 
 An enum to tell if the display is detected and used by the system. The display is considered 'inactive', if it is not detected by the system (maybe disconnected, or considered disconnected due to sleep mode, etc). This state is used to keep existing display when the all displays are disconnected, for example.
 
@@ -56,7 +56,7 @@ An enum to tell if the display is detected and used by the system. The display i
 
 ### DisplayLayout
 
-Chrome 53+
+Chrome 53+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -75,7 +75,7 @@ Chrome 53+
 
 ### DisplayMode
 
-Chrome 52+
+Chrome 52+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -89,7 +89,7 @@ Chrome 52+
 
   The display mode height in native pixels.
 - isInterlaced boolean optional
-  Chrome 74+
+  Chrome 74+ browser.\* since Chrome 148
 
   True if this mode is interlaced, false if not provided.
 - isNative boolean
@@ -99,7 +99,7 @@ Chrome 52+
 
   True if the display mode is currently selected.
 - refreshRate number
-  Chrome 67+
+  Chrome 67+ browser.\* since Chrome 148
 
   The display mode refresh rate in hertz.
 - uiScale number optional
@@ -128,18 +128,18 @@ Chrome 52+
 
   If set, updates the display's logical bounds origin along the y-axis. See documentation for [`boundsOriginX`](https://developer.chrome.com/docs/extensions/reference/api/system/display#property-DisplayProperties-boundsOriginX) parameter.
 - displayMode [DisplayMode](https://developer.chrome.com/docs/extensions/reference/api/system/display#type-DisplayMode) optional
-  Chrome 52+
+  Chrome 52+ browser.\* since Chrome 148
 
   If set, updates the display mode to the mode matching this value. If other parameters are invalid, this will not be applied. If the display mode is invalid, it will not be applied and an error will be set, but other properties will still be applied.
 - displayZoomFactor number optional
-  Chrome 65+
+  Chrome 65+ browser.\* since Chrome 148
 
   If set, updates the zoom associated with the display. This zoom performs re-layout and repaint thus resulting in a better quality zoom than just performing a pixel by pixel stretch enlargement.
 - isPrimary boolean optional
 
   If set to true, makes the display primary. No-op if set to false. Note: If set, the display is considered primary for all other properties (i.e. [`isUnified`](https://developer.chrome.com/docs/extensions/reference/api/system/display#property-DisplayProperties-isUnified) may be set and bounds origin may not).
 - isUnified boolean optional
-  Chrome 59+
+  Chrome 59+ browser.\* since Chrome 148
 
   ChromeOS only. If set to true, changes the display mode to unified desktop (see [`enableUnifiedDesktop`](https://developer.chrome.com/docs/extensions/reference/api/system/display#method-enableUnifiedDesktop) for details). If set to false, unified desktop mode will be disabled. This is only valid for the primary display. If provided, mirroringSourceId must not be provided and other properties will be ignored. This is has no effect if not provided.
 - mirroringSourceId string optional
@@ -152,7 +152,7 @@ Chrome 52+
   ChromeOS only. If set and not empty, enables mirroring for this display only. Otherwise disables mirroring for all displays. This value should indicate the id of the source display to mirror, which must not be the same as the id passed to setDisplayProperties. If set, no other property may be set.
 - overscan [Insets](https://developer.chrome.com/docs/extensions/reference/api/system/display#type-Insets) optional
 
-  If set, sets the display's overscan insets to the provided values. Note that overscan values may not be negative or larger than a half of the screen's size. Overscan cannot be changed on the internal monitor.
+  If set, sets the display's overscan insets to the provided values. Note that each overscan inset may not be negative or larger than a quarter of the screen's size. Overscan cannot be changed on the internal monitor.
 - rotation number optional
 
   If set, updates the display's rotation. Legal values are \[0, 90, 180, 270\]. The rotation is set clockwise, relative to the display's vertical position.
@@ -162,18 +162,18 @@ Chrome 52+
 #### Properties
 
 - activeState [ActiveState](https://developer.chrome.com/docs/extensions/reference/api/system/display#type-ActiveState)
-  Chrome 117+
+  Chrome 117+ browser.\* since Chrome 148
 
   Active if the display is detected and used by the system.
 - availableDisplayZoomFactors number\[\]
-  Chrome 67+
+  Chrome 67+ browser.\* since Chrome 148
 
   A list of zoom factor values that can be set for the display.
 - bounds [Bounds](https://developer.chrome.com/docs/extensions/reference/api/system/display#type-Bounds)
 
   The display's logical bounds.
 - displayZoomFactor number
-  Chrome 65+
+  Chrome 65+ browser.\* since Chrome 148
 
   The ratio between the display's current and default zoom. For example, value 1 is equivalent to 100% zoom, and value 1.5 is equivalent to 150% zoom.
 - dpiX number
@@ -183,11 +183,11 @@ Chrome 52+
 
   The number of pixels per inch along the y-axis.
 - edid [Edid](https://developer.chrome.com/docs/extensions/reference/api/system/display#type-Edid) optional
-  Chrome 67+
+  Chrome 67+ browser.\* since Chrome 148
 
   NOTE: This is only available to ChromeOS Kiosk apps.
 - hasTouchSupport boolean
-  Chrome 57+
+  Chrome 57+ browser.\* since Chrome 148
 
   True if this display has a touch input device associated with it.
 - id string
@@ -200,18 +200,18 @@ Chrome 52+
 
   True if this is the primary display.
 - isUnified boolean
-  Chrome 59+
+  Chrome 59+ browser.\* since Chrome 148
 
   True for all displays when in unified desktop mode. See documentation for [`enableUnifiedDesktop`](https://developer.chrome.com/docs/extensions/reference/api/system/display#method-enableUnifiedDesktop).
 - mirroringDestinationIds string\[\]
-  Chrome 64+
+  Chrome 64+ browser.\* since Chrome 148
 
   ChromeOS only. Identifiers of the displays to which the source display is being mirrored. Empty if no displays are being mirrored. This will be set to the same value for all displays. This must not include `mirroringSourceId`.
 - mirroringSourceId string
 
   ChromeOS only. Identifier of the display that is being mirrored if mirroring is enabled, otherwise empty. This will be set for all displays (including the display being mirrored).
 - modes [DisplayMode](https://developer.chrome.com/docs/extensions/reference/api/system/display#type-DisplayMode)\[\]
-  Chrome 52+
+  Chrome 52+ browser.\* since Chrome 148
 
   The list of available display modes. The current mode will have isSelected=true. Only available on ChromeOS. Will be set to an empty array on other platforms.
 - name string
@@ -229,7 +229,7 @@ Chrome 52+
 
 ### Edid
 
-Chrome 67+
+Chrome 67+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -245,7 +245,7 @@ Chrome 67+
 
 ### GetInfoFlags
 
-Chrome 59+
+Chrome 59+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -272,7 +272,7 @@ Chrome 59+
 
 ### LayoutPosition
 
-Chrome 53+
+Chrome 53+ browser.\* since Chrome 148
 
 Layout position, i.e. edge of parent that the display is attached to.
 
@@ -287,7 +287,7 @@ Layout position, i.e. edge of parent that the display is attached to.
 
 ### MirrorMode
 
-Chrome 65+
+Chrome 65+ browser.\* since Chrome 148
 
 Mirror mode, i.e. different ways of how a display is mirrored to other displays.
 
@@ -304,7 +304,7 @@ Specifies that the specified source display will be mirrored to the provided des
 
 ### MirrorModeInfo
 
-Chrome 65+
+Chrome 65+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -320,7 +320,7 @@ Chrome 65+
 
 ### Point
 
-Chrome 57+
+Chrome 57+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -333,7 +333,7 @@ Chrome 57+
 
 ### TouchCalibrationPair
 
-Chrome 57+
+Chrome 57+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -346,7 +346,7 @@ Chrome 57+
 
 ### TouchCalibrationPairQuad
 
-Chrome 57+
+Chrome 57+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -367,10 +367,10 @@ Chrome 57+
 
 ### clearTouchCalibration()
 
-Chrome 57+
+Chrome 57+ browser.\* since Chrome 148
 
 ```typescript
-chrome.system.display.clearTouchCalibration(
+browser.system.display.clearTouchCalibration(
   id: string,
 ): void
 ```
@@ -385,10 +385,10 @@ NOTE: This is only available to ChromeOS Kiosk apps. Resets the touch calibratio
 
 ### completeCustomTouchCalibration()
 
-Chrome 57+
+Chrome 57+ browser.\* since Chrome 148
 
 ```typescript
-chrome.system.display.completeCustomTouchCalibration(
+browser.system.display.completeCustomTouchCalibration(
   pairs: TouchCalibrationPairQuad,
   bounds: Bounds,
 ): void
@@ -407,10 +407,10 @@ NOTE: This is only available to ChromeOS Kiosk apps. Sets the touch calibration 
 
 ### enableUnifiedDesktop()
 
-Chrome 46+
+Chrome 46+ browser.\* since Chrome 148
 
 ```typescript
-chrome.system.display.enableUnifiedDesktop(
+browser.system.display.enableUnifiedDesktop(
   enabled: boolean,
 ): void
 ```
@@ -425,10 +425,10 @@ NOTE: This is only available to ChromeOS Kiosk apps. Enables/disables the unifie
 
 ### getDisplayLayout()
 
-Chrome 53+
+Chrome 53+ browser.\* since Chrome 148
 
 ```typescript
-chrome.system.display.getDisplayLayout(): Promise<https://developer.chrome.com/docs/extensions/reference/api/system/display#type-DisplayLayout[]>
+browser.system.display.getDisplayLayout(): Promise<https://developer.chrome.com/docs/extensions/reference/api/system/display#type-DisplayLayout[]>
 ```
 
 NOTE: This is only available to ChromeOS Kiosk apps. Requests the layout info for all displays.
@@ -436,14 +436,14 @@ NOTE: This is only available to ChromeOS Kiosk apps. Requests the layout info fo
 #### Returns
 
 - Promise\<[DisplayLayout](https://developer.chrome.com/docs/extensions/reference/api/system/display#type-DisplayLayout)\[\]\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
   Promise that resolves with the results.
 
 ### getInfo()
 
 ```typescript
-chrome.system.display.getInfo(
+browser.system.display.getInfo(
   flags?: GetInfoFlags,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/system/display#type-DisplayUnitInfo[]>
 ```
@@ -453,23 +453,23 @@ Requests the information for all attached display devices.
 #### Parameters
 
 - flags [GetInfoFlags](https://developer.chrome.com/docs/extensions/reference/api/system/display#type-GetInfoFlags) optional
-  Chrome 59+
+  Chrome 59+ browser.\* since Chrome 148
 
   Options affecting how the information is returned.
 
 #### Returns
 
 - Promise\<[DisplayUnitInfo](https://developer.chrome.com/docs/extensions/reference/api/system/display#type-DisplayUnitInfo)\[\]\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
   Promise that resolves with the results.
 
 ### overscanCalibrationAdjust()
 
-Chrome 53+
+Chrome 53+ browser.\* since Chrome 148
 
 ```typescript
-chrome.system.display.overscanCalibrationAdjust(
+browser.system.display.overscanCalibrationAdjust(
   id: string,
   delta: Insets,
 ): void
@@ -488,10 +488,10 @@ NOTE: This is only available to ChromeOS Kiosk apps. Adjusts the current oversca
 
 ### overscanCalibrationComplete()
 
-Chrome 53+
+Chrome 53+ browser.\* since Chrome 148
 
 ```typescript
-chrome.system.display.overscanCalibrationComplete(
+browser.system.display.overscanCalibrationComplete(
   id: string,
 ): void
 ```
@@ -506,10 +506,10 @@ NOTE: This is only available to ChromeOS Kiosk apps. Complete overscan adjustmen
 
 ### overscanCalibrationReset()
 
-Chrome 53+
+Chrome 53+ browser.\* since Chrome 148
 
 ```typescript
-chrome.system.display.overscanCalibrationReset(
+browser.system.display.overscanCalibrationReset(
   id: string,
 ): void
 ```
@@ -524,10 +524,10 @@ NOTE: This is only available to ChromeOS Kiosk apps. Resets the overscan insets 
 
 ### overscanCalibrationStart()
 
-Chrome 53+
+Chrome 53+ browser.\* since Chrome 148
 
 ```typescript
-chrome.system.display.overscanCalibrationStart(
+browser.system.display.overscanCalibrationStart(
   id: string,
 ): void
 ```
@@ -542,10 +542,10 @@ NOTE: This is only available to ChromeOS Kiosk apps. Starts overscan calibration
 
 ### setDisplayLayout()
 
-Chrome 53+
+Chrome 53+ browser.\* since Chrome 148
 
 ```typescript
-chrome.system.display.setDisplayLayout(
+browser.system.display.setDisplayLayout(
   layouts: DisplayLayout[],
 ): Promise<void>
 ```
@@ -561,14 +561,14 @@ NOTE: This is only available to ChromeOS Kiosk apps. Set the layout for all disp
 #### Returns
 
 - Promise\<void\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
   Promise that resolves when the function finishes.
 
 ### setDisplayProperties()
 
 ```typescript
-chrome.system.display.setDisplayProperties(
+browser.system.display.setDisplayProperties(
   id: string,
   info: DisplayProperties,
 ): Promise<void>
@@ -588,16 +588,16 @@ NOTE: This is only available to ChromeOS Kiosk apps. Updates the properties for 
 #### Returns
 
 - Promise\<void\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
   Promise that resolves when the function finishes.
 
 ### setMirrorMode()
 
-Chrome 65+
+Chrome 65+ browser.\* since Chrome 148
 
 ```typescript
-chrome.system.display.setMirrorMode(
+browser.system.display.setMirrorMode(
   info: MirrorModeInfo,
 ): Promise<void>
 ```
@@ -613,16 +613,16 @@ NOTE: This is only available to ChromeOS Kiosk apps. Sets the display mode to th
 #### Returns
 
 - Promise\<void\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
   Promise that resolves when the function finishes.
 
 ### showNativeTouchCalibration()
 
-Chrome 57+
+Chrome 57+ browser.\* since Chrome 148
 
 ```typescript
-chrome.system.display.showNativeTouchCalibration(
+browser.system.display.showNativeTouchCalibration(
   id: string,
 ): Promise<boolean>
 ```
@@ -638,16 +638,16 @@ NOTE: This is only available to ChromeOS Kiosk apps. Displays the native touch c
 #### Returns
 
 - Promise\<boolean\>
-  Chrome 91+
+  Chrome 91+ browser.\* since Chrome 148
 
   Promise that resolves to inform the caller that the touch calibration has ended. The boolean value informs if the calibration was a success or not.
 
 ### startCustomTouchCalibration()
 
-Chrome 57+
+Chrome 57+ browser.\* since Chrome 148
 
 ```typescript
-chrome.system.display.startCustomTouchCalibration(
+browser.system.display.startCustomTouchCalibration(
   id: string,
 ): void
 ```
@@ -665,7 +665,7 @@ NOTE: This is only available to ChromeOS Kiosk apps. Starts custom touch calibra
 ### onDisplayChanged
 
 ```typescript
-chrome.system.display.onDisplayChanged.addListener(
+browser.system.display.onDisplayChanged.addListener(
   callback: function,
 )
 ```

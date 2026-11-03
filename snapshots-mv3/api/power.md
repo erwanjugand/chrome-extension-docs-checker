@@ -57,17 +57,17 @@ Prevents the display from being turned off or dimmed, or the system from sleepin
 ### releaseKeepAwake()
 
 ```typescript
-chrome.power.releaseKeepAwake(): void
+browser.power.releaseKeepAwake(): void
 ```
 
 Releases a request previously made via requestKeepAwake().
 
 ### reportActivity()
 
-Chrome 113+ ChromeOS only
+Chrome 113+ browser.\* since Chrome 148 ChromeOS only
 
 ```typescript
-chrome.power.reportActivity(): Promise<void>
+browser.power.reportActivity(): Promise<void>
 ```
 
 Reports a user activity in order to awake the screen from a dimmed or turned off state or from a screensaver. Exits the screensaver if it is currently active.
@@ -79,7 +79,7 @@ Reports a user activity in order to awake the screen from a dimmed or turned off
 ### requestKeepAwake()
 
 ```typescript
-chrome.power.requestKeepAwake(
+browser.power.requestKeepAwake(
   level: Level,
 ): void
 ```

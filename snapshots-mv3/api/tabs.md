@@ -209,7 +209,7 @@ For more Tabs API extensions demos, explore any of the following:
 
 ### MutedInfo
 
-Chrome 46+
+Chrome 46+ browser.\* since Chrome 148
 
 The tab's muted state and the reason for the last state change.
 
@@ -227,7 +227,7 @@ The tab's muted state and the reason for the last state change.
 
 ### MutedInfoReason
 
-Chrome 46+
+Chrome 46+ browser.\* since Chrome 148
 
 An event that caused a muted state change.
 
@@ -250,26 +250,26 @@ An extension, identified by the extensionId field, set the muted state.
 
   Whether the tab is active in its window. Does not necessarily mean the window is focused.
 - audible boolean optional
-  Chrome 45+
+  Chrome 45+ browser.\* since Chrome 148
 
   Whether the tab has produced sound over the past couple of seconds (but it might not be heard if also muted). Equivalent to whether the 'speaker audio' indicator is showing.
 - autoDiscardable boolean
-  Chrome 54+
+  Chrome 54+ browser.\* since Chrome 148
 
   Whether the tab can be discarded automatically by the browser when resources are low.
 - discarded boolean
-  Chrome 54+
+  Chrome 54+ browser.\* since Chrome 148
 
   Whether the tab is discarded. A discarded tab is one whose content has been unloaded from memory, but is still visible in the tab strip. Its content is reloaded the next time it is activated.
 - favIconUrl string optional
 
   The URL of the tab's favicon. This property is only present if the extension has the `"tabs"` permission or has host permissions for the page. It may also be an empty string if the tab is loading.
 - frozen boolean
-  Chrome 132+
+  Chrome 132+ browser.\* since Chrome 148
 
   Whether the tab is frozen. A frozen tab cannot execute tasks, including event handlers or timers. It is visible in the tab strip and its content is loaded in memory. It is unfrozen on activation.
 - groupId number
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
   The ID of the group that the tab belongs to.
 - height number optional
@@ -288,18 +288,18 @@ An extension, identified by the extensionId field, set the muted state.
 
   The zero-based index of the tab within its window.
 - lastAccessed number
-  Chrome 121+
+  Chrome 121+ browser.\* since Chrome 148
 
   The last time the tab became active in its window as the number of milliseconds since epoch.
 - mutedInfo [MutedInfo](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-MutedInfo) optional
-  Chrome 46+
+  Chrome 46+ browser.\* since Chrome 148
 
   The tab's muted state and the reason for the last state change.
 - openerTabId number optional
 
   The ID of the tab that opened this tab, if any. This property is only present if the opener tab still exists.
 - pendingUrl string optional
-  Chrome 79+
+  Chrome 79+ browser.\* since Chrome 148
 
   The URL the tab is navigating to, before it has committed. This property is only present if the extension has the `"tabs"` permission or has host permissions for the page and there is a pending navigation.
 - pinned boolean
@@ -317,7 +317,7 @@ An extension, identified by the extensionId field, set the muted state.
 
   The session ID used to uniquely identify a tab obtained from the [`sessions`](https://developer.chrome.com/docs/extensions/reference/sessions/) API.
 - splitViewId number optional
-  Chrome 140+
+  Chrome 140+ browser.\* since Chrome 148
 
   The ID of the Split View that the tab belongs to.
 - status [TabStatus](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-TabStatus) optional
@@ -338,7 +338,7 @@ An extension, identified by the extensionId field, set the muted state.
 
 ### TabStatus
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The tab's loading status.
 
@@ -352,7 +352,7 @@ The tab's loading status.
 
 ### WindowType
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The type of window.
 
@@ -373,7 +373,7 @@ Defines how zoom changes in a tab are handled and at what scope.
 #### Properties
 
 - defaultZoomFactor number optional
-  Chrome 43+
+  Chrome 43+ browser.\* since Chrome 148
 
   Used to return the default zoom level for the current tab in calls to tabs.getZoomSettings.
 - mode [ZoomSettingsMode](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-ZoomSettingsMode) optional
@@ -385,7 +385,7 @@ Defines how zoom changes in a tab are handled and at what scope.
 
 ### ZoomSettingsMode
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 Defines how zoom changes are handled, i.e., which entity is responsible for the actual scaling of the page; defaults to `automatic`.
 
@@ -402,7 +402,7 @@ Disables all zooming in the tab. The tab reverts to the default zoom level, and 
 
 ### ZoomSettingsScope
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 Defines whether zoom changes persist for the page's origin, or only take effect in this tab; defaults to `per-origin` when in `automatic` mode, and `per-tab` otherwise.
 
@@ -419,7 +419,7 @@ Zoom changes only take effect in this tab, and zoom changes in other tabs do not
 
 ### MAX_CAPTURE_VISIBLE_TAB_CALLS_PER_SECOND
 
-Chrome 92+
+Chrome 92+ browser.\* since Chrome 148
 
 The maximum number of times that [`captureVisibleTab`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-captureVisibleTab) can be called per second. [`captureVisibleTab`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-captureVisibleTab) is expensive and should not be called too often.
 
@@ -429,7 +429,7 @@ The maximum number of times that [`captureVisibleTab`](https://developer.chrome.
 
 ### SPLIT_VIEW_ID_NONE
 
-Chrome 140+
+Chrome 140+ browser.\* since Chrome 148
 
 An ID that represents the absence of a split tab.
 
@@ -439,7 +439,7 @@ An ID that represents the absence of a split tab.
 
 ### TAB_ID_NONE
 
-Chrome 46+
+Chrome 46+ browser.\* since Chrome 148
 
 An ID that represents the absence of a browser tab.
 
@@ -449,7 +449,7 @@ An ID that represents the absence of a browser tab.
 
 ### TAB_INDEX_NONE
 
-Chrome 123+
+Chrome 123+ browser.\* since Chrome 148
 
 An index that represents the absence of a tab index in a tab_strip.
 
@@ -462,7 +462,7 @@ An index that represents the absence of a tab index in a tab_strip.
 ### captureVisibleTab()
 
 ```typescript
-chrome.tabs.captureVisibleTab(
+browser.tabs.captureVisibleTab(
   windowId?: number,
   options?: ImageDetails,
 ): Promise<string>
@@ -480,12 +480,12 @@ Captures the visible area of the currently active tab in the specified window. I
 #### Returns
 
 - Promise\<string\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### connect()
 
 ```typescript
-chrome.tabs.connect(
+browser.tabs.connect(
   tabId: number,
   connectInfo?: object,
 ): runtime.Port
@@ -498,7 +498,7 @@ Connects to the content script(s) in the specified tab. The [`runtime.onConnect`
 - tabId number
 - connectInfo object optional
   - documentId string optional
-    Chrome 106+
+    Chrome 106+ browser.\* since Chrome 148
 
     Open a port to a specific [document](https://developer.chrome.com/docs/extensions/reference/webNavigation/#document_ids) identified by `documentId` instead of all frames in the tab.
   - frameId number optional
@@ -517,7 +517,7 @@ Connects to the content script(s) in the specified tab. The [`runtime.onConnect`
 ### create()
 
 ```typescript
-chrome.tabs.create(
+browser.tabs.create(
   createProperties: object,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/tabs#type-Tab>
 ```
@@ -565,14 +565,14 @@ Creates a new tab.
 #### Returns
 
 - Promise\<[Tab](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-Tab)\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### createSplit()
 
 Chrome 155+
 
 ```typescript
-chrome.tabs.createSplit(
+browser.tabs.createSplit(
   tabIds: [number, number],
 ): Promise<number>
 ```
@@ -596,7 +596,7 @@ Splits two existing tabs into a Split View.
 ### detectLanguage()
 
 ```typescript
-chrome.tabs.detectLanguage(
+browser.tabs.detectLanguage(
   tabId?: number,
 ): Promise<string>
 ```
@@ -612,14 +612,14 @@ Detects the primary language of the content in a tab.
 #### Returns
 
 - Promise\<string\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### discard()
 
-Chrome 54+
+Chrome 54+ browser.\* since Chrome 148
 
 ```typescript
-chrome.tabs.discard(
+browser.tabs.discard(
   tabId?: number,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/tabs#type-Tab | undefined>
 ```
@@ -635,14 +635,14 @@ Discards a tab from memory. Discarded tabs are still visible on the tab strip an
 #### Returns
 
 - Promise\<[Tab](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-Tab) \| undefined\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
   Resolves after the operation is completed.
 
 ### duplicate()
 
 ```typescript
-chrome.tabs.duplicate(
+browser.tabs.duplicate(
   tabId: number,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/tabs#type-Tab | undefined>
 ```
@@ -658,12 +658,12 @@ Duplicates a tab.
 #### Returns
 
 - Promise\<[Tab](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-Tab) \| undefined\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### get()
 
 ```typescript
-chrome.tabs.get(
+browser.tabs.get(
   tabId: number,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/tabs#type-Tab>
 ```
@@ -677,12 +677,12 @@ Retrieves details about the specified tab.
 #### Returns
 
 - Promise\<[Tab](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-Tab)\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### getCurrent()
 
 ```typescript
-chrome.tabs.getCurrent(): Promise<https://developer.chrome.com/docs/extensions/reference/api/tabs#type-Tab | undefined>
+browser.tabs.getCurrent(): Promise<https://developer.chrome.com/docs/extensions/reference/api/tabs#type-Tab | undefined>
 ```
 
 Gets the tab that this script call is being made from. Returns `undefined` if called from a non-tab context (for example, a background page or popup view).
@@ -690,12 +690,12 @@ Gets the tab that this script call is being made from. Returns `undefined` if ca
 #### Returns
 
 - Promise\<[Tab](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-Tab) \| undefined\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### getZoom()
 
 ```typescript
-chrome.tabs.getZoom(
+browser.tabs.getZoom(
   tabId?: number,
 ): Promise<number>
 ```
@@ -711,14 +711,14 @@ Gets the current zoom factor of a specified tab.
 #### Returns
 
 - Promise\<number\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
   Resolves with the tab's current zoom factor after it has been fetched.
 
 ### getZoomSettings()
 
 ```typescript
-chrome.tabs.getZoomSettings(
+browser.tabs.getZoomSettings(
   tabId?: number,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/tabs#type-ZoomSettings>
 ```
@@ -734,16 +734,16 @@ Gets the current zoom settings of a specified tab.
 #### Returns
 
 - Promise\<[ZoomSettings](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-ZoomSettings)\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
   Resolves with the tab's current zoom settings.
 
 ### goBack()
 
-Chrome 72+
+Chrome 72+ browser.\* since Chrome 148
 
 ```typescript
-chrome.tabs.goBack(
+browser.tabs.goBack(
   tabId?: number,
 ): Promise<void>
 ```
@@ -759,14 +759,14 @@ Go back to the previous page, if one is available.
 #### Returns
 
 - Promise\<void\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### goForward()
 
-Chrome 72+
+Chrome 72+ browser.\* since Chrome 148
 
 ```typescript
-chrome.tabs.goForward(
+browser.tabs.goForward(
   tabId?: number,
 ): Promise<void>
 ```
@@ -782,14 +782,14 @@ Go foward to the next page, if one is available.
 #### Returns
 
 - Promise\<void\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### group()
 
-Chrome 88+
+Chrome 88+ browser.\* since Chrome 148
 
 ```typescript
-chrome.tabs.group(
+browser.tabs.group(
   options: object,
 ): Promise<number>
 ```
@@ -819,7 +819,7 @@ Adds one or more tabs to a specified group, or if no group is specified, adds th
 ### highlight()
 
 ```typescript
-chrome.tabs.highlight(
+browser.tabs.highlight(
   highlightInfo: object,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/windows#type-Window.Window>
 ```
@@ -839,12 +839,12 @@ Highlights the given tabs and focuses on the first of group. Will appear to do n
 #### Returns
 
 - Promise\<[windows.Window](https://developer.chrome.com/docs/extensions/reference/windows/#type-Window)\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### move()
 
 ```typescript
-chrome.tabs.move(
+browser.tabs.move(
   tabIds: number | number[],
   moveProperties: object,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/tabs#type-Tab | Tab[]>
@@ -868,12 +868,12 @@ Moves one or more tabs to a new position within its window, or to a new window. 
 #### Returns
 
 - Promise\<[Tab](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-Tab) \| [Tab](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-Tab)\[\]\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### query()
 
 ```typescript
-chrome.tabs.query(
+browser.tabs.query(
   queryInfo: object,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/tabs#type-Tab[]>
 ```
@@ -887,26 +887,26 @@ Gets all tabs that have the specified properties, or all tabs if no properties a
 
     Whether the tabs are active in their windows.
   - audible boolean optional
-    Chrome 45+
+    Chrome 45+ browser.\* since Chrome 148
 
     Whether the tabs are audible.
   - autoDiscardable boolean optional
-    Chrome 54+
+    Chrome 54+ browser.\* since Chrome 148
 
     Whether the tabs can be discarded automatically by the browser when resources are low.
   - currentWindow boolean optional
 
     Whether the tabs are in the [current window](https://developer.chrome.com/docs/extensions/reference/windows/#current-window).
   - discarded boolean optional
-    Chrome 54+
+    Chrome 54+ browser.\* since Chrome 148
 
     Whether the tabs are discarded. A discarded tab is one whose content has been unloaded from memory, but is still visible in the tab strip. Its content is reloaded the next time it is activated.
   - frozen boolean optional
-    Chrome 132+
+    Chrome 132+ browser.\* since Chrome 148
 
     Whether the tabs are frozen. A frozen tab cannot execute tasks, including event handlers or timers. It is visible in the tab strip and its content is loaded in memory. It is unfrozen on activation.
   - groupId number optional
-    Chrome 88+
+    Chrome 88+ browser.\* since Chrome 148
 
     The ID of the group that the tabs are in, or [`tabGroups.TAB_GROUP_ID_NONE`](https://developer.chrome.com/docs/extensions/reference/tabGroups/#property-TAB_GROUP_ID_NONE) for ungrouped tabs.
   - highlighted boolean optional
@@ -919,14 +919,14 @@ Gets all tabs that have the specified properties, or all tabs if no properties a
 
     Whether the tabs are in the last focused window.
   - muted boolean optional
-    Chrome 45+
+    Chrome 45+ browser.\* since Chrome 148
 
     Whether the tabs are muted.
   - pinned boolean optional
 
     Whether the tabs are pinned.
   - splitViewId number optional
-    Chrome 140+
+    Chrome 140+ browser.\* since Chrome 148
 
     The ID of the Split View that the tabs are in, or [`tabs.SPLIT_VIEW_ID_NONE`](https://developer.chrome.com/docs/extensions/reference/api/tabs#property-SPLIT_VIEW_ID_NONE) for tabs that aren't in a Split View.
   - status [TabStatus](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-TabStatus) optional
@@ -948,12 +948,12 @@ Gets all tabs that have the specified properties, or all tabs if no properties a
 #### Returns
 
 - Promise\<[Tab](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-Tab)\[\]\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### reload()
 
 ```typescript
-chrome.tabs.reload(
+browser.tabs.reload(
   tabId?: number,
   reloadProperties?: object,
 ): Promise<void>
@@ -974,12 +974,12 @@ Reload a tab.
 #### Returns
 
 - Promise\<void\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### remove()
 
 ```typescript
-chrome.tabs.remove(
+browser.tabs.remove(
   tabIds: number | number[],
 ): Promise<void>
 ```
@@ -995,12 +995,12 @@ Closes one or more tabs.
 #### Returns
 
 - Promise\<void\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### sendMessage()
 
 ```typescript
-chrome.tabs.sendMessage(
+browser.tabs.sendMessage(
   tabId: number,
   message: any,
   options?: object,
@@ -1017,7 +1017,7 @@ Sends a single message to the content script(s) in the specified tab. The [`runt
   The message to send. This message should be a JSON-ifiable object.
 - options object optional
   - documentId string optional
-    Chrome 106+
+    Chrome 106+ browser.\* since Chrome 148
 
     Send a message to a specific [document](https://developer.chrome.com/docs/extensions/reference/webNavigation/#document_ids) identified by `documentId` instead of all frames in the tab.
   - frameId number optional
@@ -1027,14 +1027,14 @@ Sends a single message to the content script(s) in the specified tab. The [`runt
 #### Returns
 
 - Promise\<any\>
-  Chrome 99+
+  Chrome 99+ browser.\* since Chrome 148
 
   Promise that resolves with the response from the content script. If an error occurs while connecting to the specified tab, the promise will be rejected.
 
 ### setZoom()
 
 ```typescript
-chrome.tabs.setZoom(
+browser.tabs.setZoom(
   tabId?: number,
   zoomFactor: number,
 ): Promise<void>
@@ -1054,14 +1054,14 @@ Zooms a specified tab.
 #### Returns
 
 - Promise\<void\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
   Resolves after the zoom factor has been changed.
 
 ### setZoomSettings()
 
 ```typescript
-chrome.tabs.setZoomSettings(
+browser.tabs.setZoomSettings(
   tabId?: number,
   zoomSettings: ZoomSettings,
 ): Promise<void>
@@ -1081,16 +1081,16 @@ Sets the zoom settings for a specified tab, which define how zoom changes are ha
 #### Returns
 
 - Promise\<void\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
   Resolves after the zoom settings are changed.
 
 ### ungroup()
 
-Chrome 88+
+Chrome 88+ browser.\* since Chrome 148
 
 ```typescript
-chrome.tabs.ungroup(
+browser.tabs.ungroup(
   tabIds: number | [number, ...number[]],
 ): Promise<void>
 ```
@@ -1112,7 +1112,7 @@ Removes one or more tabs from their respective groups. If any groups become empt
 Chrome 155+
 
 ```typescript
-chrome.tabs.unsplit(
+browser.tabs.unsplit(
   splitViewId: number,
 ): Promise<void>
 ```
@@ -1132,7 +1132,7 @@ Separates the tabs in a Split View into independent tabs.
 ### update()
 
 ```typescript
-chrome.tabs.update(
+browser.tabs.update(
   tabId?: number,
   updateProperties: object,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/tabs#type-Tab | undefined>
@@ -1150,14 +1150,14 @@ Modifies the properties of a tab. Properties that are not specified in `updatePr
 
     Whether the tab should be active. Does not affect whether the window is focused (see [`windows.update`](https://developer.chrome.com/docs/extensions/reference/windows/#method-update)).
   - autoDiscardable boolean optional
-    Chrome 54+
+    Chrome 54+ browser.\* since Chrome 148
 
     Whether the tab should be discarded automatically by the browser when resources are low.
   - highlighted boolean optional
 
     Adds or removes the tab from the current selection.
   - muted boolean optional
-    Chrome 45+
+    Chrome 45+ browser.\* since Chrome 148
 
     Whether the tab should be muted.
   - openerTabId number optional
@@ -1181,14 +1181,14 @@ Modifies the properties of a tab. Properties that are not specified in `updatePr
 #### Returns
 
 - Promise\<[Tab](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-Tab) \| undefined\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ## Events
 
 ### onActivated
 
 ```typescript
-chrome.tabs.onActivated.addListener(
+browser.tabs.onActivated.addListener(
   callback: function,
 )
 ```
@@ -1219,7 +1219,7 @@ Fires when the active tab in a window changes. Note that the tab's URL may not b
 ### onAttached
 
 ```typescript
-chrome.tabs.onAttached.addListener(
+browser.tabs.onAttached.addListener(
   callback: function,
 )
 ```
@@ -1247,7 +1247,7 @@ Fired when a tab is attached to a window; for example, because it was moved betw
 ### onCreated
 
 ```typescript
-chrome.tabs.onCreated.addListener(
+browser.tabs.onCreated.addListener(
   callback: function,
 )
 ```
@@ -1272,7 +1272,7 @@ Fired when a tab is created. Note that the tab's URL and tab group membership ma
 ### onDetached
 
 ```typescript
-chrome.tabs.onDetached.addListener(
+browser.tabs.onDetached.addListener(
   callback: function,
 )
 ```
@@ -1300,7 +1300,7 @@ Fired when a tab is detached from a window; for example, because it was moved be
 ### onHighlighted
 
 ```typescript
-chrome.tabs.onHighlighted.addListener(
+browser.tabs.onHighlighted.addListener(
   callback: function,
 )
 ```
@@ -1331,7 +1331,7 @@ Fired when the highlighted or selected tabs in a window changes.
 ### onMoved
 
 ```typescript
-chrome.tabs.onMoved.addListener(
+browser.tabs.onMoved.addListener(
   callback: function,
 )
 ```
@@ -1360,7 +1360,7 @@ Fired when a tab is moved within a window. Only one move event is fired, represe
 ### onRemoved
 
 ```typescript
-chrome.tabs.onRemoved.addListener(
+browser.tabs.onRemoved.addListener(
   callback: function,
 )
 ```
@@ -1392,7 +1392,7 @@ Fired when a tab is closed.
 ### onReplaced
 
 ```typescript
-chrome.tabs.onReplaced.addListener(
+browser.tabs.onReplaced.addListener(
   callback: function,
 )
 ```
@@ -1418,7 +1418,7 @@ Fired when a tab is replaced with another tab due to prerendering or instant.
 ### onUpdated
 
 ```typescript
-chrome.tabs.onUpdated.addListener(
+browser.tabs.onUpdated.addListener(
   callback: function,
 )
 ```
@@ -1441,44 +1441,44 @@ Fired when a tab is updated.
   - tabId number
   - changeInfo object
     - audible boolean optional
-      Chrome 45+
+      Chrome 45+ browser.\* since Chrome 148
 
       The tab's new audible state.
     - autoDiscardable boolean optional
-      Chrome 54+
+      Chrome 54+ browser.\* since Chrome 148
 
       The tab's new auto-discardable state.
     - discarded boolean optional
-      Chrome 54+
+      Chrome 54+ browser.\* since Chrome 148
 
       The tab's new discarded state.
     - favIconUrl string optional
 
       The tab's new favicon URL.
     - frozen boolean optional
-      Chrome 132+
+      Chrome 132+ browser.\* since Chrome 148
 
       The tab's new frozen state.
     - groupId number optional
-      Chrome 88+
+      Chrome 88+ browser.\* since Chrome 148
 
       The tab's new group.
     - mutedInfo [MutedInfo](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-MutedInfo) optional
-      Chrome 46+
+      Chrome 46+ browser.\* since Chrome 148
 
       The tab's new muted state and the reason for the change.
     - pinned boolean optional
 
       The tab's new pinned state.
     - splitViewId number optional
-      Chrome 140+
+      Chrome 140+ browser.\* since Chrome 148
 
       The tab's new Split View.
     - status [TabStatus](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-TabStatus) optional
 
       The tab's loading status.
     - title string optional
-      Chrome 48+
+      Chrome 48+ browser.\* since Chrome 148
 
       The tab's new title.
     - url string optional
@@ -1489,7 +1489,7 @@ Fired when a tab is updated.
 ### onZoomChange
 
 ```typescript
-chrome.tabs.onZoomChange.addListener(
+browser.tabs.onZoomChange.addListener(
   callback: function,
 )
 ```

@@ -37,7 +37,7 @@ the wallpaper API. For example:
 
 ## Availability
 
-Chrome 43+ ChromeOS only
+Chrome 43+ browser.\* since Chrome 148 ChromeOS only
 
 <br />
 
@@ -64,7 +64,7 @@ this way:
 
 ### WallpaperLayout
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The supported wallpaper layouts.
 
@@ -81,7 +81,7 @@ The supported wallpaper layouts.
 ### setWallpaper()
 
 ```typescript
-chrome.wallpaper.setWallpaper(
+browser.wallpaper.setWallpaper(
   details: object,
 ): Promise<ArrayBuffer | undefined>
 ```
@@ -110,6 +110,6 @@ Sets wallpaper to the image at *url* or *wallpaperData* with the specified *layo
 #### Returns
 
 - Promise\<ArrayBuffer \| undefined\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 <br />

@@ -56,7 +56,7 @@ repository.
 
 ### CreateType
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 Specifies what type of browser window to create. 'panel' is deprecated and is available only to existing allowlisted extensions on Chrome OS.
 
@@ -73,7 +73,7 @@ Specifies the window as a panel.
 
 ### QueryOptions
 
-Chrome 88+
+Chrome 88+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -127,7 +127,7 @@ Chrome 88+
 
 ### WindowState
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The state of this browser window. In some circumstances a window may not be assigned a `state` property; for example, when querying closed windows from the [`sessions`](https://developer.chrome.com/docs/extensions/reference/sessions/) API.
 
@@ -146,7 +146,7 @@ Fullscreen window state.
 
 ### WindowType
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The type of browser window this is. In some circumstances a window may not be assigned a `type` property; for example, when querying closed windows from the [`sessions`](https://developer.chrome.com/docs/extensions/reference/sessions/) API.
 
@@ -188,7 +188,7 @@ The windowId value that represents the absence of a Chrome browser window.
 ### create()
 
 ```typescript
-chrome.windows.create(
+browser.windows.create(
   createData?: object,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/windows#type-Window | undefined>
 ```
@@ -211,11 +211,11 @@ Creates (opens) a new browser window with any optional sizing, position, or defa
 
     The number of pixels to position the new window from the left edge of the screen. If not specified, the new window is offset naturally from the last focused window. This value is ignored for panels.
   - setSelfAsOpener boolean optional
-    Chrome 64+
+    Chrome 64+ browser.\* since Chrome 148
 
     If `true`, the newly-created window's 'window.opener' is set to the caller and is in the same [unit of related browsing contexts](https://www.w3.org/TR/html51/browsers.html#unit-of-related-browsing-contexts) as the caller.
   - state [WindowState](https://developer.chrome.com/docs/extensions/reference/api/windows#type-WindowState) optional
-    Chrome 44+
+    Chrome 44+ browser.\* since Chrome 148
 
     The initial state of the window. The `minimized`, `maximized`, and `fullscreen` states cannot be combined with `left`, `top`, `width`, or `height`.
   - tabId number optional
@@ -237,12 +237,12 @@ Creates (opens) a new browser window with any optional sizing, position, or defa
 #### Returns
 
 - Promise\<[Window](https://developer.chrome.com/docs/extensions/reference/api/windows#type-Window) \| undefined\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### get()
 
 ```typescript
-chrome.windows.get(
+browser.windows.get(
   windowId: number,
   queryOptions?: QueryOptions,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/windows#type-Window>
@@ -254,17 +254,17 @@ Gets details about a window.
 
 - windowId number
 - queryOptions [QueryOptions](https://developer.chrome.com/docs/extensions/reference/api/windows#type-QueryOptions) optional
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 #### Returns
 
 - Promise\<[Window](https://developer.chrome.com/docs/extensions/reference/api/windows#type-Window)\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### getAll()
 
 ```typescript
-chrome.windows.getAll(
+browser.windows.getAll(
   queryOptions?: QueryOptions,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/windows#type-Window[]>
 ```
@@ -274,17 +274,17 @@ Gets all windows.
 #### Parameters
 
 - queryOptions [QueryOptions](https://developer.chrome.com/docs/extensions/reference/api/windows#type-QueryOptions) optional
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 #### Returns
 
 - Promise\<[Window](https://developer.chrome.com/docs/extensions/reference/api/windows#type-Window)\[\]\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### getCurrent()
 
 ```typescript
-chrome.windows.getCurrent(
+browser.windows.getCurrent(
   queryOptions?: QueryOptions,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/windows#type-Window>
 ```
@@ -294,17 +294,17 @@ Gets the [current window](https://developer.chrome.com/docs/extensions/reference
 #### Parameters
 
 - queryOptions [QueryOptions](https://developer.chrome.com/docs/extensions/reference/api/windows#type-QueryOptions) optional
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 #### Returns
 
 - Promise\<[Window](https://developer.chrome.com/docs/extensions/reference/api/windows#type-Window)\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### getLastFocused()
 
 ```typescript
-chrome.windows.getLastFocused(
+browser.windows.getLastFocused(
   queryOptions?: QueryOptions,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/windows#type-Window>
 ```
@@ -314,17 +314,17 @@ Gets the window that was most recently focused --- typically the window 'on top'
 #### Parameters
 
 - queryOptions [QueryOptions](https://developer.chrome.com/docs/extensions/reference/api/windows#type-QueryOptions) optional
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 #### Returns
 
 - Promise\<[Window](https://developer.chrome.com/docs/extensions/reference/api/windows#type-Window)\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### remove()
 
 ```typescript
-chrome.windows.remove(
+browser.windows.remove(
   windowId: number,
 ): Promise<void>
 ```
@@ -338,12 +338,12 @@ Removes (closes) a window and all the tabs inside it.
 #### Returns
 
 - Promise\<void\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### update()
 
 ```typescript
-chrome.windows.update(
+browser.windows.update(
   windowId: number,
   updateInfo: object,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/windows#type-Window>
@@ -380,16 +380,16 @@ Updates the properties of a window. Specify only the properties that to be chang
 #### Returns
 
 - Promise\<[Window](https://developer.chrome.com/docs/extensions/reference/api/windows#type-Window)\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ## Events
 
 ### onBoundsChanged
 
-Chrome 86+
+Chrome 86+ browser.\* since Chrome 148
 
 ```typescript
-chrome.windows.onBoundsChanged.addListener(
+browser.windows.onBoundsChanged.addListener(
   callback: function,
 )
 ```
@@ -414,7 +414,7 @@ Fired when a window has been resized; this event is only dispatched when the new
 ### onCreated
 
 ```typescript
-chrome.windows.onCreated.addListener(
+browser.windows.onCreated.addListener(
   callback: function,
   filters?: object,
 )
@@ -425,7 +425,7 @@ Fired when a window is created.
 #### Parameters
 
 - callback function
-  Chrome 46+
+  Chrome 46+ browser.\* since Chrome 148
 
 
   The `callback` parameter looks like:
@@ -447,7 +447,7 @@ Fired when a window is created.
 ### onFocusChanged
 
 ```typescript
-chrome.windows.onFocusChanged.addListener(
+browser.windows.onFocusChanged.addListener(
   callback: function,
   filters?: object,
 )
@@ -458,7 +458,7 @@ Fired when the currently focused window changes. Returns `chrome.windows.WINDOW_
 #### Parameters
 
 - callback function
-  Chrome 46+
+  Chrome 46+ browser.\* since Chrome 148
 
 
   The `callback` parameter looks like:
@@ -480,7 +480,7 @@ Fired when the currently focused window changes. Returns `chrome.windows.WINDOW_
 ### onRemoved
 
 ```typescript
-chrome.windows.onRemoved.addListener(
+browser.windows.onRemoved.addListener(
   callback: function,
   filters?: object,
 )
@@ -491,7 +491,7 @@ Fired when a window is removed (closed).
 #### Parameters
 
 - callback function
-  Chrome 46+
+  Chrome 46+ browser.\* since Chrome 148
 
 
   The `callback` parameter looks like:

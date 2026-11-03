@@ -37,7 +37,7 @@ The maximum size (in bytes) of all key/value pairs in a message.
 ### register()
 
 ```typescript
-chrome.gcm.register(
+browser.gcm.register(
   senderIds: string[],
 ): Promise<string>
 ```
@@ -53,14 +53,14 @@ Registers the application with FCM. The registration ID will be returned by the 
 #### Returns
 
 - Promise\<string\>
-  Chrome 116+
+  Chrome 116+ browser.\* since Chrome 148
 
   Resolves when registration completes.
 
 ### send()
 
 ```typescript
-chrome.gcm.send(
+browser.gcm.send(
   message: object,
 ): Promise<string>
 ```
@@ -88,14 +88,14 @@ Sends a message according to its contents.
 #### Returns
 
 - Promise\<string\>
-  Chrome 116+
+  Chrome 116+ browser.\* since Chrome 148
 
   Resolves after the message is successfully queued for sending. If an error occurs, the promise will be rejected.
 
 ### unregister()
 
 ```typescript
-chrome.gcm.unregister(): Promise<void>
+browser.gcm.unregister(): Promise<void>
 ```
 
 Unregisters the application from FCM.
@@ -103,7 +103,7 @@ Unregisters the application from FCM.
 #### Returns
 
 - Promise\<void\>
-  Chrome 116+
+  Chrome 116+ browser.\* since Chrome 148
 
   Resolves after the unregistration completes. Unregistration was successful if the promise does not reject.
 
@@ -112,7 +112,7 @@ Unregisters the application from FCM.
 ### onMessage
 
 ```typescript
-chrome.gcm.onMessage.addListener(
+browser.gcm.onMessage.addListener(
   callback: function,
 )
 ```
@@ -146,7 +146,7 @@ Fired when a message is received through FCM.
 ### onMessagesDeleted
 
 ```typescript
-chrome.gcm.onMessagesDeleted.addListener(
+browser.gcm.onMessagesDeleted.addListener(
   callback: function,
 )
 ```
@@ -169,7 +169,7 @@ Fired when a FCM server had to delete messages sent by an app server to the appl
 ### onSendError
 
 ```typescript
-chrome.gcm.onSendError.addListener(
+browser.gcm.onSendError.addListener(
   callback: function,
 )
 ```

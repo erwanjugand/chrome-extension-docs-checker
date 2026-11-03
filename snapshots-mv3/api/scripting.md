@@ -20,7 +20,7 @@ Use the `chrome.scripting` API to execute script in different contexts.
 
 ## Availability
 
-Chrome 88+ MV3+
+Chrome 88+ browser.\* since Chrome 148 MV3+
 
 <br />
 
@@ -255,7 +255,7 @@ repository.
 
 ### ContentScriptFilter
 
-Chrome 96+
+Chrome 96+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -282,7 +282,7 @@ Chrome 96+
 
 ### ExecutionWorld
 
-Chrome 95+
+Chrome 95+ browser.\* since Chrome 148
 
 The JavaScript world for a script to execute within.
 
@@ -300,11 +300,11 @@ Specifies the main world of the DOM, which is the execution environment shared w
 #### Properties
 
 - documentId string
-  Chrome 106+
+  Chrome 106+ browser.\* since Chrome 148
 
   The document associated with the injection.
 - frameId number
-  Chrome 90+
+  Chrome 90+ browser.\* since Chrome 148
 
   The frame associated with the injection.
 - result any optional
@@ -319,7 +319,7 @@ Specifies the main world of the DOM, which is the execution environment shared w
 
   Whether the script should inject into all frames within the tab. Defaults to false. This must not be true if `frameIds` is specified.
 - documentIds string\[\] optional
-  Chrome 106+
+  Chrome 106+ browser.\* since Chrome 148
 
   The [IDs](https://developer.chrome.com/docs/extensions/reference/webNavigation/#document_ids) of specific documentIds to inject into. This must not be set if `frameIds` is set.
 - frameIds number\[\] optional
@@ -331,7 +331,7 @@ Specifies the main world of the DOM, which is the execution environment shared w
 
 ### RegisteredContentScript
 
-Chrome 96+
+Chrome 96+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -351,7 +351,7 @@ Chrome 96+
 
   The list of JavaScript files to be injected into matching pages. These are injected in the order they appear in this array.
 - matchOriginAsFallback boolean optional
-  Chrome 119+
+  Chrome 119+ browser.\* since Chrome 148
 
   Indicates whether the script can be injected into frames where the URL contains an unsupported scheme; specifically: about:, data:, blob:, or filesystem:. In these cases, the URL's origin is checked to determine if the script should be injected. If the origin is `null` (as is the case for data: URLs) then the used origin is either the frame that created the current frame or the frame that initiated the navigation to this frame. Note that this may not be the parent frame.
 - matches string\[\] optional
@@ -364,7 +364,7 @@ Chrome 96+
 
   Specifies when JavaScript files are injected into the web page. The preferred and default value is `document_idle`.
 - world [ExecutionWorld](https://developer.chrome.com/docs/extensions/reference/api/scripting#type-ExecutionWorld) optional
-  Chrome 102+
+  Chrome 102+ browser.\* since Chrome 148
 
   The JavaScript "world" to run the script in. Defaults to `ISOLATED`.
 
@@ -373,25 +373,25 @@ Chrome 96+
 #### Properties
 
 - args any\[\] optional
-  Chrome 92+
+  Chrome 92+ browser.\* since Chrome 148
 
   The arguments to pass to the provided function. This is only valid if the `func` parameter is specified. These arguments must be JSON-serializable.
 - files string\[\] optional
 
   The path of the JS or CSS files to inject, relative to the extension's root directory. Exactly one of `files` or `func` must be specified.
 - injectImmediately boolean optional
-  Chrome 102+
+  Chrome 102+ browser.\* since Chrome 148
 
   Whether the injection should be triggered in the target as soon as possible. Note that this is not a guarantee that injection will occur prior to page load, as the page may have already loaded by the time the script reaches the target.
 - target [InjectionTarget](https://developer.chrome.com/docs/extensions/reference/api/scripting#type-InjectionTarget)
 
   Details specifying the target into which to inject the script.
 - world [ExecutionWorld](https://developer.chrome.com/docs/extensions/reference/api/scripting#type-ExecutionWorld) optional
-  Chrome 95+
+  Chrome 95+ browser.\* since Chrome 148
 
   The JavaScript "world" to run the script in. Defaults to `ISOLATED`.
 - func void optional
-  Chrome 92+
+  Chrome 92+ browser.\* since Chrome 148
 
   A JavaScript function to inject. This function will be serialized, and then deserialized for injection. This means that any bound parameters and execution context will be lost. Exactly one of `files` or `func` must be specified.
 
@@ -420,7 +420,7 @@ The origin for a style change. See [style origins](https://developer.mozilla.org
 ### executeScript()
 
 ```typescript
-chrome.scripting.executeScript(
+browser.scripting.executeScript(
   injection: ScriptInjection,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/scripting#type-InjectionResult[]>
 ```
@@ -436,16 +436,16 @@ Injects a script into a target context. By default, the script will be run at `d
 #### Returns
 
 - Promise\<[InjectionResult](https://developer.chrome.com/docs/extensions/reference/api/scripting#type-InjectionResult)\[\]\>
-  Chrome 90+
+  Chrome 90+ browser.\* since Chrome 148
 
   Returns a Promise which resolves upon completion of the injection. The resulting array contains the result of execution for each frame where the injection succeeded.
 
 ### getRegisteredContentScripts()
 
-Chrome 96+
+Chrome 96+ browser.\* since Chrome 148
 
 ```typescript
-chrome.scripting.getRegisteredContentScripts(
+browser.scripting.getRegisteredContentScripts(
   filter?: ContentScriptFilter,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/scripting#type-RegisteredContentScript[]>
 ```
@@ -465,7 +465,7 @@ Returns all dynamically registered content scripts for this extension that match
 ### insertCSS()
 
 ```typescript
-chrome.scripting.insertCSS(
+browser.scripting.insertCSS(
   injection: CSSInjection,
 ): Promise<void>
 ```
@@ -481,16 +481,16 @@ Inserts a CSS stylesheet into a target context. If multiple frames are specified
 #### Returns
 
 - Promise\<void\>
-  Chrome 90+
+  Chrome 90+ browser.\* since Chrome 148
 
   Returns a Promise which resolves upon completion of the insertion.
 
 ### registerContentScripts()
 
-Chrome 96+
+Chrome 96+ browser.\* since Chrome 148
 
 ```typescript
-chrome.scripting.registerContentScripts(
+browser.scripting.registerContentScripts(
   scripts: RegisteredContentScript[],
 ): Promise<void>
 ```
@@ -511,10 +511,10 @@ Registers one or more content scripts for this extension.
 
 ### removeCSS()
 
-Chrome 90+
+Chrome 90+ browser.\* since Chrome 148
 
 ```typescript
-chrome.scripting.removeCSS(
+browser.scripting.removeCSS(
   injection: CSSInjection,
 ): Promise<void>
 ```
@@ -535,10 +535,10 @@ Removes a CSS stylesheet that was previously inserted by this extension from a t
 
 ### unregisterContentScripts()
 
-Chrome 96+
+Chrome 96+ browser.\* since Chrome 148
 
 ```typescript
-chrome.scripting.unregisterContentScripts(
+browser.scripting.unregisterContentScripts(
   filter?: ContentScriptFilter,
 ): Promise<void>
 ```
@@ -559,10 +559,10 @@ Unregisters content scripts for this extension.
 
 ### updateContentScripts()
 
-Chrome 96+
+Chrome 96+ browser.\* since Chrome 148
 
 ```typescript
-chrome.scripting.updateContentScripts(
+browser.scripting.updateContentScripts(
   scripts: RegisteredContentScript[],
 ): Promise<void>
 ```

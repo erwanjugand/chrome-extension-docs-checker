@@ -20,7 +20,7 @@ The `chrome.webAuthenticationProxy` API lets remote desktop software running on 
 
 ## Availability
 
-Chrome 115+ MV3+
+Chrome 115+ browser.\* since Chrome 148 MV3+
 
 <br />
 
@@ -107,7 +107,7 @@ Chrome 115+ MV3+
 ### attach()
 
 ```typescript
-chrome.webAuthenticationProxy.attach(): Promise<string | undefined>
+browser.webAuthenticationProxy.attach(): Promise<string | undefined>
 ```
 
 Makes this extension the active Web Authentication API request proxy.
@@ -127,7 +127,7 @@ Refer to the `onRemoteSessionStateChange` event for signaling a change of remote
 ### completeCreateRequest()
 
 ```typescript
-chrome.webAuthenticationProxy.completeCreateRequest(
+browser.webAuthenticationProxy.completeCreateRequest(
   details: CreateResponseDetails,
 ): Promise<void>
 ```
@@ -145,7 +145,7 @@ Reports the result of a `navigator.credentials.create()` call. The extension mus
 ### completeGetRequest()
 
 ```typescript
-chrome.webAuthenticationProxy.completeGetRequest(
+browser.webAuthenticationProxy.completeGetRequest(
   details: GetResponseDetails,
 ): Promise<void>
 ```
@@ -163,7 +163,7 @@ Reports the result of a `navigator.credentials.get()` call. The extension must c
 ### completeIsUvpaaRequest()
 
 ```typescript
-chrome.webAuthenticationProxy.completeIsUvpaaRequest(
+browser.webAuthenticationProxy.completeIsUvpaaRequest(
   details: IsUvpaaResponseDetails,
 ): Promise<void>
 ```
@@ -181,7 +181,7 @@ Reports the result of a `PublicKeyCredential.isUserVerifyingPlatformAuthenticato
 ### detach()
 
 ```typescript
-chrome.webAuthenticationProxy.detach(): Promise<string | undefined>
+browser.webAuthenticationProxy.detach(): Promise<string | undefined>
 ```
 
 Removes this extension from being the active Web Authentication API request proxy.
@@ -199,7 +199,7 @@ Refer to the `onRemoteSessionStateChange` event for signaling a change of remote
 ### onCreateRequest
 
 ```typescript
-chrome.webAuthenticationProxy.onCreateRequest.addListener(
+browser.webAuthenticationProxy.onCreateRequest.addListener(
   callback: function,
 )
 ```
@@ -224,7 +224,7 @@ Fires when a WebAuthn `navigator.credentials.create()` call occurs. The extensio
 ### onGetRequest
 
 ```typescript
-chrome.webAuthenticationProxy.onGetRequest.addListener(
+browser.webAuthenticationProxy.onGetRequest.addListener(
   callback: function,
 )
 ```
@@ -249,7 +249,7 @@ Fires when a WebAuthn navigator.credentials.get() call occurs. The extension mus
 ### onIsUvpaaRequest
 
 ```typescript
-chrome.webAuthenticationProxy.onIsUvpaaRequest.addListener(
+browser.webAuthenticationProxy.onIsUvpaaRequest.addListener(
   callback: function,
 )
 ```
@@ -274,7 +274,7 @@ Fires when a `PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable(
 ### onRemoteSessionStateChange
 
 ```typescript
-chrome.webAuthenticationProxy.onRemoteSessionStateChange.addListener(
+browser.webAuthenticationProxy.onRemoteSessionStateChange.addListener(
   callback: function,
 )
 ```
@@ -303,7 +303,7 @@ The event listener must be registered synchronously at load time.
 ### onRequestCanceled
 
 ```typescript
-chrome.webAuthenticationProxy.onRequestCanceled.addListener(
+browser.webAuthenticationProxy.onRequestCanceled.addListener(
   callback: function,
 )
 ```

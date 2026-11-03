@@ -269,7 +269,7 @@ page in the DevTools documentation.
 
 ### AccessLevel
 
-Chrome 102+
+Chrome 102+ browser.\* since Chrome 148
 
 The storage area's access level.
 
@@ -319,7 +319,7 @@ Items in the `managed` storage area are set by an enterprise policy configured b
 
 ### session
 
-Chrome 102+ MV3+
+Chrome 102+ browser.\* since Chrome 148 MV3+
 
 Items in the `session` storage area are stored in-memory and will not be persisted to disk.
 
@@ -375,7 +375,7 @@ Items in the `sync` storage area are synced using Chrome Sync.
 ### onChanged
 
 ```typescript
-chrome.storage.onChanged.addListener(
+browser.storage.onChanged.addListener(
   callback: function,
 )
 ```

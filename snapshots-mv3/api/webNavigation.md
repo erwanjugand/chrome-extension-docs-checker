@@ -141,7 +141,7 @@ repository.
 
 ### TransitionQualifier
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 #### Enum
 
@@ -154,7 +154,7 @@ Chrome 44+
 
 ### TransitionType
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 Cause of the navigation. The same transition types as defined in the history API are used. These are the same transition types as defined in the [history API](https://developer.chrome.com/docs/extensions/reference/history/#transition_types) except with `"start_page"` in place of `"auto_toplevel"` (for backwards compatibility).
 
@@ -179,7 +179,7 @@ Cause of the navigation. The same transition types as defined in the history API
 ### getAllFrames()
 
 ```typescript
-chrome.webNavigation.getAllFrames(
+browser.webNavigation.getAllFrames(
   details: object,
 ): Promise<object[] | undefined>
 ```
@@ -198,12 +198,12 @@ Retrieves information about all frames of a given tab.
 #### Returns
 
 - Promise\<object\[\] \| undefined\>
-  Chrome 93+
+  Chrome 93+ browser.\* since Chrome 148
 
 ### getFrame()
 
 ```typescript
-chrome.webNavigation.getFrame(
+browser.webNavigation.getFrame(
   details: object,
 ): Promise<object | undefined>
 ```
@@ -216,7 +216,7 @@ Retrieves information about the given frame. A frame refers to an \<iframe\> or 
 
   Information about the frame to retrieve information about.
   - documentId string optional
-    Chrome 106+
+    Chrome 106+ browser.\* since Chrome 148
 
     The UUID of the document. If the frameId and/or tabId are provided they will be validated to match the document found by provided document ID.
   - frameId number optional
@@ -237,14 +237,14 @@ Retrieves information about the given frame. A frame refers to an \<iframe\> or 
 #### Returns
 
 - Promise\<object \| undefined\>
-  Chrome 93+
+  Chrome 93+ browser.\* since Chrome 148
 
 ## Events
 
 ### onBeforeNavigate
 
 ```typescript
-chrome.webNavigation.onBeforeNavigate.addListener(
+browser.webNavigation.onBeforeNavigate.addListener(
   callback: function,
   filters?: object,
 )
@@ -267,18 +267,18 @@ Fired when a navigation is about to occur.
 
   - details object
     - documentLifecycle [extensionTypes.DocumentLifecycle](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The lifecycle the document is in.
     - frameId number
 
       0 indicates the navigation happens in the tab content window; a positive value indicates navigation in a subframe. Frame IDs are unique for a given tab and process.
     - frameType [extensionTypes.FrameType](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The type of frame the navigation occurred in.
     - parentDocumentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       A UUID of the parent document owning this frame. This is not set if there is no parent.
     - parentFrameId number
@@ -307,7 +307,7 @@ Fired when a navigation is about to occur.
 ### onCommitted
 
 ```typescript
-chrome.webNavigation.onCommitted.addListener(
+browser.webNavigation.onCommitted.addListener(
   callback: function,
   filters?: object,
 )
@@ -330,26 +330,26 @@ Fired when a navigation is committed. The document (and the resources it refers 
 
   - details object
     - documentId string
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       A UUID of the document loaded.
     - documentLifecycle [extensionTypes.DocumentLifecycle](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The lifecycle the document is in.
     - frameId number
 
       0 indicates the navigation happens in the tab content window; a positive value indicates navigation in a subframe. Frame IDs are unique within a tab.
     - frameType [extensionTypes.FrameType](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The type of frame the navigation occurred in.
     - parentDocumentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       A UUID of the parent document owning this frame. This is not set if there is no parent.
     - parentFrameId number
-      Chrome 74+
+      Chrome 74+ browser.\* since Chrome 148
 
       The ID of the parent frame, or `-1` if this is the main frame.
     - processId number
@@ -376,7 +376,7 @@ Fired when a navigation is committed. The document (and the resources it refers 
 ### onCompleted
 
 ```typescript
-chrome.webNavigation.onCompleted.addListener(
+browser.webNavigation.onCompleted.addListener(
   callback: function,
   filters?: object,
 )
@@ -399,26 +399,26 @@ Fired when a document, including the resources it refers to, is completely loade
 
   - details object
     - documentId string
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       A UUID of the document loaded.
     - documentLifecycle [extensionTypes.DocumentLifecycle](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The lifecycle the document is in.
     - frameId number
 
       0 indicates the navigation happens in the tab content window; a positive value indicates navigation in a subframe. Frame IDs are unique within a tab.
     - frameType [extensionTypes.FrameType](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The type of frame the navigation occurred in.
     - parentDocumentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       A UUID of the parent document owning this frame. This is not set if there is no parent.
     - parentFrameId number
-      Chrome 74+
+      Chrome 74+ browser.\* since Chrome 148
 
       The ID of the parent frame, or `-1` if this is the main frame.
     - processId number
@@ -439,7 +439,7 @@ Fired when a document, including the resources it refers to, is completely loade
 ### onCreatedNavigationTarget
 
 ```typescript
-chrome.webNavigation.onCreatedNavigationTarget.addListener(
+browser.webNavigation.onCreatedNavigationTarget.addListener(
   callback: function,
   filters?: object,
 )
@@ -487,7 +487,7 @@ Fired when a new window, or a new tab in an existing window, is created to host 
 ### onDOMContentLoaded
 
 ```typescript
-chrome.webNavigation.onDOMContentLoaded.addListener(
+browser.webNavigation.onDOMContentLoaded.addListener(
   callback: function,
   filters?: object,
 )
@@ -510,26 +510,26 @@ Fired when the page's DOM is fully constructed, but the referenced resources may
 
   - details object
     - documentId string
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       A UUID of the document loaded.
     - documentLifecycle [extensionTypes.DocumentLifecycle](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The lifecycle the document is in.
     - frameId number
 
       0 indicates the navigation happens in the tab content window; a positive value indicates navigation in a subframe. Frame IDs are unique within a tab.
     - frameType [extensionTypes.FrameType](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The type of frame the navigation occurred in.
     - parentDocumentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       A UUID of the parent document owning this frame. This is not set if there is no parent.
     - parentFrameId number
-      Chrome 74+
+      Chrome 74+ browser.\* since Chrome 148
 
       The ID of the parent frame, or `-1` if this is the main frame.
     - processId number
@@ -550,7 +550,7 @@ Fired when the page's DOM is fully constructed, but the referenced resources may
 ### onErrorOccurred
 
 ```typescript
-chrome.webNavigation.onErrorOccurred.addListener(
+browser.webNavigation.onErrorOccurred.addListener(
   callback: function,
   filters?: object,
 )
@@ -573,11 +573,11 @@ Fired when an error occurs and the navigation is aborted. This can happen if eit
 
   - details object
     - documentId string
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       A UUID of the document loaded.
     - documentLifecycle [extensionTypes.DocumentLifecycle](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The lifecycle the document is in.
     - error string
@@ -587,15 +587,15 @@ Fired when an error occurs and the navigation is aborted. This can happen if eit
 
       0 indicates the navigation happens in the tab content window; a positive value indicates navigation in a subframe. Frame IDs are unique within a tab.
     - frameType [extensionTypes.FrameType](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The type of frame the navigation occurred in.
     - parentDocumentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       A UUID of the parent document owning this frame. This is not set if there is no parent.
     - parentFrameId number
-      Chrome 74+
+      Chrome 74+ browser.\* since Chrome 148
 
       The ID of the parent frame, or `-1` if this is the main frame.
     - processId number
@@ -621,7 +621,7 @@ Fired when an error occurs and the navigation is aborted. This can happen if eit
 ### onHistoryStateUpdated
 
 ```typescript
-chrome.webNavigation.onHistoryStateUpdated.addListener(
+browser.webNavigation.onHistoryStateUpdated.addListener(
   callback: function,
   filters?: object,
 )
@@ -644,26 +644,26 @@ Fired when the frame's history was updated to a new URL. All future events for t
 
   - details object
     - documentId string
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       A UUID of the document loaded.
     - documentLifecycle [extensionTypes.DocumentLifecycle](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The lifecycle the document is in.
     - frameId number
 
       0 indicates the navigation happens in the tab content window; a positive value indicates navigation in a subframe. Frame IDs are unique within a tab.
     - frameType [extensionTypes.FrameType](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The type of frame the navigation occurred in.
     - parentDocumentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       A UUID of the parent document owning this frame. This is not set if there is no parent.
     - parentFrameId number
-      Chrome 74+
+      Chrome 74+ browser.\* since Chrome 148
 
       The ID of the parent frame, or `-1` if this is the main frame.
     - processId number
@@ -690,7 +690,7 @@ Fired when the frame's history was updated to a new URL. All future events for t
 ### onReferenceFragmentUpdated
 
 ```typescript
-chrome.webNavigation.onReferenceFragmentUpdated.addListener(
+browser.webNavigation.onReferenceFragmentUpdated.addListener(
   callback: function,
   filters?: object,
 )
@@ -713,26 +713,26 @@ Fired when the reference fragment of a frame was updated. All future events for 
 
   - details object
     - documentId string
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       A UUID of the document loaded.
     - documentLifecycle [extensionTypes.DocumentLifecycle](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-DocumentLifecycle)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The lifecycle the document is in.
     - frameId number
 
       0 indicates the navigation happens in the tab content window; a positive value indicates navigation in a subframe. Frame IDs are unique within a tab.
     - frameType [extensionTypes.FrameType](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-FrameType)
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       The type of frame the navigation occurred in.
     - parentDocumentId string optional
-      Chrome 106+
+      Chrome 106+ browser.\* since Chrome 148
 
       A UUID of the parent document owning this frame. This is not set if there is no parent.
     - parentFrameId number
-      Chrome 74+
+      Chrome 74+ browser.\* since Chrome 148
 
       The ID of the parent frame, or `-1` if this is the main frame.
     - processId number
@@ -759,7 +759,7 @@ Fired when the reference fragment of a frame was updated. All future events for 
 ### onTabReplaced
 
 ```typescript
-chrome.webNavigation.onTabReplaced.addListener(
+browser.webNavigation.onTabReplaced.addListener(
   callback: function,
 )
 ```

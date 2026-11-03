@@ -25,7 +25,7 @@ Use the `chrome.printing` API to send print jobs to printers installed on Chrome
 
 ## Availability
 
-Chrome 81+ ChromeOS only
+Chrome 81+ browser.\* since Chrome 148 ChromeOS only
 
 <br />
 
@@ -330,7 +330,7 @@ The maximum number of times that [`submitJob`](https://developer.chrome.com/docs
 ### cancelJob()
 
 ```typescript
-chrome.printing.cancelJob(
+browser.printing.cancelJob(
   jobId: string,
 ): Promise<void>
 ```
@@ -346,14 +346,14 @@ Cancels previously submitted job.
 #### Returns
 
 - Promise\<void\>
-  Chrome 100+
+  Chrome 100+ browser.\* since Chrome 148
 
 ### getJobStatus()
 
-Chrome 135+
+Chrome 135+ browser.\* since Chrome 148
 
 ```typescript
-chrome.printing.getJobStatus(
+browser.printing.getJobStatus(
   jobId: string,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/printing#type-JobStatus>
 ```
@@ -371,7 +371,7 @@ Returns the status of the print job. This call will fail with a runtime error if
 ### getPrinterInfo()
 
 ```typescript
-chrome.printing.getPrinterInfo(
+browser.printing.getPrinterInfo(
   printerId: string,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/printing#type-GetPrinterInfoResponse>
 ```
@@ -385,12 +385,12 @@ Returns the status and capabilities of the printer in [CDD format](https://devel
 #### Returns
 
 - Promise\<[GetPrinterInfoResponse](https://developer.chrome.com/docs/extensions/reference/api/printing#type-GetPrinterInfoResponse)\>
-  Chrome 100+
+  Chrome 100+ browser.\* since Chrome 148
 
 ### getPrinters()
 
 ```typescript
-chrome.printing.getPrinters(): Promise<https://developer.chrome.com/docs/extensions/reference/api/printing#type-Printer[]>
+browser.printing.getPrinters(): Promise<https://developer.chrome.com/docs/extensions/reference/api/printing#type-Printer[]>
 ```
 
 Returns the list of available printers on the device. This includes manually added, enterprise and discovered printers.
@@ -398,12 +398,12 @@ Returns the list of available printers on the device. This includes manually add
 #### Returns
 
 - Promise\<[Printer](https://developer.chrome.com/docs/extensions/reference/api/printing#type-Printer)\[\]\>
-  Chrome 100+
+  Chrome 100+ browser.\* since Chrome 148
 
 ### submitJob()
 
 ```typescript
-chrome.printing.submitJob(
+browser.printing.submitJob(
   request: SubmitJobRequest,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/printing#type-SubmitJobResponse>
 ```
@@ -418,14 +418,14 @@ Before Chrome 120, this function did not return a promise.
 #### Returns
 
 - Promise\<[SubmitJobResponse](https://developer.chrome.com/docs/extensions/reference/api/printing#type-SubmitJobResponse)\>
-  Chrome 100+
+  Chrome 100+ browser.\* since Chrome 148
 
 ## Events
 
 ### onJobStatusChanged
 
 ```typescript
-chrome.printing.onJobStatusChanged.addListener(
+browser.printing.onJobStatusChanged.addListener(
   callback: function,
 )
 ```

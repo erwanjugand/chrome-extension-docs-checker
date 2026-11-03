@@ -80,14 +80,14 @@ Represents information about an HTTP cookie.
 
   The name of the cookie.
 - partitionKey [CookiePartitionKey](https://developer.chrome.com/docs/extensions/reference/api/cookies#type-CookiePartitionKey) optional
-  Chrome 119+
+  Chrome 119+ browser.\* since Chrome 148
 
   The partition key for reading or modifying cookies with the Partitioned attribute.
 - path string
 
   The path of the cookie.
 - sameSite [SameSiteStatus](https://developer.chrome.com/docs/extensions/reference/api/cookies#type-SameSiteStatus)
-  Chrome 51+
+  Chrome 51+ browser.\* since Chrome 148
 
   The cookie's same-site status (i.e. whether the cookie is sent with cross-site requests).
 - secure boolean
@@ -105,7 +105,7 @@ Represents information about an HTTP cookie.
 
 ### CookieDetails
 
-Chrome 88+
+Chrome 88+ browser.\* since Chrome 148
 
 Details to identify the cookie.
 
@@ -115,7 +115,7 @@ Details to identify the cookie.
 
   The name of the cookie to access.
 - partitionKey [CookiePartitionKey](https://developer.chrome.com/docs/extensions/reference/api/cookies#type-CookiePartitionKey) optional
-  Chrome 119+
+  Chrome 119+ browser.\* since Chrome 148
 
   The partition key for reading or modifying cookies with the Partitioned attribute.
 - storeId string optional
@@ -127,14 +127,14 @@ Details to identify the cookie.
 
 ### CookiePartitionKey
 
-Chrome 119+
+Chrome 119+ browser.\* since Chrome 148
 
 Represents a partitioned cookie's partition key.
 
 #### Properties
 
 - hasCrossSiteAncestor boolean optional
-  Chrome 130+
+  Chrome 130+ browser.\* since Chrome 148
 
   Indicates if the cookie was set in a cross-cross site context. This prevents a top-level site embedded in a cross-site context from accessing cookies set by the top-level site in a same-site context.
 - topLevelSite string optional
@@ -156,7 +156,7 @@ Represents a cookie store in the browser. An incognito mode window, for instance
 
 ### FrameDetails
 
-Chrome 132+
+Chrome 132+ browser.\* since Chrome 148
 
 Details to identify the frame.
 
@@ -174,7 +174,7 @@ Details to identify the frame.
 
 ### OnChangedCause
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The underlying reason behind the cookie's change. If a cookie was inserted, or removed via an explicit call to "chrome.cookies.remove", "cause" will be "explicit". If a cookie was automatically removed due to expiry, "cause" will be "expired". If a cookie was removed due to being overwritten with an already-expired expiration date, "cause" will be set to "expired_overwrite". If a cookie was automatically removed due to garbage collection, "cause" will be "evicted". If a cookie was automatically removed due to a "set" call that overwrote it, "cause" will be "overwrite". Plan your response accordingly.
 
@@ -190,7 +190,7 @@ The underlying reason behind the cookie's change. If a cookie was inserted, or r
 
 ### SameSiteStatus
 
-Chrome 51+
+Chrome 51+ browser.\* since Chrome 148
 
 A cookie's 'SameSite' state (https://tools.ietf.org/html/draft-west-first-party-cookies). 'no_restriction' corresponds to a cookie set with 'SameSite=None', 'lax' to 'SameSite=Lax', and 'strict' to 'SameSite=Strict'. 'unspecified' corresponds to a cookie set without the SameSite attribute.
 
@@ -208,7 +208,7 @@ A cookie's 'SameSite' state (https://tools.ietf.org/html/draft-west-first-party-
 ### get()
 
 ```typescript
-chrome.cookies.get(
+browser.cookies.get(
   details: CookieDetails,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/cookies#type-Cookie | undefined>
 ```
@@ -222,12 +222,12 @@ Retrieves information about a single cookie. If more than one cookie of the same
 #### Returns
 
 - Promise\<[Cookie](https://developer.chrome.com/docs/extensions/reference/api/cookies#type-Cookie) \| undefined\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### getAll()
 
 ```typescript
-chrome.cookies.getAll(
+browser.cookies.getAll(
   details: object,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/cookies#type-Cookie[]>
 ```
@@ -246,7 +246,7 @@ Retrieves all cookies from a single cookie store that match the given informatio
 
     Filters the cookies by name.
   - partitionKey [CookiePartitionKey](https://developer.chrome.com/docs/extensions/reference/api/cookies#type-CookiePartitionKey) optional
-    Chrome 119+
+    Chrome 119+ browser.\* since Chrome 148
 
     The partition key for reading or modifying cookies with the Partitioned attribute.
   - path string optional
@@ -268,12 +268,12 @@ Retrieves all cookies from a single cookie store that match the given informatio
 #### Returns
 
 - Promise\<[Cookie](https://developer.chrome.com/docs/extensions/reference/api/cookies#type-Cookie)\[\]\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### getAllCookieStores()
 
 ```typescript
-chrome.cookies.getAllCookieStores(): Promise<https://developer.chrome.com/docs/extensions/reference/api/cookies#type-CookieStore[]>
+browser.cookies.getAllCookieStores(): Promise<https://developer.chrome.com/docs/extensions/reference/api/cookies#type-CookieStore[]>
 ```
 
 Lists all existing cookie stores.
@@ -281,14 +281,14 @@ Lists all existing cookie stores.
 #### Returns
 
 - Promise\<[CookieStore](https://developer.chrome.com/docs/extensions/reference/api/cookies#type-CookieStore)\[\]\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### getPartitionKey()
 
-Chrome 132+
+Chrome 132+ browser.\* since Chrome 148
 
 ```typescript
-chrome.cookies.getPartitionKey(
+browser.cookies.getPartitionKey(
   details: FrameDetails,
 ): Promise<object>
 ```
@@ -306,7 +306,7 @@ The partition key for the frame indicated.
 ### remove()
 
 ```typescript
-chrome.cookies.remove(
+browser.cookies.remove(
   details: CookieDetails,
 ): Promise<object | undefined>
 ```
@@ -320,12 +320,12 @@ Deletes a cookie by name.
 #### Returns
 
 - Promise\<object \| undefined\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### set()
 
 ```typescript
-chrome.cookies.set(
+browser.cookies.set(
   details: object,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/cookies#type-Cookie | undefined>
 ```
@@ -350,14 +350,14 @@ Sets a cookie with the given cookie data; may overwrite equivalent cookies if th
 
     The name of the cookie. Empty by default if omitted.
   - partitionKey [CookiePartitionKey](https://developer.chrome.com/docs/extensions/reference/api/cookies#type-CookiePartitionKey) optional
-    Chrome 119+
+    Chrome 119+ browser.\* since Chrome 148
 
     The partition key for reading or modifying cookies with the Partitioned attribute.
   - path string optional
 
     The path of the cookie. Defaults to the path portion of the url parameter.
   - sameSite [SameSiteStatus](https://developer.chrome.com/docs/extensions/reference/api/cookies#type-SameSiteStatus) optional
-    Chrome 51+
+    Chrome 51+ browser.\* since Chrome 148
 
     The cookie's same-site status. Defaults to "unspecified", i.e., if omitted, the cookie is set without specifying a SameSite attribute.
   - secure boolean optional
@@ -376,14 +376,14 @@ Sets a cookie with the given cookie data; may overwrite equivalent cookies if th
 #### Returns
 
 - Promise\<[Cookie](https://developer.chrome.com/docs/extensions/reference/api/cookies#type-Cookie) \| undefined\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ## Events
 
 ### onChanged
 
 ```typescript
-chrome.cookies.onChanged.addListener(
+browser.cookies.onChanged.addListener(
   callback: function,
 )
 ```

@@ -25,7 +25,7 @@ Use the `chrome.platformKeys` API to access client certificates managed by the p
 
 ## Availability
 
-Chrome 45+ ChromeOS only
+Chrome 45+ browser.\* since Chrome 148 ChromeOS only
 
 <br />
 
@@ -109,7 +109,7 @@ Chrome 45+ ChromeOS only
 ### getKeyPair()
 
 ```typescript
-chrome.platformKeys.getKeyPair(
+browser.platformKeys.getKeyPair(
   certificate: ArrayBuffer,
   parameters: object,
   callback: function,
@@ -146,10 +146,10 @@ Passes the key pair of `certificate` for usage with [`platformKeys.subtleCrypto`
 
 ### getKeyPairBySpki()
 
-Chrome 85+
+Chrome 85+ browser.\* since Chrome 148
 
 ```typescript
-chrome.platformKeys.getKeyPairBySpki(
+browser.platformKeys.getKeyPairBySpki(
   publicKeySpkiDer: ArrayBuffer,
   parameters: object,
   callback: function,
@@ -187,7 +187,7 @@ Passes the key pair identified by `publicKeySpkiDer` for usage with [`platformKe
 ### selectClientCertificates()
 
 ```typescript
-chrome.platformKeys.selectClientCertificates(
+browser.platformKeys.selectClientCertificates(
   details: SelectDetails,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/platformKeys#type-Match[]>
 ```
@@ -201,12 +201,12 @@ This method filters from a list of client certificates the ones that are known t
 #### Returns
 
 - Promise\<[Match](https://developer.chrome.com/docs/extensions/reference/api/platformKeys#type-Match)\[\]\>
-  Chrome 121+
+  Chrome 121+ browser.\* since Chrome 148
 
 ### subtleCrypto()
 
 ```typescript
-chrome.platformKeys.subtleCrypto(): object | undefined
+browser.platformKeys.subtleCrypto(): object | undefined
 ```
 
 An implementation of WebCrypto's [SubtleCrypto](https://www.w3.org/TR/WebCryptoAPI/#subtlecrypto-interface) that allows crypto operations on keys of client certificates that are available to this extension.
@@ -218,7 +218,7 @@ An implementation of WebCrypto's [SubtleCrypto](https://www.w3.org/TR/WebCryptoA
 ### verifyTLSServerCertificate()
 
 ```typescript
-chrome.platformKeys.verifyTLSServerCertificate(
+browser.platformKeys.verifyTLSServerCertificate(
   details: VerificationDetails,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/platformKeys#type-VerificationResult>
 ```
@@ -232,6 +232,6 @@ Checks whether `details.serverCertificateChain` can be trusted for `details.host
 #### Returns
 
 - Promise\<[VerificationResult](https://developer.chrome.com/docs/extensions/reference/api/platformKeys#type-VerificationResult)\>
-  Chrome 121+
+  Chrome 121+ browser.\* since Chrome 148
 
 <br />

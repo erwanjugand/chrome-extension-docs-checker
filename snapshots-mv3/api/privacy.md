@@ -115,7 +115,7 @@ Categories of Autofill data.
 
 ### IPHandlingPolicy
 
-Chrome 48+
+Chrome 48+ browser.\* since Chrome 148
 
 The IP handling policy of WebRTC.
 
@@ -144,7 +144,7 @@ object
 
   If enabled, Chrome attempts to speed up your web browsing experience by pre-resolving DNS entries, preemptively opening TCP and SSL connections to servers, and preloading pages. Disabling this preference overrides site owners' ability to speculatively load content (such as prefetching or prerendering via the [Speculation Rules API](https://developer.mozilla.org/docs/Web/API/Speculation_Rules_API)). It does not affect webpage-initiated preconnects or DNS prefetches. This preference's value is a boolean, defaulting to `true`.
 - webRTCIPHandlingPolicy [types.ChromeSetting](https://developer.chrome.com/docs/extensions/reference/types/#type-ChromeSetting)\<[IPHandlingPolicy](https://developer.chrome.com/docs/extensions/reference/api/privacy#type-IPHandlingPolicy)\>
-  Chrome 48+
+  Chrome 48+ browser.\* since Chrome 148
 
   Allow users to specify the media performance/privacy tradeoffs which impacts how WebRTC traffic will be routed and how much local address information is exposed. This preference's value is of type IPHandlingPolicy, defaulting to `default`.
 
@@ -162,11 +162,11 @@ object
 
   If enabled, Chrome uses a web service to help resolve navigation errors. This preference's value is a boolean, defaulting to `true`.
 - autofillAddressEnabled [types.ChromeSetting](https://developer.chrome.com/docs/extensions/reference/types/#type-ChromeSetting)\<boolean\>
-  Chrome 70+
+  Chrome 70+ browser.\* since Chrome 148
 
   If enabled, Chrome offers to automatically fill in addresses and other form data. This preference's value is a boolean, defaulting to `true`.
 - autofillCreditCardEnabled [types.ChromeSetting](https://developer.chrome.com/docs/extensions/reference/types/#type-ChromeSetting)\<boolean\>
-  Chrome 70+
+  Chrome 70+ browser.\* since Chrome 148
 
   If enabled, Chrome offers to automatically fill in credit card forms. This preference's value is a boolean, defaulting to `true`.
 - autofillEnabled [types.ChromeSetting](https://developer.chrome.com/docs/extensions/reference/types/#type-ChromeSetting)\<boolean\>
@@ -207,15 +207,15 @@ object
 #### Properties
 
 - adMeasurementEnabled [types.ChromeSetting](https://developer.chrome.com/docs/extensions/reference/types/#type-ChromeSetting)\<boolean\>
-  Chrome 111+
+  Chrome 111+ browser.\* since Chrome 148
 
   If disabled, the [Attribution Reporting API](https://developer.chrome.com/en/docs/privacy-sandbox/attribution-reporting/) and [Private Aggregation API](https://developer.chrome.com/docs/privacy-sandbox/private-aggregation/) are deactivated. The value of this preference is of type boolean, and the default value is `true`. Extensions may only disable these APIs by setting the value to `false`. If you try setting these APIs to `true`, it will throw an error.
 - doNotTrackEnabled [types.ChromeSetting](https://developer.chrome.com/docs/extensions/reference/types/#type-ChromeSetting)\<boolean\>
-  Chrome 65+
+  Chrome 65+ browser.\* since Chrome 148
 
   If enabled, Chrome sends 'Do Not Track' (`DNT: 1`) header with your requests. The value of this preference is of type boolean, and the default value is `false`.
 - fledgeEnabled [types.ChromeSetting](https://developer.chrome.com/docs/extensions/reference/types/#type-ChromeSetting)\<boolean\>
-  Chrome 111+
+  Chrome 111+ browser.\* since Chrome 148
 
   If disabled, the [Fledge API](https://developer.chrome.com/docs/privacy-sandbox/fledge/) is deactivated. The value of this preference is of type boolean, and the default value is `true`. Extensions may only disable this API by setting the value to `false`. If you try setting this API to `true`, it will throw an error.
 - hyperlinkAuditingEnabled [types.ChromeSetting](https://developer.chrome.com/docs/extensions/reference/types/#type-ChromeSetting)\<boolean\>
@@ -233,7 +233,7 @@ object
 
   Note: Individual sites may still be able to access third-party cookies when this API returns `false`, if they have a valid [exemption](https://developers.google.com/privacy-sandbox/cookies/temporary-exceptions/preserving-critical-user-experiences) or they use the [Storage Access API](https://developers.google.com/privacy-sandbox/cookies/storage-access-api) instead.
 - topicsEnabled [types.ChromeSetting](https://developer.chrome.com/docs/extensions/reference/types/#type-ChromeSetting)\<boolean\>
-  Chrome 111+
+  Chrome 111+ browser.\* since Chrome 148
 
   If disabled, the [Topics API](https://developer.chrome.com/en/docs/privacy-sandbox/topics/) is deactivated. The value of this preference is of type boolean, and the default value is `true`. Extensions may only disable this API by setting the value to `false`. If you try setting this API to `true`, it will throw an error.
 

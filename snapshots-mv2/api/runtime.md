@@ -252,7 +252,7 @@ A context hosting extension content.
 
 ### ExtensionLoadDetails
 
-Pending
+Chrome 157+
 
 Details about the extension load event.
 
@@ -260,7 +260,7 @@ Details about the extension load event.
 
 - previousVersion string optional
 
-  Indicates the previous version of the extension, which has just been updated. This is present only if 'reason' is 'update'.
+  Indicates the previous version of the extension. This is present only if 'reason' is 'update' or 'enable'. If 'reason' is 'update', this is the version of the extension before it was updated. If 'reason' is 'enable', this is the current version of the extension.
 - reason [OnLoadedReason](https://developer.chrome.com/docs/extensions/mv2/reference/runtime#type-OnLoadedReason)
 
   The reason that this event is being dispatched.
@@ -324,7 +324,7 @@ Specifies the event reason as an update to a shared module.
 
 ### OnLoadedReason
 
-Pending
+Chrome 157+
 
 The reason that this event is being dispatched.
 
@@ -1226,7 +1226,7 @@ Fired when an extension goes from being in a disabled state to an enabled state.
 
 ### onExtensionLoaded
 
-Pending
+Chrome 157+
 
 ```typescript
 chrome.runtime.onExtensionLoaded.addListener(

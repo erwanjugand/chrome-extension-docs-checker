@@ -25,7 +25,7 @@ Use the `chrome.loginState` API to read and monitor the login state.
 
 ## Availability
 
-Chrome 78+ ChromeOS only
+Chrome 78+ browser.\* since Chrome 148 ChromeOS only
 
 <br />
 
@@ -72,7 +72,7 @@ Specifies that the device is in RMA mode, finalizing repairs.
 ### getProfileType()
 
 ```typescript
-chrome.loginState.getProfileType(): Promise<https://developer.chrome.com/docs/extensions/reference/api/loginState#type-ProfileType>
+browser.loginState.getProfileType(): Promise<https://developer.chrome.com/docs/extensions/reference/api/loginState#type-ProfileType>
 ```
 
 Gets the type of the profile the extension is in.
@@ -80,12 +80,12 @@ Gets the type of the profile the extension is in.
 #### Returns
 
 - Promise\<[ProfileType](https://developer.chrome.com/docs/extensions/reference/api/loginState#type-ProfileType)\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### getSessionState()
 
 ```typescript
-chrome.loginState.getSessionState(): Promise<https://developer.chrome.com/docs/extensions/reference/api/loginState#type-SessionState>
+browser.loginState.getSessionState(): Promise<https://developer.chrome.com/docs/extensions/reference/api/loginState#type-SessionState>
 ```
 
 Gets the current session state.
@@ -93,14 +93,14 @@ Gets the current session state.
 #### Returns
 
 - Promise\<[SessionState](https://developer.chrome.com/docs/extensions/reference/api/loginState#type-SessionState)\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ## Events
 
 ### onSessionStateChanged
 
 ```typescript
-chrome.loginState.onSessionStateChanged.addListener(
+browser.loginState.onSessionStateChanged.addListener(
   callback: function,
 )
 ```

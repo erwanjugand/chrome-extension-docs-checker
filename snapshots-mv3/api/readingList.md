@@ -32,7 +32,7 @@ manifest.json:
 
 ## Availability
 
-Chrome 120+ MV3+
+Chrome 120+ browser.\* since Chrome 148 MV3+
 
 <br />
 
@@ -177,7 +177,7 @@ For more Reading List API extensions demos, see the [Reading List API sample](ht
 ### addEntry()
 
 ```typescript
-chrome.readingList.addEntry(
+browser.readingList.addEntry(
   entry: AddEntryOptions,
 ): Promise<void>
 ```
@@ -199,7 +199,7 @@ Adds an entry to the reading list if it does not exist.
 ### query()
 
 ```typescript
-chrome.readingList.query(
+browser.readingList.query(
   info: QueryInfo,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/readingList#type-ReadingListEntry[]>
 ```
@@ -221,7 +221,7 @@ Retrieves all entries that match the `QueryInfo` properties. Properties that are
 ### removeEntry()
 
 ```typescript
-chrome.readingList.removeEntry(
+browser.readingList.removeEntry(
   info: RemoveOptions,
 ): Promise<void>
 ```
@@ -243,7 +243,7 @@ Removes an entry from the reading list if it exists.
 ### updateEntry()
 
 ```typescript
-chrome.readingList.updateEntry(
+browser.readingList.updateEntry(
   info: UpdateEntryOptions,
 ): Promise<void>
 ```
@@ -267,7 +267,7 @@ Updates a reading list entry if it exists.
 ### onEntryAdded
 
 ```typescript
-chrome.readingList.onEntryAdded.addListener(
+browser.readingList.onEntryAdded.addListener(
   callback: function,
 )
 ```
@@ -292,7 +292,7 @@ Triggered when a `ReadingListEntry` is added to the reading list.
 ### onEntryRemoved
 
 ```typescript
-chrome.readingList.onEntryRemoved.addListener(
+browser.readingList.onEntryRemoved.addListener(
   callback: function,
 )
 ```
@@ -317,7 +317,7 @@ Triggered when a `ReadingListEntry` is removed from the reading list.
 ### onEntryUpdated
 
 ```typescript
-chrome.readingList.onEntryUpdated.addListener(
+browser.readingList.onEntryUpdated.addListener(
   callback: function,
 )
 ```

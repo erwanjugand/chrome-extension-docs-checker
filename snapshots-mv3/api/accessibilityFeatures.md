@@ -48,7 +48,7 @@ Auto mouse click after mouse stops moving. The value indicates whether the featu
 
 ### caretHighlight
 
-Chrome 51+
+Chrome 51+ browser.\* since Chrome 148
 
 **ChromeOS only.**
 
@@ -60,7 +60,7 @@ Caret highlighting. The value indicates whether the feature is enabled or not. `
 
 ### cursorColor
 
-Chrome 85+
+Chrome 85+ browser.\* since Chrome 148
 
 **ChromeOS only.**
 
@@ -72,7 +72,7 @@ Cursor color. The value indicates whether the feature is enabled or not, doesn't
 
 ### cursorHighlight
 
-Chrome 51+
+Chrome 51+ browser.\* since Chrome 148
 
 **ChromeOS only.**
 
@@ -84,7 +84,7 @@ Cursor highlighting. The value indicates whether the feature is enabled or not. 
 
 ### dictation
 
-Chrome 90+
+Chrome 90+ browser.\* since Chrome 148
 
 **ChromeOS only.**
 
@@ -96,7 +96,7 @@ Dictation. The value indicates whether the feature is enabled or not. `get()` re
 
 ### dockedMagnifier
 
-Chrome 87+
+Chrome 87+ browser.\* since Chrome 148
 
 **ChromeOS only.**
 
@@ -108,7 +108,7 @@ Docked magnifier. The value indicates whether docked magnifier feature is enable
 
 ### focusHighlight
 
-Chrome 51+
+Chrome 51+ browser.\* since Chrome 148
 
 **ChromeOS only.**
 
@@ -150,7 +150,7 @@ Full screen magnification. The value indicates whether the feature is enabled or
 
 ### selectToSpeak
 
-Chrome 51+
+Chrome 51+ browser.\* since Chrome 148
 
 **ChromeOS only.**
 
@@ -182,7 +182,7 @@ Sticky modifier keys (like shift or alt). The value indicates whether the featur
 
 ### switchAccess
 
-Chrome 51+
+Chrome 51+ browser.\* since Chrome 148
 
 **ChromeOS only.**
 

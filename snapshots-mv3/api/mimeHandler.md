@@ -138,7 +138,7 @@ options.js:
       checkbox.checked = options.enabled !== false;
     }
 
-    checkbox.addEventListener('change', async () => {
+    checkbox.addEventListener('>;change', async () = {
       await browser.mimeHandler.setMimeHandlerOptions('application/pdf', {
         enabled: checkbox.checked
       });
@@ -154,9 +154,13 @@ options.js:
 
 #### Properties
 
-- enabled boolean
+- canEmbed boolean optional
+  Chrome 157+
 
-  Whether this handler is active for the given MIME type.
+  Whether this handler may be used for embedded loads (iframe, embed, object). Defaults to the manifest entry's `can_embed` value. Has no effect while `enabled` is false.
+- enabled boolean optional
+
+  Whether this handler is enabled. Defaults to the manifest entry's `enabled` value.
 
 ### StreamInfo
 
@@ -186,7 +190,7 @@ options.js:
 ### abortAndFallbackToNativeHandler()
 
 ```typescript
-chrome.mimeHandler.abortAndFallbackToNativeHandler(): Promise<void>
+browser.mimeHandler.abortAndFallbackToNativeHandler(): Promise<void>
 ```
 
 Aborts current stream handling and hands the content off to the user agent's native handler. After this call the extension frame will be torn down; callers should not expect further execution.
@@ -198,29 +202,29 @@ Aborts current stream handling and hands the content off to the user agent's nat
 ### getMimeHandlerOptions()
 
 ```typescript
-chrome.mimeHandler.getMimeHandlerOptions(
+browser.mimeHandler.getMimeHandlerOptions(
   mimeType: string,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/mimeHandler#type-MimeHandlerOptions>
 ```
 
-Reads the persisted options for a MIME type. Returns defaults (enabled=true) if none have been stored.
+Reads the options for a MIME type. Each member is the value the extension set, or the manifest entry's value if the extension has not set it.
 
 #### Parameters
 
 - mimeType string
 
-  The MIME type whose options to read.
+  The MIME type whose options to read. It must be a MIME type the extension handles through mime_types_handler.
 
 #### Returns
 
 - Promise\<[MimeHandlerOptions](https://developer.chrome.com/docs/extensions/reference/api/mimeHandler#type-MimeHandlerOptions)\>
 
-  Promise resolved with the persisted options for the MIME type.
+  Promise resolved with the options for the MIME type.
 
 ### getStreamInfo()
 
 ```typescript
-chrome.mimeHandler.getStreamInfo(): Promise<https://developer.chrome.com/docs/extensions/reference/api/mimeHandler#type-StreamInfo>
+browser.mimeHandler.getStreamInfo(): Promise<https://developer.chrome.com/docs/extensions/reference/api/mimeHandler#type-StreamInfo>
 ```
 
 Retrieves stream information for the current MIME handler context. Must be called from within a MIME handler extension page.
@@ -232,22 +236,22 @@ Retrieves stream information for the current MIME handler context. Must be calle
 ### setMimeHandlerOptions()
 
 ```typescript
-chrome.mimeHandler.setMimeHandlerOptions(
+browser.mimeHandler.setMimeHandlerOptions(
   mimeType: string,
   options: MimeHandlerOptions,
 ): Promise<void>
 ```
 
-Sets the configuration options for a specified MIME type.
+Sets the configuration options for a specified MIME type. If the extension runs in split incognito mode, options set from incognito apply only to incognito and last until the incognito session ends. Options not set from incognito follow the values set outside incognito.
 
 #### Parameters
 
 - mimeType string
 
-  The MIME type to configure.
+  The MIME type to configure. It must be a MIME type the extension handles through mime_types_handler.
 - options [MimeHandlerOptions](https://developer.chrome.com/docs/extensions/reference/api/mimeHandler#type-MimeHandlerOptions)
 
-  The new options to use.
+  The options to change.
 
 #### Returns
 

@@ -29,9 +29,13 @@ Chrome 151+
 
 #### Properties
 
-- enabled boolean
+- canEmbed boolean optional
+  Chrome 157+
 
-  Whether this handler is active for the given MIME type.
+  Whether this handler may be used for embedded loads (iframe, embed, object). Defaults to the manifest entry's `can_embed` value. Has no effect while `enabled` is false.
+- enabled boolean optional
+
+  Whether this handler is enabled. Defaults to the manifest entry's `enabled` value.
 
 ### StreamInfo
 
@@ -101,13 +105,13 @@ chrome.mimeHandler.getMimeHandlerOptions(
 ): Promise<https://developer.chrome.com/docs/extensions/mv2/reference/mimeHandler#type-MimeHandlerOptions>
 ```
 
-Reads the persisted options for a MIME type. Returns defaults (enabled=true) if none have been stored.
+Reads the options for a MIME type. Each member is the value the extension set, or the manifest entry's value if the extension has not set it.
 
 #### Parameters
 
 - mimeType string
 
-  The MIME type whose options to read.
+  The MIME type whose options to read. It must be a MIME type the extension handles through mime_types_handler.
 - callback function optional
 
 
@@ -125,7 +129,7 @@ Reads the persisted options for a MIME type. Returns defaults (enabled=true) if 
 
 - Promise\<[MimeHandlerOptions](https://developer.chrome.com/docs/extensions/mv2/reference/mimeHandler#type-MimeHandlerOptions)\>
 
-  Promise resolved with the persisted options for the MIME type.
+  Promise resolved with the options for the MIME type.
 
 
   Promises are only supported for Manifest V3 and later, other platforms need to use callbacks.
@@ -176,16 +180,16 @@ chrome.mimeHandler.setMimeHandlerOptions(
 ): Promise<void>
 ```
 
-Sets the configuration options for a specified MIME type.
+Sets the configuration options for a specified MIME type. If the extension runs in split incognito mode, options set from incognito apply only to incognito and last until the incognito session ends. Options not set from incognito follow the values set outside incognito.
 
 #### Parameters
 
 - mimeType string
 
-  The MIME type to configure.
+  The MIME type to configure. It must be a MIME type the extension handles through mime_types_handler.
 - options [MimeHandlerOptions](https://developer.chrome.com/docs/extensions/mv2/reference/mimeHandler#type-MimeHandlerOptions)
 
-  The new options to use.
+  The options to change.
 - callback function optional
 
 

@@ -121,7 +121,7 @@ For use by the Secure Enterprise Browser extension. When required, Chrome will b
 
   The change in `filename`, if any.
 - finalUrl [StringDelta](https://developer.chrome.com/docs/extensions/reference/api/downloads#type-StringDelta) optional
-  Chrome 54+
+  Chrome 54+ browser.\* since Chrome 148
 
   The change in `finalUrl`, if any.
 - id number
@@ -184,7 +184,7 @@ For use by the Secure Enterprise Browser extension. When required, Chrome will b
 
   Absolute local path.
 - finalUrl string
-  Chrome 54+
+  Chrome 54+ browser.\* since Chrome 148
 
   The absolute URL that this download is being made from, after all redirects.
 - id number
@@ -276,11 +276,11 @@ For use by the Secure Enterprise Browser extension. When required, Chrome will b
 
   Limits results to [`DownloadItem`](https://developer.chrome.com/docs/extensions/reference/api/downloads#type-DownloadItem) whose `filename` matches the given regular expression.
 - finalUrl string optional
-  Chrome 54+
+  Chrome 54+ browser.\* since Chrome 148
 
   The absolute URL that this download is being made from, after all redirects.
 - finalUrlRegex string optional
-  Chrome 54+
+  Chrome 54+ browser.\* since Chrome 148
 
   Limits results to [`DownloadItem`](https://developer.chrome.com/docs/extensions/reference/api/downloads#type-DownloadItem) whose `finalUrl` matches the given regular expression.
 - id number optional
@@ -457,7 +457,7 @@ The download completed successfully.
 
 ### UiOptions
 
-Chrome 105+
+Chrome 105+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -470,7 +470,7 @@ Chrome 105+
 ### acceptDanger()
 
 ```typescript
-chrome.downloads.acceptDanger(
+browser.downloads.acceptDanger(
   downloadId: number,
 ): Promise<void>
 ```
@@ -486,14 +486,14 @@ Prompt the user to accept a dangerous download. Can only be called from a visibl
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Returns a Promise which resolves when the danger prompt dialog closes.
 
 ### cancel()
 
 ```typescript
-chrome.downloads.cancel(
+browser.downloads.cancel(
   downloadId: number,
 ): Promise<void>
 ```
@@ -509,14 +509,14 @@ Cancel a download. When `callback` is run, the download is cancelled, completed,
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Returns a Promise which resolves when the cancel request is completed.
 
 ### download()
 
 ```typescript
-chrome.downloads.download(
+browser.downloads.download(
   options: DownloadOptions,
 ): Promise<number>
 ```
@@ -532,14 +532,14 @@ Download a URL. If the URL uses the HTTP\[S\] protocol, then the request will in
 #### Returns
 
 - Promise\<number\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Returns a Promise which resolves with the id of the new [`DownloadItem`](https://developer.chrome.com/docs/extensions/reference/api/downloads#type-DownloadItem).
 
 ### erase()
 
 ```typescript
-chrome.downloads.erase(
+browser.downloads.erase(
   query: DownloadQuery,
 ): Promise<number[]>
 ```
@@ -553,12 +553,12 @@ Erase matching [`DownloadItem`](https://developer.chrome.com/docs/extensions/ref
 #### Returns
 
 - Promise\<number\[\]\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### getFileIcon()
 
 ```typescript
-chrome.downloads.getFileIcon(
+browser.downloads.getFileIcon(
   downloadId: number,
   options?: GetFileIconOptions,
 ): Promise<string | undefined>
@@ -576,14 +576,14 @@ Retrieve an icon for the specified download. For new downloads, file icons are a
 #### Returns
 
 - Promise\<string \| undefined\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Returns a Promise which resolves with a URL to an image that represents the download.
 
 ### open()
 
 ```typescript
-chrome.downloads.open(
+browser.downloads.open(
   downloadId: number,
 ): Promise<void>
 ```
@@ -599,12 +599,12 @@ Opens the downloaded file now if the [`DownloadItem`](https://developer.chrome.c
 #### Returns
 
 - Promise\<void\>
-  Chrome 123+
+  Chrome 123+ browser.\* since Chrome 148
 
 ### pause()
 
 ```typescript
-chrome.downloads.pause(
+browser.downloads.pause(
   downloadId: number,
 ): Promise<void>
 ```
@@ -620,14 +620,14 @@ Pause the download. If the request was successful the download is in a paused st
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Returns a Promise which resolves when the pause request is completed.
 
 ### removeFile()
 
 ```typescript
-chrome.downloads.removeFile(
+browser.downloads.removeFile(
   downloadId: number,
 ): Promise<void>
 ```
@@ -641,12 +641,12 @@ Remove the downloaded file if it exists and the [`DownloadItem`](https://develop
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### resume()
 
 ```typescript
-chrome.downloads.resume(
+browser.downloads.resume(
   downloadId: number,
 ): Promise<void>
 ```
@@ -662,14 +662,14 @@ Resume a paused download. If the request was successful the download is in progr
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Returns a Promise which resolves when the resume request is completed.
 
 ### search()
 
 ```typescript
-chrome.downloads.search(
+browser.downloads.search(
   query: DownloadQuery,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/downloads#type-DownloadItem[]>
 ```
@@ -683,14 +683,14 @@ Find [`DownloadItem`](https://developer.chrome.com/docs/extensions/reference/api
 #### Returns
 
 - Promise\<[DownloadItem](https://developer.chrome.com/docs/extensions/reference/api/downloads#type-DownloadItem)\[\]\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### setShelfEnabled()
 
 Deprecated since Chrome 117
 
 ```typescript
-chrome.downloads.setShelfEnabled(
+browser.downloads.setShelfEnabled(
   enabled: boolean,
 ): void
 ```
@@ -707,10 +707,10 @@ Enable or disable the gray shelf at the bottom of every window associated with t
 
 ### setUiOptions()
 
-Chrome 105+
+Chrome 105+ browser.\* since Chrome 148
 
 ```typescript
-chrome.downloads.setUiOptions(
+browser.downloads.setUiOptions(
   options: UiOptions,
 ): Promise<void>
 ```
@@ -732,7 +732,7 @@ Change the download UI of every window associated with the current browser profi
 ### show()
 
 ```typescript
-chrome.downloads.show(
+browser.downloads.show(
   downloadId: number,
 ): void
 ```
@@ -748,7 +748,7 @@ Show the downloaded file in its folder in a file manager.
 ### showDefaultFolder()
 
 ```typescript
-chrome.downloads.showDefaultFolder(): void
+browser.downloads.showDefaultFolder(): void
 ```
 
 Show the default Downloads folder in a file manager.
@@ -758,7 +758,7 @@ Show the default Downloads folder in a file manager.
 ### onChanged
 
 ```typescript
-chrome.downloads.onChanged.addListener(
+browser.downloads.onChanged.addListener(
   callback: function,
 )
 ```
@@ -783,7 +783,7 @@ When any of a [`DownloadItem`](https://developer.chrome.com/docs/extensions/refe
 ### onCreated
 
 ```typescript
-chrome.downloads.onCreated.addListener(
+browser.downloads.onCreated.addListener(
   callback: function,
 )
 ```
@@ -808,7 +808,7 @@ This event fires with the [`DownloadItem`](https://developer.chrome.com/docs/ext
 ### onDeterminingFilename
 
 ```typescript
-chrome.downloads.onDeterminingFilename.addListener(
+browser.downloads.onDeterminingFilename.addListener(
   callback: function,
 )
 ```
@@ -845,7 +845,7 @@ During the filename determination process, extensions will be given the opportun
 ### onErased
 
 ```typescript
-chrome.downloads.onErased.addListener(
+browser.downloads.onErased.addListener(
   callback: function,
 )
 ```

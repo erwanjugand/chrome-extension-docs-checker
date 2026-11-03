@@ -110,7 +110,7 @@ Here's an example that shows the major API interaction except the building and s
 
 ### Algorithm
 
-Chrome 110+
+Chrome 110+ browser.\* since Chrome 148
 
 Type of key to generate.
 
@@ -123,7 +123,7 @@ Type of key to generate.
 
 ### ChallengeKeyOptions
 
-Chrome 110+
+Chrome 110+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -139,7 +139,7 @@ Chrome 110+
 
 ### RegisterKeyOptions
 
-Chrome 110+
+Chrome 110+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -149,7 +149,7 @@ Chrome 110+
 
 ### Scope
 
-Chrome 110+
+Chrome 110+ browser.\* since Chrome 148
 
 Whether to use the Enterprise User Key or the Enterprise Machine Key.
 
@@ -170,7 +170,7 @@ Whether to use the Enterprise User Key or the Enterprise Machine Key.
 
   Static IDs are `"user"` and `"system"`, referring to the platform's user-specific and the system-wide hardware token, respectively. Any other tokens (with other identifiers) might be returned by [`enterprise.platformKeys.getTokens`](https://developer.chrome.com/docs/extensions/reference/api/enterprise/platformKeys#method-getTokens).
 - softwareBackedSubtleCrypto SubtleCrypto
-  Chrome 97+
+  Chrome 97+ browser.\* since Chrome 148
 
   Implements the WebCrypto's [SubtleCrypto](https://www.w3.org/TR/WebCryptoAPI/#subtlecrypto-interface) interface. The cryptographic operations, including key generation, are software-backed. Protection of the keys, and thus implementation of the non-extractable property, is done in software, so the keys are less protected than hardware-backed keys.
 
@@ -189,10 +189,10 @@ Whether to use the Enterprise User Key or the Enterprise Machine Key.
 
 ### challengeKey()
 
-Chrome 110+
+Chrome 110+ browser.\* since Chrome 148
 
 ```typescript
-chrome.enterprise.platformKeys.challengeKey(
+browser.enterprise.platformKeys.challengeKey(
   options: ChallengeKeyOptions,
 ): Promise<ArrayBuffer>
 ```
@@ -212,16 +212,16 @@ This function is highly restricted and will fail if the current device is not ma
 #### Returns
 
 - Promise\<ArrayBuffer\>
-  Chrome 131+
+  Chrome 131+ browser.\* since Chrome 148
 
   Returns a Promise which resolves with the challenge response.
 
 ### challengeMachineKey()
 
-Chrome 50+ Deprecated since Chrome 110
+Chrome 50+ browser.\* since Chrome 148 Deprecated since Chrome 110
 
 ```typescript
-chrome.enterprise.platformKeys.challengeMachineKey(
+browser.enterprise.platformKeys.challengeMachineKey(
   challenge: ArrayBuffer,
   registerKey?: boolean,
 ): Promise<ArrayBuffer>
@@ -239,23 +239,23 @@ Challenges a hardware-backed Enterprise Machine Key and emits the response as pa
 
   A challenge as emitted by the Verified Access Web API.
 - registerKey boolean optional
-  Chrome 59+
+  Chrome 59+ browser.\* since Chrome 148
 
   If set, the current Enterprise Machine Key is registered with the `"system"` token and relinquishes the Enterprise Machine Key role. The key can then be associated with a certificate and used like any other signing key. This key is 2048-bit RSA. Subsequent calls to this function will then generate a new Enterprise Machine Key.
 
 #### Returns
 
 - Promise\<ArrayBuffer\>
-  Chrome 131+
+  Chrome 131+ browser.\* since Chrome 148
 
   Returns a Promise which resolves with the challenge response.
 
 ### challengeUserKey()
 
-Chrome 50+ Deprecated since Chrome 110
+Chrome 50+ browser.\* since Chrome 148 Deprecated since Chrome 110
 
 ```typescript
-chrome.enterprise.platformKeys.challengeUserKey(
+browser.enterprise.platformKeys.challengeUserKey(
   challenge: ArrayBuffer,
   registerKey: boolean,
 ): Promise<ArrayBuffer>
@@ -279,14 +279,14 @@ Challenges a hardware-backed Enterprise User Key and emits the response as part 
 #### Returns
 
 - Promise\<ArrayBuffer\>
-  Chrome 131+
+  Chrome 131+ browser.\* since Chrome 148
 
   Returns a Promise which resolves with the challenge response.
 
 ### getCertificates()
 
 ```typescript
-chrome.enterprise.platformKeys.getCertificates(
+browser.enterprise.platformKeys.getCertificates(
   tokenId: string,
 ): Promise<ArrayBuffer[]>
 ```
@@ -302,14 +302,14 @@ Returns the list of all client certificates available from the given token. Can 
 #### Returns
 
 - Promise\<ArrayBuffer\[\]\>
-  Chrome 131+
+  Chrome 131+ browser.\* since Chrome 148
 
   Returns a Promise which resolves with the list of the available certificates.
 
 ### getTokens()
 
 ```typescript
-chrome.enterprise.platformKeys.getTokens(): Promise<https://developer.chrome.com/docs/extensions/reference/api/enterprise/platformKeys#type-Token[]>
+browser.enterprise.platformKeys.getTokens(): Promise<https://developer.chrome.com/docs/extensions/reference/api/enterprise/platformKeys#type-Token[]>
 ```
 
 Returns the available Tokens. In a regular user's session the list will always contain the user's token with `id` `"user"`. If a system-wide TPM token is available, the returned list will also contain the system-wide token with `id` `"system"`. The system-wide token will be the same for all sessions on this device (device in the sense of e.g. a Chromebook).
@@ -317,14 +317,14 @@ Returns the available Tokens. In a regular user's session the list will always c
 #### Returns
 
 - Promise\<[Token](https://developer.chrome.com/docs/extensions/reference/api/enterprise/platformKeys#type-Token)\[\]\>
-  Chrome 131+
+  Chrome 131+ browser.\* since Chrome 148
 
   Invoked by `getTokens` with the list of available Tokens.
 
 ### importCertificate()
 
 ```typescript
-chrome.enterprise.platformKeys.importCertificate(
+browser.enterprise.platformKeys.importCertificate(
   tokenId: string,
   certificate: ArrayBuffer,
 ): Promise<void>
@@ -344,14 +344,14 @@ Imports `certificate` to the given token if the certified key is already stored 
 #### Returns
 
 - Promise\<void\>
-  Chrome 131+
+  Chrome 131+ browser.\* since Chrome 148
 
   Returns a Promise which resolves when this operation is finished.
 
 ### removeCertificate()
 
 ```typescript
-chrome.enterprise.platformKeys.removeCertificate(
+browser.enterprise.platformKeys.removeCertificate(
   tokenId: string,
   certificate: ArrayBuffer,
 ): Promise<void>
@@ -371,7 +371,7 @@ Removes `certificate` from the given token if present. Should be used to remove 
 #### Returns
 
 - Promise\<void\>
-  Chrome 131+
+  Chrome 131+ browser.\* since Chrome 148
 
   Returns a Promise which resolves when this operation is finished.
 

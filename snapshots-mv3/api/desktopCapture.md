@@ -39,7 +39,7 @@ Enum used to define set of desktop media sources used in chooseDesktopMedia().
 
 ### SelfCapturePreferenceEnum
 
-Chrome 107+
+Chrome 107+ browser.\* since Chrome 148
 
 Mirrors [SelfCapturePreferenceEnum](https://w3c.github.io/mediacapture-screen-share/#dom-selfcapturepreferenceenum).
 
@@ -52,7 +52,7 @@ Mirrors [SelfCapturePreferenceEnum](https://w3c.github.io/mediacapture-screen-sh
 
 ### SystemAudioPreferenceEnum
 
-Chrome 105+
+Chrome 105+ browser.\* since Chrome 148
 
 Mirrors [SystemAudioPreferenceEnum](https://w3c.github.io/mediacapture-screen-share/#dom-systemaudiopreferenceenum).
 
@@ -65,7 +65,7 @@ Mirrors [SystemAudioPreferenceEnum](https://w3c.github.io/mediacapture-screen-sh
 
 ### WindowAudioPreferenceEnum
 
-Chrome 140+
+Chrome 140+ browser.\* since Chrome 148
 
 Mirrors [WindowAudioPreferenceEnum](https://w3c.github.io/mediacapture-screen-share/#dom-windowaudiopreferenceenum).
 
@@ -82,7 +82,7 @@ Mirrors [WindowAudioPreferenceEnum](https://w3c.github.io/mediacapture-screen-sh
 ### cancelChooseDesktopMedia()
 
 ```typescript
-chrome.desktopCapture.cancelChooseDesktopMedia(
+browser.desktopCapture.cancelChooseDesktopMedia(
   desktopMediaRequestId: number,
 ): void
 ```
@@ -98,7 +98,7 @@ Hides desktop media picker dialog shown by chooseDesktopMedia().
 ### chooseDesktopMedia()
 
 ```typescript
-chrome.desktopCapture.chooseDesktopMedia(
+browser.desktopCapture.chooseDesktopMedia(
   sources: DesktopCaptureSourceType[],
   targetTab?: Tab,
   callback: function,
@@ -130,7 +130,7 @@ Shows desktop media picker UI with the specified set of sources.
 
     An opaque string that can be passed to `getUserMedia()` API to generate media stream that corresponds to the source selected by the user. If user didn't select any source (i.e. canceled the prompt) then the callback is called with an empty `streamId`. The created `streamId` can be used only once and expires after a few seconds when it is not used.
   - options object
-    Chrome 57+
+    Chrome 57+ browser.\* since Chrome 148
 
     Contains properties that describe the stream.
     - canRequestAudioTrack boolean

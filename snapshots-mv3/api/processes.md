@@ -129,7 +129,7 @@ Obsolete, will never be returned.
 ### getProcessIdForTab()
 
 ```typescript
-chrome.processes.getProcessIdForTab(
+browser.processes.getProcessIdForTab(
   tabId: number,
 ): Promise<number>
 ```
@@ -151,7 +151,7 @@ Returns the ID of the renderer process for the specified tab.
 ### getProcessInfo()
 
 ```typescript
-chrome.processes.getProcessInfo(
+browser.processes.getProcessInfo(
   processIds: number | number[],
   includeMemory: boolean,
 ): Promise<object>
@@ -177,7 +177,7 @@ Retrieves the process information for each process ID specified.
 ### terminate()
 
 ```typescript
-chrome.processes.terminate(
+browser.processes.terminate(
   processId: number,
 ): Promise<boolean>
 ```
@@ -201,7 +201,7 @@ Terminates the specified renderer process. Equivalent to visiting about:crash, b
 ### onCreated
 
 ```typescript
-chrome.processes.onCreated.addListener(
+browser.processes.onCreated.addListener(
   callback: function,
 )
 ```
@@ -226,7 +226,7 @@ Fired each time a process is created, providing the corrseponding Process object
 ### onExited
 
 ```typescript
-chrome.processes.onExited.addListener(
+browser.processes.onExited.addListener(
   callback: function,
 )
 ```
@@ -253,7 +253,7 @@ Fired each time a process is terminated, providing the type of exit.
 ### onUnresponsive
 
 ```typescript
-chrome.processes.onUnresponsive.addListener(
+browser.processes.onUnresponsive.addListener(
   callback: function,
 )
 ```
@@ -278,7 +278,7 @@ Fired each time a process becomes unresponsive, providing the corrseponding Proc
 ### onUpdated
 
 ```typescript
-chrome.processes.onUpdated.addListener(
+browser.processes.onUpdated.addListener(
   callback: function,
 )
 ```
@@ -303,7 +303,7 @@ Fired each time the Task Manager updates its process statistics, providing the d
 ### onUpdatedWithMemory
 
 ```typescript
-chrome.processes.onUpdatedWithMemory.addListener(
+browser.processes.onUpdatedWithMemory.addListener(
   callback: function,
 )
 ```

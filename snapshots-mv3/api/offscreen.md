@@ -31,7 +31,7 @@ To use the Offscreen API, declare the `"offscreen"` permission in the [extension
 
 ## Availability
 
-Chrome 109+ MV3+
+Chrome 109+ browser.\* since Chrome 148 MV3+
 
 <br />
 
@@ -208,7 +208,7 @@ Specifies that the offscreen document needs to use [navigator.geolocation](https
 ### closeDocument()
 
 ```typescript
-chrome.offscreen.closeDocument(): Promise<void>
+browser.offscreen.closeDocument(): Promise<void>
 ```
 
 Closes the currently-open offscreen document for the extension.
@@ -222,7 +222,7 @@ Closes the currently-open offscreen document for the extension.
 ### createDocument()
 
 ```typescript
-chrome.offscreen.createDocument(
+browser.offscreen.createDocument(
   parameters: CreateParameters,
 ): Promise<void>
 ```
@@ -246,7 +246,7 @@ Creates a new offscreen document for the extension.
 Chrome 150+
 
 ```typescript
-chrome.offscreen.hasDocument(): Promise<boolean>
+browser.offscreen.hasDocument(): Promise<boolean>
 ```
 
 Determines whether the extension has an active document.

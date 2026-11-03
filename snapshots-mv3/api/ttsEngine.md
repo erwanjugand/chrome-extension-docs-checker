@@ -131,7 +131,7 @@ speech request and dynamically decide whether to handle it.
 
 ### AudioBuffer
 
-Chrome 92+
+Chrome 92+ browser.\* since Chrome 148
 
 Parameters containing an audio buffer and associated data.
 
@@ -149,7 +149,7 @@ Parameters containing an audio buffer and associated data.
 
 ### AudioStreamOptions
 
-Chrome 92+
+Chrome 92+ browser.\* since Chrome 148
 
 Contains the audio stream format expected to be produced by an engine.
 
@@ -164,7 +164,7 @@ Contains the audio stream format expected to be produced by an engine.
 
 ### LanguageInstallStatus
 
-Chrome 132+
+Chrome 132+ browser.\* since Chrome 148
 
 The install status of a voice.
 
@@ -179,7 +179,7 @@ The install status of a voice.
 
 ### LanguageStatus
 
-Chrome 132+
+Chrome 132+ browser.\* since Chrome 148
 
 Install status of a language.
 
@@ -197,7 +197,7 @@ Install status of a language.
 
 ### LanguageUninstallOptions
 
-Chrome 132+
+Chrome 132+ browser.\* since Chrome 148
 
 Options for uninstalling a given language.
 
@@ -209,7 +209,7 @@ Options for uninstalling a given language.
 
 ### SpeakOptions
 
-Chrome 92+
+Chrome 92+ browser.\* since Chrome 148
 
 Options specified to the tts.speak() method.
 
@@ -241,7 +241,7 @@ Options specified to the tts.speak() method.
 
 ### TtsClient
 
-Chrome 131+
+Chrome 131+ browser.\* since Chrome 148
 
 Identifier for the client requesting status.
 
@@ -256,7 +256,7 @@ Identifier for the client requesting status.
 
 ### TtsClientSource
 
-Chrome 131+
+Chrome 131+ browser.\* since Chrome 148
 
 Type of requestor.
 
@@ -269,7 +269,7 @@ Type of requestor.
 
 ### VoiceGender
 
-Chrome 54+ Deprecated since Chrome 70
+Chrome 54+ browser.\* since Chrome 148 Deprecated since Chrome 70
 
 Gender is deprecated and will be ignored.
 
@@ -286,10 +286,10 @@ Gender is deprecated and will be ignored.
 
 ### updateLanguage()
 
-Chrome 132+
+Chrome 132+ browser.\* since Chrome 148
 
 ```typescript
-chrome.ttsEngine.updateLanguage(
+browser.ttsEngine.updateLanguage(
   status: LanguageStatus,
 ): void
 ```
@@ -304,10 +304,10 @@ Called by an engine when a language install is attempted, and when a language is
 
 ### updateVoices()
 
-Chrome 66+
+Chrome 66+ browser.\* since Chrome 148
 
 ```typescript
-chrome.ttsEngine.updateVoices(
+browser.ttsEngine.updateVoices(
   voices: TtsVoice[],
 ): void
 ```
@@ -324,10 +324,10 @@ Called by an engine to update its list of voices. This list overrides any voices
 
 ### onInstallLanguageRequest
 
-Chrome 131+
+Chrome 131+ browser.\* since Chrome 148
 
 ```typescript
-chrome.ttsEngine.onInstallLanguageRequest.addListener(
+browser.ttsEngine.onInstallLanguageRequest.addListener(
   callback: function,
 )
 ```
@@ -352,10 +352,10 @@ Fired when a TTS client requests to install a new language. The engine should at
 
 ### onLanguageStatusRequest
 
-Chrome 132+
+Chrome 132+ browser.\* since Chrome 148
 
 ```typescript
-chrome.ttsEngine.onLanguageStatusRequest.addListener(
+browser.ttsEngine.onLanguageStatusRequest.addListener(
   callback: function,
 )
 ```
@@ -381,7 +381,7 @@ Fired when a TTS client requests the install status of a language.
 ### onPause
 
 ```typescript
-chrome.ttsEngine.onPause.addListener(
+browser.ttsEngine.onPause.addListener(
   callback: function,
 )
 ```
@@ -404,7 +404,7 @@ Optional: if an engine supports the pause event, it should pause the current utt
 ### onResume
 
 ```typescript
-chrome.ttsEngine.onResume.addListener(
+browser.ttsEngine.onResume.addListener(
   callback: function,
 )
 ```
@@ -427,7 +427,7 @@ Optional: if an engine supports the pause event, it should also support the resu
 ### onSpeak
 
 ```typescript
-chrome.ttsEngine.onSpeak.addListener(
+browser.ttsEngine.onSpeak.addListener(
   callback: function,
 )
 ```
@@ -466,10 +466,10 @@ Called when the user makes a call to tts.speak() and one of the voices from this
 
 ### onSpeakWithAudioStream
 
-Chrome 92+
+Chrome 92+ browser.\* since Chrome 148
 
 ```typescript
-chrome.ttsEngine.onSpeakWithAudioStream.addListener(
+browser.ttsEngine.onSpeakWithAudioStream.addListener(
   callback: function,
 )
 ```
@@ -507,7 +507,7 @@ Called when the user makes a call to tts.speak() and one of the voices from this
 
       Parameters containing an audio buffer and associated data.
   - sendError function
-    Chrome 94+
+    Chrome 94+ browser.\* since Chrome 148
 
 
     The `sendError` parameter looks like:
@@ -525,7 +525,7 @@ Called when the user makes a call to tts.speak() and one of the voices from this
 ### onStop
 
 ```typescript
-chrome.ttsEngine.onStop.addListener(
+browser.ttsEngine.onStop.addListener(
   callback: function,
 )
 ```
@@ -547,10 +547,10 @@ Fired when a call is made to tts.stop and this extension may be in the middle of
 
 ### onUninstallLanguageRequest
 
-Chrome 132+
+Chrome 132+ browser.\* since Chrome 148
 
 ```typescript
-chrome.ttsEngine.onUninstallLanguageRequest.addListener(
+browser.ttsEngine.onUninstallLanguageRequest.addListener(
   callback: function,
 )
 ```

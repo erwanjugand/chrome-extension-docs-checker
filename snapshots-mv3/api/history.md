@@ -79,7 +79,7 @@ An object encapsulating one result of a history query.
 
 ### TransitionType
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The [transition type](https://developer.chrome.com/docs/extensions/reference/history/#transition_types) for this visit from its referrer.
 
@@ -112,7 +112,7 @@ Corresponds to a visit generated for a keyword.
 
 ### UrlDetails
 
-Chrome 88+
+Chrome 88+ browser.\* since Chrome 148
 
 #### Properties
 
@@ -130,7 +130,7 @@ An object encapsulating one visit to a URL.
 
   The unique identifier for the corresponding [`history.HistoryItem`](https://developer.chrome.com/docs/extensions/reference/api/history#type-HistoryItem).
 - isLocal boolean
-  Chrome 115+
+  Chrome 115+ browser.\* since Chrome 148
 
   True if the visit originated on this device. False if it was synced from a different device.
 - referringVisitId string
@@ -151,7 +151,7 @@ An object encapsulating one visit to a URL.
 ### addUrl()
 
 ```typescript
-chrome.history.addUrl(
+browser.history.addUrl(
   details: UrlDetails,
 ): Promise<void>
 ```
@@ -165,12 +165,12 @@ Adds a URL to the history at the current time with a [transition type](https://d
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### deleteAll()
 
 ```typescript
-chrome.history.deleteAll(): Promise<void>
+browser.history.deleteAll(): Promise<void>
 ```
 
 Deletes all items from the history.
@@ -178,12 +178,12 @@ Deletes all items from the history.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### deleteRange()
 
 ```typescript
-chrome.history.deleteRange(
+browser.history.deleteRange(
   range: object,
 ): Promise<void>
 ```
@@ -203,12 +203,12 @@ Removes all items within the specified date range from the history. Pages will n
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### deleteUrl()
 
 ```typescript
-chrome.history.deleteUrl(
+browser.history.deleteUrl(
   details: UrlDetails,
 ): Promise<void>
 ```
@@ -222,12 +222,12 @@ Removes all occurrences of the given URL from the history.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### getVisits()
 
 ```typescript
-chrome.history.getVisits(
+browser.history.getVisits(
   details: UrlDetails,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/history#type-VisitItem[]>
 ```
@@ -241,12 +241,12 @@ Retrieves information about visits to a URL.
 #### Returns
 
 - Promise\<[VisitItem](https://developer.chrome.com/docs/extensions/reference/api/history#type-VisitItem)\[\]\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ### search()
 
 ```typescript
-chrome.history.search(
+browser.history.search(
   query: object,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/history#type-HistoryItem[]>
 ```
@@ -272,14 +272,14 @@ Searches the history for the last visit time of each page matching the query.
 #### Returns
 
 - Promise\<[HistoryItem](https://developer.chrome.com/docs/extensions/reference/api/history#type-HistoryItem)\[\]\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 ## Events
 
 ### onVisited
 
 ```typescript
-chrome.history.onVisited.addListener(
+browser.history.onVisited.addListener(
   callback: function,
 )
 ```
@@ -304,7 +304,7 @@ Fired when a URL is visited, providing the `HistoryItem` data for that URL. This
 ### onVisitRemoved
 
 ```typescript
-chrome.history.onVisitRemoved.addListener(
+browser.history.onVisitRemoved.addListener(
   callback: function,
 )
 ```

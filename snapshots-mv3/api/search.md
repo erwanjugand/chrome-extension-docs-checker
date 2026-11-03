@@ -20,7 +20,7 @@ Use the `chrome.search` API to search via the default provider.
 
 ## Availability
 
-Chrome 87+
+Chrome 87+ browser.\* since Chrome 148
 
 <br />
 
@@ -62,7 +62,7 @@ Specifies that the search results display in a new window.
 ### query()
 
 ```typescript
-chrome.search.query(
+browser.search.query(
   queryInfo: QueryInfo,
 ): Promise<void>
 ```
@@ -76,6 +76,6 @@ Used to query the default search provider. In case of an error, [`runtime.lastEr
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 <br />

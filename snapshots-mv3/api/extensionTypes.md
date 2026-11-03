@@ -20,7 +20,7 @@ The `chrome.extensionTypes` API contains type declarations for Chrome extensions
 
 ### ColorArray
 
-Chrome 139+
+Chrome 139+ browser.\* since Chrome 148
 
 #### Type
 
@@ -28,7 +28,7 @@ Chrome 139+
 
 ### CSSOrigin
 
-Chrome 66+
+Chrome 66+ browser.\* since Chrome 148
 
 The [origin](https://www.w3.org/TR/css3-cascade/#cascading-origins) of injected CSS.
 
@@ -41,7 +41,7 @@ The [origin](https://www.w3.org/TR/css3-cascade/#cascading-origins) of injected 
 
 ### DeleteInjectionDetails
 
-Chrome 87+
+Chrome 87+ browser.\* since Chrome 148
 
 Details of the CSS to remove. Either the code or the file property must be set, but both may not be set at the same time.
 
@@ -68,7 +68,7 @@ Details of the CSS to remove. Either the code or the file property must be set, 
 
 ### DocumentLifecycle
 
-Chrome 106+
+Chrome 106+ browser.\* since Chrome 148
 
 The document lifecycle of the frame.
 
@@ -83,7 +83,7 @@ The document lifecycle of the frame.
 
 ### ExecutionWorld
 
-Chrome 111+
+Chrome 111+ browser.\* since Chrome 148
 
 The JavaScript world for a script to execute within. Can either be an isolated world unique to this extension, the main world of the DOM which is shared with the page's JavaScript, or a user scripts world that is only available for scripts registered with the User Scripts API.
 
@@ -97,7 +97,7 @@ The JavaScript world for a script to execute within. Can either be an isolated w
 
 ### FrameType
 
-Chrome 106+
+Chrome 106+ browser.\* since Chrome 148
 
 The type of frame.
 
@@ -111,7 +111,7 @@ The type of frame.
 
 ### ImageDataType
 
-Chrome 139+
+Chrome 139+ browser.\* since Chrome 148
 
 Pixel data for an image. Must be an ImageData object; for example, from a `canvas` element.
 
@@ -134,7 +134,7 @@ Details about the format, quality, and area of an image.
 
 ### ImageFormat
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The format of an image.
 
@@ -160,14 +160,14 @@ Details of the script or CSS to inject. Either the code or the file property mus
 
   **Warning:** Be careful using the `code` parameter. Incorrect use of it may open your extension to [cross site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) attacks
 - cssOrigin [CSSOrigin](https://developer.chrome.com/docs/extensions/reference/api/extensionTypes#type-CSSOrigin) optional
-  Chrome 66+
+  Chrome 66+ browser.\* since Chrome 148
 
   The [origin](https://www.w3.org/TR/css3-cascade/#cascading-origins) of the CSS to inject. This may only be specified for CSS, not JavaScript. Defaults to `"author"`.
 - file string optional
 
   JavaScript or CSS file to inject.
 - frameId number optional
-  Chrome 50+
+  Chrome 50+ browser.\* since Chrome 148
 
   The [frame](https://developer.chrome.com/docs/extensions/reference/webNavigation/#frame_ids) where the script or CSS should be injected. Defaults to 0 (the top-level frame).
 - matchAboutBlank boolean optional
@@ -179,7 +179,7 @@ Details of the script or CSS to inject. Either the code or the file property mus
 
 ### RunAt
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The soonest that the JavaScript or CSS will be injected into the tab.
 

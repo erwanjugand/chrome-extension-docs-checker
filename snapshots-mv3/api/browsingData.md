@@ -179,7 +179,7 @@ A set of data types. Missing data types are interpreted as `false`.
 
   The browser's cache.
 - cacheStorage boolean optional
-  Chrome 72+
+  Chrome 72+ browser.\* since Chrome 148
 
   Cache storage
 - cookies boolean optional
@@ -246,7 +246,7 @@ Options that determine exactly what data will be removed.
 #### Properties
 
 - excludeOrigins string\[\] optional
-  Chrome 74+
+  Chrome 74+ browser.\* since Chrome 148
 
   When present, data for origins in this list is excluded from deletion. Can't be used together with `origins`. Only supported for cookies, storage and cache. Cookies are excluded for the whole registrable domain.
 - originTypes object optional
@@ -262,7 +262,7 @@ Options that determine exactly what data will be removed.
 
     Normal websites.
 - origins \[string, ...string\[\]\] optional
-  Chrome 74+
+  Chrome 74+ browser.\* since Chrome 148
 
   When present, only data for origins in this list is deleted. Only supported for cookies, storage and cache. Cookies are cleared for the whole registrable domain.
 - since number optional
@@ -274,7 +274,7 @@ Options that determine exactly what data will be removed.
 ### remove()
 
 ```typescript
-chrome.browsingData.remove(
+browser.browsingData.remove(
   options: RemovalOptions,
   dataToRemove: DataTypeSet,
 ): Promise<void>
@@ -292,7 +292,7 @@ Clears various types of browsing data stored in a user's profile.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Resolves when deletion has completed.
 
@@ -301,7 +301,7 @@ Clears various types of browsing data stored in a user's profile.
 Deprecated since Chrome 152
 
 ```typescript
-chrome.browsingData.removeAppcache(
+browser.browsingData.removeAppcache(
   options: RemovalOptions,
 ): Promise<void>
 ```
@@ -319,14 +319,14 @@ Clears websites' appcache data.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Resolves when websites' appcache data has been cleared.
 
 ### removeCache()
 
 ```typescript
-chrome.browsingData.removeCache(
+browser.browsingData.removeCache(
   options: RemovalOptions,
 ): Promise<void>
 ```
@@ -340,16 +340,16 @@ Clears the browser's cache.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Resolves when the browser's cache has been cleared.
 
 ### removeCacheStorage()
 
-Chrome 72+
+Chrome 72+ browser.\* since Chrome 148
 
 ```typescript
-chrome.browsingData.removeCacheStorage(
+browser.browsingData.removeCacheStorage(
   options: RemovalOptions,
 ): Promise<void>
 ```
@@ -363,14 +363,14 @@ Clears websites' cache storage data.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Resolves when websites' cache storage has been cleared.
 
 ### removeCookies()
 
 ```typescript
-chrome.browsingData.removeCookies(
+browser.browsingData.removeCookies(
   options: RemovalOptions,
 ): Promise<void>
 ```
@@ -384,14 +384,14 @@ Clears the browser's cookies and server-bound certificates modified within a par
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Resolves when the browser's cookies and server-bound certificates have been cleared.
 
 ### removeDownloads()
 
 ```typescript
-chrome.browsingData.removeDownloads(
+browser.browsingData.removeDownloads(
   options: RemovalOptions,
 ): Promise<void>
 ```
@@ -405,14 +405,14 @@ Clears the browser's list of downloaded files (*not* the downloaded files themse
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Resolves when the browser's list of downloaded files has been cleared.
 
 ### removeFileSystems()
 
 ```typescript
-chrome.browsingData.removeFileSystems(
+browser.browsingData.removeFileSystems(
   options: RemovalOptions,
 ): Promise<void>
 ```
@@ -426,14 +426,14 @@ Clears websites' file system data.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Resolves when websites' file systems have been cleared.
 
 ### removeFormData()
 
 ```typescript
-chrome.browsingData.removeFormData(
+browser.browsingData.removeFormData(
   options: RemovalOptions,
 ): Promise<void>
 ```
@@ -447,14 +447,14 @@ Clears the browser's stored form data (autofill).
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Resolves when the browser's form data has been cleared.
 
 ### removeHistory()
 
 ```typescript
-chrome.browsingData.removeHistory(
+browser.browsingData.removeHistory(
   options: RemovalOptions,
 ): Promise<void>
 ```
@@ -468,14 +468,14 @@ Clears the browser's history.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Resolves when the browser's history has cleared.
 
 ### removeIndexedDB()
 
 ```typescript
-chrome.browsingData.removeIndexedDB(
+browser.browsingData.removeIndexedDB(
   options: RemovalOptions,
 ): Promise<void>
 ```
@@ -489,14 +489,14 @@ Clears websites' IndexedDB data.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Resolves when websites' IndexedDB data has been cleared.
 
 ### removeLocalStorage()
 
 ```typescript
-chrome.browsingData.removeLocalStorage(
+browser.browsingData.removeLocalStorage(
   options: RemovalOptions,
 ): Promise<void>
 ```
@@ -510,7 +510,7 @@ Clears websites' local storage data.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Resolves when websites' local storage has been cleared.
 
@@ -519,7 +519,7 @@ Clears websites' local storage data.
 Deprecated since Chrome 144
 
 ```typescript
-chrome.browsingData.removePasswords(
+browser.browsingData.removePasswords(
   options: RemovalOptions,
 ): Promise<void>
 ```
@@ -537,7 +537,7 @@ Clears the browser's stored passwords.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Resolves when the browser's passwords have been cleared.
 
@@ -546,7 +546,7 @@ Clears the browser's stored passwords.
 Deprecated since Chrome 88
 
 ```typescript
-chrome.browsingData.removePluginData(
+browser.browsingData.removePluginData(
   options: RemovalOptions,
 ): Promise<void>
 ```
@@ -564,16 +564,16 @@ Clears plugins' data.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Resolves when plugins' data has been cleared.
 
 ### removeServiceWorkers()
 
-Chrome 72+
+Chrome 72+ browser.\* since Chrome 148
 
 ```typescript
-chrome.browsingData.removeServiceWorkers(
+browser.browsingData.removeServiceWorkers(
   options: RemovalOptions,
 ): Promise<void>
 ```
@@ -587,7 +587,7 @@ Clears websites' service workers.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Resolves when websites' service workers have been cleared.
 
@@ -596,7 +596,7 @@ Clears websites' service workers.
 Deprecated since Chrome 152
 
 ```typescript
-chrome.browsingData.removeWebSQL(
+browser.browsingData.removeWebSQL(
   options: RemovalOptions,
 ): Promise<void>
 ```
@@ -614,14 +614,14 @@ Clears websites' WebSQL data.
 #### Returns
 
 - Promise\<void\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
   Resolves when websites' WebSQL databases have been cleared.
 
 ### settings()
 
 ```typescript
-chrome.browsingData.settings(): Promise<object>
+browser.browsingData.settings(): Promise<object>
 ```
 
 Reports which types of data are currently selected in the 'Clear browsing data' settings UI. Note: some of the data types included in this API are not available in the settings UI, and some UI settings control more than one data type listed here.
@@ -629,6 +629,6 @@ Reports which types of data are currently selected in the 'Clear browsing data' 
 #### Returns
 
 - Promise\<object\>
-  Chrome 96+
+  Chrome 96+ browser.\* since Chrome 148
 
 <br />

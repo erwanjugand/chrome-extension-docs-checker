@@ -161,7 +161,7 @@ Matches the state of a web page based on various criteria.
 
   Matches if all of the CSS selectors in the array match displayed elements in a frame with the same origin as the page's main frame. All selectors in this array must be [compound selectors](https://www.w3.org/TR/selectors4/#compound) to speed up matching. Note: Listing hundreds of CSS selectors or listing CSS selectors that match hundreds of times per page can slow down web sites.
 - isBookmarked boolean optional
-  Chrome 45+
+  Chrome 45+ browser.\* since Chrome 148
 
   Matches if the bookmarked state of the page is equal to the specified value. Requres the [bookmarks permission](https://developer.chrome.com/docs/extensions/develop/concepts/declare-permissions).
 - pageUrl [UrlFilter](https://developer.chrome.com/docs/extensions/reference/events/#type-UrlFilter) optional
@@ -204,7 +204,7 @@ Declarative event action that injects a content script.
 
 ### SetIcon
 
-Declarative event action that sets the n-dip square icon for the extension's [page action](https://developer.chrome.com/docs/extensions/reference/pageAction/) or [browser action](https://developer.chrome.com/docs/extensions/reference/browserAction/) while the corresponding conditions are met. This action can be used without [host permissions](https://developer.chrome.com/docs/extensions/develop/concepts/declare-permissions#host-permissions), but the extension must have a page or browser action.
+Declarative event action that sets the n-dip square icon for the extension's page action or browser action while the corresponding conditions are met. This action can be used without [host permissions](https://developer.chrome.com/docs/extensions/develop/concepts/declare-permissions#host-permissions), but the extension must have a page or browser action.
 
 Exactly one of `imageData` or `path` must be specified. Both are dictionaries mapping a number of pixels to an image representation. The image representation in `imageData` is an [ImageData](https://developer.mozilla.org/en-US/docs/Web/API/ImageData) object; for example, from a `canvas` element, while the image representation in `path` is the path to an image file relative to the extension's manifest. If `scale` screen pixels fit into a device-independent pixel, the `scale * n` icon is used. If that scale is missing, another image is resized to the required size.
 
@@ -229,7 +229,7 @@ Exactly one of `imageData` or `path` must be specified. Both are dictionaries ma
 
 ### ShowAction
 
-Chrome 97+
+Chrome 97+ browser.\* since Chrome 148
 
 A declarative event action that sets the extension's toolbar [action](https://developer.chrome.com/docs/extensions/reference/action/) to an enabled state while the corresponding conditions are met. This action can be used without [host permissions](https://developer.chrome.com/docs/extensions/develop/concepts/declare-permissions#host-permissions). If the extension has the [activeTab](https://developer.chrome.com/docs/extensions/develop/concepts/activeTab) permission, clicking the page action grants access to the active tab.
 
@@ -259,7 +259,7 @@ Please use [`declarativeContent.ShowAction`](https://developer.chrome.com/docs/e
 
 <br />
 
-A declarative event action that sets the extension's [page action](https://developer.chrome.com/docs/extensions/reference/pageAction/) to an enabled state while the corresponding conditions are met. This action can be used without [host permissions](https://developer.chrome.com/docs/extensions/develop/concepts/declare-permissions#host-permissions), but the extension must have a page action. If the extension has the [activeTab](https://developer.chrome.com/docs/extensions/develop/concepts/activeTab) permission, clicking the page action grants access to the active tab.
+A declarative event action that sets the extension's page action to an enabled state while the corresponding conditions are met. This action can be used without [host permissions](https://developer.chrome.com/docs/extensions/develop/concepts/declare-permissions#host-permissions), but the extension must have a page action. If the extension has the [activeTab](https://developer.chrome.com/docs/extensions/develop/concepts/activeTab) permission, clicking the page action grants access to the active tab.
 
 On pages where the conditions are not met the extension's toolbar action will be grey-scale, and clicking it will open the context menu, instead of triggering the action.
 

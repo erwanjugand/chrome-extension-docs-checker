@@ -63,7 +63,7 @@ The encoding to use for returned domains.
 ### getDomain()
 
 ```typescript
-chrome.publicSuffix.getDomain(
+browser.publicSuffix.getDomain(
   hostname: string,
   options?: DomainOptions,
 ): string | undefined
@@ -83,7 +83,7 @@ Gets the registrable domain for `hostname`, if any.
 ### getKnownSuffix()
 
 ```typescript
-chrome.publicSuffix.getKnownSuffix(
+browser.publicSuffix.getKnownSuffix(
   hostname: string,
 ): string | undefined
 ```
@@ -101,7 +101,7 @@ Gets the known public suffix for `hostname`, if any.
 ### isKnownSuffix()
 
 ```typescript
-chrome.publicSuffix.isKnownSuffix(
+browser.publicSuffix.isKnownSuffix(
   hostname: string,
 ): boolean
 ```

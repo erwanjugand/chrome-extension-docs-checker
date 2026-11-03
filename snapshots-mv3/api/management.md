@@ -41,7 +41,7 @@ API. For example:
 
 ### ExtensionDisabledReason
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 A reason the item is disabled.
 
@@ -103,7 +103,7 @@ Information about an installed extension, app, or theme.
 
   Whether this extension can be disabled or uninstalled by the user.
 - mayEnable boolean optional
-  Chrome 62+
+  Chrome 62+ browser.\* since Chrome 148
 
   Whether this extension can be enabled by the user. This is only returned for extensions which are not enabled.
 - name string
@@ -131,13 +131,13 @@ Information about an installed extension, app, or theme.
 
   The [version](https://developer.chrome.com/docs/extensions/reference/manifest/version) of this extension, app, or theme.
 - versionName string optional
-  Chrome 50+
+  Chrome 50+ browser.\* since Chrome 148
 
   The [version name](https://developer.chrome.com/docs/extensions/reference/manifest/version#version_name) of this extension, app, or theme if the manifest specified one.
 
 ### ExtensionInstallType
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 How the extension was installed. One of
 `admin`: The extension was installed because of an administrative policy,
@@ -158,7 +158,7 @@ How the extension was installed. One of
 
 ### ExtensionType
 
-Chrome 44+
+Chrome 44+ browser.\* since Chrome 148
 
 The type of this extension, app, or theme.
 
@@ -201,7 +201,7 @@ These are all possible app launch types.
 
 ### UninstallOptions
 
-Chrome 88+
+Chrome 88+ browser.\* since Chrome 148
 
 Options for how to handle the extension's uninstallation.
 
@@ -216,7 +216,7 @@ Options for how to handle the extension's uninstallation.
 ### createAppShortcut()
 
 ```typescript
-chrome.management.createAppShortcut(
+browser.management.createAppShortcut(
   id: string,
 ): Promise<void>
 ```
@@ -232,12 +232,12 @@ Display options to create shortcuts for an app. On Mac, only packaged app shortc
 #### Returns
 
 - Promise\<void\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### generateAppForLink()
 
 ```typescript
-chrome.management.generateAppForLink(
+browser.management.generateAppForLink(
   url: string,
   title: string,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/management#type-ExtensionInfo>
@@ -257,12 +257,12 @@ Generate an app for a URL. Returns the generated bookmark app.
 #### Returns
 
 - Promise\<[ExtensionInfo](https://developer.chrome.com/docs/extensions/reference/api/management#type-ExtensionInfo)\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### get()
 
 ```typescript
-chrome.management.get(
+browser.management.get(
   id: string,
 ): Promise<https://developer.chrome.com/docs/extensions/reference/api/management#type-ExtensionInfo>
 ```
@@ -278,12 +278,12 @@ Returns information about the installed extension, app, or theme that has the gi
 #### Returns
 
 - Promise\<[ExtensionInfo](https://developer.chrome.com/docs/extensions/reference/api/management#type-ExtensionInfo)\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### getAll()
 
 ```typescript
-chrome.management.getAll(): Promise<https://developer.chrome.com/docs/extensions/reference/api/management#type-ExtensionInfo[]>
+browser.management.getAll(): Promise<https://developer.chrome.com/docs/extensions/reference/api/management#type-ExtensionInfo[]>
 ```
 
 Returns a list of information about installed extensions and apps.
@@ -291,12 +291,12 @@ Returns a list of information about installed extensions and apps.
 #### Returns
 
 - Promise\<[ExtensionInfo](https://developer.chrome.com/docs/extensions/reference/api/management#type-ExtensionInfo)\[\]\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### getPermissionWarningsById()
 
 ```typescript
-chrome.management.getPermissionWarningsById(
+browser.management.getPermissionWarningsById(
   id: string,
 ): Promise<string[]>
 ```
@@ -312,12 +312,12 @@ Returns a list of [permission warnings](https://developer.chrome.com/extensions/
 #### Returns
 
 - Promise\<string\[\]\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### getPermissionWarningsByManifest()
 
 ```typescript
-chrome.management.getPermissionWarningsByManifest(
+browser.management.getPermissionWarningsByManifest(
   manifestStr: string,
 ): Promise<string[]>
 ```
@@ -333,12 +333,12 @@ Returns a list of [permission warnings](https://developer.chrome.com/extensions/
 #### Returns
 
 - Promise\<string\[\]\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### getSelf()
 
 ```typescript
-chrome.management.getSelf(): Promise<https://developer.chrome.com/docs/extensions/reference/api/management#type-ExtensionInfo>
+browser.management.getSelf(): Promise<https://developer.chrome.com/docs/extensions/reference/api/management#type-ExtensionInfo>
 ```
 
 Returns information about the calling extension, app, or theme. Note: This function can be used without requesting the 'management' permission in the manifest.
@@ -346,14 +346,14 @@ Returns information about the calling extension, app, or theme. Note: This funct
 #### Returns
 
 - Promise\<[ExtensionInfo](https://developer.chrome.com/docs/extensions/reference/api/management#type-ExtensionInfo)\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### installReplacementWebApp()
 
-Chrome 77+
+Chrome 77+ browser.\* since Chrome 148
 
 ```typescript
-chrome.management.installReplacementWebApp(): Promise<void>
+browser.management.installReplacementWebApp(): Promise<void>
 ```
 
 Launches the replacement_web_app specified in the manifest. Prompts the user to install if not already installed.
@@ -361,12 +361,12 @@ Launches the replacement_web_app specified in the manifest. Prompts the user to 
 #### Returns
 
 - Promise\<void\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### launchApp()
 
 ```typescript
-chrome.management.launchApp(
+browser.management.launchApp(
   id: string,
 ): Promise<void>
 ```
@@ -382,12 +382,12 @@ Launches an application.
 #### Returns
 
 - Promise\<void\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### setEnabled()
 
 ```typescript
-chrome.management.setEnabled(
+browser.management.setEnabled(
   id: string,
   enabled: boolean,
 ): Promise<void>
@@ -407,12 +407,12 @@ Enables or disables an app or extension. In most cases this function must be cal
 #### Returns
 
 - Promise\<void\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### setLaunchType()
 
 ```typescript
-chrome.management.setLaunchType(
+browser.management.setLaunchType(
   id: string,
   launchType: LaunchType,
 ): Promise<void>
@@ -432,12 +432,12 @@ Set the launch type of an app.
 #### Returns
 
 - Promise\<void\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### uninstall()
 
 ```typescript
-chrome.management.uninstall(
+browser.management.uninstall(
   id: string,
   options?: UninstallOptions,
 ): Promise<void>
@@ -455,12 +455,12 @@ Uninstalls a currently installed app or extension. Note: This function does not 
 #### Returns
 
 - Promise\<void\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ### uninstallSelf()
 
 ```typescript
-chrome.management.uninstallSelf(
+browser.management.uninstallSelf(
   options?: UninstallOptions,
 ): Promise<void>
 ```
@@ -474,14 +474,14 @@ Uninstalls the calling extension. Note: This function can be used without reques
 #### Returns
 
 - Promise\<void\>
-  Chrome 88+
+  Chrome 88+ browser.\* since Chrome 148
 
 ## Events
 
 ### onDisabled
 
 ```typescript
-chrome.management.onDisabled.addListener(
+browser.management.onDisabled.addListener(
   callback: function,
 )
 ```
@@ -506,7 +506,7 @@ Fired when an app or extension has been disabled.
 ### onEnabled
 
 ```typescript
-chrome.management.onEnabled.addListener(
+browser.management.onEnabled.addListener(
   callback: function,
 )
 ```
@@ -531,7 +531,7 @@ Fired when an app or extension has been enabled.
 ### onInstalled
 
 ```typescript
-chrome.management.onInstalled.addListener(
+browser.management.onInstalled.addListener(
   callback: function,
 )
 ```
@@ -556,7 +556,7 @@ Fired when an app or extension has been installed.
 ### onUninstalled
 
 ```typescript
-chrome.management.onUninstalled.addListener(
+browser.management.onUninstalled.addListener(
   callback: function,
 )
 ```
