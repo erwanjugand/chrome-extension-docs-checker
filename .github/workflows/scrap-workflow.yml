@@ -2,8 +2,12 @@ name: Check diff
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 12 * * 2'
+    inputs:
+      # Set by the cron-job.org trigger, which replaces `schedule`: GitHub delayed it by hours
+      release_check:
+        description: Scrap only on a Chrome stable release day
+        type: boolean
+        default: false
 
 jobs:
   check:
@@ -14,7 +18,7 @@ jobs:
 
     steps:
       - id: chrome
-        if: github.event_name == 'schedule'
+        if: inputs.release_check
         shell: bash
         run: |
           release=$(curl -fsS --retry 3 --retry-all-errors 'https://chromiumdash.appspot.com/fetch_milestone_schedule?offset=-1&n=4' \
@@ -23,7 +27,7 @@ jobs:
 
   run-scrap:
     needs: check
-    if: needs.check.outputs.release == 'true' || github.event_name == 'workflow_dispatch'
+    if: needs.check.outputs.release == 'true' || !inputs.release_check
     runs-on: ubuntu-26.04
 
     permissions:
