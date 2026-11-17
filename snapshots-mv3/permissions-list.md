@@ -296,6 +296,10 @@ by specific permissions.
 
     Warning displayed: *Read and change all your data on all websites.*
 
+`"publicSuffix"`
+:   Gives access to the
+    [`chrome.publicSuffix`](https://developer.chrome.com/docs/extensions/reference/api/publicSuffix) API.
+
 `"readingList"`
 :   Gives access to the
     [`chrome.readingList`](https://developer.chrome.com/docs/extensions/reference/api/readingList) API.
@@ -416,10 +420,6 @@ by specific permissions.
 `"vpnProvider"`
 :   Gives access to the
     [`chrome.vpnProvider`](https://developer.chrome.com/docs/extensions/reference/api/vpnProvider) API.
-
-`"wallpaper"`
-:   Gives access to the
-    [`chrome.wallpaper`](https://developer.chrome.com/docs/extensions/reference/api/wallpaper) API.
 
 `"webAuthenticationProxy"`
 :   Gives access to the [`chrome.webAuthenticationProxy`](https://developer.chrome.com/docs/extensions/reference/api/webAuthenticationProxy)

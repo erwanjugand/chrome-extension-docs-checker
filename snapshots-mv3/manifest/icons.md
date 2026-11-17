@@ -11,14 +11,16 @@ can, however, be in any raster format supported by Blink, including BMP, GIF, IC
 
 Here's an example of how to declare the icons in the manifest:
 
-     "icons": {
-        "16": "icon16.png",
-        "32": "icon32.png",
-        "48": "icon48.png",
-        "128": "icon128.png"
-      },
+```json
+ "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+```
 
 > [!NOTE]
 > **Note:** You may provide icons of any other size you wish, and Chrome will attempt to use the best size where appropriate.
 
-See [Extension icons](https://developer.chrome.com/docs/webstore/images#icons) for details on Chrome Web Store requirements and best practices.
+See [Extension icons](https://developer.chrome.com/docs/webstore/images.md.txt#icons) for details on Chrome Web Store requirements and best practices.

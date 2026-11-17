@@ -6,30 +6,32 @@ These are the supported keys for `"content_scripts"`. Only the `"matches"` key a
 
 manifest.json
 
-    {
-     "name": "My extension",
-     ...
-     "content_scripts": [
-       {
-         "matches": ["https://*.example.com/*"],
-         "css": ["my-styles.css"],
-         "js": ["content-script.js"],
-         "exclude_matches": ["*://*/*foo*"],
-         "include_globs": ["*example.com/???s/*"],
-         "exclude_globs": ["*bar*"],     
-         "all_frames": false,
-         "match_origin_as_fallback": false,
-         "match_about_blank": false,
-         "run_at": "document_idle",
-         "world": "ISOLATED",
-       }
-     ],
-     ...
-    }
+```json
+{
+ "name": "My extension",
+ ...
+ "content_scripts": [
+   {
+     "matches": ["https://*.example.com/*"],
+     "css": ["my-styles.css"],
+     "js": ["content-script.js"],
+     "exclude_matches": ["*://*/*foo*"],
+     "include_globs": ["*example.com/???s/*"],
+     "exclude_globs": ["*bar*"],     
+     "all_frames": false,
+     "match_origin_as_fallback": false,
+     "match_about_blank": false,
+     "run_at": "document_idle",
+     "world": "ISOLATED",
+   }
+ ],
+ ...
+}
+```
 
 ## Files
 
-Each file must contain a relative path to a resource in the extension's root directory. Leading slashes (`/`) are automatically trimmed. The [`"run_at"`](https://developer.chrome.com/docs/extensions/reference/manifest/content-scripts#world-timings) key specifies when each file will be injected.
+Each file must contain a relative path to a resource in the extension's root directory. Leading slashes (`/`) are automatically trimmed. The [`"run_at"`](https://developer.chrome.com/docs/extensions/reference/manifest/content-scripts.md.txt#world-timings) key specifies when each file will be injected.
 
 `"css"` - Array
 :   *Optional*. An array of CSS file paths, injected in the order of this array, and before any DOM construction or page rendering occurs.
@@ -184,7 +186,7 @@ https://www.example.com/science
 
 The `"all_frames"` key specifies if the content script should be injected into all frames matching the specified URL requirements. If set to `false` it will only inject into the topmost frame. It can be used along with `"match_about_blank"` to inject into an `about:blank` frame.
 
-To inject into other frames like `data:`, `blob:`, and `filesystem:`, set the `"match_origin_as_fallback"` to `true`. For details, see [Inject in related frames](https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts#injecting-in-related-frames)
+To inject into other frames like `data:`, `blob:`, and `filesystem:`, set the `"match_origin_as_fallback"` to `true`. For details, see [Inject in related frames](https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts.md.txt#injecting-in-related-frames)
 
 `"all_frames"` Boolean
 :   *Optional* . Defaults to `false`, meaning that only the top frame is matched. If set to true, it will inject into all frames, even if the frame is not the topmost frame in the tab. Each frame is checked independently for URL requirements, it won't inject into child frames if the URL requirements are not met.
@@ -210,7 +212,7 @@ By default, content scripts are injected when the document and all resources are
 :   *Optional* . The JavaScript world for a script to execute within. Defaults to `"ISOLATED"`, which is the execution environment unique to the content script. Choosing the `"MAIN"` world means the script will share the execution environment with the host page's JavaScript. See [Work in isolated worlds](https://developer.chrome.com/docs/extensions/mv3/content_scripts#isolated_world) to learn more.
 
 > [!WARNING]
-> **Warning:** There are risks involved when using the `"MAIN"` world. The host page can access and interfere with the injected script. See [Work in isolated worlds](https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts#isolated_world) to learn more.
+> **Warning:** There are risks involved when using the `"MAIN"` world. The host page can access and interfere with the injected script. See [Work in isolated worlds](https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts.md.txt#isolated_world) to learn more.
 
 ## Example
 

@@ -1,6 +1,8 @@
 An integer specifying the version of the manifest file format your package requires. This key is required. For example:
 
-    "manifest_version": 3
+```json
+"manifest_version": 3
+```
 
 Supported values for this key are:
 

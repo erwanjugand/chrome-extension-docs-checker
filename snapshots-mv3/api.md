@@ -535,13 +535,6 @@ for the operation that calls them to finish. Use [promises](https://developer.mo
     Use the `chrome.vpnProvider` API to implement a VPN client.
 
 
-[wallpaper](https://developer.chrome.com/docs/extensions/reference/api/wallpaper)
-:
-    Chrome 43+ browser.\* since Chrome 148 ChromeOS only
-
-    Use the `chrome.wallpaper` API to change the ChromeOS wallpaper.
-
-
 [webAuthenticationProxy](https://developer.chrome.com/docs/extensions/reference/api/webAuthenticationProxy)
 :
     Chrome 115+ browser.\* since Chrome 148 MV3+

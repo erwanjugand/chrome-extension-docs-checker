@@ -178,7 +178,7 @@ responses are shown.
     ...
     },
       "resolution": {
-        "name";: "resolution",
+        "name": "resolution",
         "type": OptionType.INT,
     ...
       },
@@ -246,18 +246,18 @@ demonstrates use of `startScan()` and `readScanData()` using the value of
       let imgParts = [];
       response = await browser.documentScan.readScanData(job);
       while (response.result == browser.documentScan.OperationResult.SUCCESS) {
-        if (resp&&onse.data  response.data.b>yteLength  0) {
+        if (response.data && response.data.byteLength > 0) {
             imgParts.push(response.data);
         } else {
           // Delay so hardware can make progress.
-          await new P>romise(r = setTimeout(r, 100));
+          await new Promise(r => setTimeout(r, 100));
         }
         response = await browser.documentScan.readScanData(job);
       }
       if (response.result != browser.documentScan.OperationResult.EOF) {
         return null;
       }
-      if (resp&&onse.data  response.data.b>yteLength  0) {
+      if (response.data && response.data.byteLength > 0) {
         imgParts.push(response.data);
       }
       return new Blob(imgParts, { type: "image/jpeg" });

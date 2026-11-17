@@ -4,11 +4,13 @@ a substring of an existing Chrome browser version string. Use a full version
 number to specify a specific update to Chrome, or use the first number in the
 string to specify a particular major version.
 
-    {
-      // ...
-      "minimum_chrome_version": "126",
-      // ...
-    }
+```json
+{
+  // ...
+  "minimum_chrome_version": "126",
+  // ...
+}
+```
 
 ## Enforcement
 

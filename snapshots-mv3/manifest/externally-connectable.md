@@ -1,7 +1,7 @@
 The `"externally_connectable"` manifest property declares which extensions and web pages can
 connect to your extension using [`runtime.connect()`](https://developer.chrome.com/docs/extensions/reference/runtime#method-connect) and [`runtime.sendMessage()`](https://developer.chrome.com/docs/extensions/reference/runtime#method-sendMessage).
 
-For a tutorial on message passing, see [cross-extension messaging](https://developer.chrome.com/docs/extensions/develop/concepts/messaging#external) and [sending messages
+For a tutorial on message passing, see [cross-extension messaging](https://developer.chrome.com/docs/extensions/develop/concepts/messaging.md.txt#external) and [sending messages
 from web pages](https://developer.chrome.com/docs/extensions/develop/concepts/messaging#external-webpage).
 
 ## Connect without externally_connectable
@@ -13,24 +13,26 @@ mind.
 
 ## Manifest
 
-    {
-      "name": "My externally connectable extension",
-      "externally_connectable": {
-        "ids": [
-          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-          "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-          ...
-        ],
-        // If this field is not specified, no web pages can connect.
-        "matches": [
-          "https://*.google.com/*",
-          "*://*.chromium.org/*",
-          ...
-        ],
-        "accepts_tls_channel_id": false
-      },
+```json
+{
+  "name": "My externally connectable extension",
+  "externally_connectable": {
+    "ids": [
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
       ...
-    }
+    ],
+    // If this field is not specified, no web pages can connect.
+    "matches": [
+      "https://*.google.com/*",
+      "*://*.chromium.org/*",
+      ...
+    ],
+    "accepts_tls_channel_id": false
+  },
+  ...
+}
+```
 
 ## Reference
 
@@ -40,7 +42,7 @@ The `"externally_connectable"` manifest key includes the following *optional* pr
 :   The IDs of extensions that are allowed to connect. If left empty or unspecified, no extensions or apps can connect. The wildcard `"*"` will allow all extensions and apps to connect.
 
 `"matches"`
-:   The [match patterns](https://developer.chrome.com/docs/extensions/develop/concepts/match-patterns) for *web pages* that are allowed to
+:   The [match patterns](https://developer.chrome.com/docs/extensions/develop/concepts/match-patterns.md.txt) for *web pages* that are allowed to
     connect. If left empty or unspecified, no web pages can connect.
 
 `"accepts_tls_channel_id"`

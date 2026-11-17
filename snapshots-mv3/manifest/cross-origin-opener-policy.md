@@ -2,8 +2,8 @@ The `cross_origin_opener_policy` manifest key lets extensions specify a value fo
 [Cross-Origin-Opener-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) (COOP) response header for requests to the extension's
 origin. This includes the extension's service worker, popup, options page, tabs that are open to an extension resource, etc.
 
-Together with [cross_origin_embedder_policy](https://developer.chrome.com/docs/extensions/reference/manifest/cross-origin-embedder-policy), this key allows extensions opt into
-[cross-origin isolation](https://developer.chrome.com/docs/extensions/develop/concepts/cross-origin-isolation).
+Together with [cross_origin_embedder_policy](https://developer.chrome.com/docs/extensions/reference/manifest/cross-origin-embedder-policy.md.txt), this key allows extensions opt into
+[cross-origin isolation](https://developer.chrome.com/docs/extensions/develop/concepts/cross-origin-isolation.md.txt).
 
 ## Manifest declaration
 
@@ -14,12 +14,14 @@ The `cross_origin_opener_policy` manifest key contains an object with one
 property named `value` that takes a string. Chrome uses this string as the value of the
 `Cross-Origin-Opener-Policy` header when serving resources from the extension's origin. For example:
 
-    {
-        ...
-        "cross_origin_opener_policy": {
-          "value": "same-origin"
-        },
-        ...
-    }
+```javascript
+{
+    ...
+    "cross_origin_opener_policy": {
+      "value": "same-origin"
+    },
+    ...
+}
+```
 
-See [Cross-origin isolation overview](https://developer.chrome.com/docs/extensions/develop/concepts/cross-origin-isolation) for more information about this feature.
+See [Cross-origin isolation overview](https://developer.chrome.com/docs/extensions/develop/concepts/cross-origin-isolation.md.txt) for more information about this feature.

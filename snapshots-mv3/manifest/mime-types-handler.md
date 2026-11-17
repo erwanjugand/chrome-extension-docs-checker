@@ -1,17 +1,19 @@
 The `"mime_types_handler"` manifest key registers your extension as a handler for supported MIME types, such as `application/pdf`. When a user opens a document of a registered MIME type, Chrome loads your handler page in place of its built-in viewer.
 
-For more information and examples, see the [`chrome.mimeHandler`](https://developer.chrome.com/docs/extensions/reference/api/mimeHandler) API documentation.
+For more information and examples, see the [`chrome.mimeHandler`](https://developer.chrome.com/docs/extensions/reference/api/mimeHandler.md.txt) API documentation.
 
-    {
-      // ...
-      "mime_types_handler": {
-        "application/pdf": {
-          "handler_url": "viewer.html",
-          "can_embed": true
-        }
-      },
-      // ...
+```json
+{
+  // ...
+  "mime_types_handler": {
+    "application/pdf": {
+      "handler_url": "viewer.html",
+      "can_embed": true
     }
+  },
+  // ...
+}
+```
 
 `"mime_types_handler"` (dictionary, optional)
 :   Maps MIME types to the extension pages that render them. As of Chrome 151, `application/pdf` is the only MIME type available to public handlers. Declaring an unsupported MIME type causes an installation warning.

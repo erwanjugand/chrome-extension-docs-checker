@@ -12,20 +12,22 @@ Use the `web_accessible_resources` manifest property to declare which resources 
 what origins. This property is an array of objects that declares resource access rules. Each object
 maps an array of extension resources to an array of URLs and/or extension IDs that can access those resources.
 
+```json
+{
+  ...
+  "web_accessible_resources": [
     {
-      ...
-      "web_accessible_resources": [
-        {
-          "resources": [ "test1.png", "test2.png" ],
-          "matches": [ "https://web-accessible-resources-1.glitch.me/*" ]
-        }, {
-          "resources": [ "test3.png", "test4.png" ],
-          "matches": [ "https://web-accessible-resources-2.glitch.me/*" ],
-          "use_dynamic_url": true
-        }
-      ],
-      ...
+      "resources": [ "test1.png", "test2.png" ],
+      "matches": [ "https://web-accessible-resources-1.glitch.me/*" ]
+    }, {
+      "resources": [ "test3.png", "test4.png" ],
+      "matches": [ "https://web-accessible-resources-2.glitch.me/*" ],
+      "use_dynamic_url": true
     }
+  ],
+  ...
+}
+```
 
 Each object in the array contains these elements:
 

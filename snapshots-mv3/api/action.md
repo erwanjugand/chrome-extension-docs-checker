@@ -81,7 +81,7 @@ canvas](https://developer.mozilla.org/docs/Web/API/OffscreenCanvas) API.
     context.fillStyle = '#00FF00';  // Green
     context.fillRect(0, 0, 16, 16);
     const imageData = context.getImageData(0, 0, 16, 16);
-    browser.action.setIcon({imageData: >imageData}, () = { /* ... */ });
+    browser.action.setIcon({imageData: imageData}, () => { /* ... */ });
 
 > [!NOTE]
 > **Note:** The `action.setIcon()` API is intended to set a static image. Don't use animated images for your icons.
@@ -117,13 +117,13 @@ badge or a string with a [CSS color](https://developer.mozilla.org/docs/Web/CSS/
     );
 
     browser.action.setBadgeBackgroundColor(
-      {color: '#00FF00'},  // Also gree>n
-      () = { /* ... */ },
+      {color: '#00FF00'},  // Also green
+      () => { /* ... */ },
     );
 
     browser.action.setBadgeBackgroundColor(
-      {color: 'green'},  // Also, a>lso green
-      () = { /* ... */ },
+      {color: 'green'},  // Also, also green
+      () => { /* ... */ },
     );
 
 #### Popup

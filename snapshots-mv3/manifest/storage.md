@@ -17,13 +17,15 @@ extension to enforce the policies configured by the administrator.
 The `storage.managed_schema` property indicates a file within the extension that contains the policy
 schema.
 
-    {
-      "name": "My enterprise extension",
-      "storage": {
-        "managed_schema": "schema.json"
-      },
-      ...
-    }
+```json
+{
+  "name": "My enterprise extension",
+  "storage": {
+    "managed_schema": "schema.json"
+  },
+  ...
+}
+```
 
 Chrome will then load these policies from the underlying operating system and from Google Apps for
 signed-in users. The [`storage.onChanged`](https://developer.chrome.com/docs/extensions/reference/storage#event-onChanged) event is fired whenever a policy change is detected.
@@ -43,79 +45,81 @@ published by the `storage.managed` API.
 
 ## Sample schema
 
-    {
+```json
+{
+  "type": "object",
+
+  // "properties" maps an optional key of this object to its schema. At the
+  // top-level object, these keys are the policy names supported.
+  "properties": {
+
+    // The policy name "AutoSave" is mapped to its schema, which in this case
+    // declares it as a simple boolean value.
+    // "title" and "description" are optional and are used to show a
+    // user-friendly name and documentation to the administrator.
+    "AutoSave": {
+      "title": "Automatically save changes.",
+      "description": "If set to true then changes will be automatically saved.",
+      "type": "boolean"
+    },
+
+    // Other simple types supported include "integer", "string" and "number".
+    "PollRefreshRate": {
+      "type": "integer"
+    },
+
+    "DefaultServiceUrl": {
+      "type": "string"
+    },
+
+    // "array" is a list of items that conform to another schema, described
+    // in "items". An example to this schema is [ "one", "two" ].
+    "ServiceUrls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    // A more complex example that describes a list of bookmarks. Each bookmark
+    // has a "title", and can have a "url" or a list of "children" bookmarks.
+    // The "id" attribute is used to name a schema, and other schemas can reuse
+    // it using the "$ref" attribute.
+    "Bookmarks": {
+      "type": "array",
+      "id": "ListOfBookmarks",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "url": { "type": "string" },
+          "children": { "$ref": "ListOfBookmarks" }
+        }
+      }
+    },
+
+    // An "object" can have known properties listed as "properties", and can
+    // optionally have "additionalProperties" indicating a schema to apply to
+    // keys that aren't found in "properties".
+    // This example policy could map a URL to its settings. An example value:
+    // {
+    //   "youtube.com": {
+    //     "blocklisted": true
+    //   },
+    //   "google.com": {
+    //     "bypass_proxy": true
+    //   }
+    // }
+    "SettingsForUrls": {
       "type": "object",
-
-      // "properties" maps an optional key of this object to its schema. At the
-      // top-level object, these keys are the policy names supported.
-      "properties": {
-
-        // The policy name "AutoSave" is mapped to its schema, which in this case
-        // declares it as a simple boolean value.
-        // "title" and "description" are optional and are used to show a
-        // user-friendly name and documentation to the administrator.
-        "AutoSave": {
-          "title": "Automatically save changes.",
-          "description": "If set to true then changes will be automatically saved.",
-          "type": "boolean"
-        },
-
-        // Other simple types supported include "integer", "string" and "number".
-        "PollRefreshRate": {
-          "type": "integer"
-        },
-
-        "DefaultServiceUrl": {
-          "type": "string"
-        },
-
-        // "array" is a list of items that conform to another schema, described
-        // in "items". An example to this schema is [ "one", "two" ].
-        "ServiceUrls": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-
-        // A more complex example that describes a list of bookmarks. Each bookmark
-        // has a "title", and can have a "url" or a list of "children" bookmarks.
-        // The "id" attribute is used to name a schema, and other schemas can reuse
-        // it using the "$ref" attribute.
-        "Bookmarks": {
-          "type": "array",
-          "id": "ListOfBookmarks",
-          "items": {
-            "type": "object",
-            "properties": {
-              "title": { "type": "string" },
-              "url": { "type": "string" },
-              "children": { "$ref": "ListOfBookmarks" }
-            }
-          }
-        },
-
-        // An "object" can have known properties listed as "properties", and can
-        // optionally have "additionalProperties" indicating a schema to apply to
-        // keys that aren't found in "properties".
-        // This example policy could map a URL to its settings. An example value:
-        // {
-        //   "youtube.com": {
-        //     "blocklisted": true
-        //   },
-        //   "google.com": {
-        //     "bypass_proxy": true
-        //   }
-        // }
-        "SettingsForUrls": {
-          "type": "object",
-          "additionalProperties": {
-            "type": "object",
-            "properties": {
-              "blocklisted": { "type": "boolean" },
-              "bypass_proxy": { "type": "boolean" }
-            }
-          }
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "blocklisted": { "type": "boolean" },
+          "bypass_proxy": { "type": "boolean" }
         }
       }
     }
+  }
+}
+```

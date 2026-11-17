@@ -8,14 +8,16 @@ If the content security policy is not defined by the user in the manifest, the d
 
 These defaults are equivalent to specifying the following policies in your manifest:
 
-    {
-      // ...
-      "content_security_policy": {
-        "extension_pages": "script-src 'self'; object-src 'self';",
-        "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
-      }
-      // ...
-    }
+```json
+{
+  // ...
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';",
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+  }
+  // ...
+}
+```
 
 In this case, the extension will only load local scripts and objects from its own packaged resources. WebAssembly will be disabled, and the extension won't run inline Javascript or be able to evaluate strings as executable code. If a sandbox page is added, it will have more relaxed permissions for evaluating scripts from outside the extension.
 
@@ -27,17 +29,21 @@ Developers may add or remove rules for their extension, or use the minimum requi
 
 Chrome enforces a minimum content security policy for extension pages. It is equivalent to specifying the following policy in your manifest:
 
-    {
-      // ...
-      "content_security_policy": {
-        "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
-      }
-      // ...
-    }
+```json
+{
+  // ...
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  }
+  // ...
+}
+```
 
 The `extension_pages` policy cannot be relaxed beyond this minimum value. In other words, you cannot add other script sources to directives, such as adding `'unsafe-eval'` to `script-src`. If you add a disallowed source to your extension's policy, Chrome will throw an error like this at install time:
 
-    'content_security_policy.extension_pages': Insecure CSP value "'unsafe-eval'" in directive 'script-src'.
+```json
+'content_security_policy.extension_pages': Insecure CSP value "'unsafe-eval'" in directive 'script-src'.
+```
 
 ### Sandbox Pages Policy
 

@@ -10,19 +10,21 @@ Being in a sandbox has two implications:
 For example, here's how to specify that two extension pages are to be served in a sandbox with a
 custom CSP:
 
-    {
-      ...
-      "content_security_policy": {
-        "sandbox": "sandbox allow-scripts; script-src 'self' https://example.com"
-      },
-      "sandbox": {
-        "pages": [
-          "page1.html",
-          "directory/page2.html"
-        ]
-      },
-      ...
-    }
+```json
+{
+  ...
+  "content_security_policy": {
+    "sandbox": "sandbox allow-scripts; script-src 'self' https://example.com"
+  },
+  "sandbox": {
+    "pages": [
+      "page1.html",
+      "directory/page2.html"
+    ]
+  },
+  ...
+}
+```
 
 If not specified, the default `"content_security_policy"` value is `sandbox allow-scripts allow-forms
 allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';`.
@@ -35,6 +37,6 @@ Note that you only need to list pages that you expect to be loaded in windows or
 used by sandboxed pages (e.g. stylesheets or JavaScript source files) don't need to appear in the
 `pages` list because they will use the sandbox of the frame that embeds them.
 
-["Using eval() in Chrome Extensions"](https://developer.chrome.com/docs/extensions/how-to/security/sandboxing-eval) goes into more detail about implementing a
+["Using eval() in Chrome Extensions"](https://developer.chrome.com/docs/extensions/how-to/security/sandboxing-eval.md.txt) goes into more detail about implementing a
 sandboxing workflow that enables the use of libraries that would otherwise have issues executing under
 extension's [default Content Security Policy](https://developer.chrome.com/docs/extensions/reference/manifest/content_security_policy).

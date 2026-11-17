@@ -7,11 +7,13 @@ API](https://www.khronos.org/webgl/). For more information on Chrome 3D graphics
 graphics](https://support.google.com/chrome/answer/1220892). You can list the 3D-related features your extension requires, as demonstrated in the
 following example:
 
-    "requirements": {
-      "3D": {
-        "features": ["webgl"]
-      }
-    }
+```json
+"requirements": {
+  "3D": {
+    "features": ["webgl"]
+  }
+}
+```
 
 NPAPI Plugin support for extensions has been [discontinued](https://blog.chromium.org/2013/09/saying-goodbye-to-our-old-friend-npapi.html) as of Chrome version 45. As part of this, the **"plugins"**
 requirement has been deprecated, and can no longer be used in a manifest file.

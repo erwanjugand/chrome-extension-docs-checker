@@ -80,7 +80,6 @@ Most Chrome extension permissions can be specified as optional, with the followi
 | `"proxy"` | Grants the extension access to the [chrome.proxy](https://developer.chrome.com/docs/extensions/mv2/reference/proxy) API to manage Chrome's proxy settings. |
 | `"tts"` | The [chrome.tts](https://developer.chrome.com/docs/extensions/mv2/reference/tts) API plays synthesized text-to-speech (TTS). |
 | `"ttsEngine"` | The [chrome.ttsEngine](https://developer.chrome.com/docs/extensions/mv2/reference/ttsEngine) API implements a text-to-speech (TTS) engine using an extension. |
-| `"wallpaper"` | **ChromeOS only** . Use the [chrome.wallpaper](https://developer.chrome.com/docs/extensions/mv2/reference/wallpaper) API change the ChromeOS wallpaper. |
 
 View [Declare Permissions and Warn Users](https://developer.chrome.com/docs/extensions/mv3/permission_warnings#overview) for further information on available permissions and
 their warnings.

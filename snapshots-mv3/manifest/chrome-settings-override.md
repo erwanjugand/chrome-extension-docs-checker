@@ -3,7 +3,7 @@ available on Windows and Mac in all current versions of Chrome.
 
 ## Homepage, search provider, and startup pages
 
-Here is an example of how [homepage](https://developer.chrome.com/docs/extensions/reference/manifest/chrome-settings-override#homepage), [search provider](https://developer.chrome.com/docs/extensions/reference/manifest/chrome-settings-override#search_provider), and [startup pages](https://developer.chrome.com/docs/extensions/reference/manifest/chrome-settings-override#startup_pages) can be modified
+Here is an example of how [homepage](https://developer.chrome.com/docs/extensions/reference/manifest/chrome-settings-override.md.txt#homepage), [search provider](https://developer.chrome.com/docs/extensions/reference/manifest/chrome-settings-override.md.txt#search_provider), and [startup pages](https://developer.chrome.com/docs/extensions/reference/manifest/chrome-settings-override.md.txt#startup_pages) can be modified
 in the [extension manifest](https://developer.chrome.com/docs/extensions/mv3/manifest). Any domain used in the settings API must be [verified](https://support.google.com/webmasters/answer/35179) (via
 Google Search Console) by the same developer account publishing the extension. Note that if you
 verify ownership for a domain (for example, https://example.com) you can use any subdomain or page
@@ -13,35 +13,37 @@ Using the settings override permission while also requesting any additional capa
 
 This applies to Chrome 107 and later.
 
-    {
-      "name": "My extension",
-      ...
-      "chrome_settings_overrides": {
-        "homepage": "https://www.homepage.com",
-        "search_provider": {
-            "name": "name.__MSG_url_domain__",
-            "keyword": "keyword.__MSG_url_domain__",
-            "search_url": "https://www.foo.__MSG_url_domain__/s?q={searchTerms}",
-            "favicon_url": "https://www.foo.__MSG_url_domain__/favicon.ico",
-            "suggest_url": "https://www.foo.__MSG_url_domain__/suggest?q={searchTerms}",
-            "instant_url": "https://www.foo.__MSG_url_domain__/instant?q={searchTerms}",
-            "image_url": "https://www.foo.__MSG_url_domain__/image?q={searchTerms}",
-            "search_url_post_params": "search_lang=__MSG_url_domain__",
-            "suggest_url_post_params": "suggest_lang=__MSG_url_domain__",
-            "instant_url_post_params": "instant_lang=__MSG_url_domain__",
-            "image_url_post_params": "image_lang=__MSG_url_domain__",
-            "alternate_urls": [
-              "https://www.moo.__MSG_url_domain__/s?q={searchTerms}",
-              "https://www.noo.__MSG_url_domain__/s?q={searchTerms}"
-            ],
-            "encoding": "UTF-8",
-            "is_default": true
-        },
-        "startup_pages": ["https://www.startup.com"]
-       },
-       "default_locale": "de",
-       ...
-    }
+```json
+{
+  "name": "My extension",
+  ...
+  "chrome_settings_overrides": {
+    "homepage": "https://www.homepage.com",
+    "search_provider": {
+        "name": "name.__MSG_url_domain__",
+        "keyword": "keyword.__MSG_url_domain__",
+        "search_url": "https://www.foo.__MSG_url_domain__/s?q={searchTerms}",
+        "favicon_url": "https://www.foo.__MSG_url_domain__/favicon.ico",
+        "suggest_url": "https://www.foo.__MSG_url_domain__/suggest?q={searchTerms}",
+        "instant_url": "https://www.foo.__MSG_url_domain__/instant?q={searchTerms}",
+        "image_url": "https://www.foo.__MSG_url_domain__/image?q={searchTerms}",
+        "search_url_post_params": "search_lang=__MSG_url_domain__",
+        "suggest_url_post_params": "suggest_lang=__MSG_url_domain__",
+        "instant_url_post_params": "instant_lang=__MSG_url_domain__",
+        "image_url_post_params": "image_lang=__MSG_url_domain__",
+        "alternate_urls": [
+          "https://www.moo.__MSG_url_domain__/s?q={searchTerms}",
+          "https://www.noo.__MSG_url_domain__/s?q={searchTerms}"
+        ],
+        "encoding": "UTF-8",
+        "is_default": true
+    },
+    "startup_pages": ["https://www.startup.com"]
+   },
+   "default_locale": "de",
+   ...
+}
+```
 
 ## Customizing values
 
@@ -53,10 +55,12 @@ Values in the manifest can be customized in the following ways:
   `"update_url"` key (see instructions [here](https://developer.chrome.com/docs/extensions/mv3/external_extensions#registry)). The key name is `"install_parameter"`, the value
   is an arbitrary string:
 
-      {
-        "update_url": "https://clients2.google.com/service/update2/crx",
-        "install_parameter": "Value"
-      }
+  ```json
+  {
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "install_parameter": "Value"
+  }
+  ```
 
   All occurrences of the substring `"__PARAM__"` in the manifest URLs will be substituted with the
   `"install_parameter"` value. If `"install_parameter"` is absent, occurrences of `"__PARAM__"` are

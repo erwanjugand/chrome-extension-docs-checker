@@ -1,4 +1,4 @@
-An optional Manifest key enabling the use of the [`input.ime` API](https://developer.chrome.com/docs/extensions/reference/api/input/ime) (Input Method Editor) for use with ChromeOS. This allows your extension to handle keystrokes, set the composition, and open assistive windows. Developers must also declare the `"input"` permission in the extension's `"permissions"` array.
+An optional Manifest key enabling the use of the [`input.ime` API](https://developer.chrome.com/docs/extensions/reference/api/input/ime.md.txt) (Input Method Editor) for use with ChromeOS. This allows your extension to handle keystrokes, set the composition, and open assistive windows. Developers must also declare the `"input"` permission in the extension's `"permissions"` array.
 The key accepts an array of objects: `name`, `id`, `language`, `layouts`, `input_view`, and `options_page` (Refer to the table below).
 
 | Property | Type | Description |
@@ -11,13 +11,15 @@ The key accepts an array of objects: `name`, `id`, `language`, `layouts`, `input
 | `input_view` | string | Optional string specifying an extension resource. |
 | `options_page` | string | Optional string specifying an extension resource. If not provided, the default extension's options page will be used. |
 
-    {
-      // ...
-       "input_components": [{
-         "name": "ToUpperIME",
-        "id": "ToUpperIME",
-        "language": "en",
-        "layouts": ["us::eng"]
-      }]
-      // ...
-    }
+```json
+{
+  // ...
+   "input_components": [{
+     "name": "ToUpperIME",
+    "id": "ToUpperIME",
+    "language": "en",
+    "layouts": ["us::eng"]
+  }]
+  // ...
+}
+```

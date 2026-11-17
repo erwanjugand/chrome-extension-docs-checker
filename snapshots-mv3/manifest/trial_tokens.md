@@ -2,6 +2,8 @@ An array of [trial tokens](https://googlechrome.github.io/OriginTrials/explainer
 
 To participate in multiple trials simultaneously, include each token as a separate array entry.
 
-    "trial_tokens": ["AnlT7gRo/750gGKtoI/A3D2rL5yAQA9wISlLqHGE6vJQinPfk0HiIij5LhWs+iuB7mTeotXmEXkvdpOAC1YjAgAAAG97Im9yaWdpbiI6ImNocm9tZS1leHRlbnNpb246Ly9sampoamFha21uY2lib25uanBhb2dsYmhjamVvbGhrayIsImZlYXR1cmUiOiJJQ2Fubm90QmVsaWV2ZVlvdVdhc3RlZFlvdXJUaW1lRGVjb2RpbmdUaGlzIiwiZXhwaXJ5Ijo1NzI1NDA3OTk5fQ=="]
+```json
+"trial_tokens": ["AnlT7gRo/750gGKtoI/A3D2rL5yAQA9wISlLqHGE6vJQinPfk0HiIij5LhWs+iuB7mTeotXmEXkvdpOAC1YjAgAAAG97Im9yaWdpbiI6ImNocm9tZS1leHRlbnNpb246Ly9sampoamFha21uY2lib25uanBhb2dsYmhjamVvbGhrayIsImZlYXR1cmUiOiJJQ2Fubm90QmVsaWV2ZVlvdVdhc3RlZFlvdXJUaW1lRGVjb2RpbmdUaGlzIiwiZXhwaXJ5Ijo1NzI1NDA3OTk5fQ=="]
+```
 
-Learn more about how to register and use tokens in your extension in the [official guide](https://developer.chrome.com/docs/web-platform/origin-trials#extensions).
+Learn more about how to register and use tokens in your extension in the [official guide](https://developer.chrome.com/docs/web-platform/origin-trials.md.txt#extensions).

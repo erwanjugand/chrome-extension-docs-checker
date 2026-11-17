@@ -1,18 +1,20 @@
-The `"file_handlers"` manifest key specifies file types to be handled by a ChromeOS extension. To process a file, use the web platform's [Launch Handler API](https://developer.mozilla.org/docs/Web/API/Launch_Handler_API). For extension specific information, see [File Handling](https://developer.chrome.com/docs/extensions/how-to/web-platform/file-handling-chromeos).
+The `"file_handlers"` manifest key specifies file types to be handled by a ChromeOS extension. To process a file, use the web platform's [Launch Handler API](https://developer.mozilla.org/docs/Web/API/Launch_Handler_API). For extension specific information, see [File Handling](https://developer.chrome.com/docs/extensions/how-to/web-platform/file-handling-chromeos.md.txt).
 
 > [!NOTE]
 > **Note:** This feature is currently available in Chrome 120 [beta](https://www.google.com/chrome/beta/).
 
-    "file_handlers": [
-      {
-        "action": "/open_text.html",
-        "name": "Plain text",
-        "accept": {
-          "text/plain": [".txt"]
-        }
-        "launch_type": "single-client"
-      }
-    ]
+```json
+"file_handlers": [
+  {
+    "action": "/open_text.html",
+    "name": "Plain text",
+    "accept": {
+      "text/plain": [".txt"]
+    }
+    "launch_type": "single-client"
+  }
+]
+```
 
 `"file_handlers"` (dictionary, optional)
 :   Specifies the file types the extension can open.

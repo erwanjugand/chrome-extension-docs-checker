@@ -29,11 +29,13 @@ You must declare the `"debugger"` permission in your extension's manifest to use
 
 ### Enterprise policy restrictions
 
-On enterprise devices, some policies can restrict extensions from attaching the debugger using an all-or-nothing model at attach time
-([`browser.debugger.attach()`](https://developer.chrome.com/docs/extensions/reference/api/debugger#method-attach)):
+Enterprise administrators can use the `runtime_blocked_hosts` field of the
+[`ExtensionSettings`](https://support.google.com/chrome/a/answer/9867568?p=Configure_ExtensionSettings_policy) policy to block an
+extension from accessing specific hosts, unless those hosts are also listed in `runtime_allowed_hosts`.
 
-- **Host restrictions:** If enterprise policy [`ExtensionSettings`](https://support.google.com/chrome/a/answer/9867568?p=Configure_ExtensionSettings_policy) configures blocked hosts (`runtime_blocked_hosts`) for an extension, [`browser.debugger.attach()`](https://developer.chrome.com/docs/extensions/reference/api/debugger#method-attach) is blocked on all targets with the error `"Host access is restricted by policy."` (even if individual origins are in `runtime_allowed_hosts`).
-- **Screenshot and DLP policies:** If enterprise policy [`DisableScreenshots`](https://chromeenterprise.google/policies/#DisableScreenshots) disables screenshot capture or Data Loss Prevention (DLP) rules apply to the target, [`browser.debugger.attach()`](https://developer.chrome.com/docs/extensions/reference/api/debugger#method-attach) fails with the error `"Screenshot capture is restricted by policy."`.
+Calling [`browser.debugger.attach()`](https://developer.chrome.com/docs/extensions/reference/api/debugger#method-attach) fails with the error
+`"This page cannot be scripted due to an ExtensionsSettings policy."` if the URL of the target, or of any frame in it, matches
+`runtime_blocked_hosts`. If an attached target, or any frame in it, navigates to a blocked host, Chrome detaches the debugger.
 
 <br />
 

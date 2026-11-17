@@ -15,12 +15,14 @@ property named `value` that takes a string. Chrome uses this string as the value
 `Cross-Origin-Embedder-Policy` header when serving resources from the extension's origin. For
 example:
 
-    {
-        ...
-        "cross_origin_embedder_policy": {
-          "value": "require-corp"
-        },
-        ...
-    }
+```javascript
+{
+    ...
+    "cross_origin_embedder_policy": {
+      "value": "require-corp"
+    },
+    ...
+}
+```
 
 See the [Cross-origin isolation overview](https://developer.chrome.com/docs/extensions/mv3/cross-origin-isolation) for more information about this feature.

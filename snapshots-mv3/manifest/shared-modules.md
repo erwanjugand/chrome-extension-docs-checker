@@ -15,38 +15,42 @@ Shared Modules are used through two [manifest](https://developer.chrome.com/docs
 
 The *export* field indicates an extension is a Shared Module that exports its resources:
 
-    {
-      "version": "1.0",
-      "name": "My Shared Module",
-      "export": {
-        // Optional list of extension IDs explicitly allowed to
-        // import this Shared Module's resources.  If no allowlist
-        // is given, all extensions are allowed to import it.
-        "allowlist": [
-          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-          "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
-        ]
-      }
-      // Note: no permissions are allowed in Shared Modules
-    }
+```json
+{
+  "version": "1.0",
+  "name": "My Shared Module",
+  "export": {
+    // Optional list of extension IDs explicitly allowed to
+    // import this Shared Module's resources.  If no allowlist
+    // is given, all extensions are allowed to import it.
+    "allowlist": [
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    ]
+  }
+  // Note: no permissions are allowed in Shared Modules
+}
+```
 
 ### Import
 
 The *import* field is used by extensions and apps to declare that they depend on the resources from
 particular Shared Modules:
 
+```json
+{
+  "version": "1.0",
+  "name": "My Importing Extension",
+  ...
+  "import": [
+    {"id": "cccccccccccccccccccccccccccccccc"},
     {
-      "version": "1.0",
-      "name": "My Importing Extension",
-      ...
-      "import": [
-        {"id": "cccccccccccccccccccccccccccccccc"},
-        {
-          "id": "dddddddddddddddddddddddddddddddd",
-          "minimum_version": "0.5" // optional
-        }
-      ]
+      "id": "dddddddddddddddddddddddddddddddd",
+      "minimum_version": "0.5" // optional
     }
+  ]
+}
+```
 
 ## Accessing resources
 
@@ -54,12 +58,16 @@ Shared Module resources are accessed by a reserved path *_modules/SHARED_MODULE_
 of your importing extension. For example, to include the script `foo.js` from a Shared Module with
 ID "cccccccccccccccccccccccccccccccc", use this path from the root of your extension:
 
-    <script src="_modules/cccccccccccccccccccccccccccccccc/foo.js">
+```html
+<script src="_modules/cccccccccccccccccccccccccccccccc/foo.js">
+```
 
 If the importing extension has ID "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", then the full URL to resources
 in the Shared Module is:
 
-    chrome-extension://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/_modules/cccccccccccccccccccccccccccccccc/
+```text
+chrome-extension://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/_modules/cccccccccccccccccccccccccccccccc/
+```
 
 Note that since resources from Shared Modules are overlaid into the origin of the importing
 extension, all privileges granted to the importing extension are available to code in Shared
